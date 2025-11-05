@@ -27,6 +27,13 @@ import time
 import datetime
 from datetime import datetime as dt
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, will use system environment variables
+
 try:
     import yaml
     from anthropic import Anthropic
