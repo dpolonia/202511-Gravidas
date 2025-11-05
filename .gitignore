@@ -17,6 +17,8 @@ data/personas/*.json
 data/health_records/*.json
 data/matched/*.json
 data/interviews/*.json
+data/batch_requests/*.jsonl
+data/batch_results/*.jsonl
 data/hf_cache/
 data/*.csv
 
@@ -25,6 +27,8 @@ data/*.csv
 !data/health_records/.gitkeep
 !data/matched/.gitkeep
 !data/interviews/.gitkeep
+!data/batch_requests/.gitkeep
+!data/batch_results/.gitkeep
 
 # ============================================================================
 # Synthea Generated Files
