@@ -34,56 +34,52 @@ MODELS_DATABASE = {
     'anthropic': {
         'name': 'Anthropic (Claude)',
         'models': {
-            'claude-4.1-opus': {
-                'name': 'Claude 4.1 Opus',
-                'cost_input': 15.0,
-                'cost_output': 75.0,
-                'tokens_per_second': 50,
-                'quality': 'Excellent',
-                'description': 'Complex reasoning, autonomous agents, high-stakes analysis'
-            },
-            'claude-4.5-sonnet': {
+            'claude-sonnet-4-5-20250929': {
                 'name': 'Claude 4.5 Sonnet',
                 'cost_input': 3.0,
                 'cost_output': 15.0,
+                'batch_available': True,
+                'batch_input': 1.5,
+                'batch_output': 7.5,
                 'tokens_per_second': 80,
                 'quality': 'Excellent',
                 'description': 'Agentic workhorse, advanced coding (Recommended)',
                 'recommended': True
             },
-            'claude-4.5-haiku': {
+            'claude-haiku-4-5': {
                 'name': 'Claude 4.5 Haiku',
                 'cost_input': 1.0,
                 'cost_output': 5.0,
+                'batch_available': True,
+                'batch_input': 0.5,
+                'batch_output': 2.5,
                 'tokens_per_second': 120,
                 'quality': 'Very Good',
                 'description': 'Near-frontier speed, fast applications'
             },
-            'claude-3-haiku': {
-                'name': 'Claude 3 Haiku',
-                'cost_input': 0.25,
-                'cost_output': 1.25,
-                'tokens_per_second': 150,
-                'quality': 'Good',
-                'description': 'Ultra-fast, simple Q&A, testing'
+            'claude-opus-4-1': {
+                'name': 'Claude 4.1 Opus',
+                'cost_input': 15.0,
+                'cost_output': 75.0,
+                'batch_available': True,
+                'batch_input': 7.5,
+                'batch_output': 37.5,
+                'tokens_per_second': 50,
+                'quality': 'Excellent',
+                'description': 'Complex reasoning, autonomous agents, high-stakes analysis'
             }
         }
     },
     'openai': {
-        'name': 'OpenAI (GPT-5)',
+        'name': 'OpenAI (GPT)',
         'models': {
-            'gpt-5-pro': {
-                'name': 'GPT-5 Pro',
-                'cost_input': 15.0,
-                'cost_output': 120.0,
-                'tokens_per_second': 40,
-                'quality': 'Excellent',
-                'description': 'Peak performance, mission-critical reasoning'
-            },
             'gpt-5': {
                 'name': 'GPT-5',
                 'cost_input': 1.25,
                 'cost_output': 10.0,
+                'batch_available': True,
+                'batch_input': 0.625,
+                'batch_output': 5.0,
                 'tokens_per_second': 70,
                 'quality': 'Excellent',
                 'description': 'Advanced tasks, complex coding (Recommended)',
@@ -93,6 +89,9 @@ MODELS_DATABASE = {
                 'name': 'GPT-5 Mini',
                 'cost_input': 0.25,
                 'cost_output': 2.0,
+                'batch_available': True,
+                'batch_input': 0.125,
+                'batch_output': 1.0,
                 'tokens_per_second': 100,
                 'quality': 'Very Good',
                 'description': 'Capable & fast, smart chatbots'
@@ -101,67 +100,163 @@ MODELS_DATABASE = {
                 'name': 'GPT-5 Nano',
                 'cost_input': 0.05,
                 'cost_output': 0.40,
+                'batch_available': True,
+                'batch_input': 0.025,
+                'batch_output': 0.20,
                 'tokens_per_second': 140,
                 'quality': 'Good',
                 'description': 'High-throughput, classification, testing'
+            },
+            'gpt-4-1': {
+                'name': 'GPT-4.1',
+                'cost_input': 2.0,
+                'cost_output': 8.0,
+                'batch_available': True,
+                'batch_input': 1.0,
+                'batch_output': 4.0,
+                'tokens_per_second': 65,
+                'quality': 'Excellent',
+                'description': 'Advanced reasoning, enterprise applications'
             }
         }
     },
     'google': {
         'name': 'Google (Gemini)',
         'models': {
-            'gemini-2.5-pro': {
-                'name': 'Gemini 2.5 Pro',
+            'gemini-2-5-pro': {
+                'name': 'Gemini 2.5 Pro (≤200k)',
                 'cost_input': 1.25,
                 'cost_output': 10.0,
+                'batch_available': True,
+                'batch_input': 0.625,
+                'batch_output': 5.0,
                 'tokens_per_second': 75,
                 'quality': 'Excellent',
                 'description': 'Advanced thinking model, complex coding (Recommended)',
                 'recommended': True
             },
-            'gemini-2.5-flash': {
+            'gemini-2-5-pro-large': {
+                'name': 'Gemini 2.5 Pro (>200k)',
+                'cost_input': 2.5,
+                'cost_output': 15.0,
+                'batch_available': True,
+                'batch_input': 1.25,
+                'batch_output': 7.5,
+                'tokens_per_second': 65,
+                'quality': 'Excellent',
+                'description': 'Large context model, document analysis'
+            },
+            'gemini-2-5-flash': {
                 'name': 'Gemini 2.5 Flash',
-                'cost_input': 0.30,
-                'cost_output': 2.50,
+                'cost_input': 0.15,
+                'cost_output': 1.25,
+                'batch_available': True,
+                'batch_input': 0.075,
+                'batch_output': 0.625,
                 'tokens_per_second': 110,
                 'quality': 'Very Good',
                 'description': 'Enterprise workhorse, high-volume agents'
+            }
+        }
+    },
+    'aws': {
+        'name': 'AWS Bedrock',
+        'models': {
+            'bedrock-claude-sonnet-4-5': {
+                'name': 'Claude 4.5 Sonnet (Bedrock)',
+                'cost_input': 3.0,
+                'cost_output': 15.0,
+                'batch_available': True,
+                'batch_input': 1.5,
+                'batch_output': 7.5,
+                'tokens_per_second': 80,
+                'quality': 'Excellent',
+                'description': 'Claude via AWS, enterprise integration'
             },
-            'gemini-2.5-flash-lite': {
-                'name': 'Gemini 2.5 Flash Lite',
-                'cost_input': 0.10,
-                'cost_output': 0.40,
+            'bedrock-llama-3-2-90b': {
+                'name': 'Llama 3.2 90B (Bedrock)',
+                'cost_input': 2.0,
+                'cost_output': 2.0,
+                'batch_available': True,
+                'batch_input': 1.0,
+                'batch_output': 1.0,
+                'tokens_per_second': 85,
+                'quality': 'Very Good',
+                'description': 'Open source, AWS hosted'
+            },
+            'bedrock-titan-express': {
+                'name': 'Amazon Titan Text Express',
+                'cost_input': 0.8,
+                'cost_output': 1.6,
+                'batch_available': True,
+                'batch_input': 0.4,
+                'batch_output': 0.8,
+                'tokens_per_second': 95,
+                'quality': 'Good',
+                'description': 'Amazon native, cost effective'
+            }
+        }
+    },
+    'mistral': {
+        'name': 'Mistral AI',
+        'models': {
+            'mistral-large-2': {
+                'name': 'Mistral Large 2',
+                'cost_input': 3.0,
+                'cost_output': 9.0,
+                'batch_available': False,
+                'tokens_per_second': 70,
+                'quality': 'Excellent',
+                'description': 'Advanced reasoning, European AI'
+            },
+            'codestral': {
+                'name': 'Codestral',
+                'cost_input': 1.0,
+                'cost_output': 3.0,
+                'batch_available': False,
+                'tokens_per_second': 90,
+                'quality': 'Very Good',
+                'description': 'Code generation specialist'
+            },
+            'ministral-8b': {
+                'name': 'Ministral 8B',
+                'cost_input': 0.1,
+                'cost_output': 0.1,
+                'batch_available': False,
                 'tokens_per_second': 130,
                 'quality': 'Good',
-                'description': 'High-volume, low-latency, simple chatbots'
-            },
-            'gemini-2.0-flash': {
-                'name': 'Gemini 2.0 Flash',
-                'cost_input': 0.05,
-                'cost_output': 0.20,
-                'tokens_per_second': 145,
-                'quality': 'Good',
-                'description': 'Legacy model, experimental, prototyping'
+                'description': 'Fast, edge deployment'
             }
         }
     },
     'xai': {
         'name': 'xAI (Grok)',
         'models': {
-            'grok-2': {
-                'name': 'Grok 2',
-                'cost_input': 2.0,
-                'cost_output': 10.0,
+            'grok-4': {
+                'name': 'Grok 4',
+                'cost_input': 3.0,
+                'cost_output': 15.0,
+                'batch_available': False,
                 'tokens_per_second': 60,
                 'quality': 'Excellent',
                 'description': 'Advanced reasoning, real-time knowledge'
             },
-            'grok-2-mini': {
-                'name': 'Grok 2 Mini',
-                'cost_input': 0.50,
-                'cost_output': 2.5,
-                'tokens_per_second': 90,
+            'grok-4-fast': {
+                'name': 'Grok 4 Fast (Reasoning)',
+                'cost_input': 0.2,
+                'cost_output': 0.5,
+                'batch_available': False,
+                'tokens_per_second': 100,
                 'quality': 'Very Good',
+                'description': 'Fast reasoning mode'
+            },
+            'grok-3-mini': {
+                'name': 'Grok 3 Mini',
+                'cost_input': 0.3,
+                'cost_output': 0.5,
+                'batch_available': False,
+                'tokens_per_second': 90,
+                'quality': 'Good',
                 'description': 'Fast, capable, good value'
             }
         }
@@ -388,21 +483,30 @@ def get_interview_count() -> int:
 
 def calculate_cost_and_time(
     model_info: Dict[str, Any],
-    num_interviews: int
-) -> Tuple[float, int]:
+    num_interviews: int,
+    use_batch: bool = False
+) -> Tuple[float, int, bool]:
     """
     Calculate estimated cost and time for interviews.
 
     Args:
         model_info: Model metadata
         num_interviews: Number of interviews
+        use_batch: Whether to use batch API pricing
 
     Returns:
-        Tuple of (cost in USD, time in minutes)
+        Tuple of (cost in USD, time in minutes, batch_available)
     """
+    # Check if batch is available for this model
+    batch_available = model_info.get('batch_available', False)
+
     # Calculate cost
-    input_cost_per_million = model_info['cost_input']
-    output_cost_per_million = model_info['cost_output']
+    if use_batch and batch_available:
+        input_cost_per_million = model_info['batch_input']
+        output_cost_per_million = model_info['batch_output']
+    else:
+        input_cost_per_million = model_info['cost_input']
+        output_cost_per_million = model_info['cost_output']
 
     total_input_tokens = AVG_INPUT_TOKENS_PER_INTERVIEW * num_interviews
     total_output_tokens = AVG_OUTPUT_TOKENS_PER_INTERVIEW * num_interviews
@@ -417,11 +521,17 @@ def calculate_cost_and_time(
     tokens_per_interview = AVG_INPUT_TOKENS_PER_INTERVIEW + AVG_OUTPUT_TOKENS_PER_INTERVIEW
 
     # Add 20% overhead for network latency, processing, etc.
-    seconds_per_interview = (tokens_per_interview / tokens_per_second) * 1.2
-    total_seconds = seconds_per_interview * num_interviews
-    total_minutes = int(total_seconds / 60)
+    # For batch mode, add significant time (24 hours typical)
+    if use_batch and batch_available:
+        # Batch processing: assume 24 hour turnaround time
+        total_minutes = 24 * 60
+    else:
+        # Real-time processing
+        seconds_per_interview = (tokens_per_interview / tokens_per_second) * 1.2
+        total_seconds = seconds_per_interview * num_interviews
+        total_minutes = int(total_seconds / 60)
 
-    return total_cost, total_minutes
+    return total_cost, total_minutes, batch_available
 
 
 def format_time(minutes: int) -> str:
@@ -503,12 +613,13 @@ def select_provider_and_model(
     print("─" * 105)
 
     for i, (model_id, model_info) in enumerate(models.items(), 1):
-        cost, time_min = calculate_cost_and_time(model_info, num_interviews)
+        cost, time_min, batch_available = calculate_cost_and_time(model_info, num_interviews)
 
         recommended = " ⭐ RECOMMENDED" if model_info.get('recommended') else ""
+        batch_badge = " 🔄 BATCH" if batch_available else ""
 
         print(f"{i:<4} {model_info['name']:<25} {model_info['quality']:<12} "
-              f"${cost:>7.2f}{'':>6} {format_time(time_min):<12} {recommended}")
+              f"${cost:>7.2f}{'':>6} {format_time(time_min):<12} {recommended}{batch_badge}")
 
     print()
     print("Description:")
@@ -609,7 +720,21 @@ def confirm_and_run(
     print_header("CONFIRMATION")
 
     model_info = MODELS_DATABASE[provider]['models'][model_id]
-    cost, time_min = calculate_cost_and_time(model_info, num_interviews)
+
+    # Ask about batch mode if available
+    use_batch = False
+    batch_available = model_info.get('batch_available', False)
+
+    if batch_available and num_interviews >= 100:
+        print("\n💡 Batch API Available!")
+        print("   - 50% cost savings")
+        print("   - ~24 hour turnaround time")
+        print("   - Ideal for large volumes (100+ interviews)")
+        print()
+        batch_choice = input("Use Batch API? (yes/no): ").strip().lower()
+        use_batch = batch_choice in ['yes', 'y']
+
+    cost, time_min, _ = calculate_cost_and_time(model_info, num_interviews, use_batch)
 
     print("Interview Configuration:")
     print()
@@ -617,6 +742,7 @@ def confirm_and_run(
     print(f"  Model:            {model_info['name']}")
     print(f"  Model ID:         {model_id}")
     print(f"  Quality:          {model_info['quality']}")
+    print(f"  Batch Mode:       {'✓ Yes (50% discount)' if use_batch else '✗ No (Real-time)'}")
     print()
     print(f"  Num Interviews:   {num_interviews:,}")
     print(f"  Estimated Cost:   ${cost:.2f}")
@@ -641,6 +767,10 @@ def confirm_and_run(
             '--count', str(num_interviews)
         ]
 
+        # Add batch flag if selected
+        if use_batch:
+            cmd.append('--batch')
+
         # Set API key as environment variable
         env = os.environ.copy()
         if provider == 'anthropic':
@@ -651,6 +781,11 @@ def confirm_and_run(
             env['GOOGLE_API_KEY'] = api_key
         elif provider == 'xai':
             env['XAI_API_KEY'] = api_key
+        elif provider == 'aws':
+            env['AWS_ACCESS_KEY_ID'] = api_key
+            # Note: AWS also needs secret key, region, etc.
+        elif provider == 'mistral':
+            env['MISTRAL_API_KEY'] = api_key
 
         try:
             # Run the interview script with API key in environment
