@@ -516,8 +516,8 @@ Examples:
             health_record = matched_pair['health_record']
 
             # Create initial prompt
-            system_message = create_system_message(persona, health_record, protocol)
-            first_question = protocol['questions'][0]['question']
+            system_message = build_system_prompt(persona, health_record, protocol)
+            first_question = protocol['questions'][0]['text']
 
             batch_requests.append({
                 'custom_id': f'interview_{persona_idx}',
