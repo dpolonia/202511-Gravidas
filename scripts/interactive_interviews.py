@@ -532,6 +532,57 @@ def select_provider_and_model(
         return select_provider_and_model(available_keys, num_interviews)
 
 
+def check_data_files() -> bool:
+    """
+    Check if required data files exist, offer to generate test data if not.
+
+    Returns:
+        True if data exists or was generated, False if user cancelled
+    """
+    matched_file = Path("data/matched/matched_personas.json")
+
+    if matched_file.exists():
+        return True
+
+    # Data doesn't exist, offer to generate test data
+    clear_screen()
+    print_header("MISSING DATA FILES")
+
+    print("⚠  The matched personas file doesn't exist yet.")
+    print()
+    print("You have two options:")
+    print()
+    print("  1. Generate test data (10 sample personas) - Quick!")
+    print("     This creates sample data so you can try interviews immediately.")
+    print()
+    print("  2. Run the full pipeline first - Recommended for research")
+    print("     This retrieves real personas and generates health records.")
+    print()
+    print("For option 2, run these commands:")
+    print("  python scripts/01_retrieve_personas.py")
+    print("  python scripts/02_generate_health_records.py")
+    print("  python scripts/03_match_personas_records.py")
+    print()
+
+    choice = input("Generate test data now? (yes/no): ").strip().lower()
+
+    if choice in ['yes', 'y']:
+        print("\nGenerating test data...")
+        try:
+            subprocess.run(['python', 'scripts/generate_test_data.py'], check=True)
+            print("\n✓ Test data generated successfully!")
+            input("\nPress Enter to continue...")
+            return True
+        except subprocess.CalledProcessError:
+            print("\n✗ Failed to generate test data")
+            input("\nPress Enter to continue...")
+            return False
+    else:
+        print("\nPlease run the pipeline steps or generate test data first.")
+        input("\nPress Enter to continue...")
+        return False
+
+
 def confirm_and_run(
     provider: str,
     model_id: str,
@@ -550,6 +601,10 @@ def confirm_and_run(
     Returns:
         True if interviews started, False otherwise
     """
+    # Check if data files exist
+    if not check_data_files():
+        return False
+
     clear_screen()
     print_header("CONFIRMATION")
 
