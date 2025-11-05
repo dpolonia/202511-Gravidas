@@ -11,9 +11,11 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 - **Persona Retrieval**: Downloads 10,000 female personas from HuggingFace FinePersonas dataset
 - **Health Record Generation**: Uses Synthea to generate realistic pregnancy-related medical records
 - **Intelligent Matching**: Matches personas to health records based on age compatibility and socioeconomic factors
-- **Multi-AI Support**: Choose from 12 different AI models across Claude, OpenAI, and Gemini
-- **Flexible Model Selection**: Easy configuration with cost/quality comparisons for each model
+- **19 AI Models**: Support for Anthropic Claude, OpenAI GPT-5, Google Gemini, AWS Bedrock, Mistral AI, and xAI Grok
+- **Batch API Support**: 50% cost savings for large-scale processing (100+ interviews)
+- **Interactive Launcher**: User-friendly CLI with cost estimates and model comparisons
 - **Protocol-Based Interviews**: Customizable interview protocols for different research scenarios
+- **Comprehensive Documentation**: Model specs, cost analysis, and step-by-step tutorials
 
 ## Project Structure
 
@@ -44,20 +46,30 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 
 ## Quick Start
 
-### 🚀 Interactive Mode (Easiest!)
+### 🚀 New User? Start Here!
+
+**📖 [Complete Getting Started Guide](GETTING_STARTED.md)** - Step-by-step tutorial for your first interview in 5 minutes
+
+### Interactive Mode (Easiest!)
 
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Run interactive launcher
+# 2. Add your API key to .env file
+cp .env.example .env
+nano .env  # Add your ANTHROPIC_API_KEY, OPENAI_API_KEY, or GOOGLE_API_KEY
+
+# 3. Run interactive launcher
 python scripts/interactive_interviews.py
 ```
 
 The interactive launcher guides you through:
-- API key setup (3 flexible methods)
-- Choosing number of interviews
-- Selecting AI provider and model
+- ✅ API key setup (3 flexible methods)
+- ✅ Auto-generating test data (first run)
+- ✅ Choosing number of interviews (1-10,000)
+- ✅ Selecting AI provider and model with cost estimates
+- ✅ Enabling batch mode for 50% cost savings (100+ interviews)
 - Viewing cost and time estimates
 - Running interviews automatically
 
