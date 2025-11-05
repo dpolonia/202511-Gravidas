@@ -1,28 +1,124 @@
 # Synthetic Gravidas Pipeline Configuration
-# Copy this file to config.yaml and fill in your API keys
+# Enhanced with multiple model selection options
 
-# API Keys for AI Providers
+###############################################################################
+# ACTIVE MODEL SELECTION
+# ---------------------------------------------------------------------------
+# Choose your provider and model below. Uncomment the ones you want to use.
+###############################################################################
+
+# ACTIVE PROVIDER: Choose one (anthropic, openai, or google)
+active_provider: "anthropic"
+
+# ACTIVE MODEL: Set the model name for your chosen provider
+active_model: "claude-4.5-sonnet"  # Change this to any model listed below
+
+###############################################################################
+# API KEYS AND AVAILABLE MODELS
+###############################################################################
+
 api_keys:
-  # Anthropic Claude API
-  claude:
-    api_key: "your-claude-api-key-here"
-    default_model: "claude-3-5-sonnet-20241022"
+  # 🔶 ANTHROPIC (CLAUDE) MODELS
+  # API Key for all Claude models
+  anthropic:
+    api_key: "your-anthropic-api-key-here"  # Get from: https://console.anthropic.com
     max_tokens: 4096
     temperature: 0.7
 
-  # OpenAI API
+    # Available Models:
+    models:
+      claude-4.1-opus:
+        cost_per_1m: "Input: $15.00 / Output: $75.00"
+        description: "Complex reasoning, autonomous agents, high-stakes analysis"
+        interview_quality: "Excellent"
+        use_cases: ["Complex interviews", "Deep analysis", "High-quality responses"]
+
+      claude-4.5-sonnet:
+        cost_per_1m: "Input: $3.00 / Output: $15.00"
+        description: "Agentic workhorse, advanced coding, intelligent applications"
+        interview_quality: "Excellent"
+        use_cases: ["Standard interviews", "Balanced cost/quality", "Recommended"]
+        recommended: true
+
+      claude-4.5-haiku:
+        cost_per_1m: "Input: $1.00 / Output: $5.00"
+        description: "Near-frontier speed, fast customer apps, intelligent search"
+        interview_quality: "Very Good"
+        use_cases: ["Fast interviews", "High volume", "Cost optimization"]
+
+      claude-3-haiku:
+        cost_per_1m: "Input: $0.25 / Output: $1.25"
+        description: "Ultra-fast, simple Q&A, content moderation, routing"
+        interview_quality: "Good for Testing"
+        use_cases: ["Testing", "Prototyping", "Budget-constrained"]
+
+  # 🔷 OPENAI (GPT-5) MODELS
+  # API Key for all OpenAI models
   openai:
-    api_key: "your-openai-api-key-here"
-    default_model: "gpt-4"
+    api_key: "your-openai-api-key-here"  # Get from: https://platform.openai.com/api-keys
     max_tokens: 4096
     temperature: 0.7
 
-  # Google Gemini API
-  gemini:
-    api_key: "your-gemini-api-key-here"
-    default_model: "gemini-1.5-pro"
+    # Available Models:
+    models:
+      gpt-5-pro:
+        cost_per_1m: "Input: $15.00 / Output: $120.00"
+        description: "Peak performance, mission-critical reasoning, high-precision tasks"
+        interview_quality: "Excellent"
+        use_cases: ["Premium interviews", "Critical accuracy", "Complex reasoning"]
+
+      gpt-5:
+        cost_per_1m: "Input: $1.25 / Output: $10.00"
+        description: "Advanced tasks, complex coding, agentic workflows"
+        interview_quality: "Excellent"
+        use_cases: ["Standard interviews", "Advanced reasoning", "Quality work"]
+        recommended: true
+
+      gpt-5-mini:
+        cost_per_1m: "Input: $0.25 / Output: $2.00"
+        description: "Capable & fast, smart chatbots, data analysis, daily-driver tasks"
+        interview_quality: "Very Good"
+        use_cases: ["Fast interviews", "Good value", "High volume"]
+
+      gpt-5-nano:
+        cost_per_1m: "Input: $0.05 / Output: $0.40"
+        description: "High-throughput, classification, summarization, simple tasks"
+        interview_quality: "Good for Testing"
+        use_cases: ["Testing", "Simple tasks", "Maximum cost savings"]
+
+  # 🟢 GOOGLE (GEMINI) MODELS
+  # API Key for all Gemini models
+  google:
+    api_key: "your-google-api-key-here"  # Get from: https://makersuite.google.com/app/apikey
     max_tokens: 4096
     temperature: 0.7
+
+    # Available Models:
+    models:
+      gemini-2.5-pro:
+        cost_per_1m: "Input: $1.25 / Output: $10.00"
+        description: "Advanced 'thinking' model, complex coding, difficult instruction-following"
+        interview_quality: "Excellent"
+        use_cases: ["Complex interviews", "Advanced reasoning", "Quality responses"]
+        recommended: true
+
+      gemini-2.5-flash:
+        cost_per_1m: "Input: $0.30 / Output: $2.50"
+        description: "Enterprise workhorse, high-volume agents, fast & capable chat"
+        interview_quality: "Very Good"
+        use_cases: ["Fast interviews", "High volume", "Good balance"]
+
+      gemini-2.5-flash-lite:
+        cost_per_1m: "Input: $0.10 / Output: $0.40"
+        description: "High-volume, low-latency, classification, simple chatbots"
+        interview_quality: "Good for Testing"
+        use_cases: ["Testing", "Simple interviews", "Budget option"]
+
+      gemini-2.0-flash:
+        cost_per_1m: "Input: $0.05 / Output: $0.20"
+        description: "Legacy model, experimental, basic task prototyping"
+        interview_quality: "Good for Testing"
+        use_cases: ["Prototyping", "Experimentation", "Lowest cost"]
 
 # HuggingFace Configuration
 huggingface:
@@ -87,7 +183,8 @@ matching:
 
 # Interview Settings
 interview:
-  default_provider: "claude"  # Options: claude, openai, gemini
+  # Note: active_provider and active_model at top of file override this
+  default_provider: "anthropic"  # Options: anthropic, openai, google
   protocol_path: "./Script/interview_protocols"
   max_turns: 20
   save_transcripts: true
@@ -104,3 +201,13 @@ performance:
   max_workers: 4  # Parallel processing threads
   batch_size: 100
   cache_enabled: true
+
+###############################################################################
+# OPTIONAL SETTINGS (from env.example)
+###############################################################################
+optional:
+  hf_hub_enable_hf_transfer: true
+  persona_filter_confidence: 0.8
+  data_dir: "data"
+  log_dir: "logs"
+  output_dir: "outputs"
