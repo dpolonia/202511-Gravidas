@@ -31,11 +31,7 @@ from datetime import datetime as dt
 try:
     from dotenv import load_dotenv
     load_dotenv()
-    print(f"[DEBUG] load_dotenv() called successfully")
-    import os as os_test
-    print(f"[DEBUG] ANTHROPIC_API_KEY from env: {os_test.getenv('ANTHROPIC_API_KEY', 'NOT FOUND')[:20]}...")
 except ImportError:
-    print(f"[DEBUG] python-dotenv not installed")
     pass  # python-dotenv not installed, will use system environment variables
 
 try:
@@ -80,13 +76,16 @@ class ClaudeProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        # Try config first, then environment variable
-        config_key = config.get('api_key')
+        # Try config first (but skip placeholder values), then environment variable
+        config_key = config.get('api_key', '')
         env_key = os.getenv('ANTHROPIC_API_KEY', '')
-        print(f"[DEBUG] config.get('api_key'): {config_key}")
-        print(f"[DEBUG] os.getenv('ANTHROPIC_API_KEY'): {env_key[:20] if env_key else 'EMPTY'}...")
-        api_key = config_key or env_key
-        print(f"[DEBUG] Final api_key: {api_key[:20] if api_key else 'EMPTY'}...")
+
+        # Use config key only if it's valid (not a placeholder)
+        if config_key and not config_key.startswith('your-'):
+            api_key = config_key
+        else:
+            api_key = env_key
+
         if not api_key or api_key.startswith('your-'):
             raise ValueError("Claude API key not configured. Set ANTHROPIC_API_KEY environment variable or add to config.yaml")
 
@@ -134,8 +133,16 @@ class OpenAIProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        # Try config first, then environment variable
-        api_key = config.get('api_key') or os.getenv('OPENAI_API_KEY', '')
+        # Try config first (but skip placeholder values), then environment variable
+        config_key = config.get('api_key', '')
+        env_key = os.getenv('OPENAI_API_KEY', '')
+
+        # Use config key only if it's valid (not a placeholder)
+        if config_key and not config_key.startswith('your-'):
+            api_key = config_key
+        else:
+            api_key = env_key
+
         if not api_key or api_key.startswith('your-'):
             raise ValueError("OpenAI API key not configured. Set OPENAI_API_KEY environment variable or add to config.yaml")
 
@@ -170,8 +177,16 @@ class GeminiProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        # Try config first, then environment variable
-        api_key = config.get('api_key') or os.getenv('GOOGLE_API_KEY', '')
+        # Try config first (but skip placeholder values), then environment variable
+        config_key = config.get('api_key', '')
+        env_key = os.getenv('GOOGLE_API_KEY', '')
+
+        # Use config key only if it's valid (not a placeholder)
+        if config_key and not config_key.startswith('your-'):
+            api_key = config_key
+        else:
+            api_key = env_key
+
         if not api_key or api_key.startswith('your-'):
             raise ValueError("Gemini API key not configured. Set GOOGLE_API_KEY environment variable or add to config.yaml")
 
