@@ -19,6 +19,7 @@ data/matched/*.json
 data/interviews/*.json
 data/batch_requests/*.jsonl
 data/batch_results/*.jsonl
+data/analysis/*.csv
 data/hf_cache/
 data/*.csv
 
@@ -29,6 +30,7 @@ data/*.csv
 !data/interviews/.gitkeep
 !data/batch_requests/.gitkeep
 !data/batch_results/.gitkeep
+!data/analysis/.gitkeep
 
 # ============================================================================
 # Synthea Generated Files
