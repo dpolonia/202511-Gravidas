@@ -19,6 +19,7 @@ Usage:
 import json
 import logging
 import sys
+import os
 import argparse
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -200,8 +201,17 @@ def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
             config = yaml.safe_load(f)
         return config
     except FileNotFoundError:
-        logger.error(f"Config file not found: {config_path}")
-        sys.exit(1)
+        logger.warning(f"Config file not found: {config_path}, using defaults and environment variables")
+        # Return minimal config structure
+        return {
+            'api_keys': {
+                'anthropic': {'api_key': os.getenv('ANTHROPIC_API_KEY', '')},
+                'openai': {'api_key': os.getenv('OPENAI_API_KEY', '')},
+                'google': {'api_key': os.getenv('GOOGLE_API_KEY', '')},
+                'xai': {'api_key': os.getenv('XAI_API_KEY', '')}
+            },
+            'interview': {'max_turns': 20}
+        }
 
 
 def load_matched_personas(matched_file: str) -> List[Dict[str, Any]]:

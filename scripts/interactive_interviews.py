@@ -586,9 +586,20 @@ def confirm_and_run(
             '--count', str(num_interviews)
         ]
 
+        # Set API key as environment variable
+        env = os.environ.copy()
+        if provider == 'anthropic':
+            env['ANTHROPIC_API_KEY'] = api_key
+        elif provider == 'openai':
+            env['OPENAI_API_KEY'] = api_key
+        elif provider == 'google':
+            env['GOOGLE_API_KEY'] = api_key
+        elif provider == 'xai':
+            env['XAI_API_KEY'] = api_key
+
         try:
-            # Run the interview script
-            subprocess.run(cmd, check=True)
+            # Run the interview script with API key in environment
+            subprocess.run(cmd, check=True, env=env)
             return True
         except subprocess.CalledProcessError as e:
             print(f"\n✗ Error running interviews: {e}")
