@@ -10,12 +10,22 @@ The model names in `config/config.yaml` and `scripts/interactive_interviews.py` 
 
 ### ✅ Current Models (Working)
 
-| Display Name | **API Model ID** | Cost (per 1M tokens) | Context |
-|--------------|------------------|----------------------|---------|
-| Claude Sonnet 4.5 | `claude-sonnet-4-5-20250929` | $3.00 / $15.00 | 200K |
-| Claude Haiku 4.5 | `claude-haiku-4-5` | $1.00 / $5.00 | 200K |
-| Claude 3.5 Sonnet | `claude-3-5-sonnet-20241022` | $3.00 / $15.00 | 200K |
-| Claude 3.5 Haiku | `claude-3-5-haiku-20241022` | $1.00 / $5.00 | 200K |
+| Display Name | **API Model ID** | Cost (per 1M tokens) | Context | Max Output | Features |
+|--------------|------------------|----------------------|---------|------------|----------|
+| Claude Sonnet 4.5 | `claude-sonnet-4-5-20250929` | $3.00 / $15.00 | 200K | 64K | Extended Thinking, Priority Tier |
+| Claude Haiku 4.5 | `claude-haiku-4-5` | $1.00 / $5.00 | 200K | 64K | Extended Thinking, Fastest |
+| Claude Opus 4.1 | `claude-opus-4-1` | $15.00 / $75.00 | 200K | 32K | Extended Thinking, Specialized Reasoning |
+
+**Model Descriptions:**
+- **Claude Sonnet 4.5**: Smartest model for complex agents and coding. Fast latency. Knowledge cutoff: Jan 2025.
+- **Claude Haiku 4.5**: Fastest model with near-frontier intelligence. Knowledge cutoff: Feb 2025.
+- **Claude Opus 4.1**: Exceptional model for specialized reasoning tasks. Moderate latency. Knowledge cutoff: Jan 2025.
+
+**All Models Support:**
+- ✅ Extended Thinking mode
+- ✅ Priority Tier access
+- ✅ Batch API (50% discount)
+- ✅ 200K token context window (1M tokens beta for Sonnet 4.5)
 
 **Official Documentation**: https://docs.anthropic.com/en/docs/about-claude/models
 

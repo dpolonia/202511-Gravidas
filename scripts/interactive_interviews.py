@@ -35,7 +35,7 @@ MODELS_DATABASE = {
         'name': 'Anthropic (Claude)',
         'models': {
             'claude-sonnet-4-5-20250929': {
-                'name': 'Claude 4.5 Sonnet',
+                'name': 'Claude Sonnet 4.5',
                 'cost_input': 3.0,
                 'cost_output': 15.0,
                 'batch_available': True,
@@ -43,11 +43,15 @@ MODELS_DATABASE = {
                 'batch_output': 7.5,
                 'tokens_per_second': 80,
                 'quality': 'Excellent',
-                'description': 'Agentic workhorse, advanced coding (Recommended)',
+                'context_window': 200000,
+                'max_output': 64000,
+                'extended_thinking': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'Smartest model for complex agents and coding (Recommended)',
                 'recommended': True
             },
             'claude-haiku-4-5': {
-                'name': 'Claude 4.5 Haiku',
+                'name': 'Claude Haiku 4.5',
                 'cost_input': 1.0,
                 'cost_output': 5.0,
                 'batch_available': True,
@@ -55,10 +59,14 @@ MODELS_DATABASE = {
                 'batch_output': 2.5,
                 'tokens_per_second': 120,
                 'quality': 'Very Good',
-                'description': 'Near-frontier speed, fast applications'
+                'context_window': 200000,
+                'max_output': 64000,
+                'extended_thinking': True,
+                'knowledge_cutoff': 'Feb 2025',
+                'description': 'Fastest model with near-frontier intelligence'
             },
             'claude-opus-4-1': {
-                'name': 'Claude 4.1 Opus',
+                'name': 'Claude Opus 4.1',
                 'cost_input': 15.0,
                 'cost_output': 75.0,
                 'batch_available': True,
@@ -66,7 +74,11 @@ MODELS_DATABASE = {
                 'batch_output': 37.5,
                 'tokens_per_second': 50,
                 'quality': 'Excellent',
-                'description': 'Complex reasoning, autonomous agents, high-stakes analysis'
+                'context_window': 200000,
+                'max_output': 32000,
+                'extended_thinking': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'Exceptional model for specialized reasoning tasks'
             }
         }
     },
