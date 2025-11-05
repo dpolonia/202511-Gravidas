@@ -217,6 +217,7 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'persona_age': interview['persona_age'],
         'persona_source': interview.get('persona_source', 'HuggingFace FinePersonas-v0.1'),
         'persona_description': interview.get('persona_description', ''),
+        'persona_profile_file': interview.get('persona_profile_file', 'N/A'),
         'synthea_patient_id': interview.get('synthea_patient_id', 'N/A'),
         'synthea_source_file': interview.get('synthea_source_file', 'N/A'),
         'filename': interview['filename'],
@@ -269,7 +270,7 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
 
     fieldnames = [
         'persona_id', 'persona_age', 'persona_name', 'weeks_pregnant',
-        'persona_source', 'persona_description',
+        'persona_source', 'persona_description', 'persona_profile_file',
         'synthea_patient_id', 'synthea_source_file',
         'filename', 'timestamp', 'total_turns', 'total_words',
         'persona_words', 'avg_response_length',
@@ -371,8 +372,9 @@ def print_detailed_list(analyses: List[Dict[str, Any]]):
         print(f"  Weeks Pregnant: {a['weeks_pregnant']}")
         print(f"  Persona Source: {a.get('persona_source', 'N/A')}")
         print(f"  Persona Description: {a.get('persona_description', 'N/A')[:80]}...")
+        print(f"  Persona Profile: data/finepersonas_profiles/{a.get('persona_profile_file', 'N/A')}")
         print(f"  Synthea Patient ID: {a.get('synthea_patient_id', 'N/A')}")
-        print(f"  Synthea Source File: {a.get('synthea_source_file', 'N/A')}")
+        print(f"  Synthea Source File: data/health_records/{a.get('synthea_source_file', 'N/A')}")
         print(f"  Words: {a['persona_words']:,} | Turns: {a['total_turns']}")
         print(f"  Cost: ${a['cost_usd']:.4f} ({a['total_tokens']:,} tokens)")
         print(f"  File: {a['filename']}")
