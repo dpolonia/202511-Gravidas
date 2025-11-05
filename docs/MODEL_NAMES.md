@@ -55,13 +55,27 @@ As of January 2025, these are the most common OpenAI models:
 
 ### ✅ Current Models (Working)
 
-| Display Name | **API Model ID** | Cost (per 1M tokens) | Context |
-|--------------|------------------|----------------------|---------|
-| Gemini 1.5 Pro | `gemini-1.5-pro` | $1.25 / $5.00 | 2M |
-| Gemini 1.5 Flash | `gemini-1.5-flash` | $0.075 / $0.30 | 1M |
-| Gemini 1.0 Pro | `gemini-1.0-pro` | $0.50 / $1.50 | 32K |
+| Display Name | **API Model ID** | Cost (per 1M tokens) | Context | Max Output | Features |
+|--------------|------------------|----------------------|---------|------------|----------|
+| Gemini 2.5 Pro | `gemini-2.5-pro` | $1.25 / $10.00 | 1M | 65K | Thinking, Batch API |
+| Gemini 2.5 Flash | `gemini-2.5-flash` | $0.15 / $1.25 | 1M | 65K | Thinking, Batch API |
+| Gemini 2.5 Flash-Lite | `gemini-2.5-flash-lite` | $0.10 / $0.40 | 1M | 65K | Thinking, Batch API |
+| Gemini 2.0 Flash | `gemini-2.0-flash` | $0.05 / $0.20 | 1M | 8K | Batch API |
 
-**Note**: Gemini 2.x models mentioned in config are **not yet released**. Use Gemini 1.5 Pro for best performance.
+**Model Descriptions:**
+- **Gemini 2.5 Pro**: State-of-the-art thinking model for complex reasoning in code, math, and STEM. Knowledge cutoff: Jan 2025.
+- **Gemini 2.5 Flash**: Best price-performance model for large-scale processing and agentic use cases. Knowledge cutoff: Jan 2025.
+- **Gemini 2.5 Flash-Lite**: Fastest flash model optimized for cost-efficiency and high throughput. Knowledge cutoff: Jan 2025.
+- **Gemini 2.0 Flash**: Second generation workhorse model with 1M context window. Knowledge cutoff: Aug 2024.
+
+**All 2.5 Models Support:**
+- ✅ Thinking mode for complex reasoning
+- ✅ Batch API (50% discount)
+- ✅ 1,048,576 token context window
+- ✅ Code execution
+- ✅ Function calling
+- ✅ Search grounding
+- ✅ Structured outputs
 
 **Official Documentation**: https://ai.google.dev/models/gemini
 

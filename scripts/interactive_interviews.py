@@ -135,8 +135,8 @@ MODELS_DATABASE = {
     'google': {
         'name': 'Google (Gemini)',
         'models': {
-            'gemini-2-5-pro': {
-                'name': 'Gemini 2.5 Pro (≤200k)',
+            'gemini-2.5-pro': {
+                'name': 'Gemini 2.5 Pro',
                 'cost_input': 1.25,
                 'cost_output': 10.0,
                 'batch_available': True,
@@ -144,21 +144,14 @@ MODELS_DATABASE = {
                 'batch_output': 5.0,
                 'tokens_per_second': 75,
                 'quality': 'Excellent',
-                'description': 'Advanced thinking model, complex coding (Recommended)',
+                'context_window': 1048576,
+                'max_output': 65536,
+                'thinking': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'State-of-the-art thinking model for complex reasoning (Recommended)',
                 'recommended': True
             },
-            'gemini-2-5-pro-large': {
-                'name': 'Gemini 2.5 Pro (>200k)',
-                'cost_input': 2.5,
-                'cost_output': 15.0,
-                'batch_available': True,
-                'batch_input': 1.25,
-                'batch_output': 7.5,
-                'tokens_per_second': 65,
-                'quality': 'Excellent',
-                'description': 'Large context model, document analysis'
-            },
-            'gemini-2-5-flash': {
+            'gemini-2.5-flash': {
                 'name': 'Gemini 2.5 Flash',
                 'cost_input': 0.15,
                 'cost_output': 1.25,
@@ -167,7 +160,41 @@ MODELS_DATABASE = {
                 'batch_output': 0.625,
                 'tokens_per_second': 110,
                 'quality': 'Very Good',
-                'description': 'Enterprise workhorse, high-volume agents'
+                'context_window': 1048576,
+                'max_output': 65536,
+                'thinking': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'Best price-performance, large-scale processing'
+            },
+            'gemini-2.5-flash-lite': {
+                'name': 'Gemini 2.5 Flash-Lite',
+                'cost_input': 0.10,
+                'cost_output': 0.40,
+                'batch_available': True,
+                'batch_input': 0.05,
+                'batch_output': 0.20,
+                'tokens_per_second': 130,
+                'quality': 'Good',
+                'context_window': 1048576,
+                'max_output': 65536,
+                'thinking': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'Fastest, optimized for cost-efficiency and high throughput'
+            },
+            'gemini-2.0-flash': {
+                'name': 'Gemini 2.0 Flash',
+                'cost_input': 0.05,
+                'cost_output': 0.20,
+                'batch_available': True,
+                'batch_input': 0.025,
+                'batch_output': 0.10,
+                'tokens_per_second': 145,
+                'quality': 'Good',
+                'context_window': 1048576,
+                'max_output': 8192,
+                'thinking': False,
+                'knowledge_cutoff': 'Aug 2024',
+                'description': 'Second generation workhorse, 1M context window'
             }
         }
     },
