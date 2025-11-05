@@ -36,6 +36,9 @@ except ImportError:
     sys.exit(1)
 
 
+# Create logs directory if it doesn't exist
+Path('logs').mkdir(parents=True, exist_ok=True)
+
 # Setup logging
 logging.basicConfig(
     level=logging.INFO,
