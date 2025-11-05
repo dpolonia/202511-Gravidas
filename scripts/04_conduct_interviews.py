@@ -438,11 +438,15 @@ def conduct_interview(
         logger.warning(f"Failed to get conclusion response: {e}")
 
     # Build interview record
+    persona_id = persona.get('id')
+    finepersonas_profile_file = f"persona_{persona_id:05d}_profile.json" if persona_id else None
+
     interview = {
-        'persona_id': persona.get('id'),
+        'persona_id': persona_id,
         'persona_age': persona.get('age'),
         'persona_source': 'HuggingFace FinePersonas-v0.1',
         'persona_description': persona.get('description', ''),
+        'persona_profile_file': finepersonas_profile_file,
         'synthea_patient_id': health_record.get('patient_id'),
         'synthea_source_file': health_record.get('source_file'),
         'protocol': protocol.get('name'),
@@ -452,9 +456,11 @@ def conduct_interview(
             'total_turns': len(transcript),
             'questions_asked': len(questions),
             'persona_traceability': {
-                'persona_id': persona.get('id'),
+                'persona_id': persona_id,
                 'source_dataset': 'HuggingFace FinePersonas-v0.1',
                 'dataset_url': 'https://huggingface.co/datasets/argilla/FinePersonas-v0.1',
+                'profile_file': finepersonas_profile_file,
+                'profile_path': f"data/finepersonas_profiles/{finepersonas_profile_file}" if finepersonas_profile_file else None,
                 'age': persona.get('age'),
                 'gender': persona.get('gender'),
                 'education': persona.get('education'),
@@ -466,6 +472,7 @@ def conduct_interview(
             'synthea_traceability': {
                 'patient_id': health_record.get('patient_id'),
                 'source_file': health_record.get('source_file'),
+                'source_path': f"data/health_records/{health_record.get('source_file')}" if health_record.get('source_file') else None,
                 'num_conditions': len(health_record.get('conditions', [])),
                 'num_encounters': len(health_record.get('encounters', []))
             }
