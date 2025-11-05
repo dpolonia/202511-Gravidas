@@ -24,7 +24,8 @@ import argparse
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import time
-from datetime import datetime
+import datetime
+from datetime import datetime as dt
 
 try:
     import yaml
@@ -463,6 +464,7 @@ Examples:
     parser.add_argument('--count', type=int, default=10, help='Number of interviews to conduct')
     parser.add_argument('--config', type=str, default='config/config.yaml', help='Config file path')
     parser.add_argument('--start-index', type=int, default=0, help='Starting index in matched personas')
+    parser.add_argument('--batch', action='store_true', help='Use batch API mode (50%% cost savings, 24hr turnaround). Creates batch request file instead of running interviews immediately.')
     args = parser.parse_args()
 
     # Create logs directory
@@ -501,7 +503,51 @@ Examples:
         logger.error(f"Failed to initialize AI provider: {e}")
         sys.exit(1)
 
-    # Conduct interviews
+    # Handle batch mode
+    if args.batch:
+        logger.info("BATCH MODE: Creating batch request file instead of running interviews immediately")
+        logger.info(f"Note: Batch API offers 50% cost savings but requires ~24 hour processing time")
+
+        batch_requests = []
+        for i in range(args.count):
+            persona_idx = args.start_index + i
+            matched_pair = matched_personas[persona_idx]
+            persona = matched_pair['persona']
+            health_record = matched_pair['health_record']
+
+            # Create initial prompt
+            system_message = create_system_message(persona, health_record, protocol)
+            first_question = protocol['questions'][0]['question']
+
+            batch_requests.append({
+                'custom_id': f'interview_{persona_idx}',
+                'persona_id': persona_idx,
+                'persona': persona,
+                'health_record': health_record,
+                'system_message': system_message,
+                'first_question': first_question
+            })
+
+        # Save batch request file
+        batch_dir = Path('data/batch_requests')
+        batch_dir.mkdir(parents=True, exist_ok=True)
+        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        batch_file = batch_dir / f'batch_request_{provider}_{timestamp}.jsonl'
+
+        with open(batch_file, 'w') as f:
+            for req in batch_requests:
+                f.write(json.dumps(req) + '\n')
+
+        logger.info(f"✓ Created batch request file: {batch_file}")
+        logger.info(f"✓ {len(batch_requests)} interview requests prepared")
+        logger.info(f"\nNext steps:")
+        logger.info(f"  1. Submit batch file to {provider} API")
+        logger.info(f"  2. Wait for processing (~24 hours)")
+        logger.info(f"  3. Download results when ready")
+        logger.info(f"\nSee docs/BATCH_API.md for detailed instructions")
+        return
+
+    # Conduct interviews (real-time mode)
     logger.info(f"Conducting {args.count} interviews...")
 
     successful_interviews = 0
