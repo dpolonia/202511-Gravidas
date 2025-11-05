@@ -68,9 +68,10 @@ class ClaudeProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        api_key = config.get('api_key')
+        # Try config first, then environment variable
+        api_key = config.get('api_key') or os.getenv('ANTHROPIC_API_KEY', '')
         if not api_key or api_key.startswith('your-'):
-            raise ValueError("Claude API key not configured in config.yaml")
+            raise ValueError("Claude API key not configured. Set ANTHROPIC_API_KEY environment variable or add to config.yaml")
 
         self.client = Anthropic(api_key=api_key)
         # Use specified model or fall back to default_model or hardcoded default
@@ -116,9 +117,10 @@ class OpenAIProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        api_key = config.get('api_key')
+        # Try config first, then environment variable
+        api_key = config.get('api_key') or os.getenv('OPENAI_API_KEY', '')
         if not api_key or api_key.startswith('your-'):
-            raise ValueError("OpenAI API key not configured in config.yaml")
+            raise ValueError("OpenAI API key not configured. Set OPENAI_API_KEY environment variable or add to config.yaml")
 
         openai.api_key = api_key
         self.client = openai.OpenAI(api_key=api_key)
@@ -151,9 +153,10 @@ class GeminiProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
-        api_key = config.get('api_key')
+        # Try config first, then environment variable
+        api_key = config.get('api_key') or os.getenv('GOOGLE_API_KEY', '')
         if not api_key or api_key.startswith('your-'):
-            raise ValueError("Gemini API key not configured in config.yaml")
+            raise ValueError("Gemini API key not configured. Set GOOGLE_API_KEY environment variable or add to config.yaml")
 
         genai.configure(api_key=api_key)
         # Use specified model or fall back to default_model or hardcoded default
