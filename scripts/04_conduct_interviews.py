@@ -363,13 +363,13 @@ def conduct_interview(
     intro_message = f"Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin."
 
     messages.append({'role': 'user', 'content': intro_message})
-    transcript.append({'speaker': 'Interviewer', 'text': intro_message, 'timestamp': datetime.now().isoformat()})
+    transcript.append({'speaker': 'Interviewer', 'text': intro_message, 'timestamp': dt.now().isoformat()})
 
     # Get initial response
     try:
         response = ai_provider.generate_response(messages)
         messages.append({'role': 'assistant', 'content': response})
-        transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': datetime.now().isoformat()})
+        transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
     except Exception as e:
         logger.error(f"Failed to get initial response: {e}")
         return None
@@ -381,12 +381,12 @@ def conduct_interview(
         logger.debug(f"Question {i+1}/{len(questions)}: {question_text[:50]}...")
 
         messages.append({'role': 'user', 'content': question_text})
-        transcript.append({'speaker': 'Interviewer', 'text': question_text, 'timestamp': datetime.now().isoformat()})
+        transcript.append({'speaker': 'Interviewer', 'text': question_text, 'timestamp': dt.now().isoformat()})
 
         try:
             response = ai_provider.generate_response(messages)
             messages.append({'role': 'assistant', 'content': response})
-            transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': datetime.now().isoformat()})
+            transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
 
             # Rate limiting
             time.sleep(0.5)
@@ -398,11 +398,11 @@ def conduct_interview(
     # Conclusion
     outro_message = "Thank you for your time and for sharing your experiences with me. This concludes our interview."
     messages.append({'role': 'user', 'content': outro_message})
-    transcript.append({'speaker': 'Interviewer', 'text': outro_message, 'timestamp': datetime.now().isoformat()})
+    transcript.append({'speaker': 'Interviewer', 'text': outro_message, 'timestamp': dt.now().isoformat()})
 
     try:
         response = ai_provider.generate_response(messages)
-        transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': datetime.now().isoformat()})
+        transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
     except Exception as e:
         logger.warning(f"Failed to get conclusion response: {e}")
 
@@ -411,7 +411,7 @@ def conduct_interview(
         'persona_id': persona.get('id'),
         'persona_age': persona.get('age'),
         'protocol': protocol.get('name'),
-        'timestamp': datetime.now().isoformat(),
+        'timestamp': dt.now().isoformat(),
         'transcript': transcript,
         'metadata': {
             'total_turns': len(transcript),
@@ -531,7 +531,7 @@ Examples:
         # Save batch request file
         batch_dir = Path('data/batch_requests')
         batch_dir.mkdir(parents=True, exist_ok=True)
-        timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+        timestamp = datetime.dt.now().strftime('%Y%m%d_%H%M%S')
         batch_file = batch_dir / f'batch_request_{provider}_{timestamp}.jsonl'
 
         with open(batch_file, 'w') as f:
