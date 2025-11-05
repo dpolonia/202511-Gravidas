@@ -215,6 +215,10 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
     analysis = {
         'persona_id': persona_id,
         'persona_age': interview['persona_age'],
+        'persona_source': interview.get('persona_source', 'HuggingFace FinePersonas-v0.1'),
+        'persona_description': interview.get('persona_description', ''),
+        'synthea_patient_id': interview.get('synthea_patient_id', 'N/A'),
+        'synthea_source_file': interview.get('synthea_source_file', 'N/A'),
         'filename': interview['filename'],
         'timestamp': interview['timestamp'],
         'total_turns': len(transcript),
@@ -265,6 +269,8 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
 
     fieldnames = [
         'persona_id', 'persona_age', 'persona_name', 'weeks_pregnant',
+        'persona_source', 'persona_description',
+        'synthea_patient_id', 'synthea_source_file',
         'filename', 'timestamp', 'total_turns', 'total_words',
         'persona_words', 'avg_response_length',
         'topic_pregnancy', 'topic_healthcare', 'topic_symptoms',
@@ -363,6 +369,10 @@ def print_detailed_list(analyses: List[Dict[str, Any]]):
         print(f"Interview {a['persona_id']:04d}:")
         print(f"  Name: {a['persona_name']}, Age: {a['persona_age']}")
         print(f"  Weeks Pregnant: {a['weeks_pregnant']}")
+        print(f"  Persona Source: {a.get('persona_source', 'N/A')}")
+        print(f"  Persona Description: {a.get('persona_description', 'N/A')[:80]}...")
+        print(f"  Synthea Patient ID: {a.get('synthea_patient_id', 'N/A')}")
+        print(f"  Synthea Source File: {a.get('synthea_source_file', 'N/A')}")
         print(f"  Words: {a['persona_words']:,} | Turns: {a['total_turns']}")
         print(f"  Cost: ${a['cost_usd']:.4f} ({a['total_tokens']:,} tokens)")
         print(f"  File: {a['filename']}")
@@ -378,6 +388,11 @@ def print_clinical_details(analyses: List[Dict[str, Any]]):
 
     for a in analyses:
         print(f"Interview {a['persona_id']:04d} - {a['persona_name']}, Age {a['persona_age']}")
+        print(f"  Persona: {a.get('persona_description', 'N/A')[:100]}...")
+        print(f"  Persona Source: {a.get('persona_source', 'N/A')}")
+        print(f"  Synthea Patient ID: {a.get('synthea_patient_id', 'N/A')}")
+        print(f"  Synthea Source File: {a.get('synthea_source_file', 'N/A')}")
+        print()
         print(f"  Healthcare Profile:")
         print(f"    • Conditions: {a['num_conditions']}")
         print(f"    • Medications: {a['num_medications']}")

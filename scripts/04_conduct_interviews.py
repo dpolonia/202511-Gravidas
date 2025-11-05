@@ -441,17 +441,33 @@ def conduct_interview(
     interview = {
         'persona_id': persona.get('id'),
         'persona_age': persona.get('age'),
+        'persona_source': 'HuggingFace FinePersonas-v0.1',
+        'persona_description': persona.get('description', ''),
+        'synthea_patient_id': health_record.get('patient_id'),
+        'synthea_source_file': health_record.get('source_file'),
         'protocol': protocol.get('name'),
         'timestamp': dt.now().isoformat(),
         'transcript': transcript,
         'metadata': {
             'total_turns': len(transcript),
             'questions_asked': len(questions),
-            'persona_summary': {
+            'persona_traceability': {
+                'persona_id': persona.get('id'),
+                'source_dataset': 'HuggingFace FinePersonas-v0.1',
+                'dataset_url': 'https://huggingface.co/datasets/argilla/FinePersonas-v0.1',
                 'age': persona.get('age'),
+                'gender': persona.get('gender'),
                 'education': persona.get('education'),
                 'occupation': persona.get('occupation'),
-                'marital_status': persona.get('marital_status')
+                'marital_status': persona.get('marital_status'),
+                'income_level': persona.get('income_level'),
+                'description': persona.get('description', '')
+            },
+            'synthea_traceability': {
+                'patient_id': health_record.get('patient_id'),
+                'source_file': health_record.get('source_file'),
+                'num_conditions': len(health_record.get('conditions', [])),
+                'num_encounters': len(health_record.get('encounters', []))
             }
         }
     }
