@@ -1,0 +1,20 @@
+Provider,Model_Name,API_Model_ID,Input_Cost_per_1M,Output_Cost_per_1M,Batch_Input_Cost,Batch_Output_Cost,Cached_Input_Cost,Context_Window_Tokens,Max_Output_Tokens,Batch_API_Available,Extended_Thinking,Knowledge_Cutoff,Special_Features,Recommended
+Anthropic,Claude Sonnet 4.5,claude-sonnet-4-5-20250929,3.00,15.00,1.50,7.50,,200000,64000,Yes,Yes,Jan 2025,Priority Tier; Fast latency,Yes
+Anthropic,Claude Haiku 4.5,claude-haiku-4-5,1.00,5.00,0.50,2.50,,200000,64000,Yes,Yes,Feb 2025,Fastest; Near-frontier intelligence,No
+Anthropic,Claude Opus 4.1,claude-opus-4-1,15.00,75.00,7.50,37.50,,200000,32000,Yes,Yes,Jan 2025,Specialized reasoning; Moderate latency,No
+OpenAI,GPT-5,gpt-5,1.25,10.00,0.625,5.00,0.13,400000,128000,Yes,No,Sep 2024,Streaming; Function calling; Image input; Structured outputs,Yes
+OpenAI,GPT-5 Pro,gpt-5-pro,15.00,120.00,7.50,60.00,,400000,272000,Yes,No,Sep 2024,Largest output (272K); Complex reasoning; Image input,No
+OpenAI,GPT-5 (ChatGPT),gpt-5-chatgpt,1.25,10.00,0.625,5.00,0.13,128000,16384,Yes,No,Sep 2024,Chat optimized; Image input; Streaming,No
+Google,Gemini 2.5 Pro,gemini-2.5-pro,1.25,10.00,0.625,5.00,,1048576,65536,Yes,Yes (Thinking),Jan 2025,Code execution; Function calling; Search grounding,Yes
+Google,Gemini 2.5 Flash,gemini-2.5-flash,0.15,1.25,0.075,0.625,,1048576,65536,Yes,Yes (Thinking),Jan 2025,Best price/performance; Large-scale processing,No
+Google,Gemini 2.5 Flash-Lite,gemini-2.5-flash-lite,0.10,0.40,0.05,0.20,,1048576,65536,Yes,Yes (Thinking),Jan 2025,Fastest; Cost-efficient; High throughput,No
+Google,Gemini 2.0 Flash,gemini-2.0-flash,0.05,0.20,0.025,0.10,,1048576,8192,Yes,No,Aug 2024,1M context; Second generation,No
+AWS Bedrock,Claude 4.5 Sonnet (Bedrock),bedrock-claude-sonnet-4-5,3.00,15.00,1.50,7.50,,200000,64000,Yes,Yes,Jan 2025,Enterprise integration; AWS hosted,No
+AWS Bedrock,Llama 3.2 90B,bedrock-llama-3-2-90b,2.00,2.00,1.00,1.00,,N/A,N/A,Yes,No,N/A,Open source; AWS hosted,No
+AWS Bedrock,Amazon Titan Text Express,bedrock-titan-express,0.80,1.60,0.40,0.80,,N/A,N/A,Yes,No,N/A,Amazon native; Cost effective,No
+Mistral AI,Mistral Large 2,mistral-large-2,3.00,9.00,,,,,N/A,No,No,N/A,European AI; Advanced reasoning,No
+Mistral AI,Codestral,codestral,1.00,3.00,,,,,N/A,No,No,N/A,Code generation specialist,No
+Mistral AI,Ministral 8B,ministral-8b,0.10,0.10,,,,,N/A,No,No,N/A,Fast; Edge deployment,No
+xAI,Grok 4,grok-4,3.00,15.00,,,,,N/A,No,No,N/A,Real-time knowledge; Advanced reasoning,No
+xAI,Grok 4 Fast,grok-4-fast,0.20,0.50,,,,,N/A,No,No,N/A,Fast reasoning mode,No
+xAI,Grok 3 Mini,grok-3-mini,0.30,0.50,,,,,N/A,No,No,N/A,Fast; Capable; Good value,No
