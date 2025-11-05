@@ -11,7 +11,8 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 - **Persona Retrieval**: Downloads 10,000 female personas from HuggingFace FinePersonas dataset
 - **Health Record Generation**: Uses Synthea to generate realistic pregnancy-related medical records
 - **Intelligent Matching**: Matches personas to health records based on age compatibility and socioeconomic factors
-- **Multi-AI Support**: Conduct interviews using Claude, OpenAI, or Gemini models
+- **Multi-AI Support**: Choose from 12 different AI models across Claude, OpenAI, and Gemini
+- **Flexible Model Selection**: Easy configuration with cost/quality comparisons for each model
 - **Protocol-Based Interviews**: Customizable interview protocols for different research scenarios
 
 ## Project Structure
@@ -35,7 +36,8 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 │   └── interview_protocols/     # Interview protocol templates
 ├── docs/
 │   ├── SYNTHEA_SETUP.md
-│   └── API_CONFIGURATION.md
+│   ├── API_CONFIGURATION.md
+│   └── MODEL_SELECTION.md
 ├── TUTORIAL.md
 └── requirements.txt
 ```
@@ -77,21 +79,28 @@ python scripts/02_generate_health_records.py
 # Step 3: Match personas to records
 python scripts/03_match_personas_records.py
 
-# Step 4: Conduct interviews
-python scripts/04_conduct_interviews.py --model claude --protocol Script/interview_protocols/prenatal_care.json
+# Step 4: Conduct interviews (uses active_provider and active_model from config.yaml)
+python scripts/04_conduct_interviews.py --count 10
+
+# Or specify provider and model explicitly
+python scripts/04_conduct_interviews.py --provider anthropic --model claude-4.5-sonnet --count 10
 ```
 
 ## Configuration
 
 Edit `config/config.yaml` to set:
+- **Active provider and model** (anthropic, openai, or google)
 - API keys for AI providers
-- Model preferences
+- 12 available models with cost/quality info
 - Data paths
 - Matching parameters
+
+See [docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md) for detailed model comparison and cost estimates.
 
 ## Documentation
 
 - [TUTORIAL.md](TUTORIAL.md) - Complete step-by-step guide
+- [docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md) - Choose between 12 AI models with cost comparisons
 - [docs/SYNTHEA_SETUP.md](docs/SYNTHEA_SETUP.md) - Synthea installation and configuration
 - [docs/API_CONFIGURATION.md](docs/API_CONFIGURATION.md) - API key setup guide
 

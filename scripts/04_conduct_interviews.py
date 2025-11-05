@@ -62,16 +62,19 @@ class AIProvider:
 class ClaudeProvider(AIProvider):
     """Anthropic Claude provider."""
 
-    def __init__(self, config: Dict[str, Any]):
+    def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
         api_key = config.get('api_key')
-        if not api_key or api_key == 'your-claude-api-key-here':
+        if not api_key or api_key.startswith('your-'):
             raise ValueError("Claude API key not configured in config.yaml")
 
         self.client = Anthropic(api_key=api_key)
-        self.model = config.get('default_model', 'claude-3-5-sonnet-20241022')
+        # Use specified model or fall back to default_model or hardcoded default
+        self.model = model or config.get('default_model', 'claude-4.5-sonnet')
         self.max_tokens = config.get('max_tokens', 4096)
         self.temperature = config.get('temperature', 0.7)
+
+        logger.info(f"Initialized Claude provider with model: {self.model}")
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
         """Generate response using Claude."""
@@ -107,17 +110,20 @@ class ClaudeProvider(AIProvider):
 class OpenAIProvider(AIProvider):
     """OpenAI GPT provider."""
 
-    def __init__(self, config: Dict[str, Any]):
+    def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
         api_key = config.get('api_key')
-        if not api_key or api_key == 'your-openai-api-key-here':
+        if not api_key or api_key.startswith('your-'):
             raise ValueError("OpenAI API key not configured in config.yaml")
 
         openai.api_key = api_key
         self.client = openai.OpenAI(api_key=api_key)
-        self.model = config.get('default_model', 'gpt-4')
+        # Use specified model or fall back to default_model or hardcoded default
+        self.model = model or config.get('default_model', 'gpt-5')
         self.max_tokens = config.get('max_tokens', 4096)
         self.temperature = config.get('temperature', 0.7)
+
+        logger.info(f"Initialized OpenAI provider with model: {self.model}")
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
         """Generate response using OpenAI."""
@@ -139,16 +145,20 @@ class OpenAIProvider(AIProvider):
 class GeminiProvider(AIProvider):
     """Google Gemini provider."""
 
-    def __init__(self, config: Dict[str, Any]):
+    def __init__(self, config: Dict[str, Any], model: str = None):
         super().__init__(config)
         api_key = config.get('api_key')
-        if not api_key or api_key == 'your-gemini-api-key-here':
+        if not api_key or api_key.startswith('your-'):
             raise ValueError("Gemini API key not configured in config.yaml")
 
         genai.configure(api_key=api_key)
-        model_name = config.get('default_model', 'gemini-1.5-pro')
+        # Use specified model or fall back to default_model or hardcoded default
+        model_name = model or config.get('default_model', 'gemini-2.5-pro')
         self.model = genai.GenerativeModel(model_name)
+        self.model_name = model_name
         self.temperature = config.get('temperature', 0.7)
+
+        logger.info(f"Initialized Gemini provider with model: {model_name}")
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
         """Generate response using Gemini."""
@@ -217,16 +227,47 @@ def load_interview_protocol(protocol_file: str) -> Dict[str, Any]:
         sys.exit(1)
 
 
-def create_ai_provider(provider_name: str, config: Dict[str, Any]) -> AIProvider:
-    """Create AI provider instance."""
+def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = None) -> AIProvider:
+    """
+    Create AI provider instance.
+
+    Args:
+        provider_name: Provider name (anthropic/claude, openai, google/gemini)
+        config: Configuration dictionary
+        model: Optional model name to use
+
+    Returns:
+        AIProvider instance
+    """
     providers_config = config.get('api_keys', {})
 
-    if provider_name == 'claude':
-        return ClaudeProvider(providers_config.get('claude', {}))
-    elif provider_name == 'openai':
-        return OpenAIProvider(providers_config.get('openai', {}))
-    elif provider_name == 'gemini':
-        return GeminiProvider(providers_config.get('gemini', {}))
+    # If no model specified, try to get from config
+    if not model:
+        model = config.get('active_model')
+
+    # Normalize provider names (support both old and new conventions)
+    provider_map = {
+        'claude': 'anthropic',
+        'anthropic': 'anthropic',
+        'openai': 'openai',
+        'gemini': 'google',
+        'google': 'google'
+    }
+
+    normalized_provider = provider_map.get(provider_name.lower())
+    if not normalized_provider:
+        raise ValueError(f"Unknown provider: {provider_name}. Use: anthropic, openai, or google")
+
+    # Get provider config
+    provider_config = providers_config.get(normalized_provider, {})
+
+    # Create provider instance
+    if normalized_provider == 'anthropic':
+        return ClaudeProvider(provider_config, model=model)
+    elif normalized_provider == 'openai':
+        return OpenAIProvider(provider_config, model=model)
+    elif normalized_provider == 'google':
+        return GeminiProvider(provider_config, model=model)
     else:
         raise ValueError(f"Unknown provider: {provider_name}")
 
@@ -383,10 +424,25 @@ def save_interview(interview: Dict[str, Any], output_dir: str, interview_num: in
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Conduct AI interviews with synthetic personas')
+    parser = argparse.ArgumentParser(
+        description='Conduct AI interviews with synthetic personas',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Use active_provider and active_model from config.yaml
+  python scripts/04_conduct_interviews.py --count 10
+
+  # Override provider and model
+  python scripts/04_conduct_interviews.py --provider anthropic --model claude-4.5-sonnet --count 10
+
+  # Use different protocol
+  python scripts/04_conduct_interviews.py --protocol Script/interview_protocols/pregnancy_experience.json
+        """
+    )
     parser.add_argument('--matched', type=str, default='data/matched/matched_personas.json', help='Matched personas file')
     parser.add_argument('--protocol', type=str, default='Script/interview_protocols/prenatal_care.json', help='Interview protocol file')
-    parser.add_argument('--model', type=str, default='claude', choices=['claude', 'openai', 'gemini'], help='AI model provider')
+    parser.add_argument('--provider', type=str, help='AI provider (anthropic, openai, google). If not specified, uses active_provider from config')
+    parser.add_argument('--model', type=str, help='AI model name (e.g., claude-4.5-sonnet, gpt-5, gemini-2.5-pro). If not specified, uses active_model from config')
     parser.add_argument('--output', type=str, default='data/interviews', help='Output directory')
     parser.add_argument('--count', type=int, default=10, help='Number of interviews to conduct')
     parser.add_argument('--config', type=str, default='config/config.yaml', help='Config file path')
@@ -401,6 +457,13 @@ def main():
     # Load configuration
     config = load_config(args.config)
 
+    # Determine provider and model
+    provider = args.provider or config.get('active_provider', 'anthropic')
+    model = args.model or config.get('active_model')
+
+    logger.info(f"Provider: {provider}")
+    logger.info(f"Model: {model}")
+
     # Load matched personas
     matched_personas = load_matched_personas(args.matched)
 
@@ -414,9 +477,9 @@ def main():
         args.count = available
 
     # Initialize AI provider
-    logger.info(f"Initializing AI provider: {args.model}")
+    logger.info(f"Initializing AI provider: {provider} with model: {model}")
     try:
-        ai_provider = create_ai_provider(args.model, config)
+        ai_provider = create_ai_provider(provider, config, model=model)
         logger.info(f"AI provider initialized successfully")
     except Exception as e:
         logger.error(f"Failed to initialize AI provider: {e}")
