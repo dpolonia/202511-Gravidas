@@ -1,0 +1,106 @@
+# Synthetic Gravidas Pipeline Configuration
+# Copy this file to config.yaml and fill in your API keys
+
+# API Keys for AI Providers
+api_keys:
+  # Anthropic Claude API
+  claude:
+    api_key: "your-claude-api-key-here"
+    default_model: "claude-3-5-sonnet-20241022"
+    max_tokens: 4096
+    temperature: 0.7
+
+  # OpenAI API
+  openai:
+    api_key: "your-openai-api-key-here"
+    default_model: "gpt-4"
+    max_tokens: 4096
+    temperature: 0.7
+
+  # Google Gemini API
+  gemini:
+    api_key: "your-gemini-api-key-here"
+    default_model: "gemini-1.5-pro"
+    max_tokens: 4096
+    temperature: 0.7
+
+# HuggingFace Configuration
+huggingface:
+  token: "your-huggingface-token-here"  # Optional, for private datasets
+  dataset: "argilla/FinePersonas-v0.1"
+  cache_dir: "./data/hf_cache"
+
+# Data Paths
+data_paths:
+  personas: "./data/personas"
+  health_records: "./data/health_records"
+  matched: "./data/matched"
+  interviews: "./data/interviews"
+  synthea_output: "./synthea/output/fhir"
+
+# Persona Retrieval Settings
+persona_settings:
+  target_count: 10000
+  age_range:
+    min: 12
+    max: 60
+  gender_filter: "female"
+  fertile_age_keywords:
+    - "woman"
+    - "female"
+    - "mother"
+    - "pregnant"
+    - "childbearing"
+
+# Synthea Configuration
+synthea:
+  executable: "./synthea/run_synthea"  # or run_synthea.bat on Windows
+  population_size: 10000
+  state: "Massachusetts"  # Can be changed to any US state
+  pregnancy_modules:
+    - "pregnancy"
+    - "prenatal"
+    - "maternal_health"
+  snomed_codes:
+    # Pregnancy-related SNOMED codes
+    - "77386006"   # Pregnancy
+    - "72892002"   # Normal pregnancy
+    - "364320009"  # Pregnancy observable
+    - "249166004"  # Antenatal care
+    - "237238006"  # Maternal care
+    - "169560008"  # Prenatal visit
+    - "118185001"  # Finding related to pregnancy
+  output_format: "fhir"
+
+# Matching Algorithm Settings
+matching:
+  algorithm: "weighted"  # Options: weighted, random, optimized
+  weights:
+    age_compatibility: 0.6
+    socioeconomic_factors: 0.4
+  age_tolerance: 2  # years difference allowed
+  socioeconomic_factors:
+    - "education"
+    - "occupation"
+    - "income_level"
+    - "marital_status"
+
+# Interview Settings
+interview:
+  default_provider: "claude"  # Options: claude, openai, gemini
+  protocol_path: "./Script/interview_protocols"
+  max_turns: 20
+  save_transcripts: true
+  batch_size: 10  # Number of interviews to run in parallel
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "./logs/pipeline.log"
+  console: true
+
+# Performance
+performance:
+  max_workers: 4  # Parallel processing threads
+  batch_size: 100
+  cache_enabled: true

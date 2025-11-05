@@ -1,0 +1,30 @@
+# Synthetic Gravidas Pipeline Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+numpy>=1.24.0
+scipy>=1.10.0
+pyyaml>=6.0
+
+# HuggingFace datasets
+datasets>=2.14.0
+huggingface-hub>=0.16.0
+
+# AI Provider APIs
+anthropic>=0.18.0          # Claude API
+openai>=1.12.0             # OpenAI API
+google-generativeai>=0.3.0 # Gemini API
+
+# Data processing
+pandas>=2.0.0
+pyarrow>=12.0.0            # For efficient dataset loading
+
+# Optional but recommended
+tqdm>=4.65.0               # Progress bars
+python-dotenv>=1.0.0       # Environment variable management
+requests>=2.31.0           # HTTP requests
+
+# Development tools (optional)
+# pytest>=7.4.0
+# black>=23.7.0
+# flake8>=6.1.0

@@ -1,0 +1,71 @@
+{
+  "name": "Pregnancy Experience Interview",
+  "version": "1.0",
+  "description": "Brief interview focusing on overall pregnancy experience and key moments.",
+  "category": "maternal_health",
+  "estimated_duration_minutes": 15,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Background",
+      "text": "Tell me about yourself - your age, where you live, and what you do.",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q2",
+      "section": "Pregnancy Discovery",
+      "text": "When and how did you discover you were pregnant? What was your initial reaction?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q3",
+      "section": "Healthcare",
+      "text": "Describe your experience with prenatal healthcare. What has been positive or challenging?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q4",
+      "section": "Physical Changes",
+      "text": "What physical changes have you experienced during pregnancy? How have you coped with them?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q5",
+      "section": "Emotional Experience",
+      "text": "How would you describe your emotional journey through pregnancy?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q6",
+      "section": "Support",
+      "text": "Who has been there to support you? How important has that support been?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q7",
+      "section": "Challenges",
+      "text": "What has been the biggest challenge you've faced during pregnancy?",
+      "type": "open-ended",
+      "required": true
+    },
+    {
+      "id": "q8",
+      "section": "Looking Forward",
+      "text": "What are your hopes and concerns as you approach delivery and motherhood?",
+      "type": "open-ended",
+      "required": true
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-05",
+    "target_population": "Pregnant women",
+    "ethics_approval": "Synthetic data - no IRB required"
+  }
+}

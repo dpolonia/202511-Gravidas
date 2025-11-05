@@ -1,0 +1,195 @@
+{
+  "name": "Prenatal Care Interview Protocol",
+  "version": "1.0",
+  "description": "Comprehensive interview protocol for understanding prenatal care experiences, access to healthcare, and maternal health outcomes.",
+  "category": "maternal_health",
+  "estimated_duration_minutes": 30,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Introduction",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Where do you live?",
+        "What do you do for work?",
+        "Who do you live with?"
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "Pregnancy History",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How did you feel when you found out?",
+        "Was this a planned pregnancy?",
+        "Who was the first person you told?"
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "Prenatal Care Access",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How easy or difficult was it to get an appointment?",
+        "How far did you have to travel?",
+        "Did you face any barriers to getting care?"
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "Healthcare Provider",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you feel comfortable asking questions?",
+        "Do you feel heard and respected?",
+        "Is your provider culturally sensitive?"
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "Prenatal Visits",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "What tests or screenings have you had?",
+        "How long do appointments usually last?",
+        "Do you feel you have enough time with your provider?"
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "Health Conditions",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How were these concerns addressed?",
+        "Did you receive adequate information and support?",
+        "Are you currently managing any chronic conditions?"
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "Medications and Supplements",
+      "text": "What medications or supplements are you currently taking?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Were these prescribed by your doctor?",
+        "Do you understand what each medication is for?",
+        "Have you had any side effects?"
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "Lifestyle and Nutrition",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you made any changes to your diet?",
+        "Do you have access to healthy food?",
+        "Have you received nutritional counseling?"
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "Mental Health",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you experienced anxiety or depression?",
+        "Do you have emotional support?",
+        "Have you discussed mental health with your provider?"
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "Support System",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Does your partner/family support you?",
+        "Are you part of any pregnancy support groups?",
+        "Do you feel you have adequate support?"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Birth Planning",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Where do you plan to give birth?",
+        "Who do you want present during delivery?",
+        "Have you discussed pain management options?"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Information and Education",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you taken any childbirth classes?",
+        "Do you feel well-informed about what to expect?",
+        "What questions do you still have?"
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "Financial Concerns",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you have health insurance?",
+        "Are you worried about medical bills?",
+        "Have you been able to prepare financially?"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Work and Employment",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Does your employer support pregnant employees?",
+        "Are you planning to take maternity leave?",
+        "Have you faced any discrimination?"
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "Postpartum Planning",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you plan to breastfeed?",
+        "What childcare arrangements have you made?",
+        "Do you have postpartum support?"
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-05",
+    "target_population": "Pregnant women and women with pregnancy history",
+    "ethics_approval": "Synthetic data - no IRB required"
+  }
+}
