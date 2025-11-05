@@ -35,17 +35,28 @@ The model names in `config/config.yaml` and `scripts/interactive_interviews.py` 
 
 ### ✅ Current Models (Working)
 
-As of January 2025, these are the most common OpenAI models:
+| Display Name | **API Model ID** | Cost (per 1M tokens) | Context | Max Output | Features |
+|--------------|------------------|----------------------|---------|------------|----------|
+| GPT-5 | `gpt-5` | $1.25 / $10.00 | 400K | 128K | Batch API, Cached Input, Image Input |
+| GPT-5 Pro | `gpt-5-pro` | $15.00 / $120.00 | 400K | 272K | Batch API, Image Input |
+| GPT-5 (ChatGPT) | `gpt-5-chatgpt` | $1.25 / $10.00 | 128K | 16K | Batch API, Cached Input, Image Input |
 
-| Display Name | **API Model ID** | Cost (per 1M tokens) | Context |
-|--------------|------------------|----------------------|---------|
-| GPT-4o | `gpt-4o` | $2.50 / $10.00 | 128K |
-| GPT-4o mini | `gpt-4o-mini` | $0.15 / $0.60 | 128K |
-| GPT-4 Turbo | `gpt-4-turbo` | $10.00 / $30.00 | 128K |
-| GPT-4 | `gpt-4` | $30.00 / $60.00 | 8K |
-| GPT-3.5 Turbo | `gpt-3.5-turbo` | $0.50 / $1.50 | 16K |
+**Model Descriptions:**
+- **GPT-5**: Best model for coding and agentic tasks across domains. Cached input: $0.13/1M tokens. Knowledge cutoff: Sep 2024.
+- **GPT-5 Pro**: Smarter and more precise responses for complex reasoning. Maximum output: 272K tokens. Knowledge cutoff: Sep 2024.
+- **GPT-5 (ChatGPT)**: GPT-5 optimized for chat with 128K context window. Cached input: $0.13/1M tokens. Knowledge cutoff: Sep 2024.
 
-**Note**: GPT-5 models mentioned in config are **fictional/placeholder** names. Use GPT-4o for best current performance.
+**All Models Support:**
+- ✅ Batch API (50% discount)
+- ✅ Streaming responses
+- ✅ Function calling
+- ✅ Structured outputs
+- ✅ Distillation
+
+**Batch Pricing:**
+- GPT-5: $0.625 / $5.00 per 1M tokens
+- GPT-5 Pro: $7.50 / $60.00 per 1M tokens
+- GPT-5 (ChatGPT): $0.625 / $5.00 per 1M tokens
 
 **Official Documentation**: https://platform.openai.com/docs/models
 
