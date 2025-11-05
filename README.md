@@ -44,13 +44,42 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 
 ## Quick Start
 
+### 🚀 Interactive Mode (Easiest!)
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Run interactive launcher
+python scripts/interactive_interviews.py
+```
+
+The interactive launcher guides you through:
+- API key setup (3 flexible methods)
+- Choosing number of interviews
+- Selecting AI provider and model
+- Viewing cost and time estimates
+- Running interviews automatically
+
+See [docs/INTERACTIVE_MODE.md](docs/INTERACTIVE_MODE.md) for full guide.
+
+### 📋 Manual Mode (Advanced)
+
 1. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
 2. **Configure API Keys**
-   Copy and edit the config file:
+   Choose one method:
+
+   **Option A: Environment file (.env)**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys
+   ```
+
+   **Option B: Config file**
    ```bash
    cp config/config.yaml.template config/config.yaml
    # Edit config.yaml with your API keys
@@ -67,6 +96,16 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 
 ## Usage
 
+### Interactive Mode (Recommended)
+
+```bash
+python scripts/interactive_interviews.py
+```
+
+The interactive launcher handles everything with an easy menu system!
+
+### Manual Mode (Advanced Users)
+
 Run the pipeline in sequence:
 
 ```bash
@@ -79,10 +118,11 @@ python scripts/02_generate_health_records.py
 # Step 3: Match personas to records
 python scripts/03_match_personas_records.py
 
-# Step 4: Conduct interviews (uses active_provider and active_model from config.yaml)
-python scripts/04_conduct_interviews.py --count 10
+# Step 4: Conduct interviews
+# Option A: Use interactive mode
+python scripts/interactive_interviews.py
 
-# Or specify provider and model explicitly
+# Option B: Use command line
 python scripts/04_conduct_interviews.py --provider anthropic --model claude-4.5-sonnet --count 10
 ```
 
@@ -99,7 +139,8 @@ See [docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md) for detailed model compar
 
 ## Documentation
 
-- [TUTORIAL.md](TUTORIAL.md) - Complete step-by-step guide
+- **[docs/INTERACTIVE_MODE.md](docs/INTERACTIVE_MODE.md)** - ⭐ Interactive launcher guide (START HERE!)
+- [TUTORIAL.md](TUTORIAL.md) - Complete step-by-step manual guide
 - [docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md) - Choose between 12 AI models with cost comparisons
 - [docs/SYNTHEA_SETUP.md](docs/SYNTHEA_SETUP.md) - Synthea installation and configuration
 - [docs/API_CONFIGURATION.md](docs/API_CONFIGURATION.md) - API key setup guide
