@@ -1,15 +1,30 @@
 #!/usr/bin/env python3
 """
-Retrieve 10,000 female personas (age 12-60) from HuggingFace FinePersonas dataset.
+Retrieve female personas (age 12-60) from HuggingFace FinePersonas dataset.
 
 This script:
 1. Connects to the HuggingFace FinePersonas-v0.1 dataset
 2. Filters for female personas in fertile age range (12-60 years)
 3. Extracts relevant demographic and socioeconomic information
-4. Saves 10,000 personas to JSON file
+4. Saves personas to JSON file
+
+Supports retrieving any count of personas for enhanced matching:
+- Default: 10,000 personas
+- Enhanced matching: 20,000-50,000 personas (for better match quality)
+- Custom: Any count via --count parameter
 
 Usage:
     python scripts/01_retrieve_personas.py [--count COUNT] [--output OUTPUT]
+
+Examples:
+    # Retrieve 10K personas (default)
+    python scripts/01_retrieve_personas.py
+
+    # Retrieve 20K personas for enhanced matching
+    python scripts/01_retrieve_personas.py --count 20000
+
+    # Retrieve 50K personas for maximum match quality
+    python scripts/01_retrieve_personas.py --count 50000
 """
 
 import json
@@ -346,6 +361,16 @@ def main():
 
     age_min = persona_config.get('age_range', {}).get('min', 12)
     age_max = persona_config.get('age_range', {}).get('max', 60)
+
+    # Log pool size information
+    if args.count >= 50000:
+        logger.info(f"🎯 LARGE POOL MODE: Retrieving {args.count:,} personas")
+        logger.info("This large pool will enable maximum match quality selection")
+    elif args.count >= 20000:
+        logger.info(f"🎯 ENHANCED POOL MODE: Retrieving {args.count:,} personas")
+        logger.info("This enhanced pool will improve match quality")
+    else:
+        logger.info(f"Retrieving {args.count:,} personas")
 
     # Retrieve personas
     try:
