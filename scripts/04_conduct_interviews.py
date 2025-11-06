@@ -44,8 +44,9 @@ except ImportError:
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
-# Import common loaders
+# Import common loaders and retry logic
 from utils.common_loaders import load_config
+from utils.retry_logic import RetryConfig, exponential_backoff_retry
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -74,9 +75,9 @@ class AIProvider:
 
 
 class ClaudeProvider(AIProvider):
-    """Anthropic Claude provider."""
+    """Anthropic Claude provider with retry logic."""
 
-    def __init__(self, config: Dict[str, Any], model: str = None):
+    def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
         # Try config first (but skip placeholder values), then environment variable
         config_key = config.get('api_key', '')
@@ -96,11 +97,25 @@ class ClaudeProvider(AIProvider):
         self.model = model or config.get('default_model', 'claude-4.5-sonnet')
         self.max_tokens = config.get('max_tokens', 4096)
         self.temperature = config.get('temperature', 0.7)
+        self.retry_config = retry_config
 
         logger.info(f"Initialized Claude provider with model: {self.model}")
+        if retry_config:
+            logger.info(f"Retry logic enabled: {retry_config.max_retries} max retries, {retry_config.strategy} backoff")
+
+    def _make_api_call(self, system_message: str, conversation_messages: List[Dict[str, str]]) -> str:
+        """Make the actual API call (wrapped with retry if configured)."""
+        response = self.client.messages.create(
+            model=self.model,
+            max_tokens=self.max_tokens,
+            temperature=self.temperature,
+            system=system_message,
+            messages=conversation_messages
+        )
+        return response.content[0].text
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
-        """Generate response using Claude."""
+        """Generate response using Claude with retry logic."""
         try:
             # Separate system message from conversation
             system_message = ""
@@ -115,15 +130,17 @@ class ClaudeProvider(AIProvider):
                         'content': msg['content']
                     })
 
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=self.max_tokens,
-                temperature=self.temperature,
-                system=system_message,
-                messages=conversation_messages
-            )
+            # Apply retry decorator if retry_config is provided
+            if self.retry_config:
+                # Create decorator and apply it
+                retry_decorator = self.retry_config.create_decorator(
+                    exceptions=(Exception,)  # Retry on any API error
+                )
+                api_call = retry_decorator(self._make_api_call)
+            else:
+                api_call = self._make_api_call
 
-            return response.content[0].text
+            return api_call(system_message, conversation_messages)
 
         except Exception as e:
             logger.error(f"Claude API error: {e}")
@@ -131,9 +148,9 @@ class ClaudeProvider(AIProvider):
 
 
 class OpenAIProvider(AIProvider):
-    """OpenAI GPT provider."""
+    """OpenAI GPT provider with retry logic."""
 
-    def __init__(self, config: Dict[str, Any], model: str = None):
+    def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
         # Try config first (but skip placeholder values), then environment variable
         config_key = config.get('api_key', '')
@@ -154,20 +171,35 @@ class OpenAIProvider(AIProvider):
         self.model = model or config.get('default_model', 'gpt-5')
         self.max_tokens = config.get('max_tokens', 4096)
         self.temperature = config.get('temperature', 0.7)
+        self.retry_config = retry_config
 
         logger.info(f"Initialized OpenAI provider with model: {self.model}")
+        if retry_config:
+            logger.info(f"Retry logic enabled: {retry_config.max_retries} max retries, {retry_config.strategy} backoff")
+
+    def _make_api_call(self, messages: List[Dict[str, str]]) -> str:
+        """Make the actual API call (wrapped with retry if configured)."""
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            max_tokens=self.max_tokens,
+            temperature=self.temperature
+        )
+        return response.choices[0].message.content
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
-        """Generate response using OpenAI."""
+        """Generate response using OpenAI with retry logic."""
         try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                max_tokens=self.max_tokens,
-                temperature=self.temperature
-            )
+            # Apply retry decorator if retry_config is provided
+            if self.retry_config:
+                retry_decorator = self.retry_config.create_decorator(
+                    exceptions=(Exception,)  # Retry on any API error
+                )
+                api_call = retry_decorator(self._make_api_call)
+            else:
+                api_call = self._make_api_call
 
-            return response.choices[0].message.content
+            return api_call(messages)
 
         except Exception as e:
             logger.error(f"OpenAI API error: {e}")
@@ -175,9 +207,9 @@ class OpenAIProvider(AIProvider):
 
 
 class GeminiProvider(AIProvider):
-    """Google Gemini provider."""
+    """Google Gemini provider with retry logic."""
 
-    def __init__(self, config: Dict[str, Any], model: str = None):
+    def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
         # Try config first (but skip placeholder values), then environment variable
         config_key = config.get('api_key', '')
@@ -198,11 +230,20 @@ class GeminiProvider(AIProvider):
         self.model = genai.GenerativeModel(model_name)
         self.model_name = model_name
         self.temperature = config.get('temperature', 0.7)
+        self.retry_config = retry_config
 
         logger.info(f"Initialized Gemini provider with model: {model_name}")
+        if retry_config:
+            logger.info(f"Retry logic enabled: {retry_config.max_retries} max retries, {retry_config.strategy} backoff")
+
+    def _make_api_call(self, conversation: List[Dict[str, Any]]) -> str:
+        """Make the actual API call (wrapped with retry if configured)."""
+        chat = self.model.start_chat(history=conversation[:-1] if len(conversation) > 1 else [])
+        response = chat.send_message(conversation[-1]['parts'][0] if conversation else "")
+        return response.text
 
     def generate_response(self, messages: List[Dict[str, str]]) -> str:
-        """Generate response using Gemini."""
+        """Generate response using Gemini with retry logic."""
         try:
             # Convert messages to Gemini format
             # Gemini uses a simpler format: system + alternating user/model
@@ -221,10 +262,16 @@ class GeminiProvider(AIProvider):
             if conversation and system_message:
                 conversation[0]['parts'][0] = f"{system_message}\n\n{conversation[0]['parts'][0]}"
 
-            chat = self.model.start_chat(history=conversation[:-1] if len(conversation) > 1 else [])
-            response = chat.send_message(conversation[-1]['parts'][0] if conversation else "")
+            # Apply retry decorator if retry_config is provided
+            if self.retry_config:
+                retry_decorator = self.retry_config.create_decorator(
+                    exceptions=(Exception,)  # Retry on any API error
+                )
+                api_call = retry_decorator(self._make_api_call)
+            else:
+                api_call = self._make_api_call
 
-            return response.text
+            return api_call(conversation)
 
         except Exception as e:
             logger.error(f"Gemini API error: {e}")
@@ -257,17 +304,18 @@ def load_interview_protocol(protocol_file: str) -> Dict[str, Any]:
         sys.exit(1)
 
 
-def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = None) -> AIProvider:
+def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None) -> AIProvider:
     """
-    Create AI provider instance.
+    Create AI provider instance with optional retry logic.
 
     Args:
         provider_name: Provider name (anthropic/claude, openai, google/gemini)
         config: Configuration dictionary
         model: Optional model name to use
+        retry_config: Optional RetryConfig for API call retry logic
 
     Returns:
-        AIProvider instance
+        AIProvider instance with retry logic configured
     """
     providers_config = config.get('api_keys', {})
 
@@ -291,13 +339,13 @@ def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = 
     # Get provider config
     provider_config = providers_config.get(normalized_provider, {})
 
-    # Create provider instance
+    # Create provider instance with retry config
     if normalized_provider == 'anthropic':
-        return ClaudeProvider(provider_config, model=model)
+        return ClaudeProvider(provider_config, model=model, retry_config=retry_config)
     elif normalized_provider == 'openai':
-        return OpenAIProvider(provider_config, model=model)
+        return OpenAIProvider(provider_config, model=model, retry_config=retry_config)
     elif normalized_provider == 'google':
-        return GeminiProvider(provider_config, model=model)
+        return GeminiProvider(provider_config, model=model, retry_config=retry_config)
     else:
         raise ValueError(f"Unknown provider: {provider_name}")
 
@@ -518,6 +566,10 @@ Examples:
     logger.info(f"Provider: {provider}")
     logger.info(f"Model: {model}")
 
+    # Load retry configuration
+    retry_config = RetryConfig.from_config(config)
+    logger.info(f"Retry configuration: max_retries={retry_config.max_retries}, strategy={retry_config.strategy}")
+
     # Load matched personas
     matched_personas = load_matched_personas(args.matched)
 
@@ -530,10 +582,10 @@ Examples:
         logger.warning(f"Requested {args.count} interviews but only {available} personas available")
         args.count = available
 
-    # Initialize AI provider
+    # Initialize AI provider with retry logic
     logger.info(f"Initializing AI provider: {provider} with model: {model}")
     try:
-        ai_provider = create_ai_provider(provider, config, model=model)
+        ai_provider = create_ai_provider(provider, config, model=model, retry_config=retry_config)
         logger.info(f"AI provider initialized successfully")
     except Exception as e:
         logger.error(f"Failed to initialize AI provider: {e}")
