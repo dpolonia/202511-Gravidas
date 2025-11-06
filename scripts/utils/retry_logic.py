@@ -10,12 +10,13 @@ import logging
 from functools import wraps
 from typing import Callable, Type, Tuple, Optional
 
+# Import custom exception (handle both direct and package imports)
+try:
+    from utils.exceptions import RetryError
+except ImportError:
+    from scripts.utils.exceptions import RetryError
+
 logger = logging.getLogger(__name__)
-
-
-class RetryError(Exception):
-    """Raised when all retry attempts have been exhausted."""
-    pass
 
 
 def exponential_backoff_retry(
@@ -63,7 +64,9 @@ def exponential_backoff_retry(
                             f"❌ {func.__name__} failed after {max_retries} retries: {e}"
                         )
                         raise RetryError(
-                            f"Function {func.__name__} failed after {max_retries} retries"
+                            operation=func.__name__,
+                            attempts=max_retries,
+                            last_error=e
                         ) from e
 
                     # Calculate delay with exponential backoff
@@ -89,7 +92,9 @@ def exponential_backoff_retry(
 
             # This should never be reached, but just in case
             raise RetryError(
-                f"Function {func.__name__} failed after {max_retries} retries"
+                operation=func.__name__,
+                attempts=max_retries,
+                last_error=last_exception
             ) from last_exception
 
         return wrapper
@@ -134,7 +139,9 @@ def linear_backoff_retry(
                             f"❌ {func.__name__} failed after {max_retries} retries: {e}"
                         )
                         raise RetryError(
-                            f"Function {func.__name__} failed after {max_retries} retries"
+                            operation=func.__name__,
+                            attempts=max_retries,
+                            last_error=e
                         ) from e
 
                     logger.warning(
@@ -145,7 +152,9 @@ def linear_backoff_retry(
                     time.sleep(delay)
 
             raise RetryError(
-                f"Function {func.__name__} failed after {max_retries} retries"
+                operation=func.__name__,
+                attempts=max_retries,
+                last_error=last_exception
             ) from last_exception
 
         return wrapper
