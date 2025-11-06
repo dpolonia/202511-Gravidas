@@ -44,6 +44,8 @@ except ImportError:
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
+# Import common loaders
+from utils.common_loaders import load_config
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -227,26 +229,6 @@ class GeminiProvider(AIProvider):
         except Exception as e:
             logger.error(f"Gemini API error: {e}")
             raise
-
-
-def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
-    try:
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
-        return config
-    except FileNotFoundError:
-        logger.warning(f"Config file not found: {config_path}, using defaults and environment variables")
-        # Return minimal config structure
-        return {
-            'api_keys': {
-                'anthropic': {'api_key': os.getenv('ANTHROPIC_API_KEY', '')},
-                'openai': {'api_key': os.getenv('OPENAI_API_KEY', '')},
-                'google': {'api_key': os.getenv('GOOGLE_API_KEY', '')},
-                'xai': {'api_key': os.getenv('XAI_API_KEY', '')}
-            },
-            'interview': {'max_turns': 20}
-        }
 
 
 def load_matched_personas(matched_file: str) -> List[Dict[str, Any]]:

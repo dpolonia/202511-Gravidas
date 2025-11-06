@@ -40,6 +40,8 @@ except ImportError:
     print("Please run: pip install anthropic pyyaml python-dotenv")
     sys.exit(1)
 
+# Import common loaders
+from utils.common_loaders import load_config
 
 # Setup logging
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -52,17 +54,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-
-def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
-    try:
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
-        return config
-    except FileNotFoundError:
-        logger.error(f"Config file not found: {config_path}")
-        return {}
 
 
 class PersonaGenerator:
