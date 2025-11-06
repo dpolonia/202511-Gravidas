@@ -261,12 +261,14 @@ def retrieve_personas(
     logger.info(f"Connecting to HuggingFace dataset: {dataset_name}")
 
     try:
+        # Don't send token if it's a placeholder or empty
+        auth_token = None if (not hf_token or hf_token.startswith('your-')) else hf_token
+
         dataset = load_dataset(
             dataset_name,
             split='train',
-            token=hf_token,
-            cache_dir=cache_dir,
-            trust_remote_code=True
+            token=auth_token,
+            cache_dir=cache_dir
         )
         logger.info(f"Dataset loaded: {len(dataset)} total records")
     except Exception as e:
