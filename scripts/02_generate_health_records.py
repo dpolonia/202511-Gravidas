@@ -26,11 +26,14 @@ import time
 
 try:
     import yaml
+    from tqdm import tqdm
 except ImportError:
     print("ERROR: Required packages not installed.")
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
+# Import common loaders
+from utils.common_loaders import load_config, load_personas
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -73,31 +76,6 @@ PREGNANCY_SNOMED_CODES = [
     "11466000",   # Cesarean delivery
     "289257008",  # Finding of stage of labor
 ]
-
-
-def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
-    try:
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
-        return config
-    except FileNotFoundError:
-        logger.error(f"Config file not found: {config_path}")
-        return {}
-
-
-def load_personas(personas_file: str) -> List[Dict[str, Any]]:
-    """Load personas from JSON file."""
-    logger.info(f"Loading personas from {personas_file}")
-
-    try:
-        with open(personas_file, 'r') as f:
-            personas = json.load(f)
-        logger.info(f"Loaded {len(personas)} personas")
-        return personas
-    except FileNotFoundError:
-        logger.error(f"Personas file not found: {personas_file}")
-        sys.exit(1)
 
 
 def check_synthea_installation(synthea_path: str) -> bool:

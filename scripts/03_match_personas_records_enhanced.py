@@ -32,11 +32,14 @@ import numpy as np
 try:
     import yaml
     from scipy.optimize import linear_sum_assignment
+    from tqdm import tqdm
 except ImportError:
     print("ERROR: Required packages not installed.")
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
+# Import common loaders
+from utils.common_loaders import load_config, load_personas, load_health_records
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -51,43 +54,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-
-def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
-    try:
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
-        return config
-    except FileNotFoundError:
-        logger.error(f"Config file not found: {config_path}")
-        return {}
-
-
-def load_personas(personas_file: str) -> List[Dict[str, Any]]:
-    """Load personas from JSON file."""
-    logger.info(f"Loading personas from {personas_file}")
-    try:
-        with open(personas_file, 'r') as f:
-            personas = json.load(f)
-        logger.info(f"✅ Loaded {len(personas)} personas")
-        return personas
-    except FileNotFoundError:
-        logger.error(f"Personas file not found: {personas_file}")
-        sys.exit(1)
-
-
-def load_health_records(records_file: str) -> List[Dict[str, Any]]:
-    """Load health records from JSON file."""
-    logger.info(f"Loading health records from {records_file}")
-    try:
-        with open(records_file, 'r') as f:
-            records = json.load(f)
-        logger.info(f"✅ Loaded {len(records)} health records")
-        return records
-    except FileNotFoundError:
-        logger.error(f"Health records file not found: {records_file}")
-        sys.exit(1)
 
 
 def calculate_age_compatibility(persona_age: int, record_age: int, tolerance: int = 2) -> float:

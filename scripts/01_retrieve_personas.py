@@ -59,30 +59,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
-    """Load configuration from YAML file."""
-    try:
-        with open(config_path, 'r') as f:
-            config = yaml.safe_load(f)
-        return config
-    except FileNotFoundError:
-        logger.error(f"Config file not found: {config_path}")
-        logger.info("Using default configuration")
-        return {
-            'huggingface': {
-                'dataset': 'argilla/FinePersonas-v0.1',
-                'cache_dir': './data/hf_cache'
-            },
-            'persona_settings': {
-                'target_count': 10000,
-                'age_range': {'min': 12, 'max': 60},
-                'gender_filter': 'female'
-            },
-            'data_paths': {
-                'personas': './data/personas'
-            }
-        }
-
 
 def extract_age(persona_text: str) -> int | None:
     """
