@@ -1,5 +1,3 @@
 """
-Utility modules for Synthetic Gravidas Pipeline
+Utility modules for the synthetic gravidas pipeline.
 """
-
-__version__ = "1.0.0"
