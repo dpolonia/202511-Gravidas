@@ -39,6 +39,7 @@ try:
     from anthropic import Anthropic
     import openai
     import google.generativeai as genai
+    # XAI/Grok uses OpenAI-compatible API
 except ImportError:
     print("ERROR: Required packages not installed.")
     print("Please run: pip install -r requirements.txt")
@@ -47,6 +48,14 @@ except ImportError:
 # Import common loaders and retry logic
 from utils.common_loaders import load_config
 from utils.retry_logic import RetryConfig, exponential_backoff_retry
+
+
+def expand_env_vars(value: str) -> str:
+    """Expand environment variables in config values like ${VAR_NAME}."""
+    if isinstance(value, str) and value.startswith('${') and value.endswith('}'):
+        env_var_name = value[2:-1]  # Remove ${ and }
+        return os.getenv(env_var_name, value)  # Return original if env var not found
+    return value
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -79,8 +88,8 @@ class ClaudeProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
+        # Try config first (expand env vars), then environment variable
+        config_key = expand_env_vars(config.get('api_key', ''))
         env_key = os.getenv('ANTHROPIC_API_KEY', '')
 
         # Use config key only if it's valid (not a placeholder)
@@ -90,9 +99,13 @@ class ClaudeProvider(AIProvider):
             api_key = env_key
 
         if not api_key or api_key.startswith('your-'):
-            raise ValueError("Claude API key not configured. Set ANTHROPIC_API_KEY environment variable or add to config.yaml")
-
-        self.client = Anthropic(api_key=api_key)
+            logger.warning("Claude API key not configured. Set ANTHROPIC_API_KEY environment variable or add to config.yaml")
+            # Store placeholder for later error handling
+            self.client = None
+            self.api_key_missing = True
+        else:
+            self.client = Anthropic(api_key=api_key)
+            self.api_key_missing = False
         # Use specified model or fall back to default_model or hardcoded default
         self.model = model or config.get('default_model', 'claude-4.5-sonnet')
         self.max_tokens = config.get('max_tokens', 4096)
@@ -152,8 +165,8 @@ class OpenAIProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
+        # Try config first (expand env vars), then environment variable
+        config_key = expand_env_vars(config.get('api_key', ''))
         env_key = os.getenv('OPENAI_API_KEY', '')
 
         # Use config key only if it's valid (not a placeholder)
@@ -211,8 +224,8 @@ class GeminiProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
+        # Try config first (expand env vars), then environment variable
+        config_key = expand_env_vars(config.get('api_key', ''))
         env_key = os.getenv('GOOGLE_API_KEY', '')
 
         # Use config key only if it's valid (not a placeholder)
@@ -278,6 +291,74 @@ class GeminiProvider(AIProvider):
             raise
 
 
+class XAIProvider(AIProvider):
+    """XAI Grok provider with retry logic."""
+
+    def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
+        super().__init__(config)
+        # Try config first (expand env vars), then environment variable
+        config_key = expand_env_vars(config.get('api_key', ''))
+        env_key = os.getenv('XAI_API_KEY', '')
+        
+        # Use config key only if it's valid (not a placeholder)
+        if config_key and not config_key.startswith('your-'):
+            api_key = config_key
+        else:
+            api_key = env_key
+            
+        if not api_key or api_key.startswith('your-'):
+            raise ValueError("XAI API key not configured. Set XAI_API_KEY environment variable or add to config.yaml")
+        
+        # XAI uses OpenAI-compatible API with custom base URL
+        self.client = openai.OpenAI(
+            api_key=api_key,
+            base_url="https://api.x.ai/v1"
+        )
+        
+        # Use specified model or fall back to default_model or hardcoded default
+        self.model = model or config.get('default_model', 'grok-4')
+        
+        # Store retry configuration
+        self.retry_config = retry_config
+
+    def _make_api_call(self, messages: List[Dict[str, str]]) -> str:
+        """Make the actual API call to XAI."""
+        try:
+            # Convert messages to XAI format (same as OpenAI)
+            xai_messages = [{"role": msg["role"], "content": msg["content"]} for msg in messages]
+            
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=xai_messages,
+                max_tokens=self.config.get('max_tokens', 4096),
+                temperature=self.config.get('temperature', 0.7)
+            )
+            
+            return response.choices[0].message.content
+            
+        except Exception as e:
+            logger.error(f"XAI API call failed: {e}")
+            raise
+
+    def generate_response(self, messages: List[Dict[str, str]]) -> str:
+        """Generate AI response using XAI Grok with retry logic."""
+        try:
+            # Apply retry decorator if retry_config is provided
+            if self.retry_config:
+                retry_decorator = self.retry_config.create_decorator(
+                    exceptions=(Exception,)  # Retry on any API error
+                )
+                api_call = retry_decorator(self._make_api_call)
+            else:
+                api_call = self._make_api_call
+
+            return api_call(messages)
+
+        except Exception as e:
+            logger.error(f"XAI API error: {e}")
+            raise
+
+
 def load_matched_personas(matched_file: str) -> List[Dict[str, Any]]:
     """Load matched persona-record pairs."""
     logger.info(f"Loading matched personas from {matched_file}")
@@ -309,7 +390,7 @@ def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = 
     Create AI provider instance with optional retry logic.
 
     Args:
-        provider_name: Provider name (anthropic/claude, openai, google/gemini)
+        provider_name: Provider name (anthropic/claude, openai, google/gemini, xai/grok)
         config: Configuration dictionary
         model: Optional model name to use
         retry_config: Optional RetryConfig for API call retry logic
@@ -329,12 +410,14 @@ def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = 
         'anthropic': 'anthropic',
         'openai': 'openai',
         'gemini': 'google',
-        'google': 'google'
+        'google': 'google',
+        'grok': 'xai',
+        'xai': 'xai'
     }
 
     normalized_provider = provider_map.get(provider_name.lower())
     if not normalized_provider:
-        raise ValueError(f"Unknown provider: {provider_name}. Use: anthropic, openai, or google")
+        raise ValueError(f"Unknown provider: {provider_name}. Use: anthropic, openai, google, or xai")
 
     # Get provider config
     provider_config = providers_config.get(normalized_provider, {})
@@ -346,6 +429,8 @@ def create_ai_provider(provider_name: str, config: Dict[str, Any], model: str = 
         return OpenAIProvider(provider_config, model=model, retry_config=retry_config)
     elif normalized_provider == 'google':
         return GeminiProvider(provider_config, model=model, retry_config=retry_config)
+    elif normalized_provider == 'xai':
+        return XAIProvider(provider_config, model=model, retry_config=retry_config)
     else:
         raise ValueError(f"Unknown provider: {provider_name}")
 
@@ -536,14 +621,17 @@ Examples:
   # Override provider and model
   python scripts/04_conduct_interviews.py --provider anthropic --model claude-4.5-sonnet --count 10
 
+  # Use XAI/Grok
+  python scripts/04_conduct_interviews.py --provider xai --model grok-4 --count 10
+
   # Use different protocol
   python scripts/04_conduct_interviews.py --protocol Script/interview_protocols/pregnancy_experience.json
         """
     )
     parser.add_argument('--matched', type=str, default='data/matched/matched_personas.json', help='Matched personas file')
     parser.add_argument('--protocol', type=str, default='Script/interview_protocols/prenatal_care.json', help='Interview protocol file')
-    parser.add_argument('--provider', type=str, help='AI provider (anthropic, openai, google). If not specified, uses active_provider from config')
-    parser.add_argument('--model', type=str, help='AI model name (e.g., claude-4.5-sonnet, gpt-5, gemini-2.5-pro). If not specified, uses active_model from config')
+    parser.add_argument('--provider', type=str, help='AI provider (anthropic, openai, google, xai). If not specified, uses active_provider from config')
+    parser.add_argument('--model', type=str, help='AI model name (e.g., claude-4.5-sonnet, gpt-5, gemini-2.5-pro, grok-4). If not specified, uses active_model from config')
     parser.add_argument('--output', type=str, default='data/interviews', help='Output directory')
     parser.add_argument('--count', type=int, default=10, help='Number of interviews to conduct')
     parser.add_argument('--config', type=str, default='config/config.yaml', help='Config file path')
