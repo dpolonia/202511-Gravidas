@@ -29,11 +29,29 @@ except ImportError:
     sys.exit(1)
 
 
-# Model metadata with costs and performance
+# Model metadata with costs and performance (Updated for 2025)
 MODELS_DATABASE = {
     'anthropic': {
         'name': 'Anthropic (Claude)',
         'models': {
+            'claude-opus-4-1': {
+                'name': 'Claude Opus 4.1',
+                'cost_input': 15.0,
+                'cost_output': 75.0,
+                'batch_available': True,
+                'batch_input': 7.5,
+                'batch_output': 37.5,
+                'cached_input': 1.5,  # 90% savings with prompt caching
+                'tokens_per_second': 50,
+                'quality': 'Exceptional',
+                'context_window': 200000,
+                'max_output': 32000,
+                'extended_thinking': True,
+                'prompt_caching': True,
+                'knowledge_cutoff': 'Jan 2025',
+                'description': 'Flagship model for complex reasoning and specialized tasks',
+                'recommended': True
+            },
             'claude-sonnet-4-5-20250929': {
                 'name': 'Claude Sonnet 4.5',
                 'cost_input': 3.0,
@@ -41,11 +59,13 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 1.5,
                 'batch_output': 7.5,
+                'cached_input': 0.3,
                 'tokens_per_second': 80,
                 'quality': 'Excellent',
                 'context_window': 200000,
                 'max_output': 64000,
                 'extended_thinking': True,
+                'prompt_caching': True,
                 'knowledge_cutoff': 'Jan 2025',
                 'description': 'Smartest model for complex agents and coding (Recommended)',
                 'recommended': True
@@ -57,28 +77,15 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 0.5,
                 'batch_output': 2.5,
+                'cached_input': 0.1,
                 'tokens_per_second': 120,
                 'quality': 'Very Good',
                 'context_window': 200000,
                 'max_output': 64000,
                 'extended_thinking': True,
+                'prompt_caching': True,
                 'knowledge_cutoff': 'Feb 2025',
                 'description': 'Fastest model with near-frontier intelligence'
-            },
-            'claude-opus-4-1': {
-                'name': 'Claude Opus 4.1',
-                'cost_input': 15.0,
-                'cost_output': 75.0,
-                'batch_available': True,
-                'batch_input': 7.5,
-                'batch_output': 37.5,
-                'tokens_per_second': 50,
-                'quality': 'Excellent',
-                'context_window': 200000,
-                'max_output': 32000,
-                'extended_thinking': True,
-                'knowledge_cutoff': 'Jan 2025',
-                'description': 'Exceptional model for specialized reasoning tasks'
             }
         }
     },
@@ -92,15 +99,31 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 0.625,
                 'batch_output': 5.0,
-                'cached_input': 0.13,
+                'cached_input': 0.125,  # Updated caching
                 'tokens_per_second': 70,
                 'quality': 'Excellent',
-                'context_window': 400000,
+                'context_window': 1000000,  # 1M tokens
                 'max_output': 128000,
                 'knowledge_cutoff': 'Sep 2024',
                 'features': ['streaming', 'function_calling', 'structured_outputs', 'image_input'],
                 'description': 'Best model for coding and agentic tasks across domains (Recommended)',
                 'recommended': True
+            },
+            'gpt-4-1': {
+                'name': 'GPT-4.1',
+                'cost_input': 3.0,
+                'cost_output': 12.0,
+                'batch_available': True,
+                'batch_input': 1.5,
+                'batch_output': 6.0,
+                'cached_input': 0.3,
+                'tokens_per_second': 65,
+                'quality': 'Excellent',
+                'context_window': 1000000,
+                'max_output': 128000,
+                'knowledge_cutoff': 'Dec 2024',
+                'features': ['streaming', 'function_calling', 'structured_outputs', 'image_input'],
+                'description': 'Enhanced GPT-4 with expanded context and reasoning'
             },
             'gpt-5-pro': {
                 'name': 'GPT-5 Pro',
@@ -109,29 +132,14 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 7.5,
                 'batch_output': 60.0,
+                'cached_input': 1.5,
                 'tokens_per_second': 50,
                 'quality': 'Exceptional',
-                'context_window': 400000,
+                'context_window': 1000000,
                 'max_output': 272000,
                 'knowledge_cutoff': 'Sep 2024',
                 'features': ['streaming', 'function_calling', 'structured_outputs', 'image_input'],
-                'description': 'Smarter and more precise responses for complex reasoning'
-            },
-            'gpt-5-chatgpt': {
-                'name': 'GPT-5 (ChatGPT)',
-                'cost_input': 1.25,
-                'cost_output': 10.0,
-                'batch_available': True,
-                'batch_input': 0.625,
-                'batch_output': 5.0,
-                'cached_input': 0.13,
-                'tokens_per_second': 70,
-                'quality': 'Excellent',
-                'context_window': 128000,
-                'max_output': 16384,
-                'knowledge_cutoff': 'Sep 2024',
-                'features': ['streaming', 'function_calling', 'structured_outputs', 'image_input'],
-                'description': 'GPT-5 optimized for chat, 128K context'
+                'description': 'Ph.D.-level expertise with 45% fewer hallucinations'
             }
         }
     },
@@ -145,9 +153,10 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 0.625,
                 'batch_output': 5.0,
+                'cached_input': 0.125,
                 'tokens_per_second': 75,
                 'quality': 'Excellent',
-                'context_window': 1048576,
+                'context_window': 1048576,  # 1M tokens
                 'max_output': 65536,
                 'thinking': True,
                 'knowledge_cutoff': 'Jan 2025',
@@ -156,11 +165,12 @@ MODELS_DATABASE = {
             },
             'gemini-2.5-flash': {
                 'name': 'Gemini 2.5 Flash',
-                'cost_input': 0.15,
+                'cost_input': 0.26,  # Updated 2025 pricing
                 'cost_output': 1.25,
                 'batch_available': True,
-                'batch_input': 0.075,
+                'batch_input': 0.13,
                 'batch_output': 0.625,
+                'cached_input': 0.026,
                 'tokens_per_second': 110,
                 'quality': 'Very Good',
                 'context_window': 1048576,
@@ -176,6 +186,7 @@ MODELS_DATABASE = {
                 'batch_available': True,
                 'batch_input': 0.05,
                 'batch_output': 0.20,
+                'cached_input': 0.01,
                 'tokens_per_second': 130,
                 'quality': 'Good',
                 'context_window': 1048576,
@@ -183,91 +194,6 @@ MODELS_DATABASE = {
                 'thinking': True,
                 'knowledge_cutoff': 'Jan 2025',
                 'description': 'Fastest, optimized for cost-efficiency and high throughput'
-            },
-            'gemini-2.0-flash': {
-                'name': 'Gemini 2.0 Flash',
-                'cost_input': 0.05,
-                'cost_output': 0.20,
-                'batch_available': True,
-                'batch_input': 0.025,
-                'batch_output': 0.10,
-                'tokens_per_second': 145,
-                'quality': 'Good',
-                'context_window': 1048576,
-                'max_output': 8192,
-                'thinking': False,
-                'knowledge_cutoff': 'Aug 2024',
-                'description': 'Second generation workhorse, 1M context window'
-            }
-        }
-    },
-    'aws': {
-        'name': 'AWS Bedrock',
-        'models': {
-            'bedrock-claude-sonnet-4-5': {
-                'name': 'Claude 4.5 Sonnet (Bedrock)',
-                'cost_input': 3.0,
-                'cost_output': 15.0,
-                'batch_available': True,
-                'batch_input': 1.5,
-                'batch_output': 7.5,
-                'tokens_per_second': 80,
-                'quality': 'Excellent',
-                'description': 'Claude via AWS, enterprise integration'
-            },
-            'bedrock-llama-3-2-90b': {
-                'name': 'Llama 3.2 90B (Bedrock)',
-                'cost_input': 2.0,
-                'cost_output': 2.0,
-                'batch_available': True,
-                'batch_input': 1.0,
-                'batch_output': 1.0,
-                'tokens_per_second': 85,
-                'quality': 'Very Good',
-                'description': 'Open source, AWS hosted'
-            },
-            'bedrock-titan-express': {
-                'name': 'Amazon Titan Text Express',
-                'cost_input': 0.8,
-                'cost_output': 1.6,
-                'batch_available': True,
-                'batch_input': 0.4,
-                'batch_output': 0.8,
-                'tokens_per_second': 95,
-                'quality': 'Good',
-                'description': 'Amazon native, cost effective'
-            }
-        }
-    },
-    'mistral': {
-        'name': 'Mistral AI',
-        'models': {
-            'mistral-large-2': {
-                'name': 'Mistral Large 2',
-                'cost_input': 3.0,
-                'cost_output': 9.0,
-                'batch_available': False,
-                'tokens_per_second': 70,
-                'quality': 'Excellent',
-                'description': 'Advanced reasoning, European AI'
-            },
-            'codestral': {
-                'name': 'Codestral',
-                'cost_input': 1.0,
-                'cost_output': 3.0,
-                'batch_available': False,
-                'tokens_per_second': 90,
-                'quality': 'Very Good',
-                'description': 'Code generation specialist'
-            },
-            'ministral-8b': {
-                'name': 'Ministral 8B',
-                'cost_input': 0.1,
-                'cost_output': 0.1,
-                'batch_available': False,
-                'tokens_per_second': 130,
-                'quality': 'Good',
-                'description': 'Fast, edge deployment'
             }
         }
     },
@@ -281,25 +207,34 @@ MODELS_DATABASE = {
                 'batch_available': False,
                 'tokens_per_second': 60,
                 'quality': 'Excellent',
-                'description': 'Advanced reasoning, real-time knowledge'
+                'context_window': 2000000,  # 2M tokens
+                'max_output': 65536,
+                'knowledge_cutoff': 'Real-time',
+                'description': 'Advanced reasoning with real-time knowledge access'
             },
             'grok-4-fast': {
-                'name': 'Grok 4 Fast (Reasoning)',
+                'name': 'Grok 4 Fast',
                 'cost_input': 0.2,
                 'cost_output': 0.5,
                 'batch_available': False,
                 'tokens_per_second': 100,
                 'quality': 'Very Good',
-                'description': 'Fast reasoning mode'
+                'context_window': 2000000,
+                'max_output': 32768,
+                'knowledge_cutoff': 'Real-time',
+                'description': 'Fast reasoning mode with real-time data'
             },
-            'grok-3-mini': {
-                'name': 'Grok 3 Mini',
-                'cost_input': 0.3,
-                'cost_output': 0.5,
+            'grok-3': {
+                'name': 'Grok 3',
+                'cost_input': 0.5,
+                'cost_output': 1.0,
                 'batch_available': False,
-                'tokens_per_second': 90,
+                'tokens_per_second': 80,
                 'quality': 'Good',
-                'description': 'Fast, capable, good value'
+                'context_window': 1000000,
+                'max_output': 32768,
+                'knowledge_cutoff': 'Real-time',
+                'description': 'Truth-seeking AI with real-time capabilities'
             }
         }
     }

@@ -5,6 +5,74 @@ All notable changes to the Synthetic Gravidas Pipeline project will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-11-07
+
+### 🚀 MAJOR RELEASE: Complete End-to-End Automation Pipeline
+
+**NEW FEATURES**
+
+### Added
+- **🎯 Main Pipeline Orchestrator** (`run_pipeline.py`)
+  - One-command pipeline execution with interactive and CLI modes
+  - Dynamic sample size selection (1-10,000 personas/interviews)
+  - Real-time progress monitoring and error recovery
+  - Session management with unique IDs and logging
+  - Comprehensive cost estimation and budget controls
+
+- **🤖 Enhanced AI Model Support** (Updated for 2025)
+  - **Anthropic Claude**: Opus 4.1, Sonnet 4.5, Haiku 4.5 with prompt caching
+  - **OpenAI GPT**: GPT-5, GPT-4.1, GPT-5 Pro with improved context windows
+  - **Google Gemini**: 2.5 Pro, 2.5 Flash, 2.5 Flash-Lite with thinking capabilities
+  - **xAI Grok**: Grok 4, Grok 4 Fast with real-time knowledge access
+  - Updated pricing data with batch API and caching discounts
+
+- **💰 Cost Optimization Features**
+  - Batch API integration for 50% savings on large studies
+  - Prompt caching support for 90% savings on repeated content
+  - Real-time cost estimation with multiple pricing tiers
+  - Budget monitoring and cost alerts
+
+- **🎮 Interactive Configuration System**
+  - Guided AI model selection with quality and cost comparisons
+  - Dynamic pipeline stage configuration (full or partial runs)
+  - API key management with multiple sources (env, config, manual)
+  - Study size templates (test, pilot, full, large studies)
+
+### Enhanced
+- **Model Database**: Completely updated with latest 2025 models and pricing
+- **Error Handling**: Comprehensive validation and recovery mechanisms
+- **Progress Tracking**: Real-time stage monitoring with time estimates
+- **Documentation**: Updated README with new automation features
+
+### Technical Improvements
+- **CLI Arguments**: Full command-line interface for automation
+- **Session Management**: Unique session IDs with comprehensive logging
+- **Validation Framework**: Multi-stage data validation and quality checks
+- **Cost Tracking**: Token-level expense monitoring across all providers
+
+### Examples
+```bash
+# Interactive guided setup
+python run_pipeline.py
+
+# Automated CLI execution
+python run_pipeline.py --count 100 --provider anthropic --model claude-opus-4-1
+
+# Large study with cost optimization
+python run_pipeline.py --count 1000 --batch --provider google --model gemini-2.5-flash
+
+# Quick testing
+python run_pipeline.py --count 10 --test
+```
+
+### Performance Improvements
+- **Concurrent Processing**: Optimized pipeline execution
+- **Memory Management**: Efficient handling of large datasets
+- **Error Recovery**: Automatic retry logic with exponential backoff
+- **Batch Processing**: 50% cost savings on studies with 100+ interviews
+
+---
+
 ## [1.0.0] - 2025-11-07
 
 ### 🎯 MILESTONE: First Production Release
