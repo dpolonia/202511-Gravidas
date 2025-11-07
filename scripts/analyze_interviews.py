@@ -25,20 +25,8 @@ from typing import List, Dict, Any, Optional
 from collections import Counter
 import argparse
 
-
-# Model pricing per 1M tokens (input, output)
-MODEL_COSTS = {
-    'claude-sonnet-4-5-20250929': {'input': 3.0, 'output': 15.0},
-    'claude-haiku-4-5': {'input': 1.0, 'output': 5.0},
-    'claude-opus-4-1': {'input': 15.0, 'output': 75.0},
-    'gpt-5': {'input': 1.25, 'output': 10.0},
-    'gpt-5-pro': {'input': 2.5, 'output': 20.0},
-    'gpt-5-chatgpt': {'input': 0.5, 'output': 2.0},
-    'gemini-2.5-pro': {'input': 1.25, 'output': 10.0},
-    'gemini-2.5-flash': {'input': 0.15, 'output': 0.60},
-    'gemini-2.5-pro-thinking': {'input': 1.25, 'output': 10.0},
-    'gemini-2.5-flash-thinking': {'input': 0.15, 'output': 0.60},
-}
+# Import centralized model registry
+from utils.models import get_model_info, estimate_cost as calculate_cost
 
 
 def load_matched_personas(matched_file: str = "data/matched/matched_personas.json") -> Dict[int, Dict[str, Any]]:
@@ -85,13 +73,39 @@ def calculate_interview_cost(interview: Dict[str, Any], model: str = 'claude-son
     input_tokens = estimate_tokens(input_text)
     output_tokens = estimate_tokens(output_text)
 
-    # Get pricing
-    costs = MODEL_COSTS.get(model, {'input': 3.0, 'output': 15.0})
+    # Detect provider from model name
+    provider = 'anthropic'  # Default
+    if 'claude' in model.lower():
+        provider = 'anthropic'
+    elif 'gpt' in model.lower():
+        provider = 'openai'
+    elif 'gemini' in model.lower():
+        provider = 'google'
+    elif 'grok' in model.lower():
+        provider = 'xai'
+    elif 'mistral' in model.lower():
+        provider = 'mistral'
+    elif 'bedrock' in model.lower():
+        provider = 'aws'
 
-    # Calculate costs (per million tokens)
-    input_cost = (input_tokens / 1_000_000) * costs['input']
-    output_cost = (output_tokens / 1_000_000) * costs['output']
-    total_cost = input_cost + output_cost
+    # Calculate cost using centralized function
+    total_cost = calculate_cost(provider, model, input_tokens, output_tokens)
+
+    # If model not found in registry, use default pricing
+    if total_cost is None:
+        # Fallback to default pricing
+        input_cost = (input_tokens / 1_000_000) * 3.0
+        output_cost = (output_tokens / 1_000_000) * 15.0
+        total_cost = input_cost + output_cost
+    else:
+        # Get model info to calculate individual costs
+        model_info = get_model_info(provider, model)
+        if model_info:
+            input_cost = (input_tokens / 1_000_000) * model_info['cost_input']
+            output_cost = (output_tokens / 1_000_000) * model_info['cost_output']
+        else:
+            input_cost = (input_tokens / 1_000_000) * 3.0
+            output_cost = (output_tokens / 1_000_000) * 15.0
 
     return {
         'input_tokens': input_tokens,
