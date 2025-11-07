@@ -474,11 +474,11 @@ class PipelineOrchestrator:
         clear_screen()
         print_header(f"AI MODEL SELECTION ({sample_size:,} interviews)")
         
-        # Filter available providers
-        available_providers = {
-            p: info for p, info in UPDATED_MODELS_DATABASE.items()
-            if p in self.api_keys
-        }
+        # Filter available providers using enhanced database
+        available_providers = {}
+        for provider_id, provider_data in ENHANCED_MODELS_DATABASE.items():
+            if provider_id in self.api_keys:
+                available_providers[provider_id] = provider_data
         
         if not available_providers:
             print("✗ No API keys available for AI providers!")
