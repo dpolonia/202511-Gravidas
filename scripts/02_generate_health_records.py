@@ -120,7 +120,7 @@ def run_synthea(
     if os.name == 'nt':  # Windows
         executable = str(Path(synthea_path) / "run_synthea.bat")
     else:  # Linux/Mac
-        executable = str(Path(synthea_path) / "run_synthea")
+        executable = "./run_synthea"
 
     # Build Synthea command
     # Note: Synthea generates all patients in one run, we can't specify exact pregnancy records
