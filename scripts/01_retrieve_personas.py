@@ -38,6 +38,7 @@ import re
 try:
     from datasets import load_dataset
     import yaml
+    from utils.common_loaders import load_config
 except ImportError:
     print("ERROR: Required packages not installed.")
     print("Please run: pip install -r requirements.txt")
