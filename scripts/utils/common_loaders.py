@@ -7,6 +7,7 @@ previously scattered across multiple scripts.
 
 import json
 import logging
+import os
 import sys
 from typing import Dict, Any, List, Optional
 from pathlib import Path
@@ -23,12 +24,79 @@ from utils.exceptions import (
     ConfigurationError,
     MissingConfigError,
     InvalidDataFormatError,
-    DataValidationError
+    DataValidationError,
+    InvalidAPIKeyError
 )
 from utils.validators import validate_config
 
 # Get logger for this module
 logger = logging.getLogger(__name__)
+
+
+def get_api_key(provider: str, allow_config: bool = False) -> str:
+    """
+    Load API key securely from environment variables.
+
+    This function enforces security best practices by loading API keys
+    only from environment variables, not from config files.
+
+    Args:
+        provider: Provider name ('anthropic', 'openai', 'google', 'xai')
+        allow_config: If True, allow fallback to config file (NOT RECOMMENDED)
+
+    Returns:
+        API key string
+
+    Raises:
+        InvalidAPIKeyError: If API key not found or appears to be a placeholder
+
+    Example:
+        >>> api_key = get_api_key('anthropic')
+        >>> # Key loaded from ANTHROPIC_API_KEY environment variable
+
+    Security Notes:
+        - API keys should NEVER be committed to version control
+        - Always use .env file or environment variables
+        - The allow_config parameter is deprecated and should not be used
+    """
+    provider = provider.lower()
+    env_var_name = f"{provider.upper()}_API_KEY"
+
+    # Try to load from environment first (ALWAYS preferred)
+    api_key = os.getenv(env_var_name)
+
+    if api_key:
+        # Check if it's a placeholder
+        if "PLACEHOLDER" in api_key.upper() or "USE-ENVIRONMENT" in api_key.upper():
+            raise InvalidAPIKeyError(
+                f"{env_var_name} contains a placeholder value, not a real API key. "
+                f"Please set a real API key in your environment or .env file."
+            )
+
+        logger.debug(f"✅ Loaded API key for {provider} from environment variable {env_var_name}")
+        return api_key
+
+    # Environment variable not found
+    error_msg = (
+        f"❌ API key for '{provider}' not found in environment variables.\n"
+        f"\n"
+        f"Expected environment variable: {env_var_name}\n"
+        f"\n"
+        f"To fix this:\n"
+        f"1. Copy .env.example to .env:  cp .env.example .env\n"
+        f"2. Edit .env and add your API key: {env_var_name}=your-key-here\n"
+        f"3. The .env file will be loaded automatically by python-dotenv\n"
+        f"\n"
+        f"Alternative: Set environment variable directly:\n"
+        f"  export {env_var_name}='your-key-here'  # Linux/Mac\n"
+        f"  set {env_var_name}=your-key-here       # Windows CMD\n"
+        f"  $env:{env_var_name}='your-key-here'    # Windows PowerShell\n"
+        f"\n"
+        f"⚠️  SECURITY: Never commit API keys to git or put them in config files!"
+    )
+
+    logger.error(error_msg)
+    raise InvalidAPIKeyError(error_msg)
 
 
 def load_config(config_path: str = "config/config.yaml",
@@ -372,6 +440,7 @@ def load_matched_pairs(matched_file: str,
 
 # Export public API
 __all__ = [
+    'get_api_key',
     'load_config',
     'load_personas',
     'load_health_records',

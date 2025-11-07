@@ -41,7 +41,7 @@ except ImportError:
     sys.exit(1)
 
 # Import common loaders
-from utils.common_loaders import load_config
+from utils.common_loaders import load_config, get_api_key
 
 # Setup logging
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -61,18 +61,8 @@ class PersonaGenerator:
 
     def __init__(self, config: Dict[str, Any]):
         """Initialize the persona generator."""
-        # Get API key
-        config_key = config.get('api_keys', {}).get('anthropic', {}).get('api_key', '')
-        env_key = os.getenv('ANTHROPIC_API_KEY', '')
-
-        if config_key and not config_key.startswith('your-'):
-            api_key = config_key
-        else:
-            api_key = env_key
-
-        if not api_key:
-            raise ValueError("No Anthropic API key found in config or environment")
-
+        # Load API key securely from environment variables only
+        api_key = get_api_key('anthropic')
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = "claude-3-haiku-20240307"  # Fast and cheap for generation
 

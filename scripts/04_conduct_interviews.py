@@ -45,7 +45,7 @@ except ImportError:
     sys.exit(1)
 
 # Import common loaders and retry logic
-from utils.common_loaders import load_config
+from utils.common_loaders import load_config, get_api_key
 from utils.retry_logic import RetryConfig, exponential_backoff_retry
 
 # Create logs directory if it doesn't exist
@@ -79,19 +79,8 @@ class ClaudeProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
-        env_key = os.getenv('ANTHROPIC_API_KEY', '')
-
-        # Use config key only if it's valid (not a placeholder)
-        if config_key and not config_key.startswith('your-'):
-            api_key = config_key
-        else:
-            api_key = env_key
-
-        if not api_key or api_key.startswith('your-'):
-            raise ValueError("Claude API key not configured. Set ANTHROPIC_API_KEY environment variable or add to config.yaml")
-
+        # Load API key securely from environment variables only
+        api_key = get_api_key('anthropic')
         self.client = Anthropic(api_key=api_key)
         # Use specified model or fall back to default_model or hardcoded default
         self.model = model or config.get('default_model', 'claude-4.5-sonnet')
@@ -152,19 +141,8 @@ class OpenAIProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
-        env_key = os.getenv('OPENAI_API_KEY', '')
-
-        # Use config key only if it's valid (not a placeholder)
-        if config_key and not config_key.startswith('your-'):
-            api_key = config_key
-        else:
-            api_key = env_key
-
-        if not api_key or api_key.startswith('your-'):
-            raise ValueError("OpenAI API key not configured. Set OPENAI_API_KEY environment variable or add to config.yaml")
-
+        # Load API key securely from environment variables only
+        api_key = get_api_key('openai')
         openai.api_key = api_key
         self.client = openai.OpenAI(api_key=api_key)
         # Use specified model or fall back to default_model or hardcoded default
@@ -211,19 +189,8 @@ class GeminiProvider(AIProvider):
 
     def __init__(self, config: Dict[str, Any], model: str = None, retry_config: RetryConfig = None):
         super().__init__(config)
-        # Try config first (but skip placeholder values), then environment variable
-        config_key = config.get('api_key', '')
-        env_key = os.getenv('GOOGLE_API_KEY', '')
-
-        # Use config key only if it's valid (not a placeholder)
-        if config_key and not config_key.startswith('your-'):
-            api_key = config_key
-        else:
-            api_key = env_key
-
-        if not api_key or api_key.startswith('your-'):
-            raise ValueError("Gemini API key not configured. Set GOOGLE_API_KEY environment variable or add to config.yaml")
-
+        # Load API key securely from environment variables only
+        api_key = get_api_key('google')
         genai.configure(api_key=api_key)
         # Use specified model or fall back to default_model or hardcoded default
         model_name = model or config.get('default_model', 'gemini-2.5-pro')

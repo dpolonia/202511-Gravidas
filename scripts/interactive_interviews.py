@@ -390,6 +390,7 @@ def get_api_keys() -> Dict[str, Dict[str, str]]:
         }
 
     # Load from config file (if not in environment)
+    # ⚠️  DEPRECATED: Loading from config is not recommended for security
     config = load_config()
     api_keys_config = config.get('api_keys', {})
 
@@ -398,10 +399,11 @@ def get_api_keys() -> Dict[str, Dict[str, str]]:
             provider_config = api_keys_config.get(provider, {})
             api_key = provider_config.get('api_key', '')
 
-            if api_key and not api_key.startswith('your-'):
+            # Skip placeholders (your-, PLACEHOLDER, USE-ENVIRONMENT)
+            if api_key and not api_key.startswith('your-') and 'PLACEHOLDER' not in api_key.upper() and 'USE-ENVIRONMENT' not in api_key.upper():
                 keys[provider] = {
                     'key': api_key,
-                    'source': 'config.yaml'
+                    'source': 'config.yaml ⚠️ (not recommended)'
                 }
 
     return keys
