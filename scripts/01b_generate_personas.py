@@ -61,8 +61,14 @@ class PersonaGenerator:
 
     def __init__(self, config: Dict[str, Any]):
         """Initialize the persona generator."""
-        # Get API key
+        # Get API key - expand environment variables
         config_key = config.get('api_keys', {}).get('anthropic', {}).get('api_key', '')
+        
+        # Expand environment variables in config
+        if config_key and config_key.startswith('${') and config_key.endswith('}'):
+            env_var_name = config_key[2:-1]  # Remove ${ and }
+            config_key = os.getenv(env_var_name, '')
+        
         env_key = os.getenv('ANTHROPIC_API_KEY', '')
 
         if config_key and not config_key.startswith('your-'):
