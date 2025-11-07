@@ -1,0 +1,71 @@
+﻿Provider;Model_Name;Cost_Unit;Input_Cost;Output_Cost;Batch_API_Available;Notes
+OpenAI;GPT-5;Per 1M Tokens;1.25;10.00;Yes;Batch is 50% discount ($0.625 / $5.00)
+OpenAI;GPT-5 mini;Per 1M Tokens;0.25;2.00;Yes;Batch is 50% discount ($0.125 / $1.00)
+OpenAI;GPT-5 nano;Per 1M Tokens;0.05;0.40;Yes;Batch is 50% discount ($0.025 / $0.20)
+OpenAI;GPT-4.1;Per 1M Tokens;2.00;8.00;Yes;Batch is 50% discount ($1.00 / $4.00)
+OpenAI;GPT-4o (Vision);Per 1M Tokens;2.50;10.00;Yes;Batch is 50% discount ($1.25 / $5.00)
+OpenAI;GPT-4o mini;Per 1M Tokens;0.15;0.60;Yes;Batch is 50% discount ($0.075 / $0.30)
+OpenAI;Sora 2 (Video);Per Second;0.10;0.10;No;
+Anthropic;Claude 4.5 Sonnet;Per 1M Tokens;3.00;15.00;Yes;Batch is 50% discount ($1.50 / $7.50)
+Anthropic;Claude 4.5 Haiku;Per 1M Tokens;1.00;5.00;Yes;Batch is 50% discount ($0.50 / $2.50)
+Anthropic;Claude 4.1 Opus;Per 1M Tokens;15.00;75.00;Yes;Batch is 50% discount ($7.50 / $37.50)
+Google (Vertex AI);Gemini 2.5 Pro (≤200k);Per 1M Tokens;1.25;10.00;Yes;Batch is ~50% discount
+Google (Vertex AI);Gemini 2.5 Pro (>200k);Per 1M Tokens;2.50;15.00;Yes;Batch is ~50% discount
+Google (Vertex AI);Gemini 2.5 Flash;Per 1M Tokens;0.15;1.25;Yes;Batch is ~50% discount
+AWS (Bedrock);Claude 4.5 Sonnet;Per 1M Tokens;3.00;15.00;Yes;Batch mode available
+AWS (Bedrock);Llama 3.2 90B;Per 1M Tokens;2.00;2.00;Yes;Batch mode available
+AWS (Bedrock);Amazon Titan Text Express;Per 1M Tokens;0.80;1.60;Yes;Batch mode available
+Microsoft (Azure AI);GPT-5;Per 1M Tokens;1.25;10.00;Yes;Batch is 50% discount
+Microsoft (Azure AI);GPT-4.1;Per 1M Tokens;2.00;8.00;Yes;Batch is 50% discount
+Microsoft (Azure AI);GPT-4o;Per 1M Tokens;2.50;10.00;Yes;Batch is 50% discount
+Microsoft (Azure AI Foundry);Llama 4 Maverick 17B;Per 1M Tokens;0.25;1.00;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);Llama 3.3 70B;Per 1M Tokens;0.71;0.71;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);Grok 4;Per 1M Tokens;5.50;27.50;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);Grok 3;Per 1M Tokens;3.00;15.00;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);Grok 3 Mini;Per 1M Tokens;0.25;1.27;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);DeepSeek V3;Per 1M Tokens;1.14;4.56;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);DeepSeek R1;Per 1M Tokens;1.35;5.40;Yes;Serverless Pay-as-you-go (MaaS)
+Microsoft (Azure AI Foundry);Mistral Large 2411;Per 1M Tokens;Varies;Varies;Yes;Pay-as-you-go, price listed in Marketplace
+Mistral AI (Direct);Mistral Large 2;Per 1M Tokens;2.00;6.00;Not Specified;
+Mistral AI (Direct);Mistral Small 3.2;Per 1M Tokens;0.20;0.60;Not Specified;
+Mistral AI (Direct);Ministral 8B;Per 1M Tokens;0.10;0.10;Not Specified;
+xAI (Direct);Grok 4;Per 1M Tokens;3.00;15.00;Not Specified;
+xAI (Direct);Grok 4 Fast (Reasoning);Per 1M Tokens;0.20;0.50;Not Specified;
+xAI (Direct);Grok 3 Mini;Per 1M Tokens;0.30;0.50;Not Specified;
+xAI (Direct);Grok 2 (Image Gen);Per Image;0.07;0.07;Yes;
+DeepSeek (Direct);DeepSeek-V3.2-Exp;Per 1M Tokens;0.28;0.42;Not Specified;
+Together AI (Hosted OS);Llama 3.1 405B Instruct;Per 1M Tokens;3.50;3.50;Yes;
+Together AI (Hosted OS);Llama 4 Maverick;Per 1M Tokens;0.27;0.85;Yes;
+Together AI (Hosted OS);Qwen3-Coder 480B;Per 1M Tokens;2.00;2.00;Yes;
+Together AI (Hosted OS);Mixtral 8x7B Instruct;Per 1M Tokens;0.60;0.60;Yes;
+Together AI (Hosted OS);DeepSeek-V3;Per 1M Tokens;1.25;1.25;Yes;
+Together AI (Hosted OS);Whisper Large v3 (Audio);Per Audio Minute;0.0015;0.0015;Yes;
+Fireworks AI (Hosted OS);Llama 3.1 405B;Per 1M Tokens;3.00;3.00;Yes;Batch is 40% discount
+Fireworks AI (Hosted OS);Llama 4 Maverick;Per 1M Tokens;0.22;0.88;Yes;Batch is 40% discount
+Fireworks AI (Hosted OS);Qwen3 Coder 480B;Per 1M Tokens;0.45;1.80;Yes;Batch is 40% discount
+Fireworks AI (Hosted OS);Mixtral 8x22B;Per 1M Tokens;1.20;1.20;Yes;Batch is 40% discount
+Fireworks AI (Hosted OS);DeepSeek V3 family;Per 1M Tokens;0.90;0.90;Yes;Batch is 40% discount
+Fireworks AI (Hosted OS);Whisper-v3-large (Audio);Per Audio Minute;0.0015;0.0015;Yes;Batch is 40% discount
+Groq (Hosted OS);Llama 3.3 70B;Per 1M Tokens;0.59;0.79;Yes;Batch is 50% discount
+Groq (Hosted OS);Llama 3.1 8B;Per 1M Tokens;0.05;0.08;Yes;Batch is 50% discount
+Groq (Hosted OS);Qwen 3 32B;Per 1M Tokens;0.29;0.59;Yes;Batch is 50% discount
+Groq (Hosted OS);Whisper Large v3 (Audio);Per Audio Hour;0.11;0.11;Yes;
+Anyscale (Hosted OS);Llama / Mistral / etc.;Per Hour;4.00;4.00;Yes;Price is Per-Hour for H100 GPU, not Per-Token
+Anyscale (Hosted OS);Llama / Mistral / etc.;Per Hour;2.90;2.90;Yes;Price is Per-Hour for A100 GPU, not Per-Token
+Hugging Face;Serverless Inference;Per Second;Varies;Varies;Yes;Billed per-second of compute time, model-dependent
+Hugging Face;Dedicated Endpoint (H100);Per Hour;10.00;10.00;Yes;User manages batching on dedicated hardware
+Perplexity AI;Sonar Deep Research;Per Request + Tokens;0.41;0.41;Not Specified;Example cost for one deep research query
+Perplexity AI;Sonar Reasoning Pro;Per 1M Tokens;2.00;8.00;Not Specified;
+Perplexity AI;Search API;Per 1k Requests;5.00;5.00;Yes;
+Cohere;Command R+;Per 1M Tokens;2.50;10.00;Not Specified;
+Cohere;Rerank 3.5;Per 1k Searches;2.00;2.00;Yes;
+Cohere;Embed 4;Per 1M Tokens;0.12;0.12;Yes;
+IBM (watsonx.ai);Granite 8B Code Instruct;Per 1M Tokens;0.20;0.20;Yes;Batch is available
+IBM (watsonx.ai);Llama 3 70B Instruct;Per 1M Tokens;0.71;0.71;Yes;Batch is available
+Stability AI;Stable Image Ultra;Per Image;0.08;0.08;Yes;
+Stability AI;Stable Diffusion 3.5 Large;Per Image;0.065;0.065;Yes;
+AssemblyAI;Slam-1 (Audio);Per Audio Hour;0.27;0.27;Yes;File processing is inherently batch
+AssemblyAI;Universal (Streaming Audio);Per Audio Hour;0.15;0.15;No;Real-time processing
+ElevenLabs;Multilingual v2 (Voice);Per 1M Characters;198.00;198.00;Yes;Based on Pro plan ($99/500k chars)
+ElevenLabs;Flash v2.5 (Voice);Per 1M Characters;99.00;99.00;Yes;Based on Pro plan ($99/500k chars)
+Midjourney;N/A (Discord / Web App);Per Month;10.00;10.00;No Official API;Price is for ~200 image generations via Discord
