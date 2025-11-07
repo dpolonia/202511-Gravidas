@@ -1,0 +1,17 @@
+{
+  "persona_id": 3,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 3,
+    "age": 25,
+    "gender": "female",
+    "description": "Aisha is a 25-year-old nurse in Chicago. She is single and expecting her first child.",
+    "education": "bachelors",
+    "occupation": "nurse",
+    "marital_status": "single",
+    "income_level": "middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

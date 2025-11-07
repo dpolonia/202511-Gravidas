@@ -1,0 +1,17 @@
+{
+  "persona_id": 1,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 1,
+    "age": 28,
+    "gender": "female",
+    "description": "Emma is a 28-year-old elementary school teacher living in Boston. She is married and expecting her first child.",
+    "education": "bachelors",
+    "occupation": "teacher",
+    "marital_status": "married",
+    "income_level": "middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

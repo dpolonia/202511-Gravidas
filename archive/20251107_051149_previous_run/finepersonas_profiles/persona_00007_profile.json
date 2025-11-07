@@ -1,0 +1,17 @@
+{
+  "persona_id": 7,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 7,
+    "age": 27,
+    "gender": "female",
+    "description": "Rachel is a 27-year-old paralegal in Miami. She has an associate's degree and is expecting her first child.",
+    "education": "high_school",
+    "occupation": "paralegal",
+    "marital_status": "single",
+    "income_level": "lower_middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

@@ -1,0 +1,208 @@
+{
+  "persona_id": 4,
+  "persona_age": 32,
+  "persona_source": "HuggingFace FinePersonas-v0.1",
+  "persona_description": "Lila, 17, is a high school student in rural Tennessee. She comes from a low-income household and is the first in her family to consider going to college. Lila is in a committed relationship with her boyfriend and is unexpectedly pregnant.",
+  "persona_profile_file": "persona_00004_profile.json",
+  "synthea_patient_id": "7c215716-b8b6-375e-d4cc-308efa64d666",
+  "synthea_source_file": "Libbie63_Moore224_7c215716-b8b6-375e-d4cc-308efa64d666.json",
+  "protocol": "Prenatal Care Interview Protocol",
+  "timestamp": "2025-11-06T15:13:38.512963",
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-06T15:12:31.483232"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*speaks in a soft, slightly nervous tone* Hello, thank you for meeting with me. I'm happy to share what I can. Where would you like to start?",
+      "timestamp": "2025-11-06T15:12:32.261823"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-06T15:12:32.261852"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a deep breath* Well, as you know, I'm 17 years old and a high school student. I live with my parents in a small town in Tennessee. My family doesn't have a lot of money, so I've been working part-time at the local diner to help out. \n\nMy boyfriend and I have been together for almost two years now. We're both still in school, but we've been talking about our future and getting married someday. *pauses and looks down* I guess you know already, but I recently found out that I'm pregnant. It was a surprise, for sure. I'm still trying to wrap my head around it all.",
+      "timestamp": "2025-11-06T15:12:34.138795"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-06T15:12:34.644973"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods and looks a bit anxious* Well, I just found out I'm pregnant about a month ago. I was late for my period and started feeling really tired all the time, so I took a test. I was shocked when it came back positive. \n\nI haven't been able to see a doctor yet - my family doesn't have health insurance and I'm worried about the costs. I've been trying to take care of myself as best I can, but I don't really know what I'm supposed to be doing. I'm nervous about the whole thing, to be honest. This is all so new and overwhelming.",
+      "timestamp": "2025-11-06T15:12:36.156088"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-06T15:12:36.675853"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*fidgets nervously* I haven't been able to see a doctor yet for prenatal care. Like I said, my family doesn't have health insurance, and I'm really worried about the costs. I know I need to get checked out, but I've been putting it off because I'm just not sure how we're going to afford it.\n\nThe one time I called the local clinic, they said an initial appointment would be around $200, and that doesn't even include any tests or follow-up visits. That's more money than my parents make in a week. I just don't know what to do. I want to make sure the baby is healthy, but I'm scared I won't be able to get the care I need.",
+      "timestamp": "2025-11-06T15:12:38.941676"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-06T15:12:39.470929"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs heavily* I haven't actually been able to see a healthcare provider for my prenatal care yet. I've been trying to figure it out, but it's just been so overwhelming and stressful. \n\nThe closest clinic is about 45 minutes away, and I don't have a car or reliable transportation. My parents work long hours, so they can't really take me either. I've thought about trying to schedule an appointment, but I'm just so worried about the cost. I don't know how we're going to pay for it.\n\nI feel really alone and unsure of what to do. I want to do everything right for the baby, but I'm just so scared and confused. I wish I had someone I could talk to who could help guide me through all of this.",
+      "timestamp": "2025-11-06T15:12:41.323270"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-06T15:12:41.854669"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shakes head sadly* I haven't actually been able to have any prenatal appointments yet. I've been trying to take care of myself as best I can, but without seeing a doctor, I'm really not sure if I'm doing things right. \n\nI've read some information online about what to expect during prenatal visits, but I haven't experienced it firsthand. I imagine they would check my weight, blood pressure, and do an ultrasound to make sure the baby is developing properly. But I haven't been able to get any of those basic checkups done.\n\nIt's really stressful not knowing if everything is okay. I worry about the baby's health and my own. I just want to make sure I'm doing everything I can, but without access to proper medical care, I feel so lost. I wish I could afford to see a doctor regularly, but it's just not an option for me right now.",
+      "timestamp": "2025-11-06T15:12:43.960343"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-06T15:12:44.467009"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shifts uncomfortably* Well, to be honest, I haven't really been able to get checked out properly, so I'm not sure if there are any complications. But I have been feeling some things that worry me. \n\nFor one, I've been having a lot of headaches and sinus congestion. It's been really hard to breathe sometimes. I know that can be normal during pregnancy, but I'm not sure. And I've also been feeling nauseous and tired all the time. I try to eat as healthy as I can, but it's been a struggle.\n\nI'm also just really stressed out about the whole situation. Not being able to see a doctor and not knowing if the baby is okay is taking a huge toll on me mentally and emotionally. I lie awake at night worrying about what could go wrong. It's all just so overwhelming.\n\nI wish I could get checked out and make sure everything is progressing normally. But without insurance or the ability to pay, I'm just kind of in the dark. I'm doing my best, but I'm so scared that I'm not doing enough to take care of myself and the baby.",
+      "timestamp": "2025-11-06T15:12:58.631496"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-06T15:12:59.163772"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*bites lip nervously* To be honest, I'm not really taking any medications or supplements right now. I know that's probably not the best, but I just can't afford to see a doctor and get proper prenatal care.\n\nThe only thing I've been doing is trying to take a daily multivitamin that I was able to get from the local food bank. But even that's not a guarantee, since I don't always have the money to buy them consistently. \n\nI've thought about trying to get some prenatal vitamins or other supplements, but I'm just so worried about the costs. I don't want to end up in debt or have my family struggle even more financially because of this pregnancy. \n\nIt's really hard not knowing if I'm getting the proper nutrients and care that the baby needs. I try to eat as healthy as I can, but I know that's not enough. I just wish I could see a doctor who could properly monitor my health and prescribe anything I might need. But for now, I'm kind of on my own.",
+      "timestamp": "2025-11-06T15:13:02.344602"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-06T15:13:02.869218"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods and speaks hesitantly* Well, I've been trying my best to eat healthy, but it's been a struggle. With my limited income, it's hard to afford a lot of the fresh fruits and vegetables that are recommended for pregnant women. \n\nA lot of my meals come from the local food bank or whatever is cheapest at the grocery store. So a lot of it is canned goods, pasta, rice, and things like that. I try to make sure I'm getting enough protein, but it's not always easy.\n\nI've also been really nauseous a lot of the time, so it's hard to keep food down. Some days I can barely eat anything at all. I know that's not good for the baby, but I just feel so sick all the time.\n\nHonestly, I'm really worried that I'm not getting all the nutrients I need. I want to do everything right, but without being able to see a doctor, I'm not sure if I'm on the right track. I just hope the baby is still getting what they need, even if I'm struggling.",
+      "timestamp": "2025-11-06T15:13:06.317727"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-06T15:13:06.841249"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*eyes fill with tears* To be honest, the emotional side of this pregnancy has been really, really hard. I feel so scared and overwhelmed all the time.\n\nNot being able to see a doctor and get proper care is taking a huge toll on me. I lie awake at night worrying about the baby's health and my own. I'm so afraid that something could go wrong, and I won't even know until it's too late.\n\nAnd on top of that, I'm just really stressed about the financial aspect of all this. My family can barely make ends meet as it is. The thought of adding a baby into the mix is terrifying. I don't know how we're going to afford all the expenses.\n\nI try to talk to my boyfriend about it, but he's just as scared and unsure as I am. We're both still in high school - we have no idea how to be parents. I feel so alone in this.\n\nSometimes I just break down and cry because I don't know what to do. I want to be excited about the baby, but I'm just consumed by worry and anxiety. I wish I had more support and resources to help me through this. It's all just so much to handle.",
+      "timestamp": "2025-11-06T15:13:10.196021"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-06T15:13:10.710703"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs heavily* To be honest, my support network is really limited. My parents know about the pregnancy, but they're just as overwhelmed as I am. They're already working long hours just to keep our family afloat, and now they have to worry about helping with a new baby too.\n\nMy boyfriend has been trying to be there for me, but he's young and just as scared as I am. We're both still in high school, and neither of us have any experience with pregnancy or parenting. I feel like I'm leaning on him a lot, but he doesn't really know what to do either.\n\nOther than that, I don't really have many people I can turn to. I'm kind of isolated in this small town, and I don't have a lot of close friends. My teachers at school know about the situation, but there's only so much they can do to help.\n\nI wish I had someone, like a nurse or social worker, who could guide me through all of this. Someone who could help me figure out how to get prenatal care and connect me with resources. But I don't even know where to start with that. I just feel so alone and unsupported.\n\nIt's really hard, trying to navigate this all by myself. I'm trying to stay strong for the baby, but some days I just feel like I'm barely holding it together. I could really use some more help and reassurance right now.",
+      "timestamp": "2025-11-06T15:13:13.574441"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-06T15:13:14.078658"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shakes head sadly* I haven't really been able to think much about a birth plan or preferences for delivery. To be honest, I'm just so focused on trying to get to that point in the first place.\n\nWithout being able to see a doctor regularly, I have no idea what kind of delivery might be best for me and the baby. I don't even know if I'll be able to have the baby at a hospital, or if I'll have to find some other option.\n\nI've heard that home births can be a lot cheaper, but I'm honestly terrified of the idea of giving birth without any medical professionals there. I want to do what's safest for the baby, but I just don't have the knowledge or resources to make an informed decision.\n\nAt this point, I'm just hoping and praying that I can somehow figure out a way to get to a hospital when the time comes. But I have no idea how I'm going to pay for it or even get there. It's all so uncertain and scary.\n\nI wish I could sit down with a doctor and talk through all the options, but that feels so out of reach right now. I just want to do whatever is best, but I'm so worried that I won't be able to access the proper care. It's all just really overwhelming to think about.",
+      "timestamp": "2025-11-06T15:13:17.019731"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-06T15:13:17.526883"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*fidgets nervously* Well, to be honest, most of what I know about pregnancy and childbirth has come from searching online and reading whatever information I can find for free. It's not the most reliable or comprehensive source, but it's really all I've had access to.\n\nI've tried to read up on things like what to expect during each trimester, common pregnancy symptoms, and tips for a healthy pregnancy. But a lot of the websites and articles are geared towards people who have regular access to prenatal care, which isn't the case for me.\n\nI've also tried to reach out to my high school counselor and a few local community organizations to see if they have any resources or referrals. But they've all kind of just pointed me back to the same online information that I've already been scouring.\n\nIt's really frustrating, because I want to be as informed as possible, but I just don't have the support or guidance that I need. I feel like I'm constantly playing catch-up and trying to piece together information from different sources.\n\nAt the end of the day, I'm still left with so many unanswered questions and concerns. I wish I could sit down with a medical professional who could walk me through everything and give me reliable, personalized advice. But for now, I'm just trying my best to learn what I can on my own.",
+      "timestamp": "2025-11-06T15:13:19.068529"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-06T15:13:19.599808"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs heavily* The financial side of all this has been the biggest source of stress and anxiety for me. I'm just so worried about how we're going to afford everything that comes with having a baby.\n\nMy parents are already stretched so thin just trying to keep our household running. They don't have any extra money to put towards medical bills or baby supplies. And as a high school student, I don't have a stable income or savings to rely on either.\n\nI've looked into things like Medicaid and other state assistance programs, but the application process is so complicated and intimidating. I'm not even sure if I'll qualify, or how long it would take to get approved. The thought of drowning in medical debt is terrifying.\n\nOn top of that, I have no idea how we're going to pay for all the other expenses - diapers, clothes, formula, a crib, stroller, you name it. Just thinking about furnishing a nursery or affording childcare makes my head spin.\n\nI've tried to do some research online about budgeting and finding secondhand items, but it all still feels so overwhelming. I want to be prepared, but I'm constantly worrying that I'm going to miss something important or end up in a really bad financial situation.\n\nHonestly, I just feel so lost and unprepared. This is all new territory for me, and I don't have anyone to walk me through it. I'm doing my best to save what little money I can, but I'm terrified that it won't be enough. I just hope we can figure it all out before the baby arrives.",
+      "timestamp": "2025-11-06T15:13:22.983203"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-06T15:13:23.514553"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shifts uncomfortably* Well, to be honest, my pregnancy has definitely impacted my work situation, but not in a good way. I was already working part-time at the local diner to help support my family, and now this has just added another layer of stress and uncertainty.\n\nAs soon as I found out I was pregnant, I knew I was going to have to cut back on my hours at work. The nausea and fatigue have been really tough to manage, and I'm worried about the physical demands of the job. My boss has been understanding, but they can only give me so many accommodations.\n\nAnd of course, with less income coming in, that's just going to make our financial situation even tighter. I feel so guilty about not being able to contribute as much as I was before. My parents are already working so hard, and now they're going to have an extra mouth to feed.\n\nI'm also really worried about what's going to happen after the baby is born. I don't know if I'll be able to go back to work right away, and I have no idea how we'll afford childcare. It just feels like this pregnancy is putting so much pressure on my family, and I hate being the cause of that.\n\nHonestly, I'm just trying to focus on taking care of myself and the baby right now. But the uncertainty around my employment and income is a constant source of stress and anxiety. I wish I could just worry about being a good mom, but there are so many other practical concerns weighing on me.",
+      "timestamp": "2025-11-06T15:13:27.428749"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-06T15:13:27.959973"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shakes head sadly* To be honest, I haven't really been able to think much about the postpartum period or what happens after the baby is born. I'm just so focused on trying to get through the pregnancy itself that I haven't had the mental energy to plan for that next stage.\n\nI know that the postpartum period can be really challenging, both physically and emotionally. But without access to proper medical care and support, I'm honestly not sure how I'm going to manage it all. I don't even know what kind of resources or help might be available to me.\n\nMy main concern right now is just figuring out how I'm going to get the baby safely delivered, whether that's at a hospital or some other option. After that, I'm really worried about things like breastfeeding, recovering from childbirth, and caring for a newborn. I have no experience with any of that.\n\nAnd of course, there's the huge financial burden that's going to come with having a baby. I have no idea how I'm going to afford diapers, formula, clothing, or all the other necessities. It's just so overwhelming to think about.\n\nHonestly, I'm just trying to take things one day at a time right now. I know I need to start planning for the postpartum period, but I feel like I'm barely treading water as it is. I wish I had more guidance and support to help me prepare for what's to come. I'm just so scared that I'm going to be completely in over my head.",
+      "timestamp": "2025-11-06T15:13:32.753919"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-06T15:13:33.285752"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods gratefully* Thank you so much for taking the time to listen and for being so understanding. I know my situation is really difficult, and I appreciate you giving me the space to open up about it. \n\nThis interview has been really helpful for me, even if it's been emotional at times. Just being able to talk through everything and get some of my concerns out in the open feels like a weight off my shoulders. I'm grateful to have had this chance to share my story.\n\nI know there's still a long road ahead, but I feel a little bit more empowered having gone through this process. Hopefully the information I've provided can help inform your research and maybe even lead to more support and resources for people in situations like mine.\n\nThank you again for your kindness and compassion. It means more to me than you know. I'll do my best to keep taking care of myself and the baby, and I hope that with time, I'll be able to get the care and assistance that we both need.",
+      "timestamp": "2025-11-06T15:13:38.512937"
+    }
+  ],
+  "metadata": {
+    "total_turns": 34,
+    "questions_asked": 15,
+    "persona_traceability": {
+      "persona_id": 4,
+      "source_dataset": "HuggingFace FinePersonas-v0.1",
+      "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+      "profile_file": "persona_00004_profile.json",
+      "profile_path": "data/finepersonas_profiles/persona_00004_profile.json",
+      "age": 32,
+      "gender": "female",
+      "education": "high_school",
+      "occupation": "high school student",
+      "marital_status": "unknown",
+      "income_level": "low",
+      "description": "Lila, 17, is a high school student in rural Tennessee. She comes from a low-income household and is the first in her family to consider going to college. Lila is in a committed relationship with her boyfriend and is unexpectedly pregnant."
+    },
+    "synthea_traceability": {
+      "patient_id": "7c215716-b8b6-375e-d4cc-308efa64d666",
+      "source_file": "Libbie63_Moore224_7c215716-b8b6-375e-d4cc-308efa64d666.json",
+      "source_path": "data/health_records/Libbie63_Moore224_7c215716-b8b6-375e-d4cc-308efa64d666.json",
+      "num_conditions": 21,
+      "num_encounters": 61
+    }
+  }
+}

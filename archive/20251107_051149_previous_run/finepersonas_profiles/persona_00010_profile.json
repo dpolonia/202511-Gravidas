@@ -1,0 +1,17 @@
+{
+  "persona_id": 10,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 10,
+    "age": 30,
+    "gender": "female",
+    "description": "Sarah is a 30-year-old marketing manager in Atlanta. She has a bachelor's degree and is pregnant with her first child.",
+    "education": "bachelors",
+    "occupation": "marketing manager",
+    "marital_status": "married",
+    "income_level": "upper_middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "age": 32,
+    "gender": "female",
+    "description": "Emily, 22, is a college student studying biology at the University of California, Los Angeles. She is single and lives with her parents, who are middle-income earners. Emily is independent-minded and passionate about environmental conservation.",
+    "education": "unknown",
+    "occupation": "college student study",
+    "marital_status": "single",
+    "income_level": "middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630018"
+    }
+  },
+  {
+    "id": 2,
+    "age": 42,
+    "gender": "female",
+    "description": "Fatima, 35, is a small business owner running a local cafe in Chicago. She has a high school diploma and comes from a lower-middle-class background. Fatima is a single parent and juggles the demands of work and raising her two children.",
+    "education": "high_school",
+    "occupation": "small bus",
+    "marital_status": "single",
+    "income_level": "lower_middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630050"
+    }
+  },
+  {
+    "id": 3,
+    "age": 33,
+    "gender": "female",
+    "description": "Olivia, 41, is a marketing executive at a tech firm in Seattle. She holds a master's degree and comes from an upper-middle-class family. Olivia is married to her college sweetheart, and they have been trying to conceive for the past year.",
+    "education": "masters",
+    "occupation": "market",
+    "marital_status": "married",
+    "income_level": "high",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630063"
+    }
+  },
+  {
+    "id": 4,
+    "age": 32,
+    "gender": "female",
+    "description": "Lila, 17, is a high school student in rural Tennessee. She comes from a low-income household and is the first in her family to consider going to college. Lila is in a committed relationship with her boyfriend and is unexpectedly pregnant.",
+    "education": "high_school",
+    "occupation": "high school student",
+    "marital_status": "unknown",
+    "income_level": "low",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630082"
+    }
+  },
+  {
+    "id": 5,
+    "age": 24,
+    "gender": "female",
+    "description": "Sophia, 52, is a semi-retired nurse living in Miami. She has a bachelor's degree in nursing and is a widow after her husband passed away five years ago. Sophia is independent and financially stable, but she feels lonely at times.",
+    "education": "bachelors",
+    "occupation": "widow after her husb",
+    "marital_status": "unknown",
+    "income_level": "middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630100"
+    }
+  },
+  {
+    "id": 6,
+    "age": 21,
+    "gender": "female",
+    "description": "Amelia, 27, is a barista at a local coffee shop in Portland, Oregon. She has a high school diploma and comes from a working-class family. Amelia is in a domestic partnership with her long-term girlfriend, and they are considering starting a family.",
+    "education": "high_school",
+    "occupation": "barista",
+    "marital_status": "partnered",
+    "income_level": "middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630117"
+    }
+  },
+  {
+    "id": 7,
+    "age": 24,
+    "gender": "female",
+    "description": "Isabella, 31, is a freelance graphic designer based in New York City. She has a bachelor's degree in fine arts and comes from an upper-class background. Isabella is single and focused on her career, but she occasionally feels the pressure to settle down and have children.",
+    "education": "bachelors",
+    "occupation": "freelance graphic designer based",
+    "marital_status": "single",
+    "income_level": "middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630131"
+    }
+  },
+  {
+    "id": 8,
+    "age": 36,
+    "gender": "female",
+    "description": "Ava, 24, is a recent college graduate working as a research assistant at a university in Boston. She has a bachelor's degree and comes from a middle-income household. Ava is in a long-term relationship with her boyfriend, and they are discussing the possibility of marriage and starting a family.",
+    "education": "bachelors",
+    "occupation": "recent college gradu",
+    "marital_status": "partnered",
+    "income_level": "middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630146"
+    }
+  },
+  {
+    "id": 9,
+    "age": 32,
+    "gender": "female",
+    "description": "Mia, 45, is a high school English teacher in a small town in Kansas. She has a master's degree in education and comes from a lower-middle-class family. Mia is divorced and a single parent to two teenage daughters, and she is considering adopting a child.",
+    "education": "masters",
+    "occupation": "high school english teacher",
+    "marital_status": "single",
+    "income_level": "lower_middle",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630158"
+    }
+  },
+  {
+    "id": 10,
+    "age": 29,
+    "gender": "female",
+    "description": "Harper, 19, is a first-year college student at a community college in Los Angeles. She comes from a low-income household and is the first in her family to attend college. Harper is in a casual relationship with her boyfriend and is unsure about her future plans.",
+    "education": "unknown",
+    "occupation": "unknown",
+    "marital_status": "unknown",
+    "income_level": "low",
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-06T13:30:10.630178"
+    }
+  }
+]

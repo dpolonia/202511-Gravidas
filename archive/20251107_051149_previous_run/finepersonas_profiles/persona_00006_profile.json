@@ -1,0 +1,17 @@
+{
+  "persona_id": 6,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 6,
+    "age": 31,
+    "gender": "female",
+    "description": "Lisa is a 31-year-old graphic designer in Portland. She is married and this is her first pregnancy.",
+    "education": "bachelors",
+    "occupation": "graphic designer",
+    "marital_status": "married",
+    "income_level": "middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

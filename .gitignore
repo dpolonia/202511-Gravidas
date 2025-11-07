@@ -39,6 +39,7 @@ data/*.csv
 # ============================================================================
 synthea/
 synthea/output/
+synthea.jar
 
 # ============================================================================
 # Logs
@@ -256,3 +257,14 @@ outputs/
 # Ignore temporary analysis files
 analysis/*.csv
 analysis/*.xlsx
+
+# Large backup directories (preserve core data only)
+data/backup_synthea_1k/
+data/backup_synthea_run1/
+202511-Gravidas/
+
+# Windows Zone Identifier files
+*:Zone.Identifier
+
+# Obsidian notebook files
+.obsidian/

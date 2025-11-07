@@ -1,0 +1,17 @@
+{
+  "persona_id": 5,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 5,
+    "age": 29,
+    "gender": "female",
+    "description": "Sophia is a 29-year-old retail manager in Seattle. She has a high school diploma and is expecting twins.",
+    "education": "high_school",
+    "occupation": "retail manager",
+    "marital_status": "married",
+    "income_level": "middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}
