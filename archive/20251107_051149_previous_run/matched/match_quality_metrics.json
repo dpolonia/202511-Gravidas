@@ -1,0 +1,162 @@
+[
+  {
+    "persona_idx": 0,
+    "record_idx": 9,
+    "compatibility_score": 0.8620000000000001,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.925,
+      "education": 0.76,
+      "income": 1.0,
+      "marital_status": 0.8,
+      "occupation": 0.7
+    },
+    "persona_age": 32,
+    "record_age": 33,
+    "age_difference": 1
+  },
+  {
+    "persona_idx": 1,
+    "record_idx": 5,
+    "compatibility_score": 0.86275,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.925,
+      "education": 0.82,
+      "income": 0.925,
+      "marital_status": 0.8,
+      "occupation": 0.7
+    },
+    "persona_age": 42,
+    "record_age": 41,
+    "age_difference": 1
+  },
+  {
+    "persona_idx": 2,
+    "record_idx": 4,
+    "compatibility_score": 0.8755000000000001,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.85,
+      "education": 0.94,
+      "income": 0.85,
+      "marital_status": 1.0,
+      "occupation": 0.7
+    },
+    "persona_age": 33,
+    "record_age": 35,
+    "age_difference": 2
+  },
+  {
+    "persona_idx": 3,
+    "record_idx": 6,
+    "compatibility_score": 0.48197149699531194,
+    "quality_category": "poor",
+    "score_breakdown": {
+      "age": 0.11367874248827986,
+      "education": 0.82,
+      "income": 0.85,
+      "marital_status": 0.5,
+      "occupation": 0.7
+    },
+    "persona_age": 32,
+    "record_age": 45,
+    "age_difference": 13
+  },
+  {
+    "persona_idx": 4,
+    "record_idx": 1,
+    "compatibility_score": 0.4731538094156194,
+    "quality_category": "poor",
+    "score_breakdown": {
+      "age": 0.005384523539048602,
+      "education": 0.8799999999999999,
+      "income": 1.0,
+      "marital_status": 0.5,
+      "occupation": 0.7
+    },
+    "persona_age": 24,
+    "record_age": 59,
+    "age_difference": 35
+  },
+  {
+    "persona_idx": 5,
+    "record_idx": 3,
+    "compatibility_score": 0.874,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.85,
+      "education": 0.82,
+      "income": 1.0,
+      "marital_status": 1.0,
+      "occupation": 0.7
+    },
+    "persona_age": 21,
+    "record_age": 19,
+    "age_difference": 2
+  },
+  {
+    "persona_idx": 6,
+    "record_idx": 7,
+    "compatibility_score": 0.886,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.85,
+      "education": 0.8799999999999999,
+      "income": 1.0,
+      "marital_status": 0.8,
+      "occupation": 1.0
+    },
+    "persona_age": 24,
+    "record_age": 26,
+    "age_difference": 2
+  },
+  {
+    "persona_idx": 7,
+    "record_idx": 2,
+    "compatibility_score": 0.916,
+    "quality_category": "excellent",
+    "score_breakdown": {
+      "age": 0.925,
+      "education": 0.8799999999999999,
+      "income": 1.0,
+      "marital_status": 1.0,
+      "occupation": 0.7
+    },
+    "persona_age": 36,
+    "record_age": 37,
+    "age_difference": 1
+  },
+  {
+    "persona_idx": 8,
+    "record_idx": 8,
+    "compatibility_score": 0.56175,
+    "quality_category": "poor",
+    "score_breakdown": {
+      "age": 0.0375,
+      "education": 0.94,
+      "income": 0.925,
+      "marital_status": 0.8,
+      "occupation": 1.0
+    },
+    "persona_age": 32,
+    "record_age": 53,
+    "age_difference": 21
+  },
+  {
+    "persona_idx": 9,
+    "record_idx": 0,
+    "compatibility_score": 0.4294481546653984,
+    "quality_category": "poor",
+    "score_breakdown": {
+      "age": 0.012370386663495887,
+      "education": 0.76,
+      "income": 0.85,
+      "marital_status": 0.5,
+      "occupation": 0.7
+    },
+    "persona_age": 29,
+    "record_age": 58,
+    "age_difference": 29
+  }
+]

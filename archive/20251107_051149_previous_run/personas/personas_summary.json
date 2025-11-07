@@ -1,0 +1,27 @@
+{
+  "total_count": 10,
+  "generation_method": "AI-generated (Claude)",
+  "age_distribution": {
+    "30-39": 5,
+    "40-49": 1,
+    "20-29": 4
+  },
+  "education_distribution": {
+    "unknown": 2,
+    "high_school": 3,
+    "masters": 2,
+    "bachelors": 3
+  },
+  "marital_status_distribution": {
+    "single": 4,
+    "married": 1,
+    "unknown": 3,
+    "partnered": 2
+  },
+  "income_distribution": {
+    "middle": 5,
+    "lower_middle": 2,
+    "high": 1,
+    "low": 2
+  }
+}

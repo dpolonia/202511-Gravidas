@@ -1,0 +1,17 @@
+{
+  "persona_id": 8,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 8,
+    "age": 33,
+    "gender": "female",
+    "description": "Amanda is a 33-year-old doctor in New York. She is married and pregnant with her first child.",
+    "education": "doctorate",
+    "occupation": "physician",
+    "marital_status": "married",
+    "income_level": "high"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

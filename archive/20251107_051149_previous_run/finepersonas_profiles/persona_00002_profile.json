@@ -1,0 +1,17 @@
+{
+  "persona_id": 2,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 2,
+    "age": 32,
+    "gender": "female",
+    "description": "Maria is a 32-year-old software engineer in San Francisco. She has a master's degree and is pregnant with her second child.",
+    "education": "masters",
+    "occupation": "software engineer",
+    "marital_status": "married",
+    "income_level": "upper_middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

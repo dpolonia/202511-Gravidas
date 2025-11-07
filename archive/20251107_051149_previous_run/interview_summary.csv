@@ -1,0 +1,11 @@
+interview_id,persona_id,persona_age,persona_description,total_turns,total_words,timestamp
+0,1,32,"Emily, 22, is a college student studying biology at the University of California, Los Angeles. She i",34,4251,2025-11-06T15:09:44.761032
+1,2,42,"Fatima, 35, is a small business owner running a local cafe in Chicago. She has a high school diploma",34,3899,2025-11-06T15:11:12.867044
+2,3,33,"Olivia, 41, is a marketing executive at a tech firm in Seattle. She holds a master's degree and come",34,4153,2025-11-06T15:12:30.420445
+3,4,32,"Lila, 17, is a high school student in rural Tennessee. She comes from a low-income household and is ",34,3333,2025-11-06T15:13:38.512963
+4,5,24,"Sophia, 52, is a semi-retired nurse living in Miami. She has a bachelor's degree in nursing and is a",34,3513,2025-11-06T15:15:21.483878
+5,6,21,"Amelia, 27, is a barista at a local coffee shop in Portland, Oregon. She has a high school diploma a",34,3800,2025-11-06T15:16:31.618228
+6,7,24,"Isabella, 31, is a freelance graphic designer based in New York City. She has a bachelor's degree in",34,5100,2025-11-06T15:17:44.837089
+7,8,36,"Ava, 24, is a recent college graduate working as a research assistant at a university in Boston. She",34,4277,2025-11-06T15:18:53.808668
+8,9,32,"Mia, 45, is a high school English teacher in a small town in Kansas. She has a master's degree in ed",34,4885,2025-11-06T15:19:58.413839
+9,10,29,"Harper, 19, is a first-year college student at a community college in Los Angeles. She comes from a ",34,4089,2025-11-06T15:21:44.656370

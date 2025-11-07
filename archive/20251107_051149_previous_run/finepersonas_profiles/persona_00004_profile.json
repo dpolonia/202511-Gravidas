@@ -1,0 +1,17 @@
+{
+  "persona_id": 4,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 4,
+    "age": 35,
+    "gender": "female",
+    "description": "Jennifer is a 35-year-old accountant in Dallas. She is married with one child and is currently pregnant with her second.",
+    "education": "bachelors",
+    "occupation": "accountant",
+    "marital_status": "married",
+    "income_level": "upper_middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

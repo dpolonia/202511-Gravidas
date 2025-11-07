@@ -1,0 +1,38 @@
+{
+  "total_matches": 10,
+  "compatibility_scores": {
+    "average": 0.722257346107633,
+    "median": 0.8623750000000001,
+    "std_dev": 0.19529795282120063,
+    "min": 0.4294481546653984,
+    "max": 0.916,
+    "percentile_25": 0.5019161227464839,
+    "percentile_75": 0.875125
+  },
+  "quality_distribution": {
+    "excellent": 6,
+    "excellent_pct": 60.0,
+    "good": 0,
+    "good_pct": 0.0,
+    "fair": 0,
+    "fair_pct": 0.0,
+    "poor": 4,
+    "poor_pct": 40.0
+  },
+  "age_differences": {
+    "average": 10.7,
+    "median": 2.0,
+    "max": 35,
+    "within_2_years": 6,
+    "within_2_years_pct": 60.0,
+    "within_5_years": 6,
+    "within_5_years_pct": 60.0
+  },
+  "score_breakdown_averages": {
+    "age": 0.5493933652690823,
+    "education": 0.8499999999999999,
+    "income": 0.9400000000000001,
+    "marital_status": 0.77,
+    "occupation": 0.76
+  }
+}

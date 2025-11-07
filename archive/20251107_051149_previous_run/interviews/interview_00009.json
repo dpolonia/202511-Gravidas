@@ -1,0 +1,208 @@
+{
+  "persona_id": 10,
+  "persona_age": 29,
+  "persona_source": "HuggingFace FinePersonas-v0.1",
+  "persona_description": "Harper, 19, is a first-year college student at a community college in Los Angeles. She comes from a low-income household and is the first in her family to attend college. Harper is in a casual relationship with her boyfriend and is unsure about her future plans.",
+  "persona_profile_file": "persona_00010_profile.json",
+  "synthea_patient_id": "18be6806-1b29-a3cf-8080-0dbd795358a8",
+  "synthea_source_file": "Kiera822_Casey401_Schaefer657_18be6806-1b29-a3cf-8080-0dbd795358a8.json",
+  "protocol": "Prenatal Care Interview Protocol",
+  "timestamp": "2025-11-06T15:21:44.656370",
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-06T15:19:59.476393"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*smiles warmly* Hello, thank you for having me. I'm happy to share my experiences with you. Please go ahead with your questions, I'll do my best to provide detailed responses.",
+      "timestamp": "2025-11-06T15:20:02.429285"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-06T15:20:02.429298"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods* Sure, I'd be happy to share a bit about myself. As you mentioned, my name is Harper and I'm a 19-year-old first-year college student. I'm attending a community college here in Los Angeles. \n\nComing from a low-income household, I'm the first in my family to go to college, which is a big deal. It's been an adjustment, but I'm really excited about the opportunity. Financially, it's been a bit of a struggle, but I'm making it work with some financial aid and a part-time job.\n\nIn my personal life, I'm in a casual relationship with my boyfriend. We've been together for about a year, but we're both still figuring things out in terms of our future plans. I'm honestly not sure what I want to do after I finish my associate's degree yet. There's a lot of uncertainty, but I'm taking it one day at a time.\n\nDoes that help give you a sense of where I'm at in my life right now? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:20:07.664980"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-06T15:20:08.188842"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses briefly, then nods* Yes, I can share about that experience. About a year ago, I learned I was pregnant. It was a bit of a surprise, as my boyfriend and I had not been actively trying to have a child. \n\nWhen I first found out, I was honestly quite scared and overwhelmed. I wasn't sure how I was going to manage being a student and a young, expectant mother. But after the initial shock wore off, I tried to focus on taking care of myself and the pregnancy as best I could.\n\nI went to my first prenatal appointment around 8 weeks along. The doctor confirmed the pregnancy and we discussed next steps for my prenatal care. They did some initial tests and screenings, which all came back normal thankfully. \n\nHowever, a few weeks later, I ended up having a miscarriage. It was a very difficult and emotional experience. The doctor said it was likely due to some underlying issues, but they couldn't pinpoint an exact cause. I was devastated, but I tried to give myself time and space to grieve.\n\nDoes this help provide some context around my pregnancy history? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:20:11.322265"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-06T15:20:11.825262"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods thoughtfully* Well, as I mentioned, I went to my first prenatal appointment around 8 weeks into the pregnancy. That initial visit was a bit overwhelming, but the staff at the clinic were very kind and supportive.\n\nThey took a full medical history, did some basic tests and screenings, and we discussed my overall health and any concerns I had. The doctor explained what to expect in the coming weeks and months, and provided information on nutrition, exercise, and other prenatal care guidelines.\n\nI remember feeling a mix of excitement and nervousness during that first appointment. It was all so new and unfamiliar to me. But the medical team really took the time to address my questions and make sure I understood everything. They were very patient and made me feel comfortable.\n\nThe subsequent prenatal visits were similar - they would monitor the baby's development, check my vitals, and we'd discuss any issues that came up. Overall, I felt like I was receiving good quality care, even though the clinic was quite busy and sometimes the wait times were long.\n\nDoes this help give you a sense of what my prenatal care experience was like? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:20:14.061853"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-06T15:20:14.593672"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses briefly to think* My prenatal care was provided through a community health clinic in my neighborhood. It's a fairly large clinic that serves a lot of low-income and uninsured patients in the area.\n\nThe doctor I saw the most was Dr. Ramirez. She was the one who confirmed my pregnancy and oversaw my care throughout. I really appreciated how attentive and caring she was, especially given the busy nature of the clinic.\n\nDr. Ramirez always took the time to listen to my concerns and answer any questions I had. She'd explain things in a way that was easy for me to understand, which I really valued as a first-time mom-to-be. I felt like I could be open and honest with her about any issues I was experiencing, whether physical or emotional.\n\nAt the same time, the clinic was quite crowded and appointments were often rushed. There were times when I wished I could have had more one-on-one time with Dr. Ramirez. But overall, I felt that she and the rest of the staff genuinely cared about my wellbeing and the health of the baby.\n\nDoes this help describe my relationship with my healthcare provider? Let me know if you need any clarification or have additional questions.",
+      "timestamp": "2025-11-06T15:20:42.191794"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-06T15:20:42.723796"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods* Sure, I can walk you through a typical prenatal visit. As per the clinic's protocol, I had appointments scheduled about once a month in the beginning, and then they increased in frequency as my pregnancy progressed.\n\nA standard visit would usually start with checking in at the front desk and filling out any necessary paperwork. Then I'd get called back to an exam room where a nurse would take my vital signs - things like blood pressure, weight, temperature, etc.\n\nAfter that, Dr. Ramirez would come in and we'd start by discussing how I'd been feeling since the last visit. She'd ask about any symptoms, concerns, or changes I'd noticed. We'd also talk about my diet, exercise, and overall self-care.\n\nNext, she'd perform a physical exam - listening to the baby's heartbeat, feeling my abdomen, and checking the size and position of the fetus. Sometimes they'd also do an ultrasound to get a visual update on the baby's development.\n\nDepending on how far along I was, they might also order additional tests or screenings, like blood work or a glucose test. Dr. Ramirez would explain the purpose of any new tests and make sure I understood the results.\n\nFinally, we'd wrap up by discussing the plan for the next visit and any other recommendations or resources she had for me. The whole appointment would usually last 30-45 minutes.\n\nDoes this help give you a sense of what a typical prenatal visit entailed? Let me know if you need any clarification or have additional questions.",
+      "timestamp": "2025-11-06T15:20:45.693411"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-06T15:20:46.212861"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods solemnly* Unfortunately, yes, I did experience some health concerns and complications during my pregnancy. As I mentioned earlier, I had a miscarriage shortly after my initial confirmation of the pregnancy.\n\nThat was an incredibly difficult and emotional experience for me. The doctor couldn't pinpoint an exact cause, but said it was likely due to some underlying issues. It was devastating to go through that loss, and it definitely took a toll on me both physically and mentally.\n\nBeyond the miscarriage, I also struggled with elevated stress levels throughout the pregnancy. Between the demands of being a full-time student, working a part-time job, and dealing with the financial strain, I often felt overwhelmed. This manifested in physical symptoms like headaches, fatigue, and trouble sleeping.\n\nI brought these concerns up with Dr. Ramirez, and she provided some recommendations for managing the stress, like trying relaxation techniques and counseling. She also monitored my blood pressure closely, as high stress can increase that risk.\n\nThankfully, after the miscarriage, the rest of my pregnancy progressed relatively smoothly. I didn't experience any other major complications. But the emotional and psychological impact of that initial loss was something I continued to grapple with.\n\nDoes this help provide more context around the health challenges I faced? Please let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:20:49.694103"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-06T15:20:50.213773"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses briefly to think* Well, during my pregnancy, I was taking a prenatal vitamin that was prescribed by my doctor, Dr. Ramirez. She had recommended it to help ensure I was getting all the necessary nutrients for the baby's development.\n\nBeyond that, I wasn't taking any other regular medications. However, after the miscarriage, Dr. Ramirez did prescribe me a low-dose antidepressant to help manage the depression and anxiety I was experiencing. She felt it would be beneficial for both my mental health and the health of any future pregnancies.\n\nI was a bit hesitant at first about taking an antidepressant, but Dr. Ramirez assured me it was safe to use during pregnancy and that the potential benefits outweighed the risks. She closely monitored my dosage and any side effects I experienced.\n\nIn terms of supplements, I did try to incorporate some additional vitamins and minerals on my own, like extra folic acid, iron, and omega-3s. But I always checked with Dr. Ramirez first to make sure they were safe and compatible with the prenatal vitamin.\n\nOverall, I tried to be very diligent about following the medical advice and taking any prescribed medications or supplements as directed. My health and the baby's wellbeing were the top priorities.\n\nDoes this help summarize the medications and supplements I was taking? Let me know if you need any clarification or have additional questions.",
+      "timestamp": "2025-11-06T15:20:53.644753"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-06T15:20:54.161460"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods* Absolutely, I'm happy to share about my diet and nutrition during the pregnancy. As you can imagine, it was something I was very focused on, especially after the miscarriage.\n\nAt the recommendation of my doctor, I tried to follow a well-balanced, nutrient-dense diet. This included lots of fruits, vegetables, whole grains, lean proteins, and healthy fats. I made a conscious effort to increase my intake of foods rich in folic acid, iron, calcium, and other key vitamins and minerals.\n\nMeal planning and preparation was sometimes a challenge, given my busy schedule as a student. But I tried to meal prep healthy snacks and lunches whenever I could. Things like yogurt, nuts, fresh produce, and whole grain crackers were staples.\n\nI also made an effort to stay hydrated by drinking plenty of water throughout the day. Avoiding things like caffeine, alcohol, and processed foods was important to me as well.\n\nThat said, I'll admit there were definitely times when I indulged in some less healthy cravings. Pregnancy can do that to you! But I tried to keep those treats in moderation and balanced them out with nutritious options.\n\nOverall, I felt that maintaining a healthy diet was crucial for supporting the baby's development and my own wellbeing. Dr. Ramirez was really helpful in providing guidance and recommendations along the way.\n\nDoes this help give you a sense of how I approached nutrition during my pregnancy? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:06.189510"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-06T15:21:06.721094"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses, then sighs softly* Emotionally, the pregnancy has been a real rollercoaster for me. As I mentioned earlier, the initial miscarriage was absolutely devastating. It was a huge loss that I really struggled to cope with, both physically and mentally.\n\nEven after that, I found myself feeling anxious and depressed at times. The combination of the stress from school, work, and financial pressures, along with the uncertainties of the pregnancy, was really overwhelming. There were days when I just felt completely drained and hopeless.\n\nI tried my best to be open about how I was feeling with my doctor, Dr. Ramirez. She was very understanding and provided me with resources for counseling and support groups. The antidepressant medication she prescribed also helped to stabilize my mood to some degree.\n\nBut even with that support, there were still many emotional ups and downs. I'd find myself feeling excited and hopeful one day, and then completely overwhelmed with worry the next. It was an emotional roller coaster that took a real toll.\n\nUltimately, I think the combination of the pregnancy itself, the prior loss, and the life stressors I was facing just made for a very challenging emotional experience. I'm grateful that I had access to medical care and resources to help me through it, but it was certainly not easy.\n\nDoes this help provide some insight into the emotional side of my pregnancy journey? Please let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:09.474620"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-06T15:21:10.006941"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods thoughtfully* That's a really important question. To be honest, my support network during the pregnancy has been fairly limited. As a first-generation college student from a low-income family, I don't have a huge built-in support system.\n\nMy boyfriend has tried to be there for me, but he's also young and still figuring things out himself. There have been times when I've really needed more emotional and practical support from him, and that's been difficult.\n\nMy family, while loving, doesn't have a lot of resources or knowledge when it comes to navigating pregnancy and healthcare. They've tried to be supportive, but I often feel like I'm the one having to educate them on what I need.\n\nBeyond that, the community health clinic has been an important source of support. The staff, especially Dr. Ramirez, have gone above and beyond to provide me with resources and connect me to services. They've really tried to fill in the gaps where my personal support network has fallen short.\n\nI've also sought out a local pregnancy support group that has been incredibly helpful. Being able to connect with other young, expectant mothers in similar circumstances has made me feel less alone. We share advice, resources, and emotional support with one another.\n\nBut I'll admit, there are still many times when I feel isolated and unsupported. The pregnancy journey can be so overwhelming, and I wish I had more people I could truly rely on. It's definitely been one of the biggest challenges I've faced.\n\nDoes this help explain my support network, or lack thereof, during this time? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:13.465877"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-06T15:21:13.998231"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses briefly, then nods* Yes, I've given some thought to my birth plan and preferences, although I'll admit a lot of it still feels uncertain. \n\nBased on my discussions with Dr. Ramirez and the information I've gathered, my current preference is to have a natural, unmedicated birth if possible. I'm drawn to the idea of allowing my body to go through the process without interventions, if everything progresses smoothly.\n\nThat said, I'm also very aware that birth plans don't always go as expected. I know I need to be flexible and open to whatever ends up being the safest option for me and the baby. If complications arise or medical interventions become necessary, I'm prepared to defer to the guidance of my healthcare team.\n\nOne thing that's really important to me is having a supportive birthing environment. I'd love to have my boyfriend present, as well as potentially a doula or midwife if that's an option through the clinic. I want to feel empowered and in control, while also trusting the expertise of the medical professionals.\n\nI'm also hoping to be able to have immediate skin-to-skin contact with the baby after delivery, and to try breastfeeding right away if possible. Establishing that early bonding and attachment is a priority for me.\n\nBut again, I know that birth is unpredictable, so I'm trying not to be too rigid in my expectations. My main goal is simply to have a healthy delivery and baby, no matter what that ends up looking like.\n\nDoes this help explain my current thoughts and preferences around the birth plan? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:18.653435"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-06T15:21:19.159090"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods thoughtfully* That's a great question. To be honest, I've had to rely on a variety of sources to learn about pregnancy and childbirth, since I don't have a lot of personal experience or family knowledge to draw from.\n\nThe primary source of information has been my prenatal visits with Dr. Ramirez and the other healthcare providers at the community clinic. They've been invaluable in explaining the different stages of pregnancy, what to expect, and how to prepare for labor and delivery. The handouts and educational materials they've provided have been really helpful.\n\nI've also done a lot of my own research online, reading articles and forums from reputable medical sources. Websites like the Mayo Clinic, WebMD, and What to Expect have been go-to resources for me. I find it helpful to get a range of perspectives and information, even if it can sometimes feel overwhelming.\n\nIn addition, the pregnancy support group I mentioned has been a great source of peer-to-peer learning. Hearing the real-life experiences and advice from other young mothers has been incredibly insightful and reassuring. It's nice to know I'm not alone in navigating all of this.\n\nI'll admit, there have been times when all the information has felt a bit contradictory or confusing. But I try my best to cross-reference sources, ask lots of questions, and ultimately go with the guidance of my healthcare team. They've been my most trusted and reliable source of information.\n\nDoes this help explain the different ways I've been learning about pregnancy and childbirth? Let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:22.506961"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-06T15:21:23.038500"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs softly* The financial aspects of the pregnancy and preparing for a baby have definitely been a major source of stress and concern for me. As a low-income, first-generation college student, the costs involved have felt quite daunting at times.\n\nFortunately, the community health clinic I've been going to has been able to provide me with some financial assistance and resources. They've helped me apply for Medicaid coverage, which has covered the majority of my prenatal care costs. That's been a huge relief.\n\nHowever, there are still a lot of other expenses that I've had to figure out on my own - things like maternity clothes, baby supplies, potential childcare costs, etc. It's been a constant balancing act, trying to budget and save what I can while also managing my other financial obligations as a student.\n\nI've been trying to be as resourceful as possible, looking for secondhand items, asking family and friends for hand-me-downs, and seeking out community programs that provide support. But it's still a constant source of worry and uncertainty.\n\nTo be honest, I'm not entirely sure how I'm going to manage the costs once the baby arrives. I'm hoping that I'll be able to continue my studies and maintain my part-time job, but I know that childcare is going to be a major challenge. It's something I'm still trying to figure out.\n\nOverall, the financial aspect of this pregnancy has been incredibly stressful. I'm grateful for the support I've received so far, but I know there are still a lot of unknowns and hurdles ahead. It's definitely added an extra layer of anxiety to an already emotional experience.\n\nDoes this help explain how I've been managing the financial side of things? Please let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:30.293283"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-06T15:21:30.824672"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods thoughtfully* That's a really important question. My pregnancy has definitely had a significant impact on my work and employment situation.\n\nAs I mentioned, I've been working a part-time job alongside my full-time studies. This job has been crucial for helping me cover my living expenses and other costs. However, the pregnancy has made it increasingly challenging to maintain that work-school balance.\n\nThere have been times when I've had to miss shifts or take time off due to pregnancy-related symptoms or medical appointments. My employer has tried to be understanding, but I know it's put a strain on my standing there. I'm worried about the possibility of losing my job, which would be devastating.\n\nBeyond that, I'm also very concerned about how I'll be able to manage work once the baby is born. Childcare is going to be a major hurdle, and I'm not sure how I'll be able to afford it on my limited income. Taking time off for maternity leave is also a huge question mark, as I don't have any paid leave benefits.\n\nHonestly, the uncertainty around my employment and financial situation has been a constant source of stress and anxiety throughout the pregnancy. I worry about how I'm going to provide for myself and the baby, and it's really weighed on me emotionally.\n\nI've tried to be as open as possible with my employer about my needs and challenges, and they've tried to accommodate where they can. But I know there's only so much they can do. It's an ongoing struggle that I'm still trying to navigate.\n\nDoes this help explain how the pregnancy has impacted my work and employment situation? Please let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:37.002253"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-06T15:21:37.534838"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs softly* The postpartum period is definitely something I've thought a lot about, but I'll admit I'm still feeling quite uncertain about it all. There's just so much unknown about what that transition is going to be like.\n\nI know that the first few weeks and months after giving birth can be incredibly challenging, both physically and emotionally. I'm worried about things like recovering from the birth, adjusting to breastfeeding, managing sleep deprivation, and just generally figuring out how to care for a newborn.\n\nOn top of that, I'm really concerned about how I'm going to manage all of that while also trying to continue my studies and maintain some kind of financial stability. Childcare is a huge question mark, and I'm not sure how I'm going to afford it or even find reliable options.\n\nI've tried to do some research and planning, but a lot of it still feels quite overwhelming. I've reached out to my support group for advice, and they've encouraged me to try to line up as much help as possible - whether it's family, friends, or community resources.\n\nDr. Ramirez has also provided me with some information on postpartum care and resources in the area. She's emphasized the importance of self-care and not trying to do it all on my own. I know I'll need to be vigilant about my mental health during that transition.\n\nUltimately, I'm just trying to take things one day at a time and be as prepared as I can be. But I know there will likely be a lot of unexpected challenges that I'll have to navigate. I'm doing my best to stay positive and lean on the support systems I do have, even if they are limited.\n\nDoes this help explain my thoughts and concerns around the postpartum period? Please let me know if you have any other questions.",
+      "timestamp": "2025-11-06T15:21:41.161196"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-06T15:21:41.693792"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods gratefully* Thank you so much for the opportunity to share my experiences with you. I know this was a comprehensive interview, but I appreciate you taking the time to listen and understand my story.\n\nDiscussing the various aspects of my pregnancy journey, from the initial challenges to the ongoing uncertainties, has been quite emotional. But I'm grateful to have had a chance to be open and honest about it all.\n\nYour empathy and professionalism throughout this process have been truly wonderful. I feel heard and validated, which is so important, especially for someone in my circumstances.\n\nPlease let me know if there's anything else I can provide to assist with your research. I'm hopeful that by sharing my experiences, it can help shed light on the unique needs and struggles faced by young, low-income expectant mothers like myself.\n\nThank you again for your time. I wish you all the best in your important work.",
+      "timestamp": "2025-11-06T15:21:44.656339"
+    }
+  ],
+  "metadata": {
+    "total_turns": 34,
+    "questions_asked": 15,
+    "persona_traceability": {
+      "persona_id": 10,
+      "source_dataset": "HuggingFace FinePersonas-v0.1",
+      "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+      "profile_file": "persona_00010_profile.json",
+      "profile_path": "data/finepersonas_profiles/persona_00010_profile.json",
+      "age": 29,
+      "gender": "female",
+      "education": "unknown",
+      "occupation": "unknown",
+      "marital_status": "unknown",
+      "income_level": "low",
+      "description": "Harper, 19, is a first-year college student at a community college in Los Angeles. She comes from a low-income household and is the first in her family to attend college. Harper is in a casual relationship with her boyfriend and is unsure about her future plans."
+    },
+    "synthea_traceability": {
+      "patient_id": "18be6806-1b29-a3cf-8080-0dbd795358a8",
+      "source_file": "Kiera822_Casey401_Schaefer657_18be6806-1b29-a3cf-8080-0dbd795358a8.json",
+      "source_path": "data/health_records/Kiera822_Casey401_Schaefer657_18be6806-1b29-a3cf-8080-0dbd795358a8.json",
+      "num_conditions": 39,
+      "num_encounters": 69
+    }
+  }
+}

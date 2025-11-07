@@ -1,0 +1,17 @@
+{
+  "persona_id": 9,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "extracted_data": {
+    "id": 9,
+    "age": 26,
+    "gender": "female",
+    "description": "Jessica is a 26-year-old customer service representative in Phoenix. She has a high school education and is expecting her second child.",
+    "education": "high_school",
+    "occupation": "customer service",
+    "marital_status": "married",
+    "income_level": "lower_middle"
+  },
+  "raw_finepersonas_data": {},
+  "notes": "This is the complete FinePersonas profile for traceability purposes"
+}

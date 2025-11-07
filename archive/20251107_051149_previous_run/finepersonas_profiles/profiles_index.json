@@ -1,0 +1,87 @@
+{
+  "total_profiles": 10,
+  "source_dataset": "HuggingFace FinePersonas-v0.1",
+  "dataset_url": "https://huggingface.co/datasets/argilla/FinePersonas-v0.1",
+  "profiles": [
+    {
+      "persona_id": 1,
+      "age": 28,
+      "gender": "female",
+      "occupation": "teacher",
+      "profile_file": "persona_00001_profile.json",
+      "description_preview": "Emma is a 28-year-old elementary school teacher living in Boston. She is married and expecting her f"
+    },
+    {
+      "persona_id": 2,
+      "age": 32,
+      "gender": "female",
+      "occupation": "software engineer",
+      "profile_file": "persona_00002_profile.json",
+      "description_preview": "Maria is a 32-year-old software engineer in San Francisco. She has a master's degree and is pregnant"
+    },
+    {
+      "persona_id": 3,
+      "age": 25,
+      "gender": "female",
+      "occupation": "nurse",
+      "profile_file": "persona_00003_profile.json",
+      "description_preview": "Aisha is a 25-year-old nurse in Chicago. She is single and expecting her first child."
+    },
+    {
+      "persona_id": 4,
+      "age": 35,
+      "gender": "female",
+      "occupation": "accountant",
+      "profile_file": "persona_00004_profile.json",
+      "description_preview": "Jennifer is a 35-year-old accountant in Dallas. She is married with one child and is currently pregn"
+    },
+    {
+      "persona_id": 5,
+      "age": 29,
+      "gender": "female",
+      "occupation": "retail manager",
+      "profile_file": "persona_00005_profile.json",
+      "description_preview": "Sophia is a 29-year-old retail manager in Seattle. She has a high school diploma and is expecting tw"
+    },
+    {
+      "persona_id": 6,
+      "age": 31,
+      "gender": "female",
+      "occupation": "graphic designer",
+      "profile_file": "persona_00006_profile.json",
+      "description_preview": "Lisa is a 31-year-old graphic designer in Portland. She is married and this is her first pregnancy."
+    },
+    {
+      "persona_id": 7,
+      "age": 27,
+      "gender": "female",
+      "occupation": "paralegal",
+      "profile_file": "persona_00007_profile.json",
+      "description_preview": "Rachel is a 27-year-old paralegal in Miami. She has an associate's degree and is expecting her first"
+    },
+    {
+      "persona_id": 8,
+      "age": 33,
+      "gender": "female",
+      "occupation": "physician",
+      "profile_file": "persona_00008_profile.json",
+      "description_preview": "Amanda is a 33-year-old doctor in New York. She is married and pregnant with her first child."
+    },
+    {
+      "persona_id": 9,
+      "age": 26,
+      "gender": "female",
+      "occupation": "customer service",
+      "profile_file": "persona_00009_profile.json",
+      "description_preview": "Jessica is a 26-year-old customer service representative in Phoenix. She has a high school education"
+    },
+    {
+      "persona_id": 10,
+      "age": 30,
+      "gender": "female",
+      "occupation": "marketing manager",
+      "profile_file": "persona_00010_profile.json",
+      "description_preview": "Sarah is a 30-year-old marketing manager in Atlanta. She has a bachelor's degree and is pregnant wit"
+    }
+  ]
+}
