@@ -584,6 +584,136 @@ def calculate_interview_cost(interview: Dict[str, Any], model: Optional[str] = N
     }
 
 
+# SNOMED Code Categories for Clinical Classification
+SNOMED_CLINICAL_CATEGORIES = {
+    'cardiovascular': ['hypertension', 'heart disease', 'cardiac', 'valve', 'arrhythmia', 'angina'],
+    'endocrine': ['diabetes', 'thyroid', 'metabolic', 'hormone', 'polycystic ovary'],
+    'respiratory': ['asthma', 'pneumonia', 'bronch', 'copd', 'lung disease'],
+    'infectious': ['infection', 'tuberculosis', 'hiv', 'hepatitis', 'bacterial', 'viral'],
+    'gastrointestinal': ['gastric', 'ulcer', 'crohn', 'colitis', 'liver', 'hepatic'],
+    'renal': ['kidney', 'renal', 'nephro', 'glomerulo', 'urinary', 'dialysis'],
+    'hematologic': ['anemia', 'leukemia', 'lymphoma', 'blood', 'clotting', 'sickle cell'],
+    'psychiatric': ['depression', 'anxiety', 'bipolar', 'schizophrenia', 'ocd', 'ptsd'],
+    'neurologic': ['epilepsy', 'seizure', 'parkinson', 'alzheimer', 'stroke', 'migraine'],
+    'rheumatologic': ['arthritis', 'lupus', 'rheumatoid', 'connective tissue', 'vasculitis'],
+    'obstetric_complication': ['preeclampsia', 'gestational', 'gestational hypertension', 'placenta previa',
+                              'abruption', 'iugr', 'intrauterine growth', 'preterm'],
+    'pregnancy_related': ['pregnancy', 'prenatal', 'gravida', 'multipara', 'antepartum', 'postpartum'],
+}
+
+# Obstetric Risk Factors (1-5 scale impact)
+OBSTETRIC_RISK_FACTORS = {
+    'advanced_maternal_age': {'term': 'age > 35', 'risk_level': 3, 'baseline_weight': 0.05},
+    'maternal_obesity': {'term': 'bmi > 30', 'risk_level': 3, 'baseline_weight': 0.08},
+    'diabetes': {'term': 'diabetes', 'risk_level': 4, 'baseline_weight': 0.12},
+    'hypertension': {'term': 'hypertension', 'risk_level': 4, 'baseline_weight': 0.10},
+    'previous_complications': {'term': 'previous', 'risk_level': 3, 'baseline_weight': 0.08},
+    'multiple_pregnancy': {'term': 'multiple', 'risk_level': 3, 'baseline_weight': 0.07},
+    'smoking': {'term': 'smoking|tobacco', 'risk_level': 3, 'baseline_weight': 0.06},
+    'substance_use': {'term': 'substance|alcohol|drug', 'risk_level': 4, 'baseline_weight': 0.10},
+    'mental_health': {'term': 'depression|anxiety|psychiatric', 'risk_level': 2, 'baseline_weight': 0.05},
+    'anemia': {'term': 'anemia', 'risk_level': 2, 'baseline_weight': 0.04},
+}
+
+
+def categorize_condition(condition_name: str) -> str:
+    """
+    Categorize a condition into clinical categories based on SNOMED keywords.
+
+    Returns:
+        Clinical category name, or 'other' if no match
+    """
+    condition_lower = condition_name.lower()
+
+    for category, keywords in SNOMED_CLINICAL_CATEGORIES.items():
+        if any(keyword.lower() in condition_lower for keyword in keywords):
+            return category
+
+    return 'other'
+
+
+def calculate_obstetric_risk_score(health_record: Dict[str, Any], persona_age: int) -> Dict[str, Any]:
+    """
+    Calculate pregnancy-specific obstetric risk score (1-5 scale).
+
+    Returns:
+        Dict with risk_score, risk_factors_present, risk_level, recommendations
+    """
+    conditions = health_record.get('conditions', [])
+    medications = health_record.get('medications', [])
+    observations = health_record.get('observations', [])
+
+    condition_texts = ' '.join([c.get('display', '').lower() for c in conditions])
+    medication_texts = ' '.join([m.get('display', '').lower() for m in medications])
+    observation_texts = ' '.join([o.get('display', '').lower() for o in observations])
+    all_text = f"{condition_texts} {medication_texts} {observation_texts}"
+
+    risk_score = 1.0  # Start at baseline (low risk)
+    risk_factors_present = []
+
+    # Check advanced maternal age
+    if persona_age >= 35:
+        risk_score += 0.5
+        risk_factors_present.append('Advanced maternal age (≥35 years)')
+
+    # Check other risk factors
+    for factor_name, factor_info in OBSTETRIC_RISK_FACTORS.items():
+        if factor_name == 'advanced_maternal_age':
+            continue  # Already handled
+        if re.search(factor_info['term'], all_text, re.IGNORECASE):
+            risk_score += factor_info['baseline_weight']
+            risk_factors_present.append(factor_name.replace('_', ' ').title())
+
+    # Cap risk score at 5
+    risk_score = min(risk_score, 5.0)
+
+    # Determine risk level
+    if risk_score <= 1.5:
+        risk_level = 'Low'
+        recommendations = 'Standard prenatal care recommended'
+    elif risk_score <= 2.5:
+        risk_level = 'Low-Moderate'
+        recommendations = 'Enhanced monitoring recommended'
+    elif risk_score <= 3.5:
+        risk_level = 'Moderate'
+        recommendations = 'Specialist consultation and monthly monitoring recommended'
+    elif risk_score <= 4.5:
+        risk_level = 'High'
+        recommendations = 'High-risk prenatal program and frequent specialist follow-up recommended'
+    else:
+        risk_level = 'Very High'
+        recommendations = 'Intensive maternal-fetal medicine management recommended'
+
+    return {
+        'obstetric_risk_score': round(risk_score, 2),
+        'risk_level': risk_level,
+        'risk_factors_count': len(risk_factors_present),
+        'risk_factors': '; '.join(risk_factors_present) if risk_factors_present else 'None identified',
+        'recommendations': recommendations
+    }
+
+
+def categorize_clinical_conditions(health_record: Dict[str, Any]) -> Dict[str, int]:
+    """
+    Categorize all conditions into clinical categories.
+
+    Returns:
+        Dict mapping category names to condition counts
+    """
+    conditions = health_record.get('conditions', [])
+    category_counts = {}
+
+    for condition in conditions:
+        condition_name = condition.get('display', '')
+        category = categorize_condition(condition_name)
+
+        if category not in category_counts:
+            category_counts[category] = 0
+        category_counts[category] += 1
+
+    return category_counts
+
+
 def extract_clinical_info(health_record: Dict[str, Any]) -> Dict[str, Any]:
     """Extract detailed clinical information from health record."""
     conditions = health_record.get('conditions', [])
@@ -631,6 +761,10 @@ def extract_clinical_info(health_record: Dict[str, Any]) -> Dict[str, Any]:
         elif 'weight' in display and weight is None:
             weight = f"{value} {unit}"
 
+    # Categorize conditions into clinical categories
+    condition_categories = categorize_clinical_conditions(health_record)
+    categories_summary = '; '.join([f"{cat}({count})" for cat, count in sorted(condition_categories.items())])
+
     return {
         'num_conditions': len(conditions),
         'num_medications': len(medications),
@@ -648,6 +782,8 @@ def extract_clinical_info(health_record: Dict[str, Any]) -> Dict[str, Any]:
         'pregnancy_duration_weeks': pregnancy_duration or 'N/A',
         'blood_pressure': blood_pressure or 'N/A',
         'weight': weight or 'N/A',
+        'condition_categories': condition_categories,
+        'condition_categories_summary': categories_summary or 'No conditions',
     }
 
 
@@ -778,6 +914,17 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'output_price_per_m_tokens': cost_info['output_price_per_m_tokens'],
     }
 
+    # Calculate obstetric risk score if health record available
+    obstetric_risk = {
+        'obstetric_risk_score': 1.0,
+        'risk_level': 'Unknown',
+        'risk_factors_count': 0,
+        'risk_factors': 'Unknown',
+        'recommendations': 'N/A'
+    }
+    if persona_id in matched_personas:
+        obstetric_risk = calculate_obstetric_risk_score(matched_personas[persona_id].get('health_record', {}), interview['persona_age'])
+
     # Add clinical info
     analysis.update({
         'num_conditions': clinical_info.get('num_conditions', 0),
@@ -785,6 +932,7 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'num_procedures': clinical_info.get('num_procedures', 0),
         'num_encounters': clinical_info.get('num_encounters', 0),
         'num_observations': clinical_info.get('num_observations', 0),
+        'condition_categories': clinical_info.get('condition_categories_summary', 'N/A'),
         'top_conditions': '; '.join(clinical_info.get('top_conditions', [])[:5]),
         'condition_onsets': '; '.join(clinical_info.get('condition_onsets', [])[:5]),
         'pregnancy_conditions': '; '.join(clinical_info.get('pregnancy_conditions', [])[:3]),
@@ -795,6 +943,12 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'pregnancy_duration_weeks': clinical_info.get('pregnancy_duration_weeks', 'N/A'),
         'blood_pressure': clinical_info.get('blood_pressure', 'N/A'),
         'weight': clinical_info.get('weight', 'N/A'),
+        # Obstetric risk assessment
+        'obstetric_risk_score': obstetric_risk['obstetric_risk_score'],
+        'obstetric_risk_level': obstetric_risk['risk_level'],
+        'obstetric_risk_factors_count': obstetric_risk['risk_factors_count'],
+        'obstetric_risk_factors': obstetric_risk['risk_factors'],
+        'obstetric_recommendations': obstetric_risk['recommendations'],
     })
 
     return analysis
@@ -831,9 +985,13 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
         'model', 'input_price_per_m_tokens', 'output_price_per_m_tokens',
         # Clinical data
         'num_conditions', 'num_medications', 'num_procedures', 'num_encounters', 'num_observations',
+        'condition_categories',
         'top_conditions', 'condition_onsets', 'pregnancy_conditions',
         'active_medications', 'medication_dates', 'encounter_types',
-        'fetal_heart_rate', 'pregnancy_duration_weeks', 'blood_pressure', 'weight'
+        'fetal_heart_rate', 'pregnancy_duration_weeks', 'blood_pressure', 'weight',
+        # Obstetric risk assessment
+        'obstetric_risk_score', 'obstetric_risk_level', 'obstetric_risk_factors_count',
+        'obstetric_risk_factors', 'obstetric_recommendations'
     ]
 
     with open(output_path, 'w', newline='') as f:
