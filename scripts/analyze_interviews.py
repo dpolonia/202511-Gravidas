@@ -22,6 +22,7 @@ import csv
 import re
 import logging
 import sys
+import statistics
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from collections import Counter
@@ -321,6 +322,65 @@ def analyze_conversation_dynamics(transcript: List[Dict[str, str]]) -> Dict[str,
         'persona_talk_ratio': round(persona_talk_ratio, 2),
         'interaction_balance': round(interaction_balance, 2)
     }
+
+
+def calculate_dispersion_metrics(values: List[float]) -> Dict[str, float]:
+    """
+    Calculate statistical dispersion metrics for a list of values.
+
+    Returns:
+        Dict with mean, median, stdev, variance, min, max
+    """
+    if not values:
+        return {
+            'mean': 0.0,
+            'median': 0.0,
+            'stdev': 0.0,
+            'variance': 0.0,
+            'min': 0.0,
+            'max': 0.0,
+            'q1': 0.0,
+            'q3': 0.0
+        }
+
+    try:
+        sorted_values = sorted(values)
+        n = len(values)
+
+        # Basic statistics
+        mean = sum(values) / n
+        median = statistics.median(values)
+        stdev = statistics.stdev(values) if n > 1 else 0.0
+        variance = statistics.variance(values) if n > 1 else 0.0
+
+        # Quartiles (Q1, Q3)
+        q1_index = n // 4
+        q3_index = (3 * n) // 4
+        q1 = sorted_values[q1_index] if q1_index < n else sorted_values[-1]
+        q3 = sorted_values[q3_index] if q3_index < n else sorted_values[-1]
+
+        return {
+            'mean': round(mean, 2),
+            'median': round(median, 2),
+            'stdev': round(stdev, 2),
+            'variance': round(variance, 2),
+            'min': round(min(values), 2),
+            'max': round(max(values), 2),
+            'q1': round(q1, 2),
+            'q3': round(q3, 2)
+        }
+    except Exception as e:
+        logger.debug(f"Dispersion calculation failed: {e}")
+        return {
+            'mean': 0.0,
+            'median': 0.0,
+            'stdev': 0.0,
+            'variance': 0.0,
+            'min': 0.0,
+            'max': 0.0,
+            'q1': 0.0,
+            'q3': 0.0
+        }
 
 
 def load_matched_personas(matched_file: str = "data/matched/matched_personas.json") -> Tuple[Dict[int, Dict[str, Any]], List[str]]:
@@ -716,58 +776,87 @@ def print_summary(analyses: List[Dict[str, Any]]):
     print(f"📊 Total Interviews: {len(analyses)}")
     print()
 
-    # Aggregate statistics
+    # Aggregate statistics with precise floating-point calculations
     total_words = sum(a['total_words'] for a in analyses)
     total_turns = sum(a['total_turns'] for a in analyses)
-    avg_words = total_words // len(analyses)
-    avg_turns = total_turns // len(analyses)
+    avg_words = total_words / len(analyses)  # Floating-point division
+    avg_turns = total_turns / len(analyses)  # Floating-point division
+
+    # Dispersion metrics for words and turns
+    words_per_interview = [a['total_words'] for a in analyses]
+    turns_per_interview = [a['total_turns'] for a in analyses]
+    words_dispersion = calculate_dispersion_metrics(words_per_interview)
+    turns_dispersion = calculate_dispersion_metrics(turns_per_interview)
 
     print(f"💬 CONVERSATION DYNAMICS:")
-    avg_persona_words = sum(a['persona_words'] for a in analyses) / len(analyses)
-    avg_interviewer_words = sum(a['interviewer_words'] for a in analyses) / len(analyses)
-    avg_talk_ratio = sum(a['persona_talk_ratio'] for a in analyses) / len(analyses)
-    avg_interaction_balance = sum(a['interaction_balance'] for a in analyses) / len(analyses)
+    persona_words_list = [a['persona_words'] for a in analyses]
+    interviewer_words_list = [a['interviewer_words'] for a in analyses]
+    talk_ratio_list = [a['persona_talk_ratio'] for a in analyses]
+    interaction_balance_list = [a['interaction_balance'] for a in analyses]
+
+    persona_words_stats = calculate_dispersion_metrics(persona_words_list)
+    interviewer_words_stats = calculate_dispersion_metrics(interviewer_words_list)
+    talk_ratio_stats = calculate_dispersion_metrics(talk_ratio_list)
+    interaction_balance_stats = calculate_dispersion_metrics(interaction_balance_list)
 
     print(f"   Total Words: {total_words:,}")
     print(f"   Total Turns: {total_turns:,} ({sum(a['persona_turns'] for a in analyses)} persona, {sum(a['interviewer_turns'] for a in analyses)} interviewer)")
-    print(f"   Avg Words per Interview: {avg_words:,}")
-    print(f"   Avg Turns per Interview: {avg_turns}")
-    print(f"   Avg Persona Words: {avg_persona_words:.0f} | Interviewer Words: {avg_interviewer_words:.0f}")
-    print(f"   Avg Persona Talk Ratio: {avg_talk_ratio:.1%}")
-    print(f"   Avg Interaction Balance: {avg_interaction_balance:.2f} (0=balanced, 1=imbalanced)")
+    print(f"   Words per Interview: Mean={avg_words:.1f}, Median={words_dispersion['median']:.1f}, StdDev={words_dispersion['stdev']:.1f}")
+    print(f"                        Min={words_dispersion['min']:.0f}, Q1={words_dispersion['q1']:.0f}, Q3={words_dispersion['q3']:.0f}, Max={words_dispersion['max']:.0f}")
+    print(f"   Turns per Interview: Mean={avg_turns:.1f}, Median={turns_dispersion['median']:.1f}, StdDev={turns_dispersion['stdev']:.1f}")
+    print(f"   Persona Words:       Mean={persona_words_stats['mean']:.1f}, Median={persona_words_stats['median']:.1f}, StdDev={persona_words_stats['stdev']:.1f}")
+    print(f"   Interviewer Words:   Mean={interviewer_words_stats['mean']:.1f}, Median={interviewer_words_stats['median']:.1f}, StdDev={interviewer_words_stats['stdev']:.1f}")
+    print(f"   Persona Talk Ratio:  Mean={talk_ratio_stats['mean']:.1%}, Median={talk_ratio_stats['median']:.1%} (range {talk_ratio_stats['min']:.0%} to {talk_ratio_stats['max']:.0%})")
+    print(f"   Interaction Balance: Mean={interaction_balance_stats['mean']:.2f}, Median={interaction_balance_stats['median']:.2f} (0=balanced, 1=imbalanced)")
     print()
 
     # Cost statistics
     total_cost = sum(a['cost_usd'] for a in analyses)
     avg_cost = total_cost / len(analyses)
     total_tokens = sum(a['total_tokens'] for a in analyses)
+    avg_tokens = total_tokens / len(analyses)
+
+    # Token and cost dispersion
+    tokens_per_interview = [a['total_tokens'] for a in analyses]
+    costs_per_interview = [a['cost_usd'] for a in analyses]
+    tokens_stats = calculate_dispersion_metrics(tokens_per_interview)
+    costs_stats = calculate_dispersion_metrics(costs_per_interview)
 
     print(f"💰 COST ANALYSIS:")
     print(f"   Total Cost: ${total_cost:.4f}")
     print(f"   Avg Cost per Interview: ${avg_cost:.4f}")
+    print(f"   Cost Range: ${costs_stats['min']:.4f} - ${costs_stats['max']:.4f}, StdDev=${costs_stats['stdev']:.4f}")
     print(f"   Total Tokens: {total_tokens:,}")
-    print(f"   Avg Tokens per Interview: {total_tokens // len(analyses):,}")
+    print(f"   Avg Tokens per Interview: {avg_tokens:.0f}")
+    print(f"   Token Range: {int(tokens_stats['min'])} - {int(tokens_stats['max'])}, StdDev={tokens_stats['stdev']:.0f}")
     print(f"   Model: {analyses[0]['model']}")
     print()
 
     # Age distribution
     ages = [a['persona_age'] for a in analyses]
+    ages_stats = calculate_dispersion_metrics(ages)
     print(f"👥 AGE DISTRIBUTION:")
-    print(f"   Range: {min(ages)} - {max(ages)} years")
-    print(f"   Average: {sum(ages) / len(ages):.1f} years")
+    print(f"   Mean: {ages_stats['mean']:.1f} years, Median: {ages_stats['median']:.1f} years")
+    print(f"   Range: {int(ages_stats['min'])} - {int(ages_stats['max'])} years")
+    print(f"   StdDev: {ages_stats['stdev']:.1f}, Q1: {int(ages_stats['q1'])}, Q3: {int(ages_stats['q3'])}")
     print()
 
     # Clinical statistics
-    avg_conditions = sum(a['num_conditions'] for a in analyses) / len(analyses)
-    avg_medications = sum(a['num_medications'] for a in analyses) / len(analyses)
-    avg_encounters = sum(a['num_encounters'] for a in analyses) / len(analyses)
-    avg_observations = sum(a['num_observations'] for a in analyses) / len(analyses)
+    conditions_list = [a['num_conditions'] for a in analyses]
+    medications_list = [a['num_medications'] for a in analyses]
+    encounters_list = [a['num_encounters'] for a in analyses]
+    observations_list = [a['num_observations'] for a in analyses]
+
+    conditions_stats = calculate_dispersion_metrics(conditions_list)
+    medications_stats = calculate_dispersion_metrics(medications_list)
+    encounters_stats = calculate_dispersion_metrics(encounters_list)
+    observations_stats = calculate_dispersion_metrics(observations_list)
 
     print(f"🏥 CLINICAL SUMMARY:")
-    print(f"   Avg Conditions per Person: {avg_conditions:.1f}")
-    print(f"   Avg Medications per Person: {avg_medications:.1f}")
-    print(f"   Avg Healthcare Encounters: {avg_encounters:.1f}")
-    print(f"   Avg Clinical Observations: {avg_observations:.1f}")
+    print(f"   Conditions:      Mean={conditions_stats['mean']:.1f}, Median={conditions_stats['median']:.1f}, Range {int(conditions_stats['min'])}-{int(conditions_stats['max'])}")
+    print(f"   Medications:     Mean={medications_stats['mean']:.1f}, Median={medications_stats['median']:.1f}, Range {int(medications_stats['min'])}-{int(medications_stats['max'])}")
+    print(f"   Encounters:      Mean={encounters_stats['mean']:.1f}, Median={encounters_stats['median']:.1f}, Range {int(encounters_stats['min'])}-{int(encounters_stats['max'])}")
+    print(f"   Observations:    Mean={observations_stats['mean']:.1f}, Median={observations_stats['median']:.1f}, Range {int(observations_stats['min'])}-{int(observations_stats['max'])}")
     print()
 
     # Topic coverage
