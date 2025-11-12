@@ -27,6 +27,41 @@ from typing import List, Dict, Any, Optional, Tuple
 from collections import Counter
 import argparse
 
+# NLP imports with fallback handling
+try:
+    import nltk
+    from nltk.tokenize import word_tokenize
+    from nltk.corpus import stopwords
+    from nltk.stem import WordNetLemmatizer
+    # Ensure required NLTK data is available
+    try:
+        nltk.data.find('tokenizers/punkt')
+    except LookupError:
+        nltk.download('punkt', quiet=True)
+    try:
+        nltk.data.find('corpora/stopwords')
+    except LookupError:
+        nltk.download('stopwords', quiet=True)
+    try:
+        nltk.data.find('corpora/wordnet')
+    except LookupError:
+        nltk.download('wordnet', quiet=True)
+    NLTK_AVAILABLE = True
+except ImportError:
+    NLTK_AVAILABLE = False
+
+# Sentiment analysis with fallback
+try:
+    from nltk.sentiment import SentimentIntensityAnalyzer
+    VADER_AVAILABLE = NLTK_AVAILABLE
+    if NLTK_AVAILABLE:
+        try:
+            nltk.data.find('sentiment/vader_lexicon.zip')
+        except LookupError:
+            nltk.download('vader_lexicon', quiet=True)
+except ImportError:
+    VADER_AVAILABLE = False
+
 
 # Setup logging
 logging.basicConfig(
@@ -138,6 +173,154 @@ def validate_interview_schema(interview_data: Dict[str, Any], filename: str = 'u
             return False, f"persona_age '{persona_age}' is not numeric"
 
     return True, None
+
+
+# Initialize NLP tools if available
+LEMMATIZER = None
+SENTIMENT_ANALYZER = None
+
+if NLTK_AVAILABLE:
+    LEMMATIZER = WordNetLemmatizer()
+if VADER_AVAILABLE:
+    SENTIMENT_ANALYZER = SentimentIntensityAnalyzer()
+
+
+def tokenize_and_lemmatize(text: str) -> List[str]:
+    """
+    Tokenize and lemmatize text with fallback to simple split.
+
+    Returns:
+        List of lemmatized tokens
+    """
+    if not NLTK_AVAILABLE or LEMMATIZER is None:
+        # Fallback: simple tokenization
+        return [word.lower() for word in text.split()]
+
+    try:
+        tokens = word_tokenize(text.lower())
+        lemmatized = [LEMMATIZER.lemmatize(token) for token in tokens
+                     if token.isalnum()]  # Filter out punctuation
+        return lemmatized
+    except Exception as e:
+        logger.debug(f"Lemmatization failed: {e}, using simple split")
+        return [word.lower() for word in text.split()]
+
+
+def analyze_sentiment(text: str) -> Dict[str, float]:
+    """
+    Analyze sentiment of text using VADER.
+
+    Returns:
+        Dict with sentiment scores (positive, negative, neutral, compound)
+    """
+    if not VADER_AVAILABLE or SENTIMENT_ANALYZER is None:
+        return {'positive': 0.0, 'negative': 0.0, 'neutral': 1.0, 'compound': 0.0}
+
+    try:
+        scores = SENTIMENT_ANALYZER.polarity_scores(text)
+        return {
+            'positive': scores['pos'],
+            'negative': scores['neg'],
+            'neutral': scores['neu'],
+            'compound': scores['compound']
+        }
+    except Exception as e:
+        logger.debug(f"Sentiment analysis failed: {e}")
+        return {'positive': 0.0, 'negative': 0.0, 'neutral': 1.0, 'compound': 0.0}
+
+
+def extract_key_phrases(text: str, top_n: int = 10) -> List[Tuple[str, int]]:
+    """
+    Extract key phrases (most frequent tokens) from text.
+
+    Returns:
+        List of (phrase, frequency) tuples
+    """
+    tokens = tokenize_and_lemmatize(text)
+
+    # Remove common stopwords if NLTK available
+    if NLTK_AVAILABLE:
+        try:
+            stop_words = set(stopwords.words('english'))
+            tokens = [t for t in tokens if t not in stop_words and len(t) > 2]
+        except Exception:
+            tokens = [t for t in tokens if len(t) > 2]
+
+    counter = Counter(tokens)
+    return counter.most_common(top_n)
+
+
+def analyze_themes_advanced(text: str, keywords_map: Dict[str, List[str]]) -> Dict[str, Dict[str, Any]]:
+    """
+    Advanced theme analysis using both substring and lemmatized token matching.
+
+    Returns:
+        Dict mapping theme names to counts and top phrases
+    """
+    tokens = tokenize_and_lemmatize(text)
+    token_counter = Counter(tokens)
+
+    theme_results = {}
+    for theme, keywords in keywords_map.items():
+        # Count substring matches (original behavior)
+        substring_count = sum(text.lower().count(kw.lower()) for kw in keywords)
+
+        # Count lemmatized token matches
+        lemmatized_keywords = []
+        for kw in keywords:
+            lemmatized_kw = tokenize_and_lemmatize(kw)
+            lemmatized_keywords.extend(lemmatized_kw)
+
+        token_count = sum(token_counter.get(lkw, 0) for lkw in lemmatized_keywords)
+
+        # Use average of both methods for robustness
+        final_count = (substring_count + token_count) / 2.0
+
+        theme_results[theme] = {
+            'count': final_count,
+            'substring_matches': substring_count,
+            'token_matches': token_count
+        }
+
+    return theme_results
+
+
+def analyze_conversation_dynamics(transcript: List[Dict[str, str]]) -> Dict[str, Any]:
+    """
+    Analyze conversation dynamics (turn-taking, response lengths, engagement).
+
+    Returns:
+        Dict with conversation metrics
+    """
+    if not transcript:
+        return {'avg_turn_length': 0, 'talk_ratio': 0, 'interaction_balance': 0}
+
+    persona_turns = [t for t in transcript if t['speaker'] == 'Persona']
+    interviewer_turns = [t for t in transcript if t['speaker'] == 'Interviewer']
+
+    persona_words = sum(len(t['text'].split()) for t in persona_turns)
+    interviewer_words = sum(len(t['text'].split()) for t in interviewer_turns)
+    total_words = persona_words + interviewer_words
+
+    # Calculate metrics
+    persona_talk_ratio = persona_words / total_words if total_words > 0 else 0
+    avg_persona_turn = persona_words / len(persona_turns) if persona_turns else 0
+    avg_interviewer_turn = interviewer_words / len(interviewer_turns) if interviewer_turns else 0
+
+    # Interaction balance (0 = perfectly balanced, 1 = completely imbalanced)
+    interaction_balance = abs(persona_talk_ratio - 0.5) * 2
+
+    return {
+        'persona_turns': len(persona_turns),
+        'interviewer_turns': len(interviewer_turns),
+        'total_turns': len(transcript),
+        'persona_words': persona_words,
+        'interviewer_words': interviewer_words,
+        'avg_persona_turn_length': round(avg_persona_turn, 1),
+        'avg_interviewer_turn_length': round(avg_interviewer_turn, 1),
+        'persona_talk_ratio': round(persona_talk_ratio, 2),
+        'interaction_balance': round(interaction_balance, 2)
+    }
 
 
 def load_matched_personas(matched_file: str = "data/matched/matched_personas.json") -> Tuple[Dict[int, Dict[str, Any]], List[str]]:
@@ -373,26 +556,38 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
     persona_turns = [t for t in transcript if t['speaker'] == 'Persona']
     interviewer_turns = [t for t in transcript if t['speaker'] == 'Interviewer']
 
-    persona_text = ' '.join([t['text'].lower() for t in persona_turns])
+    # Get separate texts
+    persona_text = ' '.join([t['text'] for t in persona_turns])
+    interviewer_text = ' '.join([t['text'] for t in interviewer_turns])
 
     # Word counts
     total_words = sum(len(t['text'].split()) for t in transcript)
     persona_words = sum(len(t['text'].split()) for t in persona_turns)
+    interviewer_words = sum(len(t['text'].split()) for t in interviewer_turns)
 
-    # Topic mentions
+    # Advanced conversation dynamics
+    conversation_dynamics = analyze_conversation_dynamics(transcript)
+
+    # Topic mentions with advanced analysis
     topics = {
-        'pregnancy': ['pregnant', 'pregnancy', 'baby', 'trimester'],
-        'healthcare': ['doctor', 'appointment', 'medical', 'prenatal'],
-        'symptoms': ['nausea', 'pain', 'tired', 'fatigue', 'sick'],
-        'emotions': ['nervous', 'anxious', 'excited', 'worried', 'happy'],
-        'support': ['husband', 'family', 'support', 'help', 'partner'],
-        'financial': ['insurance', 'coverage', 'cost', 'afford', 'pay'],
+        'pregnancy': ['pregnant', 'pregnancy', 'baby', 'trimester', 'prenatal', 'birth'],
+        'healthcare': ['doctor', 'appointment', 'medical', 'prenatal', 'clinic', 'hospital', 'physician', 'checkup'],
+        'symptoms': ['nausea', 'pain', 'tired', 'fatigue', 'sick', 'morning sickness', 'cramps', 'headache'],
+        'emotions': ['nervous', 'anxious', 'excited', 'worried', 'happy', 'scared', 'stress', 'stress'],
+        'support': ['husband', 'family', 'support', 'help', 'partner', 'mother', 'friend', 'spouse'],
+        'financial': ['insurance', 'coverage', 'cost', 'afford', 'pay', 'expense', 'money', 'bill'],
     }
 
-    topic_counts = {}
-    for topic, keywords in topics.items():
-        count = sum(persona_text.count(keyword) for keyword in keywords)
-        topic_counts[topic] = count
+    # Advanced theme analysis (combines substring and token matching)
+    topic_analysis = analyze_themes_advanced(persona_text.lower(), topics)
+    topic_counts = {topic: int(data['count']) for topic, data in topic_analysis.items()}
+
+    # Sentiment analysis of persona responses
+    persona_sentiment = analyze_sentiment(persona_text)
+
+    # Extract key phrases from persona
+    persona_key_phrases = extract_key_phrases(persona_text, top_n=5)
+    persona_key_phrases_str = '; '.join([phrase[0] for phrase in persona_key_phrases]) if persona_key_phrases else 'N/A'
 
     # Extract details
     name_match = re.search(r"i'm (\w+),", persona_text)
@@ -418,10 +613,16 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'synthea_source_file': interview.get('synthea_source_file', 'N/A'),
         'filename': interview['filename'],
         'timestamp': interview['timestamp'],
-        'total_turns': len(transcript),
+        'total_turns': conversation_dynamics['total_turns'],
+        'persona_turns': conversation_dynamics['persona_turns'],
+        'interviewer_turns': conversation_dynamics['interviewer_turns'],
         'total_words': total_words,
         'persona_words': persona_words,
-        'avg_response_length': persona_words // len(persona_turns) if persona_turns else 0,
+        'interviewer_words': interviewer_words,
+        'avg_response_length': conversation_dynamics['avg_persona_turn_length'],
+        'avg_interviewer_turn_length': conversation_dynamics['avg_interviewer_turn_length'],
+        'persona_talk_ratio': conversation_dynamics['persona_talk_ratio'],
+        'interaction_balance': conversation_dynamics['interaction_balance'],
         'persona_name': name_match.group(1) if name_match else 'Unknown',
         'weeks_pregnant': weeks_match.group(1) if weeks_match else 'Unknown',
         'topic_pregnancy': topic_counts['pregnancy'],
@@ -430,6 +631,11 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'topic_emotions': topic_counts['emotions'],
         'topic_support': topic_counts['support'],
         'topic_financial': topic_counts['financial'],
+        'persona_sentiment_positive': round(persona_sentiment['positive'], 3),
+        'persona_sentiment_negative': round(persona_sentiment['negative'], 3),
+        'persona_sentiment_neutral': round(persona_sentiment['neutral'], 3),
+        'persona_sentiment_compound': round(persona_sentiment['compound'], 3),
+        'persona_key_phrases': persona_key_phrases_str,
         'input_tokens': cost_info['input_tokens'],
         'output_tokens': cost_info['output_tokens'],
         'total_tokens': cost_info['total_tokens'],
@@ -468,11 +674,21 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
         'persona_id', 'persona_age', 'persona_name', 'weeks_pregnant',
         'persona_source', 'persona_description', 'persona_profile_file',
         'synthea_patient_id', 'synthea_source_file',
-        'filename', 'timestamp', 'total_turns', 'total_words',
-        'persona_words', 'avg_response_length',
+        'filename', 'timestamp',
+        # Conversation dynamics
+        'total_turns', 'persona_turns', 'interviewer_turns', 'total_words',
+        'persona_words', 'interviewer_words', 'avg_response_length',
+        'avg_interviewer_turn_length', 'persona_talk_ratio', 'interaction_balance',
+        # Topic analysis
         'topic_pregnancy', 'topic_healthcare', 'topic_symptoms',
         'topic_emotions', 'topic_support', 'topic_financial',
+        # Sentiment and key phrases
+        'persona_sentiment_positive', 'persona_sentiment_negative',
+        'persona_sentiment_neutral', 'persona_sentiment_compound',
+        'persona_key_phrases',
+        # Cost analysis
         'input_tokens', 'output_tokens', 'total_tokens', 'cost_usd', 'model',
+        # Clinical data
         'num_conditions', 'num_medications', 'num_procedures', 'num_encounters', 'num_observations',
         'top_conditions', 'condition_onsets', 'pregnancy_conditions',
         'active_medications', 'medication_dates', 'encounter_types',
@@ -506,11 +722,19 @@ def print_summary(analyses: List[Dict[str, Any]]):
     avg_words = total_words // len(analyses)
     avg_turns = total_turns // len(analyses)
 
-    print(f"💬 AGGREGATE STATISTICS:")
+    print(f"💬 CONVERSATION DYNAMICS:")
+    avg_persona_words = sum(a['persona_words'] for a in analyses) / len(analyses)
+    avg_interviewer_words = sum(a['interviewer_words'] for a in analyses) / len(analyses)
+    avg_talk_ratio = sum(a['persona_talk_ratio'] for a in analyses) / len(analyses)
+    avg_interaction_balance = sum(a['interaction_balance'] for a in analyses) / len(analyses)
+
     print(f"   Total Words: {total_words:,}")
-    print(f"   Total Turns: {total_turns:,}")
+    print(f"   Total Turns: {total_turns:,} ({sum(a['persona_turns'] for a in analyses)} persona, {sum(a['interviewer_turns'] for a in analyses)} interviewer)")
     print(f"   Avg Words per Interview: {avg_words:,}")
     print(f"   Avg Turns per Interview: {avg_turns}")
+    print(f"   Avg Persona Words: {avg_persona_words:.0f} | Interviewer Words: {avg_interviewer_words:.0f}")
+    print(f"   Avg Persona Talk Ratio: {avg_talk_ratio:.1%}")
+    print(f"   Avg Interaction Balance: {avg_interaction_balance:.2f} (0=balanced, 1=imbalanced)")
     print()
 
     # Cost statistics
@@ -554,6 +778,17 @@ def print_summary(analyses: List[Dict[str, Any]]):
         print(f"   {topic.capitalize():15} {avg:.1f}")
     print()
 
+    # Sentiment analysis
+    avg_sentiment_positive = sum(a['persona_sentiment_positive'] for a in analyses) / len(analyses)
+    avg_sentiment_negative = sum(a['persona_sentiment_negative'] for a in analyses) / len(analyses)
+    avg_sentiment_compound = sum(a['persona_sentiment_compound'] for a in analyses) / len(analyses)
+
+    print(f"😊 PERSONA SENTIMENT ANALYSIS:")
+    print(f"   Avg Positive: {avg_sentiment_positive:.1%}")
+    print(f"   Avg Negative: {avg_sentiment_negative:.1%}")
+    print(f"   Avg Compound (Overall): {avg_sentiment_compound:.3f} (-1=negative, 0=neutral, 1=positive)")
+    print()
+
 
 def print_detailed_list(analyses: List[Dict[str, Any]]):
     """Print detailed list of all interviews."""
@@ -571,7 +806,10 @@ def print_detailed_list(analyses: List[Dict[str, Any]]):
         print(f"  Persona Profile: data/finepersonas_profiles/{a.get('persona_profile_file', 'N/A')}")
         print(f"  Synthea Patient ID: {a.get('synthea_patient_id', 'N/A')}")
         print(f"  Synthea Source File: data/health_records/{a.get('synthea_source_file', 'N/A')}")
-        print(f"  Words: {a['persona_words']:,} | Turns: {a['total_turns']}")
+        print(f"  Conversation: {a['total_turns']} turns ({a['persona_turns']} persona, {a['interviewer_turns']} interviewer)")
+        print(f"  Words: {a['persona_words']:,} persona | {a['interviewer_words']:,} interviewer | Talk ratio: {a['persona_talk_ratio']:.0%}")
+        print(f"  Sentiment: Pos={a['persona_sentiment_positive']:.0%} Neg={a['persona_sentiment_negative']:.0%} Compound={a['persona_sentiment_compound']:.2f}")
+        print(f"  Key Phrases: {a.get('persona_key_phrases', 'N/A')[:60]}...")
         print(f"  Cost: ${a['cost_usd']:.4f} ({a['total_tokens']:,} tokens)")
         print(f"  File: {a['filename']}")
         print()
