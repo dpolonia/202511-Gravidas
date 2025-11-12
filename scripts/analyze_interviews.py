@@ -991,7 +991,9 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
         'fetal_heart_rate', 'pregnancy_duration_weeks', 'blood_pressure', 'weight',
         # Obstetric risk assessment
         'obstetric_risk_score', 'obstetric_risk_level', 'obstetric_risk_factors_count',
-        'obstetric_risk_factors', 'obstetric_recommendations'
+        'obstetric_risk_factors', 'obstetric_recommendations',
+        # Anomaly detection flags
+        'is_anomaly', 'anomaly_flags'
     ]
 
     with open(output_path, 'w', newline='') as f:
@@ -1246,14 +1248,105 @@ def print_clinical_details(analyses: List[Dict[str, Any]]):
         print()
 
 
+def detect_anomalies(analyses: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Detect anomalies in interview data and flag them.
+
+    Returns:
+        Updated analyses list with 'anomaly_flags' added to each record
+    """
+    for analysis in analyses:
+        flags = []
+
+        # Get statistics for comparison
+        all_words = [a['total_words'] for a in analyses]
+        all_costs = [a['cost_usd'] for a in analyses]
+        all_turns = [a['total_turns'] for a in analyses]
+        all_sentiment = [a['persona_sentiment_compound'] for a in analyses]
+
+        # Calculate quartiles for anomaly detection
+        sorted_words = sorted(all_words)
+        sorted_costs = sorted(all_costs)
+        sorted_turns = sorted(all_turns)
+        q1_words = sorted_words[len(sorted_words) // 4]
+        q3_words = sorted_words[(3 * len(sorted_words)) // 4]
+        iqr_words = q3_words - q1_words
+
+        # Anomalies: extreme values (outside 1.5*IQR)
+        if analysis['total_words'] < (q1_words - 1.5 * iqr_words) or analysis['total_words'] > (q3_words + 1.5 * iqr_words):
+            flags.append('Unusual word count')
+
+        if analysis['cost_usd'] > max(all_costs) * 0.9:
+            flags.append('High cost')
+
+        if analysis['total_turns'] < 3:
+            flags.append('Very short conversation')
+
+        if analysis['total_turns'] > max(all_turns) * 0.9:
+            flags.append('Very long conversation')
+
+        # Anomalies: extreme sentiment
+        if analysis['persona_sentiment_compound'] < -0.5:
+            flags.append('Very negative sentiment')
+        elif analysis['persona_sentiment_compound'] > 0.8:
+            flags.append('Very positive sentiment')
+
+        # High obstetric risk
+        if analysis.get('obstetric_risk_score', 0) >= 3.5:
+            flags.append('High obstetric risk')
+
+        # Missing data
+        if analysis['synthea_patient_id'] == 'N/A':
+            flags.append('No health record')
+
+        analysis['anomaly_flags'] = '; '.join(flags) if flags else ''
+        analysis['is_anomaly'] = len(flags) > 0
+
+    return analyses
+
+
+def filter_analyses(analyses: List[Dict[str, Any]], persona_id: Optional[int] = None,
+                   min_turns: int = 0, min_cost: float = 0.0) -> List[Dict[str, Any]]:
+    """
+    Filter analyses based on criteria.
+
+    Returns:
+        Filtered list of analyses
+    """
+    filtered = analyses
+
+    if persona_id is not None:
+        filtered = [a for a in filtered if a['persona_id'] == persona_id]
+
+    if min_turns > 0:
+        filtered = [a for a in filtered if a['total_turns'] >= min_turns]
+
+    if min_cost > 0:
+        filtered = [a for a in filtered if a['cost_usd'] >= min_cost]
+
+    return filtered
+
+
 def main():
     parser = argparse.ArgumentParser(description="Analyze interview data with cost tracking and clinical information")
     parser.add_argument('--export-csv', action='store_true',
                         help='Export analysis to CSV file')
+    parser.add_argument('--export-json', action='store_true',
+                        help='Export analysis to JSON file')
     parser.add_argument('--show-details', action='store_true',
                         help='Show detailed list of all interviews')
     parser.add_argument('--show-clinical', action='store_true',
                         help='Show clinical information for each interview')
+    parser.add_argument('--show-anomalies', action='store_true',
+                        help='Flag and show anomalies in data')
+    parser.add_argument('--json', action='store_true',
+                        help='Output summary as JSON')
+    parser.add_argument('--persona-id', type=int, default=None,
+                        help='Filter results by persona ID')
+    parser.add_argument('--min-turns', type=int, default=0,
+                        help='Minimum number of conversation turns')
+    parser.add_argument('--min-cost', type=float, default=0.0,
+                        help='Minimum interview cost in USD')
     args = parser.parse_args()
 
     logger.info("=" * 80)
@@ -1311,12 +1404,52 @@ def main():
         logger.error("❌ No interviews could be analyzed due to validation errors.")
         return
 
+    # Detect anomalies
+    analyses = detect_anomalies(analyses)
+
+    # Apply filters
+    original_count = len(analyses)
+    analyses = filter_analyses(analyses, args.persona_id, args.min_turns, args.min_cost)
+    if len(analyses) < original_count:
+        logger.info(f"ℹ️  Filtered to {len(analyses)} interviews (from {original_count})")
+    logger.info("")
+
+    if not analyses:
+        logger.error("❌ No interviews match the filter criteria.")
+        return
+
+    # Output as JSON if requested
+    if args.json:
+        json_output = {
+            'summary': {
+                'total_interviews': len(analyses),
+                'anomalies_detected': sum(1 for a in analyses if a['is_anomaly']),
+            },
+            'interviews': analyses
+        }
+        print(json.dumps(json_output, indent=2))
+        return
+
     # Print summary
     print_summary(analyses)
 
     # Show details if requested
     if args.show_details:
         print_detailed_list(analyses)
+
+    # Show anomalies if requested
+    if args.show_anomalies:
+        anomalies = [a for a in analyses if a['is_anomaly']]
+        if anomalies:
+            print()
+            print("=" * 80)
+            print(f"⚠️  ANOMALIES DETECTED ({len(anomalies)} interviews)")
+            print("=" * 80)
+            print()
+            for a in anomalies:
+                print(f"Interview {a['persona_id']:04d}: {a['persona_name']}")
+                print(f"  Flags: {a['anomaly_flags']}")
+                print()
 
     # Show clinical info if requested
     if args.show_clinical:
@@ -1325,6 +1458,31 @@ def main():
     # Export to CSV if requested
     if args.export_csv:
         export_to_csv(analyses)
+
+    # Export to JSON if requested
+    if args.export_json:
+        output_file = "data/analysis/interview_analysis.json"
+        output_path = Path(output_file)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Add anomaly info for export
+        export_data = {
+            'metadata': {
+                'total_interviews': original_count,
+                'filtered_interviews': len(analyses),
+                'anomalies_detected': sum(1 for a in analyses if a['is_anomaly']),
+                'filters_applied': {
+                    'persona_id': args.persona_id,
+                    'min_turns': args.min_turns,
+                    'min_cost': args.min_cost
+                }
+            },
+            'interviews': analyses
+        }
+
+        with open(output_path, 'w') as f:
+            json.dump(export_data, f, indent=2)
+        print(f"✅ Exported analysis to: {output_file}")
 
 
 if __name__ == "__main__":
