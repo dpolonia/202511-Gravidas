@@ -498,34 +498,89 @@ def estimate_tokens(text: str) -> int:
     return int(words / 0.75)
 
 
-def calculate_interview_cost(interview: Dict[str, Any], model: str = 'claude-sonnet-4-5-20250929') -> Dict[str, float]:
-    """Calculate estimated cost for an interview based on token usage."""
-    transcript = interview['transcript']
+def calculate_interview_cost(interview: Dict[str, Any], model: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Calculate comprehensive cost breakdown for an interview with confidence intervals.
 
-    # Separate input (interviewer + system) and output (persona)
+    Args:
+        interview: Interview data with transcript
+        model: Override model (otherwise uses interview data or default)
+
+    Returns:
+        Dict with precise costs, token breakdown, and confidence intervals
+    """
+    # Extract model from interview if not provided
+    if model is None:
+        model = interview.get('model', interview.get('interview_model', 'claude-sonnet-4-5-20250929'))
+
+    transcript = interview.get('transcript', [])
+
+    # Separate input (interviewer) and output (persona)
     input_text = ' '.join([t['text'] for t in transcript if t['speaker'] == 'Interviewer'])
     output_text = ' '.join([t['text'] for t in transcript if t['speaker'] == 'Persona'])
 
-    # Estimate tokens
-    input_tokens = estimate_tokens(input_text)
-    output_tokens = estimate_tokens(output_text)
+    # Count words for estimation variance
+    input_words = len(input_text.split()) if input_text else 0
+    output_words = len(output_text.split()) if output_text else 0
+    total_words = input_words + output_words
+
+    # Token estimation with confidence intervals
+    # Standard: 1 token ≈ 0.75 words
+    # Conservative (max tokens): 1 token ≈ 0.8 words (more tokens)
+    # Optimistic (min tokens): 1 token ≈ 0.7 words (fewer tokens)
+    input_tokens_std = estimate_tokens(input_text)
+    output_tokens_std = estimate_tokens(output_text)
+
+    input_tokens_max = int(input_words / 0.8)  # Conservative estimate
+    output_tokens_max = int(output_words / 0.8)
+    input_tokens_min = int(input_words / 0.7)  # Optimistic estimate
+    output_tokens_min = int(output_words / 0.7)
 
     # Get pricing
     costs = MODEL_COSTS.get(model, {'input': 3.0, 'output': 15.0})
 
     # Calculate costs (per million tokens)
-    input_cost = (input_tokens / 1_000_000) * costs['input']
-    output_cost = (output_tokens / 1_000_000) * costs['output']
-    total_cost = input_cost + output_cost
+    # Standard estimate
+    input_cost_std = (input_tokens_std / 1_000_000) * costs['input']
+    output_cost_std = (output_tokens_std / 1_000_000) * costs['output']
+    total_cost_std = input_cost_std + output_cost_std
+
+    # Confidence interval (min/max)
+    input_cost_min = (input_tokens_min / 1_000_000) * costs['input']
+    output_cost_min = (output_tokens_min / 1_000_000) * costs['output']
+    total_cost_min = input_cost_min + output_cost_min
+
+    input_cost_max = (input_tokens_max / 1_000_000) * costs['input']
+    output_cost_max = (output_tokens_max / 1_000_000) * costs['output']
+    total_cost_max = input_cost_max + output_cost_max
 
     return {
-        'input_tokens': input_tokens,
-        'output_tokens': output_tokens,
-        'total_tokens': input_tokens + output_tokens,
-        'input_cost': input_cost,
-        'output_cost': output_cost,
-        'total_cost': total_cost,
-        'model': model
+        # Token breakdown
+        'input_tokens': input_tokens_std,
+        'output_tokens': output_tokens_std,
+        'total_tokens': input_tokens_std + output_tokens_std,
+        'input_words': input_words,
+        'output_words': output_words,
+        'total_words': total_words,
+        # Token confidence intervals
+        'input_tokens_min': input_tokens_min,
+        'input_tokens_max': input_tokens_max,
+        'output_tokens_min': output_tokens_min,
+        'output_tokens_max': output_tokens_max,
+        'total_tokens_min': input_tokens_min + output_tokens_min,
+        'total_tokens_max': input_tokens_max + output_tokens_max,
+        # Cost breakdown (standard estimate)
+        'input_cost': input_cost_std,
+        'output_cost': output_cost_std,
+        'total_cost': total_cost_std,
+        # Cost confidence intervals
+        'cost_min': total_cost_min,
+        'cost_max': total_cost_max,
+        'cost_range': total_cost_max - total_cost_min,
+        # Model and pricing info
+        'model': model,
+        'input_price_per_m_tokens': costs['input'],
+        'output_price_per_m_tokens': costs['output']
     }
 
 
@@ -696,11 +751,31 @@ def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dic
         'persona_sentiment_neutral': round(persona_sentiment['neutral'], 3),
         'persona_sentiment_compound': round(persona_sentiment['compound'], 3),
         'persona_key_phrases': persona_key_phrases_str,
+        # Token breakdown
         'input_tokens': cost_info['input_tokens'],
         'output_tokens': cost_info['output_tokens'],
         'total_tokens': cost_info['total_tokens'],
+        'input_words': cost_info['input_words'],
+        'output_words': cost_info['output_words'],
+        'total_words': cost_info['total_words'],
+        # Token confidence intervals
+        'input_tokens_min': cost_info['input_tokens_min'],
+        'input_tokens_max': cost_info['input_tokens_max'],
+        'output_tokens_min': cost_info['output_tokens_min'],
+        'output_tokens_max': cost_info['output_tokens_max'],
+        'total_tokens_min': cost_info['total_tokens_min'],
+        'total_tokens_max': cost_info['total_tokens_max'],
+        # Cost breakdown
+        'input_cost': cost_info['input_cost'],
+        'output_cost': cost_info['output_cost'],
         'cost_usd': cost_info['total_cost'],
+        'cost_min': cost_info['cost_min'],
+        'cost_max': cost_info['cost_max'],
+        'cost_range': cost_info['cost_range'],
+        # Model and pricing
         'model': cost_info['model'],
+        'input_price_per_m_tokens': cost_info['input_price_per_m_tokens'],
+        'output_price_per_m_tokens': cost_info['output_price_per_m_tokens'],
     }
 
     # Add clinical info
@@ -746,8 +821,14 @@ def export_to_csv(analyses: List[Dict[str, Any]], output_file: str = "data/analy
         'persona_sentiment_positive', 'persona_sentiment_negative',
         'persona_sentiment_neutral', 'persona_sentiment_compound',
         'persona_key_phrases',
-        # Cost analysis
-        'input_tokens', 'output_tokens', 'total_tokens', 'cost_usd', 'model',
+        # Cost analysis - word and token breakdown
+        'input_words', 'output_words', 'total_words',
+        'input_tokens', 'output_tokens', 'total_tokens',
+        'input_tokens_min', 'input_tokens_max', 'output_tokens_min', 'output_tokens_max',
+        'total_tokens_min', 'total_tokens_max',
+        # Cost analysis - pricing and confidence intervals
+        'input_cost', 'output_cost', 'cost_usd', 'cost_min', 'cost_max', 'cost_range',
+        'model', 'input_price_per_m_tokens', 'output_price_per_m_tokens',
         # Clinical data
         'num_conditions', 'num_medications', 'num_procedures', 'num_encounters', 'num_observations',
         'top_conditions', 'condition_onsets', 'pregnancy_conditions',
@@ -816,20 +897,49 @@ def print_summary(analyses: List[Dict[str, Any]]):
     total_tokens = sum(a['total_tokens'] for a in analyses)
     avg_tokens = total_tokens / len(analyses)
 
+    # Token breakdown by speaker
+    total_input_tokens = sum(a['input_tokens'] for a in analyses)
+    total_output_tokens = sum(a['output_tokens'] for a in analyses)
+    total_input_words = sum(a['input_words'] for a in analyses)
+    total_output_words = sum(a['output_words'] for a in analyses)
+
+    # Cost breakdown
+    total_input_cost = sum(a['input_cost'] for a in analyses)
+    total_output_cost = sum(a['output_cost'] for a in analyses)
+    total_cost_min = sum(a['cost_min'] for a in analyses)
+    total_cost_max = sum(a['cost_max'] for a in analyses)
+
     # Token and cost dispersion
     tokens_per_interview = [a['total_tokens'] for a in analyses]
     costs_per_interview = [a['cost_usd'] for a in analyses]
+    tokens_min_per_interview = [a['total_tokens_min'] for a in analyses]
+    tokens_max_per_interview = [a['total_tokens_max'] for a in analyses]
+    cost_min_per_interview = [a['cost_min'] for a in analyses]
+    cost_max_per_interview = [a['cost_max'] for a in analyses]
+
     tokens_stats = calculate_dispersion_metrics(tokens_per_interview)
     costs_stats = calculate_dispersion_metrics(costs_per_interview)
+    tokens_min_stats = calculate_dispersion_metrics(tokens_min_per_interview)
+    tokens_max_stats = calculate_dispersion_metrics(tokens_max_per_interview)
 
     print(f"💰 COST ANALYSIS:")
-    print(f"   Total Cost: ${total_cost:.4f}")
-    print(f"   Avg Cost per Interview: ${avg_cost:.4f}")
-    print(f"   Cost Range: ${costs_stats['min']:.4f} - ${costs_stats['max']:.4f}, StdDev=${costs_stats['stdev']:.4f}")
-    print(f"   Total Tokens: {total_tokens:,}")
-    print(f"   Avg Tokens per Interview: {avg_tokens:.0f}")
-    print(f"   Token Range: {int(tokens_stats['min'])} - {int(tokens_stats['max'])}, StdDev={tokens_stats['stdev']:.0f}")
+    print(f"   Total Cost (Standard): ${total_cost:.4f}")
+    print(f"   Total Cost Range: ${total_cost_min:.4f} - ${total_cost_max:.4f}")
+    print(f"   Cost Confidence Interval: ${costs_stats['min']:.4f} to ${costs_stats['max']:.4f} per interview")
+    print(f"   Avg Cost per Interview: ${avg_cost:.4f} (StdDev=${costs_stats['stdev']:.4f})")
+    print()
+    print(f"   Token Breakdown (Standard):")
+    print(f"      Input (Interviewer): {total_input_tokens:,} tokens from {total_input_words:,} words")
+    print(f"      Output (Persona):    {total_output_tokens:,} tokens from {total_output_words:,} words")
+    print(f"      Total:               {total_tokens:,} tokens")
+    print(f"   Cost Breakdown (Standard):")
+    print(f"      Input Cost:  ${total_input_cost:.4f}")
+    print(f"      Output Cost: ${total_output_cost:.4f}")
+    print(f"   Token Confidence Intervals per Interview:")
+    print(f"      Min (Optimistic): {int(tokens_min_stats['min'])} - {int(tokens_min_stats['max'])} tokens")
+    print(f"      Max (Conservative): {int(tokens_max_stats['min'])} - {int(tokens_max_stats['max'])} tokens")
     print(f"   Model: {analyses[0]['model']}")
+    print(f"   Pricing: ${analyses[0]['input_price_per_m_tokens']:.2f}/M input tokens, ${analyses[0]['output_price_per_m_tokens']:.2f}/M output tokens")
     print()
 
     # Age distribution
