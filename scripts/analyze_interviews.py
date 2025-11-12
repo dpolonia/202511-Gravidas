@@ -20,11 +20,23 @@ Usage:
 import json
 import csv
 import re
+import logging
+import sys
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 from collections import Counter
 import argparse
 
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(levelname)s] %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # Model pricing per 1M tokens (input, output)
 MODEL_COSTS = {
@@ -40,31 +52,201 @@ MODEL_COSTS = {
     'gemini-2.5-flash-thinking': {'input': 0.15, 'output': 0.60},
 }
 
+# Required fields for validation
+INTERVIEW_REQUIRED_FIELDS = {
+    'transcript', 'persona_id', 'persona_age', 'timestamp', 'filename'
+}
+TRANSCRIPT_REQUIRED_FIELDS = {'speaker', 'text'}
+MATCHED_PERSONA_REQUIRED_FIELDS = {'persona', 'health_record'}
 
-def load_matched_personas(matched_file: str = "data/matched/matched_personas.json") -> Dict[int, Dict[str, Any]]:
-    """Load matched personas with health records, indexed by persona_id."""
+
+def validate_matched_persona_schema(persona_data: Dict[str, Any], filename: str = 'unknown') -> Tuple[bool, Optional[str]]:
+    """
+    Validate matched persona JSON schema.
+
+    Returns:
+        Tuple of (is_valid, error_message)
+    """
+    if not isinstance(persona_data, dict):
+        return False, "Matched persona entry is not a dictionary"
+
+    missing_fields = MATCHED_PERSONA_REQUIRED_FIELDS - set(persona_data.keys())
+    if missing_fields:
+        return False, f"Missing required fields: {missing_fields}"
+
+    # Validate persona structure
+    persona = persona_data.get('persona', {})
+    if not isinstance(persona, dict):
+        return False, "Persona field is not a dictionary"
+    if 'id' not in persona:
+        return False, "Persona missing 'id' field"
+
+    # Validate health_record structure
+    health_record = persona_data.get('health_record', {})
+    if not isinstance(health_record, dict):
+        return False, "Health record is not a dictionary"
+
+    return True, None
+
+
+def validate_interview_schema(interview_data: Dict[str, Any], filename: str = 'unknown') -> Tuple[bool, Optional[str]]:
+    """
+    Validate interview JSON schema and required fields.
+
+    Returns:
+        Tuple of (is_valid, error_message)
+    """
+    if not isinstance(interview_data, dict):
+        return False, "Interview data is not a dictionary"
+
+    missing_fields = INTERVIEW_REQUIRED_FIELDS - set(interview_data.keys())
+    if missing_fields:
+        return False, f"Missing required fields: {missing_fields}"
+
+    # Validate transcript structure
+    transcript = interview_data.get('transcript')
+    if not isinstance(transcript, list):
+        return False, "Transcript is not a list"
+
+    if len(transcript) == 0:
+        return False, "Transcript is empty"
+
+    # Validate each transcript entry
+    for i, entry in enumerate(transcript):
+        if not isinstance(entry, dict):
+            return False, f"Transcript entry {i} is not a dictionary"
+
+        missing_transcript_fields = TRANSCRIPT_REQUIRED_FIELDS - set(entry.keys())
+        if missing_transcript_fields:
+            return False, f"Transcript entry {i} missing fields: {missing_transcript_fields}"
+
+        # Validate speaker field
+        speaker = entry.get('speaker', '')
+        if speaker not in ['Interviewer', 'Persona']:
+            return False, f"Transcript entry {i} has invalid speaker: '{speaker}' (must be 'Interviewer' or 'Persona')"
+
+        # Validate text field is string
+        if not isinstance(entry.get('text'), str):
+            return False, f"Transcript entry {i} text is not a string"
+
+    # Validate persona_age is numeric
+    persona_age = interview_data.get('persona_age')
+    if not isinstance(persona_age, (int, float)):
+        try:
+            int(persona_age)
+        except (ValueError, TypeError):
+            return False, f"persona_age '{persona_age}' is not numeric"
+
+    return True, None
+
+
+def load_matched_personas(matched_file: str = "data/matched/matched_personas.json") -> Tuple[Dict[int, Dict[str, Any]], List[str]]:
+    """
+    Load matched personas with health records, indexed by persona_id.
+
+    Returns:
+        Tuple of (personas_dict, validation_errors)
+    """
+    validation_errors = []
+
     try:
         with open(matched_file, 'r') as f:
             matched = json.load(f)
-        # Create dict indexed by persona id for quick lookup
-        return {m['persona']['id']: m for m in matched}
     except FileNotFoundError:
-        print(f"⚠️  Warning: Could not load {matched_file}")
-        return {}
+        logger.warning(f"⚠️  Warning: Could not load {matched_file}")
+        return {}, [f"File not found: {matched_file}"]
+    except json.JSONDecodeError as e:
+        error_msg = f"Invalid JSON in {matched_file}: {e}"
+        logger.error(f"❌ {error_msg}")
+        validation_errors.append(error_msg)
+        return {}, validation_errors
+
+    if not isinstance(matched, list):
+        error_msg = f"Expected list of matched personas, got {type(matched).__name__}"
+        logger.error(f"❌ {error_msg}")
+        validation_errors.append(error_msg)
+        return {}, validation_errors
+
+    personas_dict = {}
+    for i, m in enumerate(matched):
+        is_valid, error_msg = validate_matched_persona_schema(m, matched_file)
+        if not is_valid:
+            error_full = f"Matched persona entry {i}: {error_msg}"
+            logger.warning(f"⚠️  Skipping invalid entry: {error_full}")
+            validation_errors.append(error_full)
+            continue
+
+        try:
+            persona_id = m['persona']['id']
+            personas_dict[persona_id] = m
+        except (KeyError, TypeError) as e:
+            error_full = f"Matched persona entry {i}: Failed to extract persona ID: {e}"
+            logger.warning(f"⚠️  Skipping entry: {error_full}")
+            validation_errors.append(error_full)
+
+    logger.info(f"✅ Loaded {len(personas_dict)} valid matched personas")
+    if validation_errors:
+        logger.info(f"   {len(validation_errors)} entries skipped due to validation errors")
+
+    return personas_dict, validation_errors
 
 
-def load_interviews(interview_dir: str = "data/interviews") -> List[Dict[str, Any]]:
-    """Load all interview JSON files."""
+def load_interviews(interview_dir: str = "data/interviews") -> Tuple[List[Dict[str, Any]], List[str]]:
+    """
+    Load all interview JSON files with comprehensive error handling.
+
+    Returns:
+        Tuple of (interviews_list, validation_errors)
+    """
     interview_path = Path(interview_dir)
     interviews = []
+    validation_errors = []
 
-    for file in sorted(interview_path.glob("interview_*.json")):
-        with open(file, 'r') as f:
-            data = json.load(f)
-            data['filename'] = file.name
-            interviews.append(data)
+    if not interview_path.exists():
+        error_msg = f"Interview directory not found: {interview_dir}"
+        logger.error(f"❌ {error_msg}")
+        validation_errors.append(error_msg)
+        return interviews, validation_errors
 
-    return interviews
+    interview_files = sorted(interview_path.glob("interview_*.json"))
+    if not interview_files:
+        logger.warning(f"⚠️  No interview files found in {interview_dir}")
+        return interviews, []
+
+    logger.info(f"Found {len(interview_files)} interview files to process")
+
+    for file in interview_files:
+        try:
+            with open(file, 'r') as f:
+                data = json.load(f)
+        except json.JSONDecodeError as e:
+            error_msg = f"Malformed JSON in {file.name}: {e}"
+            logger.warning(f"⚠️  Skipping: {error_msg}")
+            validation_errors.append(error_msg)
+            continue
+        except Exception as e:
+            error_msg = f"Error reading {file.name}: {e}"
+            logger.warning(f"⚠️  Skipping: {error_msg}")
+            validation_errors.append(error_msg)
+            continue
+
+        # Validate schema before adding
+        is_valid, error_msg = validate_interview_schema(data, file.name)
+        if not is_valid:
+            error_full = f"{file.name}: {error_msg}"
+            logger.warning(f"⚠️  Skipping: {error_full}")
+            validation_errors.append(error_full)
+            continue
+
+        # Add filename for tracking
+        data['filename'] = file.name
+        interviews.append(data)
+
+    logger.info(f"✅ Loaded {len(interviews)} valid interview(s)")
+    if validation_errors:
+        logger.info(f"   {len(validation_errors)} file(s) skipped due to errors")
+
+    return interviews, validation_errors
 
 
 def estimate_tokens(text: str) -> int:
@@ -171,8 +353,22 @@ def extract_clinical_info(health_record: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dict[str, Any]]) -> Dict[str, Any]:
-    """Extract key metrics from a single interview."""
+def analyze_interview(interview: Dict[str, Any], matched_personas: Dict[int, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """
+    Extract key metrics from a single interview.
+
+    Returns:
+        Analysis dict or None if analysis fails due to missing critical data
+    """
+    # Defensive validation of required fields
+    if not interview.get('transcript'):
+        logger.warning(f"⚠️  Cannot analyze {interview.get('filename', 'unknown')}: Missing or empty transcript")
+        return None
+
+    if 'persona_age' not in interview:
+        logger.warning(f"⚠️  Cannot analyze {interview.get('filename', 'unknown')}: Missing persona_age")
+        return None
+
     transcript = interview['transcript']
     persona_turns = [t for t in transcript if t['speaker'] == 'Persona']
     interviewer_turns = [t for t in transcript if t['speaker'] == 'Interviewer']
@@ -465,26 +661,60 @@ def main():
                         help='Show clinical information for each interview')
     args = parser.parse_args()
 
+    logger.info("=" * 80)
+    logger.info("INTERVIEW ANALYSIS - DATA LOADING PHASE")
+    logger.info("=" * 80)
+    logger.info("")
+
     # Load matched personas with health records
-    print("Loading matched personas...")
-    matched_personas = load_matched_personas()
-    print(f"✅ Loaded {len(matched_personas)} matched personas with health records")
-    print()
+    logger.info("Loading matched personas...")
+    matched_personas, persona_errors = load_matched_personas()
+    logger.info("")
 
     # Load and analyze interviews
-    print("Loading interviews...")
-    interviews = load_interviews()
+    logger.info("Loading interviews...")
+    interviews, interview_errors = load_interviews()
 
     if not interviews:
-        print("❌ No interviews found in data/interviews/")
-        print("   Run an interview first with: python scripts/04_conduct_interviews.py")
+        logger.error("❌ No valid interviews loaded.")
+        logger.info("   Run an interview first with: python scripts/04_conduct_interviews.py")
         return
 
-    print(f"✅ Loaded {len(interviews)} interview(s)")
-    print()
+    logger.info("")
+
+    # Report validation errors if any
+    if persona_errors:
+        logger.info("")
+        logger.warning(f"⚠️  Matched Personas Validation Issues ({len(persona_errors)}):")
+        for error in persona_errors[:5]:  # Show first 5 errors
+            logger.warning(f"   - {error}")
+        if len(persona_errors) > 5:
+            logger.warning(f"   ... and {len(persona_errors) - 5} more")
+
+    if interview_errors:
+        logger.info("")
+        logger.warning(f"⚠️  Interview Validation Issues ({len(interview_errors)}):")
+        for error in interview_errors[:5]:  # Show first 5 errors
+            logger.warning(f"   - {error}")
+        if len(interview_errors) > 5:
+            logger.warning(f"   ... and {len(interview_errors) - 5} more")
+
+    logger.info("")
+    logger.info("=" * 80)
+    logger.info("ANALYZING INTERVIEWS")
+    logger.info("=" * 80)
+    logger.info("")
 
     # Analyze all interviews
-    analyses = [analyze_interview(interview, matched_personas) for interview in interviews]
+    analyses = [
+        analysis for analysis in
+        [analyze_interview(interview, matched_personas) for interview in interviews]
+        if analysis is not None
+    ]
+
+    if not analyses:
+        logger.error("❌ No interviews could be analyzed due to validation errors.")
+        return
 
     # Print summary
     print_summary(analyses)
