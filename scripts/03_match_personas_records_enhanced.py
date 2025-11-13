@@ -1,24 +1,33 @@
 #!/usr/bin/env python3
 """
-Enhanced matching algorithm with quality metrics and large persona pool support.
+Enhanced matching algorithm with semantic tree similarity scoring.
 
 This script:
 1. Supports N personas -> M health records matching (N >= M)
-2. Uses enhanced weighted scoring for better matches
-3. Tracks detailed match quality metrics
-4. Provides comprehensive quality analysis and reporting
-5. Selects best M matches from larger persona pool
+2. Uses semantic tree similarity for intelligent matching
+3. Combines semantic and demographic factors
+4. Tracks detailed match quality metrics with explanations
+5. Provides comprehensive quality analysis and reporting
+6. Generates semantic alignment reports for matches
 
-Key improvements over basic matching:
-- Occupation compatibility scoring
+Key improvements:
+- Semantic tree-based similarity scoring (5 components)
+- Healthcare-specific matching factors
 - Quality-based selection from large pools
-- Detailed quality metrics per match
-- Distribution analysis of match qualities
-- Enhanced reporting with quality insights
+- Detailed semantic alignment reports
+- Match explainability for clinical review
+- Blended demographic + semantic scoring
+
+Semantic Components Scored:
+- Demographics: Age, location alignment
+- Socioeconomic: Healthcare access, employment, insurance
+- Health Profile: Health consciousness, pregnancy readiness, conditions
+- Behavioral: Physical activity, smoking, nutrition, sleep
+- Psychosocial: Mental health, stress, support, family planning
 
 Usage:
-    python scripts/03_match_personas_records_enhanced.py [--algorithm optimal]
-    python scripts/03_match_personas_records_enhanced.py --personas-pool 20000 --records 10000
+    python scripts/03_match_personas_records_enhanced.py
+    python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.7
 """
 
 import json
@@ -38,8 +47,9 @@ except ImportError:
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
-# Import common loaders
+# Import common loaders and semantic matching utilities
 from utils.common_loaders import load_config, load_personas, load_health_records
+from utils.semantic_matcher import calculate_semantic_matching_score, generate_semantic_alignment_report
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -277,6 +287,117 @@ def calculate_enhanced_compatibility_score(
     total_score = sum(breakdown[key] * weights[key] for key in weights.keys())
 
     return total_score, breakdown
+
+
+def build_blended_compatibility_matrix(
+    personas: List[Dict[str, Any]],
+    records: List[Dict[str, Any]],
+    config: Dict[str, Any],
+    semantic_weight: float = 0.6
+) -> Tuple[np.ndarray, List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """
+    Build blended compatibility matrix combining demographic and semantic scoring.
+
+    Args:
+        personas: List of personas with semantic trees
+        records: List of health records with semantic trees
+        config: Configuration dictionary
+        semantic_weight: Weight for semantic scoring (0.0-1.0)
+                        0.0 = pure demographic, 1.0 = pure semantic
+
+    Returns:
+        Tuple of (compatibility_matrix, demographic_metrics, semantic_metrics)
+    """
+    demographic_weight = 1.0 - semantic_weight
+
+    logger.info(f"Computing blended compatibility matrix for {len(personas)} personas × {len(records)} records...")
+    logger.info(f"Semantic weight: {semantic_weight:.1%} | Demographic weight: {demographic_weight:.1%}")
+
+    n_personas = len(personas)
+    n_records = len(records)
+
+    # Initialize matrices and metrics storage
+    matrix = np.zeros((n_personas, n_records))
+    demographic_metrics = []
+    semantic_metrics = []
+
+    # Get demographic weights
+    matching_config = config.get('matching', {})
+    demo_weights = matching_config.get('enhanced_weights', {
+        'age': 0.40,
+        'education': 0.20,
+        'income': 0.15,
+        'marital_status': 0.15,
+        'occupation': 0.10
+    })
+
+    # Calculate scores
+    for i, persona in enumerate(personas):
+        if (i + 1) % 1000 == 0:
+            logger.info(f"[PROGRESS] Computed compatibility for {i + 1}/{n_personas} personas")
+
+        persona_demo_metrics = []
+        persona_semantic_metrics = []
+
+        for j, record in enumerate(records):
+            # Calculate demographic score (baseline)
+            demo_score, demo_breakdown = calculate_enhanced_compatibility_score(
+                persona, record, demo_weights
+            )
+
+            # Calculate semantic score if semantic trees available
+            semantic_score = 0.5
+            semantic_breakdown = {}
+            semantic_report = None
+
+            if persona.get('semantic_tree') and record.get('semantic_tree'):
+                try:
+                    semantic_score, semantic_breakdown = calculate_semantic_matching_score(
+                        persona['semantic_tree'],
+                        record['semantic_tree']
+                    )
+
+                    # Generate alignment report
+                    semantic_report = generate_semantic_alignment_report(
+                        i, j, semantic_score, semantic_breakdown,
+                        persona['semantic_tree'], record['semantic_tree']
+                    )
+
+                except Exception as e:
+                    logger.warning(f"Failed to calculate semantic score for {i},{j}: {e}")
+                    semantic_score = 0.5
+                    semantic_breakdown = {}
+
+            # Blend scores
+            blended_score = (
+                demo_score * demographic_weight +
+                semantic_score * semantic_weight
+            )
+
+            matrix[i, j] = blended_score
+
+            # Store metrics
+            persona_demo_metrics.append({
+                'persona_idx': i,
+                'record_idx': j,
+                'demographic_score': demo_score,
+                'demographic_breakdown': demo_breakdown
+            })
+
+            persona_semantic_metrics.append({
+                'persona_idx': i,
+                'record_idx': j,
+                'semantic_score': semantic_score,
+                'semantic_breakdown': semantic_breakdown,
+                'semantic_report': semantic_report,
+                'blended_score': blended_score
+            })
+
+        demographic_metrics.append(persona_demo_metrics)
+        semantic_metrics.append(persona_semantic_metrics)
+
+    logger.info("✅ Blended compatibility matrix computed")
+    return matrix, demographic_metrics, semantic_metrics
 
 
 def build_compatibility_matrix(
@@ -601,18 +722,32 @@ def save_enhanced_results(
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Enhanced persona-record matching with quality metrics')
+    parser = argparse.ArgumentParser(description='Enhanced persona-record matching with semantic tree similarity')
     parser.add_argument('--personas', type=str, default='data/personas/personas.json', help='Personas file')
     parser.add_argument('--records', type=str, default='data/health_records/health_records.json', help='Health records file')
     parser.add_argument('--output', type=str, default='data/matched', help='Output directory')
     parser.add_argument('--config', type=str, default='config/config.yaml', help='Config file path')
+    parser.add_argument('--semantic-weight', type=float, default=0.6,
+                        help='Weight for semantic scoring (0.0-1.0, default 0.6). 0.0=demographic only, 1.0=semantic only')
+    parser.add_argument('--semantic-only', action='store_true', help='Use semantic matching only (equivalent to --semantic-weight 1.0)')
     args = parser.parse_args()
+
+    # Handle semantic-only flag
+    if args.semantic_only:
+        semantic_weight = 1.0
+    else:
+        semantic_weight = args.semantic_weight
+
+    # Validate weight
+    if not (0.0 <= semantic_weight <= 1.0):
+        logger.error(f"Semantic weight must be between 0.0 and 1.0, got {semantic_weight}")
+        sys.exit(1)
 
     # Create logs directory
     Path('logs').mkdir(exist_ok=True)
 
     logger.info("=" * 60)
-    logger.info("ENHANCED PERSONA-RECORD MATCHING STARTED")
+    logger.info("ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED")
     logger.info("=" * 60)
 
     # Load configuration
@@ -629,11 +764,34 @@ def main():
     elif len(personas) < len(records):
         logger.warning(f"⚠️  More records than personas. Some records will be unmatched.")
 
+    # Check for semantic trees
+    has_semantic_personas = any(p.get('semantic_tree') for p in personas)
+    has_semantic_records = any(r.get('semantic_tree') for r in records)
+
+    if (has_semantic_personas and has_semantic_records) and semantic_weight > 0:
+        logger.info(f"✅ Semantic trees detected. Using blended matching with {semantic_weight:.0%} semantic weight")
+        use_semantic = True
+    else:
+        if semantic_weight > 0:
+            logger.warning("⚠️  Semantic trees not found. Falling back to demographic matching only")
+        semantic_weight = 0.0
+        use_semantic = False
+
     try:
-        # Build compatibility matrix with detailed metrics
-        compatibility_matrix, detailed_metrics = build_compatibility_matrix(
-            personas, records, config
-        )
+        # Build compatibility matrix
+        if use_semantic and semantic_weight > 0:
+            logger.info("Building blended compatibility matrix (demographic + semantic)...")
+            compatibility_matrix, demographic_metrics, semantic_metrics = build_blended_compatibility_matrix(
+                personas, records, config, semantic_weight=semantic_weight
+            )
+
+            # Store semantic metrics for output
+            detailed_metrics = semantic_metrics
+        else:
+            logger.info("Building demographic compatibility matrix...")
+            compatibility_matrix, detailed_metrics = build_compatibility_matrix(
+                personas, records, config
+            )
 
         # Run enhanced matching algorithm
         matches, quality_metrics = match_optimal_with_selection(
