@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate pregnancy-related health records using Synthea.
+Generate pregnancy-related health records using Synthea with semantic trees.
 
 This script:
 1. Loads persona data
@@ -8,6 +8,15 @@ This script:
 3. Runs Synthea to create health records with pregnancy conditions
 4. Filters records for pregnancy-related SNOMED codes
 5. Converts FHIR records to simplified JSON format
+6. Extracts semantic healthcare profiles from FHIR data
+7. Builds semantic trees for each health record
+
+Semantic trees enable:
+- Rich clinical profile extraction from FHIR
+- Healthcare utilization pattern analysis
+- Pregnancy risk stratification
+- Medication pregnancy safety assessment
+- Enhanced matching with personas
 
 Usage:
     python scripts/02_generate_health_records.py [--count COUNT] [--personas PERSONAS_FILE]
@@ -21,7 +30,7 @@ import subprocess
 import os
 import glob
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import time
 
 try:
@@ -32,8 +41,9 @@ except ImportError:
     print("Please run: pip install -r requirements.txt")
     sys.exit(1)
 
-# Import common loaders
+# Import common loaders and semantic tree utilities
 from utils.common_loaders import load_config, load_personas
+from utils.fhir_semantic_extractor import build_semantic_tree_from_fhir
 
 # Create logs directory if it doesn't exist
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -200,10 +210,10 @@ def has_pregnancy_code(fhir_record: Dict[str, Any]) -> bool:
 
 def extract_health_record(fhir_file: str) -> Dict[str, Any] | None:
     """
-    Extract simplified health record from FHIR file.
+    Extract simplified health record from FHIR file with semantic tree.
 
     Returns:
-        Simplified health record dict, or None if no pregnancy data
+        Health record dict with semantic tree, or None if no pregnancy data
     """
     try:
         with open(fhir_file, 'r') as f:
@@ -226,6 +236,7 @@ def extract_health_record(fhir_file: str) -> Dict[str, Any] | None:
         'observations': [],
         'medications': [],
         'encounters': [],
+        'semantic_tree': None,
         'raw_fhir': fhir_data
     }
 
@@ -288,6 +299,20 @@ def extract_health_record(fhir_file: str) -> Dict[str, Any] | None:
             }
             record['encounters'].append(encounter)
 
+    # Build semantic tree if we have age and patient ID
+    if record['patient_id'] and record['age']:
+        try:
+            semantic_tree = build_semantic_tree_from_fhir(
+                fhir_data,
+                record['patient_id'],
+                record['age']
+            )
+            record['semantic_tree'] = semantic_tree.to_dict()
+            logger.debug(f"Built semantic tree for patient {record['patient_id']}")
+        except Exception as e:
+            logger.warning(f"Failed to build semantic tree for {record['patient_id']}: {e}")
+            record['semantic_tree'] = None
+
     return record
 
 
@@ -332,7 +357,7 @@ def process_synthea_output(synthea_output_dir: str, target_count: int) -> List[D
 
 
 def save_health_records(records: List[Dict[str, Any]], output_dir: str):
-    """Save health records to JSON files."""
+    """Save health records to JSON files with semantic tree statistics."""
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
@@ -350,6 +375,50 @@ def save_health_records(records: List[Dict[str, Any]], output_dir: str):
             json.dump(record, f, indent=2)
 
     logger.info(f"Saved {len(records)} individual record files to {output_dir}")
+
+    # Generate semantic tree statistics
+    logger.info("=" * 60)
+    logger.info("HEALTH RECORDS SEMANTIC TREE SUMMARY")
+    logger.info("=" * 60)
+
+    with_semantic_trees = sum(1 for r in records if r.get('semantic_tree'))
+    logger.info(f"Records with semantic trees: {with_semantic_trees}/{len(records)}")
+
+    if with_semantic_trees > 0:
+        # Calculate averages and distributions
+        pregnancy_risk_dist = {}
+        health_status_dist = {}
+        comorbidity_scores = []
+        pregnancy_profile_risk_dist = {}
+
+        for record in records:
+            if record.get('semantic_tree'):
+                tree = record['semantic_tree']
+
+                # Overall health status
+                status = tree.get('overall_health_status', 'unknown')
+                health_status_dist[status] = health_status_dist.get(status, 0) + 1
+
+                # Comorbidity index
+                comorbidity_scores.append(tree.get('comorbidity_index', 0))
+
+                # Pregnancy risk level
+                pregnancy = tree.get('pregnancy_profile', {})
+                risk = pregnancy.get('risk_level', 0)
+                pregnancy_profile_risk_dist[risk] = pregnancy_profile_risk_dist.get(risk, 0) + 1
+
+                # Healthcare utilization
+                utilization = tree.get('healthcare_utilization', {})
+                access = utilization.get('estimated_healthcare_access', 0)
+
+        logger.info(f"Overall Health Status distribution: {health_status_dist}")
+        logger.info(f"Pregnancy Risk Level distribution: {pregnancy_profile_risk_dist}")
+
+        if comorbidity_scores:
+            avg_comorbidity = sum(comorbidity_scores) / len(comorbidity_scores)
+            logger.info(f"Average Comorbidity Index: {avg_comorbidity:.3f}")
+
+    logger.info("=" * 60)
 
 
 def main():

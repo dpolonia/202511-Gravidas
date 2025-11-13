@@ -1,0 +1,429 @@
+################################################################################
+# GRAVIDAS WORKFLOW CONFIGURATION
+# Comprehensive workflow pipeline orchestration
+# Version: 1.0
+# Last Updated: 2025-11-12
+################################################################################
+
+###############################################################################
+# WORKFLOW EXECUTION PARAMETERS
+###############################################################################
+workflow:
+  name: "Gravidas Synthetic Interview Pipeline"
+  version: "1.0"
+  description: "End-to-end pipeline for generating and analyzing synthetic interviews"
+
+  # Execution settings
+  execution:
+    # Number of personas to interview (generated personas)
+    num_personas: 100
+
+    # Number of health records to match with personas
+    num_health_records: 100
+
+    # Interview batch size (run this many interviews in parallel)
+    interview_batch_size: 5
+
+    # Maximum workers for parallel processing
+    max_workers: 4
+
+    # Enable detailed logging
+    verbose: true
+
+    # Save all intermediate outputs
+    save_intermediates: true
+
+###############################################################################
+# AI PROVIDER AND MODEL SELECTION
+###############################################################################
+ai_provider:
+  # Active provider: "anthropic", "openai", or "google"
+  active_provider: "anthropic"
+
+  # Provider-specific configurations
+  providers:
+    anthropic:
+      # Model options:
+      # - "claude-4.1-opus" (most capable, highest cost)
+      # - "claude-4.5-sonnet" (recommended - best balance)
+      # - "claude-4.5-haiku" (fast, lower cost)
+      # - "claude-3-haiku" (very cheap, for testing)
+      model: "claude-4.5-sonnet"
+
+      # API configuration
+      api_key: "${ANTHROPIC_API_KEY}"  # From environment
+      max_tokens: 4096
+      temperature: 0.7
+
+      # Rate limiting
+      requests_per_minute: 50
+
+    openai:
+      # Model options:
+      # - "gpt-5-pro" (peak performance)
+      # - "gpt-5" (recommended)
+      # - "gpt-5-mini" (good value)
+      # - "gpt-5-nano" (testing)
+      model: "gpt-5"
+
+      api_key: "${OPENAI_API_KEY}"
+      max_tokens: 4096
+      temperature: 0.7
+      requests_per_minute: 30
+
+    google:
+      # Model options:
+      # - "gemini-2.5-pro" (recommended)
+      # - "gemini-2.5-flash" (fast)
+      # - "gemini-2.5-flash-lite" (budget)
+      # - "gemini-2.0-flash" (legacy)
+      model: "gemini-2.5-flash"
+
+      api_key: "${GOOGLE_API_KEY}"
+      max_tokens: 4096
+      temperature: 0.7
+      requests_per_minute: 30
+
+    xai:
+      # xAI Grok provider - Optional
+      # Model options:
+      # - "grok-4" (most capable, $3/$15 per 1M tokens)
+      # - "grok-4-fast" (recommended - best value, $0.2/$0.5 per 1M tokens)
+      # - "grok-3" (budget option, $0.5/$1.0 per 1M tokens)
+      model: "grok-4-fast"
+
+      api_key: "${XAI_API_KEY}"
+      max_tokens: 4096
+      temperature: 0.7
+      requests_per_minute: 20
+
+###############################################################################
+# PIPELINE STAGES AND TOPIC HIGHLIGHTING
+###############################################################################
+pipeline_stages:
+  # Stage 1: Generate Personas
+  generate_personas:
+    enabled: true
+    description: "Generate synthetic personas with semantic healthcare attributes"
+    script: "scripts/01b_generate_personas.py"
+    parameters:
+      count: "${workflow.execution.num_personas}"
+      output: "data/personas"
+    topics_addressed:
+      - "Demographics (age, gender, location, ethnicity, language)"
+      - "Socioeconomic Status (education, income, occupation, employment)"
+      - "Health Profile (health consciousness, healthcare access, pregnancy readiness)"
+      - "Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)"
+      - "Psychosocial Factors (mental health, stress, social support, relationship status)"
+      - "Semantic Tree Generation (hierarchical health attributes)"
+
+  # Stage 2: Generate Health Records
+  generate_health_records:
+    enabled: true
+    description: "Extract healthcare profiles from FHIR data"
+    script: "scripts/02_generate_health_records.py"
+    parameters:
+      count: "${workflow.execution.num_health_records}"
+      output: "data/health_records"
+    topics_addressed:
+      - "FHIR Data Extraction (from Synthea)"
+      - "Clinical Conditions (SNOMED code mapping)"
+      - "Medication Profiles (pregnancy safety classification)"
+      - "Healthcare Utilization (visit frequency, provider engagement)"
+      - "Pregnancy Profile (risk assessment, comorbidities)"
+      - "Semantic Tree Extraction (from clinical records)"
+
+  # Stage 3: Match Personas to Health Records
+  match_personas_records:
+    enabled: true
+    description: "Match personas with health records using semantic matching"
+    script: "scripts/03_match_personas_records_enhanced.py"
+    parameters:
+      semantic_weight: 0.6
+      algorithm: "hungarian"
+    topics_addressed:
+      - "Demographic Similarity (age, location compatibility)"
+      - "Socioeconomic Alignment (healthcare access, employment status)"
+      - "Health Profile Alignment (health consciousness vs medical engagement)"
+      - "Behavioral Alignment (activity, smoking, nutrition)"
+      - "Psychosocial Alignment (mental health, social support, family planning)"
+      - "Optimal N-to-M Matching (Hungarian Algorithm)"
+      - "Blended Scoring (40% demographic + 60% semantic)"
+
+  # Stage 4: Conduct Interviews
+  conduct_interviews:
+    enabled: true
+    description: "Conduct AI-powered interviews with matched persona-record pairs"
+    script: "scripts/04_conduct_interviews.py"
+    parameters:
+      model: "${ai_provider.providers.${ai_provider.active_provider}.model}"
+      count: "${workflow.execution.num_personas}"
+      batch_size: "${workflow.execution.interview_batch_size}"
+      protocol: "Script/interview_protocols/prenatal_care.json"
+    topics_addressed:
+      - "AI Model Selection (Claude, GPT, or Gemini)"
+      - "Interview Protocol Execution"
+      - "Multi-turn Conversation Management"
+      - "Healthcare Context Preservation"
+      - "Interview Transcript Generation"
+
+  # Stage 5: Analyze Interviews (Enhanced with 7 Topics)
+  analyze_interviews:
+    enabled: true
+    description: "Comprehensive analysis of interview data"
+    script: "scripts/analyze_interviews.py"
+    parameters:
+      input_dir: "data/interviews"
+      personas_file: "data/personas/personas.json"
+      records_file: "data/health_records/health_records.json"
+      export_format: "both"  # csv, json, or both
+    topics_addressed:
+      - "TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)"
+      - "TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)"
+      - "TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)"
+      - "TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)"
+      - "TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)"
+      - "TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)"
+      - "TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)"
+
+  # Stage 6: Validation Testing
+  validate_implementation:
+    enabled: true
+    description: "Validate semantic tree implementation and data quality"
+    script: "scripts/test_semantic_implementation.py"
+    parameters:
+      personas: "data/personas/personas.json"
+      records: "data/health_records/health_records.json"
+      output: "data/validation"
+    topics_addressed:
+      - "Persona Semantic Tree Validation"
+      - "Health Record Semantic Tree Validation"
+      - "Semantic Matching Score Validation"
+      - "Demographic Diversity Analysis"
+      - "Clinical Data Quality Assessment"
+      - "Validation Report Generation"
+
+###############################################################################
+# DATA PATHS
+###############################################################################
+data_paths:
+  base_dir: "./data"
+  personas: "./data/personas"
+  health_records: "./data/health_records"
+  matched: "./data/matched"
+  interviews: "./data/interviews"
+  interviews_raw: "./data/interviews/raw"
+  interviews_analyzed: "./data/interviews/analyzed"
+  validation: "./data/validation"
+  output: "./outputs"
+  logs: "./logs"
+
+###############################################################################
+# INTERVIEW SETTINGS
+###############################################################################
+interview_settings:
+  protocol_path: "Script/interview_protocols/prenatal_care.json"
+  max_turns: 20
+  save_transcripts: true
+  transcript_format: "json"
+  include_metadata: true
+
+###############################################################################
+# ANALYSIS SETTINGS
+###############################################################################
+analysis_settings:
+  # CSV export settings
+  csv_export:
+    enabled: true
+    delimiter: ","
+    include_raw_data: true
+
+  # JSON export settings
+  json_export:
+    enabled: true
+    include_metadata: true
+    pretty_print: true
+
+  # Filtering options
+  filtering:
+    # Filter to specific persona (optional)
+    persona_id: null
+
+    # Minimum turns required for analysis
+    min_turns: 3
+
+    # Minimum cost threshold (in USD)
+    min_cost: 0.0
+
+  # Analysis options
+  analysis:
+    # Enable anomaly detection
+    detect_anomalies: true
+
+    # Show anomaly details in output
+    show_anomaly_details: true
+
+    # Enable sentiment analysis
+    sentiment_analysis: true
+
+    # Enable NLP analysis
+    nlp_analysis: true
+
+    # Enable clinical analysis
+    clinical_analysis: true
+
+    # Enable cost analysis
+    cost_analysis: true
+
+###############################################################################
+# OUTPUT REPORTING
+###############################################################################
+reporting:
+  # Summary report
+  summary_report:
+    enabled: true
+    format: "text"  # text, json, both
+
+  # Detailed reports by topic
+  topic_reports:
+    enabled: true
+    topics:
+      - "data_loading"
+      - "nlp_analysis"
+      - "quantitative_metrics"
+      - "cost_attribution"
+      - "clinical_analytics"
+      - "anomaly_detection"
+      - "reporting_outputs"
+
+  # Comprehensive validation report
+  validation_report:
+    enabled: true
+    include_quality_metrics: true
+    include_diversity_analysis: true
+
+###############################################################################
+# LOGGING CONFIGURATION
+###############################################################################
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "./logs/workflow.log"
+  console: true
+  console_level: "INFO"
+
+  # Log format
+  format: "[%(levelname)s] %(asctime)s - %(name)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+###############################################################################
+# SEMANTIC TREE CONFIGURATION
+###############################################################################
+semantic_trees:
+  # Persona semantic tree weights
+  persona_weights:
+    demographics: 0.25
+    socioeconomic: 0.15
+    health_profile: 0.35
+    behavioral: 0.15
+    psychosocial: 0.10
+
+  # Matching algorithm
+  matching:
+    algorithm: "hungarian"  # Options: hungarian, greedy, random
+    blended_weights:
+      demographic: 0.40
+      semantic: 0.60
+    semantic_weight_override: null  # Set to override blended weights
+    semantic_only: false  # If true, use only semantic matching
+
+###############################################################################
+# QUALITY ASSURANCE
+###############################################################################
+quality_assurance:
+  # Validation thresholds
+  validation:
+    min_semantic_tree_completeness: 0.95  # 95% of fields should be present
+    min_data_quality_score: 0.90  # 90% minimum data quality
+
+  # Data diversity requirements
+  diversity:
+    min_age_range: 20  # years
+    min_unique_conditions: 10
+    min_unique_medications: 5
+
+  # Anomaly thresholds
+  anomalies:
+    high_cost_percentile: 0.90  # Top 10% considered high cost
+    sentiment_extreme_threshold: 0.8  # |sentiment| > 0.8 is extreme
+    obstetric_risk_threshold: 3.5  # Risk score >= 3.5 is flagged
+
+###############################################################################
+# PERFORMANCE TUNING
+###############################################################################
+performance:
+  # Caching
+  cache_enabled: true
+  cache_dir: "./.cache"
+
+  # Batch processing
+  batch_size: 100
+
+  # Parallel processing
+  use_multiprocessing: true
+  num_processes: 4
+
+  # Memory optimization
+  chunk_size: 1000  # Process records in chunks
+
+###############################################################################
+# ENVIRONMENT & DEPENDENCIES
+###############################################################################
+environment:
+  # Python version requirement
+  python_min_version: "3.9"
+
+  # Required packages
+  required_packages:
+    - "anthropic"
+    - "openai"
+    - "google-generativeai"
+    - "pyyaml"
+    - "python-dotenv"
+    - "nltk"
+    - "pandas"
+    - "scipy"
+    - "requests"
+
+  # Optional packages
+  optional_packages:
+    - "synthea"  # For FHIR generation
+
+###############################################################################
+# WORKFLOW EXECUTION PRESETS
+###############################################################################
+# Quick Start Presets - Uncomment to use
+presets:
+  quick_test:
+    description: "Quick test with minimal data"
+    num_personas: 10
+    num_health_records: 10
+    interview_batch_size: 2
+    num_workers: 2
+
+  standard:
+    description: "Standard workflow execution"
+    num_personas: 100
+    num_health_records: 100
+    interview_batch_size: 5
+    num_workers: 4
+
+  production:
+    description: "Full production run"
+    num_personas: 1000
+    num_health_records: 1000
+    interview_batch_size: 10
+    num_workers: 8
+
+################################################################################
+# END OF CONFIGURATION
+################################################################################
