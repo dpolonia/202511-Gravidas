@@ -56,7 +56,8 @@ from utils.semantic_tree import (
     SocioeconomicNode,
     HealthProfileNode,
     BehavioralNode,
-    PsychosocialNode
+    PsychosocialNode,
+    PregnancyIntentionsNode
 )
 
 # Setup logging
@@ -123,7 +124,16 @@ HEALTH & PREGNANCY DIMENSIONS:
 14. Pregnancy planning status (not planning, uncertain, planning, actively trying)
 15. Social support for pregnancy (family/partner support, isolation, strong network)
 16. Mental health status and stress level
-17. Any reproductive history relevant to pregnancy
+
+PREGNANCY-SPECIFIC HISTORY:
+17. Number of previous pregnancies (gravida) and live births (para)
+18. Any previous pregnancy complications (e.g., gestational diabetes, preeclampsia, miscarriage)
+19. Previous delivery methods (vaginal, cesarean)
+20. Fertility treatment history (IVF, IUI, medications, or none)
+21. Current contraception use (if any)
+22. Breastfeeding history and duration (if applicable)
+23. How long actively trying to conceive (if applicable)
+24. Preconception care engagement (taking prenatal vitamins, seeing doctor before pregnancy)
 
 Format each persona as a comprehensive paragraph (5-7 sentences) that integrates both demographic and healthcare information naturally. Make them diverse in:
 - Age (range 12-60, but focus on 18-45)
@@ -138,9 +148,11 @@ Format each persona as a comprehensive paragraph (5-7 sentences) that integrates
 - Geographic locations (urban/suburban/rural)
 
 Example format:
-"Maria is a 32-year-old accountant living in rural Colorado with a master's degree and upper-middle income. She is married with strong family support and actively trying to conceive. Maria exercises regularly and is very health-conscious, maintaining good preventive care with her primary physician. She has no chronic conditions, doesn't smoke, and drinks occasionally. She is low-stress and well-supported by her extended family in the area."
+"Maria is a 32-year-old accountant living in rural Colorado with a master's degree and upper-middle income. She is married with strong family support and actively trying to conceive for 6 months. Maria exercises regularly and is very health-conscious, maintaining good preventive care with her primary physician. She has no chronic conditions, doesn't smoke, and drinks occasionally. This is her first pregnancy (G0P0), and she has been taking prenatal vitamins for the past 3 months as part of preconception care. She is low-stress and well-supported by her extended family in the area."
 
-Generate exactly {batch_size} personas, each as a separate numbered paragraph. Number them 1-{batch_size}. Ensure each persona includes healthcare dimensions naturally woven into the description."""
+"Jennifer is a 28-year-old nurse with a bachelor's degree living in urban Seattle with middle income. She is single, G2P1 (one previous vaginal delivery 3 years ago, one miscarriage). She had gestational diabetes in her first pregnancy but otherwise no chronic conditions. Jennifer is moderately health-conscious, exercises occasionally, and has good healthcare access through her employer. She is not currently planning another pregnancy and uses hormonal contraception. She breastfed her first child for 8 months and has moderate stress from balancing work and parenting."
+
+Generate exactly {batch_size} personas, each as a separate numbered paragraph. Number them 1-{batch_size}. Ensure each persona includes healthcare dimensions AND pregnancy-specific history naturally woven into the description."""
 
         try:
             response = self.client.messages.create(
@@ -468,6 +480,249 @@ def extract_health_conditions(text: str) -> List[str]:
     return conditions
 
 
+# ==================== PREGNANCY-SPECIFIC ATTRIBUTE EXTRACTION ====================
+
+def extract_gravida_para(text: str) -> Tuple[int, int]:
+    """
+    Extract gravida and para from persona description.
+
+    Returns:
+        Tuple of (gravida, para)
+    """
+    text_lower = text.lower()
+
+    # Pattern 1: G#P# format
+    import re
+    gp_pattern = r'g(\d+)p(\d+)'
+    match = re.search(gp_pattern, text_lower)
+    if match:
+        return int(match.group(1)), int(match.group(2))
+
+    # Pattern 2: "# pregnancies" and "# births"
+    gravida = 0
+    para = 0
+
+    preg_pattern = r'(\d+)\s+(?:previous\s+)?pregnanc(?:y|ies)'
+    preg_match = re.search(preg_pattern, text_lower)
+    if preg_match:
+        gravida = int(preg_match.group(1))
+
+    birth_pattern = r'(\d+)\s+(?:live\s+)?birth(?:s)?'
+    birth_match = re.search(birth_pattern, text_lower)
+    if birth_match:
+        para = int(birth_match.group(1))
+
+    # Pattern 3: "first pregnancy" or "nulliparous"
+    if any(phrase in text_lower for phrase in ['first pregnancy', 'never been pregnant', 'nulliparous', 'g0p0']):
+        return 0, 0
+
+    # Pattern 4: Infer from text descriptions
+    if 'multiparous' in text_lower or 'multiple children' in text_lower:
+        para = 2  # Reasonable default
+        gravida = para
+
+    return gravida, para
+
+
+def extract_pregnancy_complications(text: str) -> List[str]:
+    """Extract previous pregnancy complications from persona description."""
+    text_lower = text.lower()
+
+    complications = []
+    complication_keywords = {
+        'gestational_diabetes': ['gestational diabetes', 'gdm', 'pregnancy diabetes'],
+        'preeclampsia': ['preeclampsia', 'pre-eclampsia', 'pregnancy-induced hypertension', 'pih'],
+        'eclampsia': ['eclampsia'],
+        'placenta_previa': ['placenta previa', 'placental'],
+        'placental_abruption': ['placental abruption', 'abruption'],
+        'preterm_labor': ['preterm labor', 'premature labor', 'early delivery'],
+        'postpartum_hemorrhage': ['postpartum hemorrhage', 'excessive bleeding after'],
+        'hyperemesis': ['hyperemesis', 'severe morning sickness'],
+        'miscarriage': ['miscarriage', 'pregnancy loss', 'spontaneous abortion'],
+        'stillbirth': ['stillbirth', 'fetal death'],
+    }
+
+    for complication, keywords in complication_keywords.items():
+        if any(keyword in text_lower for keyword in keywords):
+            complications.append(complication)
+
+    return complications
+
+
+def extract_delivery_methods(text: str) -> List[str]:
+    """Extract previous delivery methods from persona description."""
+    text_lower = text.lower()
+
+    methods = []
+
+    if any(word in text_lower for word in ['cesarean', 'c-section', 'c section', 'caesarean']):
+        methods.append('cesarean')
+
+    if any(word in text_lower for word in ['vaginal delivery', 'vaginal birth', 'natural birth', 'normal delivery']):
+        methods.append('vaginal')
+
+    if 'vbac' in text_lower:
+        methods.append('vbac')  # Vaginal birth after cesarean
+
+    return methods
+
+
+def extract_miscarriage_count(text: str) -> int:
+    """Extract number of miscarriages from persona description."""
+    text_lower = text.lower()
+
+    import re
+    # Pattern: "# miscarriage(s)"
+    pattern = r'(\d+)\s+miscarriage(?:s)?'
+    match = re.search(pattern, text_lower)
+    if match:
+        return int(match.group(1))
+
+    # Check for single mentions
+    if any(phrase in text_lower for phrase in ['one miscarriage', 'a miscarriage', 'had a pregnancy loss']):
+        return 1
+
+    if 'multiple miscarriages' in text_lower or 'several miscarriages' in text_lower:
+        return 2
+
+    return 0
+
+
+def extract_fertility_treatments(text: str) -> Tuple[bool, List[str]]:
+    """
+    Extract fertility treatment information.
+
+    Returns:
+        Tuple of (has_treatments, treatment_types)
+    """
+    text_lower = text.lower()
+
+    treatments = []
+
+    if 'ivf' in text_lower or 'in vitro' in text_lower:
+        treatments.append('IVF')
+
+    if 'iui' in text_lower or 'intrauterine insemination' in text_lower:
+        treatments.append('IUI')
+
+    if any(word in text_lower for word in ['clomid', 'clomiphene', 'fertility medication']):
+        treatments.append('medication')
+
+    if 'fertility treatment' in text_lower or 'reproductive assistance' in text_lower:
+        treatments.append('other')
+
+    return len(treatments) > 0, treatments
+
+
+def extract_trying_duration(text: str) -> int:
+    """Extract how long actively trying to conceive (in months)."""
+    text_lower = text.lower()
+
+    import re
+
+    # Pattern 1: "trying for # months"
+    months_pattern = r'trying\s+(?:to\s+conceive\s+)?for\s+(\d+)\s+months?'
+    match = re.search(months_pattern, text_lower)
+    if match:
+        return int(match.group(1))
+
+    # Pattern 2: "trying for # year(s)"
+    years_pattern = r'trying\s+(?:to\s+conceive\s+)?for\s+(\d+)\s+years?'
+    match = re.search(years_pattern, text_lower)
+    if match:
+        return int(match.group(1)) * 12
+
+    # Pattern 3: "actively trying" without duration
+    if 'actively trying' in text_lower or 'trying to conceive' in text_lower:
+        return 3  # Default 3 months
+
+    return 0
+
+
+def extract_contraception(text: str) -> Tuple[Optional[str], List[str]]:
+    """
+    Extract contraception information.
+
+    Returns:
+        Tuple of (current_method, history)
+    """
+    text_lower = text.lower()
+
+    current = None
+    history = []
+
+    contraception_map = {
+        'pill': ['birth control pill', 'oral contraceptive', 'the pill'],
+        'iud': ['iud', 'intrauterine device', 'mirena', 'copper iud'],
+        'implant': ['implant', 'nexplanon'],
+        'injection': ['depo', 'injection', 'shot'],
+        'condom': ['condom'],
+        'patch': ['patch'],
+        'ring': ['ring', 'nuvaring'],
+        'sterilization': ['tubal ligation', 'sterilized', 'tubes tied'],
+        'natural': ['natural family planning', 'rhythm method', 'withdrawal'],
+    }
+
+    for method, keywords in contraception_map.items():
+        if any(keyword in text_lower for keyword in keywords):
+            if any(phrase in text_lower for phrase in ['currently uses', 'using', 'on']):
+                current = method
+            else:
+                history.append(method)
+
+    # Check for "not using contraception"
+    if any(phrase in text_lower for phrase in ['no contraception', 'not using contraception', 'off birth control']):
+        current = 'none'
+
+    return current, history
+
+
+def extract_breastfeeding_history(text: str) -> Tuple[bool, int]:
+    """
+    Extract breastfeeding history.
+
+    Returns:
+        Tuple of (has_breastfed, duration_months)
+    """
+    text_lower = text.lower()
+
+    if not any(word in text_lower for word in ['breastf', 'nursed', 'nursing']):
+        return False, 0
+
+    import re
+
+    # Pattern: "breastfed for # months"
+    months_pattern = r'breastf(?:ed|eeding)\s+(?:for\s+)?(\d+)\s+months?'
+    match = re.search(months_pattern, text_lower)
+    if match:
+        return True, int(match.group(1))
+
+    # Pattern: "breastfed for # year(s)"
+    years_pattern = r'breastf(?:ed|eeding)\s+(?:for\s+)?(\d+)\s+years?'
+    match = re.search(years_pattern, text_lower)
+    if match:
+        return True, int(match.group(1)) * 12
+
+    # Just mentions breastfeeding
+    if any(word in text_lower for word in ['breastfed', 'breastfeeding']):
+        return True, 6  # Default 6 months
+
+    return False, 0
+
+
+def extract_preconception_care(text: str) -> bool:
+    """Extract whether engaged in preconception care."""
+    text_lower = text.lower()
+
+    indicators = [
+        'prenatal vitamin', 'folic acid', 'preconception',
+        'preparing for pregnancy', 'seeing doctor before pregnancy',
+        'preconception counseling', 'planning pregnancy with doctor'
+    ]
+
+    return any(indicator in text_lower for indicator in indicators)
+
+
 def parse_generated_personas(text: str, start_id: int) -> List[Dict[str, Any]]:
     """Parse generated persona text into structured format."""
     personas = []
@@ -517,6 +772,17 @@ def build_semantic_tree_for_persona(text: str, persona_id: int, basic_data: Dict
     smoking_status = extract_smoking_status(text)
     alcohol_consumption = extract_alcohol_consumption(text)
     health_conditions = extract_health_conditions(text)
+
+    # Extract pregnancy-specific attributes
+    gravida, para = extract_gravida_para(text)
+    previous_complications = extract_pregnancy_complications(text)
+    delivery_methods = extract_delivery_methods(text)
+    miscarriage_count = extract_miscarriage_count(text)
+    has_fertility_tx, fertility_tx_types = extract_fertility_treatments(text)
+    trying_duration = extract_trying_duration(text)
+    contraception_current, contraception_history = extract_contraception(text)
+    has_breastfed, breastfeeding_months = extract_breastfeeding_history(text)
+    preconception_care = extract_preconception_care(text)
 
     # Infer employment status
     text_lower = text.lower()
@@ -640,6 +906,9 @@ def build_semantic_tree_for_persona(text: str, persona_id: int, basic_data: Dict
     else:
         sleep_quality = 3
 
+    # Calculate partner support for pregnancy from social support and relationship stability
+    partner_support = min(5, max(1, (social_support + relationship_stability) // 2))
+
     # Build the semantic tree
     semantic_tree = PersonaSemanticTree(
         persona_id=persona_id,
@@ -689,6 +958,26 @@ def build_semantic_tree_for_persona(text: str, persona_id: int, basic_data: Dict
             relationship_stability=relationship_stability,
             financial_stress=financial_stress,
             family_planning_attitudes=family_planning_attitudes
+        ),
+
+        pregnancy_intentions=PregnancyIntentionsNode(
+            trying_duration=trying_duration,
+            gravida=gravida,
+            para=para,
+            previous_complications=previous_complications,
+            previous_delivery_methods=delivery_methods,
+            miscarriage_count=miscarriage_count,
+            abortion_count=0,  # Not extracted (sensitive topic)
+            ectopic_count=0,  # Not extracted (would need medical records)
+            fertility_treatments=has_fertility_tx,
+            fertility_treatment_types=fertility_tx_types,
+            preconception_care=preconception_care,
+            contraception_current=contraception_current,
+            contraception_history=contraception_history,
+            breastfeeding_history=has_breastfed,
+            breastfeeding_duration_months=breastfeeding_months,
+            pregnancy_spacing_preference=None,  # Not extracted (complex inference)
+            partner_support_for_pregnancy=partner_support
         )
     )
 
@@ -863,6 +1152,20 @@ def save_personas(personas: List[Dict[str, Any]], output_path: str):
             'employment_status_distribution': {},
             'insurance_status_distribution': {},
             'with_health_conditions_count': 0
+        },
+        'pregnancy_intentions_statistics': {
+            'gravida_distribution': {},
+            'para_distribution': {},
+            'nulliparous_count': 0,
+            'multiparous_count': 0,
+            'with_previous_complications_count': 0,
+            'fertility_treatment_count': 0,
+            'actively_trying_count': 0,
+            'using_contraception_count': 0,
+            'preconception_care_count': 0,
+            'breastfeeding_history_count': 0,
+            'previous_cesarean_count': 0,
+            'previous_vaginal_count': 0
         }
     }
 
@@ -925,6 +1228,54 @@ def save_personas(personas: List[Dict[str, Any]], output_path: str):
             if conditions:
                 summary['semantic_tree_statistics']['with_health_conditions_count'] += 1
 
+            # Pregnancy intentions statistics
+            pregnancy_int = tree.get('pregnancy_intentions', {})
+            if pregnancy_int:
+                gravida = pregnancy_int.get('gravida', 0)
+                para = pregnancy_int.get('para', 0)
+
+                # Gravida/para distribution
+                summary['pregnancy_intentions_statistics']['gravida_distribution'][gravida] = \
+                    summary['pregnancy_intentions_statistics']['gravida_distribution'].get(gravida, 0) + 1
+                summary['pregnancy_intentions_statistics']['para_distribution'][para] = \
+                    summary['pregnancy_intentions_statistics']['para_distribution'].get(para, 0) + 1
+
+                # Nulliparous vs multiparous
+                if para == 0:
+                    summary['pregnancy_intentions_statistics']['nulliparous_count'] += 1
+                elif para >= 1:
+                    summary['pregnancy_intentions_statistics']['multiparous_count'] += 1
+
+                # Previous complications
+                if pregnancy_int.get('previous_complications'):
+                    summary['pregnancy_intentions_statistics']['with_previous_complications_count'] += 1
+
+                # Fertility treatments
+                if pregnancy_int.get('fertility_treatments', False):
+                    summary['pregnancy_intentions_statistics']['fertility_treatment_count'] += 1
+
+                # Actively trying
+                if pregnancy_int.get('trying_duration', 0) > 0:
+                    summary['pregnancy_intentions_statistics']['actively_trying_count'] += 1
+
+                # Contraception
+                if pregnancy_int.get('contraception_current'):
+                    summary['pregnancy_intentions_statistics']['using_contraception_count'] += 1
+
+                # Preconception care
+                if pregnancy_int.get('preconception_care', False):
+                    summary['pregnancy_intentions_statistics']['preconception_care_count'] += 1
+
+                # Breastfeeding history
+                if pregnancy_int.get('breastfeeding_history', False):
+                    summary['pregnancy_intentions_statistics']['breastfeeding_history_count'] += 1
+
+                # Delivery methods
+                if 'cesarean' in pregnancy_int.get('previous_delivery_methods', []):
+                    summary['pregnancy_intentions_statistics']['previous_cesarean_count'] += 1
+                if 'vaginal' in pregnancy_int.get('previous_delivery_methods', []):
+                    summary['pregnancy_intentions_statistics']['previous_vaginal_count'] += 1
+
     with open(summary_file, 'w') as f:
         json.dump(summary, f, indent=2)
 
@@ -939,6 +1290,22 @@ def save_personas(personas: List[Dict[str, Any]], output_path: str):
         logger.info(f"Healthcare Access distribution: {summary['semantic_tree_statistics']['healthcare_access_distribution']}")
         logger.info(f"Pregnancy Readiness distribution: {summary['semantic_tree_statistics']['pregnancy_readiness_distribution']}")
         logger.info(f"Personas with health conditions: {summary['semantic_tree_statistics']['with_health_conditions_count']}")
+
+    # Log pregnancy intentions summary
+    if summary['pregnancy_intentions_statistics']['gravida_distribution']:
+        logger.info("")
+        logger.info("PREGNANCY INTENTIONS SUMMARY")
+        logger.info(f"Gravida distribution: {summary['pregnancy_intentions_statistics']['gravida_distribution']}")
+        logger.info(f"Para distribution: {summary['pregnancy_intentions_statistics']['para_distribution']}")
+        logger.info(f"Nulliparous (G0P0): {summary['pregnancy_intentions_statistics']['nulliparous_count']}")
+        logger.info(f"Multiparous (P≥1): {summary['pregnancy_intentions_statistics']['multiparous_count']}")
+        logger.info(f"With previous complications: {summary['pregnancy_intentions_statistics']['with_previous_complications_count']}")
+        logger.info(f"Using fertility treatments: {summary['pregnancy_intentions_statistics']['fertility_treatment_count']}")
+        logger.info(f"Actively trying to conceive: {summary['pregnancy_intentions_statistics']['actively_trying_count']}")
+        logger.info(f"Using contraception: {summary['pregnancy_intentions_statistics']['using_contraception_count']}")
+        logger.info(f"Receiving preconception care: {summary['pregnancy_intentions_statistics']['preconception_care_count']}")
+        logger.info(f"With breastfeeding history: {summary['pregnancy_intentions_statistics']['breastfeeding_history_count']}")
+
     logger.info("=" * 60)
 
 

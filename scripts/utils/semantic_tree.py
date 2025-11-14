@@ -72,6 +72,43 @@ class SocialSupport(Enum):
 # ==================== PERSONA SEMANTIC TREE ====================
 
 @dataclass
+class PregnancyIntentionsNode:
+    """Pregnancy-specific intentions and history for persona."""
+    trying_duration: int = 0  # Months actively trying to conceive (0 if not trying)
+    gravida: int = 0  # Total number of pregnancies (including current)
+    para: int = 0  # Number of births after 20 weeks gestation
+    previous_complications: List[str] = field(default_factory=list)  # e.g., ["gestational_diabetes", "preeclampsia"]
+    previous_delivery_methods: List[str] = field(default_factory=list)  # e.g., ["vaginal", "cesarean"]
+    miscarriage_count: int = 0  # Number of pregnancy losses before 20 weeks
+    abortion_count: int = 0  # Number of elective terminations
+    ectopic_count: int = 0  # Number of ectopic pregnancies
+    fertility_treatments: bool = False  # Currently using or has used fertility treatments
+    fertility_treatment_types: List[str] = field(default_factory=list)  # e.g., ["IVF", "IUI", "Clomid"]
+    preconception_care: bool = False  # Currently receiving preconception counseling
+    contraception_current: Optional[str] = None  # Current contraception method
+    contraception_history: List[str] = field(default_factory=list)  # Previous methods
+    breastfeeding_history: bool = False  # Has previously breastfed
+    breastfeeding_duration_months: int = 0  # Average duration of breastfeeding
+    pregnancy_spacing_preference: Optional[str] = None  # e.g., "2-3 years", "close together", "no preference"
+    partner_support_for_pregnancy: int = 3  # 1-5 scale for partner support
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return asdict(self)
+
+    def validate(self) -> bool:
+        """Validate pregnancy intentions node."""
+        if self.gravida < 0 or self.para < 0:
+            logger.warning("Gravida and para must be non-negative")
+        if self.para > self.gravida:
+            logger.warning(f"Para ({self.para}) cannot exceed gravida ({self.gravida})")
+        if not (1 <= self.partner_support_for_pregnancy <= 5):
+            logger.warning(f"Partner support should be 1-5, got {self.partner_support_for_pregnancy}")
+        if self.trying_duration < 0:
+            logger.warning(f"Trying duration must be non-negative, got {self.trying_duration}")
+        return True
+
+@dataclass
 class DemographicsNode:
     """Demographics branch of semantic tree."""
     age: int
@@ -206,6 +243,7 @@ class PersonaSemanticTree:
     health_profile: HealthProfileNode
     behavioral: BehavioralNode
     psychosocial: PsychosocialNode
+    pregnancy_intentions: PregnancyIntentionsNode
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert complete tree to dictionary."""
@@ -215,7 +253,8 @@ class PersonaSemanticTree:
             'socioeconomic': self.socioeconomic.to_dict(),
             'health_profile': self.health_profile.to_dict(),
             'behavioral': self.behavioral.to_dict(),
-            'psychosocial': self.psychosocial.to_dict()
+            'psychosocial': self.psychosocial.to_dict(),
+            'pregnancy_intentions': self.pregnancy_intentions.to_dict()
         }
 
     def validate(self) -> bool:
@@ -225,6 +264,7 @@ class PersonaSemanticTree:
         self.health_profile.validate()
         self.behavioral.validate()
         self.psychosocial.validate()
+        self.pregnancy_intentions.validate()
         return True
 
 
@@ -569,13 +609,21 @@ def health_tree_to_json(tree: HealthRecordSemanticTree) -> str:
 
 def persona_tree_from_dict(data: Dict[str, Any]) -> PersonaSemanticTree:
     """Deserialize persona semantic tree from dictionary."""
+    # Handle backward compatibility - old personas may not have pregnancy_intentions
+    pregnancy_intentions_data = data.get('pregnancy_intentions', {})
+    if not pregnancy_intentions_data:
+        pregnancy_intentions = PregnancyIntentionsNode()
+    else:
+        pregnancy_intentions = PregnancyIntentionsNode(**pregnancy_intentions_data)
+
     return PersonaSemanticTree(
         persona_id=data['persona_id'],
         demographics=DemographicsNode(**data['demographics']),
         socioeconomic=SocioeconomicNode(**data['socioeconomic']),
         health_profile=HealthProfileNode(**data['health_profile']),
         behavioral=BehavioralNode(**data['behavioral']),
-        psychosocial=PsychosocialNode(**data['psychosocial'])
+        psychosocial=PsychosocialNode(**data['psychosocial']),
+        pregnancy_intentions=pregnancy_intentions
     )
 
 
