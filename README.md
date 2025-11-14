@@ -11,9 +11,10 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 - **Persona Retrieval**: Downloads 10,000 female personas from HuggingFace FinePersonas dataset
 - **Health Record Generation**: Uses Synthea to generate realistic pregnancy-related medical records
 - **Intelligent Matching**: Matches personas to health records based on age compatibility and socioeconomic factors
-- **19 AI Models**: Support for Anthropic Claude, OpenAI GPT-5, Google Gemini, AWS Bedrock, Mistral AI, and xAI Grok
-- **Batch API Support**: 50% cost savings for large-scale processing (100+ interviews)
-- **Interactive Launcher**: User-friendly CLI with cost estimates and model comparisons
+- **60+ AI Models**: Support for 15+ providers including OpenAI, Anthropic, Google, AWS, Azure, Mistral, xAI, and more
+- **Universal AI Client**: Seamless switching between providers with unified interface
+- **Batch API Support**: Up to 50% cost savings for large-scale processing with automatic detection
+- **Real-time Cost Estimation**: Accurate pricing with batch mode recommendations
 - **Protocol-Based Interviews**: Customizable interview protocols for different research scenarios
 - **Comprehensive Documentation**: Model specs, cost analysis, and step-by-step tutorials
 
@@ -34,8 +35,10 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 │   ├── 01_retrieve_personas.py
 │   ├── 02_generate_health_records.py
 │   ├── 03_match_personas_records.py
-│   ├── 04_conduct_interviews.py
+│   ├── 04_conduct_interviews.py # Updated with universal client support
 │   ├── interactive_interviews.py # AI model selection interface
+│   ├── enhanced_models_database.py # 🆕 Comprehensive provider/model database
+│   ├── universal_ai_client.py   # 🆕 Universal client factory for all providers
 │   ├── generate_test_data.py    # Quick test data generation
 │   └── utils/                   # Helper functions
 ├── Script/
@@ -45,6 +48,7 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 │   ├── API_CONFIGURATION.md
 │   └── MODEL_SELECTION.md
 ├── TUTORIAL.md
+├── INTEGRATION_SUMMARY.md      # 🆕 v1.0.1 integration details
 └── requirements.txt
 ```
 
@@ -56,30 +60,50 @@ This pipeline creates 10,000 synthetic personas of women in fertile age (12-60 y
 python run_pipeline.py
 
 # CLI mode - automated execution  
-python run_pipeline.py --count 100 --provider anthropic --model claude-opus-4-1
+python run_pipeline.py --count 100 --provider anthropic --model claude-sonnet-4-5
 
 # Quick test with 10 interviews
 python run_pipeline.py --count 10 --test
 
 # Large study with batch API (50% cost savings)  
-python run_pipeline.py --count 1000 --batch --provider google --model gemini-2.5-flash
+python run_pipeline.py --count 1000 --batch --provider together --model llama-3.1-405b
+
+# Ultra-fast processing with Groq
+python run_pipeline.py --count 500 --provider groq --model llama-3.3-70b --batch
 ```
 
-### Latest AI Models (2025)
+### Latest AI Models (2025) - 60+ Models from 15+ Providers
 
-| **Provider** | **Model** | **Quality** | **Cost (per 1M tokens)** | **Context** |
+| **Provider** | **Model** | **Quality** | **Cost (per 1M tokens)** | **Features** |
 |--------------|-----------|-------------|---------------------------|-------------|
-| **Anthropic** | `claude-opus-4-1` | Exceptional | $15/$75 | 200K |
-| | `claude-sonnet-4-5-20250929` ⭐ | Excellent | $3/$15 | 200K |
-| | `claude-haiku-4-5` | Very Good | $1/$5 | 200K |
-| **OpenAI** | `gpt-5` ⭐ | Excellent | $1.25/$10 | 1M |
-| | `gpt-4-1` | Excellent | $3/$12 | 1M |
-| | `gpt-5-pro` | Exceptional | $15/$120 | 1M |
-| **Google** | `gemini-2.5-pro` ⭐ | Excellent | $1.25/$10 | 1M |
-| | `gemini-2.5-flash` | Very Good | $0.26/$1.25 | 1M |
-| **xAI** | `grok-4` | Excellent | $3/$15 | 2M |
+| **OpenAI** | `gpt-5` ⭐ | Excellent | $1.25/$10 | 🔄 1M context |
+| | `gpt-5-mini` | Very Good | $0.25/$2.00 | 🔄 Fast |
+| | `gpt-4o` | Excellent | $2.50/$10 | 🔄 Vision |
+| **Anthropic** | `claude-sonnet-4-5` ⭐ | Excellent | $3/$15 | 🔄 200K context |
+| | `claude-opus-4-1` | Exceptional | $15/$75 | 🔄 Premium |
+| | `claude-haiku-4-5` | Very Good | $1/$5 | 🔄 Fast |
+| **Google** | `gemini-2.5-pro` ⭐ | Excellent | $1.25/$10 | 🔄 1M context |
+| | `gemini-2.5-flash` | Very Good | $0.15/$1.25 | 🔄 💰 Best value |
+| **Together AI** | `llama-3.1-405b` | Excellent | $3.50/$3.50 | 🔄 Open source |
+| | `llama-4-maverick` | Very Good | $0.27/$0.85 | 🔄 💰 |
+| **Groq** | `llama-3.3-70b` | Very Good | $0.59/$0.79 | 🔄 ⚡ Ultra-fast |
+| | `llama-3.1-8b` | Good | $0.05/$0.08 | 🔄 💰 Cheapest |
+| **Mistral** | `mistral-large-2` | Excellent | $2.00/$6.00 | Advanced reasoning |
+| **xAI** | `grok-4` | Excellent | $3/$15 | Real-time knowledge |
+| **DeepSeek** | `deepseek-v3.2-exp` | Very Good | $0.28/$0.42 | 💰 Experimental |
 
-⭐ = Recommended • 🔄 = Batch API Available • 💰 = Cost-effective
+⭐ = Recommended • 🔄 = Batch API (50% savings) • 💰 = Cost-effective • ⚡ = Ultra-fast
+
+**Full Support:** AWS Bedrock, Azure OpenAI, Azure AI Foundry, Fireworks AI, Cohere, Perplexity
+
+### 🆕 What's New in v1.0.1
+
+- ✅ **15+ AI Providers**: Comprehensive integration from OpenAI to specialized providers
+- ✅ **60+ Models**: Latest 2025 models with accurate pricing from AImodels.csv
+- ✅ **Universal Client**: Seamless switching between any provider with unified interface  
+- ✅ **Enhanced Cost Optimization**: Automatic batch API detection and savings calculation
+- ✅ **Real-time Pricing**: Accurate cost estimation with per-provider breakdowns
+- ✅ **Improved CLI**: All providers available in both interactive and command-line modes
 
 ---
 
