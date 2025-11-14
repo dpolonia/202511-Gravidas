@@ -157,7 +157,7 @@ Generate exactly {batch_size} personas, each as a separate numbered paragraph. N
         try:
             response = self.client.messages.create(
                 model=self.model,
-                max_tokens=6000,  # Increased for more detailed personas
+                max_tokens=4096,  # Maximum allowed for Claude models
                 temperature=0.9,  # High temperature for diversity
                 messages=[{
                     "role": "user",

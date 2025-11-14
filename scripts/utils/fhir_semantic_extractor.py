@@ -18,7 +18,7 @@ import logging
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
 
-from semantic_tree import (
+from utils.semantic_tree import (
     HealthRecordSemanticTree,
     ClinicCondition,
     MedicationProfile,
