@@ -49,6 +49,40 @@ except ImportError:
 from utils.common_loaders import load_config
 from utils.retry_logic import RetryConfig, exponential_backoff_retry
 
+# Import enhanced models and universal AI client
+from enhanced_models_database import ENHANCED_MODELS_DATABASE, get_model_info, calculate_cost
+from universal_ai_client import (
+    BaseAIClient, AIResponse, OpenAIClient, AnthropicClient,
+    GoogleClient, GenericAPIClient, AIClientFactory
+)
+
+def create_ai_client(provider: str, model: str) -> BaseAIClient:
+    """Create AI client instance based on provider and model."""
+    if provider not in ENHANCED_MODELS_DATABASE:
+        raise ValueError(f"Unsupported provider: {provider}")
+    
+    provider_info = ENHANCED_MODELS_DATABASE[provider]
+    api_key_env = provider_info['api_key_env']
+    api_key = os.getenv(api_key_env)
+    
+    if not api_key:
+        raise ValueError(f"API key not found for {provider}. Please set {api_key_env}")
+    
+    # Create client based on provider - use specific clients when available
+    try:
+        if provider == 'openai':
+            return OpenAIClient(model, api_key)
+        elif provider == 'anthropic':
+            return AnthropicClient(model, api_key)
+        elif provider == 'google':
+            return GoogleClient(model, api_key)
+        else:
+            # For other providers, use the generic API client
+            base_url = provider_info.get('base_url', '')
+            return GenericAPIClient(provider, model, api_key, base_url=base_url)
+    except Exception as e:
+        raise ValueError(f"Failed to create client for {provider}: {e}")
+
 
 def expand_env_vars(value: str) -> str:
     """Expand environment variables in config values like ${VAR_NAME}."""
@@ -480,7 +514,7 @@ Remember: This is a synthetic persona for research purposes. Conduct the intervi
 
 
 def conduct_interview(
-    ai_provider: AIProvider,
+    ai_client: BaseAIClient,
     persona: Dict[str, Any],
     health_record: Dict[str, Any],
     protocol: Dict[str, Any],
@@ -513,7 +547,12 @@ def conduct_interview(
 
     # Get initial response
     try:
-        response = ai_provider.generate_response(messages)
+        # Convert messages to single prompt for universal client
+        conversation_prompt = system_prompt + "\n\n" + intro_message
+        
+        ai_response = ai_client.generate(conversation_prompt)
+        response = ai_response.content
+        
         messages.append({'role': 'assistant', 'content': response})
         transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
     except Exception as e:
@@ -530,7 +569,16 @@ def conduct_interview(
         transcript.append({'speaker': 'Interviewer', 'text': question_text, 'timestamp': dt.now().isoformat()})
 
         try:
-            response = ai_provider.generate_response(messages)
+            # Build conversation context for universal client
+            conversation_context = system_prompt + "\n\nConversation so far:\n"
+            for msg in messages[1:]:  # Skip system message
+                role = "Interviewer" if msg['role'] == 'user' else "Persona"
+                conversation_context += f"{role}: {msg['content']}\n"
+            conversation_context += f"Interviewer: {question_text}\nPersona:"
+            
+            ai_response = ai_client.generate(conversation_context)
+            response = ai_response.content
+            
             messages.append({'role': 'assistant', 'content': response})
             transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
 
@@ -547,7 +595,15 @@ def conduct_interview(
     transcript.append({'speaker': 'Interviewer', 'text': outro_message, 'timestamp': dt.now().isoformat()})
 
     try:
-        response = ai_provider.generate_response(messages)
+        # Build final conversation context
+        final_context = system_prompt + "\n\nConversation so far:\n"
+        for msg in messages[1:]:  # Skip system message
+            role = "Interviewer" if msg['role'] == 'user' else "Persona"
+            final_context += f"{role}: {msg['content']}\n"
+        final_context += f"Interviewer: {outro_message}\nPersona:"
+        
+        ai_response = ai_client.generate(final_context)
+        response = ai_response.content
         transcript.append({'speaker': 'Persona', 'text': response, 'timestamp': dt.now().isoformat()})
     except Exception as e:
         logger.warning(f"Failed to get conclusion response: {e}")
@@ -670,11 +726,20 @@ Examples:
         logger.warning(f"Requested {args.count} interviews but only {available} personas available")
         args.count = available
 
-    # Initialize AI provider with retry logic
+    # Initialize AI provider with universal client factory
     logger.info(f"Initializing AI provider: {provider} with model: {model}")
     try:
-        ai_provider = create_ai_provider(provider, config, model=model, retry_config=retry_config)
-        logger.info(f"AI provider initialized successfully")
+        ai_client = create_ai_client(provider, model)
+        logger.info(f"AI provider initialized successfully using universal client factory")
+        
+        # Validate model exists in database
+        model_info = get_model_info(provider, model)
+        if not model_info:
+            raise ValueError(f"Model {model} not found for provider {provider}")
+            
+        logger.info(f"Model info: {model_info['name']} - {model_info['description']}")
+        logger.info(f"Cost: ${model_info['cost_input']}/M input, ${model_info['cost_output']}/M output")
+        
     except Exception as e:
         logger.error(f"Failed to initialize AI provider: {e}")
         sys.exit(1)
@@ -741,7 +806,7 @@ Examples:
 
         try:
             interview = conduct_interview(
-                ai_provider,
+                ai_client,
                 persona,
                 health_record,
                 protocol,
