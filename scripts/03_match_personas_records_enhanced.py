@@ -508,8 +508,9 @@ def match_optimal_with_selection(
     for persona_idx, record_idx in zip(persona_indices, record_indices):
         score = compatibility_matrix[persona_idx, record_idx]
 
-        # Get detailed breakdown
-        breakdown = detailed_metrics[persona_idx][record_idx]['breakdown']
+        # Get detailed breakdown (handle both demographic and semantic metrics)
+        metric_entry = detailed_metrics[persona_idx][record_idx]
+        breakdown = metric_entry.get('breakdown') or metric_entry.get('semantic_breakdown', {})
 
         # Calculate quality category
         if score >= 0.85:
