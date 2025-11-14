@@ -15,7 +15,7 @@ import logging
 from typing import Dict, List, Any, Tuple, Optional
 import numpy as np
 
-from semantic_tree import (
+from utils.semantic_tree import (
     PersonaSemanticTree,
     HealthRecordSemanticTree,
     calculate_semantic_tree_similarity

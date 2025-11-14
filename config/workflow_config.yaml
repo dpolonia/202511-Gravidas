@@ -43,12 +43,11 @@ ai_provider:
   # Provider-specific configurations
   providers:
     anthropic:
-      # Model options:
-      # - "claude-4.1-opus" (most capable, highest cost)
-      # - "claude-4.5-sonnet" (recommended - best balance)
-      # - "claude-4.5-haiku" (fast, lower cost)
-      # - "claude-3-haiku" (very cheap, for testing)
-      model: "claude-4.5-sonnet"
+      # Model options (EXACT names required by pipeline):
+      # - "claude-opus-4-1" (most capable, highest cost)
+      # - "claude-sonnet-4-5-20250929" (recommended - best balance)
+      # - "claude-haiku-4-5" (fast, lower cost)
+      model: "claude-sonnet-4-5-20250929"
 
       # API configuration
       api_key: "${ANTHROPIC_API_KEY}"  # From environment
