@@ -139,7 +139,6 @@ pipeline_stages:
     script: "scripts/03_match_personas_records_enhanced.py"
     parameters:
       semantic_weight: 0.6
-      algorithm: "hungarian"
     topics_addressed:
       - "Demographic Similarity (age, location compatibility)"
       - "Socioeconomic Alignment (healthcare access, employment status)"
@@ -157,7 +156,6 @@ pipeline_stages:
     parameters:
       model: "${ai_provider.providers.${ai_provider.active_provider}.model}"
       count: "${workflow.execution.num_personas}"
-      batch_size: "${workflow.execution.interview_batch_size}"
       protocol: "Script/interview_protocols/prenatal_care.json"
     topics_addressed:
       - "AI Model Selection (Claude, GPT, or Gemini)"
