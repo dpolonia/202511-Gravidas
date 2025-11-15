@@ -28,6 +28,10 @@ import logging
 from typing import Dict, Any, List, Optional, Iterator
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Import AI provider SDKs
 try:

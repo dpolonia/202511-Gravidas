@@ -1,0 +1,13 @@
+{
+  "total_records": 10,
+  "with_conditions": 10,
+  "with_medications": 10,
+  "with_encounters": 10,
+  "health_status_distribution": {},
+  "pregnancy_risk_distribution": {},
+  "comorbidity_statistics": {
+    "min": 1.0,
+    "max": 0.0,
+    "avg": 0.0
+  }
+}

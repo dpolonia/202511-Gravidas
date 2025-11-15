@@ -48,6 +48,9 @@ except ImportError as e:
     print(f"Missing: {e}")
     sys.exit(1)
 
+# Load environment variables from .env file
+load_dotenv()
+
 # Import our model database and utilities
 sys.path.append(str(Path(__file__).parent))
 

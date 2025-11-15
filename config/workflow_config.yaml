@@ -37,12 +37,19 @@ workflow:
 # AI PROVIDER AND MODEL SELECTION
 ###############################################################################
 ai_provider:
-  # Active provider: "anthropic", "openai", or "google"
+  # Active provider: "anthropic", "openai", "google", or "xai"
+  # Can be overridden via command line: --provider <name>
   active_provider: "anthropic"
 
-  # Provider-specific configurations
+  # Multi-provider mode: Set to true to enable all providers
+  # When enabled, you can easily switch between any configured provider
+  multi_provider_enabled: true
+
+  # All available providers - ALL ARE ACTIVE AND READY TO USE
+  # Switch by changing active_provider above or using --provider flag
   providers:
     anthropic:
+      enabled: true
       # Model options (EXACT names required by pipeline):
       # - "claude-opus-4-1" (most capable, highest cost)
       # - "claude-sonnet-4-5-20250929" (recommended - best balance)
@@ -50,14 +57,19 @@ ai_provider:
       model: "claude-sonnet-4-5-20250929"
 
       # API configuration
-      api_key: "${ANTHROPIC_API_KEY}"  # From environment
+      api_key: "${ANTHROPIC_API_KEY}"  # From .env file
       max_tokens: 4096
       temperature: 0.7
 
       # Rate limiting
       requests_per_minute: 50
 
+      # Provider info
+      description: "Anthropic Claude - Best balance of quality and cost"
+      recommended: true
+
     openai:
+      enabled: true
       # Model options:
       # - "gpt-5-pro" (peak performance)
       # - "gpt-5" (recommended)
@@ -65,12 +77,17 @@ ai_provider:
       # - "gpt-5-nano" (testing)
       model: "gpt-5"
 
-      api_key: "${OPENAI_API_KEY}"
+      api_key: "${OPENAI_API_KEY}"  # From .env file
       max_tokens: 4096
       temperature: 0.7
       requests_per_minute: 30
 
+      # Provider info
+      description: "OpenAI GPT - High quality, good performance"
+      recommended: true
+
     google:
+      enabled: true
       # Model options:
       # - "gemini-2.5-pro" (recommended)
       # - "gemini-2.5-flash" (fast)
@@ -78,23 +95,32 @@ ai_provider:
       # - "gemini-2.0-flash" (legacy)
       model: "gemini-2.5-flash"
 
-      api_key: "${GOOGLE_API_KEY}"
+      api_key: "${GOOGLE_API_KEY}"  # From .env file
       max_tokens: 4096
       temperature: 0.7
       requests_per_minute: 30
 
+      # Provider info
+      description: "Google Gemini - Best value, very fast"
+      recommended: true
+
     xai:
-      # xAI Grok provider - Optional
+      enabled: true
+      # xAI Grok provider
       # Model options:
       # - "grok-4" (most capable, $3/$15 per 1M tokens)
       # - "grok-4-fast" (recommended - best value, $0.2/$0.5 per 1M tokens)
       # - "grok-3" (budget option, $0.5/$1.0 per 1M tokens)
       model: "grok-4-fast"
 
-      api_key: "${XAI_API_KEY}"
+      api_key: "${XAI_API_KEY}"  # From .env file
       max_tokens: 4096
       temperature: 0.7
       requests_per_minute: 20
+
+      # Provider info
+      description: "xAI Grok - Fastest, best value for money"
+      recommended: true
 
 ###############################################################################
 # PIPELINE STAGES AND TOPIC HIGHLIGHTING
@@ -154,6 +180,7 @@ pipeline_stages:
     description: "Conduct AI-powered interviews with matched persona-record pairs"
     script: "scripts/04_conduct_interviews.py"
     parameters:
+      provider: "${ai_provider.active_provider}"
       model: "${ai_provider.providers.${ai_provider.active_provider}.model}"
       count: "${workflow.execution.num_personas}"
       protocol: "Script/interview_protocols/prenatal_care.json"
@@ -170,10 +197,9 @@ pipeline_stages:
     description: "Comprehensive analysis of interview data"
     script: "scripts/analyze_interviews.py"
     parameters:
-      input_dir: "data/interviews"
-      personas_file: "data/personas/personas.json"
-      records_file: "data/health_records/health_records.json"
-      export_format: "both"  # csv, json, or both
+      export-csv: true
+      export-json: true
+      show-anomalies: true
     topics_addressed:
       - "TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)"
       - "TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)"

@@ -1,0 +1,103 @@
+{
+  "total_count": 10,
+  "generation_method": "AI-generated (Claude) with Semantic Trees",
+  "semantic_trees_included": true,
+  "age_distribution": {
+    "20-29": 4,
+    "30-39": 3,
+    "40-49": 2,
+    "10-19": 1
+  },
+  "education_distribution": {
+    "high_school": 4,
+    "masters": 2,
+    "bachelors": 3,
+    "unknown": 1
+  },
+  "marital_status_distribution": {
+    "unknown": 1,
+    "married": 5,
+    "single": 2,
+    "partnered": 1,
+    "divorced": 1
+  },
+  "income_distribution": {
+    "middle": 4,
+    "high": 2,
+    "low": 2,
+    "upper_middle": 2
+  },
+  "semantic_tree_statistics": {
+    "health_consciousness_distribution": {
+      "2": 3,
+      "5": 3,
+      "4": 4
+    },
+    "healthcare_access_distribution": {
+      "3": 8,
+      "1": 2
+    },
+    "pregnancy_readiness_distribution": {
+      "2": 3,
+      "5": 4,
+      "4": 1,
+      "3": 2
+    },
+    "social_support_distribution": {
+      "3": 10
+    },
+    "mental_health_status_distribution": {
+      "3": 8,
+      "2": 2
+    },
+    "physical_activity_distribution": {
+      "1": 3,
+      "4": 4,
+      "3": 3
+    },
+    "smoking_status_distribution": {
+      "current": 3,
+      "never": 7
+    },
+    "alcohol_consumption_distribution": {
+      "never": 10
+    },
+    "employment_status_distribution": {
+      "employed": 8,
+      "homemaker": 1,
+      "student": 1
+    },
+    "insurance_status_distribution": {
+      "insured": 5,
+      "medicaid": 2,
+      "uninsured": 1,
+      "medicare": 1,
+      "underinsured": 1
+    },
+    "with_health_conditions_count": 5
+  },
+  "pregnancy_intentions_statistics": {
+    "gravida_distribution": {
+      "1": 4,
+      "2": 3,
+      "4": 2,
+      "3": 1
+    },
+    "para_distribution": {
+      "0": 4,
+      "1": 3,
+      "3": 2,
+      "2": 1
+    },
+    "nulliparous_count": 4,
+    "multiparous_count": 6,
+    "with_previous_complications_count": 1,
+    "fertility_treatment_count": 1,
+    "actively_trying_count": 4,
+    "using_contraception_count": 2,
+    "preconception_care_count": 8,
+    "breastfeeding_history_count": 2,
+    "previous_cesarean_count": 0,
+    "previous_vaginal_count": 2
+  }
+}

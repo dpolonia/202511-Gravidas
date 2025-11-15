@@ -1,0 +1,64 @@
+[INFO] === Persona-Record Matching Script Started ===
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Computing compatibility matrix...
+[INFO] Compatibility matrix computed
+[INFO] Running matching algorithm (optimal assignment)...
+[INFO] Created 10 optimal matches
+[INFO] Creating matched pairs...
+[INFO] Saved 10 matched pairs to data/matched/matched_personas.json
+[ERROR] Script failed: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records.py", line 481, in main
+    save_matched_pairs(matched_pairs, args.output)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records.py", line 426, in save_matched_pairs
+    json.dump(stats, f, indent=2)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 433, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 407, in _iterencode_dict
+    yield from chunks
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 440, in _iterencode
+    o = _default(o)
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable
+[INFO] === Persona-Record Matching Script Started ===
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Computing compatibility matrix...
+[INFO] Compatibility matrix computed
+[INFO] Running matching algorithm (optimal assignment)...
+[INFO] Created 10 optimal matches
+[INFO] Creating matched pairs...
+[INFO] Saved 10 matched pairs to data/matched/matched_personas.json
+[ERROR] Script failed: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records.py", line 481, in main
+    save_matched_pairs(matched_pairs, args.output)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records.py", line 426, in save_matched_pairs
+    json.dump(stats, f, indent=2)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 433, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 407, in _iterencode_dict
+    yield from chunks
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 440, in _iterencode
+    o = _default(o)
+  File "/home/dpolonia/anaconda3/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable

@@ -1,0 +1,205 @@
+[INFO] 
+================================================================================
+[INFO] 🔍 GRAVIDAS WORKFLOW SETUP VALIDATION
+[INFO] ================================================================================
+[INFO] 
+================================================================================
+[INFO] 1️⃣  CONFIGURATION FILE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Config File Exists: Found at config/workflow_config.yaml
+[INFO] ✅ YAML Syntax: Configuration YAML is valid
+[INFO] ✅ Required Configuration Keys: All required top-level keys present
+[INFO] 2️⃣  CONFIGURATION VALUES VALIDATION
+
+[INFO] ✅ AI Provider: Valid provider: anthropic
+[INFO] ✅ Number of Personas: num_personas = 100
+[INFO] ✅ Data Paths: Base data directory: ./data
+[INFO] 
+================================================================================
+[INFO] 3️⃣  PYTHON ENVIRONMENT VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Python Version: Python 3.13.5 (required: 3.9+)
+[INFO] 4️⃣  REQUIRED PACKAGES VALIDATION
+
+[INFO] ✅ Package: anthropic: Installed
+[INFO] ✅ Package: openai: Installed
+[ERROR] ❌ Package: google-generativeai: Not installed. Run: pip install google-generativeai
+[ERROR] ❌ Package: pyyaml: Not installed. Run: pip install pyyaml
+[ERROR] ❌ Package: python-dotenv: Not installed. Run: pip install python-dotenv
+[INFO] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[INFO] NumExpr defaulting to 16 threads.
+[INFO] ✅ Package: nltk: Installed
+[INFO] ✅ Package: pandas: Installed
+[INFO] ✅ Package: scipy: Installed
+[INFO] ✅ Package: requests: Installed
+[INFO] 
+================================================================================
+[INFO] 5️⃣  DIRECTORY STRUCTURE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Directory: scripts: Found
+[INFO] ✅ Directory: config: Found
+[INFO] ✅ Directory: data: Found
+[INFO] ✅ Directory: logs: Found
+[WARNING] ❌ Directory: outputs: Directory does not exist. Run: mkdir -p outputs
+[INFO] 6️⃣  REQUIRED SCRIPTS VALIDATION
+
+[INFO] ✅ Script: scripts/01b_generate_personas.py: Not executable
+[INFO] ✅ Script: scripts/02_generate_health_records.py: Executable
+[INFO] ✅ Script: scripts/03_match_personas_records_enhanced.py: Not executable
+[INFO] ✅ Script: scripts/04_conduct_interviews.py: Executable
+[INFO] ✅ Script: scripts/analyze_interviews.py: Not executable
+[INFO] ✅ Script: scripts/test_semantic_implementation.py: Not executable
+[INFO] ✅ Script: scripts/run_workflow.py: Executable
+[INFO] ✅ Script: scripts/test_workflow.py: Executable
+[INFO] 
+================================================================================
+[INFO] 7️⃣  API KEY AND CREDENTIAL VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ API Key: anthropic: ✅ Configured (Environment variable 'ANTHROPIC_API_KEY')
+[WARNING] ❌ API Key: openai: ❌ Not configured (Environment variable 'OPENAI_API_KEY')
+[WARNING] ❌ API Key: google: ❌ Not configured (Environment variable 'GOOGLE_API_KEY')
+[WARNING] ❌ API Key: xai: ❌ Not configured (Environment variable 'XAI_API_KEY')
+[INFO] 
+================================================================================
+[INFO] 8️⃣  DATA FILE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Personas Data: Found 10 personas
+[INFO] ✅ Health Records Data: Found 10 records
+[INFO] 
+================================================================================
+[INFO] 9️⃣  SCRIPT EXECUTION VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Script Execution: scripts/run_workflow.py: Can execute with --help
+[INFO] ✅ Script Execution: scripts/test_workflow.py: Can execute with --help
+[INFO] ✅ Script Execution: scripts/analyze_interviews.py: Can execute with --help
+[INFO] 
+================================================================================
+[INFO] 📊 VALIDATION SUMMARY
+[INFO] ================================================================================
+[INFO] 
+✅ Passed: 31/38
+[INFO] ⚠️  Warnings: 4
+[INFO] ❌ Errors: 3
+[INFO] 
+📋 Critical Errors:
+[INFO]    ❌ Not installed. Run: pip install google-generativeai
+[INFO]    ❌ Not installed. Run: pip install pyyaml
+[INFO]    ❌ Not installed. Run: pip install python-dotenv
+[INFO] 
+⚠️  Warnings:
+[INFO]    ⚠️  Directory does not exist. Run: mkdir -p outputs
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'OPENAI_API_KEY')
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'GOOGLE_API_KEY')
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'XAI_API_KEY')
+[INFO] 
+🎯 Status: ❌ SETUP REQUIRED
+[INFO] ================================================================================
+
+[INFO] 
+================================================================================
+[INFO] 🔍 GRAVIDAS WORKFLOW SETUP VALIDATION
+[INFO] ================================================================================
+[INFO] 
+================================================================================
+[INFO] 1️⃣  CONFIGURATION FILE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Config File Exists: Found at config/workflow_config.yaml
+[INFO] ✅ YAML Syntax: Configuration YAML is valid
+[INFO] ✅ Required Configuration Keys: All required top-level keys present
+[INFO] 2️⃣  CONFIGURATION VALUES VALIDATION
+
+[INFO] ✅ AI Provider: Valid provider: anthropic
+[INFO] ✅ Number of Personas: num_personas = 100
+[INFO] ✅ Data Paths: Base data directory: ./data
+[INFO] 
+================================================================================
+[INFO] 3️⃣  PYTHON ENVIRONMENT VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Python Version: Python 3.13.5 (required: 3.9+)
+[INFO] 4️⃣  REQUIRED PACKAGES VALIDATION
+
+[INFO] ✅ Package: anthropic: Installed
+[INFO] ✅ Package: openai: Installed
+[ERROR] ❌ Package: google-generativeai: Not installed. Run: pip install google-generativeai
+[ERROR] ❌ Package: pyyaml: Not installed. Run: pip install pyyaml
+[ERROR] ❌ Package: python-dotenv: Not installed. Run: pip install python-dotenv
+[INFO] Note: NumExpr detected 20 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 16.
+[INFO] NumExpr defaulting to 16 threads.
+[INFO] ✅ Package: nltk: Installed
+[INFO] ✅ Package: pandas: Installed
+[INFO] ✅ Package: scipy: Installed
+[INFO] ✅ Package: requests: Installed
+[INFO] 
+================================================================================
+[INFO] 5️⃣  DIRECTORY STRUCTURE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Directory: scripts: Found
+[INFO] ✅ Directory: config: Found
+[INFO] ✅ Directory: data: Found
+[INFO] ✅ Directory: logs: Found
+[INFO] ✅ Directory: outputs: Found
+[INFO] 6️⃣  REQUIRED SCRIPTS VALIDATION
+
+[INFO] ✅ Script: scripts/01b_generate_personas.py: Not executable
+[INFO] ✅ Script: scripts/02_generate_health_records.py: Executable
+[INFO] ✅ Script: scripts/03_match_personas_records_enhanced.py: Not executable
+[INFO] ✅ Script: scripts/04_conduct_interviews.py: Executable
+[INFO] ✅ Script: scripts/analyze_interviews.py: Not executable
+[INFO] ✅ Script: scripts/test_semantic_implementation.py: Not executable
+[INFO] ✅ Script: scripts/run_workflow.py: Executable
+[INFO] ✅ Script: scripts/test_workflow.py: Executable
+[INFO] 
+================================================================================
+[INFO] 7️⃣  API KEY AND CREDENTIAL VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ API Key: anthropic: ✅ Configured (Environment variable 'ANTHROPIC_API_KEY')
+[WARNING] ❌ API Key: openai: ❌ Not configured (Environment variable 'OPENAI_API_KEY')
+[WARNING] ❌ API Key: google: ❌ Not configured (Environment variable 'GOOGLE_API_KEY')
+[WARNING] ❌ API Key: xai: ❌ Not configured (Environment variable 'XAI_API_KEY')
+[INFO] 
+================================================================================
+[INFO] 8️⃣  DATA FILE VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Personas Data: Found 10 personas
+[INFO] ✅ Health Records Data: Found 10 records
+[INFO] 
+================================================================================
+[INFO] 9️⃣  SCRIPT EXECUTION VALIDATION
+[INFO] ================================================================================
+
+[INFO] ✅ Script Execution: scripts/run_workflow.py: Can execute with --help
+[INFO] ✅ Script Execution: scripts/test_workflow.py: Can execute with --help
+[INFO] ✅ Script Execution: scripts/analyze_interviews.py: Can execute with --help
+[INFO] 
+================================================================================
+[INFO] 📊 VALIDATION SUMMARY
+[INFO] ================================================================================
+[INFO] 
+✅ Passed: 32/38
+[INFO] ⚠️  Warnings: 3
+[INFO] ❌ Errors: 3
+[INFO] 
+📋 Critical Errors:
+[INFO]    ❌ Not installed. Run: pip install google-generativeai
+[INFO]    ❌ Not installed. Run: pip install pyyaml
+[INFO]    ❌ Not installed. Run: pip install python-dotenv
+[INFO] 
+⚠️  Warnings:
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'OPENAI_API_KEY')
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'GOOGLE_API_KEY')
+[INFO]    ⚠️  ❌ Not configured (Environment variable 'XAI_API_KEY')
+[INFO] 
+🎯 Status: ❌ SETUP REQUIRED
+[INFO] ================================================================================
+

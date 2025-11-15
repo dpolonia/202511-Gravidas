@@ -1,0 +1,3 @@
+[INFO] Initialized Claude provider with model: claude-3-5-sonnet-20241022
+[INFO] Initialized OpenAI provider with model: claude-3-5-sonnet-20241022
+[INFO] Initialized Gemini provider with model: claude-3-5-sonnet-20241022

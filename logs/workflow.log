@@ -1,0 +1,1298 @@
+[INFO] 2025-11-14 14:25:39,989 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 14:25:39,989 - ================================================================================
+[INFO] 2025-11-14 14:25:39,989 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 14:25:39,989 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 14:25:39,990 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 14:25:39,990 - 
+[INFO] 2025-11-14 14:25:39,990 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 14:25:41,975 - 
+✅ Stage 'match_personas_records' completed successfully (1.99s)
+
+[INFO] 2025-11-14 14:25:41,975 - 
+================================================================================
+[INFO] 2025-11-14 14:25:41,975 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 14:25:41,975 - ================================================================================
+[INFO] 2025-11-14 14:25:41,975 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 14:25:41,975 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:25:41,975 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 14:25:41,975 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 14:25:41,975 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 14:25:41,975 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 14:25:41,975 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 14:25:41,975 - 
+[INFO] 2025-11-14 14:25:41,975 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model ${ai_provider.providers.${ai_provider.active_provider}.model} --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[ERROR] 2025-11-14 14:25:43,544 - 
+❌ Stage 'conduct_interviews' failed with return code 1
+
+[ERROR] 2025-11-14 14:25:43,544 - 
+❌ Pipeline stopped at stage 'conduct_interviews'
+[INFO] 2025-11-14 14:25:43,544 - 
+================================================================================
+[INFO] 2025-11-14 14:25:43,544 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 14:25:43,544 - ================================================================================
+[INFO] 2025-11-14 14:25:43,544 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 14:25:43,544 - 🕐 Execution Time: 49.99 seconds
+[INFO] 2025-11-14 14:25:43,544 - 📈 Stages: 3/4 successful
+[INFO] 2025-11-14 14:25:43,544 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 14:25:43,544 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 14:25:43,544 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 14:25:43,544 - 📋 Health Records: 10
+[INFO] 2025-11-14 14:25:43,544 - 
+📝 Stage Results:
+[INFO] 2025-11-14 14:25:43,544 -    ✅ generate_personas: Completed in 28.83s
+[INFO] 2025-11-14 14:25:43,544 -    ✅ generate_health_records: Completed in 17.60s
+[INFO] 2025-11-14 14:25:43,544 -    ✅ match_personas_records: Completed in 1.99s
+[INFO] 2025-11-14 14:25:43,544 -    ❌ conduct_interviews: Failed with return code 1
+[INFO] 2025-11-14 14:25:43,544 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 14:25:43,544 - ================================================================================
+
+[INFO] 2025-11-14 14:25:43,544 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 14:27:31,774 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 14:27:31,774 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 14:27:31,774 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 14:27:31,774 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 14:27:31,775 - 
+================================================================================
+[INFO] 2025-11-14 14:27:31,775 - 🚀 EXECUTING GRAVIDAS WORKFLOW (1 stages)
+[INFO] 2025-11-14 14:27:31,775 - ================================================================================
+
+[INFO] 2025-11-14 14:27:31,775 - 
+================================================================================
+[INFO] 2025-11-14 14:27:31,775 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 14:27:31,775 - ================================================================================
+[INFO] 2025-11-14 14:27:31,775 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 14:27:31,775 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:27:31,775 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 14:27:31,775 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 14:27:31,775 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 14:27:31,775 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 14:27:31,775 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 14:27:31,775 - 
+[INFO] 2025-11-14 14:27:31,775 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[ERROR] 2025-11-14 14:27:33,318 - 
+❌ Stage 'conduct_interviews' failed with return code 1
+
+[INFO] 2025-11-14 14:27:33,318 - 
+================================================================================
+[INFO] 2025-11-14 14:27:33,318 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 14:27:33,319 - ================================================================================
+[INFO] 2025-11-14 14:27:33,319 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 14:27:33,319 - 🕐 Execution Time: 1.54 seconds
+[INFO] 2025-11-14 14:27:33,319 - 📈 Stages: 0/1 successful
+[INFO] 2025-11-14 14:27:33,319 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 14:27:33,319 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 14:27:33,319 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 14:27:33,319 - 📋 Health Records: 10
+[INFO] 2025-11-14 14:27:33,319 - 
+📝 Stage Results:
+[INFO] 2025-11-14 14:27:33,319 -    ❌ conduct_interviews: Failed with return code 1
+[INFO] 2025-11-14 14:27:33,319 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 14:27:33,319 - ================================================================================
+
+[INFO] 2025-11-14 14:27:33,319 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 14:32:19,639 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 14:32:19,639 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 14:32:19,640 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 14:32:19,640 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 14:32:19,640 - 
+================================================================================
+[INFO] 2025-11-14 14:32:19,640 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 14:32:19,640 - ================================================================================
+
+[INFO] 2025-11-14 14:32:19,640 - 
+================================================================================
+[INFO] 2025-11-14 14:32:19,640 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 14:32:19,640 - ================================================================================
+[INFO] 2025-11-14 14:32:19,640 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 14:32:19,640 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 14:32:19,640 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 14:32:19,641 - 
+[INFO] 2025-11-14 14:32:19,641 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 14:32:45,509 - 
+✅ Stage 'generate_personas' completed successfully (25.87s)
+
+[INFO] 2025-11-14 14:32:45,509 - 
+================================================================================
+[INFO] 2025-11-14 14:32:45,509 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 14:32:45,509 - ================================================================================
+[INFO] 2025-11-14 14:32:45,509 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 14:32:45,509 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:32:45,509 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 14:32:45,509 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 14:32:45,509 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 14:32:45,509 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 14:32:45,510 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 14:32:45,510 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 14:32:45,510 - 
+[INFO] 2025-11-14 14:32:45,510 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 14:33:03,015 - 
+✅ Stage 'generate_health_records' completed successfully (17.51s)
+
+[INFO] 2025-11-14 14:33:03,016 - 
+================================================================================
+[INFO] 2025-11-14 14:33:03,016 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 14:33:03,016 - ================================================================================
+[INFO] 2025-11-14 14:33:03,016 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 14:33:03,016 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 14:33:03,016 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 14:33:03,016 - 
+[INFO] 2025-11-14 14:33:03,016 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 14:33:04,957 - 
+✅ Stage 'match_personas_records' completed successfully (1.94s)
+
+[INFO] 2025-11-14 14:33:04,957 - 
+================================================================================
+[INFO] 2025-11-14 14:33:04,957 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 14:33:04,957 - ================================================================================
+[INFO] 2025-11-14 14:33:04,957 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 14:33:04,957 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:33:04,957 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 14:33:04,957 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 14:33:04,957 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 14:33:04,957 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 14:33:04,957 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 14:33:04,958 - 
+[INFO] 2025-11-14 14:33:04,958 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[ERROR] 2025-11-14 14:33:06,441 - 
+❌ Stage 'conduct_interviews' failed with return code 1
+
+[ERROR] 2025-11-14 14:33:06,441 - 
+❌ Pipeline stopped at stage 'conduct_interviews'
+[INFO] 2025-11-14 14:33:06,442 - 
+================================================================================
+[INFO] 2025-11-14 14:33:06,442 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 14:33:06,442 - ================================================================================
+[INFO] 2025-11-14 14:33:06,442 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 14:33:06,442 - 🕐 Execution Time: 46.80 seconds
+[INFO] 2025-11-14 14:33:06,442 - 📈 Stages: 3/4 successful
+[INFO] 2025-11-14 14:33:06,442 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 14:33:06,442 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 14:33:06,442 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 14:33:06,442 - 📋 Health Records: 10
+[INFO] 2025-11-14 14:33:06,442 - 
+📝 Stage Results:
+[INFO] 2025-11-14 14:33:06,442 -    ✅ generate_personas: Completed in 25.87s
+[INFO] 2025-11-14 14:33:06,442 -    ✅ generate_health_records: Completed in 17.51s
+[INFO] 2025-11-14 14:33:06,442 -    ✅ match_personas_records: Completed in 1.94s
+[INFO] 2025-11-14 14:33:06,442 -    ❌ conduct_interviews: Failed with return code 1
+[INFO] 2025-11-14 14:33:06,442 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 14:33:06,442 - ================================================================================
+
+[INFO] 2025-11-14 14:33:06,443 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 14:34:27,484 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 14:34:27,484 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 14:34:27,484 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 14:34:27,484 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 14:34:27,484 - 
+================================================================================
+[INFO] 2025-11-14 14:34:27,484 - 🚀 EXECUTING GRAVIDAS WORKFLOW (1 stages)
+[INFO] 2025-11-14 14:34:27,484 - ================================================================================
+
+[INFO] 2025-11-14 14:34:27,484 - 
+================================================================================
+[INFO] 2025-11-14 14:34:27,484 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 14:34:27,484 - ================================================================================
+[INFO] 2025-11-14 14:34:27,484 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 14:34:27,484 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 14:34:27,484 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 14:34:27,484 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 14:34:27,485 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 14:34:27,485 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 14:34:27,485 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 14:34:27,485 - 
+[INFO] 2025-11-14 14:34:27,485 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 15:20:52,312 - 
+✅ Stage 'conduct_interviews' completed successfully (2784.83s)
+
+[INFO] 2025-11-14 15:20:52,313 - 
+================================================================================
+[INFO] 2025-11-14 15:20:52,313 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 15:20:52,313 - ================================================================================
+[INFO] 2025-11-14 15:20:52,313 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 15:20:52,313 - 🕐 Execution Time: 2784.83 seconds
+[INFO] 2025-11-14 15:20:52,313 - 📈 Stages: 1/1 successful
+[INFO] 2025-11-14 15:20:52,313 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 15:20:52,313 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 15:20:52,313 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 15:20:52,313 - 📋 Health Records: 10
+[INFO] 2025-11-14 15:20:52,313 - 
+📝 Stage Results:
+[INFO] 2025-11-14 15:20:52,314 -    ✅ conduct_interviews: Completed in 2784.83s
+[INFO] 2025-11-14 15:20:52,314 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 15:20:52,314 - ================================================================================
+
+[INFO] 2025-11-14 15:20:52,314 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 15:56:53,382 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 15:56:53,384 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 15:56:53,384 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 15:56:53,384 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 15:56:53,384 - 
+================================================================================
+[INFO] 2025-11-14 15:56:53,384 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 15:56:53,384 - ================================================================================
+
+[INFO] 2025-11-14 15:56:53,384 - 
+================================================================================
+[INFO] 2025-11-14 15:56:53,384 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 15:56:53,384 - ================================================================================
+[INFO] 2025-11-14 15:56:53,384 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 15:56:53,384 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 15:56:53,384 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 15:56:53,384 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 15:56:53,384 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 15:56:53,384 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 15:56:53,384 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 15:56:53,385 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 15:56:53,385 - 
+[INFO] 2025-11-14 15:56:53,385 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 16:02:06,655 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 16:02:06,658 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 16:02:06,658 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 16:02:06,658 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 16:02:06,658 - 
+================================================================================
+[INFO] 2025-11-14 16:02:06,659 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 16:02:06,659 - ================================================================================
+
+[INFO] 2025-11-14 16:02:06,659 - 
+================================================================================
+[INFO] 2025-11-14 16:02:06,659 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 16:02:06,659 - ================================================================================
+[INFO] 2025-11-14 16:02:06,659 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 16:02:06,659 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 16:02:06,659 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 16:02:06,659 - 
+[INFO] 2025-11-14 16:02:06,659 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 16:02:34,379 - 
+✅ Stage 'generate_personas' completed successfully (27.72s)
+
+[INFO] 2025-11-14 16:02:34,379 - 
+================================================================================
+[INFO] 2025-11-14 16:02:34,379 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 16:02:34,379 - ================================================================================
+[INFO] 2025-11-14 16:02:34,379 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 16:02:34,379 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:02:34,379 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 16:02:34,379 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 16:02:34,379 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 16:02:34,379 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 16:02:34,379 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 16:02:34,380 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 16:02:34,380 - 
+[INFO] 2025-11-14 16:02:34,380 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 16:02:57,741 - 
+✅ Stage 'generate_health_records' completed successfully (23.36s)
+
+[INFO] 2025-11-14 16:02:57,742 - 
+================================================================================
+[INFO] 2025-11-14 16:02:57,742 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 16:02:57,742 - ================================================================================
+[INFO] 2025-11-14 16:02:57,742 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 16:02:57,742 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 16:02:57,742 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 16:02:57,742 - 
+[INFO] 2025-11-14 16:02:57,742 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 16:03:01,103 - 
+✅ Stage 'match_personas_records' completed successfully (3.36s)
+
+[INFO] 2025-11-14 16:03:01,103 - 
+================================================================================
+[INFO] 2025-11-14 16:03:01,103 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 16:03:01,103 - ================================================================================
+[INFO] 2025-11-14 16:03:01,103 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 16:03:01,103 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:03:01,103 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 16:03:01,103 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 16:03:01,103 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 16:03:01,103 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 16:03:01,103 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 16:03:01,103 - 
+[INFO] 2025-11-14 16:03:01,103 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 16:08:10,181 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 16:08:10,181 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 16:08:10,181 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 16:08:10,181 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 16:08:10,181 - 
+================================================================================
+[INFO] 2025-11-14 16:08:10,181 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 16:08:10,181 - ================================================================================
+
+[INFO] 2025-11-14 16:08:10,181 - 
+================================================================================
+[INFO] 2025-11-14 16:08:10,181 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 16:08:10,182 - ================================================================================
+[INFO] 2025-11-14 16:08:10,182 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 16:08:10,182 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 16:08:10,182 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 16:08:10,182 - 
+[INFO] 2025-11-14 16:08:10,182 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 16:08:36,368 - 
+✅ Stage 'generate_personas' completed successfully (26.19s)
+
+[INFO] 2025-11-14 16:08:36,368 - 
+================================================================================
+[INFO] 2025-11-14 16:08:36,368 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 16:08:36,368 - ================================================================================
+[INFO] 2025-11-14 16:08:36,368 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 16:08:36,368 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:08:36,368 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 16:08:36,368 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 16:08:36,368 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 16:08:36,369 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 16:08:36,369 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 16:08:36,369 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 16:08:36,369 - 
+[INFO] 2025-11-14 16:08:36,369 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 16:08:59,410 - 
+✅ Stage 'generate_health_records' completed successfully (23.04s)
+
+[INFO] 2025-11-14 16:08:59,410 - 
+================================================================================
+[INFO] 2025-11-14 16:08:59,410 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 16:08:59,410 - ================================================================================
+[INFO] 2025-11-14 16:08:59,410 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 16:08:59,410 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 16:08:59,410 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 16:08:59,410 - 
+[INFO] 2025-11-14 16:08:59,410 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 16:09:01,638 - 
+✅ Stage 'match_personas_records' completed successfully (2.23s)
+
+[INFO] 2025-11-14 16:09:01,638 - 
+================================================================================
+[INFO] 2025-11-14 16:09:01,639 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 16:09:01,639 - ================================================================================
+[INFO] 2025-11-14 16:09:01,639 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 16:09:01,639 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:09:01,639 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 16:09:01,639 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 16:09:01,639 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 16:09:01,639 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 16:09:01,639 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 16:09:01,639 - 
+[INFO] 2025-11-14 16:09:01,639 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 16:43:16,428 - 
+✅ Stage 'conduct_interviews' completed successfully (2054.79s)
+
+[INFO] 2025-11-14 16:43:16,429 - 
+================================================================================
+[INFO] 2025-11-14 16:43:16,429 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 16:43:16,429 - ================================================================================
+[INFO] 2025-11-14 16:43:16,429 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 16:43:16,429 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 16:43:16,429 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 16:43:16,429 - 
+[INFO] 2025-11-14 16:43:16,429 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --input-dir data/interviews --personas-file data/personas/personas.json --records-file data/health_records/health_records.json --export-format both
+
+[ERROR] 2025-11-14 16:43:18,109 - 
+❌ Stage 'analyze_interviews' failed with return code 2
+
+[ERROR] 2025-11-14 16:43:18,109 - 
+❌ Pipeline stopped at stage 'analyze_interviews'
+[INFO] 2025-11-14 16:43:18,109 - 
+================================================================================
+[INFO] 2025-11-14 16:43:18,109 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 16:43:18,109 - ================================================================================
+[INFO] 2025-11-14 16:43:18,109 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 16:43:18,109 - 🕐 Execution Time: 2107.93 seconds
+[INFO] 2025-11-14 16:43:18,109 - 📈 Stages: 4/5 successful
+[INFO] 2025-11-14 16:43:18,109 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 16:43:18,109 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 16:43:18,109 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 16:43:18,109 - 📋 Health Records: 10
+[INFO] 2025-11-14 16:43:18,109 - 
+📝 Stage Results:
+[INFO] 2025-11-14 16:43:18,109 -    ✅ generate_personas: Completed in 26.19s
+[INFO] 2025-11-14 16:43:18,109 -    ✅ generate_health_records: Completed in 23.04s
+[INFO] 2025-11-14 16:43:18,109 -    ✅ match_personas_records: Completed in 2.23s
+[INFO] 2025-11-14 16:43:18,109 -    ✅ conduct_interviews: Completed in 2054.79s
+[INFO] 2025-11-14 16:43:18,109 -    ❌ analyze_interviews: Failed with return code 2
+[INFO] 2025-11-14 16:43:18,109 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 16:43:18,109 - ================================================================================
+
+[INFO] 2025-11-14 16:43:18,110 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 16:47:24,699 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 16:47:24,700 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 16:47:24,700 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 16:47:24,700 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 16:47:24,700 - 
+================================================================================
+[INFO] 2025-11-14 16:47:24,700 - 🚀 EXECUTING GRAVIDAS WORKFLOW (1 stages)
+[INFO] 2025-11-14 16:47:24,700 - ================================================================================
+
+[INFO] 2025-11-14 16:47:24,700 - 
+================================================================================
+[INFO] 2025-11-14 16:47:24,700 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 16:47:24,700 - ================================================================================
+[INFO] 2025-11-14 16:47:24,700 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 16:47:24,700 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 16:47:24,700 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 16:47:24,700 - 
+[INFO] 2025-11-14 16:47:24,700 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --export-csv --export-json --show-anomalies
+
+[INFO] 2025-11-14 16:47:25,960 - 
+✅ Stage 'analyze_interviews' completed successfully (1.26s)
+
+[INFO] 2025-11-14 16:47:25,960 - 
+================================================================================
+[INFO] 2025-11-14 16:47:25,960 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 16:47:25,960 - ================================================================================
+[INFO] 2025-11-14 16:47:25,960 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 16:47:25,960 - 🕐 Execution Time: 1.26 seconds
+[INFO] 2025-11-14 16:47:25,960 - 📈 Stages: 1/1 successful
+[INFO] 2025-11-14 16:47:25,960 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 16:47:25,960 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 16:47:25,960 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 16:47:25,960 - 📋 Health Records: 10
+[INFO] 2025-11-14 16:47:25,960 - 
+📝 Stage Results:
+[INFO] 2025-11-14 16:47:25,960 -    ✅ analyze_interviews: Completed in 1.26s
+[INFO] 2025-11-14 16:47:25,960 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 16:47:25,960 - ================================================================================
+
+[INFO] 2025-11-14 16:47:25,960 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 16:50:40,164 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 16:50:40,165 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 16:50:40,165 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 16:50:40,165 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 16:50:40,165 - 
+================================================================================
+[INFO] 2025-11-14 16:50:40,165 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-14 16:50:40,165 - ================================================================================
+
+[INFO] 2025-11-14 16:50:40,165 - 
+================================================================================
+[INFO] 2025-11-14 16:50:40,165 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 16:50:40,165 - ================================================================================
+[INFO] 2025-11-14 16:50:40,165 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 16:50:40,165 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 16:50:40,165 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 16:50:40,165 - 
+[INFO] 2025-11-14 16:50:40,165 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --export-csv --export-json --show-anomalies
+
+[INFO] 2025-11-14 16:50:42,321 - 
+✅ Stage 'analyze_interviews' completed successfully (2.16s)
+
+[INFO] 2025-11-14 16:50:42,321 - 
+================================================================================
+[INFO] 2025-11-14 16:50:42,322 - 🔄 STAGE: VALIDATE IMPLEMENTATION
+[INFO] 2025-11-14 16:50:42,322 - ================================================================================
+[INFO] 2025-11-14 16:50:42,322 - Description: Validate semantic tree implementation and data quality
+
+[INFO] 2025-11-14 16:50:42,322 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 1: Persona Semantic Tree Validation
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 2: Health Record Semantic Tree Validation
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 3: Semantic Matching Score Validation
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 4: Demographic Diversity Analysis
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 5: Clinical Data Quality Assessment
+[INFO] 2025-11-14 16:50:42,322 -    ✓ Topic 6: Validation Report Generation
+[INFO] 2025-11-14 16:50:42,322 - 
+[INFO] 2025-11-14 16:50:42,322 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/test_semantic_implementation.py --personas data/personas/personas.json --records data/health_records/health_records.json --output data/validation
+
+[INFO] 2025-11-14 16:50:42,638 - 
+✅ Stage 'validate_implementation' completed successfully (0.32s)
+
+[INFO] 2025-11-14 16:50:42,639 - 
+================================================================================
+[INFO] 2025-11-14 16:50:42,639 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 16:50:42,639 - ================================================================================
+[INFO] 2025-11-14 16:50:42,639 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 16:50:42,639 - 🕐 Execution Time: 2.47 seconds
+[INFO] 2025-11-14 16:50:42,639 - 📈 Stages: 2/2 successful
+[INFO] 2025-11-14 16:50:42,639 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 16:50:42,639 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 16:50:42,639 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 16:50:42,639 - 📋 Health Records: 10
+[INFO] 2025-11-14 16:50:42,639 - 
+📝 Stage Results:
+[INFO] 2025-11-14 16:50:42,639 -    ✅ analyze_interviews: Completed in 2.16s
+[INFO] 2025-11-14 16:50:42,639 -    ✅ validate_implementation: Completed in 0.32s
+[INFO] 2025-11-14 16:50:42,639 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 16:50:42,639 - ================================================================================
+
+[INFO] 2025-11-14 16:50:42,639 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 16:52:21,711 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 16:52:21,711 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 16:52:21,711 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 16:52:21,711 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 16:52:21,711 - 
+================================================================================
+[INFO] 2025-11-14 16:52:21,711 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-14 16:52:21,711 - ================================================================================
+
+[INFO] 2025-11-14 16:52:21,711 - 
+================================================================================
+[INFO] 2025-11-14 16:52:21,711 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 16:52:21,711 - ================================================================================
+[INFO] 2025-11-14 16:52:21,711 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 16:52:21,711 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 16:52:21,711 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 16:52:21,711 - 
+[INFO] 2025-11-14 16:52:21,711 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --export-csv --export-json --show-anomalies
+
+[INFO] 2025-11-14 16:52:24,989 - 
+✅ Stage 'analyze_interviews' completed successfully (3.28s)
+
+[INFO] 2025-11-14 16:52:24,989 - 
+================================================================================
+[INFO] 2025-11-14 16:52:24,989 - 🔄 STAGE: VALIDATE IMPLEMENTATION
+[INFO] 2025-11-14 16:52:24,989 - ================================================================================
+[INFO] 2025-11-14 16:52:24,989 - Description: Validate semantic tree implementation and data quality
+
+[INFO] 2025-11-14 16:52:24,989 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 1: Persona Semantic Tree Validation
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 2: Health Record Semantic Tree Validation
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 3: Semantic Matching Score Validation
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 4: Demographic Diversity Analysis
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 5: Clinical Data Quality Assessment
+[INFO] 2025-11-14 16:52:24,990 -    ✓ Topic 6: Validation Report Generation
+[INFO] 2025-11-14 16:52:24,990 - 
+[INFO] 2025-11-14 16:52:24,990 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/test_semantic_implementation.py --personas data/personas/personas.json --records data/health_records/health_records.json --output data/validation
+
+[INFO] 2025-11-14 16:52:25,271 - 
+✅ Stage 'validate_implementation' completed successfully (0.28s)
+
+[INFO] 2025-11-14 16:52:25,271 - 
+================================================================================
+[INFO] 2025-11-14 16:52:25,271 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 16:52:25,271 - ================================================================================
+[INFO] 2025-11-14 16:52:25,271 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 16:52:25,271 - 🕐 Execution Time: 3.56 seconds
+[INFO] 2025-11-14 16:52:25,271 - 📈 Stages: 2/2 successful
+[INFO] 2025-11-14 16:52:25,271 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 16:52:25,271 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 16:52:25,271 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 16:52:25,271 - 📋 Health Records: 10
+[INFO] 2025-11-14 16:52:25,271 - 
+📝 Stage Results:
+[INFO] 2025-11-14 16:52:25,271 -    ✅ analyze_interviews: Completed in 3.28s
+[INFO] 2025-11-14 16:52:25,271 -    ✅ validate_implementation: Completed in 0.28s
+[INFO] 2025-11-14 16:52:25,271 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 16:52:25,271 - ================================================================================
+
+[INFO] 2025-11-14 16:52:25,352 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 17:05:58,617 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:05:58,617 - ✅ Applying preset: standard
+[INFO] 2025-11-14 17:05:58,617 -    Description: Standard workflow execution
+[INFO] 2025-11-14 17:05:58,617 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:05:58,617 - 
+================================================================================
+[INFO] 2025-11-14 17:05:58,617 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:05:58,617 - ================================================================================
+
+[INFO] 2025-11-14 17:05:58,617 - 
+================================================================================
+[INFO] 2025-11-14 17:05:58,617 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:05:58,617 - ================================================================================
+[INFO] 2025-11-14 17:05:58,617 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:05:58,617 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:05:58,617 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:05:58,617 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:05:58,618 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:05:58,618 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:05:58,618 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:05:58,618 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:05:58,618 - 
+[INFO] 2025-11-14 17:05:58,618 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 100 --output data/personas
+
+[INFO] 2025-11-14 17:06:13,395 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:06:13,395 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:06:13,395 - 
+================================================================================
+[INFO] 2025-11-14 17:06:13,395 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:06:13,395 - ================================================================================
+
+[INFO] 2025-11-14 17:06:13,395 - 
+================================================================================
+[INFO] 2025-11-14 17:06:13,395 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:06:13,395 - ================================================================================
+[INFO] 2025-11-14 17:06:13,395 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:06:13,395 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:06:13,395 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:06:13,395 - 
+[INFO] 2025-11-14 17:06:13,395 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 100 --output data/personas
+
+[INFO] 2025-11-14 17:12:16,065 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:12:16,065 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 17:12:16,065 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 17:12:16,065 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:12:16,065 - 
+================================================================================
+[INFO] 2025-11-14 17:12:16,065 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:12:16,065 - ================================================================================
+
+[INFO] 2025-11-14 17:12:16,065 - 
+================================================================================
+[INFO] 2025-11-14 17:12:16,065 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:12:16,065 - ================================================================================
+[INFO] 2025-11-14 17:12:16,065 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:12:16,065 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:12:16,065 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:12:16,065 - 
+[INFO] 2025-11-14 17:12:16,065 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 17:12:43,676 - 
+✅ Stage 'generate_personas' completed successfully (27.61s)
+
+[INFO] 2025-11-14 17:12:43,676 - 
+================================================================================
+[INFO] 2025-11-14 17:12:43,676 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 17:12:43,676 - ================================================================================
+[INFO] 2025-11-14 17:12:43,676 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 17:12:43,676 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 17:12:43,676 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 17:12:43,676 - 
+[INFO] 2025-11-14 17:12:43,676 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 17:13:00,624 - 
+✅ Stage 'generate_health_records' completed successfully (16.95s)
+
+[INFO] 2025-11-14 17:13:00,624 - 
+================================================================================
+[INFO] 2025-11-14 17:13:00,624 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 17:13:00,624 - ================================================================================
+[INFO] 2025-11-14 17:13:00,624 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 17:13:00,624 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 17:13:00,624 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 17:13:00,624 - 
+[INFO] 2025-11-14 17:13:00,624 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 17:13:02,403 - 
+✅ Stage 'match_personas_records' completed successfully (1.78s)
+
+[INFO] 2025-11-14 17:13:02,403 - 
+================================================================================
+[INFO] 2025-11-14 17:13:02,404 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 17:13:02,404 - ================================================================================
+[INFO] 2025-11-14 17:13:02,404 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 17:13:02,404 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:13:02,404 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 17:13:02,404 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 17:13:02,404 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 17:13:02,404 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 17:13:02,404 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 17:13:02,404 - 
+[INFO] 2025-11-14 17:13:02,404 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model claude-sonnet-4-5-20250929 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 17:24:24,418 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:24:24,420 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 17:24:24,420 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 17:24:24,420 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:24:24,420 - 
+================================================================================
+[INFO] 2025-11-14 17:24:24,420 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:24:24,420 - ================================================================================
+
+[INFO] 2025-11-14 17:24:24,420 - 
+================================================================================
+[INFO] 2025-11-14 17:24:24,421 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:24:24,421 - ================================================================================
+[INFO] 2025-11-14 17:24:24,421 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:24:24,421 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:24:24,421 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:24:24,421 - 
+[INFO] 2025-11-14 17:24:24,421 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 17:24:54,936 - 
+✅ Stage 'generate_personas' completed successfully (30.52s)
+
+[INFO] 2025-11-14 17:24:54,936 - 
+================================================================================
+[INFO] 2025-11-14 17:24:54,937 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 17:24:54,937 - ================================================================================
+[INFO] 2025-11-14 17:24:54,937 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 17:24:54,937 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 17:24:54,937 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 17:24:54,937 - 
+[INFO] 2025-11-14 17:24:54,937 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 17:25:11,810 - 
+✅ Stage 'generate_health_records' completed successfully (16.87s)
+
+[INFO] 2025-11-14 17:25:11,811 - 
+================================================================================
+[INFO] 2025-11-14 17:25:11,811 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 17:25:11,811 - ================================================================================
+[INFO] 2025-11-14 17:25:11,811 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 17:25:11,811 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 17:25:11,811 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 17:25:11,811 - 
+[INFO] 2025-11-14 17:25:11,811 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 17:25:13,661 - 
+✅ Stage 'match_personas_records' completed successfully (1.85s)
+
+[INFO] 2025-11-14 17:25:13,661 - 
+================================================================================
+[INFO] 2025-11-14 17:25:13,661 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 17:25:13,661 - ================================================================================
+[INFO] 2025-11-14 17:25:13,661 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 17:25:13,661 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:25:13,661 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 17:25:13,661 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 17:25:13,661 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 17:25:13,661 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 17:25:13,661 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 17:25:13,661 - 
+[INFO] 2025-11-14 17:25:13,661 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --model gemini-2.5-flash --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[ERROR] 2025-11-14 17:25:15,408 - 
+❌ Stage 'conduct_interviews' failed with return code 1
+
+[ERROR] 2025-11-14 17:25:15,408 - 
+❌ Pipeline stopped at stage 'conduct_interviews'
+[INFO] 2025-11-14 17:25:15,408 - 
+================================================================================
+[INFO] 2025-11-14 17:25:15,408 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 17:25:15,408 - ================================================================================
+[INFO] 2025-11-14 17:25:15,408 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 17:25:15,408 - 🕐 Execution Time: 50.99 seconds
+[INFO] 2025-11-14 17:25:15,408 - 📈 Stages: 3/4 successful
+[INFO] 2025-11-14 17:25:15,408 - 🤖 AI Provider: google
+[INFO] 2025-11-14 17:25:15,408 - 🧠 AI Model: gemini-2.5-flash
+[INFO] 2025-11-14 17:25:15,408 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 17:25:15,408 - 📋 Health Records: 10
+[INFO] 2025-11-14 17:25:15,408 - 
+📝 Stage Results:
+[INFO] 2025-11-14 17:25:15,408 -    ✅ generate_personas: Completed in 30.52s
+[INFO] 2025-11-14 17:25:15,408 -    ✅ generate_health_records: Completed in 16.87s
+[INFO] 2025-11-14 17:25:15,408 -    ✅ match_personas_records: Completed in 1.85s
+[INFO] 2025-11-14 17:25:15,408 -    ❌ conduct_interviews: Failed with return code 1
+[INFO] 2025-11-14 17:25:15,408 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 17:25:15,408 - ================================================================================
+
+[INFO] 2025-11-14 17:25:15,409 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 17:37:19,794 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:37:19,795 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 17:37:19,795 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 17:37:19,795 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:37:19,795 - 
+================================================================================
+[INFO] 2025-11-14 17:37:19,795 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:37:19,795 - ================================================================================
+
+[INFO] 2025-11-14 17:37:19,795 - 
+================================================================================
+[INFO] 2025-11-14 17:37:19,795 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:37:19,795 - ================================================================================
+[INFO] 2025-11-14 17:37:19,795 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:37:19,795 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:37:19,795 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:37:19,795 - 
+[INFO] 2025-11-14 17:37:19,795 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 17:37:46,280 - 
+✅ Stage 'generate_personas' completed successfully (26.48s)
+
+[INFO] 2025-11-14 17:37:46,280 - 
+================================================================================
+[INFO] 2025-11-14 17:37:46,280 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 17:37:46,280 - ================================================================================
+[INFO] 2025-11-14 17:37:46,280 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 17:37:46,280 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 17:37:46,280 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 17:37:46,280 - 
+[INFO] 2025-11-14 17:37:46,280 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[ERROR] 2025-11-14 17:38:03,327 - 
+❌ Stage 'generate_health_records' failed with return code 120
+
+[ERROR] 2025-11-14 17:38:03,327 - 
+❌ Pipeline stopped at stage 'generate_health_records'
+[INFO] 2025-11-14 17:38:03,327 - 
+================================================================================
+[INFO] 2025-11-14 17:38:03,327 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 17:38:03,327 - ================================================================================
+[INFO] 2025-11-14 17:38:03,327 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 17:38:03,327 - 🕐 Execution Time: 43.53 seconds
+[INFO] 2025-11-14 17:38:03,327 - 📈 Stages: 1/2 successful
+[INFO] 2025-11-14 17:38:03,327 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 17:38:03,327 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-14 17:38:03,327 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 17:38:03,327 - 📋 Health Records: 10
+[INFO] 2025-11-14 17:38:03,327 - 
+📝 Stage Results:
+[INFO] 2025-11-14 17:38:03,327 -    ✅ generate_personas: Completed in 26.48s
+[INFO] 2025-11-14 17:38:03,327 -    ❌ generate_health_records: Failed with return code 120
+[INFO] 2025-11-14 17:38:03,327 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-14 17:38:03,327 - ================================================================================
+
+[INFO] 2025-11-14 17:38:03,327 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 17:50:02,365 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:50:02,365 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 17:50:02,365 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 17:50:02,365 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:50:02,365 - 
+================================================================================
+[INFO] 2025-11-14 17:50:02,365 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:50:02,365 - ================================================================================
+
+[INFO] 2025-11-14 17:50:02,365 - 
+================================================================================
+[INFO] 2025-11-14 17:50:02,365 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:50:02,365 - ================================================================================
+[INFO] 2025-11-14 17:50:02,365 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:50:02,365 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:50:02,365 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:50:02,365 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:50:02,365 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:50:02,365 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:50:02,365 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:50:02,366 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:50:02,366 - 
+[INFO] 2025-11-14 17:50:02,366 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 17:50:28,248 - 
+✅ Stage 'generate_personas' completed successfully (25.88s)
+
+[INFO] 2025-11-14 17:50:28,248 - 
+================================================================================
+[INFO] 2025-11-14 17:50:28,248 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 17:50:28,248 - ================================================================================
+[INFO] 2025-11-14 17:50:28,248 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 17:50:28,248 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 17:50:28,248 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 17:50:28,248 - 
+[INFO] 2025-11-14 17:50:28,248 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 17:50:39,822 - 
+✅ Stage 'generate_health_records' completed successfully (11.57s)
+
+[INFO] 2025-11-14 17:50:39,823 - 
+================================================================================
+[INFO] 2025-11-14 17:50:39,823 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 17:50:39,823 - ================================================================================
+[INFO] 2025-11-14 17:50:39,823 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 17:50:39,823 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 17:50:39,823 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 17:50:39,823 - 
+[INFO] 2025-11-14 17:50:39,823 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 17:50:41,021 - 
+✅ Stage 'match_personas_records' completed successfully (1.20s)
+
+[INFO] 2025-11-14 17:50:41,021 - 
+================================================================================
+[INFO] 2025-11-14 17:50:41,021 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 17:50:41,021 - ================================================================================
+[INFO] 2025-11-14 17:50:41,021 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 17:50:41,021 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:50:41,021 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 17:50:41,021 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 17:50:41,021 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 17:50:41,021 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 17:50:41,021 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 17:50:41,021 - 
+[INFO] 2025-11-14 17:50:41,021 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --provider google --model gemini-2.5-flash --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 17:51:34,629 - 
+✅ Stage 'conduct_interviews' completed successfully (53.61s)
+
+[INFO] 2025-11-14 17:51:34,630 - 
+================================================================================
+[INFO] 2025-11-14 17:51:34,630 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 17:51:34,630 - ================================================================================
+[INFO] 2025-11-14 17:51:34,630 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 17:51:34,630 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 17:51:34,630 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 17:51:34,630 - 
+[INFO] 2025-11-14 17:51:34,630 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --export-csv --export-json --show-anomalies
+
+[INFO] 2025-11-14 17:51:36,137 - 
+✅ Stage 'analyze_interviews' completed successfully (1.51s)
+
+[INFO] 2025-11-14 17:51:36,137 - 
+================================================================================
+[INFO] 2025-11-14 17:51:36,137 - 🔄 STAGE: VALIDATE IMPLEMENTATION
+[INFO] 2025-11-14 17:51:36,137 - ================================================================================
+[INFO] 2025-11-14 17:51:36,137 - Description: Validate semantic tree implementation and data quality
+
+[INFO] 2025-11-14 17:51:36,137 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 1: Persona Semantic Tree Validation
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 2: Health Record Semantic Tree Validation
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 3: Semantic Matching Score Validation
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 4: Demographic Diversity Analysis
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 5: Clinical Data Quality Assessment
+[INFO] 2025-11-14 17:51:36,137 -    ✓ Topic 6: Validation Report Generation
+[INFO] 2025-11-14 17:51:36,137 - 
+[INFO] 2025-11-14 17:51:36,137 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/test_semantic_implementation.py --personas data/personas/personas.json --records data/health_records/health_records.json --output data/validation
+
+[INFO] 2025-11-14 17:51:36,408 - 
+✅ Stage 'validate_implementation' completed successfully (0.27s)
+
+[INFO] 2025-11-14 17:51:36,408 - 
+================================================================================
+[INFO] 2025-11-14 17:51:36,408 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 17:51:36,408 - ================================================================================
+[INFO] 2025-11-14 17:51:36,408 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 17:51:36,408 - 🕐 Execution Time: 94.04 seconds
+[INFO] 2025-11-14 17:51:36,408 - 📈 Stages: 6/6 successful
+[INFO] 2025-11-14 17:51:36,408 - 🤖 AI Provider: google
+[INFO] 2025-11-14 17:51:36,408 - 🧠 AI Model: gemini-2.5-flash
+[INFO] 2025-11-14 17:51:36,408 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 17:51:36,408 - 📋 Health Records: 10
+[INFO] 2025-11-14 17:51:36,408 - 
+📝 Stage Results:
+[INFO] 2025-11-14 17:51:36,408 -    ✅ generate_personas: Completed in 25.88s
+[INFO] 2025-11-14 17:51:36,408 -    ✅ generate_health_records: Completed in 11.57s
+[INFO] 2025-11-14 17:51:36,408 -    ✅ match_personas_records: Completed in 1.20s
+[INFO] 2025-11-14 17:51:36,408 -    ✅ conduct_interviews: Completed in 53.61s
+[INFO] 2025-11-14 17:51:36,408 -    ✅ analyze_interviews: Completed in 1.51s
+[INFO] 2025-11-14 17:51:36,408 -    ✅ validate_implementation: Completed in 0.27s
+[INFO] 2025-11-14 17:51:36,408 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 17:51:36,408 - ================================================================================
+
+[INFO] 2025-11-14 17:51:36,408 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-14 17:57:02,834 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-14 17:57:02,834 - ✅ Applying preset: quick_test
+[INFO] 2025-11-14 17:57:02,834 -    Description: Quick test with minimal data
+[INFO] 2025-11-14 17:57:02,834 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-14 17:57:02,834 - 
+================================================================================
+[INFO] 2025-11-14 17:57:02,834 - 🚀 STARTING GRAVIDAS WORKFLOW PIPELINE
+[INFO] 2025-11-14 17:57:02,834 - ================================================================================
+
+[INFO] 2025-11-14 17:57:02,834 - 
+================================================================================
+[INFO] 2025-11-14 17:57:02,834 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-14 17:57:02,834 - ================================================================================
+[INFO] 2025-11-14 17:57:02,834 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-14 17:57:02,834 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-14 17:57:02,834 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-14 17:57:02,834 - 
+[INFO] 2025-11-14 17:57:02,834 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 10 --output data/personas
+
+[INFO] 2025-11-14 17:57:31,875 - 
+✅ Stage 'generate_personas' completed successfully (29.04s)
+
+[INFO] 2025-11-14 17:57:31,875 - 
+================================================================================
+[INFO] 2025-11-14 17:57:31,875 - 🔄 STAGE: GENERATE HEALTH RECORDS
+[INFO] 2025-11-14 17:57:31,875 - ================================================================================
+[INFO] 2025-11-14 17:57:31,875 - Description: Extract healthcare profiles from FHIR data
+
+[INFO] 2025-11-14 17:57:31,875 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 1: FHIR Data Extraction (from Synthea)
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 2: Clinical Conditions (SNOMED code mapping)
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 3: Medication Profiles (pregnancy safety classification)
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 4: Healthcare Utilization (visit frequency, provider engagement)
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 5: Pregnancy Profile (risk assessment, comorbidities)
+[INFO] 2025-11-14 17:57:31,875 -    ✓ Topic 6: Semantic Tree Extraction (from clinical records)
+[INFO] 2025-11-14 17:57:31,875 - 
+[INFO] 2025-11-14 17:57:31,875 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/02_generate_health_records.py --count 10 --output data/health_records
+
+[INFO] 2025-11-14 17:57:43,314 - 
+✅ Stage 'generate_health_records' completed successfully (11.44s)
+
+[INFO] 2025-11-14 17:57:43,314 - 
+================================================================================
+[INFO] 2025-11-14 17:57:43,314 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-14 17:57:43,314 - ================================================================================
+[INFO] 2025-11-14 17:57:43,314 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-14 17:57:43,314 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-14 17:57:43,314 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-14 17:57:43,314 - 
+[INFO] 2025-11-14 17:57:43,314 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-14 17:57:44,638 - 
+✅ Stage 'match_personas_records' completed successfully (1.32s)
+
+[INFO] 2025-11-14 17:57:44,638 - 
+================================================================================
+[INFO] 2025-11-14 17:57:44,638 - 🔄 STAGE: CONDUCT INTERVIEWS
+[INFO] 2025-11-14 17:57:44,638 - ================================================================================
+[INFO] 2025-11-14 17:57:44,638 - Description: Conduct AI-powered interviews with matched persona-record pairs
+
+[INFO] 2025-11-14 17:57:44,638 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 17:57:44,638 -    ✓ Topic 1: AI Model Selection (Claude, GPT, or Gemini)
+[INFO] 2025-11-14 17:57:44,638 -    ✓ Topic 2: Interview Protocol Execution
+[INFO] 2025-11-14 17:57:44,638 -    ✓ Topic 3: Multi-turn Conversation Management
+[INFO] 2025-11-14 17:57:44,638 -    ✓ Topic 4: Healthcare Context Preservation
+[INFO] 2025-11-14 17:57:44,638 -    ✓ Topic 5: Interview Transcript Generation
+[INFO] 2025-11-14 17:57:44,638 - 
+[INFO] 2025-11-14 17:57:44,638 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/04_conduct_interviews.py --provider anthropic --model claude-haiku-4-5 --count 10 --protocol Script/interview_protocols/prenatal_care.json
+
+[INFO] 2025-11-14 18:18:11,730 - 
+✅ Stage 'conduct_interviews' completed successfully (1227.09s)
+
+[INFO] 2025-11-14 18:18:11,731 - 
+================================================================================
+[INFO] 2025-11-14 18:18:11,731 - 🔄 STAGE: ANALYZE INTERVIEWS
+[INFO] 2025-11-14 18:18:11,731 - ================================================================================
+[INFO] 2025-11-14 18:18:11,731 - Description: Comprehensive analysis of interview data
+
+[INFO] 2025-11-14 18:18:11,731 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 18:18:11,731 -    ✓ Topic 1: TOPIC 1: Data Loading & Validation (JSON schema validation, error handling)
+[INFO] 2025-11-14 18:18:11,731 -    ✓ Topic 2: TOPIC 2: Advanced NLP Analysis (tokenization, lemmatization, sentiment, key phrases)
+[INFO] 2025-11-14 18:18:11,731 -    ✓ Topic 3: TOPIC 3: Quantitative Metrics (dispersion analysis, quartiles, statistical measures)
+[INFO] 2025-11-14 18:18:11,731 -    ✓ Topic 4: TOPIC 4: Cost Attribution (token estimation, confidence intervals, per-speaker costs)
+[INFO] 2025-11-14 18:18:11,731 -    ✓ Topic 5: TOPIC 5: Clinical Analytics (SNOMED categorization, obstetric risk scoring)
+[INFO] 2025-11-14 18:18:11,732 -    ✓ Topic 6: TOPIC 6: Anomaly Detection (outlier identification across 8 anomaly types)
+[INFO] 2025-11-14 18:18:11,732 -    ✓ Topic 7: TOPIC 7: Reporting Outputs (multiple formats, filtering, JSON export, anomaly display)
+[INFO] 2025-11-14 18:18:11,732 - 
+[INFO] 2025-11-14 18:18:11,732 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/analyze_interviews.py --export-csv --export-json --show-anomalies
+
+[INFO] 2025-11-14 18:18:15,497 - 
+✅ Stage 'analyze_interviews' completed successfully (3.77s)
+
+[INFO] 2025-11-14 18:18:15,497 - 
+================================================================================
+[INFO] 2025-11-14 18:18:15,499 - 🔄 STAGE: VALIDATE IMPLEMENTATION
+[INFO] 2025-11-14 18:18:15,499 - ================================================================================
+[INFO] 2025-11-14 18:18:15,499 - Description: Validate semantic tree implementation and data quality
+
+[INFO] 2025-11-14 18:18:15,499 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 1: Persona Semantic Tree Validation
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 2: Health Record Semantic Tree Validation
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 3: Semantic Matching Score Validation
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 4: Demographic Diversity Analysis
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 5: Clinical Data Quality Assessment
+[INFO] 2025-11-14 18:18:15,499 -    ✓ Topic 6: Validation Report Generation
+[INFO] 2025-11-14 18:18:15,499 - 
+[INFO] 2025-11-14 18:18:15,500 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/test_semantic_implementation.py --personas data/personas/personas.json --records data/health_records/health_records.json --output data/validation
+
+[INFO] 2025-11-14 18:18:15,876 - 
+✅ Stage 'validate_implementation' completed successfully (0.38s)
+
+[INFO] 2025-11-14 18:18:15,876 - 
+================================================================================
+[INFO] 2025-11-14 18:18:15,876 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-14 18:18:15,876 - ================================================================================
+[INFO] 2025-11-14 18:18:15,876 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-14 18:18:15,876 - 🕐 Execution Time: 1273.04 seconds
+[INFO] 2025-11-14 18:18:15,877 - 📈 Stages: 6/6 successful
+[INFO] 2025-11-14 18:18:15,877 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-14 18:18:15,877 - 🧠 AI Model: claude-haiku-4-5
+[INFO] 2025-11-14 18:18:15,877 - 👥 Personas Generated: 10
+[INFO] 2025-11-14 18:18:15,877 - 📋 Health Records: 10
+[INFO] 2025-11-14 18:18:15,877 - 
+📝 Stage Results:
+[INFO] 2025-11-14 18:18:15,877 -    ✅ generate_personas: Completed in 29.04s
+[INFO] 2025-11-14 18:18:15,877 -    ✅ generate_health_records: Completed in 11.44s
+[INFO] 2025-11-14 18:18:15,877 -    ✅ match_personas_records: Completed in 1.32s
+[INFO] 2025-11-14 18:18:15,877 -    ✅ conduct_interviews: Completed in 1227.09s
+[INFO] 2025-11-14 18:18:15,877 -    ✅ analyze_interviews: Completed in 3.77s
+[INFO] 2025-11-14 18:18:15,877 -    ✅ validate_implementation: Completed in 0.38s
+[INFO] 2025-11-14 18:18:15,877 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-14 18:18:15,877 - ================================================================================
+
+[INFO] 2025-11-14 18:18:15,878 - 📄 Report saved to: outputs/workflow_report.json

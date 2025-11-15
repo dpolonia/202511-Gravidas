@@ -1,0 +1,651 @@
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] Computing compatibility matrix for 10 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 6 (60.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 0 (0.0%)
+[INFO]   - Poor (<0.65): 4 (40.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.722
+[INFO] Median compatibility score: 0.862
+[INFO] Score std deviation: 0.195
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 6 (60.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 0 (0.0%)
+[INFO]   - Poor (<0.65): 4 (40.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 10.70 years
+[INFO]   - Within 2 years: 6 (60.0%)
+[INFO]   - Within 5 years: 6 (60.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.549
+[INFO]   - Education: 0.850
+[INFO]   - Income: 0.940
+[INFO]   - Marital_status: 0.770
+[INFO]   - Occupation: 0.760
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] Computing compatibility matrix for 10 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 4 (40.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 1 (10.0%)
+[INFO]   - Poor (<0.65): 2 (20.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.803
+[INFO] Median compatibility score: 0.842
+[INFO] Score std deviation: 0.118
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 4 (40.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 1 (10.0%)
+[INFO]   - Poor (<0.65): 2 (20.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 3.40 years
+[INFO]   - Within 2 years: 6 (60.0%)
+[INFO]   - Within 5 years: 8 (80.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.729
+[INFO]   - Education: 0.832
+[INFO]   - Income: 0.963
+[INFO]   - Marital_status: 0.850
+[INFO]   - Occupation: 0.730
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] Computing compatibility matrix for 10 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 4 (40.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 1 (10.0%)
+[INFO]   - Poor (<0.65): 2 (20.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.803
+[INFO] Median compatibility score: 0.842
+[INFO] Score std deviation: 0.118
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 4 (40.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 1 (10.0%)
+[INFO]   - Poor (<0.65): 2 (20.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 3.40 years
+[INFO]   - Within 2 years: 6 (60.0%)
+[INFO]   - Within 5 years: 8 (80.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.729
+[INFO]   - Education: 0.832
+[INFO]   - Income: 0.963
+[INFO]   - Marital_status: 0.850
+[INFO]   - Occupation: 0.730
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[ERROR] Script failed: 'breakdown'
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 797, in main
+    matches, quality_metrics = match_optimal_with_selection(
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personas, records, compatibility_matrix, detailed_metrics
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 512, in match_optimal_with_selection
+    breakdown = detailed_metrics[persona_idx][record_idx]['breakdown']
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'breakdown'
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[ERROR] Script failed: 'age'
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 808, in main
+    save_enhanced_results(matched_pairs, quality_metrics, args.output)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 693, in save_enhanced_results
+    stats = calculate_enhanced_statistics(matched_pairs, quality_metrics)
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 613, in calculate_enhanced_statistics
+    scores_for_key = [m['score_breakdown'][key] for m in quality_metrics]
+                      ~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: 'age'
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.619
+[INFO] Median compatibility score: 0.644
+[INFO] Score std deviation: 0.093
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 4.40 years
+[INFO]   - Within 2 years: 5 (50.0%)
+[INFO]   - Within 5 years: 7 (70.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.650
+[INFO]   - Education: 0.850
+[INFO]   - Income: 0.903
+[INFO]   - Marital_status: 0.830
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 7 (70.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.629
+[INFO] Median compatibility score: 0.640
+[INFO] Score std deviation: 0.105
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 7 (70.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 5.80 years
+[INFO]   - Within 2 years: 5 (50.0%)
+[INFO]   - Within 5 years: 7 (70.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.634
+[INFO]   - Education: 0.856
+[INFO]   - Income: 0.933
+[INFO]   - Marital_status: 0.900
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.643
+[INFO] Median compatibility score: 0.657
+[INFO] Score std deviation: 0.076
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 2.90 years
+[INFO]   - Within 2 years: 6 (60.0%)
+[INFO]   - Within 5 years: 8 (80.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.748
+[INFO]   - Education: 0.880
+[INFO]   - Income: 0.948
+[INFO]   - Marital_status: 0.910
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 5 (50.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.626
+[INFO] Median compatibility score: 0.641
+[INFO] Score std deviation: 0.063
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 5 (50.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 3.50 years
+[INFO]   - Within 2 years: 4 (40.0%)
+[INFO]   - Within 5 years: 8 (80.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.697
+[INFO]   - Education: 0.850
+[INFO]   - Income: 0.925
+[INFO]   - Marital_status: 0.840
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 7 (70.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.626
+[INFO] Median compatibility score: 0.644
+[INFO] Score std deviation: 0.107
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 7 (70.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 5.00 years
+[INFO]   - Within 2 years: 5 (50.0%)
+[INFO]   - Within 5 years: 7 (70.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.618
+[INFO]   - Education: 0.868
+[INFO]   - Income: 0.955
+[INFO]   - Marital_status: 0.850
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.629
+[INFO] Median compatibility score: 0.645
+[INFO] Score std deviation: 0.109
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 1 (10.0%)
+[INFO]   - Good (≥0.75): 0 (0.0%)
+[INFO]   - Fair (≥0.65): 4 (40.0%)
+[INFO]   - Poor (<0.65): 5 (50.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 5.70 years
+[INFO]   - Within 2 years: 5 (50.0%)
+[INFO]   - Within 5 years: 7 (70.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.656
+[INFO]   - Education: 0.886
+[INFO]   - Income: 0.917
+[INFO]   - Marital_status: 0.820
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[INFO] ✅ Semantic trees detected. Using blended matching with 60% semantic weight
+[INFO] Building blended compatibility matrix (demographic + semantic)...
+[INFO] Computing blended compatibility matrix for 10 personas × 10 records...
+[INFO] Semantic weight: 60.0% | Demographic weight: 40.0%
+[INFO] ✅ Blended compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 3 (30.0%)
+[INFO]   - Poor (<0.65): 6 (60.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.631
+[INFO] Median compatibility score: 0.636
+[INFO] Score std deviation: 0.077
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 0 (0.0%)
+[INFO]   - Good (≥0.75): 1 (10.0%)
+[INFO]   - Fair (≥0.65): 3 (30.0%)
+[INFO]   - Poor (<0.65): 6 (60.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 4.50 years
+[INFO]   - Within 2 years: 8 (80.0%)
+[INFO]   - Within 5 years: 8 (80.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.767
+[INFO]   - Education: 0.862
+[INFO]   - Income: 0.970
+[INFO]   - Marital_status: 0.650
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 10 personas and 10 health records
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 10 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 10 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 3 (30.0%)
+[INFO]   - Good (≥0.75): 4 (40.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 1 (10.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.805
+[INFO] Median compatibility score: 0.825
+[INFO] Score std deviation: 0.096
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 3 (30.0%)
+[INFO]   - Good (≥0.75): 4 (40.0%)
+[INFO]   - Fair (≥0.65): 2 (20.0%)
+[INFO]   - Poor (<0.65): 1 (10.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 3.60 years
+[INFO]   - Within 2 years: 5 (50.0%)
+[INFO]   - Within 5 years: 9 (90.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.732
+[INFO]   - Education: 0.856
+[INFO]   - Income: 0.925
+[INFO]   - Marital_status: 0.880
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================

@@ -1,0 +1,55 @@
+{
+  "test_summary": {
+    "personas": {
+      "total": 10,
+      "with_trees": 10,
+      "validation_passed": 10,
+      "validation_failed": 0,
+      "success_rate": 100.0
+    },
+    "records": {
+      "total": 10,
+      "with_trees": 0,
+      "validation_passed": 0,
+      "validation_failed": 0,
+      "success_rate": 0
+    },
+    "matching": {
+      "test_pairs": 10,
+      "successful": 0,
+      "failed": 0,
+      "success_rate": 0.0
+    }
+  },
+  "detailed_results": {
+    "personas": {
+      "total_personas": 10,
+      "personas_with_trees": 10,
+      "personas_without_trees": 0,
+      "validation_passed": 10,
+      "validation_failed": 0,
+      "range_validation_passed": 10,
+      "range_validation_failed": 0,
+      "issues_found": []
+    },
+    "records": {
+      "total_records": 10,
+      "records_with_trees": 0,
+      "records_without_trees": 10,
+      "validation_passed": 0,
+      "validation_failed": 0,
+      "issues_found": []
+    },
+    "matching": {
+      "total_test_pairs": 10,
+      "successful_calculations": 0,
+      "failed_calculations": 0,
+      "score_statistics": {
+        "min": 1.0,
+        "max": 0.0,
+        "avg": 0.0,
+        "samples": []
+      }
+    }
+  }
+}
