@@ -1,0 +1,810 @@
+[
+  {
+    "id": 1,
+    "name": "Samantha",
+    "age": 24,
+    "gender": "female",
+    "description": "Samantha is a 24-year-old retail manager living in suburban Atlanta with a high school diploma and a lower-middle income. She is engaged and has limited access to healthcare, relying on occasional visits to a free clinic. Samantha is overweight, sedentary, and smokes occasionally, but has no chronic conditions. This is her first pregnancy (G1P0), and she is uncertain about her pregnancy plans, not currently taking prenatal vitamins.",
+    "education": "high_school",
+    "occupation": "unknown",
+    "marital_status": "unknown",
+    "income_level": "middle",
+    "semantic_tree": {
+      "persona_id": 1,
+      "demographics": {
+        "age": 24,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "high_school",
+        "income_bracket": "middle",
+        "occupation_category": "executive",
+        "employment_status": "employed",
+        "insurance_status": "insured"
+      },
+      "health_profile": {
+        "health_consciousness": 2,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 2,
+        "reported_health_conditions": [],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 1,
+        "nutrition_awareness": 3,
+        "smoking_status": "current",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "unknown",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 1,
+        "para": 0,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.818972"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Emily",
+    "age": 36,
+    "gender": "female",
+    "description": "Emily is a 36-year-old software engineer with a master's degree living in urban San Francisco with a high income. She is married and has excellent health insurance coverage. Emily is very health-conscious, exercises regularly, and has no chronic conditions. This is her second pregnancy (G2P1), and she is actively trying to conceive after a previous successful vaginal delivery. She has been taking prenatal vitamins for the past 6 months.",
+    "education": "masters",
+    "occupation": "unknown",
+    "marital_status": "married",
+    "income_level": "high",
+    "semantic_tree": {
+      "persona_id": 2,
+      "demographics": {
+        "age": 36,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "masters",
+        "income_bracket": "high",
+        "occupation_category": "professional",
+        "employment_status": "employed",
+        "insurance_status": "insured"
+      },
+      "health_profile": {
+        "health_consciousness": 5,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 5,
+        "reported_health_conditions": [],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 4,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "married",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "wants_children"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 3,
+        "gravida": 2,
+        "para": 1,
+        "previous_complications": [],
+        "previous_delivery_methods": [
+          "vaginal"
+        ],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.819210"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Fatima",
+    "age": 41,
+    "gender": "female",
+    "description": "Fatima is a 41-year-old stay-at-home mother with a bachelor's degree living in rural Kansas with a middle income. She is married and has Medicaid coverage. Fatima is moderately health-conscious, gets regular checkups, and has well-controlled hypertension. This is her fourth pregnancy (G4P3), and she is not planning another pregnancy, using an IUD for contraception. She breastfed her previous children for 6-12 months each.",
+    "education": "bachelors",
+    "occupation": "unknown",
+    "marital_status": "married",
+    "income_level": "middle",
+    "semantic_tree": {
+      "persona_id": 3,
+      "demographics": {
+        "age": 41,
+        "gender": "female",
+        "location_type": "rural",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "bachelors",
+        "income_bracket": "middle",
+        "occupation_category": "homemaker",
+        "employment_status": "homemaker",
+        "insurance_status": "medicaid"
+      },
+      "health_profile": {
+        "health_consciousness": 4,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 4,
+        "reported_health_conditions": [
+          "hypertension"
+        ],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 3,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "married",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 4,
+        "para": 3,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": false,
+        "contraception_current": "iud",
+        "contraception_history": [],
+        "breastfeeding_history": true,
+        "breastfeeding_duration_months": 6,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.819638"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Olivia",
+    "age": 19,
+    "gender": "female",
+    "description": "Olivia is a 19-year-old student with a high school diploma living in suburban Chicago with a low income. She is single and uninsured, relying on free clinics for healthcare. Olivia is sedentary, smokes, and has untreated anxiety. This is her first pregnancy (G1P0), and she is uncertain about her pregnancy plans, not taking prenatal vitamins.",
+    "education": "high_school",
+    "occupation": "unknown",
+    "marital_status": "single",
+    "income_level": "low",
+    "semantic_tree": {
+      "persona_id": 4,
+      "demographics": {
+        "age": 19,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "high_school",
+        "income_bracket": "low",
+        "occupation_category": "student",
+        "employment_status": "student",
+        "insurance_status": "uninsured"
+      },
+      "health_profile": {
+        "health_consciousness": 2,
+        "healthcare_access": 1,
+        "pregnancy_readiness": 2,
+        "reported_health_conditions": [
+          "anxiety"
+        ],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 1,
+        "nutrition_awareness": 3,
+        "smoking_status": "current",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 2,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "single",
+        "relationship_stability": 2,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 1,
+        "para": 0,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 2
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.819872"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Isabelle",
+    "age": 27,
+    "gender": "female",
+    "description": "Isabelle is a 27-year-old paralegal with a bachelor's degree living in urban Seattle with an upper-middle income. She is in a domestic partnership and has good health insurance coverage. Isabelle is health-conscious, exercises regularly, and has no chronic conditions. This is her first pregnancy (G1P0), and she is actively trying to conceive, taking prenatal vitamins for the past 4 months.",
+    "education": "bachelors",
+    "occupation": "unknown",
+    "marital_status": "partnered",
+    "income_level": "upper_middle",
+    "semantic_tree": {
+      "persona_id": 5,
+      "demographics": {
+        "age": 27,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "bachelors",
+        "income_bracket": "upper_middle",
+        "occupation_category": "other",
+        "employment_status": "employed",
+        "insurance_status": "insured"
+      },
+      "health_profile": {
+        "health_consciousness": 4,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 5,
+        "reported_health_conditions": [],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 4,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "partnered",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "wants_children"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 3,
+        "gravida": 1,
+        "para": 0,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820042"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Aaliyah",
+    "age": 33,
+    "gender": "female",
+    "description": "Aaliyah is a 33-year-old elementary school teacher with a master's degree living in rural North Carolina with a middle income. She is married and has Medicare coverage. Aaliyah is moderately health-conscious, gets regular checkups, and has well-controlled gestational diabetes from her previous pregnancy. This is her second pregnancy (G2P1), and she is planning another child, taking prenatal vitamins.",
+    "education": "masters",
+    "occupation": "unknown",
+    "marital_status": "married",
+    "income_level": "middle",
+    "semantic_tree": {
+      "persona_id": 6,
+      "demographics": {
+        "age": 33,
+        "gender": "female",
+        "location_type": "rural",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "masters",
+        "income_bracket": "middle",
+        "occupation_category": "professional",
+        "employment_status": "employed",
+        "insurance_status": "medicare"
+      },
+      "health_profile": {
+        "health_consciousness": 4,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 3,
+        "reported_health_conditions": [
+          "diabetes"
+        ],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 3,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "married",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 2,
+        "para": 1,
+        "previous_complications": [
+          "gestational_diabetes"
+        ],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820224"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Chloe",
+    "age": 22,
+    "gender": "female",
+    "description": "Chloe is a 22-year-old barista with a high school diploma living in suburban Los Angeles with a low income. She is single and underinsured, relying on free clinics for healthcare. Chloe is sedentary, smokes, and has untreated depression. This is her second pregnancy (G2P1), and she is not planning another pregnancy, using condoms for contraception. She breastfed her first child for 3 months.",
+    "education": "high_school",
+    "occupation": "unknown",
+    "marital_status": "single",
+    "income_level": "low",
+    "semantic_tree": {
+      "persona_id": 7,
+      "demographics": {
+        "age": 22,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "high_school",
+        "income_bracket": "low",
+        "occupation_category": "other",
+        "employment_status": "employed",
+        "insurance_status": "underinsured"
+      },
+      "health_profile": {
+        "health_consciousness": 2,
+        "healthcare_access": 1,
+        "pregnancy_readiness": 3,
+        "reported_health_conditions": [
+          "depression"
+        ],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 1,
+        "nutrition_awareness": 3,
+        "smoking_status": "current",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 2,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "single",
+        "relationship_stability": 2,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 2,
+        "para": 1,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": false,
+        "contraception_current": "condom",
+        "contraception_history": [],
+        "breastfeeding_history": true,
+        "breastfeeding_duration_months": 6,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 2
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820412"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Hannah",
+    "age": 40,
+    "gender": "female",
+    "description": "Hannah is a 40-year-old marketing manager with a bachelor's degree living in urban Chicago with an upper-middle income. She is divorced and has good health insurance coverage. Hannah is very health-conscious, exercises regularly, and has no chronic conditions. This is her third pregnancy (G3P2), and she is actively trying to conceive after a previous successful IVF cycle, taking prenatal vitamins.",
+    "education": "bachelors",
+    "occupation": "unknown",
+    "marital_status": "divorced",
+    "income_level": "upper_middle",
+    "semantic_tree": {
+      "persona_id": 8,
+      "demographics": {
+        "age": 40,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "bachelors",
+        "income_bracket": "upper_middle",
+        "occupation_category": "executive",
+        "employment_status": "employed",
+        "insurance_status": "insured"
+      },
+      "health_profile": {
+        "health_consciousness": 5,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 5,
+        "reported_health_conditions": [],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 4,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "divorced",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "wants_children"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 3,
+        "gravida": 3,
+        "para": 2,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": true,
+        "fertility_treatment_types": [
+          "IVF"
+        ],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820556"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Jasmine",
+    "age": 29,
+    "gender": "female",
+    "description": "Jasmine is a 29-year-old cashier with a high school diploma living in rural West Virginia with a lower-middle income. She is unmarried and has Medicaid coverage. Jasmine is moderately health-conscious, gets regular checkups, and has well-controlled asthma. This is her first pregnancy (G1P0), and she is uncertain about her pregnancy plans, not taking prenatal vitamins.",
+    "education": "high_school",
+    "occupation": "unknown",
+    "marital_status": "married",
+    "income_level": "middle",
+    "semantic_tree": {
+      "persona_id": 9,
+      "demographics": {
+        "age": 29,
+        "gender": "female",
+        "location_type": "rural",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "high_school",
+        "income_bracket": "middle",
+        "occupation_category": "service",
+        "employment_status": "employed",
+        "insurance_status": "medicaid"
+      },
+      "health_profile": {
+        "health_consciousness": 4,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 2,
+        "reported_health_conditions": [
+          "asthma"
+        ],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 3,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "married",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "uncertain"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 0,
+        "gravida": 1,
+        "para": 0,
+        "previous_complications": [],
+        "previous_delivery_methods": [],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820717"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Addison",
+    "age": 38,
+    "gender": "female",
+    "description": "Addison is a 38-year-old nurse practitioner with a doctoral degree living in urban Seattle with a high income. She is married and has excellent health insurance coverage. Addison is very health-conscious, exercises regularly, and has no chronic conditions. This is her fourth pregnancy (G4P3), and she is actively trying to conceive after a previous successful vaginal delivery, taking prenatal vitamins.",
+    "education": "unknown",
+    "occupation": "unknown",
+    "marital_status": "married",
+    "income_level": "high",
+    "semantic_tree": {
+      "persona_id": 10,
+      "demographics": {
+        "age": 38,
+        "gender": "female",
+        "location_type": "urban",
+        "ethnicity": null,
+        "language_primary": "English"
+      },
+      "socioeconomic": {
+        "education_level": "unknown",
+        "income_bracket": "high",
+        "occupation_category": "professional",
+        "employment_status": "employed",
+        "insurance_status": "insured"
+      },
+      "health_profile": {
+        "health_consciousness": 5,
+        "healthcare_access": 3,
+        "pregnancy_readiness": 5,
+        "reported_health_conditions": [],
+        "medication_history": [],
+        "allergies": [],
+        "surgery_history": [],
+        "reproductive_history": null,
+        "family_medical_history": []
+      },
+      "behavioral": {
+        "physical_activity_level": 4,
+        "nutrition_awareness": 4,
+        "smoking_status": "never",
+        "alcohol_consumption": "never",
+        "substance_use": "none",
+        "sleep_quality": 3
+      },
+      "psychosocial": {
+        "mental_health_status": 3,
+        "stress_level": 3,
+        "social_support": 3,
+        "marital_status": "married",
+        "relationship_stability": 3,
+        "financial_stress": 3,
+        "family_planning_attitudes": "wants_children"
+      },
+      "pregnancy_intentions": {
+        "trying_duration": 3,
+        "gravida": 4,
+        "para": 3,
+        "previous_complications": [],
+        "previous_delivery_methods": [
+          "vaginal"
+        ],
+        "miscarriage_count": 0,
+        "abortion_count": 0,
+        "ectopic_count": 0,
+        "fertility_treatments": false,
+        "fertility_treatment_types": [],
+        "preconception_care": true,
+        "contraception_current": null,
+        "contraception_history": [],
+        "breastfeeding_history": false,
+        "breastfeeding_duration_months": 0,
+        "pregnancy_spacing_preference": null,
+        "partner_support_for_pregnancy": 3
+      }
+    },
+    "raw_data": {
+      "generated": true,
+      "timestamp": "2025-11-14T17:57:31.820855"
+    }
+  }
+]

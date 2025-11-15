@@ -127,6 +127,19 @@ ENHANCED_MODELS_DATABASE = {
                 'description': 'Balanced performance and cost',
                 'recommended': True
             },
+            'claude-sonnet-4-5-20250929': {
+                'name': 'Claude Sonnet 4.5 (2025-09-29)',
+                'cost_input': 3.0,
+                'cost_output': 15.0,
+                'batch_available': True,
+                'batch_input': 1.5,
+                'batch_output': 7.5,
+                'context_window': 200000,
+                'max_output': 64000,
+                'quality': 'Excellent',
+                'description': 'Claude Sonnet 4.5 versioned release',
+                'recommended': True
+            },
             'claude-haiku-4-5': {
                 'name': 'Claude 4.5 Haiku',
                 'cost_input': 1.0,

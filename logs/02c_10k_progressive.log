@@ -1,0 +1,957 @@
+[INFO] === 10K PROGRESSIVE SYNTHEA GENERATION (ECHO EVERY 100) ===
+[INFO] 📊 Existing records: 1002
+[INFO] 🎯 Target: 10000 records
+[INFO] 📝 Need: 8998 more records
+[INFO] 📦 Batches to run: 90 (×100 records each)
+[INFO] 📢 Progress updates: Every 100 records
+[INFO] 
+🔄 BATCH 1/90
+[INFO]    Current: 1002 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 1: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2001 Massachusetts
+[INFO] ✅ Batch 1 completed successfully
+[INFO] 📢 ECHO UPDATE: 1111 records generated
+[INFO]    Progress: 1111/10000 (11.1%)
+[INFO]    Rate: 4971.7 records/minute
+[INFO]    Elapsed: 0.2 minutes
+[INFO] ✅ Batch 1: +109 → 1111 total
+[INFO] 
+🔄 BATCH 2/90
+[INFO]    Current: 1111 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 2: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2002 Massachusetts
+[INFO] ✅ Batch 2 completed successfully
+[INFO] 📢 ECHO UPDATE: 1215 records generated
+[INFO]    Progress: 1215/10000 (12.2%)
+[INFO]    Rate: 2309.9 records/minute
+[INFO]    Elapsed: 0.5 minutes
+[INFO] ✅ Batch 2: +104 → 1215 total
+[INFO] 
+🔄 BATCH 3/90
+[INFO]    Current: 1215 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 3: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2003 Massachusetts
+[INFO] ✅ Batch 3 completed successfully
+[INFO] 📢 ECHO UPDATE: 1324 records generated
+[INFO]    Progress: 1324/10000 (13.2%)
+[INFO]    Rate: 1428.7 records/minute
+[INFO]    Elapsed: 0.9 minutes
+[INFO] ✅ Batch 3: +109 → 1324 total
+[INFO] 
+🔄 BATCH 4/90
+[INFO]    Current: 1324 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 4: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2004 Massachusetts
+[INFO] ✅ Batch 4 completed successfully
+[INFO] 📢 ECHO UPDATE: 1431 records generated
+[INFO]    Progress: 1431/10000 (14.3%)
+[INFO]    Rate: 1043.8 records/minute
+[INFO]    Elapsed: 1.4 minutes
+[INFO] ✅ Batch 4: +107 → 1431 total
+[INFO] 
+🔄 BATCH 5/90
+[INFO]    Current: 1431 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 5: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2005 Massachusetts
+[INFO] ✅ Batch 5 completed successfully
+[INFO] 📢 ECHO UPDATE: 1536 records generated
+[INFO]    Progress: 1536/10000 (15.4%)
+[INFO]    Rate: 836.9 records/minute
+[INFO]    Elapsed: 1.8 minutes
+[INFO] ✅ Batch 5: +105 → 1536 total
+[INFO] 
+🔄 BATCH 6/90
+[INFO]    Current: 1536 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 6: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2006 Massachusetts
+[INFO] ✅ Batch 6 completed successfully
+[INFO] 📢 ECHO UPDATE: 1643 records generated
+[INFO]    Progress: 1643/10000 (16.4%)
+[INFO]    Rate: 706.3 records/minute
+[INFO]    Elapsed: 2.3 minutes
+[INFO] ✅ Batch 6: +107 → 1643 total
+[INFO] 
+🔄 BATCH 7/90
+[INFO]    Current: 1643 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 7: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2007 Massachusetts
+[INFO] ✅ Batch 7 completed successfully
+[INFO] 📢 ECHO UPDATE: 1748 records generated
+[INFO]    Progress: 1748/10000 (17.5%)
+[INFO]    Rate: 636.0 records/minute
+[INFO]    Elapsed: 2.7 minutes
+[INFO] ✅ Batch 7: +105 → 1748 total
+[INFO] 
+🔄 BATCH 8/90
+[INFO]    Current: 1748 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 8: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2008 Massachusetts
+[INFO] ✅ Batch 8 completed successfully
+[INFO] 📢 ECHO UPDATE: 1859 records generated
+[INFO]    Progress: 1859/10000 (18.6%)
+[INFO]    Rate: 583.5 records/minute
+[INFO]    Elapsed: 3.2 minutes
+[INFO] ✅ Batch 8: +111 → 1859 total
+[INFO] 
+🔄 BATCH 9/90
+[INFO]    Current: 1859 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 9: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2009 Massachusetts
+[INFO] ✅ Batch 9 completed successfully
+[INFO] 📢 ECHO UPDATE: 1966 records generated
+[INFO]    Progress: 1966/10000 (19.7%)
+[INFO]    Rate: 567.8 records/minute
+[INFO]    Elapsed: 3.5 minutes
+[INFO] ✅ Batch 9: +107 → 1966 total
+[INFO] 
+🔄 BATCH 10/90
+[INFO]    Current: 1966 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 10: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2010 Massachusetts
+[INFO] ✅ Batch 10 completed successfully
+[INFO] 📢 ECHO UPDATE: 2073 records generated
+[INFO]    Progress: 2073/10000 (20.7%)
+[INFO]    Rate: 550.2 records/minute
+[INFO]    Elapsed: 3.8 minutes
+[INFO] ✅ Batch 10: +107 → 2073 total
+[INFO] 
+🔄 BATCH 11/90
+[INFO]    Current: 2073 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 11: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2011 Massachusetts
+[INFO] ✅ Batch 11 completed successfully
+[INFO] 📢 ECHO UPDATE: 2175 records generated
+[INFO]    Progress: 2175/10000 (21.8%)
+[INFO]    Rate: 536.6 records/minute
+[INFO]    Elapsed: 4.1 minutes
+[INFO] ✅ Batch 11: +102 → 2175 total
+[INFO] 
+🔄 BATCH 12/90
+[INFO]    Current: 2175 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 12: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2012 Massachusetts
+[INFO] ✅ Batch 12 completed successfully
+[INFO] 📢 ECHO UPDATE: 2285 records generated
+[INFO]    Progress: 2285/10000 (22.9%)
+[INFO]    Rate: 520.6 records/minute
+[INFO]    Elapsed: 4.4 minutes
+[INFO] ✅ Batch 12: +110 → 2285 total
+[INFO] 
+🔄 BATCH 13/90
+[INFO]    Current: 2285 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 13: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2013 Massachusetts
+[INFO] ✅ Batch 13 completed successfully
+[INFO] 📢 ECHO UPDATE: 2392 records generated
+[INFO]    Progress: 2392/10000 (23.9%)
+[INFO]    Rate: 504.3 records/minute
+[INFO]    Elapsed: 4.7 minutes
+[INFO] ✅ Batch 13: +107 → 2392 total
+[INFO] 
+🔄 BATCH 14/90
+[INFO]    Current: 2392 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 14: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2014 Massachusetts
+[INFO] ✅ Batch 14 completed successfully
+[INFO] 📢 ECHO UPDATE: 2498 records generated
+[INFO]    Progress: 2498/10000 (25.0%)
+[INFO]    Rate: 490.1 records/minute
+[INFO]    Elapsed: 5.1 minutes
+[INFO] ✅ Batch 14: +106 → 2498 total
+[INFO] 
+🔄 BATCH 15/90
+[INFO]    Current: 2498 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 15: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2015 Massachusetts
+[INFO] ✅ Batch 15 completed successfully
+[INFO] 📢 ECHO UPDATE: 2604 records generated
+[INFO]    Progress: 2604/10000 (26.0%)
+[INFO]    Rate: 477.5 records/minute
+[INFO]    Elapsed: 5.5 minutes
+[INFO] ✅ Batch 15: +106 → 2604 total
+[INFO] 
+🔄 BATCH 16/90
+[INFO]    Current: 2604 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 16: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2016 Massachusetts
+[INFO] ✅ Batch 16 completed successfully
+[INFO] 📢 ECHO UPDATE: 2708 records generated
+[INFO]    Progress: 2708/10000 (27.1%)
+[INFO]    Rate: 466.2 records/minute
+[INFO]    Elapsed: 5.8 minutes
+[INFO] ✅ Batch 16: +104 → 2708 total
+[INFO] 
+🔄 BATCH 17/90
+[INFO]    Current: 2708 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 17: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2017 Massachusetts
+[INFO] ✅ Batch 17 completed successfully
+[INFO] 📢 ECHO UPDATE: 2816 records generated
+[INFO]    Progress: 2816/10000 (28.2%)
+[INFO]    Rate: 456.4 records/minute
+[INFO]    Elapsed: 6.2 minutes
+[INFO] ✅ Batch 17: +108 → 2816 total
+[INFO] 
+🔄 BATCH 18/90
+[INFO]    Current: 2816 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 18: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2018 Massachusetts
+[INFO] ✅ Batch 18 completed successfully
+[INFO] 📢 ECHO UPDATE: 2919 records generated
+[INFO]    Progress: 2919/10000 (29.2%)
+[INFO]    Rate: 446.0 records/minute
+[INFO]    Elapsed: 6.5 minutes
+[INFO] ✅ Batch 18: +103 → 2919 total
+[INFO] 
+🔄 BATCH 19/90
+[INFO]    Current: 2919 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 19: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2019 Massachusetts
+[INFO] ✅ Batch 19 completed successfully
+[INFO] 📢 ECHO UPDATE: 3024 records generated
+[INFO]    Progress: 3024/10000 (30.2%)
+[INFO]    Rate: 434.7 records/minute
+[INFO]    Elapsed: 7.0 minutes
+[INFO] ✅ Batch 19: +105 → 3024 total
+[INFO] 
+🔄 BATCH 20/90
+[INFO]    Current: 3024 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 20: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2020 Massachusetts
+[INFO] ✅ Batch 20 completed successfully
+[INFO] 📢 ECHO UPDATE: 3131 records generated
+[INFO]    Progress: 3131/10000 (31.3%)
+[INFO]    Rate: 422.9 records/minute
+[INFO]    Elapsed: 7.4 minutes
+[INFO] ✅ Batch 20: +107 → 3131 total
+[INFO] 
+🔄 BATCH 21/90
+[INFO]    Current: 3131 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 21: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2021 Massachusetts
+[INFO] ✅ Batch 21 completed successfully
+[INFO] 📢 ECHO UPDATE: 3235 records generated
+[INFO]    Progress: 3235/10000 (32.4%)
+[INFO]    Rate: 411.9 records/minute
+[INFO]    Elapsed: 7.9 minutes
+[INFO] ✅ Batch 21: +104 → 3235 total
+[INFO] 
+🔄 BATCH 22/90
+[INFO]    Current: 3235 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 22: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2022 Massachusetts
+[INFO] ✅ Batch 22 completed successfully
+[INFO] 📢 ECHO UPDATE: 3341 records generated
+[INFO]    Progress: 3341/10000 (33.4%)
+[INFO]    Rate: 401.0 records/minute
+[INFO]    Elapsed: 8.3 minutes
+[INFO] ✅ Batch 22: +106 → 3341 total
+[INFO] 
+🔄 BATCH 23/90
+[INFO]    Current: 3341 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 23: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2023 Massachusetts
+[INFO] ✅ Batch 23 completed successfully
+[INFO] 📢 ECHO UPDATE: 3448 records generated
+[INFO]    Progress: 3448/10000 (34.5%)
+[INFO]    Rate: 390.9 records/minute
+[INFO]    Elapsed: 8.8 minutes
+[INFO] ✅ Batch 23: +107 → 3448 total
+[INFO] 
+🔄 BATCH 24/90
+[INFO]    Current: 3448 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 24: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2024 Massachusetts
+[INFO] ✅ Batch 24 completed successfully
+[INFO] 📢 ECHO UPDATE: 3554 records generated
+[INFO]    Progress: 3554/10000 (35.5%)
+[INFO]    Rate: 383.5 records/minute
+[INFO]    Elapsed: 9.3 minutes
+[INFO] ✅ Batch 24: +106 → 3554 total
+[INFO] 
+🔄 BATCH 25/90
+[INFO]    Current: 3554 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 25: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2025 Massachusetts
+[INFO] ✅ Batch 25 completed successfully
+[INFO] 📢 ECHO UPDATE: 3662 records generated
+[INFO]    Progress: 3662/10000 (36.6%)
+[INFO]    Rate: 377.1 records/minute
+[INFO]    Elapsed: 9.7 minutes
+[INFO] ✅ Batch 25: +108 → 3662 total
+[INFO] 
+🔄 BATCH 26/90
+[INFO]    Current: 3662 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 26: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2026 Massachusetts
+[INFO] ✅ Batch 26 completed successfully
+[INFO] 📢 ECHO UPDATE: 3768 records generated
+[INFO]    Progress: 3768/10000 (37.7%)
+[INFO]    Rate: 371.9 records/minute
+[INFO]    Elapsed: 10.1 minutes
+[INFO] ✅ Batch 26: +106 → 3768 total
+[INFO] 
+🔄 BATCH 27/90
+[INFO]    Current: 3768 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 27: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2027 Massachusetts
+[INFO] ✅ Batch 27 completed successfully
+[INFO] 📢 ECHO UPDATE: 3873 records generated
+[INFO]    Progress: 3873/10000 (38.7%)
+[INFO]    Rate: 366.3 records/minute
+[INFO]    Elapsed: 10.6 minutes
+[INFO] ✅ Batch 27: +105 → 3873 total
+[INFO] 
+🔄 BATCH 28/90
+[INFO]    Current: 3873 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 28: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2028 Massachusetts
+[INFO] ✅ Batch 28 completed successfully
+[INFO] 📢 ECHO UPDATE: 3981 records generated
+[INFO]    Progress: 3981/10000 (39.8%)
+[INFO]    Rate: 361.6 records/minute
+[INFO]    Elapsed: 11.0 minutes
+[INFO] ✅ Batch 28: +108 → 3981 total
+[INFO] 
+🔄 BATCH 29/90
+[INFO]    Current: 3981 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 29: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2029 Massachusetts
+[INFO] ✅ Batch 29 completed successfully
+[INFO] 📢 ECHO UPDATE: 4086 records generated
+[INFO]    Progress: 4086/10000 (40.9%)
+[INFO]    Rate: 356.7 records/minute
+[INFO]    Elapsed: 11.5 minutes
+[INFO] ✅ Batch 29: +105 → 4086 total
+[INFO] 
+🔄 BATCH 30/90
+[INFO]    Current: 4086 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 30: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2030 Massachusetts
+[INFO] ✅ Batch 30 completed successfully
+[INFO] 📢 ECHO UPDATE: 4193 records generated
+[INFO]    Progress: 4193/10000 (41.9%)
+[INFO]    Rate: 352.7 records/minute
+[INFO]    Elapsed: 11.9 minutes
+[INFO] ✅ Batch 30: +107 → 4193 total
+[INFO] 
+🔄 BATCH 31/90
+[INFO]    Current: 4193 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 31: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2031 Massachusetts
+[INFO] ✅ Batch 31 completed successfully
+[INFO] 📢 ECHO UPDATE: 4301 records generated
+[INFO]    Progress: 4301/10000 (43.0%)
+[INFO]    Rate: 349.6 records/minute
+[INFO]    Elapsed: 12.3 minutes
+[INFO] ✅ Batch 31: +108 → 4301 total
+[INFO] 
+🔄 BATCH 32/90
+[INFO]    Current: 4301 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 32: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2032 Massachusetts
+[INFO] ✅ Batch 32 completed successfully
+[INFO] 📢 ECHO UPDATE: 4406 records generated
+[INFO]    Progress: 4406/10000 (44.1%)
+[INFO]    Rate: 345.8 records/minute
+[INFO]    Elapsed: 12.7 minutes
+[INFO] ✅ Batch 32: +105 → 4406 total
+[INFO] 
+🔄 BATCH 33/90
+[INFO]    Current: 4406 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 33: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2033 Massachusetts
+[INFO] ✅ Batch 33 completed successfully
+[INFO] 📢 ECHO UPDATE: 4510 records generated
+[INFO]    Progress: 4510/10000 (45.1%)
+[INFO]    Rate: 342.7 records/minute
+[INFO]    Elapsed: 13.2 minutes
+[INFO] ✅ Batch 33: +104 → 4510 total
+[INFO] 
+🔄 BATCH 34/90
+[INFO]    Current: 4510 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 34: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2034 Massachusetts
+[INFO] ✅ Batch 34 completed successfully
+[INFO] 📢 ECHO UPDATE: 4612 records generated
+[INFO]    Progress: 4612/10000 (46.1%)
+[INFO]    Rate: 338.7 records/minute
+[INFO]    Elapsed: 13.6 minutes
+[INFO] ✅ Batch 34: +102 → 4612 total
+[INFO] 
+🔄 BATCH 35/90
+[INFO]    Current: 4612 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 35: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2035 Massachusetts
+[INFO] ✅ Batch 35 completed successfully
+[INFO] 📢 ECHO UPDATE: 4717 records generated
+[INFO]    Progress: 4717/10000 (47.2%)
+[INFO]    Rate: 334.8 records/minute
+[INFO]    Elapsed: 14.1 minutes
+[INFO] ✅ Batch 35: +105 → 4717 total
+[INFO] 
+🔄 BATCH 36/90
+[INFO]    Current: 4717 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 36: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2036 Massachusetts
+[INFO] ✅ Batch 36 completed successfully
+[INFO] 📢 ECHO UPDATE: 4829 records generated
+[INFO]    Progress: 4829/10000 (48.3%)
+[INFO]    Rate: 331.8 records/minute
+[INFO]    Elapsed: 14.6 minutes
+[INFO] ✅ Batch 36: +112 → 4829 total
+[INFO] 
+🔄 BATCH 37/90
+[INFO]    Current: 4829 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 37: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2037 Massachusetts
+[INFO] ✅ Batch 37 completed successfully
+[INFO] 📢 ECHO UPDATE: 4934 records generated
+[INFO]    Progress: 4934/10000 (49.3%)
+[INFO]    Rate: 328.3 records/minute
+[INFO]    Elapsed: 15.0 minutes
+[INFO] ✅ Batch 37: +105 → 4934 total
+[INFO] 
+🔄 BATCH 38/90
+[INFO]    Current: 4934 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 38: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2038 Massachusetts
+[INFO] ✅ Batch 38 completed successfully
+[INFO] 📢 ECHO UPDATE: 5038 records generated
+[INFO]    Progress: 5038/10000 (50.4%)
+[INFO]    Rate: 324.9 records/minute
+[INFO]    Elapsed: 15.5 minutes
+[INFO] ✅ Batch 38: +104 → 5038 total
+[INFO] 
+🔄 BATCH 39/90
+[INFO]    Current: 5038 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 39: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2039 Massachusetts
+[INFO] ✅ Batch 39 completed successfully
+[INFO] 📢 ECHO UPDATE: 5141 records generated
+[INFO]    Progress: 5141/10000 (51.4%)
+[INFO]    Rate: 321.5 records/minute
+[INFO]    Elapsed: 16.0 minutes
+[INFO] ✅ Batch 39: +103 → 5141 total
+[INFO] 
+🔄 BATCH 40/90
+[INFO]    Current: 5141 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 40: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2040 Massachusetts
+[INFO] ✅ Batch 40 completed successfully
+[INFO] 📢 ECHO UPDATE: 5245 records generated
+[INFO]    Progress: 5245/10000 (52.5%)
+[INFO]    Rate: 318.8 records/minute
+[INFO]    Elapsed: 16.4 minutes
+[INFO] ✅ Batch 40: +104 → 5245 total
+[INFO] 
+🔄 BATCH 41/90
+[INFO]    Current: 5245 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 41: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2041 Massachusetts
+[INFO] ✅ Batch 41 completed successfully
+[INFO] 📢 ECHO UPDATE: 5350 records generated
+[INFO]    Progress: 5350/10000 (53.5%)
+[INFO]    Rate: 317.0 records/minute
+[INFO]    Elapsed: 16.9 minutes
+[INFO] ✅ Batch 41: +105 → 5350 total
+[INFO] 
+🔄 BATCH 42/90
+[INFO]    Current: 5350 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 42: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2042 Massachusetts
+[INFO] ✅ Batch 42 completed successfully
+[INFO] 📢 ECHO UPDATE: 5457 records generated
+[INFO]    Progress: 5457/10000 (54.6%)
+[INFO]    Rate: 315.3 records/minute
+[INFO]    Elapsed: 17.3 minutes
+[INFO] ✅ Batch 42: +107 → 5457 total
+[INFO] 
+🔄 BATCH 43/90
+[INFO]    Current: 5457 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 43: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2043 Massachusetts
+[INFO] ✅ Batch 43 completed successfully
+[INFO] 📢 ECHO UPDATE: 5565 records generated
+[INFO]    Progress: 5565/10000 (55.6%)
+[INFO]    Rate: 313.5 records/minute
+[INFO]    Elapsed: 17.8 minutes
+[INFO] ✅ Batch 43: +108 → 5565 total
+[INFO] 
+🔄 BATCH 44/90
+[INFO]    Current: 5565 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 44: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2044 Massachusetts
+[INFO] ✅ Batch 44 completed successfully
+[INFO] 📢 ECHO UPDATE: 5669 records generated
+[INFO]    Progress: 5669/10000 (56.7%)
+[INFO]    Rate: 311.3 records/minute
+[INFO]    Elapsed: 18.2 minutes
+[INFO] ✅ Batch 44: +104 → 5669 total
+[INFO] 
+🔄 BATCH 45/90
+[INFO]    Current: 5669 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 45: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2045 Massachusetts
+[INFO] ✅ Batch 45 completed successfully
+[INFO] 📢 ECHO UPDATE: 5775 records generated
+[INFO]    Progress: 5775/10000 (57.8%)
+[INFO]    Rate: 308.8 records/minute
+[INFO]    Elapsed: 18.7 minutes
+[INFO] ✅ Batch 45: +106 → 5775 total
+[INFO] 
+🔄 BATCH 46/90
+[INFO]    Current: 5775 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 46: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2046 Massachusetts
+[INFO] ✅ Batch 46 completed successfully
+[INFO] 📢 ECHO UPDATE: 5883 records generated
+[INFO]    Progress: 5883/10000 (58.8%)
+[INFO]    Rate: 306.8 records/minute
+[INFO]    Elapsed: 19.2 minutes
+[INFO] ✅ Batch 46: +108 → 5883 total
+[INFO] 
+🔄 BATCH 47/90
+[INFO]    Current: 5883 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 47: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2047 Massachusetts
+[INFO] ✅ Batch 47 completed successfully
+[INFO] 📢 ECHO UPDATE: 5989 records generated
+[INFO]    Progress: 5989/10000 (59.9%)
+[INFO]    Rate: 304.6 records/minute
+[INFO]    Elapsed: 19.7 minutes
+[INFO] ✅ Batch 47: +106 → 5989 total
+[INFO] 
+🔄 BATCH 48/90
+[INFO]    Current: 5989 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 48: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2048 Massachusetts
+[INFO] ✅ Batch 48 completed successfully
+[INFO] 📢 ECHO UPDATE: 6093 records generated
+[INFO]    Progress: 6093/10000 (60.9%)
+[INFO]    Rate: 300.8 records/minute
+[INFO]    Elapsed: 20.3 minutes
+[INFO] ✅ Batch 48: +104 → 6093 total
+[INFO] 
+🔄 BATCH 49/90
+[INFO]    Current: 6093 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 49: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2049 Massachusetts
+[INFO] ✅ Batch 49 completed successfully
+[INFO] 📢 ECHO UPDATE: 6195 records generated
+[INFO]    Progress: 6195/10000 (62.0%)
+[INFO]    Rate: 297.3 records/minute
+[INFO]    Elapsed: 20.8 minutes
+[INFO] ✅ Batch 49: +102 → 6195 total
+[INFO] 
+🔄 BATCH 50/90
+[INFO]    Current: 6195 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 50: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2050 Massachusetts
+[INFO] ✅ Batch 50 completed successfully
+[INFO] 📢 ECHO UPDATE: 6306 records generated
+[INFO]    Progress: 6306/10000 (63.1%)
+[INFO]    Rate: 294.7 records/minute
+[INFO]    Elapsed: 21.4 minutes
+[INFO] ✅ Batch 50: +111 → 6306 total
+[INFO] 
+🔄 BATCH 51/90
+[INFO]    Current: 6306 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 51: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2051 Massachusetts
+[INFO] ✅ Batch 51 completed successfully
+[INFO] 📢 ECHO UPDATE: 6415 records generated
+[INFO]    Progress: 6415/10000 (64.2%)
+[INFO]    Rate: 292.7 records/minute
+[INFO]    Elapsed: 21.9 minutes
+[INFO] ✅ Batch 51: +109 → 6415 total
+[INFO] 
+🔄 BATCH 52/90
+[INFO]    Current: 6415 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 52: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2052 Massachusetts
+[INFO] ✅ Batch 52 completed successfully
+[INFO] 📢 ECHO UPDATE: 6524 records generated
+[INFO]    Progress: 6524/10000 (65.2%)
+[INFO]    Rate: 291.7 records/minute
+[INFO]    Elapsed: 22.4 minutes
+[INFO] ✅ Batch 52: +109 → 6524 total
+[INFO] 
+🔄 BATCH 53/90
+[INFO]    Current: 6524 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 53: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2053 Massachusetts
+[INFO] ✅ Batch 53 completed successfully
+[INFO] 📢 ECHO UPDATE: 6631 records generated
+[INFO]    Progress: 6631/10000 (66.3%)
+[INFO]    Rate: 290.1 records/minute
+[INFO]    Elapsed: 22.9 minutes
+[INFO] ✅ Batch 53: +107 → 6631 total
+[INFO] 
+🔄 BATCH 54/90
+[INFO]    Current: 6631 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 54: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2054 Massachusetts
+[INFO] ✅ Batch 54 completed successfully
+[INFO] 📢 ECHO UPDATE: 6739 records generated
+[INFO]    Progress: 6739/10000 (67.4%)
+[INFO]    Rate: 287.9 records/minute
+[INFO]    Elapsed: 23.4 minutes
+[INFO] ✅ Batch 54: +108 → 6739 total
+[INFO] 
+🔄 BATCH 55/90
+[INFO]    Current: 6739 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 55: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2055 Massachusetts
+[INFO] ✅ Batch 55 completed successfully
+[INFO] 📢 ECHO UPDATE: 6846 records generated
+[INFO]    Progress: 6846/10000 (68.5%)
+[INFO]    Rate: 286.4 records/minute
+[INFO]    Elapsed: 23.9 minutes
+[INFO] ✅ Batch 55: +107 → 6846 total
+[INFO] 
+🔄 BATCH 56/90
+[INFO]    Current: 6846 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 56: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2056 Massachusetts
+[INFO] ✅ Batch 56 completed successfully
+[INFO] 📢 ECHO UPDATE: 6954 records generated
+[INFO]    Progress: 6954/10000 (69.5%)
+[INFO]    Rate: 285.9 records/minute
+[INFO]    Elapsed: 24.3 minutes
+[INFO] ✅ Batch 56: +108 → 6954 total
+[INFO] 
+🔄 BATCH 57/90
+[INFO]    Current: 6954 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 57: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2057 Massachusetts
+[INFO] ✅ Batch 57 completed successfully
+[INFO] 📢 ECHO UPDATE: 7060 records generated
+[INFO]    Progress: 7060/10000 (70.6%)
+[INFO]    Rate: 284.3 records/minute
+[INFO]    Elapsed: 24.8 minutes
+[INFO] ✅ Batch 57: +106 → 7060 total
+[INFO] 
+🔄 BATCH 58/90
+[INFO]    Current: 7060 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 58: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2058 Massachusetts
+[INFO] ✅ Batch 58 completed successfully
+[INFO] 📢 ECHO UPDATE: 7164 records generated
+[INFO]    Progress: 7164/10000 (71.6%)
+[INFO]    Rate: 283.0 records/minute
+[INFO]    Elapsed: 25.3 minutes
+[INFO] ✅ Batch 58: +104 → 7164 total
+[INFO] 
+🔄 BATCH 59/90
+[INFO]    Current: 7164 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 59: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2059 Massachusetts
+[INFO] === 10K PROGRESSIVE SYNTHEA GENERATION (ECHO EVERY 100) ===
+[INFO] 📊 Existing records: 7164
+[INFO] 🎯 Target: 10000 records
+[INFO] 📝 Need: 2836 more records
+[INFO] 📦 Batches to run: 29 (×100 records each)
+[INFO] 📢 Progress updates: Every 100 records
+[INFO] 
+🔄 BATCH 1/29
+[INFO]    Current: 7164 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 1: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2001 Massachusetts
+[INFO] ✅ Batch 1 completed successfully
+[INFO] ✅ Batch 1: +8 → 7172 total
+[INFO] 
+🔄 BATCH 2/29
+[INFO]    Current: 7172 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 2: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2002 Massachusetts
+[INFO] ✅ Batch 2 completed successfully
+[INFO] ✅ Batch 2: +5 → 7177 total
+[INFO] 
+🔄 BATCH 3/29
+[INFO]    Current: 7177 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 3: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2003 Massachusetts
+[INFO] ✅ Batch 3 completed successfully
+[INFO] ✅ Batch 3: +6 → 7183 total
+[INFO] 
+🔄 BATCH 4/29
+[INFO]    Current: 7183 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 4: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2004 Massachusetts
+[INFO] ✅ Batch 4 completed successfully
+[INFO] ✅ Batch 4: +6 → 7189 total
+[INFO] 
+🔄 BATCH 5/29
+[INFO]    Current: 7189 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 5: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2005 Massachusetts
+[INFO] ✅ Batch 5 completed successfully
+[INFO] ✅ Batch 5: +9 → 7198 total
+[INFO] 
+🔄 BATCH 6/29
+[INFO]    Current: 7198 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 6: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2006 Massachusetts
+[INFO] ✅ Batch 6 completed successfully
+[INFO] ✅ Batch 6: +7 → 7205 total
+[INFO] 
+🔄 BATCH 7/29
+[INFO]    Current: 7205 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 7: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2007 Massachusetts
+[INFO] ✅ Batch 7 completed successfully
+[INFO] ✅ Batch 7: +5 → 7210 total
+[INFO] 
+🔄 BATCH 8/29
+[INFO]    Current: 7210 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 8: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2008 Massachusetts
+[INFO] ✅ Batch 8 completed successfully
+[INFO] ✅ Batch 8: +3 → 7213 total
+[INFO] 
+🔄 BATCH 9/29
+[INFO]    Current: 7213 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 9: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2009 Massachusetts
+[INFO] ✅ Batch 9 completed successfully
+[INFO] ✅ Batch 9: +6 → 7219 total
+[INFO] 
+🔄 BATCH 10/29
+[INFO]    Current: 7219 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 10: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2010 Massachusetts
+[INFO] ✅ Batch 10 completed successfully
+[INFO] ✅ Batch 10: +5 → 7224 total
+[INFO] 
+🔄 BATCH 11/29
+[INFO]    Current: 7224 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 11: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2011 Massachusetts
+[INFO] ✅ Batch 11 completed successfully
+[INFO] ✅ Batch 11: +3 → 7227 total
+[INFO] 
+🔄 BATCH 12/29
+[INFO]    Current: 7227 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 12: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2012 Massachusetts
+[INFO] ✅ Batch 12 completed successfully
+[INFO] ✅ Batch 12: +8 → 7235 total
+[INFO] 
+🔄 BATCH 13/29
+[INFO]    Current: 7235 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 13: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2013 Massachusetts
+[INFO] ✅ Batch 13 completed successfully
+[INFO] ✅ Batch 13: +6 → 7241 total
+[INFO] 
+🔄 BATCH 14/29
+[INFO]    Current: 7241 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 14: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2014 Massachusetts
+[INFO] ✅ Batch 14 completed successfully
+[INFO] ✅ Batch 14: +8 → 7249 total
+[INFO] 
+🔄 BATCH 15/29
+[INFO]    Current: 7249 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 15: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2015 Massachusetts
+[INFO] ✅ Batch 15 completed successfully
+[INFO] ✅ Batch 15: +9 → 7258 total
+[INFO] 
+🔄 BATCH 16/29
+[INFO]    Current: 7258 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 16: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2016 Massachusetts
+[INFO] ✅ Batch 16 completed successfully
+[INFO] 📢 ECHO UPDATE: 7265 records generated
+[INFO]    Progress: 7265/10000 (72.7%)
+[INFO]    Rate: 1008.2 records/minute
+[INFO]    Elapsed: 7.2 minutes
+[INFO] ✅ Batch 16: +7 → 7265 total
+[INFO] 
+🔄 BATCH 17/29
+[INFO]    Current: 7265 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 17: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2017 Massachusetts
+[INFO] ✅ Batch 17 completed successfully
+[INFO] ✅ Batch 17: +4 → 7269 total
+[INFO] 
+🔄 BATCH 18/29
+[INFO]    Current: 7269 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 18: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2018 Massachusetts
+[INFO] ✅ Batch 18 completed successfully
+[INFO] ✅ Batch 18: +9 → 7278 total
+[INFO] 
+🔄 BATCH 19/29
+[INFO]    Current: 7278 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 19: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2019 Massachusetts
+[INFO] ✅ Batch 19 completed successfully
+[INFO] ✅ Batch 19: +8 → 7286 total
+[INFO] 
+🔄 BATCH 20/29
+[INFO]    Current: 7286 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 20: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2020 Massachusetts
+[INFO] ✅ Batch 20 completed successfully
+[INFO] ✅ Batch 20: +6 → 7292 total
+[INFO] 
+🔄 BATCH 21/29
+[INFO]    Current: 7292 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 21: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2021 Massachusetts
+[INFO] ✅ Batch 21 completed successfully
+[INFO] ✅ Batch 21: +3 → 7295 total
+[INFO] 
+🔄 BATCH 22/29
+[INFO]    Current: 7295 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 22: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2022 Massachusetts
+[INFO] ✅ Batch 22 completed successfully
+[INFO] ✅ Batch 22: +8 → 7303 total
+[INFO] 
+🔄 BATCH 23/29
+[INFO]    Current: 7303 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 23: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2023 Massachusetts
+[INFO] ✅ Batch 23 completed successfully
+[INFO] ✅ Batch 23: +6 → 7309 total
+[INFO] 
+🔄 BATCH 24/29
+[INFO]    Current: 7309 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 24: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2024 Massachusetts
+[INFO] ✅ Batch 24 completed successfully
+[INFO] ✅ Batch 24: +5 → 7314 total
+[INFO] 
+🔄 BATCH 25/29
+[INFO]    Current: 7314 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 25: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2025 Massachusetts
+[INFO] ✅ Batch 25 completed successfully
+[INFO] ✅ Batch 25: +10 → 7324 total
+[INFO] 
+🔄 BATCH 26/29
+[INFO]    Current: 7324 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 26: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2026 Massachusetts
+[INFO] ✅ Batch 26 completed successfully
+[INFO] ✅ Batch 26: +8 → 7332 total
+[INFO] 
+🔄 BATCH 27/29
+[INFO]    Current: 7332 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 27: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2027 Massachusetts
+[INFO] ✅ Batch 27 completed successfully
+[INFO] ✅ Batch 27: +4 → 7336 total
+[INFO] 
+🔄 BATCH 28/29
+[INFO]    Current: 7336 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 28: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2028 Massachusetts
+[INFO] ✅ Batch 28 completed successfully
+[INFO] ✅ Batch 28: +7 → 7343 total
+[INFO] 
+🔄 BATCH 29/29
+[INFO]    Current: 7343 records
+[INFO]    Generating: 100 records
+[INFO] 🚀 Starting batch 29: 100 records
+[INFO] Command: ./run_synthea -p 100 -g F -a 12-60 -s 2029 Massachusetts
+[INFO] ✅ Batch 29 completed successfully
+[INFO] ✅ Batch 29: +7 → 7350 total
+[INFO] 
+🏁 GENERATION COMPLETE!
+[INFO]    Final count: 7350 records
+[INFO]    Target: 10000 records
+[INFO]    Total time: 12.9 minutes
+[INFO]    Average rate: 570.0 records/minute
+[INFO]    Success: ❌ NO

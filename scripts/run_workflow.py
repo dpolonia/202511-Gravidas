@@ -29,6 +29,10 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 import yaml
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Setup logging
 def setup_logging(log_file: str = "logs/workflow.log", level: str = "INFO"):
@@ -113,6 +117,25 @@ class PipelineStage:
             if isinstance(value, str) and value.startswith('${') and value.endswith('}'):
                 # Extract template variable
                 template_key = value[2:-1]  # Remove ${ and }
+
+                # Handle nested template variables like ${ai_provider.providers.${ai_provider.active_provider}.model}
+                if '${' in template_key:
+                    # Recursively expand nested variables
+                    while '${' in template_key:
+                        # Find innermost ${...} pattern
+                        start = template_key.rfind('${')
+                        end = template_key.find('}', start)
+                        if end == -1:
+                            break
+
+                        inner_var = template_key[start+2:end]
+                        inner_value = self.workflow_config.get(inner_var)
+
+                        if inner_value is not None:
+                            template_key = template_key[:start] + str(inner_value) + template_key[end+1:]
+                        else:
+                            break
+
                 expanded_value = self.workflow_config.get(template_key)
                 expanded[key] = expanded_value if expanded_value is not None else value
             else:
@@ -128,8 +151,16 @@ class PipelineStage:
         for key, value in expanded_params.items():
             # Convert snake_case to --dashed-case
             param_name = '--' + key.replace('_', '-')
-            command.append(param_name)
-            command.append(str(value))
+
+            # Handle boolean flags (add flag only if True, skip if False)
+            if isinstance(value, bool):
+                if value:
+                    command.append(param_name)
+                # If False, skip this parameter entirely
+            else:
+                # Regular parameter with value
+                command.append(param_name)
+                command.append(str(value))
 
         return command
 

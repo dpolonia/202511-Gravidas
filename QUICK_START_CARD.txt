@@ -1,0 +1,58 @@
+================================================================================
+GRAVIDAS PIPELINE - QUICK START CARD
+================================================================================
+
+🚀 TO START (ONE COMMAND):
+
+   python run_interactive.py
+
+================================================================================
+📋 THEN CHOOSE:
+================================================================================
+
+STEP 1: How many interviews?
+   1 → 10 interviews   (Quick Test)     ~5 min,  ~$0.80
+   2 → 100 interviews  (Standard)       ~1 hour, ~$8.00
+   3 → 1000 interviews (Production)     ~8 hours, ~$80.00
+   4 → Custom number
+
+STEP 2: Which AI model?
+   1 → Claude Sonnet   (Best Balance)   ⭐ RECOMMENDED
+   4 → Gemini Flash    (Best Value)     💰 CHEAPEST
+   8 → Grok Fast       (Fastest)        ⚡ FASTEST
+   6 → GPT-5           (High Quality)
+   2 → Claude Opus     (Max Quality)    💎 BEST QUALITY
+
+STEP 3: Confirm
+   yes → Start pipeline
+
+================================================================================
+💡 RECOMMENDED FOR FIRST-TIME USERS:
+================================================================================
+
+Type:  1  →  1  →  yes
+
+Result: 10 interviews with Claude Sonnet in ~5 minutes for ~$0.80
+
+================================================================================
+📊 RESULTS LOCATION:
+================================================================================
+
+data/analysis/interview_summary.csv      ← Analysis spreadsheet
+data/analysis/interview_analysis.json    ← Analysis JSON
+outputs/workflow_report.json             ← Workflow summary
+
+View: cat data/analysis/interview_summary.csv
+
+================================================================================
+📖 MORE INFO:
+================================================================================
+
+Complete guide:     cat INTERACTIVE_START.md
+All documentation:  cat START_HERE.txt
+
+================================================================================
+✅ READY TO RUN!
+================================================================================
+
+Just type: python run_interactive.py

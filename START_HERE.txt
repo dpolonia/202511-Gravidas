@@ -1,0 +1,209 @@
+================================================================================
+🚀 GRAVIDAS PIPELINE - START HERE
+================================================================================
+
+Welcome! You have TWO ways to run the Gravidas Synthetic Interview Pipeline:
+
+================================================================================
+🎯 METHOD 1: INTERACTIVE RUNNER (EASIEST - RECOMMENDED!)
+================================================================================
+
+python run_interactive.py
+
+→ Menu-driven interface
+→ Choose number of interviews with arrow keys
+→ Select AI model from list with costs
+→ See estimated cost & time before running
+→ No command-line arguments to remember!
+
+Perfect for first-time users! 🌟
+
+Complete guide: cat INTERACTIVE_GUIDE.md
+
+================================================================================
+⚡ METHOD 2: COMMAND-LINE (FASTEST FOR REPEAT RUNS)
+================================================================================
+
+python scripts/run_workflow.py --preset quick_test
+
+→ Direct execution
+→ Fast for repeated runs
+→ Full control with arguments
+
+Complete guide: cat RUN_PIPELINE.md
+
+================================================================================
+📖 WHICH METHOD SHOULD I USE?
+================================================================================
+
+Use INTERACTIVE RUNNER if:
+  ✓ First time running the pipeline
+  ✓ Want to see all options
+  ✓ Want cost estimates before running
+  ✓ Prefer menu-driven interface
+
+Use COMMAND-LINE if:
+  ✓ Already know what you want
+  ✓ Running repeatedly with same settings
+  ✓ Prefer direct commands
+  ✓ Scripting/automation
+
+================================================================================
+🎯 QUICK START - INTERACTIVE MODE (EASIEST!)
+================================================================================
+
+Just run this ONE command:
+  python run_interactive.py
+
+Then choose:
+  Step 1: Number of interviews
+    → Type 1 (Quick Test - 10 interviews)
+
+  Step 2: AI model
+    → Type 1 (Claude Sonnet) or 4 (Gemini Flash)
+
+  Step 3: Confirm
+    → Type yes
+
+Done! Results in data/analysis/ (~5 minutes, ~$0.80)
+
+📖 Complete interactive guide: cat INTERACTIVE_START.md
+
+================================================================================
+⚡ QUICK START - COMMAND-LINE MODE
+================================================================================
+
+# Quick test (10 interviews) - Default (Claude Sonnet)
+python scripts/run_workflow.py --preset quick_test
+
+# Switch to Google Gemini (Best Value 💰)
+python scripts/run_workflow.py --preset quick_test --provider google --model gemini-2.5-flash
+
+# Switch to xAI Grok (Fastest ⚡)
+python scripts/run_workflow.py --preset quick_test --provider xai --model grok-4-fast
+
+# Switch to OpenAI GPT-5
+python scripts/run_workflow.py --preset quick_test --provider openai --model gpt-5
+
+# Custom number (25 interviews) with any provider
+python scripts/run_workflow.py --personas 25 --records 25 --provider google
+
+================================================================================
+📚 DOCUMENTATION GUIDE
+================================================================================
+
+🚀 START HERE (Choose One):
+  cat INTERACTIVE_START.md    ← Interactive: Choose interviews & model ⭐ EASIEST!
+  cat RUN_END_TO_END.md       ← Complete: All options & examples
+
+Interactive Mode:
+  cat INTERACTIVE_GUIDE.md    ← Full interactive guide
+  python run_interactive.py   ← Launch interactive runner
+
+Command-Line Mode:
+  cat QUICK_REFERENCE.md      ← Command cheat sheet
+  cat RUN_PIPELINE.md         ← Complete CLI guide
+
+Provider Management:
+  cat PROVIDER_USAGE.md       ← How to use all 4 AI providers
+
+Setup & Configuration:
+  cat API_KEY_SETUP.md        ← API key setup
+  cat GETTING_STARTED.md      ← Initial setup
+
+Reference:
+  cat ACTIVE_FILES.md         ← File structure
+  cat CLEANUP_LOG.md          ← Latest cleanup info
+
+================================================================================
+📊 ALL PROVIDERS ACTIVE AND READY TO USE! ✅
+================================================================================
+
+ALL 4 AI PROVIDERS ARE CONFIGURED AND ENABLED:
+
+Provider               | Model                  | Cost/1M  | Speed    | Best For
+-----------------------|------------------------|----------|----------|------------------
+✅ Anthropic (Default) | Claude Sonnet 4.5      | $3/$15   | ⚡⚡     | Best Balance ⭐
+✅ Google              | Gemini 2.5 Flash       | $0.15/$1 | ⚡⚡⚡   | Best Value 💰
+✅ OpenAI              | GPT-5                  | $1/$10   | ⚡⚡     | Quality
+✅ xAI                 | Grok 4 Fast            | $0.2/$0.5| ⚡⚡⚡   | Fastest ⚡
+
+Costs are per 1M tokens (input/output)
+API keys loaded automatically from .env file
+
+================================================================================
+📁 WHERE TO FIND RESULTS
+================================================================================
+
+After running (any method):
+
+data/analysis/interview_summary.csv      ← Analysis spreadsheet
+data/analysis/interview_analysis.json    ← Analysis JSON
+data/interviews/                         ← Interview transcripts
+outputs/workflow_report.json             ← Workflow summary
+logs/workflow.log                        ← Execution logs
+
+Quick check:
+  cat data/analysis/interview_summary.csv
+
+================================================================================
+🎓 LEARNING PATH
+================================================================================
+
+Beginners:
+  1. python run_interactive.py         ← Start here!
+  2. cat INTERACTIVE_GUIDE.md          ← Learn the interface
+  3. Scale up as needed
+
+Advanced Users:
+  1. cat QUICK_REFERENCE.md            ← See all commands
+  2. python scripts/run_workflow.py    ← Direct execution
+  3. cat RUN_PIPELINE.md               ← Full options
+
+================================================================================
+💡 PRO TIPS
+================================================================================
+
+✓ First run? Use: python run_interactive.py
+✓ Repeat runs? Use: python scripts/run_workflow.py --preset quick_test
+✓ Best value model: Gemini 2.5 Flash ($0.15/$1.25)
+✓ Best balance: Claude Sonnet 4.5 ($3/$15)
+✓ Always start with 10 interviews for testing
+✓ Check costs in analysis output
+
+================================================================================
+🆘 HAVING ISSUES?
+================================================================================
+
+1. Set your API key:
+   export ANTHROPIC_API_KEY='your-key-here'
+
+2. Check it's set:
+   echo $ANTHROPIC_API_KEY
+
+3. Run interactive mode:
+   python run_interactive.py
+
+4. See detailed guide:
+   cat INTERACTIVE_GUIDE.md
+
+================================================================================
+🚀 RECOMMENDED FIRST RUN
+================================================================================
+
+For absolute beginners:
+
+  python run_interactive.py
+
+Then select:
+  → Option 1 (Quick Test)
+  → Option 1 (Claude Sonnet) or Option 4 (Gemini Flash)
+  → Type 'yes'
+
+Results in ~2-3 minutes for less than $1!
+
+================================================================================
+Need help? 
+  • Interactive: cat INTERACTIVE_GUIDE.md
+  • CLI: cat QUICK_REFERENCE.md
+================================================================================

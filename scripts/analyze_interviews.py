@@ -90,7 +90,7 @@ MODEL_COSTS = {
 
 # Required fields for validation
 INTERVIEW_REQUIRED_FIELDS = {
-    'transcript', 'persona_id', 'persona_age', 'timestamp', 'filename'
+    'transcript', 'persona_id', 'persona_age', 'timestamp'
 }
 TRANSCRIPT_REQUIRED_FIELDS = {'speaker', 'text'}
 MATCHED_PERSONA_REQUIRED_FIELDS = {'persona', 'health_record'}
@@ -643,9 +643,9 @@ def calculate_obstetric_risk_score(health_record: Dict[str, Any], persona_age: i
     medications = health_record.get('medications', [])
     observations = health_record.get('observations', [])
 
-    condition_texts = ' '.join([c.get('display', '').lower() for c in conditions])
-    medication_texts = ' '.join([m.get('display', '').lower() for m in medications])
-    observation_texts = ' '.join([o.get('display', '').lower() for o in observations])
+    condition_texts = ' '.join([(c.get('display') or '').lower() for c in conditions])
+    medication_texts = ' '.join([(m.get('display') or '').lower() for m in medications])
+    observation_texts = ' '.join([(o.get('display') or '').lower() for o in observations])
     all_text = f"{condition_texts} {medication_texts} {observation_texts}"
 
     risk_score = 1.0  # Start at baseline (low risk)

@@ -35,7 +35,7 @@ import logging
 import sys
 import argparse
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
 
 try:
@@ -465,7 +465,8 @@ def match_optimal_with_selection(
     personas: List[Dict[str, Any]],
     records: List[Dict[str, Any]],
     compatibility_matrix: np.ndarray,
-    detailed_metrics: List[Dict[str, Any]]
+    detailed_metrics: List[Dict[str, Any]],
+    demographic_metrics: Optional[List[Dict[str, Any]]] = None
 ) -> Tuple[List[Tuple[int, int, float]], List[Dict[str, Any]]]:
     """
     Find optimal matches with quality metrics, supporting N personas -> M records.
@@ -477,6 +478,7 @@ def match_optimal_with_selection(
         records: List of health records
         compatibility_matrix: Compatibility scores matrix
         detailed_metrics: Detailed scoring breakdown for each pair
+        demographic_metrics: Optional demographic metrics for blended matching
 
     Returns:
         Tuple of (matches, match_quality_metrics)
@@ -510,7 +512,14 @@ def match_optimal_with_selection(
 
         # Get detailed breakdown (handle both demographic and semantic metrics)
         metric_entry = detailed_metrics[persona_idx][record_idx]
-        breakdown = metric_entry.get('breakdown') or metric_entry.get('semantic_breakdown', {})
+
+        # Prefer demographic breakdown for statistics (contains age, education, etc.)
+        # Fall back to semantic breakdown if demographic not available
+        if demographic_metrics is not None:
+            demo_entry = demographic_metrics[persona_idx][record_idx]
+            breakdown = demo_entry.get('demographic_breakdown', {})
+        else:
+            breakdown = metric_entry.get('breakdown') or metric_entry.get('semantic_breakdown', {})
 
         # Calculate quality category
         if score >= 0.85:
@@ -786,17 +795,20 @@ def main():
                 personas, records, config, semantic_weight=semantic_weight
             )
 
-            # Store semantic metrics for output
+            # Store semantic metrics for output, but keep demographic for statistics
             detailed_metrics = semantic_metrics
+            demo_metrics_for_stats = demographic_metrics
         else:
             logger.info("Building demographic compatibility matrix...")
             compatibility_matrix, detailed_metrics = build_compatibility_matrix(
                 personas, records, config
             )
+            demo_metrics_for_stats = None
 
         # Run enhanced matching algorithm
         matches, quality_metrics = match_optimal_with_selection(
-            personas, records, compatibility_matrix, detailed_metrics
+            personas, records, compatibility_matrix, detailed_metrics,
+            demographic_metrics=demo_metrics_for_stats
         )
 
         # Create matched pairs with quality information

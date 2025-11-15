@@ -1,0 +1,272 @@
+[INFO] ============================================================
+[INFO] SEMANTIC TREE IMPLEMENTATION TEST SUITE
+[INFO] ============================================================
+[INFO] 
+[1/5] Loading test data...
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] ✅ Loaded 10 personas and 10 health records
+[INFO] 
+[2/5] Testing persona semantic tree generation...
+[INFO] ✅ Tested 10 personas with trees
+[INFO]    Validation: 10/10 passed
+[INFO] 
+[3/5] Testing health record semantic tree extraction...
+[INFO] ✅ Tested 1 records with trees
+[INFO]    Validation: 1/1 passed
+[INFO] 
+[4/5] Testing semantic matching score calculation...
+[INFO] ✅ Tested 1/10 matching pairs
+[INFO]    Scores: min=0.714, max=0.714, avg=0.714
+[INFO] 
+[5/5] Generating validation reports...
+[INFO] Validation report saved to data/validation/validation_report.json
+[INFO] ============================================================
+[INFO] VALIDATION TEST SUMMARY
+[INFO] ============================================================
+[INFO] Personas: 10/10 with semantic trees
+[INFO]   Validation: 10/10 passed (100.0%)
+[INFO] 
+Records: 1/10 with semantic trees
+[INFO]   Validation: 1/1 passed (100.0%)
+[INFO] 
+Matching Tests: 1/10 successful (10.0%)
+[INFO]   Semantic Scores: min=0.714, max=0.714, avg=0.714
+[INFO] ============================================================
+[INFO] ✅ Validation report saved to data/validation/validation_report.json
+[INFO] 
+Performing data quality analysis...
+[INFO] 
+Persona Demographic Diversity:
+[INFO]   Age distribution: {'10-19': 1, '20-29': 4, '30-39': 3, '40-49': 2}
+[INFO]   Education: {'high_school': 5, 'masters': 2, 'unknown': 1, 'bachelors': 2}
+[INFO]   Income: {'low': 3, 'upper_middle': 2, 'middle': 4, 'high': 1}
+[INFO]   Health Consciousness: {2: 4, 3: 1, 4: 2, 5: 3}
+[INFO]   Healthcare Access: {1: 1, 3: 9}
+[INFO]   Pregnancy Readiness: {2: 2, 3: 2, 4: 3, 5: 3}
+[INFO] 
+Clinical Data Quality:
+[INFO]   Records with conditions: 10/10
+[INFO]   Records with medications: 10/10
+[INFO]   Records with encounters: 10/10
+[INFO]   Health Status distribution: {'excellent': 1}
+[INFO]   Pregnancy Risk distribution: {1: 1}
+[INFO]   Comorbidity Index: min=0.120, max=0.120, avg=0.120
+[INFO] 
+============================================================
+[INFO] TEST SUITE COMPLETED
+[INFO] ============================================================
+[INFO] Output files saved to: data/validation/
+[INFO] 
+Generated files:
+[INFO]   - validation_report.json: Complete test results
+[INFO]   - demographic_analysis.json: Persona diversity metrics
+[INFO]   - clinical_analysis.json: Health record quality metrics
+[INFO] ============================================================
+[INFO] 
+✅ All tests completed successfully!
+[INFO] ============================================================
+[INFO] SEMANTIC TREE IMPLEMENTATION TEST SUITE
+[INFO] ============================================================
+[INFO] 
+[1/5] Loading test data...
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] ✅ Loaded 10 personas and 10 health records
+[INFO] 
+[2/5] Testing persona semantic tree generation...
+[INFO] ✅ Tested 10 personas with trees
+[INFO]    Validation: 10/10 passed
+[INFO] 
+[3/5] Testing health record semantic tree extraction...
+[INFO] ✅ Tested 1 records with trees
+[INFO]    Validation: 1/1 passed
+[INFO] 
+[4/5] Testing semantic matching score calculation...
+[INFO] ✅ Tested 1/10 matching pairs
+[INFO]    Scores: min=0.714, max=0.714, avg=0.714
+[INFO] 
+[5/5] Generating validation reports...
+[INFO] Validation report saved to data/validation/validation_report.json
+[INFO] ============================================================
+[INFO] VALIDATION TEST SUMMARY
+[INFO] ============================================================
+[INFO] Personas: 10/10 with semantic trees
+[INFO]   Validation: 10/10 passed (100.0%)
+[INFO] 
+Records: 1/10 with semantic trees
+[INFO]   Validation: 1/1 passed (100.0%)
+[INFO] 
+Matching Tests: 1/10 successful (10.0%)
+[INFO]   Semantic Scores: min=0.714, max=0.714, avg=0.714
+[INFO] ============================================================
+[INFO] ✅ Validation report saved to data/validation/validation_report.json
+[INFO] 
+Performing data quality analysis...
+[INFO] 
+Persona Demographic Diversity:
+[INFO]   Age distribution: {'10-19': 1, '20-29': 4, '30-39': 3, '40-49': 2}
+[INFO]   Education: {'high_school': 5, 'masters': 2, 'unknown': 1, 'bachelors': 2}
+[INFO]   Income: {'low': 3, 'upper_middle': 2, 'middle': 4, 'high': 1}
+[INFO]   Health Consciousness: {2: 4, 3: 1, 4: 2, 5: 3}
+[INFO]   Healthcare Access: {1: 1, 3: 9}
+[INFO]   Pregnancy Readiness: {2: 2, 3: 2, 4: 3, 5: 3}
+[INFO] 
+Clinical Data Quality:
+[INFO]   Records with conditions: 10/10
+[INFO]   Records with medications: 10/10
+[INFO]   Records with encounters: 10/10
+[INFO]   Health Status distribution: {'excellent': 1}
+[INFO]   Pregnancy Risk distribution: {1: 1}
+[INFO]   Comorbidity Index: min=0.120, max=0.120, avg=0.120
+[INFO] 
+============================================================
+[INFO] TEST SUITE COMPLETED
+[INFO] ============================================================
+[INFO] Output files saved to: data/validation/
+[INFO] 
+Generated files:
+[INFO]   - validation_report.json: Complete test results
+[INFO]   - demographic_analysis.json: Persona diversity metrics
+[INFO]   - clinical_analysis.json: Health record quality metrics
+[INFO] ============================================================
+[INFO] 
+✅ All tests completed successfully!
+[INFO] ============================================================
+[INFO] SEMANTIC TREE IMPLEMENTATION TEST SUITE
+[INFO] ============================================================
+[INFO] 
+[1/5] Loading test data...
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] ✅ Loaded 10 personas and 10 health records
+[INFO] 
+[2/5] Testing persona semantic tree generation...
+[INFO] ✅ Tested 10 personas with trees
+[INFO]    Validation: 10/10 passed
+[INFO] 
+[3/5] Testing health record semantic tree extraction...
+[INFO] ✅ Tested 1 records with trees
+[INFO]    Validation: 1/1 passed
+[INFO] 
+[4/5] Testing semantic matching score calculation...
+[INFO] ✅ Tested 1/10 matching pairs
+[INFO]    Scores: min=0.695, max=0.695, avg=0.695
+[INFO] 
+[5/5] Generating validation reports...
+[INFO] Validation report saved to data/validation/validation_report.json
+[INFO] ============================================================
+[INFO] VALIDATION TEST SUMMARY
+[INFO] ============================================================
+[INFO] Personas: 10/10 with semantic trees
+[INFO]   Validation: 10/10 passed (100.0%)
+[INFO] 
+Records: 1/10 with semantic trees
+[INFO]   Validation: 1/1 passed (100.0%)
+[INFO] 
+Matching Tests: 1/10 successful (10.0%)
+[INFO]   Semantic Scores: min=0.695, max=0.695, avg=0.695
+[INFO] ============================================================
+[INFO] ✅ Validation report saved to data/validation/validation_report.json
+[INFO] 
+Performing data quality analysis...
+[INFO] 
+Persona Demographic Diversity:
+[INFO]   Age distribution: {'10-19': 1, '20-29': 4, '30-39': 3, '40-49': 2}
+[INFO]   Education: {'high_school': 5, 'bachelors': 3, 'masters': 2}
+[INFO]   Income: {'low': 2, 'middle': 8}
+[INFO]   Health Consciousness: {4: 6, 5: 4}
+[INFO]   Healthcare Access: {1: 1, 3: 8, 4: 1}
+[INFO]   Pregnancy Readiness: {2: 2, 3: 2, 4: 4, 5: 2}
+[INFO] 
+Clinical Data Quality:
+[INFO]   Records with conditions: 10/10
+[INFO]   Records with medications: 10/10
+[INFO]   Records with encounters: 10/10
+[INFO]   Health Status distribution: {'excellent': 1}
+[INFO]   Pregnancy Risk distribution: {1: 1}
+[INFO]   Comorbidity Index: min=0.120, max=0.120, avg=0.120
+[INFO] 
+============================================================
+[INFO] TEST SUITE COMPLETED
+[INFO] ============================================================
+[INFO] Output files saved to: data/validation/
+[INFO] 
+Generated files:
+[INFO]   - validation_report.json: Complete test results
+[INFO]   - demographic_analysis.json: Persona diversity metrics
+[INFO]   - clinical_analysis.json: Health record quality metrics
+[INFO] ============================================================
+[INFO] 
+✅ All tests completed successfully!
+[INFO] ============================================================
+[INFO] SEMANTIC TREE IMPLEMENTATION TEST SUITE
+[INFO] ============================================================
+[INFO] 
+[1/5] Loading test data...
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] ✅ Loaded 10 personas and 10 health records
+[INFO] 
+[2/5] Testing persona semantic tree generation...
+[INFO] ✅ Tested 10 personas with trees
+[INFO]    Validation: 10/10 passed
+[INFO] 
+[3/5] Testing health record semantic tree extraction...
+[INFO] ✅ Tested 0 records with trees
+[INFO]    Validation: 0/0 passed
+[INFO] 
+[4/5] Testing semantic matching score calculation...
+[INFO] ✅ Tested 0/10 matching pairs
+[INFO] 
+[5/5] Generating validation reports...
+[INFO] Validation report saved to data/validation/validation_report.json
+[INFO] ============================================================
+[INFO] VALIDATION TEST SUMMARY
+[INFO] ============================================================
+[INFO] Personas: 10/10 with semantic trees
+[INFO]   Validation: 10/10 passed (100.0%)
+[INFO] 
+Records: 0/10 with semantic trees
+[INFO]   Validation: 0/0 passed (0.0%)
+[INFO] 
+Matching Tests: 0/10 successful (0.0%)
+[INFO] ============================================================
+[INFO] ✅ Validation report saved to data/validation/validation_report.json
+[INFO] 
+Performing data quality analysis...
+[INFO] 
+Persona Demographic Diversity:
+[INFO]   Age distribution: {'10-19': 1, '20-29': 4, '30-39': 3, '40-49': 2}
+[INFO]   Education: {'high_school': 4, 'masters': 2, 'bachelors': 3, 'unknown': 1}
+[INFO]   Income: {'middle': 4, 'high': 2, 'low': 2, 'upper_middle': 2}
+[INFO]   Health Consciousness: {2: 3, 4: 4, 5: 3}
+[INFO]   Healthcare Access: {1: 2, 3: 8}
+[INFO]   Pregnancy Readiness: {2: 3, 3: 2, 4: 1, 5: 4}
+[INFO] 
+Clinical Data Quality:
+[INFO]   Records with conditions: 10/10
+[INFO]   Records with medications: 10/10
+[INFO]   Records with encounters: 10/10
+[INFO]   Comorbidity Index: min=1.000, max=0.000, avg=0.000
+[INFO] 
+============================================================
+[INFO] TEST SUITE COMPLETED
+[INFO] ============================================================
+[INFO] Output files saved to: data/validation/
+[INFO] 
+Generated files:
+[INFO]   - validation_report.json: Complete test results
+[INFO]   - demographic_analysis.json: Persona diversity metrics
+[INFO]   - clinical_analysis.json: Health record quality metrics
+[INFO] ============================================================
+[INFO] 
+✅ All tests completed successfully!

@@ -1,0 +1,1003 @@
+[INFO] === Health Records Generation Script Started ===
+[ERROR] Synthea not found at ./synthea
+[ERROR] Please install Synthea first:
+[ERROR]   cd /home/user/202511-Gravidas
+[ERROR]   git clone https://github.com/synthetichealth/synthea.git
+[ERROR] Please install Synthea first. See docs/SYNTHEA_SETUP.md
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: synthea/run_synthea -p 30 -g F -a 12-60 Massachusetts
+[ERROR] Failed to run Synthea: [Errno 2] No such file or directory: 'synthea/run_synthea'
+[ERROR] Synthea execution failed
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: synthea/run_synthea -p 30 -g F -a 12-60 Massachusetts
+[ERROR] Failed to run Synthea: [Errno 2] No such file or directory: 'synthea/run_synthea'
+[ERROR] Synthea execution failed
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: synthea/run_synthea -p 30 -g F -a 12-60 Massachusetts
+[ERROR] Failed to run Synthea: [Errno 2] No such file or directory: 'synthea/run_synthea'
+[ERROR] Synthea execution failed
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 32 FHIR files
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30000 patient records...
+[INFO] Executing: ./run_synthea -p 30000 -g F -a 12-60 Massachusetts
+[INFO] [PROGRESS] Synthea still running... (30s elapsed)
+[INFO] [PROGRESS] Synthea still running... (60s elapsed)
+[INFO] [PROGRESS] Synthea still running... (90s elapsed)
+[INFO] [PROGRESS] Synthea still running... (120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (720s elapsed)
+[INFO] [PROGRESS] Synthea still running... (750s elapsed)
+[INFO] [PROGRESS] Synthea still running... (780s elapsed)
+[INFO] [PROGRESS] Synthea still running... (810s elapsed)
+[INFO] [PROGRESS] Synthea still running... (840s elapsed)
+[INFO] [PROGRESS] Synthea still running... (870s elapsed)
+[INFO] [PROGRESS] Synthea still running... (900s elapsed)
+[INFO] [PROGRESS] Synthea still running... (930s elapsed)
+[INFO] [PROGRESS] Synthea still running... (960s elapsed)
+[INFO] [PROGRESS] Synthea still running... (990s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1020s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1050s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1080s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1110s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1140s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1170s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1200s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1230s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1260s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1290s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1320s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1350s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1380s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1410s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1440s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1470s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1500s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1530s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1560s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1590s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1620s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1650s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1680s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1710s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1740s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1770s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1800s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1830s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1860s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1890s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1920s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1950s elapsed)
+[INFO] [PROGRESS] Synthea still running... (1980s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2010s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2040s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2070s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2100s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2130s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2160s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2190s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2220s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2250s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2280s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2310s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2340s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2370s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2400s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2430s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2460s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2490s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2520s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2550s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2580s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2610s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2640s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2670s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2700s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2730s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2760s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2790s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2820s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2850s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2880s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2910s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2940s elapsed)
+[INFO] [PROGRESS] Synthea still running... (2970s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3000s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3030s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3060s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3090s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3720s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3750s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3780s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3810s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3840s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3870s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3900s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3930s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3960s elapsed)
+[INFO] [PROGRESS] Synthea still running... (3990s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4020s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4050s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4080s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4110s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4140s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4170s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4200s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4230s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4260s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4290s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4320s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4350s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4380s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4410s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4440s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4470s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4500s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4530s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4560s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4590s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4620s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4650s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4680s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4710s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4740s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4770s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4800s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4830s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4860s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4890s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4920s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4950s elapsed)
+[INFO] [PROGRESS] Synthea still running... (4980s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5010s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5040s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5070s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5100s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5130s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5160s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5190s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5220s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5250s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5280s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5310s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5340s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5370s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5400s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5430s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5460s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5490s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5520s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5550s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5580s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5610s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5640s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5670s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5700s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5730s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5760s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5790s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5820s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5850s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5880s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5910s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5940s elapsed)
+[INFO] [PROGRESS] Synthea still running... (5970s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6000s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6030s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6060s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6090s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6720s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6750s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6780s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6810s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6840s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6870s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6900s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6930s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6960s elapsed)
+[INFO] [PROGRESS] Synthea still running... (6990s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7020s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7050s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7080s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7110s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7140s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7170s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7200s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7230s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7260s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7290s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7320s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7350s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7380s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7410s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7440s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7470s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7500s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7530s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7560s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7590s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7620s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7650s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7680s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7710s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7740s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7770s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7800s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7830s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7860s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7890s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7920s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7950s elapsed)
+[INFO] [PROGRESS] Synthea still running... (7980s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8010s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8040s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8070s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8100s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8130s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8160s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8190s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8220s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8250s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8280s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8310s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8340s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8370s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8400s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8430s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8460s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8490s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8520s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8550s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8580s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8610s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8640s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8670s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8700s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8730s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8760s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8790s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8820s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8850s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8880s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8910s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8940s elapsed)
+[INFO] [PROGRESS] Synthea still running... (8970s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9000s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9030s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9060s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9090s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9720s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9750s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9780s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9810s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9840s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9870s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9900s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9930s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9960s elapsed)
+[INFO] [PROGRESS] Synthea still running... (9990s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10020s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10050s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10080s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10110s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10140s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10170s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10200s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10230s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10260s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10290s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10320s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10350s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10380s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10410s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10440s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10470s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10500s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10530s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10560s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10590s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10620s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10650s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10680s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10710s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10740s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10770s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10800s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10830s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10860s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10890s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10920s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10950s elapsed)
+[INFO] [PROGRESS] Synthea still running... (10980s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11010s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11040s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11070s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11100s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11130s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11160s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11190s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11220s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11250s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11280s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11310s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11340s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11370s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11400s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11430s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11460s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11490s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11520s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11550s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11580s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11610s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11640s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11670s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11700s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11730s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11760s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11790s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11820s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11850s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11880s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11910s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11940s elapsed)
+[INFO] [PROGRESS] Synthea still running... (11970s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12000s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12030s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12060s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12090s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12720s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12750s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12780s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12810s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12840s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12870s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12900s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12930s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12960s elapsed)
+[INFO] [PROGRESS] Synthea still running... (12990s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13020s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13050s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13080s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13110s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13140s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13170s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13200s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13230s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13260s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13290s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13320s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13350s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13380s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13410s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13440s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13470s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13500s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13530s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13560s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13590s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13620s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13650s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13680s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13710s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13740s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13770s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13800s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13830s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13860s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13890s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13920s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13950s elapsed)
+[INFO] [PROGRESS] Synthea still running... (13980s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14010s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14040s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14070s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14100s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14130s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14160s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14190s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14220s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14250s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14280s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14310s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14340s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14370s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14400s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14430s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14460s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14490s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14520s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14550s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14580s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14610s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14640s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14670s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14700s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14730s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14760s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14790s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14820s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14850s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14880s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14910s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14940s elapsed)
+[INFO] [PROGRESS] Synthea still running... (14970s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15000s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15030s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15060s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15090s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15120s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15150s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15180s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15210s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15240s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15270s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15300s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15330s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15360s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15390s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15420s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15450s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15480s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15510s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15540s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15570s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15600s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15630s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15660s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15690s elapsed)
+[INFO] [PROGRESS] Synthea still running... (15720s elapsed)
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7384 FHIR files
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7418 FHIR files
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7451 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7485 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7518 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7554 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7588 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7621 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7654 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7688 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7723 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7755 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 7789 FHIR files
+[WARNING] Failed to build semantic tree for b2ad4af6-62da-8793-4c3b-c35acc7fbf79: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5ed73a0e-cc69-2466-2501-945791639d8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 88e2c0ee-ba05-2d0f-fa6e-864fbd35bd52: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9f4afe72-bbbf-94ad-b73a-7e66a458d617: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 0ee6923c-9f6b-0ce2-6dbf-16454e321ac2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 7b38d8a4-bbc6-eb2e-1beb-af5261d3a05d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for a9ac9d60-e5bf-e333-c2bc-2b38cc0115b3: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 3673063f-9e79-1e13-7089-517f0461ac0d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cb825e0c-65c4-d7a1-7b50-ae6dbcbc89aa: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 34 FHIR files
+[WARNING] Failed to build semantic tree for f8343bcb-7f26-b9b0-dbb1-2520d3ba3fda: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for aa498ab4-781d-8a87-6072-2b8845afa9c6: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9be0f1d5-d862-6fdf-9440-96b50ab9a9fb: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 518d7d87-a850-eb93-782a-b4c54c3baecf: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 329f7698-a236-acab-3e53-4792752977bb: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 66eb0220-b08d-6699-061f-806d89e278b2: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 223e6815-ec9b-3504-021a-b6b63e5bc58f: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 91817391-7e43-7f3a-52ca-776136c98b1d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 859da57c-3fb4-6319-e6af-75edd77a29a2: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 18 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 1/10
+[INFO] Overall Health Status distribution: {'excellent': 1}
+[INFO] Pregnancy Risk Level distribution: {1: 1}
+[INFO] Average Comorbidity Index: 0.120
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===
+[INFO] === Health Records Generation Script Started ===
+[INFO] Found Synthea at ./synthea
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 10 personas
+[INFO] Running Synthea to generate 30 patient records...
+[INFO] Executing: ./run_synthea -p 30 -g F -a 12-60 Massachusetts
+[INFO] Synthea completed successfully
+[INFO] Processing Synthea output from ./synthea/output/fhir
+[INFO] Found 66 FHIR files
+[WARNING] Failed to build semantic tree for f8343bcb-7f26-b9b0-dbb1-2520d3ba3fda: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 5536b2d8-8a68-6b54-5a1d-1a270177c678: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for b05c25e8-4927-18c6-3afc-1a8dda287441: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 8db45ba2-1557-90b9-08a1-ec7865a637b0: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for aa498ab4-781d-8a87-6072-2b8845afa9c6: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 9be0f1d5-d862-6fdf-9440-96b50ab9a9fb: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 518d7d87-a850-eb93-782a-b4c54c3baecf: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for cfe7aabd-50e8-0f08-501e-6caeb033dc8d: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 27ec50cf-79fa-d484-da37-11292255a977: 'NoneType' object has no attribute 'lower'
+[WARNING] Failed to build semantic tree for 329f7698-a236-acab-3e53-4792752977bb: 'NoneType' object has no attribute 'lower'
+[INFO] Extracted 10 pregnancy-related health records from 15 files
+[INFO] Saved 10 health records to data/health_records/health_records.json
+[INFO] Saved 10 individual record files to data/health_records
+[INFO] ============================================================
+[INFO] HEALTH RECORDS SEMANTIC TREE SUMMARY
+[INFO] ============================================================
+[INFO] Records with semantic trees: 0/10
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 10 health records
+[INFO] === Health Records Generation Script Completed ===

@@ -1,52 +1,42 @@
 # Synthetic Gravidas Pipeline - Git Ignore File
 
 # ============================================================================
-# SECURITY - API Keys and Credentials
+# SECURITY - API Keys and Credentials (NEVER COMMIT THESE!)
 # ============================================================================
-config/config.yaml
 .env
 .env.local
+.env.production
+.env.development
 *.key
 *_secret*
 credentials.json
+config/config.yaml
 
 # ============================================================================
-# Data Files (Generated)
+# Data Files - NOW TRACKED IN GIT
 # ============================================================================
-data/personas/*.json
-data/health_records/*.json
-data/matched/*.json
-data/interviews/*.json
-data/batch_requests/*.jsonl
-data/batch_results/*.jsonl
-data/analysis/*.csv
-data/finepersonas_profiles/*.json
+# All data files are now synchronized to git
+# Only .env and credentials remain ignored for security
+
+# HuggingFace cache (can be large and regenerated)
 data/hf_cache/
-data/*.csv
-
-# Keep directory structure
-!data/personas/.gitkeep
-!data/health_records/.gitkeep
-!data/matched/.gitkeep
-!data/interviews/.gitkeep
-!data/batch_requests/.gitkeep
-!data/batch_results/.gitkeep
-!data/analysis/.gitkeep
-!data/finepersonas_profiles/.gitkeep
 
 # ============================================================================
-# Synthea Generated Files
+# Synthea Generated Files (LARGE - Keep Ignored)
 # ============================================================================
-synthea/
+# Synthea output is ~21GB and can be regenerated
 synthea/output/
 synthea.jar
 
+# Keep synthea directory structure but not the binary/output
+!synthea/
+!synthea/run_synthea
+
 # ============================================================================
-# Logs
+# Logs - NOW TRACKED IN GIT
 # ============================================================================
-logs/
-*.log
-*.log.*
+# Logs are now synchronized for debugging and audit trail
+# Note: Very large log files (>100MB) should be manually excluded if needed
 
 # ============================================================================
 # Python
@@ -244,24 +234,18 @@ site/
 # Keep config template
 !config/config.yaml.template
 
-# Ignore large dataset files
+# Large dataset formats (can be regenerated from source data)
 *.parquet
 *.arrow
 *.feather
 
-# Ignore experiment results
-experiments/
-results/
-outputs/
+# Experiment Results - NOW TRACKED IN GIT
+# All experiment results, outputs, and analysis files are now synchronized
 
-# Ignore temporary analysis files
-analysis/*.csv
-analysis/*.xlsx
-
-# Large backup directories (preserve core data only)
+# Large backup directories (these are duplicates, can stay ignored)
 data/backup_synthea_1k/
 data/backup_synthea_run1/
-202511-Gravidas/
+archive/
 
 # Windows Zone Identifier files
 *:Zone.Identifier

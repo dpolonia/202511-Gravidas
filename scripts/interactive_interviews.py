@@ -28,6 +28,8 @@ except ImportError:
     print("Please run: pip install python-dotenv pyyaml")
     sys.exit(1)
 
+# Load environment variables from .env file
+load_dotenv()
 
 # Model metadata with costs and performance (Updated for 2025)
 MODELS_DATABASE = {
