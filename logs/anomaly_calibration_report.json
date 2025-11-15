@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-15T17:39:41.342516",
+    "semantic_weight": 0.6,
+    "total_scores": 620,
+    "best_match_count": 10
+  },
+  "distribution": {
+    "all_scores": {
+      "count": 620,
+      "min": 0.15509999999999996,
+      "max": 0.9120999999999999,
+      "mean": 0.49398951612903225,
+      "median": 0.46809999999999996,
+      "std_dev": 0.19768279329243907,
+      "percentiles": {
+        "1st": 0.15737999999999996,
+        "5th": 0.1851,
+        "10th": 0.23159999999999997,
+        "25th": 0.34559999999999996,
+        "50th": 0.46809999999999996,
+        "75th": 0.657975,
+        "90th": 0.7778500000000002,
+        "95th": 0.8387499999999999,
+        "99th": 0.8730649999999999
+      }
+    },
+    "best_match_scores": {
+      "count": 10,
+      "min": 0.7051000000000001,
+      "max": 0.9120999999999999,
+      "mean": 0.839225,
+      "median": 0.8685999999999999,
+      "std_dev": 0.08087947566183482,
+      "percentiles": {
+        "1st": 0.7056625000000001,
+        "5th": 0.7079125,
+        "10th": 0.7107249999999999,
+        "25th": 0.78835,
+        "50th": 0.8685999999999999,
+        "75th": 0.8978499999999999,
+        "90th": 0.9120999999999999,
+        "95th": 0.9120999999999999,
+        "99th": 0.9120999999999999
+      }
+    }
+  },
+  "outlier_analysis": {
+    "all_scores": {
+      "iqr_method": {
+        "lower_fence": -0.12296250000000003,
+        "upper_fence": 1.1265375,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      },
+      "z_score_method": {
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      },
+      "mad_method": {
+        "mad": 0.14950000000000002,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      }
+    },
+    "best_match_scores": {
+      "iqr_method": {
+        "lower_fence": 0.6241000000000001,
+        "upper_fence": 1.0620999999999998,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      },
+      "z_score_method": {
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      },
+      "mad_method": {
+        "mad": 0.036750000000000005,
+        "outlier_count": 0,
+        "outlier_percentage": 0.0,
+        "outliers": []
+      }
+    }
+  },
+  "threshold_calibration": {
+    "methods": {
+      "percentile_5th": 0.7079125,
+      "percentile_10th": 0.7107249999999999,
+      "mean_minus_2sd": 0.6774660486763304,
+      "iqr_outlier": 0.6241000000000001,
+      "mad_outlier": 0.7950999999999999
+    },
+    "recommended_threshold": 0.7,
+    "threshold_reasoning": "Maximum of multiple methods for conservative detection",
+    "impact": {
+      "flagged_from_all_matches": 509,
+      "flagged_from_all_matches_pct": 82.09677419354838,
+      "flagged_from_best_matches": 0,
+      "flagged_from_best_matches_pct": 0.0
+    }
+  },
+  "persona_statistics": [
+    {
+      "persona_id": 1,
+      "persona_name": "Samantha",
+      "best_match_score": 0.7666,
+      "best_match_record": "df42ec42-cbfb-aab5-4f51-be5d71",
+      "median_score": 0.4741,
+      "mean_score": 0.4411483870967742,
+      "worst_match_score": 0.2166
+    },
+    {
+      "persona_id": 2,
+      "persona_name": "Emily",
+      "best_match_score": 0.9120999999999999,
+      "best_match_record": "09dc49b8-5296-53a4-af1f-29c1ee",
+      "median_score": 0.4946,
+      "mean_score": 0.5551403225806452,
+      "worst_match_score": 0.3351
+    },
+    {
+      "persona_id": 3,
+      "persona_name": "Fatima",
+      "best_match_score": 0.8685999999999999,
+      "best_match_record": "53421841-b73b-5668-c9cc-924b25",
+      "median_score": 0.4731,
+      "mean_score": 0.5028298387096773,
+      "worst_match_score": 0.31859999999999994
+    },
+    {
+      "persona_id": 4,
+      "persona_name": "Olivia",
+      "best_match_score": 0.7051000000000001,
+      "best_match_record": "76cc6829-8df6-9816-812f-8ff8d8",
+      "median_score": 0.2661,
+      "mean_score": 0.346858064516129,
+      "worst_match_score": 0.15509999999999996
+    },
+    {
+      "persona_id": 5,
+      "persona_name": "Isabelle",
+      "best_match_score": 0.8956,
+      "best_match_record": "6d3e2fcf-9bb9-9f4c-2872-8cbb39",
+      "median_score": 0.58485,
+      "mean_score": 0.5767169354838709,
+      "worst_match_score": 0.3306
+    },
+    {
+      "persona_id": 6,
+      "persona_name": "Aaliyah",
+      "best_match_score": 0.8685999999999999,
+      "best_match_record": "7b923d2e-fb70-b0e3-9edc-54dba2",
+      "median_score": 0.48460000000000003,
+      "mean_score": 0.5307975806451612,
+      "worst_match_score": 0.3066
+    },
+    {
+      "persona_id": 7,
+      "persona_name": "Chloe",
+      "best_match_score": 0.7113499999999999,
+      "best_match_record": "518d7d87-a850-eb93-782a-b4c54c",
+      "median_score": 0.40809999999999996,
+      "mean_score": 0.3852048387096774,
+      "worst_match_score": 0.17009999999999997
+    },
+    {
+      "persona_id": 8,
+      "persona_name": "Hannah",
+      "best_match_score": 0.8986,
+      "best_match_record": "57a1a551-9426-4bb8-ae7b-50c863",
+      "median_score": 0.4806,
+      "mean_score": 0.5297572580645161,
+      "worst_match_score": 0.3216
+    },
+    {
+      "persona_id": 9,
+      "persona_name": "Jasmine",
+      "best_match_score": 0.8536,
+      "best_match_record": "329f7698-a236-acab-3e53-479275",
+      "median_score": 0.5190999999999999,
+      "mean_score": 0.5246604838709678,
+      "worst_match_score": 0.29159999999999997
+    },
+    {
+      "persona_id": 10,
+      "persona_name": "Addison",
+      "best_match_score": 0.9120999999999999,
+      "best_match_record": "b05c25e8-4927-18c6-3afc-1a8dda",
+      "median_score": 0.4941,
+      "mean_score": 0.5467814516129031,
+      "worst_match_score": 0.3351
+    }
+  ]
+}

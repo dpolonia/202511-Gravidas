@@ -321,6 +321,16 @@ class PregnancyProfile:
     prenatal_care_indicators: List[str]  # e.g., ["antenatal_visits", "ultrasound"]
     risk_level: int  # 1-5: low_risk to very_high_risk
 
+    # Vital signs - Added in v1.2.0 Task 1.2
+    gestational_age_weeks: Optional[float] = None  # Weeks of pregnancy
+    blood_pressure_systolic: Optional[float] = None  # mmHg
+    blood_pressure_diastolic: Optional[float] = None  # mmHg
+    fetal_heart_rate: Optional[float] = None  # bpm
+    maternal_weight_kg: Optional[float] = None  # kg
+    maternal_height_cm: Optional[float] = None  # cm
+    maternal_bmi: Optional[float] = None  # kg/m^2
+    weight_gain_kg: Optional[float] = None  # kg gained during pregnancy
+
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
 

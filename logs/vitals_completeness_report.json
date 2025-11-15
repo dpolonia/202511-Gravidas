@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "timestamp": "1763227892.0888822",
+    "total_records": 62,
+    "pregnancy_records": 37
+  },
+  "completeness": {
+    "gestational_age": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "bp_systolic": {
+      "count": 62,
+      "percentage": 100.0
+    },
+    "bp_diastolic": {
+      "count": 62,
+      "percentage": 100.0
+    },
+    "fetal_heart_rate": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "maternal_weight": {
+      "count": 62,
+      "percentage": 100.0
+    },
+    "maternal_height": {
+      "count": 62,
+      "percentage": 100.0
+    },
+    "maternal_bmi": {
+      "count": 61,
+      "percentage": 98.38709677419355
+    },
+    "weight_gain": {
+      "count": 62,
+      "percentage": 100.0
+    }
+  },
+  "statistics": {
+    "gestational_age": {
+      "count": 0,
+      "min": null,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "std_dev": null
+    },
+    "bp_systolic": {
+      "count": 62,
+      "min": 87.0,
+      "max": 152.0,
+      "mean": 119.12903225806451,
+      "median": 120.0,
+      "std_dev": 16.48196617167346
+    },
+    "bp_diastolic": {
+      "count": 62,
+      "min": 57.0,
+      "max": 100.0,
+      "mean": 78.83870967741936,
+      "median": 79.0,
+      "std_dev": 9.142216161334217
+    },
+    "fetal_heart_rate": {
+      "count": 0,
+      "min": null,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "std_dev": null
+    },
+    "maternal_weight": {
+      "count": 62,
+      "min": 6.5,
+      "max": 107.6,
+      "mean": 69.73548387096774,
+      "median": 72.5,
+      "std_dev": 17.322647894877374
+    },
+    "maternal_height": {
+      "count": 62,
+      "min": 62.1,
+      "max": 178.3,
+      "mean": 160.5241935483871,
+      "median": 164.0,
+      "std_dev": 15.417125728631024
+    },
+    "maternal_bmi": {
+      "count": 61,
+      "min": 15.63,
+      "max": 38.35,
+      "mean": 26.71032786885246,
+      "median": 27.6,
+      "std_dev": 4.76680220106139
+    },
+    "weight_gain": {
+      "count": 62,
+      "min": -5.299999999999997,
+      "max": 48.099999999999994,
+      "mean": 10.7,
+      "median": 8.049999999999997,
+      "std_dev": 12.765360403431945
+    }
+  },
+  "errors": []
+}

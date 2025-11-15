@@ -194,3 +194,253 @@ def mock_api_response() -> Dict[str, Any]:
         'model': 'claude-3-haiku-20240307',
         'role': 'assistant'
     }
+
+
+# ========== FHIR and Semantic Tree Fixtures (v1.2.0) ==========
+
+@pytest.fixture
+def sample_fhir_bundle() -> Dict[str, Any]:
+    """Sample FHIR bundle for testing semantic tree generation."""
+    return {
+        'resourceType': 'Bundle',
+        'type': 'collection',
+        'entry': [
+            {
+                'resource': {
+                    'resourceType': 'Patient',
+                    'id': 'patient-123',
+                    'birthDate': '1995-01-15',
+                    'gender': 'female'
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Condition',
+                    'code': {
+                        'coding': [
+                            {
+                                'system': 'http://snomed.info/sct',
+                                'code': '72892002',
+                                'display': 'Normal pregnancy'
+                            }
+                        ]
+                    },
+                    'onsetDateTime': '2024-01-01'
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'MedicationRequest',
+                    'medicationCodeableConcept': {
+                        'coding': [
+                            {
+                                'system': 'http://www.nlm.nih.gov/research/umls/rxnorm',
+                                'code': '4077',
+                                'display': 'Prenatal vitamins'
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Encounter',
+                    'type': [
+                        {
+                            'text': 'Prenatal visit'
+                        }
+                    ],
+                    'period': {
+                        'start': '2024-03-15'
+                    }
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Observation',
+                    'code': {
+                        'coding': [
+                            {
+                                'system': 'http://loinc.org',
+                                'code': '8480-6',
+                                'display': 'Systolic blood pressure'
+                            }
+                        ]
+                    },
+                    'valueQuantity': {
+                        'value': 120,
+                        'unit': 'mmHg'
+                    },
+                    'effectiveDateTime': '2024-03-15'
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Observation',
+                    'code': {
+                        'coding': [
+                            {
+                                'system': 'http://loinc.org',
+                                'code': '29463-7',
+                                'display': 'Body Weight'
+                            }
+                        ]
+                    },
+                    'valueQuantity': {
+                        'value': 65.5,
+                        'unit': 'kg'
+                    },
+                    'effectiveDateTime': '2024-03-15'
+                }
+            }
+        ]
+    }
+
+
+@pytest.fixture
+def sample_persona_with_semantic_tree() -> Dict[str, Any]:
+    """Sample persona with semantic tree structure."""
+    return {
+        'id': 'persona_test_001',
+        'name': 'Test Emily',
+        'age': 28,
+        'education': 'college',
+        'occupation': 'teacher',
+        'semantic_tree': {
+            'age': 28,
+            'education_level': 'college',
+            'occupation_category': 'education',
+            'desired_conditions': ['pregnancy', 'gestational_diabetes'],
+            'desired_medications': ['prenatal_vitamins'],
+            'pregnancy_stage': 'second_trimester',
+            'risk_factors': ['gestational_diabetes_risk'],
+            'lifestyle_factors': ['active', 'healthy_diet']
+        }
+    }
+
+
+@pytest.fixture
+def sample_observations() -> List[Dict[str, Any]]:
+    """Sample observation data for testing vitals extraction."""
+    return [
+        {
+            'code': '8480-6',
+            'display': 'Systolic blood pressure',
+            'value': 120,
+            'unit': 'mmHg',
+            'effective_date': '2024-03-15',
+            'parent_code': None
+        },
+        {
+            'code': '8462-4',
+            'display': 'Diastolic blood pressure',
+            'value': 80,
+            'unit': 'mmHg',
+            'effective_date': '2024-03-15',
+            'parent_code': None
+        },
+        {
+            'code': '29463-7',
+            'display': 'Body Weight',
+            'value': 65.5,
+            'unit': 'kg',
+            'effective_date': '2024-03-15',
+            'parent_code': None
+        },
+        {
+            'code': '8302-2',
+            'display': 'Body Height',
+            'value': 165,
+            'unit': 'cm',
+            'effective_date': '2024-01-01',
+            'parent_code': None
+        }
+    ]
+
+
+@pytest.fixture
+def edge_case_fhir_bundle() -> Dict[str, Any]:
+    """FHIR bundle with edge cases for testing robustness."""
+    return {
+        'resourceType': 'Bundle',
+        'type': 'collection',
+        'entry': [
+            {
+                'resource': {
+                    'resourceType': 'Patient',
+                    'id': 'patient-edge',
+                    'birthDate': '1990-06-15'
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Condition',
+                    'code': {
+                        'coding': [
+                            {
+                                'system': 'http://snomed.info/sct',
+                                'code': '123456',
+                                'display': None  # Edge case: None display
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                'resource': {
+                    'resourceType': 'Observation',
+                    'code': {
+                        'coding': [
+                            {
+                                'system': 'http://loinc.org',
+                                'code': '8480-6',
+                                'display': 'Systolic blood pressure'
+                            }
+                        ]
+                    },
+                    'valueQuantity': None,  # Edge case: missing value
+                    'effectiveDateTime': '2024-03-15'
+                }
+            }
+        ]
+    }
+
+
+@pytest.fixture
+def minimal_fhir_bundle() -> Dict[str, Any]:
+    """Minimal valid FHIR bundle for testing."""
+    return {
+        'resourceType': 'Bundle',
+        'type': 'collection',
+        'entry': [
+            {
+                'resource': {
+                    'resourceType': 'Patient',
+                    'id': 'patient-minimal',
+                    'birthDate': '1992-03-20'
+                }
+            }
+        ]
+    }
+
+
+@pytest.fixture
+def real_fhir_file_path() -> Path:
+    """Path to a real FHIR file for integration testing."""
+    fhir_dir = Path('synthea/output/fhir')
+    if fhir_dir.exists():
+        fhir_files = list(fhir_dir.glob('*.json'))
+        # Filter out metadata files
+        fhir_files = [f for f in fhir_files if 'hospitalInformation' not in f.name and 'practitionerInformation' not in f.name]
+        if fhir_files:
+            return fhir_files[0]
+    return None
+
+
+@pytest.fixture
+def real_personas_file_path() -> Path:
+    """Path to the real personas file for integration testing."""
+    personas_file = Path('data/personas/personas.json')
+    if personas_file.exists():
+        return personas_file
+    return None

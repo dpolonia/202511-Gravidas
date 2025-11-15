@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-15T17:31:32.091903",
+    "fhir_directory": "synthea/output/fhir",
+    "total_files_analyzed": 66,
+    "phase": "Phase 1, Task 1.1.1",
+    "version": "v1.2.0"
+  },
+  "summary": {
+    "total_records": 66,
+    "successful": 66,
+    "failed": 0,
+    "success_rate_percent": 100.0
+  },
+  "failure_analysis": {
+    "error_types": {},
+    "top_error_messages": {},
+    "missing_resources": {
+      "no_patient": 4,
+      "no_conditions": 4,
+      "no_medications": 4,
+      "no_encounters": 4,
+      "no_observations": 4
+    }
+  },
+  "bundle_statistics": {
+    "avg_entry_count": 696.1818181818181,
+    "avg_condition_count": 26.424242424242426,
+    "avg_medication_count": 16.015151515151516,
+    "avg_encounter_count": 42.27272727272727,
+    "avg_observation_count": 200.06060606060606
+  },
+  "observation_analysis": {
+    "total_observation_types": 138,
+    "top_observation_types": {
+      "85354-9: Blood pressure panel with all children optional": 583,
+      "8867-4: Heart rate": 581,
+      "9279-1: Respiratory rate": 581,
+      "29463-7: Body Weight": 574,
+      "72514-3: Pain severity - 0-10 verbal numeric rating [Score] - Reported": 571,
+      "8302-2: Body Height": 568,
+      "72166-2: Tobacco smoking status": 568,
+      "39156-5: Body mass index (BMI) [Ratio]": 555,
+      "93025-5: Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]": 389,
+      "55758-7: Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]": 292,
+      "70274-6: Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]": 216,
+      "4548-4: Hemoglobin A1c/Hemoglobin.total in Blood": 200,
+      "59576-9: Body mass index (BMI) [Percentile] Per age and sex": 195,
+      "2339-0: Glucose [Mass/volume] in Blood": 192,
+      "6299-2: Urea nitrogen [Mass/volume] in Blood": 192,
+      "38483-4: Creatinine [Mass/volume] in Blood": 192,
+      "49765-1: Calcium [Mass/volume] in Blood": 192,
+      "2947-0: Sodium [Moles/volume] in Blood": 192,
+      "6298-4: Potassium [Moles/volume] in Blood": 192,
+      "2069-3: Chloride [Moles/volume] in Blood": 192
+    }
+  },
+  "recommendations": [
+    "\u2705 SUCCESS: Success rate meets \u226595% target. Semantic tree generation is robust.",
+    "\u26a0\ufe0f  4 records missing Patient resource. This is unusual for Synthea output. Verify FHIR files are valid."
+  ],
+  "failed_records": [],
+  "successful_records": [
+    "Alethea978_Bednar518_f8343bcb-7f26-b9b0-dbb1-2520d3ba3fda.json",
+    "Alexandria361_Bruen238_6864e055-0b9d-24fc-316f-1f6bbe831a76.json",
+    "Amy965_Hand679_7175cc93-ebb3-b8cb-15b4-e22175a6425a.json",
+    "Annamaria402_Mabel261_Morar593_b12ce577-f0b1-366f-1c0e-d86922949349.json",
+    "Aracelis412_Georgette866_Langworth352_329f7698-a236-acab-3e53-4792752977bb.json",
+    "Bea654_Parker433_92d4858f-d15a-522b-9814-d859a90fbda4.json",
+    "Benita195_Maggio310_df42ec42-cbfb-aab5-4f51-be5d71159108.json",
+    "Brittanie254_McClure239_66eb0220-b08d-6699-061f-806d89e278b2.json",
+    "Catalina187_L\u00f3pez694_76cc6829-8df6-9816-812f-8ff8d83b8ba0.json",
+    "Catheryn300_Nichelle912_Hilll811_9ffbbb47-92d4-2c95-2dc0-7b088a60ebeb.json"
+  ],
+  "detailed_failures": []
+}
