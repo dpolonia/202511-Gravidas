@@ -1,0 +1,28 @@
+[INFO] 2025-11-16 21:50:17,986 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-16 21:50:17,987 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-16 21:50:17,987 - 
+================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+
+[ERROR] 2025-11-16 21:50:17,987 - ❌ Stage 'persona_generation' not found
+[ERROR] 2025-11-16 21:50:17,987 - ❌ Stage 'persona_matching' not found
+[INFO] 2025-11-16 21:50:17,987 - 
+================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-16 21:50:17,987 - 🕐 Execution Time: 0.00 seconds
+[INFO] 2025-11-16 21:50:17,987 - 📈 Stages: 0/0 successful
+[INFO] 2025-11-16 21:50:17,987 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-16 21:50:17,987 - 🧠 AI Model: claude-haiku-4-5
+[INFO] 2025-11-16 21:50:17,987 - 👥 Personas Generated: 20
+[INFO] 2025-11-16 21:50:17,987 - 📋 Health Records: 100
+[INFO] 2025-11-16 21:50:17,987 - 
+📝 Stage Results:
+[INFO] 2025-11-16 21:50:17,987 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+
+[INFO] 2025-11-16 21:50:17,988 - 📄 Report saved to: outputs/workflow_report.json

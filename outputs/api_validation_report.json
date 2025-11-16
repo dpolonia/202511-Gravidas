@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-11-16T22:08:06.157151",
+  "total_providers": 4,
+  "working_providers": 4,
+  "failed_providers": 0,
+  "results": [
+    {
+      "provider": "Anthropic (Claude)",
+      "status": "OK",
+      "cheapest_model": "claude-haiku-4-5",
+      "cost_per_interview": "$0.080",
+      "test_usage": {
+        "input_tokens": 8,
+        "output_tokens": 10
+      }
+    },
+    {
+      "provider": "Google (Gemini)",
+      "status": "OK",
+      "cheapest_model": "gemini-2.5-flash",
+      "cost_per_interview": "$0.059",
+      "test_usage": {
+        "input_tokens": 1,
+        "output_tokens": 8
+      }
+    },
+    {
+      "provider": "xAI (Grok)",
+      "status": "OK",
+      "cheapest_model": "grok-4-fast",
+      "cost_per_interview": "$0.032",
+      "test_usage": {
+        "input_tokens": 7,
+        "output_tokens": 9
+      }
+    },
+    {
+      "provider": "OpenAI (GPT)",
+      "status": "OK",
+      "cheapest_model": "gpt-4o-mini",
+      "cost_per_interview": "$0.095",
+      "test_usage": {
+        "input_tokens": 8,
+        "output_tokens": 9
+      }
+    }
+  ],
+  "all_passed": true
+}
