@@ -1,0 +1,2286 @@
+{
+  "metadata": {
+    "version": "1.2.1",
+    "created_date": "2025-11-15",
+    "based_on": "ACOG Clinical Consensus 2025, ADA Standards of Care 2025",
+    "protocols_count": 5,
+    "phase": "Phase 2, Task 2.1"
+  },
+  "protocols": [
+    {
+      "protocol_id": "PROTO_001",
+      "name": "First-Time Mothers (Primigravida) Protocol",
+      "description": "Comprehensive interview protocol for women experiencing their first pregnancy (G1P0). Emphasizes education, expectation setting, and foundation building.",
+      "target_personas": ["Samantha", "Olivia", "Isabelle", "Jasmine"],
+      "target_criteria": {
+        "gravida": 1,
+        "para": 0,
+        "age_range": "18-35",
+        "applies_to": "First-time pregnant individuals regardless of risk level"
+      },
+      "interview_structure": {
+        "duration_minutes": 45,
+        "sections": 8,
+        "follow_up_frequency": "Every 4 weeks until 28 weeks, then every 2 weeks"
+      },
+      "sections": [
+        {
+          "section_id": 1,
+          "section_name": "Introduction and Rapport Building",
+          "duration_minutes": 5,
+          "objectives": [
+            "Establish trusting relationship",
+            "Set comfortable tone for sensitive topics",
+            "Explain interview purpose and confidentiality"
+          ],
+          "questions": [
+            {
+              "question_id": "Q1.1",
+              "text": "How are you feeling about your pregnancy today?",
+              "type": "open_ended",
+              "purpose": "Assess current emotional state",
+              "follow_up_prompts": [
+                "What emotions have been strongest for you?",
+                "Is there anything that's been particularly exciting or worrying?"
+              ]
+            },
+            {
+              "question_id": "Q1.2",
+              "text": "What questions or concerns do you have about your pregnancy?",
+              "type": "open_ended",
+              "purpose": "Identify immediate education needs",
+              "follow_up_prompts": [
+                "Are there specific topics you'd like to learn more about?",
+                "Have you been able to find reliable information?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 2,
+          "section_name": "Medical History and Current Health",
+          "duration_minutes": 10,
+          "objectives": [
+            "Obtain comprehensive medical history",
+            "Identify risk factors and contraindications",
+            "Assess current health status"
+          ],
+          "questions": [
+            {
+              "question_id": "Q2.1",
+              "text": "Do you have any chronic health conditions or take any regular medications?",
+              "type": "yes_no_detail",
+              "purpose": "Identify pre-existing conditions",
+              "data_mapping": ["health_profile.reported_health_conditions", "health_profile.medication_history"],
+              "follow_up_prompts": [
+                "How well controlled is this condition?",
+                "Have you discussed your medications with your provider during pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q2.2",
+              "text": "Have you had any complications or health concerns so far in this pregnancy?",
+              "type": "open_ended",
+              "purpose": "Identify early pregnancy complications",
+              "red_flags": ["Bleeding", "Severe pain", "Severe nausea/vomiting", "Fever"],
+              "follow_up_prompts": [
+                "When did this start?",
+                "Have you contacted your healthcare provider about this?"
+              ]
+            },
+            {
+              "question_id": "Q2.3",
+              "text": "Are you experiencing any pregnancy symptoms? Which ones have been most challenging?",
+              "type": "open_ended",
+              "purpose": "Assess symptom burden and provide guidance",
+              "common_responses": ["Nausea", "Fatigue", "Breast tenderness", "Frequent urination", "Food aversions"],
+              "follow_up_prompts": [
+                "How are these symptoms affecting your daily life?",
+                "Have you found anything that helps?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 3,
+          "section_name": "Pregnancy Planning and Readiness",
+          "duration_minutes": 5,
+          "objectives": [
+            "Assess pregnancy intentions and readiness",
+            "Identify need for additional support",
+            "Understand partner/family support system"
+          ],
+          "questions": [
+            {
+              "question_id": "Q3.1",
+              "text": "Was this pregnancy planned?",
+              "type": "yes_no_detail",
+              "purpose": "Understand pregnancy context",
+              "data_mapping": ["pregnancy_intentions.trying_duration"],
+              "sensitive": true,
+              "follow_up_prompts": [
+                "How do you feel about being pregnant now?",
+                "Do you have support from your partner/family?"
+              ]
+            },
+            {
+              "question_id": "Q3.2",
+              "text": "Are you taking prenatal vitamins with folic acid?",
+              "type": "yes_no_detail",
+              "purpose": "Assess preconception care compliance",
+              "data_mapping": ["pregnancy_intentions.preconception_care"],
+              "follow_up_prompts": [
+                "How long have you been taking them?",
+                "Do you have any trouble taking them (nausea, cost, access)?"
+              ]
+            },
+            {
+              "question_id": "Q3.3",
+              "text": "Who do you have for support during this pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess social support system",
+              "data_mapping": ["psychosocial.social_support", "psychosocial.partner_support_for_pregnancy"],
+              "follow_up_prompts": [
+                "Is your partner involved and supportive?",
+                "Do you have family or friends you can rely on?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 4,
+          "section_name": "Lifestyle and Behavioral Factors",
+          "duration_minutes": 8,
+          "objectives": [
+            "Screen for modifiable risk factors",
+            "Provide counseling on substance use",
+            "Assess nutrition and physical activity"
+          ],
+          "questions": [
+            {
+              "question_id": "Q4.1",
+              "text": "Do you currently smoke, or have you smoked during this pregnancy?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for tobacco use",
+              "data_mapping": ["behavioral.smoking_status"],
+              "counseling_required": true,
+              "follow_up_prompts": [
+                "How many cigarettes per day?",
+                "Have you thought about quitting or cutting down?",
+                "Would you like help with smoking cessation?"
+              ]
+            },
+            {
+              "question_id": "Q4.2",
+              "text": "Do you drink alcohol or use any recreational substances?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for substance use",
+              "data_mapping": ["behavioral.alcohol_consumption", "behavioral.substance_use"],
+              "sensitive": true,
+              "counseling_required": true,
+              "follow_up_prompts": [
+                "When did you last use?",
+                "How often do you typically use?",
+                "Do you need support to stop using?"
+              ]
+            },
+            {
+              "question_id": "Q4.3",
+              "text": "Tell me about your typical diet. Do you have any concerns about nutrition?",
+              "type": "open_ended",
+              "purpose": "Assess nutritional status",
+              "data_mapping": ["behavioral.nutrition_awareness"],
+              "follow_up_prompts": [
+                "Are you eating regular meals?",
+                "Do you have access to healthy food?",
+                "Any food aversions or cravings?"
+              ]
+            },
+            {
+              "question_id": "Q4.4",
+              "text": "Are you able to exercise or stay physically active?",
+              "type": "yes_no_detail",
+              "purpose": "Assess physical activity level",
+              "data_mapping": ["behavioral.physical_activity_level"],
+              "follow_up_prompts": [
+                "What types of activities do you enjoy?",
+                "Are there any barriers to being active?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 5,
+          "section_name": "Mental Health and Stress Assessment",
+          "duration_minutes": 7,
+          "objectives": [
+            "Screen for depression and anxiety",
+            "Assess stress levels and coping",
+            "Identify need for mental health referral"
+          ],
+          "questions": [
+            {
+              "question_id": "Q5.1",
+              "text": "Over the past two weeks, how often have you felt down, depressed, or hopeless?",
+              "type": "scale_0_3",
+              "purpose": "Screen for depression (PHQ-2)",
+              "data_mapping": ["psychosocial.mental_health_status"],
+              "screening_tool": "PHQ-2",
+              "threshold_for_concern": 3,
+              "follow_up_prompts": [
+                "How long have you felt this way?",
+                "Have you had professional support for mental health before?",
+                "Do you feel safe discussing this further?"
+              ]
+            },
+            {
+              "question_id": "Q5.2",
+              "text": "Over the past two weeks, how often have you had little interest or pleasure in doing things?",
+              "type": "scale_0_3",
+              "purpose": "Screen for depression (PHQ-2)",
+              "screening_tool": "PHQ-2",
+              "threshold_for_concern": 3,
+              "follow_up_prompts": [
+                "What activities used to bring you joy?",
+                "Do you have support at home?"
+              ]
+            },
+            {
+              "question_id": "Q5.3",
+              "text": "What are your main sources of stress right now?",
+              "type": "open_ended",
+              "purpose": "Identify stressors",
+              "data_mapping": ["psychosocial.stress_level", "psychosocial.financial_stress"],
+              "common_responses": ["Financial concerns", "Work", "Relationship", "Housing", "Health worries"],
+              "follow_up_prompts": [
+                "How are you coping with these stresses?",
+                "What would be most helpful right now?"
+              ]
+            },
+            {
+              "question_id": "Q5.4",
+              "text": "Do you feel safe in your current living situation?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for intimate partner violence",
+              "sensitive": true,
+              "mandatory_followup_if_no": true,
+              "referral_required_if_no": true,
+              "follow_up_prompts": [
+                "Are you being hurt or threatened by anyone?",
+                "Do you have somewhere safe to go if needed?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 6,
+          "section_name": "Social Determinants of Health",
+          "duration_minutes": 5,
+          "objectives": [
+            "Screen for social drivers of health",
+            "Identify access barriers",
+            "Connect to resources as needed"
+          ],
+          "questions": [
+            {
+              "question_id": "Q6.1",
+              "text": "Do you have health insurance that covers prenatal care and delivery?",
+              "type": "yes_no_detail",
+              "purpose": "Assess insurance status and access",
+              "data_mapping": ["socioeconomic.insurance_status"],
+              "follow_up_prompts": [
+                "What type of insurance do you have?",
+                "Are you having any difficulty accessing care or affording medications?"
+              ]
+            },
+            {
+              "question_id": "Q6.2",
+              "text": "Do you have reliable transportation to get to appointments?",
+              "type": "yes_no_detail",
+              "purpose": "Identify transportation barriers",
+              "resource_connection": "Transportation assistance programs",
+              "follow_up_prompts": [
+                "How far do you have to travel for care?",
+                "Would you like information about transportation assistance?"
+              ]
+            },
+            {
+              "question_id": "Q6.3",
+              "text": "Do you have stable housing?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for housing insecurity",
+              "resource_connection": "Housing assistance programs",
+              "follow_up_prompts": [
+                "Are you worried about losing your housing?",
+                "Do you need help finding housing resources?"
+              ]
+            },
+            {
+              "question_id": "Q6.4",
+              "text": "In the last month, have you worried about having enough food for yourself or your family?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for food insecurity",
+              "resource_connection": "WIC, food banks, SNAP",
+              "follow_up_prompts": [
+                "How often do you worry about food?",
+                "Would you like information about food assistance programs?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 7,
+          "section_name": "Birth Preferences and Education Needs",
+          "duration_minutes": 3,
+          "objectives": [
+            "Begin birth planning discussions",
+            "Assess knowledge and education needs",
+            "Provide resources for childbirth preparation"
+          ],
+          "questions": [
+            {
+              "question_id": "Q7.1",
+              "text": "Have you thought about your preferences for labor and delivery?",
+              "type": "open_ended",
+              "purpose": "Begin birth planning conversation",
+              "education_topics": ["Pain management options", "Labor stages", "Delivery methods"],
+              "follow_up_prompts": [
+                "What are your main concerns about labor and delivery?",
+                "Would you like information about childbirth classes?"
+              ]
+            },
+            {
+              "question_id": "Q7.2",
+              "text": "Are you planning to breastfeed?",
+              "type": "yes_no_unsure",
+              "purpose": "Assess feeding intentions",
+              "education_topics": ["Breastfeeding benefits", "Lactation support", "Formula feeding"],
+              "follow_up_prompts": [
+                "What have you heard about breastfeeding?",
+                "Do you have questions or concerns about feeding your baby?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 8,
+          "section_name": "Closure and Next Steps",
+          "duration_minutes": 2,
+          "objectives": [
+            "Summarize key points and action items",
+            "Schedule follow-up",
+            "Provide resources and emergency contacts"
+          ],
+          "questions": [
+            {
+              "question_id": "Q8.1",
+              "text": "What questions do you still have that we haven't covered?",
+              "type": "open_ended",
+              "purpose": "Ensure all concerns addressed"
+            },
+            {
+              "question_id": "Q8.2",
+              "text": "Do you understand what warning signs to watch for and when to call?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure safety awareness",
+              "education_required": true,
+              "warning_signs": [
+                "Vaginal bleeding",
+                "Severe abdominal pain",
+                "Severe headache",
+                "Vision changes",
+                "Sudden swelling",
+                "Decreased fetal movement (after 28 weeks)",
+                "Fever > 100.4°F",
+                "Painful urination",
+                "Fluid leaking"
+              ]
+            }
+          ]
+        }
+      ],
+      "red_flag_protocols": {
+        "immediate_referral": [
+          "Active bleeding with cramping",
+          "Severe pain",
+          "Suicidal ideation",
+          "Domestic violence disclosure",
+          "Severe depression/anxiety",
+          "Active substance abuse"
+        ],
+        "specialist_referral": [
+          "Chronic medical conditions requiring co-management",
+          "History of pregnancy complications",
+          "Mental health concerns",
+          "Substance use disorder"
+        ]
+      },
+      "resources_to_provide": [
+        "Prenatal vitamin samples or prescription",
+        "Pregnancy warning signs handout",
+        "Childbirth education class information",
+        "WIC application assistance",
+        "Mental health resources",
+        "Smoking cessation resources",
+        "24/7 nurse line number"
+      ]
+    },
+    {
+      "protocol_id": "PROTO_002",
+      "name": "Experienced Mothers (Multigravida) Protocol",
+      "description": "Interview protocol for women with previous pregnancy experience. Builds on prior knowledge while addressing new or recurring concerns.",
+      "target_personas": ["Emily", "Aaliyah", "Chloe", "Hannah", "Addison"],
+      "target_criteria": {
+        "gravida": "≥2",
+        "para": "≥1",
+        "applies_to": "Individuals with previous pregnancy/delivery experience"
+      },
+      "interview_structure": {
+        "duration_minutes": 35,
+        "sections": 7,
+        "follow_up_frequency": "Every 4 weeks until 28 weeks (may extend to 6-8 weeks if uncomplicated)"
+      },
+      "sections": [
+        {
+          "section_id": 1,
+          "section_name": "Introduction and Current Pregnancy",
+          "duration_minutes": 5,
+          "objectives": [
+            "Acknowledge previous experience",
+            "Identify concerns specific to this pregnancy",
+            "Assess readiness and planning"
+          ],
+          "questions": [
+            {
+              "question_id": "Q1.1",
+              "text": "How is this pregnancy different from your previous one(s)?",
+              "type": "open_ended",
+              "purpose": "Identify changes and concerns",
+              "follow_up_prompts": [
+                "Are the symptoms more or less severe?",
+                "Do you have different concerns this time?"
+              ]
+            },
+            {
+              "question_id": "Q1.2",
+              "text": "Was this pregnancy planned?",
+              "type": "yes_no_detail",
+              "purpose": "Understand pregnancy context",
+              "data_mapping": ["pregnancy_intentions.trying_duration"],
+              "follow_up_prompts": [
+                "How do you feel about being pregnant again?",
+                "How is your family adjusting?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 2,
+          "section_name": "Previous Pregnancy History Review",
+          "duration_minutes": 8,
+          "objectives": [
+            "Document previous pregnancy outcomes",
+            "Identify recurrent risks",
+            "Learn from previous experiences"
+          ],
+          "questions": [
+            {
+              "question_id": "Q2.1",
+              "text": "Tell me about your previous pregnancy/pregnancies. Were there any complications?",
+              "type": "detailed_history",
+              "purpose": "Identify risk factors",
+              "data_mapping": ["pregnancy_intentions.previous_complications"],
+              "complications_to_assess": [
+                "Gestational diabetes",
+                "Preeclampsia/high blood pressure",
+                "Preterm labor",
+                "Placental problems",
+                "Excessive bleeding",
+                "Infection",
+                "Mental health challenges"
+              ],
+              "follow_up_prompts": [
+                "How was this managed?",
+                "Do you have records from that pregnancy?",
+                "Are you concerned about this happening again?"
+              ]
+            },
+            {
+              "question_id": "Q2.2",
+              "text": "How did you deliver your previous baby/babies?",
+              "type": "structured_detail",
+              "purpose": "Assess delivery history",
+              "data_mapping": ["pregnancy_intentions.previous_delivery_methods"],
+              "options": ["Vaginal delivery", "Cesarean section", "Vacuum/forceps assisted"],
+              "follow_up_prompts": [
+                "Were there any complications during delivery?",
+                "How was your recovery?",
+                "If cesarean: What was the reason?"
+              ]
+            },
+            {
+              "question_id": "Q2.3",
+              "text": "Have you had any pregnancy losses, including miscarriages or stillbirths?",
+              "type": "yes_no_detail",
+              "purpose": "Document pregnancy loss history",
+              "data_mapping": ["pregnancy_intentions.miscarriage_count"],
+              "sensitive": true,
+              "follow_up_prompts": [
+                "How far along were you?",
+                "Was a cause identified?",
+                "Do you have concerns about this pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q2.4",
+              "text": "Did you breastfeed your previous child(ren)? For how long?",
+              "type": "yes_no_duration",
+              "purpose": "Assess breastfeeding history and intentions",
+              "data_mapping": ["pregnancy_intentions.breastfeeding_history", "pregnancy_intentions.breastfeeding_duration_months"],
+              "follow_up_prompts": [
+                "How was that experience for you?",
+                "Are you planning to breastfeed this baby?",
+                "Do you need any support or resources?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 3,
+          "section_name": "Current Health and Risk Assessment",
+          "duration_minutes": 6,
+          "objectives": [
+            "Assess current health status",
+            "Identify new or worsening conditions",
+            "Update medication list"
+          ],
+          "questions": [
+            {
+              "question_id": "Q3.1",
+              "text": "Have you developed any new health conditions since your last pregnancy?",
+              "type": "yes_no_detail",
+              "purpose": "Identify new risk factors",
+              "data_mapping": ["health_profile.reported_health_conditions"],
+              "follow_up_prompts": [
+                "When was this diagnosed?",
+                "How is it being managed?",
+                "Are you seeing a specialist?"
+              ]
+            },
+            {
+              "question_id": "Q3.2",
+              "text": "Are you taking any medications or supplements?",
+              "type": "detailed_list",
+              "purpose": "Medication reconciliation",
+              "data_mapping": ["health_profile.medication_history"],
+              "include": "Over-the-counter, vitamins, herbal supplements",
+              "follow_up_prompts": [
+                "Are you taking prenatal vitamins?",
+                "Have you discussed these medications with your doctor?"
+              ]
+            },
+            {
+              "question_id": "Q3.3",
+              "text": "How are you feeling physically in this pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess symptom burden",
+              "follow_up_prompts": [
+                "Any concerning symptoms?",
+                "How is this compared to before?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 4,
+          "section_name": "Lifestyle and Risk Modification",
+          "duration_minutes": 5,
+          "objectives": [
+            "Screen for modifiable risks",
+            "Provide targeted counseling",
+            "Support healthy behaviors"
+          ],
+          "questions": [
+            {
+              "question_id": "Q4.1",
+              "text": "Have your smoking, alcohol, or substance use habits changed since your last pregnancy?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for substance use",
+              "data_mapping": ["behavioral.smoking_status", "behavioral.alcohol_consumption", "behavioral.substance_use"],
+              "counseling_required_if_yes": true,
+              "follow_up_prompts": [
+                "Would you like support to quit or reduce use?",
+                "Do you understand the risks to your pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q4.2",
+              "text": "Are you able to maintain healthy eating and exercise habits with other children at home?",
+              "type": "yes_no_detail",
+              "purpose": "Assess nutrition and activity with caregiving demands",
+              "data_mapping": ["behavioral.nutrition_awareness", "behavioral.physical_activity_level"],
+              "follow_up_prompts": [
+                "What are the biggest challenges?",
+                "Do you need help with meal planning or childcare to exercise?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 5,
+          "section_name": "Psychosocial Assessment",
+          "duration_minutes": 5,
+          "objectives": [
+            "Screen for perinatal mood disorders",
+            "Assess family adjustment",
+            "Identify support needs"
+          ],
+          "questions": [
+            {
+              "question_id": "Q5.1",
+              "text": "Did you experience postpartum depression or anxiety after your previous pregnancy?",
+              "type": "yes_no_detail",
+              "purpose": "Assess risk for recurrent perinatal mood disorder",
+              "data_mapping": ["psychosocial.mental_health_status"],
+              "high_risk_if_yes": true,
+              "follow_up_prompts": [
+                "How long did symptoms last?",
+                "Did you receive treatment?",
+                "Are you concerned about this happening again?"
+              ]
+            },
+            {
+              "question_id": "Q5.2",
+              "text": "How are you feeling emotionally about this pregnancy?",
+              "type": "open_ended",
+              "purpose": "Screen for current mood symptoms",
+              "screening_tool_if_concerned": "PHQ-9 or EPDS",
+              "follow_up_prompts": [
+                "Any feelings of sadness, worry, or being overwhelmed?",
+                "How is your sleep (beyond normal pregnancy disruption)?",
+                "Do you have support at home?"
+              ]
+            },
+            {
+              "question_id": "Q5.3",
+              "text": "How is your other child/children adjusting to the news of a new baby?",
+              "type": "open_ended",
+              "purpose": "Assess family dynamics",
+              "follow_up_prompts": [
+                "Have you prepared them?",
+                "Do you have concerns about managing multiple children?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 6,
+          "section_name": "Birth Planning and Preferences",
+          "duration_minutes": 4,
+          "objectives": [
+            "Discuss delivery preferences based on history",
+            "Address previous birth experience",
+            "Plan for this delivery"
+          ],
+          "questions": [
+            {
+              "question_id": "Q6.1",
+              "text": "Based on your previous experience, what would you like to do the same or differently this time?",
+              "type": "open_ended",
+              "purpose": "Incorporate lessons learned",
+              "follow_up_prompts": [
+                "What worked well before?",
+                "What would you change?",
+                "Do you have specific preferences for this delivery?"
+              ]
+            },
+            {
+              "question_id": "Q6.2",
+              "text": "If you had a previous cesarean, are you interested in attempting a vaginal birth (VBAC)?",
+              "type": "yes_no_unsure",
+              "purpose": "Assess VBAC candidacy and preferences",
+              "applicable_if": "Previous cesarean delivery",
+              "specialist_consultation_may_be_needed": true,
+              "follow_up_prompts": [
+                "Have you discussed this with your provider?",
+                "Do you understand the risks and benefits?",
+                "What factors are important in your decision?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 7,
+          "section_name": "Practical Planning and Resources",
+          "duration_minutes": 2,
+          "objectives": [
+            "Address logistics with multiple children",
+            "Connect to relevant resources",
+            "Schedule appropriate follow-up"
+          ],
+          "questions": [
+            {
+              "question_id": "Q7.1",
+              "text": "Do you have childcare arranged for your appointments and when you deliver?",
+              "type": "yes_no_detail",
+              "purpose": "Identify practical barriers to care",
+              "follow_up_prompts": [
+                "Do you need help finding childcare resources?",
+                "Do you have support for after delivery?"
+              ]
+            },
+            {
+              "question_id": "Q7.2",
+              "text": "What resources or support would be most helpful for you right now?",
+              "type": "open_ended",
+              "purpose": "Connect to needed services",
+              "common_needs": ["Childcare assistance", "Parenting classes", "Support groups", "Home visiting programs"]
+            }
+          ]
+        }
+      ],
+      "red_flag_protocols": {
+        "immediate_referral": [
+          "History of severe postpartum depression with current symptoms",
+          "History of pregnancy complications with similar symptoms",
+          "Multiple previous pregnancy losses with current bleeding/pain",
+          "Substance use disorder"
+        ],
+        "specialist_referral": [
+          "History of preterm birth (<37 weeks)",
+          "History of preeclampsia",
+          "History of gestational diabetes",
+          "Previous cesarean with VBAC interest",
+          "History of postpartum mood disorder"
+        ]
+      },
+      "resources_to_provide": [
+        "Sibling preparation materials",
+        "Postpartum depression screening information",
+        "VBAC information if applicable",
+        "Childcare resources",
+        "Support group information"
+      ]
+    },
+    {
+      "protocol_id": "PROTO_003",
+      "name": "High-Risk Pregnancy Protocol",
+      "description": "Comprehensive protocol for pregnancies with increased maternal or fetal risk. Includes enhanced monitoring and specialist coordination.",
+      "target_personas": ["Fatima", "Aaliyah", "Hannah"],
+      "target_criteria": {
+        "risk_factors": [
+          "Advanced maternal age (≥35)",
+          "Chronic hypertension",
+          "Diabetes (pre-gestational or gestational)",
+          "Previous pregnancy complications",
+          "Multiple gestation",
+          "Obesity (BMI ≥30)",
+          "Previous preterm birth",
+          "Fertility treatment"
+        ]
+      },
+      "interview_structure": {
+        "duration_minutes": 50,
+        "sections": 9,
+        "follow_up_frequency": "Every 2-4 weeks depending on risk level, specialist may see more frequently"
+      },
+      "sections": [
+        {
+          "section_id": 1,
+          "section_name": "Risk Assessment and Classification",
+          "duration_minutes": 8,
+          "objectives": [
+            "Identify and document all risk factors",
+            "Classify risk level",
+            "Establish monitoring plan"
+          ],
+          "questions": [
+            {
+              "question_id": "Q1.1",
+              "text": "I see you have [risk factor]. Can you tell me more about this condition and how it's been managed?",
+              "type": "detailed_history",
+              "purpose": "Understand risk factor context",
+              "data_mapping": ["health_profile.reported_health_conditions"],
+              "follow_up_prompts": [
+                "When were you diagnosed?",
+                "What treatments have you tried?",
+                "Who manages this condition for you?",
+                "How well controlled is it currently?"
+              ]
+            },
+            {
+              "question_id": "Q1.2",
+              "text": "Are you seeing any specialists for your health conditions?",
+              "type": "yes_no_detail",
+              "purpose": "Coordinate specialist care",
+              "follow_up_prompts": [
+                "Which specialists?",
+                "How often do you see them?",
+                "Have they been informed about your pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q1.3",
+              "text": "In your previous pregnancy, what complications did you experience?",
+              "type": "detailed_history",
+              "purpose": "Assess recurrence risk",
+              "applicable_if": "Previous pregnancy complications",
+              "data_mapping": ["pregnancy_intentions.previous_complications"],
+              "complications_to_detail": [
+                "Gestational diabetes - onset week, management, delivery timing",
+                "Preeclampsia - onset, severity, delivery timing, complications",
+                "Preterm birth - gestational age, cause if known",
+                "Placental problems - type, management",
+                "Fetal growth restriction"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 2,
+          "section_name": "Medication Review and Management",
+          "duration_minutes": 6,
+          "objectives": [
+            "Review all medications for pregnancy safety",
+            "Coordinate with specialists on necessary medications",
+            "Ensure optimal chronic disease control"
+          ],
+          "questions": [
+            {
+              "question_id": "Q2.1",
+              "text": "Let's review all your current medications. What are you taking and how often?",
+              "type": "detailed_medication_list",
+              "purpose": "Medication reconciliation and safety review",
+              "data_mapping": ["health_profile.medication_history"],
+              "include": "Prescription, OTC, vitamins, supplements, herbal",
+              "pregnancy_category_assessment_required": true,
+              "follow_up_prompts": [
+                "Has your doctor reviewed these for pregnancy safety?",
+                "Any medications that were stopped or changed?",
+                "Are you taking 400-800 mcg folic acid daily?"
+              ]
+            },
+            {
+              "question_id": "Q2.2",
+              "text": "For diabetes: How are you monitoring your blood sugars? What are your typical values?",
+              "type": "detailed_monitoring",
+              "applicable_if": "Diabetes (any type)",
+              "purpose": "Assess glycemic control",
+              "target_values": "Fasting <95 mg/dL, 1-hour postprandial <140 mg/dL, 2-hour postprandial <120 mg/dL",
+              "follow_up_prompts": [
+                "How often are you checking?",
+                "Are you having any lows or highs?",
+                "Do you have a glucose log to share?"
+              ]
+            },
+            {
+              "question_id": "Q2.3",
+              "text": "For hypertension: Are you monitoring your blood pressure at home?",
+              "type": "yes_no_detail",
+              "applicable_if": "Chronic hypertension",
+              "purpose": "Assess BP control and monitoring",
+              "target_value": "<140/90 mmHg",
+              "follow_up_prompts": [
+                "What are your typical readings?",
+                "Do you have a home BP monitor?",
+                "Any symptoms like headaches or vision changes?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 3,
+          "section_name": "Enhanced Symptom Monitoring",
+          "duration_minutes": 7,
+          "objectives": [
+            "Educate on high-risk specific warning signs",
+            "Assess current symptoms",
+            "Establish patient self-monitoring plan"
+          ],
+          "questions": [
+            {
+              "question_id": "Q3.1",
+              "text": "Are you experiencing any of these symptoms: severe headaches, vision changes, upper abdominal pain, sudden swelling, decreased fetal movement?",
+              "type": "symptom_checklist",
+              "purpose": "Screen for preeclampsia and other urgent conditions",
+              "red_flags": "Any positive response requires immediate evaluation",
+              "follow_up_prompts": [
+                "When did this start?",
+                "How severe is it?",
+                "Have you contacted your doctor?"
+              ]
+            },
+            {
+              "question_id": "Q3.2",
+              "text": "For gestational diabetes history: Have you noticed increased thirst, frequent urination more than normal for pregnancy, or unusual fatigue?",
+              "type": "symptom_checklist",
+              "applicable_if": "Diabetes risk or history",
+              "purpose": "Screen for hyperglycemia",
+              "follow_up_prompts": [
+                "When will you have your glucose screening?",
+                "Are you following any dietary modifications?"
+              ]
+            },
+            {
+              "question_id": "Q3.3",
+              "text": "Are you having any contractions or cramping?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for preterm labor",
+              "applicable_if": "History of preterm birth or current risk factors",
+              "follow_up_prompts": [
+                "How often?",
+                "How long do they last?",
+                "Any other symptoms like back pain, pressure, or discharge?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 4,
+          "section_name": "Fetal Well-Being Assessment",
+          "duration_minutes": 5,
+          "objectives": [
+            "Assess fetal movement (if applicable)",
+            "Review fetal monitoring plan",
+            "Discuss fetal testing schedule"
+          ],
+          "questions": [
+            {
+              "question_id": "Q4.1",
+              "text": "If past 28 weeks: Are you feeling regular fetal movement?",
+              "type": "yes_no_detail",
+              "applicable_if": "Gestational age ≥28 weeks",
+              "purpose": "Assess fetal well-being",
+              "kickcount_education_required": true,
+              "follow_up_prompts": [
+                "When do you typically feel the baby move most?",
+                "Have you noticed any decrease in movement?",
+                "Do you know how to do kick counts?"
+              ]
+            },
+            {
+              "question_id": "Q4.2",
+              "text": "What fetal monitoring have you had or do you have scheduled?",
+              "type": "testing_review",
+              "purpose": "Coordinate fetal surveillance",
+              "common_tests": ["Non-stress tests", "Biophysical profiles", "Growth ultrasounds", "Doppler studies"],
+              "follow_up_prompts": [
+                "Do you understand why these tests are needed?",
+                "Do you have questions about the results?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 5,
+          "section_name": "Lifestyle Modifications and Self-Care",
+          "duration_minutes": 6,
+          "objectives": [
+            "Review disease-specific diet and activity",
+            "Assess compliance with recommendations",
+            "Provide support for lifestyle changes"
+          ],
+          "questions": [
+            {
+              "question_id": "Q5.1",
+              "text": "For diabetes: Are you following a diabetic diet? Have you met with a dietitian?",
+              "type": "yes_no_detail",
+              "applicable_if": "Diabetes (any type)",
+              "purpose": "Assess nutritional management",
+              "referral_if_no": "Registered dietitian",
+              "follow_up_prompts": [
+                "What does a typical day of eating look like?",
+                "Are you having trouble with the diet?",
+                "Would you like to meet with a dietitian?"
+              ]
+            },
+            {
+              "question_id": "Q5.2",
+              "text": "For hypertension: Are you limiting sodium and following a heart-healthy diet?",
+              "type": "yes_no_detail",
+              "applicable_if": "Hypertension",
+              "purpose": "Assess dietary compliance",
+              "education_topics": ["DASH diet", "Sodium reduction", "Potassium-rich foods"],
+              "follow_up_prompts": [
+                "Do you know how to read nutrition labels?",
+                "What are your biggest challenges with the diet?"
+              ]
+            },
+            {
+              "question_id": "Q5.3",
+              "text": "What level of physical activity are you able to do?",
+              "type": "open_ended",
+              "purpose": "Assess activity level and restrictions",
+              "data_mapping": ["behavioral.physical_activity_level"],
+              "follow_up_prompts": [
+                "Have you been given any activity restrictions?",
+                "Are you able to do any gentle exercise?",
+                "Do you need guidance on safe exercise?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 6,
+          "section_name": "Mental Health and Coping",
+          "duration_minutes": 5,
+          "objectives": [
+            "Screen for anxiety about high-risk status",
+            "Assess coping mechanisms",
+            "Provide emotional support"
+          ],
+          "questions": [
+            {
+              "question_id": "Q6.1",
+              "text": "How are you coping with the stress of a high-risk pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess psychological impact",
+              "data_mapping": ["psychosocial.stress_level"],
+              "follow_up_prompts": [
+                "What worries you most?",
+                "What helps you manage anxiety?",
+                "Do you have adequate support?"
+              ]
+            },
+            {
+              "question_id": "Q6.2",
+              "text": "Are you experiencing symptoms of depression or anxiety?",
+              "type": "screening_tool",
+              "purpose": "Mental health screening",
+              "screening_tool": "PHQ-2 or GAD-2",
+              "threshold_for_full_screening": 3,
+              "follow_up_prompts": [
+                "Would you like to talk to someone about these feelings?",
+                "Have you had mental health support before?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 7,
+          "section_name": "Care Coordination and Communication",
+          "duration_minutes": 5,
+          "objectives": [
+            "Clarify roles of care team members",
+            "Establish communication plan",
+            "Ensure coordinated care"
+          ],
+          "questions": [
+            {
+              "question_id": "Q7.1",
+              "text": "Let's make sure your care team is coordinated. Who are all the providers involved in your care?",
+              "type": "care_team_list",
+              "purpose": "Map care team",
+              "typical_team_members": [
+                "Obstetrician",
+                "Maternal-fetal medicine specialist",
+                "Endocrinologist",
+                "Cardiologist",
+                "Primary care provider",
+                "Diabetes educator",
+                "Dietitian"
+              ],
+              "follow_up_prompts": [
+                "Are they communicating with each other?",
+                "Do you have all contact numbers?",
+                "Who should you call first if you have concerns?"
+              ]
+            },
+            {
+              "question_id": "Q7.2",
+              "text": "Do you understand your monitoring and testing schedule?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure understanding of care plan",
+              "provide_written_schedule": true,
+              "follow_up_prompts": [
+                "Do you have all appointments scheduled?",
+                "Do you have transportation to frequent appointments?",
+                "Any barriers to keeping appointments?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 8,
+          "section_name": "Delivery Planning",
+          "duration_minutes": 5,
+          "objectives": [
+            "Discuss timing and mode of delivery",
+            "Set expectations for delivery",
+            "Address concerns"
+          ],
+          "questions": [
+            {
+              "question_id": "Q8.1",
+              "text": "Have you discussed the likely timing and method of delivery with your doctor?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure understanding of delivery plan",
+              "considerations": [
+                "May need delivery before 40 weeks",
+                "May need cesarean depending on risk factors",
+                "May need delivery at higher-level facility"
+              ],
+              "follow_up_prompts": [
+                "Do you understand why early delivery might be recommended?",
+                "What are your preferences within the safe options?",
+                "Do you have questions about what to expect?"
+              ]
+            },
+            {
+              "question_id": "Q8.2",
+              "text": "Where are you planning to deliver? Have you toured the facility?",
+              "type": "open_ended",
+              "purpose": "Ensure appropriate delivery location",
+              "may_require_higher_level_facility_if": [
+                "Anticipated preterm birth <34 weeks",
+                "Severe maternal disease",
+                "Known fetal anomalies requiring NICU"
+              ],
+              "follow_up_prompts": [
+                "Does this facility have the level of care you need?",
+                "Is the NICU level appropriate if needed?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 9,
+          "section_name": "Education and Resources",
+          "duration_minutes": 3,
+          "objectives": [
+            "Provide condition-specific education",
+            "Connect to support resources",
+            "Ensure emergency preparedness"
+          ],
+          "questions": [
+            {
+              "question_id": "Q9.1",
+              "text": "What resources would help you manage your high-risk pregnancy?",
+              "type": "open_ended",
+              "purpose": "Connect to needed resources",
+              "resources_to_consider": [
+                "Disease-specific support groups",
+                "High-risk pregnancy support groups",
+                "Educational materials",
+                "Home monitoring equipment",
+                "Nutrition counseling",
+                "Mental health services",
+                "Financial assistance for medical costs"
+              ]
+            },
+            {
+              "question_id": "Q9.2",
+              "text": "Do you know the warning signs specific to your condition and when to seek immediate care?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure safety awareness",
+              "education_required": true,
+              "condition_specific_warning_signs": {
+                "diabetes": ["Blood sugar <60 or >200", "Ketones in urine", "Severe nausea/vomiting"],
+                "hypertension": ["Severe headache", "Vision changes", "Upper abdominal pain", "Sudden severe swelling"],
+                "preterm_birth_risk": ["Regular contractions", "Pelvic pressure", "Low back pain", "Watery discharge"]
+              }
+            }
+          ]
+        }
+      ],
+      "red_flag_protocols": {
+        "immediate_referral": [
+          "Blood pressure ≥160/110",
+          "Symptoms of preeclampsia",
+          "Blood sugar <50 or >300",
+          "Regular contractions before 37 weeks",
+          "Vaginal bleeding",
+          "Decreased fetal movement",
+          "Severe persistent headache",
+          "Visual disturbances"
+        ],
+        "urgent_specialist_referral": [
+          "New diagnosis of chronic condition",
+          "Uncontrolled chronic disease",
+          "Maternal-fetal medicine if not already involved",
+          "Perinatology for multiple complications"
+        ]
+      },
+      "enhanced_monitoring_requirements": {
+        "visit_frequency": "Every 1-4 weeks depending on condition(s)",
+        "home_monitoring": [
+          "Blood pressure monitoring (if hypertensive)",
+          "Blood glucose monitoring (if diabetic)",
+          "Kick counts (after 28 weeks)",
+          "Weight monitoring",
+          "Symptom diary"
+        ],
+        "fetal_surveillance": [
+          "Growth ultrasounds every 3-4 weeks",
+          "Non-stress tests weekly or twice weekly (third trimester)",
+          "Biophysical profiles as indicated",
+          "Doppler studies if growth restriction"
+        ],
+        "laboratory_monitoring": [
+          "HbA1c every 4-6 weeks (if diabetic)",
+          "Urinalysis at each visit",
+          "24-hour urine protein if indicated",
+          "Complete metabolic panel as needed"
+        ]
+      },
+      "resources_to_provide": [
+        "Condition-specific handouts",
+        "Home monitoring equipment (BP cuff, glucometer)",
+        "Monitoring logs",
+        "Warning signs card",
+        "Support group information",
+        "Specialty clinic contact information",
+        "24/7 on-call number"
+      ]
+    },
+    {
+      "protocol_id": "PROTO_004",
+      "name": "Low Socioeconomic Status / Healthcare Access Barriers Protocol",
+      "description": "Protocol tailored for individuals facing socioeconomic challenges and healthcare access barriers. Emphasizes resource connection and barrier reduction.",
+      "target_personas": ["Olivia", "Chloe", "Samantha"],
+      "target_criteria": {
+        "indicators": [
+          "Uninsured or underinsured",
+          "Low income",
+          "Unstable housing",
+          "Food insecurity",
+          "Transportation barriers",
+          "Limited education",
+          "Social isolation"
+        ]
+      },
+      "interview_structure": {
+        "duration_minutes": 50,
+        "sections": 9,
+        "follow_up_frequency": "Every 4 weeks with flexible scheduling, outreach if missed appointments",
+        "special_accommodations": [
+          "Flexible scheduling",
+          "Walk-in availability",
+          "Reduced wait times",
+          "On-site resources",
+          "Connection to patient navigator/case manager"
+        ]
+      },
+      "sections": [
+        {
+          "section_id": 1,
+          "section_name": "Welcoming and Barrier Assessment",
+          "duration_minutes": 7,
+          "objectives": [
+            "Build trust and rapport",
+            "Identify immediate barriers to care",
+            "Assess urgency of needs"
+          ],
+          "approach": "Non-judgmental, trauma-informed, patient-centered",
+          "questions": [
+            {
+              "question_id": "Q1.1",
+              "text": "Thank you for coming in today. What challenges did you face getting here?",
+              "type": "open_ended",
+              "purpose": "Identify access barriers",
+              "common_barriers": ["Transportation", "Childcare", "Work schedule", "Cost"],
+              "follow_up_prompts": [
+                "How can we make it easier for you to come to appointments?",
+                "Would different appointment times help?",
+                "Do you need help with transportation or childcare?"
+              ]
+            },
+            {
+              "question_id": "Q1.2",
+              "text": "What are your most pressing concerns or needs right now?",
+              "type": "open_ended_prioritization",
+              "purpose": "Identify urgent needs to address first",
+              "address_immediately_if_possible": true,
+              "common_urgent_needs": ["Food", "Housing", "Safety", "Medications", "Medical care"],
+              "follow_up_prompts": [
+                "What would help you most right now?",
+                "Can we help you with any of these today?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 2,
+          "section_name": "Social Determinants Screening",
+          "duration_minutes": 8,
+          "objectives": [
+            "Comprehensive screening for social needs",
+            "Identify all barriers to health",
+            "Prioritize intervention areas"
+          ],
+          "screening_tool": "PRAPARE or similar validated tool",
+          "questions": [
+            {
+              "question_id": "Q2.1",
+              "text": "Do you have a place to live that is safe and stable?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for housing insecurity",
+              "critical_risk_factor": true,
+              "immediate_referral_if_no": "Housing assistance, shelter services",
+              "follow_up_prompts": [
+                "Are you worried about losing your housing?",
+                "Do you sometimes sleep in temporary or unstable situations?",
+                "Would you like help finding housing resources?"
+              ]
+            },
+            {
+              "question_id": "Q2.2",
+              "text": "In the last month, did you worry that your food would run out before you got money to buy more?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for food insecurity",
+              "critical_for_pregnancy": true,
+              "immediate_referral_if_yes": "WIC, food banks, SNAP",
+              "follow_up_prompts": [
+                "In the last month, did the food you bought just not last?",
+                "Would you like help applying for food assistance?",
+                "Can we give you information about food resources today?"
+              ]
+            },
+            {
+              "question_id": "Q2.3",
+              "text": "How hard is it for you to pay for the very basics like food, housing, medical care, and heating?",
+              "type": "scale_not_hard_to_very_hard",
+              "purpose": "Assess financial strain",
+              "data_mapping": ["psychosocial.financial_stress"],
+              "follow_up_prompts": [
+                "Are there bills you can't pay?",
+                "Do you ever have to choose between necessities?",
+                "Would you like to speak with a financial counselor?"
+              ]
+            },
+            {
+              "question_id": "Q2.4",
+              "text": "Do you have health insurance?",
+              "type": "yes_no_type",
+              "purpose": "Assess insurance status",
+              "data_mapping": ["socioeconomic.insurance_status"],
+              "immediate_action_if_no": "Medicaid/pregnancy coverage application assistance",
+              "follow_up_prompts": [
+                "Would you like help applying for insurance?",
+                "Do you know about pregnancy Medicaid?",
+                "Can we help you enroll today?"
+              ]
+            },
+            {
+              "question_id": "Q2.5",
+              "text": "Do you have reliable transportation to get to medical appointments?",
+              "type": "yes_no_detail",
+              "purpose": "Identify transportation barriers",
+              "resource_connection_if_no": "Transportation assistance, Medicaid transportation",
+              "follow_up_prompts": [
+                "How do you usually get to appointments?",
+                "Have you missed appointments because of transportation?",
+                "Would you like information about free or low-cost transportation?"
+              ]
+            },
+            {
+              "question_id": "Q2.6",
+              "text": "Do you feel safe where you are living? Does anyone threaten or hurt you?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for intimate partner violence and safety",
+              "sensitive": true,
+              "mandatory_protocol_if_yes": "Safety planning, domestic violence resources",
+              "private_screening_preferred": true,
+              "follow_up_prompts": [
+                "Are you in danger now?",
+                "Do you have a safe place to go?",
+                "Would you like to talk to someone who can help?"
+              ]
+            },
+            {
+              "question_id": "Q2.7",
+              "text": "Do you have someone to turn to for support?",
+              "type": "yes_no_detail",
+              "purpose": "Assess social support",
+              "data_mapping": ["psychosocial.social_support"],
+              "resource_connection_if_no": "Support groups, home visiting programs, community resources",
+              "follow_up_prompts": [
+                "Is there someone who can help you during pregnancy and after birth?",
+                "Would you like to connect with other pregnant women or new moms?",
+                "Can we help you find support?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 3,
+          "section_name": "Medical and Pregnancy History",
+          "duration_minutes": 8,
+          "objectives": [
+            "Obtain essential medical information",
+            "Identify pregnancy risks",
+            "Understand healthcare utilization patterns"
+          ],
+          "questions": [
+            {
+              "question_id": "Q3.1",
+              "text": "When was your last healthcare visit before coming here?",
+              "type": "date_or_timeframe",
+              "purpose": "Assess healthcare access and utilization",
+              "data_mapping": ["health_profile.healthcare_access"],
+              "follow_up_prompts": [
+                "What prevented you from getting care sooner?",
+                "Do you have a regular doctor or clinic?",
+                "What makes it hard to get healthcare?"
+              ]
+            },
+            {
+              "question_id": "Q3.2",
+              "text": "Do you have any health conditions or take any medications?",
+              "type": "yes_no_detail",
+              "purpose": "Identify medical issues and medication access",
+              "data_mapping": ["health_profile.reported_health_conditions", "health_profile.medication_history"],
+              "assess_medication_access": true,
+              "follow_up_prompts": [
+                "Are you able to get your medications?",
+                "Have you had trouble affording medications?",
+                "Do you know about medication assistance programs?"
+              ]
+            },
+            {
+              "question_id": "Q3.3",
+              "text": "Is this your first pregnancy? Have you been pregnant before?",
+              "type": "pregnancy_history",
+              "purpose": "Obtain obstetric history",
+              "data_mapping": ["pregnancy_intentions.gravida", "pregnancy_intentions.para"],
+              "follow_up_prompts": [
+                "Tell me about your previous pregnancies.",
+                "Were there any problems?",
+                "Did you receive prenatal care?"
+              ]
+            },
+            {
+              "question_id": "Q3.4",
+              "text": "When did you find out you were pregnant? How far along do you think you are?",
+              "type": "date_gestational_age",
+              "purpose": "Determine gestational age and entry to care",
+              "follow_up_prompts": [
+                "Have you had any prenatal care yet?",
+                "What prevented you from coming in earlier?",
+                "Have you had an ultrasound?"
+              ]
+            },
+            {
+              "question_id": "Q3.5",
+              "text": "Are you taking prenatal vitamins?",
+              "type": "yes_no_detail",
+              "purpose": "Assess vitamin access and compliance",
+              "provide_vitamins_today": true,
+              "follow_up_prompts": [
+                "What has stopped you from taking vitamins?",
+                "Can we give you vitamins today to take home?",
+                "Do you need help paying for vitamins?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 4,
+          "section_name": "Substance Use and Mental Health Screening",
+          "duration_minutes": 7,
+          "objectives": [
+            "Screen for substance use",
+            "Assess mental health",
+            "Connect to treatment if needed"
+          ],
+          "approach": "Non-judgmental, emphasize health and safety",
+          "questions": [
+            {
+              "question_id": "Q4.1",
+              "text": "Do you smoke cigarettes?",
+              "type": "yes_no_amount",
+              "purpose": "Screen for tobacco use",
+              "data_mapping": ["behavioral.smoking_status"],
+              "counseling_required": true,
+              "resource_connection": "Smoking cessation programs, nicotine replacement",
+              "follow_up_prompts": [
+                "Have you tried to quit?",
+                "Would you like help quitting?",
+                "Can we connect you to a free quit program?"
+              ]
+            },
+            {
+              "question_id": "Q4.2",
+              "text": "Sometimes when people are under stress they use alcohol or other substances. Is that something you do?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for substance use",
+              "data_mapping": ["behavioral.alcohol_consumption", "behavioral.substance_use"],
+              "sensitive": true,
+              "emphasize_confidentiality": true,
+              "treatment_referral_if_yes": true,
+              "follow_up_prompts": [
+                "What do you use and how often?",
+                "When was your last use?",
+                "Would you like help to stop or cut down?",
+                "Have you tried treatment before?"
+              ]
+            },
+            {
+              "question_id": "Q4.3",
+              "text": "Over the past 2 weeks, how often have you felt down, depressed, or hopeless?",
+              "type": "scale_0_3",
+              "purpose": "Screen for depression",
+              "screening_tool": "PHQ-2",
+              "data_mapping": ["psychosocial.mental_health_status"],
+              "threshold_for_full_screening": 3,
+              "follow_up_prompts": [
+                "How long have you felt this way?",
+                "Have you had help for depression before?",
+                "Would you like to talk to a counselor?"
+              ]
+            },
+            {
+              "question_id": "Q4.4",
+              "text": "Over the past 2 weeks, how often have you had little interest or pleasure in doing things?",
+              "type": "scale_0_3",
+              "purpose": "Screen for depression",
+              "screening_tool": "PHQ-2",
+              "threshold_for_full_screening": 3,
+              "follow_up_prompts": [
+                "What makes it hard to enjoy things?",
+                "Do you have support?"
+              ]
+            },
+            {
+              "question_id": "Q4.5",
+              "text": "Do you feel you have adequate emotional support?",
+              "type": "yes_no_detail",
+              "purpose": "Assess emotional support needs",
+              "resource_connection_if_no": "Support groups, therapy, peer support",
+              "follow_up_prompts": [
+                "Who can you talk to when you're stressed?",
+                "Would you like to meet with a social worker?",
+                "Are you interested in joining a support group?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 5,
+          "section_name": "Pregnancy Education and Expectations",
+          "duration_minutes": 6,
+          "objectives": [
+            "Assess pregnancy knowledge",
+            "Provide essential education",
+            "Set realistic expectations"
+          ],
+          "use_plain_language": true,
+          "provide_visual_aids": true,
+          "questions": [
+            {
+              "question_id": "Q5.1",
+              "text": "What do you know about what to expect during pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess baseline knowledge",
+              "tailor_education_to_response": true,
+              "follow_up_prompts": [
+                "Where have you gotten information about pregnancy?",
+                "What questions do you have?",
+                "Would you like information in a specific format (video, handout, app)?"
+              ]
+            },
+            {
+              "question_id": "Q5.2",
+              "text": "Do you know what warning signs to watch for in pregnancy?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure safety awareness",
+              "provide_written_card": true,
+              "critical_education": [
+                "Vaginal bleeding",
+                "Severe headache",
+                "Vision changes",
+                "Severe abdominal pain",
+                "Fever",
+                "Sudden swelling",
+                "Baby not moving (later pregnancy)"
+              ],
+              "follow_up_prompts": [
+                "Do you know who to call if you have these symptoms?",
+                "Here's a card with warning signs and our number to keep."
+              ]
+            },
+            {
+              "question_id": "Q5.3",
+              "text": "What are your biggest questions or worries about pregnancy and having a baby?",
+              "type": "open_ended",
+              "purpose": "Address specific concerns and fears",
+              "common_concerns": ["Labor pain", "Affording baby items", "Taking care of baby", "Health of baby"],
+              "follow_up_prompts": [
+                "Let's talk about that.",
+                "We have resources that can help with that."
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 6,
+          "section_name": "Nutrition and WIC Connection",
+          "duration_minutes": 5,
+          "objectives": [
+            "Assess nutritional status and access",
+            "Enroll in WIC if eligible",
+            "Provide nutrition education"
+          ],
+          "questions": [
+            {
+              "question_id": "Q6.1",
+              "text": "Tell me about what you typically eat in a day.",
+              "type": "open_ended_24hr_recall",
+              "purpose": "Assess dietary intake",
+              "data_mapping": ["behavioral.nutrition_awareness"],
+              "identify_deficiencies": true,
+              "follow_up_prompts": [
+                "Are you able to eat regular meals?",
+                "What makes it hard to eat healthy?",
+                "Do you have a way to cook food?"
+              ]
+            },
+            {
+              "question_id": "Q6.2",
+              "text": "Have you heard of WIC - the nutrition program for pregnant women and babies?",
+              "type": "yes_no_enrolled",
+              "purpose": "WIC enrollment",
+              "enroll_today_if_eligible": true,
+              "eligibility": "Income ≤185% federal poverty level, pregnant, postpartum, or children <5",
+              "follow_up_prompts": [
+                "Would you like help signing up today?",
+                "WIC provides free healthy food, nutrition education, and breastfeeding support.",
+                "We can help you apply right now."
+              ]
+            },
+            {
+              "question_id": "Q6.3",
+              "text": "Do you have any cravings for non-food items like ice, dirt, or laundry starch?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for pica and anemia",
+              "check_for_anemia_if_yes": true,
+              "follow_up_prompts": [
+                "How often does this happen?",
+                "Let's check your iron levels.",
+                "This can be a sign you need more iron."
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 7,
+          "section_name": "Birth Planning and Postpartum Preparation",
+          "duration_minutes": 5,
+          "objectives": [
+            "Begin practical planning for delivery",
+            "Assess postpartum support and resources",
+            "Connect to baby supplies and equipment"
+          ],
+          "questions": [
+            {
+              "question_id": "Q7.1",
+              "text": "Where are you planning to have your baby?",
+              "type": "open_ended",
+              "purpose": "Ensure delivery location is established",
+              "ensure_medicaid_accepted": true,
+              "follow_up_prompts": [
+                "Does your insurance work there?",
+                "Do you know how to get there?",
+                "Would you like to tour the facility?"
+              ]
+            },
+            {
+              "question_id": "Q7.2",
+              "text": "Who will be with you when you have the baby?",
+              "type": "open_ended",
+              "purpose": "Assess labor support",
+              "connect_to_doula_if_no_support": true,
+              "follow_up_prompts": [
+                "Is there someone who can take you to the hospital?",
+                "Would you like information about free doula services?",
+                "Do you have someone to help after the baby is born?"
+              ]
+            },
+            {
+              "question_id": "Q7.3",
+              "text": "Do you have the things you'll need for the baby - like a car seat, crib, diapers, clothes?",
+              "type": "yes_no_itemized",
+              "purpose": "Assess preparation and connect to resources",
+              "critical_items": ["Car seat", "Safe sleep space", "Diapers", "Formula if not breastfeeding"],
+              "resource_connection": "Baby pantries, community organizations, hospital programs",
+              "follow_up_prompts": [
+                "What do you still need?",
+                "We have connections to programs that provide baby items.",
+                "Would you like help getting these things?"
+              ]
+            },
+            {
+              "question_id": "Q7.4",
+              "text": "Are you planning to breastfeed?",
+              "type": "yes_no_unsure",
+              "purpose": "Assess feeding intentions and provide support",
+              "lactation_support_if_yes": true,
+              "formula_assistance_if_no": true,
+              "follow_up_prompts": [
+                "What do you know about breastfeeding?",
+                "We have lactation support available.",
+                "If you need formula, WIC can help with that."
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 8,
+          "section_name": "Resource Connection and Case Management",
+          "duration_minutes": 7,
+          "objectives": [
+            "Connect to all needed resources TODAY",
+            "Assign case manager or patient navigator",
+            "Create action plan with patient"
+          ],
+          "immediate_actions": [
+            "Complete insurance applications",
+            "Complete WIC application",
+            "Provide resource referrals",
+            "Schedule next appointment",
+            "Provide contact information"
+          ],
+          "questions": [
+            {
+              "question_id": "Q8.1",
+              "text": "Let's talk about what help we can connect you with today. What would be most helpful?",
+              "type": "needs_prioritization",
+              "purpose": "Prioritize resource connections",
+              "address_top_3_needs_today": true,
+              "resources_available": [
+                "Medicaid enrollment",
+                "WIC enrollment",
+                "Food assistance",
+                "Housing assistance",
+                "Transportation programs",
+                "Utility assistance",
+                "Mental health services",
+                "Substance abuse treatment",
+                "Domestic violence services",
+                "Childcare assistance",
+                "Job training programs",
+                "Legal aid"
+              ]
+            },
+            {
+              "question_id": "Q8.2",
+              "text": "Would you like to work with a case manager who can help you navigate resources and appointments?",
+              "type": "yes_no",
+              "purpose": "Assign case management",
+              "strongly_recommend": true,
+              "case_manager_responsibilities": [
+                "Help with insurance and benefits",
+                "Coordinate appointments",
+                "Connect to community resources",
+                "Provide ongoing support",
+                "Help problem-solve barriers"
+              ]
+            },
+            {
+              "question_id": "Q8.3",
+              "text": "What phone number is best to reach you? Do you have reliable phone service?",
+              "type": "contact_information",
+              "purpose": "Establish communication",
+              "provide_phone_if_needed": "Assess if patient needs phone/minutes assistance",
+              "follow_up_prompts": [
+                "Can we text you reminders?",
+                "If we can't reach you, is there someone else we can call?",
+                "Do you check email?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 9,
+          "section_name": "Appointment Planning and Follow-Up",
+          "duration_minutes": 5,
+          "objectives": [
+            "Schedule next appointment",
+            "Remove barriers to attendance",
+            "Set up appointment reminders and support"
+          ],
+          "questions": [
+            {
+              "question_id": "Q9.1",
+              "text": "Let's schedule your next appointment. What days and times work best for you?",
+              "type": "scheduling",
+              "purpose": "Schedule convenient appointment",
+              "offer_flexible_scheduling": true,
+              "follow_up_prompts": [
+                "Do you need a certain time because of work?",
+                "Do you need childcare or can you bring your children?",
+                "Do you need help with transportation?"
+              ]
+            },
+            {
+              "question_id": "Q9.2",
+              "text": "What would help you remember and be able to make it to your appointments?",
+              "type": "open_ended",
+              "purpose": "Identify and address barriers to follow-up",
+              "provide_reminders": "Text, call, mail",
+              "provide_supports": [
+                "Transportation vouchers",
+                "Childcare",
+                "Appointment cards",
+                "Calendar",
+                "Incentives (when available)"
+              ],
+              "follow_up_prompts": [
+                "Would you like text reminders?",
+                "Can we help arrange transportation?",
+                "Can we help with childcare?"
+              ]
+            },
+            {
+              "question_id": "Q9.3",
+              "text": "Do you understand everything we talked about today? Do you have any other questions?",
+              "type": "teach_back",
+              "purpose": "Ensure understanding",
+              "provide_written_summary": true,
+              "follow_up_prompts": [
+                "Can you tell me back what you'll do before next time?",
+                "Here's a summary of what we discussed and your next steps.",
+                "Who can you call if you have questions?"
+              ]
+            }
+          ]
+        }
+      ],
+      "red_flag_protocols": {
+        "immediate_referral": [
+          "Homelessness",
+          "Active domestic violence with safety concerns",
+          "Severe mental health crisis",
+          "Active uncontrolled substance use",
+          "Child protective services concerns",
+          "Medical emergency"
+        ],
+        "case_management_required": [
+          "Multiple social determinant needs",
+          "History of missed appointments",
+          "Unstable housing",
+          "Severe financial hardship",
+          "Limited social support",
+          "Mental health or substance use concerns"
+        ]
+      },
+      "resources_to_provide_today": [
+        "Insurance/Medicaid application assistance",
+        "WIC application",
+        "Prenatal vitamins (samples to take home)",
+        "Warning signs card with clinic phone number",
+        "Transportation vouchers",
+        "Food pantry referrals",
+        "Community resource list",
+        "Case manager contact information",
+        "Appointment reminder card",
+        "Baby item resources list"
+      ],
+      "follow_up_protocols": {
+        "missed_appointment_protocol": [
+          "Call same day",
+          "Text if no answer",
+          "Call alternate contact",
+          "Send letter",
+          "Case manager outreach",
+          "Reschedule ASAP with barrier removal"
+        ],
+        "care_coordination": [
+          "Weekly case manager check-ins for high-need patients",
+          "Coordinate with social services",
+          "Connect to home visiting programs",
+          "Ensure transportation for appointments",
+          "Address barriers proactively"
+        ]
+      }
+    },
+    {
+      "protocol_id": "PROTO_005",
+      "name": "Routine/Standard Prenatal Care Protocol",
+      "description": "Protocol for low-risk pregnancies with good health access and preparation. Emphasizes wellness, education, and routine monitoring.",
+      "target_personas": ["Emily", "Isabelle"],
+      "target_criteria": {
+        "characteristics": [
+          "Low-risk pregnancy",
+          "Good health insurance",
+          "Higher education level",
+          "Stable housing and income",
+          "Good healthcare access",
+          "Pregnancy readiness/planning"
+        ]
+      },
+      "interview_structure": {
+        "duration_minutes": 30,
+        "sections": 6,
+        "follow_up_frequency": "Every 4 weeks until 28 weeks, every 2 weeks until 36 weeks, then weekly"
+      },
+      "sections": [
+        {
+          "section_id": 1,
+          "section_name": "Introduction and Pregnancy Planning",
+          "duration_minutes": 5,
+          "objectives": [
+            "Confirm pregnancy and dating",
+            "Assess pregnancy intentions and readiness",
+            "Establish care goals"
+          ],
+          "questions": [
+            {
+              "question_id": "Q1.1",
+              "text": "Congratulations! How are you feeling about your pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess emotional response to pregnancy",
+              "follow_up_prompts": [
+                "Was this pregnancy planned?",
+                "How is your partner/family responding?",
+                "What are you most excited about? Any concerns?"
+              ]
+            },
+            {
+              "question_id": "Q1.2",
+              "text": "Have you been taking prenatal vitamins? How long?",
+              "type": "yes_no_duration",
+              "purpose": "Assess preconception care",
+              "data_mapping": ["pregnancy_intentions.preconception_care"],
+              "follow_up_prompts": [
+                "What brand/type are you taking?",
+                "Are you getting at least 400-800 mcg of folic acid?",
+                "Any trouble tolerating them?"
+              ]
+            },
+            {
+              "question_id": "Q1.3",
+              "text": "When was your last menstrual period? How regular are your cycles?",
+              "type": "date_and_detail",
+              "purpose": "Determine gestational age",
+              "follow_up_prompts": [
+                "When did you get a positive pregnancy test?",
+                "Do you know when you might have conceived?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 2,
+          "section_name": "Medical and Obstetric History",
+          "duration_minutes": 7,
+          "objectives": [
+            "Comprehensive health history",
+            "Identify any risk factors",
+            "Medication review"
+          ],
+          "questions": [
+            {
+              "question_id": "Q2.1",
+              "text": "Do you have any chronic health conditions or ongoing health concerns?",
+              "type": "yes_no_detail",
+              "purpose": "Identify pre-existing conditions",
+              "data_mapping": ["health_profile.reported_health_conditions"],
+              "follow_up_prompts": [
+                "How is this condition managed?",
+                "Are you seeing a specialist?",
+                "Has your provider cleared your medications for pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q2.2",
+              "text": "Have you been pregnant before? If so, tell me about those pregnancies.",
+              "type": "pregnancy_history",
+              "purpose": "Obtain obstetric history",
+              "data_mapping": ["pregnancy_intentions.gravida", "pregnancy_intentions.para", "pregnancy_intentions.previous_complications"],
+              "follow_up_prompts": [
+                "Any complications?",
+                "How did you deliver?",
+                "How were your recoveries?",
+                "Did you breastfeed?"
+              ]
+            },
+            {
+              "question_id": "Q2.3",
+              "text": "Are you taking any medications, including over-the-counter or supplements?",
+              "type": "medication_list",
+              "purpose": "Medication reconciliation",
+              "data_mapping": ["health_profile.medication_history"],
+              "follow_up_prompts": [
+                "Have you discussed these with your provider?",
+                "Any medications you stopped when you found out you were pregnant?"
+              ]
+            },
+            {
+              "question_id": "Q2.4",
+              "text": "Is there any family history of genetic conditions, birth defects, or pregnancy complications?",
+              "type": "family_history",
+              "purpose": "Assess genetic and familial risks",
+              "data_mapping": ["health_profile.family_medical_history"],
+              "genetic_counseling_if_yes": true,
+              "follow_up_prompts": [
+                "In your family or your partner's family?",
+                "What condition?",
+                "Have you considered genetic testing or counseling?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 3,
+          "section_name": "Lifestyle and Wellness",
+          "duration_minutes": 5,
+          "objectives": [
+            "Assess healthy lifestyle behaviors",
+            "Screen for modifiable risks",
+            "Provide wellness guidance"
+          ],
+          "questions": [
+            {
+              "question_id": "Q3.1",
+              "text": "Tell me about your typical diet and nutrition habits.",
+              "type": "open_ended",
+              "purpose": "Assess nutritional status",
+              "data_mapping": ["behavioral.nutrition_awareness"],
+              "provide_pregnancy_nutrition_guidance": true,
+              "follow_up_prompts": [
+                "Are you following any special diet?",
+                "Any food aversions or cravings?",
+                "Would you like to meet with a dietitian?"
+              ]
+            },
+            {
+              "question_id": "Q3.2",
+              "text": "What does your exercise routine look like?",
+              "type": "open_ended",
+              "purpose": "Assess physical activity",
+              "data_mapping": ["behavioral.physical_activity_level"],
+              "provide_pregnancy_exercise_guidance": true,
+              "follow_up_prompts": [
+                "What types of exercise do you enjoy?",
+                "Are you planning to continue during pregnancy?",
+                "Do you have questions about safe exercise in pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q3.3",
+              "text": "Do you smoke, drink alcohol, or use any recreational substances?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for substance use",
+              "data_mapping": ["behavioral.smoking_status", "behavioral.alcohol_consumption", "behavioral.substance_use"],
+              "counseling_required_if_yes": true,
+              "follow_up_prompts": [
+                "Have you stopped since finding out you're pregnant?",
+                "Do you need support to quit?",
+                "Do you understand the risks in pregnancy?"
+              ]
+            },
+            {
+              "question_id": "Q3.4",
+              "text": "What do you do for work? Are there any occupational exposures we should know about?",
+              "type": "occupational_history",
+              "purpose": "Identify occupational hazards",
+              "assess_for": ["Heavy lifting", "Prolonged standing", "Chemical exposures", "Radiation", "Infectious diseases"],
+              "follow_up_prompts": [
+                "Do you work with chemicals, radiation, or infectious materials?",
+                "Can we provide a letter for workplace accommodations if needed?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 4,
+          "section_name": "Psychosocial Well-Being",
+          "duration_minutes": 5,
+          "objectives": [
+            "Screen for mental health concerns",
+            "Assess support system",
+            "Identify stressors"
+          ],
+          "questions": [
+            {
+              "question_id": "Q4.1",
+              "text": "How are you feeling emotionally? Any concerns about mood or anxiety?",
+              "type": "open_ended",
+              "purpose": "Mental health screening",
+              "data_mapping": ["psychosocial.mental_health_status"],
+              "screening_tool_if_concerned": "PHQ-2 or EPDS",
+              "follow_up_prompts": [
+                "Any history of depression or anxiety?",
+                "How are you coping with stress?",
+                "Do you have adequate emotional support?"
+              ]
+            },
+            {
+              "question_id": "Q4.2",
+              "text": "Tell me about your support system. Who is helping you through this pregnancy?",
+              "type": "open_ended",
+              "purpose": "Assess social support",
+              "data_mapping": ["psychosocial.social_support", "pregnancy_intentions.partner_support_for_pregnancy"],
+              "follow_up_prompts": [
+                "Is your partner involved and supportive?",
+                "Do you have family or friends nearby?",
+                "Are there any relationship concerns?"
+              ]
+            },
+            {
+              "question_id": "Q4.3",
+              "text": "Do you feel safe in your relationship and home?",
+              "type": "yes_no_detail",
+              "purpose": "Screen for intimate partner violence",
+              "sensitive": true,
+              "mandatory_protocol_if_no": true,
+              "follow_up_prompts": [
+                "Has anyone hurt you or made you feel unsafe?",
+                "Would you like to talk to someone privately about this?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 5,
+          "section_name": "Prenatal Testing and Education",
+          "duration_minutes": 5,
+          "objectives": [
+            "Discuss prenatal testing options",
+            "Provide pregnancy education",
+            "Address questions and concerns"
+          ],
+          "questions": [
+            {
+              "question_id": "Q5.1",
+              "text": "Have you thought about prenatal genetic screening and testing options?",
+              "type": "yes_no_detail",
+              "purpose": "Discuss genetic screening",
+              "provide_information_about": ["First trimester screening", "NIPT/cell-free DNA", "Quad screen", "Amniocentesis", "Anatomy ultrasound"],
+              "follow_up_prompts": [
+                "What do you know about these tests?",
+                "Do you have questions about what they screen for?",
+                "What are your preferences for testing?"
+              ]
+            },
+            {
+              "question_id": "Q5.2",
+              "text": "What questions do you have about pregnancy, labor, and delivery?",
+              "type": "open_ended",
+              "purpose": "Address information needs",
+              "provide_resources": ["Books", "Apps", "Websites", "Classes"],
+              "follow_up_prompts": [
+                "Have you been reading or learning about pregnancy?",
+                "Are you interested in childbirth education classes?",
+                "What topics are you most interested in?"
+              ]
+            },
+            {
+              "question_id": "Q5.3",
+              "text": "Do you have preferences for your birth experience?",
+              "type": "open_ended",
+              "purpose": "Begin birth planning discussion",
+              "topics_to_cover": ["Pain management", "Labor support", "Delivery location", "Immediate postpartum preferences"],
+              "follow_up_prompts": [
+                "What's most important to you?",
+                "Have you considered pain management options?",
+                "Would you like to create a birth plan?"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": 6,
+          "section_name": "Care Planning and Next Steps",
+          "duration_minutes": 3,
+          "objectives": [
+            "Outline prenatal care schedule",
+            "Provide warning signs education",
+            "Schedule follow-up"
+          ],
+          "questions": [
+            {
+              "question_id": "Q6.1",
+              "text": "Do you understand the schedule for prenatal visits?",
+              "type": "yes_no_detail",
+              "purpose": "Ensure understanding of care plan",
+              "provide_schedule": "Monthly until 28 weeks, bi-weekly until 36 weeks, then weekly",
+              "follow_up_prompts": [
+                "Do these times work with your schedule?",
+                "Any barriers to attending regular appointments?"
+              ]
+            },
+            {
+              "question_id": "Q6.2",
+              "text": "Do you know what warning signs to watch for and when to call?",
+              "type": "yes_no_detail",
+              "purpose": "Safety education",
+              "provide_written_list": true,
+              "warning_signs": [
+                "Vaginal bleeding",
+                "Severe abdominal pain",
+                "Severe headache",
+                "Vision changes",
+                "Sudden swelling",
+                "Fever >100.4°F",
+                "Painful urination",
+                "Fluid leaking",
+                "Decreased fetal movement (after 28 weeks)"
+              ],
+              "follow_up_prompts": [
+                "Do you have our after-hours number?",
+                "Do you know how to reach us with concerns?"
+              ]
+            },
+            {
+              "question_id": "Q6.3",
+              "text": "What other questions or concerns do you have?",
+              "type": "open_ended",
+              "purpose": "Ensure all concerns addressed",
+              "follow_up_prompts": [
+                "Is there anything we haven't covered that you'd like to discuss?"
+              ]
+            }
+          ]
+        }
+      ],
+      "red_flag_protocols": {
+        "specialist_referral": [
+          "Advanced maternal age (≥35) with desire for additional counseling",
+          "Family history of genetic conditions",
+          "Recurrent pregnancy loss",
+          "Mental health concerns",
+          "High-risk occupational exposures"
+        ]
+      },
+      "resources_to_provide": [
+        "Prenatal vitamin prescription or recommendations",
+        "Pregnancy warning signs handout",
+        "Prenatal care schedule",
+        "Childbirth education class information",
+        "Pregnancy apps and website recommendations",
+        "Genetic screening information",
+        "24/7 nurse line number",
+        "Provider contact information"
+      ],
+      "education_topics_by_trimester": {
+        "first_trimester": [
+          "Nutrition and prenatal vitamins",
+          "Common pregnancy symptoms",
+          "Prenatal testing options",
+          "Lifestyle modifications",
+          "Warning signs",
+          "Miscarriage information"
+        ],
+        "second_trimester": [
+          "Anatomy ultrasound",
+          "Fetal movement",
+          "Weight gain and nutrition",
+          "Exercise in pregnancy",
+          "Childbirth education classes",
+          "Birth planning"
+        ],
+        "third_trimester": [
+          "Labor signs",
+          "Pain management options",
+          "Breastfeeding preparation",
+          "Infant care basics",
+          "Postpartum planning",
+          "Pediatrician selection",
+          "Car seat safety"
+        ]
+      }
+    }
+  ]
+}
