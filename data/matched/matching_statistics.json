@@ -1,37 +1,37 @@
 {
   "total_matches": 10,
   "compatibility_scores": {
-    "average": 0.80495,
-    "median": 0.82475,
-    "std_dev": 0.09590078206146184,
-    "min": 0.576,
-    "max": 0.958,
-    "percentile_25": 0.7671250000000001,
-    "percentile_75": 0.8460625
+    "average": 0.853817190129982,
+    "median": 0.886375,
+    "std_dev": 0.09386596325804486,
+    "min": 0.614921901299822,
+    "max": 0.946,
+    "percentile_25": 0.810875,
+    "percentile_75": 0.9255625
   },
   "quality_distribution": {
-    "excellent": 3,
-    "excellent_pct": 30.0,
-    "good": 4,
-    "good_pct": 40.0,
-    "fair": 2,
-    "fair_pct": 20.0,
+    "excellent": 6,
+    "excellent_pct": 60.0,
+    "good": 3,
+    "good_pct": 30.0,
+    "fair": 0,
+    "fair_pct": 0.0,
     "poor": 1,
     "poor_pct": 10.0
   },
   "age_differences": {
-    "average": 3.6,
-    "median": 2.5,
-    "max": 16,
-    "within_2_years": 5,
-    "within_2_years_pct": 50.0,
+    "average": 2.0,
+    "median": 1.0,
+    "max": 10,
+    "within_2_years": 8,
+    "within_2_years_pct": 80.0,
     "within_5_years": 9,
     "within_5_years_pct": 90.0
   },
   "score_breakdown_averages": {
-    "age": 0.7324999999999999,
-    "education": 0.8559999999999999,
-    "income": 0.925,
+    "age": 0.8372304753249555,
+    "education": 0.8739999999999999,
+    "income": 0.9475000000000001,
     "marital_status": 0.8800000000000001,
     "occupation": 0.7
   }

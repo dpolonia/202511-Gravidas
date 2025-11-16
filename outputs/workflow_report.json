@@ -1,47 +1,27 @@
 {
   "workflow": "Gravidas Synthetic Interview Pipeline",
-  "timestamp": "2025-11-14T18:18:15.877898",
-  "execution_time_seconds": 1273.042415857315,
-  "total_stages": 6,
-  "successful_stages": 6,
+  "timestamp": "2025-11-16T21:51:14.743405",
+  "execution_time_seconds": 30.212449312210083,
+  "total_stages": 2,
+  "successful_stages": 2,
   "failed_stages": 0,
   "overall_status": "SUCCESS",
   "stages": {
     "generate_personas": {
       "success": true,
-      "message": "Completed in 29.04s",
-      "timestamp": "2025-11-14T17:57:31.875324"
-    },
-    "generate_health_records": {
-      "success": true,
-      "message": "Completed in 11.44s",
-      "timestamp": "2025-11-14T17:57:43.314352"
+      "message": "Completed in 28.68s",
+      "timestamp": "2025-11-16T21:51:13.208918"
     },
     "match_personas_records": {
       "success": true,
-      "message": "Completed in 1.32s",
-      "timestamp": "2025-11-14T17:57:44.638440"
-    },
-    "conduct_interviews": {
-      "success": true,
-      "message": "Completed in 1227.09s",
-      "timestamp": "2025-11-14T18:18:11.731257"
-    },
-    "analyze_interviews": {
-      "success": true,
-      "message": "Completed in 3.77s",
-      "timestamp": "2025-11-14T18:18:15.497875"
-    },
-    "validate_implementation": {
-      "success": true,
-      "message": "Completed in 0.38s",
-      "timestamp": "2025-11-14T18:18:15.876737"
+      "message": "Completed in 1.53s",
+      "timestamp": "2025-11-16T21:51:14.743118"
     }
   },
   "configuration": {
     "ai_provider": "anthropic",
     "ai_model": "claude-haiku-4-5",
-    "num_personas": 10,
-    "num_health_records": 10
+    "num_personas": 20,
+    "num_health_records": 100
   }
 }

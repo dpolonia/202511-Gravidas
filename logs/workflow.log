@@ -1296,3 +1296,125 @@
 [INFO] 2025-11-14 18:18:15,877 - ================================================================================
 
 [INFO] 2025-11-14 18:18:15,878 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-16 21:50:17,986 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-16 21:50:17,987 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-16 21:50:17,987 - 
+================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+
+[ERROR] 2025-11-16 21:50:17,987 - ❌ Stage 'persona_generation' not found
+[ERROR] 2025-11-16 21:50:17,987 - ❌ Stage 'persona_matching' not found
+[INFO] 2025-11-16 21:50:17,987 - 
+================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+[INFO] 2025-11-16 21:50:17,987 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-16 21:50:17,987 - 🕐 Execution Time: 0.00 seconds
+[INFO] 2025-11-16 21:50:17,987 - 📈 Stages: 0/0 successful
+[INFO] 2025-11-16 21:50:17,987 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-16 21:50:17,987 - 🧠 AI Model: claude-haiku-4-5
+[INFO] 2025-11-16 21:50:17,987 - 👥 Personas Generated: 20
+[INFO] 2025-11-16 21:50:17,987 - 📋 Health Records: 100
+[INFO] 2025-11-16 21:50:17,987 - 
+📝 Stage Results:
+[INFO] 2025-11-16 21:50:17,987 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-16 21:50:17,987 - ================================================================================
+
+[INFO] 2025-11-16 21:50:17,988 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-16 21:50:31,995 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-16 21:50:31,995 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-16 21:50:31,995 - 
+================================================================================
+[INFO] 2025-11-16 21:50:31,995 - 🚀 EXECUTING GRAVIDAS WORKFLOW (1 stages)
+[INFO] 2025-11-16 21:50:31,995 - ================================================================================
+
+[ERROR] 2025-11-16 21:50:31,996 - ❌ Stage 'help' not found
+[INFO] 2025-11-16 21:50:31,996 - 
+================================================================================
+[INFO] 2025-11-16 21:50:31,996 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-16 21:50:31,996 - ================================================================================
+[INFO] 2025-11-16 21:50:31,996 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-16 21:50:31,996 - 🕐 Execution Time: 0.00 seconds
+[INFO] 2025-11-16 21:50:31,996 - 📈 Stages: 0/0 successful
+[INFO] 2025-11-16 21:50:31,996 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-16 21:50:31,996 - 🧠 AI Model: claude-sonnet-4-5-20250929
+[INFO] 2025-11-16 21:50:31,996 - 👥 Personas Generated: 100
+[INFO] 2025-11-16 21:50:31,996 - 📋 Health Records: 100
+[INFO] 2025-11-16 21:50:31,996 - 
+📝 Stage Results:
+[INFO] 2025-11-16 21:50:31,996 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-16 21:50:31,996 - ================================================================================
+
+[INFO] 2025-11-16 21:50:31,996 - 📄 Report saved to: outputs/workflow_report.json
+[INFO] 2025-11-16 21:50:44,530 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-16 21:50:44,530 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-16 21:50:44,530 - 
+================================================================================
+[INFO] 2025-11-16 21:50:44,530 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-16 21:50:44,530 - ================================================================================
+
+[INFO] 2025-11-16 21:50:44,530 - 
+================================================================================
+[INFO] 2025-11-16 21:50:44,530 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-16 21:50:44,530 - ================================================================================
+[INFO] 2025-11-16 21:50:44,530 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-16 21:50:44,530 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-16 21:50:44,530 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-16 21:50:44,530 - 
+[INFO] 2025-11-16 21:50:44,530 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 20 --output data/personas
+
+[INFO] 2025-11-16 21:51:13,208 - 
+✅ Stage 'generate_personas' completed successfully (28.68s)
+
+[INFO] 2025-11-16 21:51:13,208 - 
+================================================================================
+[INFO] 2025-11-16 21:51:13,208 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-16 21:51:13,209 - ================================================================================
+[INFO] 2025-11-16 21:51:13,209 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-16 21:51:13,209 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-16 21:51:13,209 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-16 21:51:13,209 - 
+[INFO] 2025-11-16 21:51:13,209 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] 2025-11-16 21:51:14,743 - 
+✅ Stage 'match_personas_records' completed successfully (1.53s)
+
+[INFO] 2025-11-16 21:51:14,743 - 
+================================================================================
+[INFO] 2025-11-16 21:51:14,743 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-16 21:51:14,743 - ================================================================================
+[INFO] 2025-11-16 21:51:14,743 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-16 21:51:14,743 - 🕐 Execution Time: 30.21 seconds
+[INFO] 2025-11-16 21:51:14,743 - 📈 Stages: 2/2 successful
+[INFO] 2025-11-16 21:51:14,743 - 🤖 AI Provider: anthropic
+[INFO] 2025-11-16 21:51:14,743 - 🧠 AI Model: claude-haiku-4-5
+[INFO] 2025-11-16 21:51:14,743 - 👥 Personas Generated: 20
+[INFO] 2025-11-16 21:51:14,743 - 📋 Health Records: 100
+[INFO] 2025-11-16 21:51:14,743 - 
+📝 Stage Results:
+[INFO] 2025-11-16 21:51:14,743 -    ✅ generate_personas: Completed in 28.68s
+[INFO] 2025-11-16 21:51:14,743 -    ✅ match_personas_records: Completed in 1.53s
+[INFO] 2025-11-16 21:51:14,743 - 
+🎯 Overall Status: SUCCESS
+[INFO] 2025-11-16 21:51:14,743 - ================================================================================
+
+[INFO] 2025-11-16 21:51:14,743 - 📄 Report saved to: outputs/workflow_report.json
