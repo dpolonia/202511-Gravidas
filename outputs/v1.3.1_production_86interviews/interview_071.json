@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T13:39:39.662354"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello, thank you for having me. I'm glad to participate in this interview. Please go ahead with your questions.",
+      "timestamp": "2025-11-17T13:39:41.099353"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T13:39:41.099366"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Sure! As I mentioned, I'm 34 years old and I live in suburban Chicago with my husband. I run a small business, which keeps me quite busy. I have a bachelor's degree, and I've always been focused on maintaining a healthy lifestyle. My husband and I are currently trying to conceive, so I've been paying extra attention to my health and well-being, including taking prenatal vitamins for about a year now. I also exercise regularly to stay fit. Overall, I\u2019d say I\u2019m in a good place, but I\u2019m definitely looking forward to starting a family.",
+      "timestamp": "2025-11-17T13:39:44.126508"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T13:39:44.627447"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I haven't been pregnant yet. My husband and I are actively trying to conceive, so we're hopeful that it will happen soon. I've been tracking my cycle and paying attention to my body, but so far, it hasn't worked out. I\u2019ve been taking prenatal vitamins to prepare my body for pregnancy and to support any future pregnancies. Since this is our first attempt, it's been quite an emotional journey, filled with excitement and a bit of anxiety. How about you? What kind of experiences have you heard about from other women trying to conceive?",
+      "timestamp": "2025-11-17T13:39:47.751794"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T13:39:48.252271"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I haven't sought formal prenatal care yet. However, I\u2019ve been proactive about my health in preparation for pregnancy. I\u2019ve been doing a lot of research on prenatal care and what to expect once I do get pregnant. I'm looking forward to finding a healthcare provider who aligns with my values and supports a healthy pregnancy. I understand that prenatal care is crucial for both the mother and the baby, and I want to ensure that I\u2019m well-prepared. \n\nOnce I get that positive pregnancy test, I plan to schedule an appointment right away to start that journey. Can I ask, what do you think are the most important aspects of prenatal care that I should focus on?",
+      "timestamp": "2025-11-17T13:39:52.194356"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T13:39:52.694547"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't officially started prenatal care yet, I don't have a specific healthcare provider at the moment. However, I have been researching various obstetricians and midwives in my area. I'm looking for someone who is not only knowledgeable but also approachable and supportive. I think having a good relationship with a healthcare provider is essential, especially when it comes to addressing any concerns I may have during my pregnancy journey.\n\nI want to feel comfortable asking questions and discussing any anxieties I might have. I've heard from friends that finding a provider who listens and respects your preferences can make a big difference in the overall experience. Once I find the right fit, I hope to build a strong relationship with them throughout my pregnancy. \n\nWhat qualities do you think are most important in a healthcare provider for someone who is trying to conceive?",
+      "timestamp": "2025-11-17T13:39:56.978983"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T13:39:57.479136"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't had any prenatal appointments yet, I can't speak from personal experience. However, I\u2019ve done quite a bit of research on what to expect. From what I\u2019ve learned, typical prenatal visits usually start off monthly during the first trimester and then become more frequent as the pregnancy progresses. \n\nI imagine that during these visits, there would be routine screenings, discussions about my health and any symptoms I might be experiencing, and monitoring the baby\u2019s development. I\u2019d expect to discuss my diet, exercise, and any prenatal vitamins or supplements I should be taking. \n\nI\u2019ve also read that it\u2019s a time to ask questions, whether it's about pregnancy symptoms or any concerns I might have. I think I\u2019d want to discuss my lifestyle choices, like my smoking habit, and how to make healthier choices as I prepare for pregnancy. \n\nIt would be important for me to feel heard, so I\u2019d hope to have a provider who encourages open dialogue. Once I actually start my appointments, I\u2019ll be able to share more about my experiences. Do you have insights on how to make the most out of prenatal appointments?",
+      "timestamp": "2025-11-17T13:40:04.048147"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T13:40:04.548261"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I haven't encountered any health concerns or complications related to pregnancy. However, I am aware that some women can face various challenges during their pregnancies, and I've been educating myself on potential complications and how to manage them. \n\nI know that pre-existing conditions or lifestyle choices can play a significant role in pregnancy health, which is why I've been focused on maintaining a healthy lifestyle and addressing any potential risks, like my smoking habit. I'm also aware that stress and mental health can impact pregnancy, so I've been working on strategies to manage anxiety during this trying time. \n\nIf I do become pregnant, I plan to be very proactive about discussing any concerns with my healthcare provider to ensure a healthy pregnancy. If you have any specific concerns or common complications that I should be aware of as I prepare for this journey, I\u2019d love to hear your insights.",
+      "timestamp": "2025-11-17T13:40:09.267066"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T13:40:09.767219"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019ve been taking prenatal vitamins for about a year now as part of my preconception care. I chose a brand that includes essential nutrients, such as folic acid, iron, and DHA, which I understand are important for supporting a healthy pregnancy and fetal development. I haven\u2019t been prescribed any other medications, as I don\u2019t have any chronic conditions or health issues that require treatment. \n\nHowever, I do plan to discuss my prenatal vitamins with my healthcare provider once I become pregnant to ensure that I'm taking the right supplements for my specific needs. Additionally, I\u2019m also considering the possibility of incorporating other supplements or dietary changes based on their recommendations. \n\nDo you have any suggestions for specific vitamins or dietary supplements that I might want to consider as I prepare for pregnancy?",
+      "timestamp": "2025-11-17T13:40:15.058897"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T13:40:15.559157"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I can\u2019t speak from personal experience about diet and nutrition during pregnancy. However, I\u2019ve done quite a bit of research and have been focusing on my diet in preparation for conception. I believe that maintaining a balanced and nutritious diet is crucial for overall health, especially when trying to conceive.\n\nCurrently, I try to eat a variety of whole foods, including plenty of fruits and vegetables, whole grains, lean proteins, and healthy fats. I\u2019m also mindful of getting enough calcium and iron, as I know these nutrients are important for pregnancy. I\u2019ve been incorporating foods like leafy greens, nuts, seeds, and lean meats into my meals. \n\nI\u2019ve read that staying hydrated is also essential, so I make sure to drink plenty of water throughout the day. Once I become pregnant, I plan to consult with my healthcare provider about my diet and any specific nutritional needs I might have during pregnancy. \n\nI\u2019m also aware that there are certain foods to avoid during pregnancy, such as unpasteurized dairy and high-mercury fish, so I\u2019ve been trying to educate myself on those guidelines as well. \n\nWhat dietary recommendations do you typically suggest for women who are trying to conceive or who are newly pregnant? Any tips for ensuring I\u2019m getting the right nutrients?",
+      "timestamp": "2025-11-17T13:40:23.375273"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T13:40:23.875439"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I can\u2019t speak to the emotional experiences that come with pregnancy. However, I can share that this journey of trying to conceive has been quite a rollercoaster of emotions for me. There are moments of excitement and hope, especially when I think about the possibility of starting a family. But there\u2019s also a fair amount of anxiety and uncertainty, especially since it hasn\u2019t happened yet. \n\nI\u2019ve been trying to manage my stress and anxiety through regular exercise, mindfulness practices, and talking with my husband about how I\u2019m feeling. It\u2019s important for me to keep communication open, as I know that emotional health plays a significant role in overall well-being. \n\nI also try to connect with friends who have gone through similar experiences to share our feelings and support one another. I understand that the emotional aspects can be quite intense once pregnancy occurs, so I'm preparing myself for that possibility. \n\nIf you have any insights on how to navigate emotional well-being during pregnancy or resources that might be helpful, I would greatly appreciate it.",
+      "timestamp": "2025-11-17T13:40:29.160014"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T13:40:29.660190"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven\u2019t been pregnant yet, I can\u2019t speak to the support I would receive during a pregnancy. However, I do have a strong support network that I rely on while trying to conceive. My husband is my biggest supporter; we communicate openly about our feelings and the journey we're on, which helps to alleviate a lot of stress. \n\nI also have close friends who have gone through pregnancy and motherhood, and they\u2019ve been a great source of advice and encouragement. We often share our experiences, and they\u2019ve offered valuable insights into what I can expect during pregnancy. Additionally, I\u2019ve been looking into online communities and support groups for women who are trying to conceive, as I think it could be beneficial to connect with others going through similar experiences.\n\nI believe having a strong support system is crucial, especially during significant life changes like pregnancy. Once I do become pregnant, I plan to lean on my family and friends for emotional support and advice, as well as potentially seeking out prenatal classes or groups to meet other expectant mothers. \n\nHow important do you think it is to have a support network during pregnancy, and what are some ways I can strengthen mine as I prepare for this journey?",
+      "timestamp": "2025-11-17T13:40:36.310473"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T13:40:36.810588"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven\u2019t been pregnant yet, I haven\u2019t created a formal birth plan, but I have definitely thought about my preferences for delivery. I believe that having a plan can help me feel more prepared and empowered during the birthing process. \n\nIdeally, I would like to have a supportive and calm environment for my delivery. I\u2019ve been considering options like a hospital birth with a healthcare provider who respects my wishes, or potentially exploring a birthing center if I feel comfortable. I want to be open to the process, but I also value the importance of having a plan in place.\n\nSome preferences I have in mind include wanting to utilize pain management techniques, such as breathing exercises and possibly an epidural, depending on how I feel during labor. I would like my husband to be actively involved in the birthing process, as I think having him there will provide me with comfort and support. \n\nI\u2019m also interested in learning about skin-to-skin contact after delivery and the importance of bonding with the baby right away. I want to ensure that we have a supportive team around us, including nurses and the healthcare provider, who respect our choices and communicate openly.\n\nI understand that flexibility is key during labor and delivery, as things can change quickly, but having a foundation for my preferences can help guide the experience. If you have any advice or resources on creating a birth plan or what to consider when discussing preferences with a healthcare provider, I would love to hear it.",
+      "timestamp": "2025-11-17T13:40:45.348837"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T13:40:45.851882"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019ve been actively seeking out information from a variety of sources to educate myself about pregnancy and childbirth. I started with books that focus on preconception, pregnancy, and childbirth. Some popular titles I've read include \"What to Expect Before You're Expecting\" and \"The Mayo Clinic Guide to a Healthy Pregnancy.\" These resources provide a wealth of information about what to expect at each stage, as well as tips for maintaining health during pregnancy.\n\nI also follow reputable websites, like the American Pregnancy Association and Mayo Clinic, which offer articles and guidelines. They cover topics ranging from fertility and nutrition to prenatal care and labor options. I find that these sites are very helpful because they are research-backed and provide the latest recommendations.\n\nAdditionally, I\u2019ve been watching videos and listening to podcasts that feature discussions with healthcare professionals, as well as personal stories from other women who have gone through pregnancy. Hearing firsthand experiences has been invaluable and gives me different perspectives on what to expect.\n\nSocial media has also been a source of information for me. I follow accounts that focus on maternal health and wellness, and I find that community discussions can be insightful. However, I\u2019m careful to cross-reference the information I find online with trusted sources to ensure accuracy.\n\nLastly, I'm planning to attend prenatal classes when I become pregnant, as I believe that hands-on learning and connecting with others will be beneficial. \n\nWhat other sources of information do you think are valuable for someone preparing for pregnancy and childbirth? Are there any specific resources you would recommend?",
+      "timestamp": "2025-11-17T13:40:53.931296"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T13:40:54.431616"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I haven't had to manage the financial aspects of pregnancy directly, but I have thought about it quite a bit in preparation. My husband and I are both working and have a stable income, which helps us feel more secure as we plan for starting a family.\n\nWe have private health insurance, which covers a significant portion of prenatal care, delivery, and pediatric visits, so I'm relieved about that aspect. However, we are also mindful of the potential costs associated with having a baby, including hospital fees, baby supplies, and childcare. We've started budgeting for these expenses and have been saving specifically for our future family needs.\n\nI\u2019ve done some research on the costs of prenatal care and delivery in our area, and I understand that prices can vary significantly depending on the type of provider and the facility. We're also considering the long-term costs of raising a child, including education and healthcare, so we want to be as prepared as possible.\n\nI think it\u2019s important to have open discussions about finances, so my husband and I talk regularly about our budget and any adjustments we might need to make as we move forward. We\u2019re also looking into setting up a savings account specifically for baby-related expenses.\n\nIf you have any advice on financial planning for pregnancy or resources that could help with budgeting for a family, I would greatly appreciate it. What strategies do you typically suggest for managing the financial aspects of pregnancy and preparing for a new baby?",
+      "timestamp": "2025-11-17T13:41:01.567921"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T13:41:02.068248"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I can't share personal experiences regarding how pregnancy might affect my work or employment situation. However, I\u2019ve certainly thought about it as my husband and I prepare to start a family. \n\nAs a small business owner, I know that pregnancy could bring about various challenges and considerations in terms of managing my business. I\u2019m aware that I may need to plan for maternity leave and how that could impact my operations. It's important to me to ensure that my business can continue to run smoothly during my absence, so I\u2019ve been thinking about how to delegate responsibilities and possibly train someone to help cover my role.\n\nI\u2019m also considering how I might balance my responsibilities as a new mother with my business commitments. I want to create a flexible work environment for myself, which may include adjusting my hours or finding ways to work from home if needed. \n\nAdditionally, I\u2019ve been looking into policies related to maternity leave and benefits, as I want to be informed about my rights and options as a business owner. It\u2019s essential for me to be prepared and to create a supportive work environment that accommodates my growing family.\n\nIf you have any insights on how to navigate work-life balance during pregnancy or resources for business owners, I would love to hear your thoughts. What strategies do you think can help women manage their careers while preparing for a family?",
+      "timestamp": "2025-11-17T13:41:11.667510"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T13:41:12.167800"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Since I haven't been pregnant yet, I haven't made any formal plans for the postpartum period, but I have definitely thought about it. I understand that the time after giving birth can be both beautiful and challenging, and I want to be prepared for the transition to motherhood.\n\nOne of my main focuses is on ensuring that I have a solid support system in place. I plan to rely on my husband for emotional and practical support, and I\u2019ve also discussed with my close friends and family about how they can assist us during that time. I believe having help with household tasks and caring for the baby will be essential, especially in those early weeks.\n\nI\u2019m also aware of the potential physical and emotional challenges that can arise postpartum, such as recovery from childbirth and the risk of postpartum depression. I plan to prioritize self-care and open communication with my healthcare provider about how I\u2019m feeling after delivery. I want to make sure I have access to mental health resources if needed, and I\u2019m considering joining new parent support groups to connect with others who are going through similar experiences.\n\nAdditionally, I\u2019ve been thinking about my recovery and how to prioritize my own health while also caring for a newborn. This includes planning for rest, nutrition, and finding time for myself, even if it\u2019s just short moments of self-care. \n\nOn a practical note, I\u2019ve started to think about things like breastfeeding, creating a comfortable space for feeding, and preparing for any challenges that might arise with that. I want to be as informed as possible about newborn care, so I\u2019m also considering attending postpartum classes or workshops.\n\nIf you have any recommendations for preparing for the postpartum period or resources that could help new mothers navigate this time, I would really appreciate it. What do you think are the most important aspects to consider when planning for life after the baby arrives?",
+      "timestamp": "2025-11-17T13:41:19.460985"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T13:41:19.965183"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 335,
+        "output_tokens": 23,
+        "cost_usd": 3.8100000000000004e-07,
+        "cost_eur": 3.5052000000000004e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 386,
+        "output_tokens": 114,
+        "cost_usd": 6.14e-07,
+        "cost_eur": 5.6488e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 524,
+        "output_tokens": 107,
+        "cost_usd": 7.380000000000001e-07,
+        "cost_eur": 6.789600000000001e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 650,
+        "output_tokens": 140,
+        "cost_usd": 9.3e-07,
+        "cost_eur": 8.556e-07
+      },
+      {
+        "turn": 4,
+        "input_tokens": 812,
+        "output_tokens": 162,
+        "cost_usd": 1.136e-06,
+        "cost_eur": 1.04512e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 999,
+        "output_tokens": 223,
+        "cost_usd": 1.4450000000000001e-06,
+        "cost_eur": 1.3294000000000001e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1239,
+        "output_tokens": 173,
+        "cost_usd": 1.585e-06,
+        "cost_eur": 1.4582e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1426,
+        "output_tokens": 154,
+        "cost_usd": 1.734e-06,
+        "cost_eur": 1.59528e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1597,
+        "output_tokens": 259,
+        "cost_usd": 2.115e-06,
+        "cost_eur": 1.9458e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 1871,
+        "output_tokens": 211,
+        "cost_usd": 2.2930000000000003e-06,
+        "cost_eur": 2.1095600000000003e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2103,
+        "output_tokens": 238,
+        "cost_usd": 2.579e-06,
+        "cost_eur": 2.3726800000000005e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2361,
+        "output_tokens": 294,
+        "cost_usd": 2.949e-06,
+        "cost_eur": 2.71308e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 2674,
+        "output_tokens": 299,
+        "cost_usd": 3.272e-06,
+        "cost_eur": 3.0102400000000003e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 2993,
+        "output_tokens": 289,
+        "cost_usd": 3.571e-06,
+        "cost_eur": 3.2853200000000003e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3298,
+        "output_tokens": 269,
+        "cost_usd": 3.836e-06,
+        "cost_eur": 3.5291200000000004e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 3591,
+        "output_tokens": 364,
+        "cost_usd": 4.3190000000000005e-06,
+        "cost_eur": 3.9734800000000005e-06
+      }
+    ],
+    "total_input_tokens": 26859,
+    "total_output_tokens": 3319,
+    "total_cost_usd": 3.3496999999999995e-05,
+    "total_cost_eur": 3.081724e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T13:39:39.662204",
+    "end_time": "2025-11-17T13:41:19.965228",
+    "duration_seconds": 100.303024
+  }
+}

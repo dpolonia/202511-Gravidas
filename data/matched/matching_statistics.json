@@ -1,38 +1,38 @@
 {
-  "total_matches": 10,
+  "total_matches": 86,
   "compatibility_scores": {
-    "average": 0.853817190129982,
-    "median": 0.886375,
-    "std_dev": 0.09386596325804486,
-    "min": 0.614921901299822,
-    "max": 0.946,
-    "percentile_25": 0.810875,
-    "percentile_75": 0.9255625
+    "average": 0.7574641283068166,
+    "median": 0.8455,
+    "std_dev": 0.17083787600439043,
+    "min": 0.45352912922472094,
+    "max": 0.958,
+    "percentile_25": 0.5575426495971536,
+    "percentile_75": 0.9098125
   },
   "quality_distribution": {
-    "excellent": 6,
-    "excellent_pct": 60.0,
-    "good": 3,
-    "good_pct": 30.0,
-    "fair": 0,
-    "fair_pct": 0.0,
-    "poor": 1,
-    "poor_pct": 10.0
+    "excellent": 42,
+    "excellent_pct": 48.837209302325576,
+    "good": 10,
+    "good_pct": 11.627906976744185,
+    "fair": 1,
+    "fair_pct": 1.1627906976744187,
+    "poor": 33,
+    "poor_pct": 38.372093023255815
   },
   "age_differences": {
-    "average": 2.0,
-    "median": 1.0,
-    "max": 10,
-    "within_2_years": 8,
-    "within_2_years_pct": 80.0,
-    "within_5_years": 9,
-    "within_5_years_pct": 90.0
+    "average": 8.767441860465116,
+    "median": 1.5,
+    "max": 36,
+    "within_2_years": 50,
+    "within_2_years_pct": 58.139534883720934,
+    "within_5_years": 52,
+    "within_5_years_pct": 60.46511627906976
   },
   "score_breakdown_averages": {
-    "age": 0.8372304753249555,
-    "education": 0.8739999999999999,
-    "income": 0.9475000000000001,
-    "marital_status": 0.8800000000000001,
-    "occupation": 0.7
+    "age": 0.6015236928600649,
+    "education": 0.871627906976744,
+    "income": 0.9459302325581394,
+    "marital_status": 0.8709302325581394,
+    "occupation": 0.7000000000000003
   }
 }

@@ -1,0 +1,38 @@
+[INFO] === Synthetic Persona Generation Started ===
+[INFO] Target: 100 personas
+[INFO] Batch size: 50
+[INFO] === Generating 100 Synthetic Personas ===
+[INFO] Initialized Anthropic client with model: claude-3-haiku-20240307
+[INFO] [Batch 1/2] Generating 50 personas...
+[INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] Successfully parsed 41 personas
+[INFO]   ✅ Generated 41 valid personas (total: 41)
+[INFO] [Batch 2/2] Generating 50 personas...
+[INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] Successfully parsed 45 personas
+[INFO]   ✅ Generated 45 valid personas (total: 86)
+[WARNING] Generated 86 personas, target was 100
+[INFO] ✅ Saved 86 personas to data/personas/personas.json
+[INFO] ✅ Saved summary statistics to data/personas/personas_summary.json
+[INFO] ============================================================
+[INFO] SEMANTIC TREE GENERATION SUMMARY
+[INFO] ============================================================
+[INFO] Health Consciousness distribution: {2: 21, 4: 58, 5: 7}
+[INFO] Healthcare Access distribution: {1: 10, 3: 76}
+[INFO] Pregnancy Readiness distribution: {3: 35, 5: 24, 4: 26, 2: 1}
+[INFO] Personas with health conditions: 23
+[INFO] 
+[INFO] PREGNANCY INTENTIONS SUMMARY
+[INFO] Gravida distribution: {0: 42, 1: 11, 3: 13, 2: 16, 4: 3, 5: 1}
+[INFO] Para distribution: {0: 49, 1: 9, 2: 18, 3: 8, 4: 2}
+[INFO] Nulliparous (G0P0): 49
+[INFO] Multiparous (P≥1): 37
+[INFO] With previous complications: 12
+[INFO] Using fertility treatments: 0
+[INFO] Actively trying to conceive: 24
+[INFO] Using contraception: 38
+[INFO] Receiving preconception care: 27
+[INFO] With breastfeeding history: 0
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 86 personas
+[INFO] === Persona Generation Completed ===

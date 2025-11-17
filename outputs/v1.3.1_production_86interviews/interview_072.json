@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T13:41:19.968172"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello, thank you for having me. I'm glad to be part of this interview. I'm ready when you are! \n\nWhat would you like to know first?",
+      "timestamp": "2025-11-17T13:41:21.119830"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T13:41:21.119839"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Sure! As I mentioned, my name is Harper, and I'm a 40-year-old elementary school teacher living in urban Atlanta. I have a master\u2019s degree, which I earned a few years ago, and while I love teaching, I'm currently feeling a bit overwhelmed with my chronic pain issues. I have two children from my previous marriage, and I'm not planning on having more kids. I have private health insurance, and I try to stay healthy, but my busy schedule often makes it challenging. I exercise occasionally when I can find the time. Overall, I strive to balance work, family, and my health, but it can be tough sometimes. What else would you like to know?",
+      "timestamp": "2025-11-17T13:41:25.362147"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T13:41:25.862797"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Of course! I had my first pregnancy when I was in my late twenties. I remember it vividly; I found out I was pregnant right after I got a promotion at work. It was an exciting time, but also a bit overwhelming as I was still adjusting to my new role. I had my first child, a daughter, and a couple of years later, I had my son. Both pregnancies were relatively straightforward, and I had vaginal deliveries without any major complications. \n\nI made sure to attend all my prenatal appointments, and I felt well-supported by my healthcare providers throughout the process. After my son was born, I decided that I wouldn't have any more children, and I\u2019ve been using barrier contraception since then. Is there anything specific you'd like to know about my experiences during those pregnancies?",
+      "timestamp": "2025-11-17T13:41:30.549347"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T13:41:31.049462"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I first sought prenatal care as soon as I found out I was pregnant with my daughter, which was around the six-week mark. I was really eager to ensure everything was going well, especially since it was my first pregnancy. I remember my initial visit being quite thorough; the healthcare provider took time to explain what to expect and answered all my questions, which I really appreciated.\n\nThe experience overall was positive. I felt comfortable with my doctor, and I liked that they encouraged me to be proactive about my health. I had regular check-ups, and everything seemed to progress smoothly. There was a lot of information to digest, but I felt well-supported during those appointments. \n\nWith my second pregnancy, I was already familiar with the process, so I felt a bit more relaxed. What about you\u2014do you have any questions regarding specific aspects of my prenatal care, like the types of support or resources I found helpful?",
+      "timestamp": "2025-11-17T13:41:37.150375"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T13:41:37.650698"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I primarily saw an obstetrician who specialized in prenatal care. I had a good relationship with my healthcare provider; they were very approachable and always made sure to create a welcoming environment during my visits. They would take the time to listen to my concerns and answer my questions, which made me feel valued as a patient.\n\nI remember feeling comfortable discussing everything from basic health inquiries to more personal topics, like my concerns about labor and delivery. They also provided me with resources for prenatal classes, which I found very helpful. \n\nSince I\u2019m no longer pregnant, I\u2019ve transitioned to seeing a family doctor who helps manage my overall health and chronic pain. My current provider is also attentive, but I do miss that specialized focus on pregnancy care. Is there anything specific you\u2019d like to know about the type of support I received or how I navigated my relationship with my prenatal care provider?",
+      "timestamp": "2025-11-17T13:41:43.307504"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T13:41:43.807678"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I had prenatal appointments typically every month during the first two trimesters. As I got closer to my due date, those visits became more frequent\u2014usually every two weeks, and then weekly in the final month. \n\nA typical visit would start with checking my weight and blood pressure, followed by a discussion about how I was feeling. My doctor would ask about any symptoms I was experiencing, like morning sickness or fatigue, and we\u2019d talk about the baby\u2019s movements and growth. They would also listen to the baby's heartbeat, which was always such a reassuring moment for me.\n\nIn addition to the physical assessments, my doctor would provide educational resources tailored to where I was in my pregnancy. For example, we discussed nutrition, exercise, and what to expect during labor. They encouraged me to ask questions at every visit, which I appreciated because it helped me feel more engaged in my care.\n\nI also remember having some lab tests done throughout my pregnancies, like blood tests and ultrasounds, to monitor both my health and the baby\u2019s development. Overall, I felt that my appointments were thorough and informative. \n\nDo you want to know more about any particular aspect of these visits, such as the educational components or how I felt emotionally during them?",
+      "timestamp": "2025-11-17T13:41:51.293111"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T13:41:51.796943"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During both of my pregnancies, I was fortunate to have relatively few health concerns or complications. My pregnancies were considered low-risk overall, and I didn\u2019t experience any major issues. However, I did have some common discomforts like morning sickness during the first trimester and some back pain as my body changed, especially toward the end.\n\nI remember having to be mindful of my chronic pain conditions during my pregnancies, particularly my chronic low back pain. I had to adjust my activities and be careful about how I moved, especially as my belly grew. My healthcare provider was supportive in helping me find ways to manage that pain, and they suggested some safe exercises and stretches that I could do.\n\nOther than that, my prenatal screenings and tests came back normal, and I didn\u2019t have any complications during labor or delivery. I did have some anxiety about the labor process, especially with my first child, but my provider reassured me and helped me prepare mentally. \n\nIs there anything specific you'd like to know about how I managed my chronic pain during pregnancy or any other concerns I had?",
+      "timestamp": "2025-11-17T13:41:58.563461"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T13:41:59.063693"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Currently, I\u2019m not taking any medications specifically for my chronic pain, as I\u2019ve been trying to manage it through physical therapy and lifestyle adjustments. However, I do take a daily multivitamin to ensure I'm getting the necessary nutrients, especially since I\u2019m still mindful of my health after my pregnancies. \n\nIn the past, I was prescribed some pain medications to help with my chronic low back and neck pain, but I've been working with my family doctor to find alternative methods for pain management that don't rely heavily on medication. I find that staying active, even if it\u2019s just gentle stretching or walking, helps a lot. \n\nI also make sure to keep my asthma medication up to date, as it's important for me to manage that condition effectively. I use an inhaler as needed, particularly during allergy seasons or when I\u2019m exercising. \n\nIs there anything more specific you\u2019d like to know about my current health regimen or how I approached medication during my pregnancies?",
+      "timestamp": "2025-11-17T13:42:05.364784"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T13:42:05.864956"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I made a conscious effort to focus on my diet and nutrition because I wanted to ensure both my health and the health of my babies. I followed the general guidelines for pregnant women, aiming for a balanced diet that included a variety of foods.\n\nI tried to incorporate more fruits and vegetables into my meals, aiming for at least five servings a day. Whole grains were also a staple in my diet; I chose brown rice, whole grain bread, and oats when I could. Protein was important too, so I included lean meats, fish, eggs, and plant-based proteins like beans and lentils. \n\nI paid special attention to calcium and iron, knowing that those nutrients are crucial during pregnancy. I included dairy products, such as yogurt and cheese, and I also took a prenatal vitamin that contained folic acid, which I understood was essential for fetal development. \n\nThat said, I did have some cravings and aversions, especially in the first trimester. For instance, I craved citrus fruits but couldn\u2019t stand the smell of certain meats. I learned to adapt by finding alternatives that satisfied my cravings while still being nutritious. \n\nHydration was another key factor; I made it a point to drink plenty of water throughout the day. I was also cautious about caffeine intake and limited my consumption to stay within the recommended guidelines.\n\nOverall, I felt that my diet during pregnancy was a mix of being mindful of my nutritional needs while also allowing myself some flexibility to enjoy the process. \n\nIs there anything specific you would like to know about my diet, or how I managed cravings and aversions during my pregnancies?",
+      "timestamp": "2025-11-17T13:42:14.535008"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T13:42:15.035248"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, my emotions were a bit of a mixed bag, which I think is pretty common. Initially, I felt a wave of excitement and happiness when I found out I was pregnant, especially with my first child. I was eager to embrace the journey of becoming a mother, and that excitement carried me through a lot of the early stages.\n\nHowever, I also experienced some anxiety, particularly with my first pregnancy. It was a big life change, and I worried about everything from my health to the baby\u2019s well-being. I remember feeling nervous about labor and delivery, as well as the responsibility of being a parent. My healthcare provider was very supportive during this time, which helped me a lot. They encouraged me to express my concerns and provided resources to help manage my anxiety, like prenatal classes focused on relaxation techniques.\n\nAs my pregnancies progressed, I felt more comfortable and confident, especially during my second pregnancy. I had a better understanding of what to expect, which helped alleviate some of the anxiety. There were still moments of stress\u2014like balancing work, preparing for a new baby, and managing my chronic pain\u2014but I found that talking to friends and family, who had been through it, was incredibly helpful.\n\nPostpartum, I did experience some emotional ups and downs, which I think is also common. There were times when I felt overwhelmed with everything, but I made sure to reach out for support. I believe having a solid support system made a significant difference in how I coped with those feelings.\n\nIs there anything specific you\u2019d like to know about my emotional experiences during pregnancy or how I navigated those feelings?",
+      "timestamp": "2025-11-17T13:42:23.890665"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T13:42:24.395855"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I was fortunate to have a strong support network that played a crucial role in my experience. My family, especially my parents and close friends, were incredibly supportive. They were always there to listen and offer advice when I needed it. My mom, in particular, had been through the experience of pregnancy and motherhood herself, so she was a great source of comfort and guidance.\n\nI also had a close group of friends who were either pregnant or had recently had children. We would often share our experiences, talk about our concerns, and celebrate the milestones together. It was reassuring to know that I wasn't alone in what I was going through, and it helped to have that camaraderie.\n\nAdditionally, my ex-husband was involved during my pregnancies, and while our relationship had its challenges, he did his best to be supportive. We would attend prenatal appointments together, which I appreciated, as it helped us both feel more connected to the process.\n\nI also found support from my healthcare provider. They were always open to discussing my concerns and connecting me with resources, such as prenatal classes and support groups, which I found helpful. \n\nOverall, I felt that my support network was instrumental in helping me navigate the emotional and practical challenges of pregnancy. \n\nIs there anything more specific you\u2019d like to explore about my support system or particular experiences with those who supported me?",
+      "timestamp": "2025-11-17T13:42:32.319331"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T13:42:32.819877"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I definitely thought about my birth plan, especially since it was a significant part of preparing for delivery. With my first child, I was a bit more anxious about the whole process, so I spent a lot of time researching different options and discussing them with my healthcare provider.\n\nI preferred a vaginal delivery, as I had heard from many sources that it often leads to quicker recovery times. I also wanted to have the option for pain management during labor, whether that meant using an epidural or other methods, depending on how I felt at the time. I aimed for a natural birth experience as much as possible, but I was open to medical interventions if needed for the safety of myself or my baby.\n\nI wanted to be in a calm and supportive environment during labor. I discussed with my provider the importance of having my partner and possibly my mom present during the birth. I found comfort in the idea of having familiar faces around me during such a significant moment.\n\nWith my second pregnancy, I felt more confident and informed, so I had a better idea of what to expect. While I maintained similar preferences for delivery, I was also more flexible about the specifics, knowing that sometimes things don\u2019t go as planned in labor. \n\nOverall, I wanted my birth experience to be as positive and empowering as possible, focusing on the health and safety of both my baby and myself. \n\nIs there anything specific you\u2019d like to know about my birth preferences, preparation for labor, or how I approached my birth plans?",
+      "timestamp": "2025-11-17T13:42:41.059386"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T13:42:41.559566"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I utilized a variety of sources to learn about pregnancy and childbirth, as I wanted to be as informed as possible. First and foremost, I relied on my healthcare provider for personalized guidance. They were a great resource for answering my questions and addressing my concerns, and I often took notes during our appointments to help me remember the information.\n\nIn addition to that, I read several books on pregnancy and childbirth. Some of my favorites included classic titles like \"What to Expect When You're Expecting\" and \"The Womanly Art of Breastfeeding.\" These books provided a wealth of information on everything from prenatal care to labor and postpartum care.\n\nI also explored websites and online forums dedicated to pregnancy and parenting. Websites like the Mayo Clinic and BabyCenter were particularly helpful, as they offered reliable information on various topics, including fetal development, nutrition, and preparation for childbirth. I appreciated reading personal stories on forums, as they allowed me to connect with other expectant mothers and hear about their experiences.\n\nAnother important resource for me was attending prenatal classes. I participated in childbirth education classes through my hospital, which covered topics like labor techniques, breathing exercises, and newborn care. These classes allowed me to meet other parents-to-be and provided a supportive environment to discuss our fears and expectations.\n\nLastly, I leaned on my friends and family for advice and shared experiences. My mom, who had gone through pregnancy herself, offered valuable insights and reassurance, while my friends who were also pregnant at the time created a space for open conversations about our feelings and experiences.\n\nOverall, I found that a combination of professional guidance, literature, online resources, and support from my social circle helped me feel prepared and informed throughout my pregnancies. \n\nIs there a particular source of information or topic you\u2019d like to delve deeper into, or do you have questions about how I navigated the information I found?",
+      "timestamp": "2025-11-17T13:42:51.949451"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T13:42:52.449692"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I was quite mindful of the financial aspects involved in preparing for a baby. Since I had private health insurance, I felt somewhat reassured about the costs associated with prenatal care and delivery, although I still had to manage co-pays and deductibles. I made sure to stay organized by keeping track of my medical bills and insurance claims to understand what was covered and what wasn\u2019t.\n\nI also created a budget that included expenses for prenatal care, baby supplies, and any potential out-of-pocket costs. I wanted to ensure that I was financially prepared for the arrival of my children. I researched the costs of items we would need, like diapers, clothing, a crib, and other essentials, and I prioritized purchasing these items to avoid any last-minute financial stress.\n\nTo save money, I took advantage of sales and discounts, and I also accepted hand-me-downs from friends and family who had recently had babies. It helped to reduce expenses while also being eco-friendly. I also looked into community resources and programs that offered support for new parents, which sometimes included free classes or workshops.\n\nAdditionally, I made sure to consider my maternity leave and how that might affect our financial situation. I spoke with my employer about the policies in place and planned accordingly to ensure I had enough time to bond with my baby without putting too much strain on our finances.\n\nOverall, I tried to take a proactive approach to managing the financial aspects of pregnancy and preparing for a baby, which helped alleviate some of the stress associated with these changes. \n\nIs there anything more specific you\u2019d like to know about the financial considerations I had during my pregnancies or how I prepared in that aspect?",
+      "timestamp": "2025-11-17T13:43:01.552374"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T13:43:02.053552"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I found that balancing work and pregnancy was a bit of a challenge, but I managed to navigate it with some planning and support. As an elementary school teacher, I had a demanding job that required a lot of energy and focus, especially with young children. Fortunately, my employer was supportive of my situation, which made a significant difference.\n\nWhen I first learned I was pregnant, I informed my principal around the end of my first trimester. They were understanding and assured me that they would work with me to accommodate my needs. I made sure to communicate openly with my colleagues about how I was feeling and any adjustments I might need, which helped foster a supportive environment.\n\nAs my pregnancy progressed, I found that I had to be more mindful of my energy levels and chronic pain. There were days when I felt fatigued, and I learned to pace myself better, take breaks when necessary, and ask for help from my coworkers when I needed it. I also made adjustments to my classroom activities to ensure I wasn't overexerting myself.\n\nRegarding maternity leave, I was fortunate that my school had a policy in place that allowed me to take time off. I planned my leave in advance, ensuring that I would have enough time to recover and bond with my baby before returning to work. I worked closely with my principal to ensure a smooth transition for my students and a substitute teacher during my absence. \n\nOverall, while my pregnancies did affect my work situation, I felt fortunate to have a supportive work environment that allowed me to focus on my health and the arrival of my children. \n\nIs there anything specific you'd like to know about how I managed work during my pregnancies or how I prepared for my maternity leave?",
+      "timestamp": "2025-11-17T13:43:10.182368"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T13:43:10.682740"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancies, I definitely thought about the postpartum period and how I wanted to prepare for it. I knew that the time after giving birth could be both exciting and challenging, so I wanted to be as ready as possible.\n\nOne of my main focuses was to create a supportive environment at home. I talked with my family and friends about my needs during that time, and I was fortunate that my parents offered to help out, especially during the first few weeks after I had my babies. Having their support with tasks like cooking and cleaning would allow me to focus on bonding with my newborn and recovering from childbirth.\n\nI also planned to prioritize self-care. I understood that taking care of myself was essential for being able to care for my baby. I wanted to set aside time for rest, even if it was just napping when the baby napped. I also planned to reach out to my healthcare provider for any follow-up appointments to discuss my recovery, as well as any emotional challenges I might face, such as postpartum anxiety or depression.\n\nI thought about how I would manage breastfeeding as well, as I was committed to nursing my children if I could. I attended breastfeeding classes during my pregnancy, which helped me feel more prepared. I also planned to connect with a lactation consultant if I encountered any difficulties.\n\nIn terms of support groups, I looked into local parenting groups where I could meet other new mothers. I thought it would be helpful to share experiences and gain insights from others who were in a similar situation. I appreciated the idea of having a community for emotional support as well.\n\nLastly, I kept in mind the importance of balancing my time between my newborn and my older children. I wanted to make sure that I didn't neglect their needs while adjusting to the new family dynamic.\n\nOverall, I approached the postpartum period with a plan for support, self-care, and community connection. Is there anything specific you\u2019d like to know about my postpartum plans or how I prepared for that transition?",
+      "timestamp": "2025-11-17T13:43:22.633355"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T13:43:23.133606"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 328,
+        "output_tokens": 32,
+        "cost_usd": 3.92e-07,
+        "cost_eur": 3.6064000000000003e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 388,
+        "output_tokens": 138,
+        "cost_usd": 6.639999999999999e-07,
+        "cost_eur": 6.108799999999999e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 550,
+        "output_tokens": 159,
+        "cost_usd": 8.68e-07,
+        "cost_eur": 7.9856e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 728,
+        "output_tokens": 183,
+        "cost_usd": 1.094e-06,
+        "cost_eur": 1.00648e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 933,
+        "output_tokens": 180,
+        "cost_usd": 1.2930000000000002e-06,
+        "cost_eur": 1.1895600000000002e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1138,
+        "output_tokens": 251,
+        "cost_usd": 1.64e-06,
+        "cost_eur": 1.5088e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1406,
+        "output_tokens": 213,
+        "cost_usd": 1.832e-06,
+        "cost_eur": 1.68544e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1633,
+        "output_tokens": 192,
+        "cost_usd": 2.017e-06,
+        "cost_eur": 1.85564e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1842,
+        "output_tokens": 326,
+        "cost_usd": 2.494e-06,
+        "cost_eur": 2.29448e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2183,
+        "output_tokens": 325,
+        "cost_usd": 2.8330000000000002e-06,
+        "cost_eur": 2.6063600000000003e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2529,
+        "output_tokens": 273,
+        "cost_usd": 3.0749999999999998e-06,
+        "cost_eur": 2.829e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2822,
+        "output_tokens": 303,
+        "cost_usd": 3.428e-06,
+        "cost_eur": 3.1537600000000004e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 3144,
+        "output_tokens": 373,
+        "cost_usd": 3.89e-06,
+        "cost_eur": 3.5788000000000004e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 3537,
+        "output_tokens": 333,
+        "cost_usd": 4.203e-06,
+        "cost_eur": 3.8667600000000006e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3886,
+        "output_tokens": 343,
+        "cost_usd": 4.5720000000000004e-06,
+        "cost_eur": 4.206240000000001e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 4253,
+        "output_tokens": 395,
+        "cost_usd": 5.043e-06,
+        "cost_eur": 4.63956e-06
+      }
+    ],
+    "total_input_tokens": 31300,
+    "total_output_tokens": 4019,
+    "total_cost_usd": 3.9338e-05,
+    "total_cost_eur": 3.6190960000000004e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T13:41:19.967961",
+    "end_time": "2025-11-17T13:43:23.133651",
+    "duration_seconds": 123.16569
+  }
+}

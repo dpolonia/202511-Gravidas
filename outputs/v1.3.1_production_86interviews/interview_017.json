@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T12:00:31.404766"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello! Thank you for having me. I appreciate the opportunity to share my experiences. I'm ready to answer your questions.",
+      "timestamp": "2025-11-17T12:00:32.343529"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T12:00:32.343536"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Of course! As I mentioned, my name is Mia. I'm 34 years old, and I work as a nurse practitioner here in Los Angeles. I have a master's degree, and I'm really passionate about my work in healthcare. I\u2019m married, and my husband and I have a 6-year-old daughter. We're currently trying to conceive our second child, which has been an exciting journey for us. I\u2019m quite health-conscious, exercise regularly, and I\u2019m focused on maintaining a healthy lifestyle, especially now that I\u2019m trying to get pregnant again. My job provides me with good healthcare access, which I feel really fortunate about. How about you? What would you like to know more about?",
+      "timestamp": "2025-11-17T12:00:35.908802"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T12:00:36.409070"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I found out I was pregnant with my first child about seven years ago. I remember it vividly; I took a home pregnancy test because I had been feeling a bit off, and when it came back positive, I was overjoyed! It was a very special moment for my husband and me. Throughout that pregnancy, I made sure to attend all my prenatal appointments and follow the recommended guidelines for a healthy pregnancy. I had an uncomplicated vaginal delivery six years ago, which I consider a blessing. It was a wonderful experience, and I felt supported by my healthcare team throughout the process. \n\nNow, as I\u2019m trying to conceive again, I\u2019m focusing on my health even more, taking prenatal vitamins, and being mindful of my lifestyle choices. Is there anything specific about my pregnancy or prenatal care experiences that you would like me to elaborate on?",
+      "timestamp": "2025-11-17T12:00:40.373009"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T12:00:40.873186"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I first sought prenatal care shortly after I confirmed the pregnancy with the home test. I scheduled my first appointment with my OB-GYN around six weeks into the pregnancy. I remember feeling a mix of excitement and nervousness as I walked into the office. The staff was warm and welcoming, which helped ease my anxiety. During that first visit, they conducted a thorough examination, including blood work and an ultrasound, which was such a thrilling moment to see the baby's heartbeat for the first time.\n\nThe healthcare provider was very informative, discussing what to expect during the pregnancy and providing guidance on nutrition, exercise, and prenatal vitamins. I felt really supported and encouraged to ask questions. Overall, it was a positive experience, and I appreciated how proactive they were in ensuring both my health and the baby's health.\n\nWould you like to know more about specific aspects of my prenatal care, like the types of appointments or any particular challenges I faced?",
+      "timestamp": "2025-11-17T12:00:45.557372"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T12:00:46.058683"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019m currently seeing my OB-GYN for my prenatal care. I\u2019ve been with the same provider since my first pregnancy, and I feel very comfortable with her. She\u2019s knowledgeable and has a great bedside manner, which really puts me at ease. Our relationship has evolved over the years; I trust her advice completely and appreciate that she takes the time to answer all my questions, no matter how small they might seem. \n\nDuring our appointments, she always ensures I understand the information she's sharing and encourages me to voice any concerns I might have. I also appreciate that she respects my background as a healthcare professional, so our conversations are more collaborative. I feel like it's a partnership, which is important to me as I navigate this journey.\n\nIf you\u2019re interested, I could share more about how our appointments typically go or any specific discussions we've had around my health and the current pregnancy. Would that be helpful?",
+      "timestamp": "2025-11-17T12:00:51.172728"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T12:00:51.674797"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I have prenatal appointments every four weeks at this stage in my pregnancy. As I get further along, I anticipate that frequency will increase to every two weeks and then weekly as I approach my due date. \n\nA typical visit usually begins with a check-in where my OB-GYN and I discuss how I\u2019ve been feeling, any symptoms I might be experiencing, and any questions I have since our last appointment. They check my weight and blood pressure, which is reassuring to know they're monitoring those important aspects of my health.\n\nThen, they usually perform a quick physical examination. If it\u2019s an ultrasound appointment, I get to see my baby, which is always the highlight! They measure the baby and check for proper growth and development. I also have routine blood tests to monitor things like iron levels and ensure everything is on track.\n\nAfter that, my provider goes over any lab results and discusses what to expect in the coming weeks, including any tests I might need, like glucose screening or genetic testing. It\u2019s a very thorough process, and I always leave feeling informed and supported. \n\nI appreciate that my OB-GYN takes the time to explain everything clearly and encourages me to ask questions about anything I might be unsure about. It feels like a partnership, and I feel empowered to be involved in my care.\n\nWould you like to know about any specific tests or discussions that have been particularly important during my appointments?",
+      "timestamp": "2025-11-17T12:00:58.296751"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T12:00:58.796920"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my first pregnancy, I was fortunate to have an uncomplicated experience, and I haven't faced any significant health concerns or complications. This time around, I'm hopeful for a similar outcome. However, I do have chronic sinusitis, which can sometimes flare up, especially with hormonal changes during pregnancy. It's something I've managed for years, and I stay proactive about it by discussing it with my healthcare provider and making sure to follow any treatment recommendations.\n\nI also try to be aware of how my body is responding as I navigate this journey. I focus on maintaining a healthy lifestyle, which includes staying hydrated, eating well, and managing any sinus issues with saline rinses or other appropriate methods. So far, everything has been going well, and I feel grateful for that.\n\nIf you're interested, I could share more about how I manage my sinusitis in the context of my pregnancy or any other aspects of my health that I monitor during this time. Would that be helpful?",
+      "timestamp": "2025-11-17T12:01:03.005140"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T12:01:03.505469"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019m currently taking prenatal vitamins, which I've been on for the past three months as I prepare for this pregnancy. They contain essential nutrients like folic acid, iron, and DHA, which are important for both the baby's development and my health. \n\nAside from the prenatal vitamins, I also occasionally use saline nasal sprays to help manage my chronic sinusitis. I prefer to avoid medications during pregnancy unless absolutely necessary, so I discuss any treatment options with my OB-GYN to ensure they\u2019re safe. \n\nI\u2019ve also been mindful about my diet and hydration, which can play a significant role in overall health during pregnancy. I focus on getting a variety of fruits, vegetables, whole grains, and lean proteins. \n\nIf you would like, I can elaborate on any specific aspects of my medication regimen or dietary choices during pregnancy. Would that be of interest?",
+      "timestamp": "2025-11-17T12:01:07.327494"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T12:01:07.827892"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Absolutely! During my pregnancy, I've been very intentional about my diet and nutrition. I believe that what I eat plays a crucial role in supporting my health and the development of my baby. I focus on a balanced diet that includes a variety of food groups.\n\nI make sure to include plenty of fruits and vegetables\u2014I've been trying to eat a rainbow of colors to ensure I get a wide range of vitamins and minerals. I also prioritize whole grains, like brown rice, quinoa, and whole-wheat bread, which provide essential fiber and energy.\n\nFor protein, I incorporate lean meats, poultry, fish, eggs, and plant-based sources like beans and lentils. I try to choose fish that are low in mercury, such as salmon, because of the beneficial omega-3 fatty acids. I'm also mindful to include dairy products or fortified plant-based alternatives for calcium and vitamin D, which are vital for bone health.\n\nHydration is another key aspect; I aim to drink plenty of water throughout the day. Staying well-hydrated helps with my overall health, especially considering my chronic sinusitis, as it can help thin mucus.\n\nOn top of that, I avoid certain foods that are generally not recommended during pregnancy, like unpasteurized cheeses, raw fish, and deli meats, to minimize any risks. I also limit my caffeine intake and try to avoid sugary snacks, focusing instead on healthier options.\n\nOverall, I think my background as a healthcare professional helps me make informed choices, but I also enjoy experimenting with new recipes and staying engaged with what I'm eating. Would you like to delve deeper into any particular aspect of my diet or how I plan for meals during this pregnancy?",
+      "timestamp": "2025-11-17T12:01:15.169088"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T12:01:15.669297"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I've been feeling a mix of emotions during this pregnancy, which I think is completely normal. Overall, I feel excited and hopeful about expanding our family, but there are also moments of anxiety and stress, especially as I think about the responsibilities that come with having another child. \n\nBeing a nurse practitioner, I\u2019m aware of the potential challenges and complications that can arise during pregnancy, which sometimes makes me more anxious than I would like to be. However, I try to focus on the positives and practice mindfulness techniques to manage any stress. I find that staying active and exercising helps improve my mood as well. \n\nI've also been leaning on my support system more during this time. My husband has been incredibly supportive, and we make it a point to communicate openly about our feelings and concerns. I talk to friends who have been through similar experiences, and that helps me feel less alone in this journey. \n\nSometimes, I find myself reflecting on my first pregnancy and how different it is this time around, especially with a 6-year-old to care for. Balancing my responsibilities as a parent while preparing for another child can feel overwhelming at times, but I remind myself that it's all part of the journey.\n\nIf you're interested, I can share more about any specific coping strategies I use or how I navigate the emotional ups and downs during this pregnancy. Would that be helpful?",
+      "timestamp": "2025-11-17T12:01:22.975560"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T12:01:23.476666"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I have a wonderful support network that plays a crucial role in my pregnancy journey. First and foremost, my husband is my biggest supporter. He\u2019s been incredibly understanding and proactive, whether it\u2019s helping out more at home, attending appointments with me, or just being there to listen when I need to talk about my feelings or concerns. We make a great team, and I really value the open communication we have.\n\nIn addition to my husband, I have a close group of friends who are also mothers. We often share our experiences and offer each other advice and encouragement. It\u2019s comforting to know that I can reach out to them when I have questions or just need to vent about the challenges of pregnancy. Their support has been invaluable, especially since some of them have gone through similar journeys.\n\nI also have family close by, which is a tremendous help. My parents and in-laws are always willing to lend a hand, whether it\u2019s watching our daughter when we need a break or just being there to provide emotional support. Knowing that I have that safety net makes a big difference.\n\nAs a nurse practitioner, I also find support within my professional community. I have colleagues who understand the demands of both work and pregnancy, and they offer insights and encouragement based on their own experiences. \n\nOverall, I feel really fortunate to have such a strong support system. It helps me feel more confident and less isolated as I navigate this journey. If you\u2019d like, I can share more about how my support network has specifically helped me during this pregnancy or any particular instances that stand out. Would that be of interest?",
+      "timestamp": "2025-11-17T12:01:29.581975"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T12:01:30.082132"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Absolutely, I have given quite a bit of thought to my birth plan for this pregnancy. Since my first delivery was uncomplicated and went smoothly, I have a good idea of what I want this time around. I prefer to have another vaginal delivery, assuming everything progresses normally, as I found it to be a very empowering experience. \n\nI would like to have labor support from my husband and possibly a doula if we can arrange that. I believe having that extra support can make a significant difference in the experience. I\u2019m also planning to attend some prenatal classes to prepare for labor and delivery, as well as to refresh my memory on techniques like breathing exercises and pain management strategies. \n\nIn terms of pain management, I am open to using an epidural if I feel it\u2019s necessary, but I would like to try some natural pain relief methods first, such as movement, hydrotherapy, and breathing techniques. I find that being informed about my options helps me feel more in control, and I appreciate being able to discuss these preferences with my healthcare provider.\n\nI also want to make sure I have skin-to-skin contact with my baby right after delivery, as I understand how important that is for bonding and breastfeeding initiation. I plan to communicate my preferences with my OB-GYN during our upcoming appointments to ensure that everyone is on the same page.\n\nIf you're interested, I could elaborate on any specific aspects of my birth plan or how I envision the labor and delivery experience. Would you like to hear more about that?",
+      "timestamp": "2025-11-17T12:01:36.651178"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T12:01:37.151352"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019ve been proactive about gathering information on pregnancy and childbirth, drawing from various sources to ensure I have a well-rounded understanding of what to expect. As a nurse practitioner, I already have a solid foundation of medical knowledge, but I also want to stay informed about the latest evidence-based practices and recommendations.\n\n1. **Medical Literature and Journals**: I often read peer-reviewed articles and studies related to maternal and child health. This helps me stay updated on any new findings or recommendations that may influence my care.\n\n2. **Books**: I\u2019ve read several pregnancy and childbirth books, including classic titles like \"What to Expect When You\u2019re Expecting\" and more evidence-based guides that focus on natural childbirth and holistic approaches. These resources provide valuable insights and practical advice.\n\n3. **Online Resources**: I utilize reputable websites, like those from the American College of Obstetricians and Gynecologists (ACOG) and the March of Dimes, for up-to-date information on pregnancy health, nutrition, and prenatal care. I also follow certain parenting blogs and forums where I can read about other mothers' experiences and ask questions.\n\n4. **Prenatal Classes**: I plan to attend prenatal classes offered through my healthcare provider or local community centers. These classes cover important topics, from labor preparation to breastfeeding, and provide an opportunity to connect with other expectant parents.\n\n5. **Professional Colleagues**: Given my background in healthcare, I often speak with colleagues, including obstetricians and midwives, to get their perspectives on pregnancy and childbirth. Their experiences and advice can be incredibly helpful, especially when it comes to navigating any concerns I might have.\n\n6. **Support Groups**: I've also looked into local support groups for expectant parents. Hearing firsthand experiences from others can provide reassurance and practical tips.\n\nI believe that having a variety of sources allows me to form a more comprehensive view of what to expect and how to prepare. If you would like, I can discuss any particular resources that have been especially helpful or any specific topics I\u2019m focusing on right now. Would that be of interest?",
+      "timestamp": "2025-11-17T12:01:48.263255"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T12:01:48.763557"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Managing the financial aspects of pregnancy and preparing for a new baby is definitely a priority for my husband and me. Since we have good healthcare access through my employer's insurance plan, that alleviates some of the financial burden related to prenatal care and delivery, but there are still many other costs to consider. Here\u2019s how we\u2019re approaching it:\n\n1. **Budgeting for Prenatal Care**: We keep track of our medical expenses, including co-pays for prenatal visits, lab tests, and any potential medications I might need. We\u2019re fortunate that my insurance covers most of these costs, but we still set aside funds for any out-of-pocket expenses.\n\n2. **Planning for Delivery**: We\u2019ve researched the costs associated with childbirth, including hospital fees, anesthesia if I choose an epidural, and any additional services like a doula if we decide to hire one. We\u2019ve discussed these costs with our insurance provider to understand what will be covered and what our financial responsibilities will be.\n\n3. **Baby Essentials**: We\u2019re gradually purchasing baby essentials, like clothing, diapers, a crib, and other gear. We prioritize buying items that are necessary and look for sales or second-hand options to save money. For larger items like a stroller, we might consider asking for them as gifts from family and friends.\n\n4. **Childcare Costs**: We\u2019ve started to look into childcare options for when I return to work, which can be a significant expense. We\u2019re evaluating local daycare centers, in-home care, and even considering the possibility of family help. We\u2019re also researching any available subsidies or assistance programs that might be beneficial.\n\n5. **Emergency Fund**: We maintain an emergency fund to help manage any unexpected expenses that may arise during the pregnancy or after the baby is born. This includes potential medical emergencies or necessary adjustments to our home for the new arrival.\n\n6. **Long-Term Planning**: We\u2019re also considering the long-term financial aspects, like saving for our children's education. We have started a savings plan that includes a 529 plan for future educational expenses.\n\n7. **Open Communication**: Throughout this process, my husband and I have made it a point to communicate openly about our finances and any concerns we have. This helps us stay on the same page and make joint decisions about our spending and saving strategies.\n\nI feel that being proactive and organized helps alleviate some of the stress that can come with financial planning during pregnancy. If you're interested, I could go into more detail about any specific financial strategies we use or how we're preparing for the baby in other ways. Would that be helpful?",
+      "timestamp": "2025-11-17T12:02:02.739129"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T12:02:03.239443"
+    },
+    {
+      "speaker": "Persona",
+      "text": "My pregnancy has definitely had an impact on my work and employment situation, but overall, I feel fortunate to be in a supportive environment. As a nurse practitioner, my profession is physically demanding, so I\u2019ve had to consider how to balance my job responsibilities with my health and well-being as I navigate this pregnancy.\n\n1. **Work Schedule Adjustments**: Since finding out I was pregnant, I spoke with my supervisor about my workload. They\u2019ve been very accommodating, allowing me to adjust my schedule to ensure I\u2019m not overexerting myself. I try to prioritize lighter duties when possible, especially as I progress further into my pregnancy.\n\n2. **Supportive Colleagues**: My colleagues have also been incredibly supportive. They understand the demands of pregnancy and have offered to help with patient loads when I need it. This camaraderie has made a significant difference in how I manage my work-life balance.\n\n3. **Communication with Patients**: I\u2019ve been open with my patients about my pregnancy, particularly those I have a long-term relationship with. They\u2019ve been understanding and supportive, which has created a positive atmosphere for both me and them.\n\n4. **Planning for Maternity Leave**: I\u2019ve started planning for my maternity leave, which involves coordinating with my supervisor and colleagues to ensure a smooth transition for my patients. We\u2019re discussing how to cover my responsibilities while I\u2019m away, and I\u2019m preparing to provide comprehensive handover notes for the person who will take over my caseload.\n\n5. **Self-Care**: I\u2019ve made it a priority to practice self-care, which sometimes means taking breaks during my shifts to rest and hydrate. I\u2019ve also been mindful of managing stress, given the nature of my job and the physical demands it entails.\n\n6. **Future Considerations**: I\u2019m also thinking about how I\u2019ll balance work and family life after the baby arrives. I anticipate that I might need to adjust my hours or explore flexible scheduling options once I return to work. Thankfully, my workplace has policies in place that support new parents, which is reassuring.\n\nOverall, while pregnancy has posed some challenges in my work life, I feel supported by my employer and colleagues, which has made it easier to manage. If you're interested, I can share more about specific challenges I've faced at work or how I plan to transition back after maternity leave. Would that be helpful?",
+      "timestamp": "2025-11-17T12:02:13.479821"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T12:02:13.980121"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Absolutely, I've given a lot of thought to the postpartum period and what I need to prepare for after the baby arrives. I understand that this time can be both joyful and challenging, so I want to set myself up for success. Here\u2019s how I\u2019m planning for it:\n\n1. **Support System**: I plan to lean heavily on my support network during the postpartum period. My husband will be my primary support, and I\u2019ve also discussed with my parents and in-laws about their availability to help out, especially in the first few weeks. Having that support will be crucial as I adjust to caring for a newborn and balancing my responsibilities with my 6-year-old.\n\n2. **Postpartum Care**: I\u2019m planning to have a follow-up appointment with my OB-GYN within a few weeks after delivery to ensure that I'm healing well and to discuss any physical or emotional changes I might be experiencing. I want to be proactive about my health during this time.\n\n3. **Self-Care and Mental Health**: I recognize how important it is to prioritize self-care and mental health in the postpartum period. I\u2019m aware that the hormonal changes and the demands of a newborn can lead to feelings of anxiety or postpartum depression. I plan to stay vigilant about my mental health and seek support if I feel overwhelmed. I\u2019ve also considered setting aside time for myself, whether it's to rest, go for a walk, or engage in activities I enjoy, to help manage stress.\n\n4. **Childcare Plans**: I\u2019m looking into childcare options for when I return to work, but I also plan to take advantage of any available family support during those early months. I want to ensure that I have a plan in place to help with our 6-year-old and the new baby, so everyone\u2019s needs are met.\n\n5. **Feeding Plans**: I plan to breastfeed, as I did with my first child. I\u2019m preparing by learning about breastfeeding techniques and considering how to balance that with caring for my older child. I want to ensure that I have resources available, such as lactation consultants, to support me if needed.\n\n6. **Physical Recovery**: I\u2019m mindful of the physical recovery that follows childbirth, and I\u2019m planning to take it slow and allow my body time to heal. I\u2019m also considering how to gradually reintroduce exercise into my routine once my healthcare provider gives me the go-ahead.\n\n7. **Community Resources**: I\u2019ve been looking into local support groups and parenting classes that focus on the postpartum period. Connecting with other new parents can provide valuable insights and help me feel less isolated during that transition.\n\nOverall, I want to approach the postpartum period with openness and flexibility, recognizing that it may not go exactly as planned. I\u2019m committed to communicating with my support system and being proactive about my health and well-being.\n\nIf you're interested, I could share more about any specific aspects of my postpartum plan or resources I\u2019m considering. Would that be helpful?",
+      "timestamp": "2025-11-17T12:02:30.481607"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T12:02:30.982803"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 362,
+        "output_tokens": 24,
+        "cost_usd": 4.1000000000000004e-07,
+        "cost_eur": 3.7720000000000007e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 414,
+        "output_tokens": 140,
+        "cost_usd": 6.939999999999999e-07,
+        "cost_eur": 6.3848e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 578,
+        "output_tokens": 169,
+        "cost_usd": 9.16e-07,
+        "cost_eur": 8.4272e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 766,
+        "output_tokens": 184,
+        "cost_usd": 1.134e-06,
+        "cost_eur": 1.0432800000000001e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 972,
+        "output_tokens": 181,
+        "cost_usd": 1.334e-06,
+        "cost_eur": 1.2272800000000002e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1178,
+        "output_tokens": 280,
+        "cost_usd": 1.738e-06,
+        "cost_eur": 1.59896e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1475,
+        "output_tokens": 191,
+        "cost_usd": 1.8570000000000002e-06,
+        "cost_eur": 1.7084400000000003e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1680,
+        "output_tokens": 170,
+        "cost_usd": 2.02e-06,
+        "cost_eur": 1.8584000000000003e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1867,
+        "output_tokens": 334,
+        "cost_usd": 2.5350000000000003e-06,
+        "cost_eur": 2.3322000000000003e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2216,
+        "output_tokens": 272,
+        "cost_usd": 2.76e-06,
+        "cost_eur": 2.5391999999999998e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2509,
+        "output_tokens": 319,
+        "cost_usd": 3.147e-06,
+        "cost_eur": 2.89524e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2848,
+        "output_tokens": 302,
+        "cost_usd": 3.452e-06,
+        "cost_eur": 3.1758400000000004e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 3169,
+        "output_tokens": 423,
+        "cost_usd": 4.015e-06,
+        "cost_eur": 3.6937999999999997e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 3612,
+        "output_tokens": 524,
+        "cost_usd": 4.66e-06,
+        "cost_eur": 4.2872e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 4152,
+        "output_tokens": 479,
+        "cost_usd": 5.11e-06,
+        "cost_eur": 4.7012e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 4655,
+        "output_tokens": 601,
+        "cost_usd": 5.857e-06,
+        "cost_eur": 5.38844e-06
+      }
+    ],
+    "total_input_tokens": 32453,
+    "total_output_tokens": 4593,
+    "total_cost_usd": 4.1639000000000006e-05,
+    "total_cost_eur": 3.8307880000000005e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T12:00:31.404731",
+    "end_time": "2025-11-17T12:02:30.982848",
+    "duration_seconds": 119.578117
+  }
+}

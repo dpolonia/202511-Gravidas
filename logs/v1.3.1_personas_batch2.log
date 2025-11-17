@@ -1,0 +1,10 @@
+[INFO] === Synthetic Persona Generation Started ===
+[INFO] Target: 100 personas
+[INFO] Batch size: 50
+[INFO] === Generating 100 Synthetic Personas ===
+[INFO] Initialized Anthropic client with model: claude-3-haiku-20240307
+[INFO] [Batch 1/2] Generating 50 personas...
+[INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[INFO] Successfully parsed 39 personas
+[INFO]   ✅ Generated 39 valid personas (total: 39)
+[INFO] [Batch 2/2] Generating 50 personas...

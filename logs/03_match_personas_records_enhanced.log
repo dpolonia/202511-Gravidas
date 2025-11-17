@@ -704,3 +704,150 @@ KeyError: 'age'
 [INFO] ============================================================
 [INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
 [INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 0 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 0 personas and 10 health records
+[WARNING] ⚠️  More records than personas. Some records will be unmatched.
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 0 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 0 personas → 10 health records
+[WARNING] More records than personas! This will result in some unmatched records.
+[WARNING] Consider generating more personas for better coverage.
+[INFO] ✅ Created 0 optimal matches
+[INFO] Quality distribution:
+[ERROR] Script failed: division by zero
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 809, in main
+    matches, quality_metrics = match_optimal_with_selection(
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personas, records, compatibility_matrix, detailed_metrics,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        demographic_metrics=demo_metrics_for_stats
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 559, in match_optimal_with_selection
+    logger.info(f"  - Excellent (≥0.85): {quality_counts['excellent']} ({quality_counts['excellent']/total*100:.1f}%)")
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+ZeroDivisionError: division by zero
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 34 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 34 personas and 10 health records
+[INFO] ✅ Large pool mode: Selecting best 10 matches from 34 personas
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 34 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 34 personas → 10 health records
+[INFO] ✅ Created 10 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 6 (60.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 0 (0.0%)
+[INFO]   - Poor (<0.65): 1 (10.0%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 10 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 10
+[INFO] Average compatibility score: 0.843
+[INFO] Median compatibility score: 0.886
+[INFO] Score std deviation: 0.107
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 6 (60.0%)
+[INFO]   - Good (≥0.75): 3 (30.0%)
+[INFO]   - Fair (≥0.65): 0 (0.0%)
+[INFO]   - Poor (<0.65): 1 (10.0%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 2.20 years
+[INFO]   - Within 2 years: 8 (80.0%)
+[INFO]   - Within 5 years: 9 (90.0%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.823
+[INFO]   - Education: 0.850
+[INFO]   - Income: 0.948
+[INFO]   - Marital_status: 0.880
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 86 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 100 health records
+[INFO] Loaded 86 personas and 100 health records
+[WARNING] ⚠️  More records than personas. Some records will be unmatched.
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 86 personas × 100 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 86 personas → 100 health records
+[WARNING] More records than personas! This will result in some unmatched records.
+[WARNING] Consider generating more personas for better coverage.
+[INFO] ✅ Created 86 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 42 (48.8%)
+[INFO]   - Good (≥0.75): 10 (11.6%)
+[INFO]   - Fair (≥0.65): 1 (1.2%)
+[INFO]   - Poor (<0.65): 33 (38.4%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 86 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 86
+[INFO] Average compatibility score: 0.757
+[INFO] Median compatibility score: 0.846
+[INFO] Score std deviation: 0.171
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 42 (48.8%)
+[INFO]   - Good (≥0.75): 10 (11.6%)
+[INFO]   - Fair (≥0.65): 1 (1.2%)
+[INFO]   - Poor (<0.65): 33 (38.4%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 8.77 years
+[INFO]   - Within 2 years: 50 (58.1%)
+[INFO]   - Within 5 years: 52 (60.5%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.602
+[INFO]   - Education: 0.872
+[INFO]   - Income: 0.946
+[INFO]   - Marital_status: 0.871
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================

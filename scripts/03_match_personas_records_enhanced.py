@@ -555,11 +555,15 @@ def match_optimal_with_selection(
         quality_counts[metric['quality_category']] += 1
 
     total = len(match_quality_metrics)
-    logger.info(f"Quality distribution:")
-    logger.info(f"  - Excellent (≥0.85): {quality_counts['excellent']} ({quality_counts['excellent']/total*100:.1f}%)")
-    logger.info(f"  - Good (≥0.75): {quality_counts['good']} ({quality_counts['good']/total*100:.1f}%)")
-    logger.info(f"  - Fair (≥0.65): {quality_counts['fair']} ({quality_counts['fair']/total*100:.1f}%)")
-    logger.info(f"  - Poor (<0.65): {quality_counts['poor']} ({quality_counts['poor']/total*100:.1f}%)")
+    if total > 0:
+        logger.info(f"Quality distribution:")
+        logger.info(f"  - Excellent (≥0.85): {quality_counts['excellent']} ({quality_counts['excellent']/total*100:.1f}%)")
+        logger.info(f"  - Good (≥0.75): {quality_counts['good']} ({quality_counts['good']/total*100:.1f}%)")
+        logger.info(f"  - Fair (≥0.65): {quality_counts['fair']} ({quality_counts['fair']/total*100:.1f}%)")
+        logger.info(f"  - Poor (<0.65): {quality_counts['poor']} ({quality_counts['poor']/total*100:.1f}%)")
+    else:
+        logger.error("No matches created. Cannot compute quality distribution.")
+        logger.error("This may indicate insufficient personas or incompatible data.")
 
     return matches, match_quality_metrics
 

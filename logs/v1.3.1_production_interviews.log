@@ -1,0 +1,539 @@
+[INFO] Loading matched personas from data/matched/matched_personas.json
+[INFO] Loaded 10 matched pairs
+[INFO] Loading interview protocol from Script/interview_protocols/prenatal_care.json
+[INFO] Loaded protocol: Prenatal Care Interview Protocol
+[INFO] Creating AI client: openai / gpt-4o-mini
+[INFO] Starting Phase 4 interview batch: 10 interviews
+
+[1m[92m═══════════════════════════════════════════════════════════════[0m
+[1m[92m  Phase 4 Interview Batch[0m
+[1m[92m═══════════════════════════════════════════════════════════════[0m
+[97mProvider:[0m openai
+[97mModel:[0m gpt-4o-mini
+[97mProtocol:[0m Prenatal Care Interview Protocol
+[97mInterviews:[0m 10
+[1m[92m═══════════════════════════════════════════════════════════════[0m
+
+[INFO] Conducting interview 1/10
+
+[1m[94m━━━ Interview 1/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:50:28
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 83.8s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 29,278
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 2/10
+
+[1m[94m━━━ Interview 2/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:51:52
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 94.7s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 36,479
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 3/10
+
+[1m[94m━━━ Interview 3/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:53:26
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 97.5s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 42,260
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 4/10
+
+[1m[94m━━━ Interview 4/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:55:04
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 136.1s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 36,203
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 5/10
+
+[1m[94m━━━ Interview 5/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:57:20
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 115.6s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 33,893
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 6/10
+
+[1m[94m━━━ Interview 6/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 10:59:15
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 86.2s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 27,145
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 7/10
+
+[1m[94m━━━ Interview 7/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 11:00:42
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 173.9s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 41,858
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 8/10
+
+[1m[94m━━━ Interview 8/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 11:03:36
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 88.2s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 29,672
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 9/10
+
+[1m[94m━━━ Interview 9/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 11:05:04
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 103.0s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 39,151
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] Conducting interview 10/10
+
+[1m[94m━━━ Interview 10/10 ━━━[0m
+[INFO] Starting interview with 15 protocol questions
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Start:[0m 11:06:47
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 0 (Intro):[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 1/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 2/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 3/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 4/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 5/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 6/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 7/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 8/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 9/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 10/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 11/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 12/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 13/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 14/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+[INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[97mTurn 15/15:[0m €0.0000 | [93mCumulative: €0.0000[0m
+
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1mInterview Complete[0m
+[97mDuration:[0m 92.4s
+[97mTotal Turns:[0m 16
+[97mTotal Tokens:[0m 30,787
+[92m[1mTotal Cost:[0m $0.0000 USD / €0.0000 EUR
+[96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+
+[1m[96m═══════════════════════════════════════════════════════════════[0m
+[1m[96m  Batch Complete[0m
+[1m[96m═══════════════════════════════════════════════════════════════[0m
+[92m✅ Successful:[0m 10/10
+[91m❌ Failed:[0m 0/10
+
+
+[96m======================================================================[0m
+[96m[1m  Cost Monitoring Status[0m
+[96m======================================================================[0m
+
+[97mclaude-haiku-4-5:[0m
+  $0.0007 USD / €0.0006 EUR[91m[0m
+[97mgpt-4o-mini:[0m
+  $0.0005 USD / €0.0004 EUR[91m[0m
+[97mgrok-2-latest:[0m
+  $0.0006 USD / €0.0005 EUR[91m[0m
+
+[1mTotal: $0.0017 USD / €0.0016 EUR[0m
+[96m======================================================================[0m
+
+[INFO] Batch summary saved to outputs/v1.3.1_production_test/batch_summary.json

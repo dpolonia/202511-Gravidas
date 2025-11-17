@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T10:59:15.927338"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello, thank you for having me. I'm ready to answer your questions. Please go ahead.",
+      "timestamp": "2025-11-17T10:59:17.031735"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T10:59:17.031747"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Sure! My name is Emma, and I'm 20 years old. I live in a small town in Alabama, and I'm currently a college student, although I don't have a degree yet. I come from a low-income household, which makes things a bit tough for me financially. I rely on the local free clinic for my healthcare because I don\u2019t have insurance. Right now, I\u2019m dealing with a lot, especially because I recently found out I'm pregnant, and that\u2019s been really overwhelming for me. I don\u2019t have much support from my family, and I\u2019m not sure what to do about the pregnancy. I also have some health issues, like gingivitis and not feeling well lately. Overall, I guess you could say I\u2019m just trying to figure things out.",
+      "timestamp": "2025-11-17T10:59:25.017710"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T10:59:25.518035"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I found out I was pregnant about three months ago. It was quite a shock for me because I wasn\u2019t expecting it at all. I missed my period and took a home test, which confirmed it. I remember feeling a mix of emotions\u2014fear, confusion, and even a little excitement, but mostly uncertainty about what to do next. Since I\u2019m in college and don\u2019t have a stable job or income, it\u2019s been really stressful trying to figure out how I can handle this situation. Have you had any prenatal care yet?",
+      "timestamp": "2025-11-17T10:59:28.699816"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T10:59:29.200913"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I actually started seeking prenatal care pretty shortly after I found out I was pregnant. I went to the local free clinic because that\u2019s where I usually go for my health needs. The staff there were really kind, but I felt kind of out of place. Since I don\u2019t have insurance, I was worried about how much everything would cost. They did some basic checks, like confirming the pregnancy and checking my overall health. It felt a bit rushed, though. I could tell they were busy, and I didn\u2019t get to ask all the questions I had. They told me to come back for follow-ups, but I\u2019m nervous about keeping up with that since my situation is so unstable right now. How do you feel about the care you're receiving? Do you feel it's adequate for your needs?",
+      "timestamp": "2025-11-17T10:59:32.939456"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T10:59:33.441397"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I'm receiving my prenatal care at the local free clinic, and the staff there are generally friendly and supportive. I usually see a nurse practitioner who seems to know her stuff, but I haven\u2019t had a chance to build a strong relationship with her yet. Our appointments are often pretty short because they have so many patients to see. I appreciate their help, but I sometimes feel like I\u2019m just another number. I wish I could talk more about my concerns and get more personalized advice, especially about the pregnancy and my health overall. It can be a bit overwhelming, and I don\u2019t always feel like I can express everything I\u2019m going through. Do you think you\u2019ll be able to continue seeing them for your care?",
+      "timestamp": "2025-11-17T10:59:37.353981"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T10:59:37.854447"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I usually have prenatal appointments about once a month, but sometimes it feels like it\u2019s more rushed than I would like. When I go in, I check in at the front desk, and then I wait for my name to be called. Once I\u2019m in the exam room, the nurse usually takes my vitals and asks me a few questions about how I\u2019ve been feeling. Then the nurse practitioner comes in, and we go over any symptoms I might have or any concerns. They do some basic checks, like measuring my belly and listening for the baby\u2019s heartbeat, which is always a relief to hear. Most of the time, the appointments last around 15-20 minutes, and then I\u2019m out the door. I sometimes wish I had more time to ask questions or discuss my worries, especially since I\u2019m feeling so uncertain about everything. I guess I\u2019m just trying to make sure I\u2019m doing everything right for myself and the baby. Have you been able to discuss your lifestyle and any changes you might need to make during this pregnancy?",
+      "timestamp": "2025-11-17T10:59:41.857346"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T10:59:42.357453"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: So far, I haven't had any major complications during my pregnancy, but I do have some health concerns that worry me. I mentioned earlier that I have gingivitis, which my nurse practitioner said I should be careful about since it can affect my overall health and the pregnancy. I also get these sore throats sometimes, which I think might be from that acute viral pharyngitis I\u2019ve been dealing with. It makes me nervous because I don\u2019t want to risk anything for the baby. I know I need to make some changes to my lifestyle, like eating better and cutting back on smoking and drinking, but it\u2019s hard to stay motivated and figure out what\u2019s best when I\u2019m feeling overwhelmed. Have you had any discussions about your diet or lifestyle changes with your healthcare provider?",
+      "timestamp": "2025-11-17T10:59:46.751647"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T10:59:47.252066"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Right now, I\u2019m not taking any medications or supplements specifically for my pregnancy. I\u2019ve been advised to take prenatal vitamins, but I haven\u2019t started them yet because I\u2019m not sure where to get them without spending too much money. I also don\u2019t have a regular prescription for anything else, since most of my health issues are being managed at the free clinic. I know I should probably be taking better care of myself and looking into vitamins, but it feels overwhelming, especially with everything else I\u2019m dealing with. Have you had any guidance on what supplements or medications are safe for you during your pregnancy?",
+      "timestamp": "2025-11-17T10:59:51.324457"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T10:59:51.824756"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: My diet hasn\u2019t been the best, to be honest. I tend to eat a lot of convenience foods because they\u2019re cheaper and easier to make. I often skip meals or grab snacks that aren't very nutritious. I know I should be focusing on fruits, vegetables, and healthy proteins, but it\u2019s hard when I\u2019m busy with school and don\u2019t have a lot of money. Sometimes I just grab fast food or processed meals because they\u2019re more accessible. I\u2019ve heard that nutrition is really important during pregnancy, but I feel lost on how to make better choices. I haven\u2019t had a chance to discuss my diet in detail with my nurse practitioner, but I know I need to. Have you been able to access any resources or support for improving your nutrition?",
+      "timestamp": "2025-11-17T10:59:56.501518"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T10:59:57.001749"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I'm feeling a mix of emotions, honestly. Some days are better than others. I often feel anxious about the future\u2014about the baby, my education, and my financial situation. It's a lot to handle, and sometimes I feel really overwhelmed. I have moments where I feel excited about the possibility of being a mom, but then I think about how I don\u2019t have much support and how I\u2019m going to manage everything on my own. I get scared thinking about what it means to raise a child without a stable income or help from my family. There are also days when I just feel really sad and unsure about the whole situation. I wish I had someone to talk to who understands what I'm going through. Have you had any support systems in place, like friends or counseling, to help with your emotional well-being during this time?",
+      "timestamp": "2025-11-17T11:00:01.056594"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T11:00:01.557533"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I don\u2019t really have a strong support network right now. My family isn\u2019t really involved, and I feel a bit isolated. I have a few friends from college, but they\u2019re also dealing with their own stuff, so I don\u2019t want to burden them with my problems. Sometimes I talk to a friend who has a little more experience, but she\u2019s busy with her own life. I think I could really use someone to talk to, maybe a counselor or a support group, but I haven\u2019t looked into that yet. I just feel like I\u2019m navigating this all on my own, which is really tough. It would be nice to have someone to lean on, especially during such a big life change. Have you looked into any resources or programs that might provide support for expectant mothers in your area?",
+      "timestamp": "2025-11-17T11:00:09.202489"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T11:00:09.703237"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Honestly, I haven't put a lot of thought into a birth plan yet. It's all been so overwhelming with everything else going on in my life that I haven't really focused on the details of how I want the delivery to go. I guess I\u2019m just trying to make sure I\u2019m healthy and the baby is healthy first. I know I should probably start thinking about it, though. I\u2019ve heard that having a plan can help ease some anxiety, but I\u2019m not sure what my options are. I know I want to have a safe delivery, and I hope to be in a supportive environment, but the specifics are kind of a blur right now. Have you had any discussions with your healthcare provider about your options for delivery or any preferences you might want to express?",
+      "timestamp": "2025-11-17T11:00:16.020808"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T11:00:16.521045"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I\u2019ve mostly relied on the internet to learn about pregnancy and childbirth. I\u2019ve looked up websites, forums, and even some videos to get information on what to expect. Social media has also been a big source, where I follow accounts that focus on pregnancy and parenting. Sometimes I feel like I get a lot of mixed messages, though, and it can be hard to know what information is reliable. I wish I could talk to someone face-to-face who could guide me through everything and answer my questions more thoroughly. I haven\u2019t really found any books or resources that I feel comfortable with yet. Have you found any specific resources or recommendations that you think would be helpful for someone in my situation?",
+      "timestamp": "2025-11-17T11:00:22.955104"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T11:00:23.455617"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Managing the financial aspects of my pregnancy has been really stressful. Since I come from a low-income background, I don\u2019t have a lot of savings or support to fall back on. I rely on the free clinic for my healthcare, which helps with prenatal visits, but I\u2019m still worried about costs associated with the baby, like diapers, clothes, and other essentials. I\u2019ve been trying to save money wherever I can, but it\u2019s tough with school expenses and my day-to-day needs. Sometimes I think about getting a part-time job, but I\u2019m not sure how I would balance that with my studies and the pregnancy. I\u2019ve thought about applying for assistance programs for expectant mothers, but I haven\u2019t had the time or energy to look into it yet. I know I need to figure something out soon, though. Have you seen any programs or resources that could help with financial support for pregnant women?",
+      "timestamp": "2025-11-17T11:00:29.699217"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T11:00:30.199311"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: My pregnancy has definitely put a strain on my work situation, though I don't have a stable job right now. I used to have a part-time job, but I had to quit because I was feeling too overwhelmed with school and everything else going on. I\u2019m worried about finding a job again, especially now that I\u2019m pregnant. I think about how hard it would be to manage work, school, and taking care of a baby all at once. It makes me hesitant to look for something part-time because I don\u2019t want to overcommit myself, but I know I need to think about how to provide for a baby. I\u2019ve also thought about how some employers might not be understanding or supportive of my situation. Have you considered any job opportunities or resources that might support pregnant students in finding flexible work?",
+      "timestamp": "2025-11-17T11:00:35.082144"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T11:00:35.583171"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I\u2019ve thought a little about the postpartum period, but honestly, it feels a bit overwhelming to plan for right now. I know I\u2019ll need to adjust to life with a newborn, and I worry about how I\u2019ll manage everything on top of my studies. I\u2019ve heard that the first few weeks can be really tough, and I\u2019m concerned about how I\u2019ll feel emotionally and physically after giving birth. I\u2019d like to figure out some kind of support system for after the baby arrives, like maybe finding a local group for new moms or connecting with someone who can help. But I haven\u2019t really done much planning yet because I\u2019m just trying to focus on getting through the pregnancy first. It would be great to have a plan for things like childcare and how to balance my responsibilities, but right now, it feels like a lot. Have you been able to explore any resources or support systems for new mothers that could help during the postpartum period?",
+      "timestamp": "2025-11-17T11:00:41.647359"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T11:00:42.147497"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 369,
+        "output_tokens": 19,
+        "cost_usd": 4.0700000000000003e-07,
+        "cost_eur": 3.7444000000000006e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 416,
+        "output_tokens": 155,
+        "cost_usd": 7.259999999999999e-07,
+        "cost_eur": 6.679199999999999e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 595,
+        "output_tokens": 107,
+        "cost_usd": 8.09e-07,
+        "cost_eur": 7.4428e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 721,
+        "output_tokens": 161,
+        "cost_usd": 1.043e-06,
+        "cost_eur": 9.5956e-07
+      },
+      {
+        "turn": 4,
+        "input_tokens": 904,
+        "output_tokens": 143,
+        "cost_usd": 1.19e-06,
+        "cost_eur": 1.0948e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1072,
+        "output_tokens": 212,
+        "cost_usd": 1.4960000000000002e-06,
+        "cost_eur": 1.3763200000000002e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1301,
+        "output_tokens": 157,
+        "cost_usd": 1.6150000000000002e-06,
+        "cost_eur": 1.4858000000000002e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1472,
+        "output_tokens": 123,
+        "cost_usd": 1.7180000000000001e-06,
+        "cost_eur": 1.5805600000000001e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1612,
+        "output_tokens": 154,
+        "cost_usd": 1.92e-06,
+        "cost_eur": 1.7664e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 1781,
+        "output_tokens": 167,
+        "cost_usd": 2.115e-06,
+        "cost_eur": 1.9458e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 1969,
+        "output_tokens": 165,
+        "cost_usd": 2.2989999999999995e-06,
+        "cost_eur": 2.1150799999999997e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2154,
+        "output_tokens": 155,
+        "cost_usd": 2.464e-06,
+        "cost_eur": 2.26688e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 2328,
+        "output_tokens": 141,
+        "cost_usd": 2.6100000000000004e-06,
+        "cost_eur": 2.4012000000000004e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 2489,
+        "output_tokens": 184,
+        "cost_usd": 2.857e-06,
+        "cost_eur": 2.62844e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 2689,
+        "output_tokens": 163,
+        "cost_usd": 3.015e-06,
+        "cost_eur": 2.7738e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 2876,
+        "output_tokens": 191,
+        "cost_usd": 3.258e-06,
+        "cost_eur": 2.99736e-06
+      }
+    ],
+    "total_input_tokens": 24748,
+    "total_output_tokens": 2397,
+    "total_cost_usd": 2.9542000000000003e-05,
+    "total_cost_eur": 2.717864e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T10:59:15.927214",
+    "end_time": "2025-11-17T11:00:42.147510",
+    "duration_seconds": 86.220296
+  }
+}

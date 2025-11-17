@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T12:32:23.375021"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello, thank you for having me. I'm ready to answer your questions. \n\nTo start, can you tell me a bit about your general health and any medical conditions you have?",
+      "timestamp": "2025-11-17T12:32:24.573547"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T12:32:24.573558"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Sure! As I mentioned, my name is Ava, and I'm 30 years old. I live in suburban Atlanta and work as a barista, which keeps me busy but also means I'm on my feet a lot. I have a high school diploma, and while I enjoy my job, it doesn't pay a lot, so I'm in a lower-middle income bracket. I\u2019m currently single and don\u2019t have any kids, although I did have a miscarriage about a year ago. That was pretty tough for me. \n\nIn terms of my health, I don\u2019t have any chronic conditions, but I do have some occasional issues, like otitis media, which I've dealt with a few times. I\u2019m also underinsured, which makes it hard for me to access healthcare regularly. I try to stay healthy, but I lead a pretty sedentary lifestyle and smoke occasionally, which I know isn\u2019t great. Overall, I do my best to manage, but it can be challenging sometimes. \n\nIs there anything specific you\u2019d like to know about my health or experiences?",
+      "timestamp": "2025-11-17T12:32:29.522242"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T12:32:30.024958"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I found out I was pregnant about a year and a half ago. It was unexpected, but I was excited at the time. I remember taking the test and just feeling a rush of emotions. I had some plans for what to do next, but unfortunately, I had a miscarriage a little while later. It was really tough for me emotionally, and I didn't have anyone to talk to about it at the time. \n\nAfter the miscarriage, I wasn\u2019t really thinking about getting pregnant again. I\u2019m currently not planning for another pregnancy, mainly because I feel like I need to focus on my own health and stability first. \n\nIs there anything else you\u2019d like to know about my pregnancy experience or how I felt during that time?",
+      "timestamp": "2025-11-17T12:32:34.704165"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T12:32:35.204627"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I actually didn\u2019t seek prenatal care right away when I found out I was pregnant. I was overwhelmed and didn\u2019t know what to do, plus my access to healthcare is pretty limited because I'm underinsured. I think I waited about a month before I went to see a doctor. It felt really daunting since I wasn\u2019t sure what to expect.\n\nWhen I finally went, the experience was a mix of excitement and anxiety. The staff was nice, but I felt a bit out of place, like I didn\u2019t belong there since I was on my own and not sure about the whole process. They did some initial tests and gave me some information, which was helpful, but I didn\u2019t feel like I had a lot of support. \n\nAfter the miscarriage, I didn\u2019t really follow up with any healthcare. I felt lost and confused, and since I wasn\u2019t planning on getting pregnant again, I didn\u2019t see the point. \n\nHave you experienced any barriers to accessing healthcare since then, or do you feel there are specific things that could have made your experience better?",
+      "timestamp": "2025-11-17T12:32:39.847161"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T12:32:40.347413"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I didn\u2019t have a specific healthcare provider for my prenatal care since I only went for that one visit after I found out I was pregnant. The clinic I went to had different doctors and nurses, so I didn\u2019t really establish a relationship with anyone in particular. They were all professional and polite, but I didn\u2019t feel a strong connection with anyone. \n\nI think part of that was because I was feeling vulnerable after finding out I was pregnant and then experiencing the miscarriage. I didn\u2019t really feel comfortable opening up or asking questions, partly because I was worried about what they might think of my situation, especially being underinsured and single. \n\nSince then, I haven\u2019t really sought out any healthcare, so I don\u2019t have anyone currently providing care. I guess I\u2019m still trying to process everything, and without a clear plan for another pregnancy, I haven\u2019t felt the need to reach out.\n\nDo you have any other questions about my experiences or thoughts on that situation?",
+      "timestamp": "2025-11-17T12:32:44.605242"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T12:32:45.105377"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I didn't have any regular prenatal appointments since I only went to that one visit after I found out I was pregnant. I guess if I had continued with a pregnancy, a typical visit would have included things like checking my weight, blood pressure, and maybe an ultrasound or some blood tests. But since I ended up having a miscarriage shortly after that first visit, I didn\u2019t experience the routine check-ups that most pregnant women go through.\n\nThat initial visit was a bit overwhelming, to be honest. I remember sitting in the waiting room, feeling a mix of excitement and fear. Once I was called in, the nurse was nice and asked me a lot of questions about my health history. The doctor came in and did some tests, but it all felt so rushed. I had so many questions in my mind, but I didn\u2019t end up asking them because I felt a little intimidated. They gave me some pamphlets and information about what to expect during pregnancy, which was helpful, but I didn\u2019t feel like I had a good grasp on what was happening or what I should do next.\n\nIf I had been able to access regular appointments, I think I would have felt more reassured and supported throughout the pregnancy. But without insurance and being single, it just felt complicated to navigate everything.\n\nIs there anything specific you\u2019d like to know about what I might have experienced in a typical prenatal appointment, or any other aspects related to my care?",
+      "timestamp": "2025-11-17T12:32:51.005436"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T12:32:51.505741"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I didn't experience any major complications during my pregnancy itself since it was so short-lived. However, I did have a lot of anxiety and emotional distress after I found out I was pregnant and then went through the miscarriage. That was really tough for me mentally and emotionally. \n\nBefore I learned I was pregnant, I had some minor health issues, like my otitis media flaring up occasionally, but nothing that I felt impacted the pregnancy. I was just trying to manage my everyday health and stress levels while also dealing with the unexpected news.\n\nAfter the miscarriage, I did have some lingering feelings of sadness and confusion. I think I could have benefited from some support or counseling during that time, but, again, accessing that kind of care has been difficult for me. \n\nI guess you could say my biggest health concern has been more about my mental and emotional well-being rather than physical complications during the pregnancy itself. \n\nIs there anything specific you\u2019d like to ask about my experiences with health concerns or how I managed my emotional health after the pregnancy?",
+      "timestamp": "2025-11-17T12:32:57.588231"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T12:32:58.088616"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019m not currently taking any medications or supplements. After the miscarriage, I didn\u2019t really follow up with a healthcare provider to get any prescriptions or advice on what I should be taking. I know there are things that could help, especially for emotional support, but since I\u2019m underinsured and haven\u2019t been able to access regular healthcare, I\u2019ve been managing on my own. \n\nHonestly, I haven\u2019t really looked into supplements either. I\u2019ve heard that things like prenatal vitamins can be important during pregnancy, but since I'm not planning to get pregnant again, I haven\u2019t thought much about it. I do try to eat relatively healthy when I can, but I know my diet could be better.\n\nIs there anything else you\u2019d like to know about my current health situation or my experiences with medications?",
+      "timestamp": "2025-11-17T12:33:01.645131"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T12:33:02.145463"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancy, my diet was a bit all over the place. I tried to eat healthier, especially after finding out I was pregnant, but it was challenging with my busy work schedule and limited income. I focused on incorporating more fruits and vegetables, but I still found myself reaching for convenience foods a lot, like quick meals or snacks that weren\u2019t necessarily the best choices.\n\nI remember trying to drink more water and cut back on caffeine since I knew those were important during pregnancy. I didn\u2019t really have a consistent plan, though. I think I could have done better, especially with getting enough nutrients like iron and folic acid. I wasn\u2019t taking any prenatal vitamins at the time, mainly because I wasn\u2019t sure what I should be doing and didn\u2019t have guidance from a healthcare provider.\n\nAfter the miscarriage, I didn\u2019t really change my diet much. I\u2019ve been trying to eat healthier in general, but it\u2019s hard to stay motivated. I still struggle with knowing what\u2019s best for me, especially since I don\u2019t have regular check-ups or someone to talk to about my nutrition.\n\nDo you have any specific questions about my diet during pregnancy, or how I've been managing my nutrition since then?",
+      "timestamp": "2025-11-17T12:33:06.970991"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T12:33:07.472617"
+    },
+    {
+      "speaker": "Persona",
+      "text": "During my pregnancy, I felt a whirlwind of emotions. At first, I was really excited and hopeful when I found out I was pregnant. It felt like a new chapter in my life, and I had dreams about what it would be like to become a mother. But as the weeks went by, I started feeling anxious. I was overwhelmed by the changes happening in my body and the responsibility that was about to come. \n\nAfter I experienced the miscarriage, though, my emotions took a deeper turn. I felt a profound sense of loss and sadness. It was really tough to process, and I found myself feeling isolated because I didn\u2019t have anyone to talk to about it. I felt like I should have been happier, but the grief just weighed heavily on me. \n\nI also dealt with a lot of guilt and confusion. I kept wondering if I had done something wrong or if there was something I could have done differently. Those thoughts lingered, and I didn't have the support I needed to help work through them. \n\nOverall, my emotional health has been a struggle since the pregnancy and miscarriage. I think I could really benefit from talking to someone about it, but without access to regular healthcare or counseling, it\u2019s been hard to find that support.\n\nIs there anything specific you\u2019d like to know about how I managed my emotions during that time or any resources I might have considered?",
+      "timestamp": "2025-11-17T12:33:12.932307"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T12:33:13.432609"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I didn\u2019t have much of a support network during my pregnancy. I mean, I have friends and family, but I didn\u2019t feel comfortable talking to them about what I was going through. When I found out I was pregnant, I didn\u2019t really share the news with anyone until after I found out I had miscarried. I think part of that was my own fear of judgment or not wanting to burden them with my struggles. \n\nAfter the miscarriage, I felt even more isolated. I didn\u2019t reach out to friends for support because I didn\u2019t want to explain what happened or how I was feeling. I mostly kept to myself, which made everything feel heavier. I know that if I had someone to talk to\u2014like a close friend or family member\u2014it might have helped, but I just didn\u2019t want to share my pain.\n\nI\u2019ve thought about joining a support group or seeking counseling, especially for women who have experienced similar losses, but again, my access to resources is limited. I think having a solid support network could have made a significant difference in how I processed everything.\n\nDo you have any questions about my support system or how I might have navigated seeking support during that time?",
+      "timestamp": "2025-11-17T12:33:18.982120"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T12:33:19.482422"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I haven't really put much thought into a birth plan, especially since my experience with pregnancy was so brief. When I found out I was pregnant, I had some ideas about what I might want, like the possibility of a natural birth, but I never got far into planning. After the miscarriage, I haven't really focused on delivery preferences since I'm not currently planning to get pregnant again.\n\nIf I were to think about it, I would want to feel supported and have a calm environment. I think it would be important for me to have someone I trust with me during the process, maybe a close friend or family member, just so I wouldn\u2019t feel alone. I\u2019ve heard that having a good support system can make a big difference, but since I haven\u2019t really explored the idea of getting pregnant again, I haven't put much thought into the specifics.\n\nI also know that access to healthcare plays a huge role in the delivery process, and that\u2019s something I worry about given my current situation with being underinsured. I would want to be in a place where I felt safe and had access to good care, but navigating that feels overwhelming right now.\n\nIs there anything specific you\u2019d like to know about my thoughts on a birth plan or preferences for delivery?",
+      "timestamp": "2025-11-17T12:33:24.311213"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T12:33:24.811507"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I\u2019ve mostly relied on the internet to learn about pregnancy and childbirth. I\u2019ve done some searching on websites like What to Expect and some parenting forums where other women share their experiences. I found it helpful to read different perspectives, but there\u2019s so much information out there that it can also be overwhelming. Sometimes it\u2019s hard to know which sources are trustworthy.\n\nI also remember looking at some pamphlets and brochures that I received during that one visit to the clinic. They provided some basic information about pregnancy and what to expect, but again, it was pretty general and didn\u2019t address my specific concerns or questions.\n\nHonestly, since I didn\u2019t have a regular healthcare provider, I missed having someone who could guide me or answer my questions directly. I think if I had access to a support group or a counselor, that would have been really beneficial too, as I could have learned from others who were going through similar experiences. \n\nI\u2019ve also thought about checking out books on pregnancy and parenting, but I haven\u2019t gotten around to it yet. With my busy work schedule and everything, it\u2019s been hard to find the time to dive deeper into those resources. \n\nIs there anything specific you\u2019d like to know about the information I found or how I might have used those resources?",
+      "timestamp": "2025-11-17T12:33:31.222912"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T12:33:31.723060"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I didn\u2019t have a long-term pregnancy experience, I haven\u2019t had to manage many financial aspects related to preparing for a baby. However, when I found out I was pregnant, I did start thinking about the costs involved, like medical bills, baby supplies, and potential childcare. \n\nThe financial part was definitely daunting, especially considering I\u2019m underinsured and work in a job that doesn\u2019t pay a lot. I worried about how I would afford prenatal care and what kind of support I could get. I know that having a baby involves a lot of expenses, and it was overwhelming to think about how I would manage that on my income.\n\nAfter the miscarriage, I didn\u2019t really have to think about those financial aspects anymore, but I still feel anxious about the future. If I were to get pregnant again, I would definitely need to make a plan and figure out how to budget for everything, including healthcare and baby needs. I think I would have to look into community resources or programs that could help with costs, but not having a safety net makes it challenging.\n\nI still think about how important it is to be prepared financially if I ever consider having a baby again, but without consistent income and support, it feels like a big hurdle.\n\nDo you have any specific questions about the financial aspects of my experience or how I might prepare in the future?",
+      "timestamp": "2025-11-17T12:33:37.200112"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T12:33:37.702261"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: My pregnancy didn\u2019t really affect my work situation too much because it was so short-lived. When I found out I was pregnant, I was a bit worried about how I would manage my job as a barista, especially with the physical demands of being on my feet all day. I thought about how I might need to adjust my schedule or take breaks more often, but I didn\u2019t end up having to deal with those changes since the pregnancy ended in a miscarriage.\n\nThat said, I do think about how having a baby would impact my work life in the future. I would have to consider things like maternity leave, childcare, and how to balance my job with being a parent. With my current income, I know it would be a struggle to afford childcare, which adds more pressure. \n\nI also worry about how my employer would respond if I needed time off or had to make accommodations. The barista job can be physically demanding, and I\u2019m not sure how understanding they would be if I had to make changes to my work schedule.\n\nOverall, while my pregnancy didn\u2019t have immediate effects on my work, it definitely made me think about the future and what it would mean for my employment if I were to get pregnant again. \n\nDo you have any questions about how I see my work situation relating to pregnancy or any specific concerns I might have?",
+      "timestamp": "2025-11-17T12:33:44.675558"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T12:33:45.176110"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Honestly, I haven't put much thought into the postpartum period since my experience with pregnancy was so brief and I\u2019m not currently planning to get pregnant again. However, I do think about what it might be like if I were to have a baby in the future. \n\nI imagine that the postpartum period would be a challenging time, both physically and emotionally. I\u2019ve heard that recovery can be tough, and I know that there are a lot of adjustments to make when it comes to caring for a newborn. I would want to have some kind of support system in place, whether that\u2019s family or friends who could help out. \n\nOne of my concerns is about accessing healthcare after giving birth. I feel like I would need to have regular check-ups and support for any emotional challenges that might come up, especially given my previous experience with anxiety and the miscarriage. But without insurance or consistent healthcare access, I worry about how I would manage that.\n\nI\u2019ve also thought about the practical side of things, like how I would balance work and caring for a baby. I know that maternity leave can vary by job, and I\u2019m not sure how my employer would handle that. I would want to make sure I had a plan for childcare, but again, that feels overwhelming given my financial situation.\n\nOverall, while I haven\u2019t made any concrete plans for the postpartum period, I do recognize that it would be a crucial time that would require a lot of support and preparation. \n\nIs there anything specific you\u2019d like to know about my thoughts on the postpartum period or how I might prepare if I were to have a baby in the future?",
+      "timestamp": "2025-11-17T12:33:52.016390"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T12:33:52.516558"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 344,
+        "output_tokens": 36,
+        "cost_usd": 4.16e-07,
+        "cost_eur": 3.8272000000000003e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 408,
+        "output_tokens": 212,
+        "cost_usd": 8.32e-07,
+        "cost_eur": 7.654400000000001e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 644,
+        "output_tokens": 146,
+        "cost_usd": 9.360000000000001e-07,
+        "cost_eur": 8.611200000000001e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 809,
+        "output_tokens": 213,
+        "cost_usd": 1.235e-06,
+        "cost_eur": 1.1362e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 1044,
+        "output_tokens": 194,
+        "cost_usd": 1.432e-06,
+        "cost_eur": 1.3174400000000001e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1263,
+        "output_tokens": 287,
+        "cost_usd": 1.837e-06,
+        "cost_eur": 1.69004e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1567,
+        "output_tokens": 208,
+        "cost_usd": 1.983e-06,
+        "cost_eur": 1.82436e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1789,
+        "output_tokens": 159,
+        "cost_usd": 2.1070000000000003e-06,
+        "cost_eur": 1.93844e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1965,
+        "output_tokens": 241,
+        "cost_usd": 2.4470000000000005e-06,
+        "cost_eur": 2.2512400000000004e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2221,
+        "output_tokens": 277,
+        "cost_usd": 2.775e-06,
+        "cost_eur": 2.5530000000000004e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2519,
+        "output_tokens": 239,
+        "cost_usd": 2.997e-06,
+        "cost_eur": 2.75724e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2778,
+        "output_tokens": 249,
+        "cost_usd": 3.2760000000000005e-06,
+        "cost_eur": 3.0139200000000006e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 3046,
+        "output_tokens": 254,
+        "cost_usd": 3.554e-06,
+        "cost_eur": 3.2696800000000005e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 3320,
+        "output_tokens": 273,
+        "cost_usd": 3.866e-06,
+        "cost_eur": 3.55672e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3609,
+        "output_tokens": 272,
+        "cost_usd": 4.153e-06,
+        "cost_eur": 3.82076e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 3905,
+        "output_tokens": 326,
+        "cost_usd": 4.557e-06,
+        "cost_eur": 4.19244e-06
+      }
+    ],
+    "total_input_tokens": 31231,
+    "total_output_tokens": 3586,
+    "total_cost_usd": 3.8403e-05,
+    "total_cost_eur": 3.533076e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T12:32:23.374869",
+    "end_time": "2025-11-17T12:33:52.516587",
+    "duration_seconds": 89.141718
+  }
+}

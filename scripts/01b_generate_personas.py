@@ -74,30 +74,46 @@ logger = logging.getLogger(__name__)
 
 
 class PersonaGenerator:
-    """Generate realistic personas using Claude."""
+    """Generate realistic personas using AI models."""
 
     def __init__(self, config: Dict[str, Any]):
-        """Initialize the persona generator."""
-        # Get API key - expand environment variables
-        config_key = config.get('api_keys', {}).get('anthropic', {}).get('api_key', '')
-        
-        # Expand environment variables in config
-        if config_key and config_key.startswith('${') and config_key.endswith('}'):
-            env_var_name = config_key[2:-1]  # Remove ${ and }
-            config_key = os.getenv(env_var_name, '')
-        
-        env_key = os.getenv('ANTHROPIC_API_KEY', '')
+        """Initialize the persona generator with configurable provider and model."""
+        # Get provider and model from config (with defaults)
+        self.provider = config.get('AI_PROVIDER', 'anthropic').lower()
+        self.model = config.get('AI_MODEL')
 
-        if config_key and not config_key.startswith('your-'):
-            api_key = config_key
+        # Get API key based on provider
+        if self.provider == 'anthropic':
+            config_key = config.get('api_keys', {}).get('anthropic', {}).get('api_key', '')
+
+            # Expand environment variables in config
+            if config_key and config_key.startswith('${') and config_key.endswith('}'):
+                env_var_name = config_key[2:-1]  # Remove ${ and }
+                config_key = os.getenv(env_var_name, '')
+
+            env_key = os.getenv('ANTHROPIC_API_KEY', '')
+
+            if config_key and not config_key.startswith('your-'):
+                api_key = config_key
+            else:
+                api_key = env_key
+
+            if not api_key:
+                raise ValueError("No Anthropic API key found in config or environment")
+
+            self.client = anthropic.Anthropic(api_key=api_key)
+            self.model = self.model or "claude-3-haiku-20240307"  # Default model
+            logger.info(f"Initialized Anthropic client with model: {self.model}")
         else:
-            api_key = env_key
-
-        if not api_key:
-            raise ValueError("No Anthropic API key found in config or environment")
-
-        self.client = anthropic.Anthropic(api_key=api_key)
-        self.model = "claude-3-haiku-20240307"  # Fast and cheap for generation
+            # TODO: Add support for other providers (OpenAI, Google, xAI)
+            # For now, fall back to Anthropic
+            logger.warning(f"Provider '{self.provider}' not yet supported, falling back to Anthropic")
+            self.provider = 'anthropic'
+            api_key = os.getenv('ANTHROPIC_API_KEY', '')
+            if not api_key:
+                raise ValueError("No Anthropic API key found")
+            self.client = anthropic.Anthropic(api_key=api_key)
+            self.model = "claude-3-haiku-20240307"
 
     def generate_batch(self, count: int, batch_size: int = 100) -> str:
         """Generate a batch of personas with healthcare dimensions."""
@@ -724,7 +740,7 @@ def extract_preconception_care(text: str) -> bool:
 
 
 def parse_generated_personas(text: str, start_id: int) -> List[Dict[str, Any]]:
-    """Parse generated persona text into structured format."""
+    """Parse generated persona text into structured format with robust error handling."""
     personas = []
 
     lines = text.strip().split('\n')
@@ -737,22 +753,34 @@ def parse_generated_personas(text: str, start_id: int) -> List[Dict[str, Any]]:
         match = re.match(r'^(\d+)\.\s+(.+)$', line.strip())
         if match:
             # Save previous persona if exists
-            if current_text:
-                persona = parse_single_persona(current_text, start_id + current_number - 1)
-                if persona:
-                    personas.append(persona)
+            if current_text and current_number is not None:  # Explicit None check
+                try:
+                    persona = parse_single_persona(current_text, start_id + current_number - 1)
+                    if persona:
+                        personas.append(persona)
+                except Exception as e:
+                    logger.warning(f"Failed to parse persona {current_number}: {e}")
+                    # Continue processing remaining personas
 
             current_number = int(match.group(1))
             current_text = match.group(2)
-        else:
+        elif line.strip():  # Only add non-empty lines
             # Continuation of current persona
             current_text += " " + line.strip()
 
     # Don't forget last persona
-    if current_text and current_number:
-        persona = parse_single_persona(current_text, start_id + current_number - 1)
-        if persona:
-            personas.append(persona)
+    if current_text and current_number is not None:  # Explicit None check
+        try:
+            persona = parse_single_persona(current_text, start_id + current_number - 1)
+            if persona:
+                personas.append(persona)
+        except Exception as e:
+            logger.warning(f"Failed to parse final persona {current_number}: {e}")
+
+    if not personas:
+        logger.error("No personas could be parsed from generated text. Check LLM output format.")
+    else:
+        logger.info(f"Successfully parsed {len(personas)} personas")
 
     return personas
 

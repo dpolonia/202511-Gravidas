@@ -1,0 +1,357 @@
+{
+  "timestamp": "2025-11-17T14:07:05.652743",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "protocol": "Prenatal Care Interview Protocol",
+  "interviews_planned": 86,
+  "interviews_successful": 86,
+  "interviews_failed": 0,
+  "total_cost_usd": 0.0038830520000000053,
+  "total_cost_eur": 0.003572407840000005,
+  "interviews": [
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.6309640000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.279432e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.727012e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.427184e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.504188e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.7097680000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.783868e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.110008000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.238216e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.819012000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.95458e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.347092e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.834284e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.46978e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.6563559999999994e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.044832e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.8307880000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.652492e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.8287640000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.739892e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.979092000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.520564e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.628624e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.1773520000000004e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.849740000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.377780000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.841092e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 6.191416e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.736448e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.912432e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.191428e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.508788e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.133468e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.533076e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.163828e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.180848e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.8909559999999995e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.54292e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.5230480000000006e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.995652000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.126252e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.541304e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.125372e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.494988e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.609988e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 7.926168000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.313288e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.5353760000000004e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.172528e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.993772e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.072564000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.276028e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.1257920000000006e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 5.407208000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.7007919999999997e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.7515359999999998e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.0703560000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.9808e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.2518320000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.0683320000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.9492440000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.9898160000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.9891199999999995e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.043728e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.0254200000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.285044e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.9820360000000006e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.9111559999999998e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.729588e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.7344640000000004e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.081724e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.6190960000000004e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.68272e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.7518120000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.38652e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.169492e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.6674480000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.4615000000000007e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.711832000000001e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.168572e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.3079e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.9114319999999998e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.972652e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.739616e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.6925120000000005e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.754520000000001e-05
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 86 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 100 health records
+[INFO] Loaded 86 personas and 100 health records
+[WARNING] ⚠️  More records than personas. Some records will be unmatched.
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 86 personas × 100 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 86 personas → 100 health records
+[WARNING] More records than personas! This will result in some unmatched records.
+[WARNING] Consider generating more personas for better coverage.
+[INFO] ✅ Created 86 optimal matches
+[INFO] Quality distribution:
+[INFO]   - Excellent (≥0.85): 42 (48.8%)
+[INFO]   - Good (≥0.75): 10 (11.6%)
+[INFO]   - Fair (≥0.65): 1 (1.2%)
+[INFO]   - Poor (<0.65): 33 (38.4%)
+[INFO] Creating matched pairs with quality metrics...
+[INFO] ✅ Saved 86 matched pairs to data/matched/matched_personas.json
+[INFO] ✅ Saved quality metrics to data/matched/match_quality_metrics.json
+[INFO] ✅ Saved statistics to data/matched/matching_statistics.json
+[INFO] ============================================================
+[INFO] MATCHING QUALITY REPORT
+[INFO] ============================================================
+[INFO] Total matches: 86
+[INFO] Average compatibility score: 0.757
+[INFO] Median compatibility score: 0.846
+[INFO] Score std deviation: 0.171
+[INFO] 
+[INFO] Quality Distribution:
+[INFO]   - Excellent (≥0.85): 42 (48.8%)
+[INFO]   - Good (≥0.75): 10 (11.6%)
+[INFO]   - Fair (≥0.65): 1 (1.2%)
+[INFO]   - Poor (<0.65): 33 (38.4%)
+[INFO] 
+[INFO] Age Matching:
+[INFO]   - Average age difference: 8.77 years
+[INFO]   - Within 2 years: 50 (58.1%)
+[INFO]   - Within 5 years: 52 (60.5%)
+[INFO] 
+[INFO] Score Breakdown (Component Averages):
+[INFO]   - Age: 0.602
+[INFO]   - Education: 0.872
+[INFO]   - Income: 0.946
+[INFO]   - Marital_status: 0.871
+[INFO]   - Occupation: 0.700
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] ✅ ENHANCED MATCHING COMPLETED SUCCESSFULLY
+[INFO] ============================================================

@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T13:02:02.393585"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello! Thank you for having me. I'm ready to answer your questions. \n\nCould you please tell me about your current health status and any medical conditions you might have?",
+      "timestamp": "2025-11-17T13:02:03.782933"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T13:02:03.783055"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Sure! I'm Charlotte, and I recently graduated high school. I live in a small town in rural Kentucky, and I'm currently trying to figure out what I want to do next. I've been working on my studies, but sometimes I feel a lot of pressure with school and social stuff. I do my best to stay active and eat healthy, but I think my stress levels are pretty high right now. \n\nIn terms of health, I\u2019ve had a few issues recently, like a sore throat that turned out to be strep, and I\u2019m dealing with some dental problems like gingivitis and cavities. I have Medicaid for some health access, but I still feel limited in what I can get. I'm not planning on getting pregnant right now, but I have some pregnancy-related conditions that I know I need to be aware of. \n\nI hope that gives you a good picture of where I\u2019m at!",
+      "timestamp": "2025-11-17T13:02:07.190595"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T13:02:07.691321"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I haven\u2019t been pregnant yet, but I\u2019m aware of some conditions related to pregnancy because I want to be informed about my health. I\u2019ve had conversations with some of my friends who are pregnant or have been pregnant, and it\u2019s made me realize how important it is to understand what to expect if I ever do decide to have kids in the future. \n\nI guess I just want to make sure I\u2019m taking care of myself now so I\u2019m prepared later on. It\u2019s a lot to think about since I\u2019m not planning on it right now, but I know it\u2019s something I need to keep in mind. \n\nDo you have any specific questions about what I\u2019ve learned or what concerns I might have?",
+      "timestamp": "2025-11-17T13:02:11.557274"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T13:02:12.058304"
+    },
+    {
+      "speaker": "Persona",
+      "text": "I haven\u2019t sought prenatal care yet since I\u2019m not pregnant, but I\u2019ve done some research about it. I\u2019ve read that it\u2019s really important for a healthy pregnancy, and I\u2019ve heard from friends that starting care early can help with a lot of things. \n\nI think if I were to get pregnant, I would probably try to find a clinic that accepts Medicaid, but I know that access can be an issue in my area. I\u2019d be concerned about the availability of services since I\u2019ve heard that not all places have the resources they need, especially in rural areas. \n\nIt feels a bit overwhelming to think about, but I want to make sure I would have support and the right information if I ever do decide to have a baby. Do you think that\u2019s typical for someone my age, or do most people have different experiences?",
+      "timestamp": "2025-11-17T13:02:15.998118"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T13:02:16.498353"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I don\u2019t have a healthcare provider specifically for prenatal care. However, I do see a general practitioner when I need to, mainly for my other health issues like my throat and dental problems. My experiences with healthcare providers have been mixed. \n\nI\u2019ve had some good interactions where I felt listened to and understood, but there have also been times where I felt rushed or like my concerns weren\u2019t fully addressed. I think it\u2019s really important to have a provider that you trust, especially when it comes to something as significant as pregnancy. \n\nIf I were to get pregnant, I would want someone who could provide me with clear information and support throughout the process. I would probably try to build a relationship with a provider before that happens so I could feel more comfortable and confident in their care. \n\nHave you noticed if young women in rural areas often face challenges in finding supportive healthcare providers?",
+      "timestamp": "2025-11-17T13:02:20.607101"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T13:02:21.107407"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I don\u2019t have any prenatal appointments to share. However, I\u2019ve read that regular visits during pregnancy are really important for monitoring both the mother and the baby\u2019s health. I\u2019ve heard that a typical prenatal appointment might include checking your weight, blood pressure, and the baby\u2019s heartbeat, as well as discussing any concerns you might have.\n\nIf I were to get pregnant, I would expect those visits to happen more frequently as the pregnancy progresses. I\u2019ve heard that in the beginning, appointments might be spaced out a bit more, but they can get closer together as you get closer to your due date. \n\nI think it would be helpful to have a checklist or some kind of guide to know what to expect during those visits. I imagine it could be a little nerve-wracking, but also exciting to hear the baby\u2019s heartbeat for the first time! \n\nDo you have any other insights about what typically happens during prenatal appointments?",
+      "timestamp": "2025-11-17T13:02:26.934953"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T13:02:27.435118"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I haven\u2019t been pregnant yet, I don\u2019t have any personal experiences with health concerns or complications during pregnancy. However, I\u2019ve heard about some common issues that can arise, like gestational diabetes or preeclampsia, from friends and family. \n\nI know that it can be really important to monitor your health closely during pregnancy, especially if there are any pre-existing conditions or complications. I want to be aware of those possibilities so that if I do decide to get pregnant in the future, I can be proactive in managing my health. \n\nI think it would be really helpful to have a healthcare provider who can guide me through any potential concerns and help me understand how to minimize risks. I\u2019d be interested to learn more about how to prepare my body and mind for a healthy pregnancy, especially since I know stress can play a big role in overall health. \n\nDo you have any advice on how to prepare for a healthy pregnancy, even if I\u2019m not planning to get pregnant right now?",
+      "timestamp": "2025-11-17T13:02:34.514738"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T13:02:35.020940"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Right now, I\u2019m not on any specific medications or supplements. However, I do have some dental issues like gingivitis and cavities that might require treatment soon. I haven't been prescribed any medications for those yet, but I know I need to get that checked out.\n\nAs for supplements, I\u2019ve heard that prenatal vitamins are really important for women who are pregnant or planning to become pregnant. I haven\u2019t started taking any since I\u2019m not currently trying to get pregnant, but I\u2019m definitely considering it for the future. I think having the right nutrients is essential for a healthy pregnancy, especially folic acid. \n\nIf I were to get pregnant, I would want to discuss with a healthcare provider about what vitamins or supplements would be best for me at that time. I want to make sure I'm doing everything I can for my health and the baby\u2019s health if that time comes. \n\nDo you have recommendations on when to start taking prenatal vitamins or what specific ones might be beneficial?",
+      "timestamp": "2025-11-17T13:02:42.008414"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T13:02:42.509294"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I can\u2019t speak from personal experience about diet and nutrition during pregnancy. However, I\u2019ve done some reading and heard from friends that nutrition is super important for both the mother and the baby. \n\nI know that a balanced diet with plenty of fruits, vegetables, whole grains, and proteins is essential. I\u2019ve also learned that during pregnancy, it\u2019s important to get enough calcium, iron, and folic acid, which can help support the baby\u2019s development. \n\nRight now, I try to eat fairly healthily, but I know I could improve. Sometimes, with my busy schedule and stress from school, I end up grabbing quick snacks or fast food, which isn\u2019t the best. If I were to get pregnant, I\u2019d want to focus more on meal planning and preparing healthy meals to make sure I\u2019m getting all the nutrients I need.\n\nI\u2019ve also heard that staying hydrated is really important, so I try to drink plenty of water. Do you have any specific dietary recommendations for someone who might be planning for a healthy pregnancy?",
+      "timestamp": "2025-11-17T13:02:47.921124"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T13:02:48.421340"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I can\u2019t speak to how I\u2019ve felt emotionally during a pregnancy. However, I\u2019ve heard from friends and read that pregnancy can bring a mix of emotions, from excitement to anxiety. \n\nI think if I were to get pregnant, I would be concerned about how I\u2019d handle the stress and changes that come with it. Right now, I experience a lot of stress from school and social pressures, so I can imagine that being pregnant could add another layer of emotional complexity. \n\nI know it\u2019s important to have a good support system in place, whether it\u2019s family, friends, or a partner, to help navigate those feelings. I\u2019ve also read that talking to a healthcare provider about mental health during pregnancy is crucial. If I were to become pregnant, I\u2019d want to make sure I had strategies in place to manage stress and seek help if I needed it.\n\nDo you have any insights on how to promote emotional well-being during pregnancy or resources that might be helpful?",
+      "timestamp": "2025-11-17T13:02:53.159369"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T13:02:53.659686"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I don\u2019t have a support network specifically for that. However, I do have a close group of friends and family who I know I could turn to if I ever needed support during a pregnancy. My family has always been there for me, and I think they would be really understanding and helpful if I were to get pregnant. \n\nI also have some friends who have gone through pregnancy or are planning to, and I think talking to them would be really valuable. They could share their experiences and what kind of support they found helpful. I feel like having a good support network is essential for dealing with the ups and downs of pregnancy.\n\nI know that emotional support is important, but I also think practical support matters too\u2014like help with baby-related tasks or childcare if I needed it. I\u2019d want to have open conversations with my support system about what I might need if that time comes. \n\nDo you have any advice on how to build a strong support network for someone who might be going through pregnancy?",
+      "timestamp": "2025-11-17T13:02:58.449759"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T13:02:58.950000"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I haven\u2019t been pregnant yet, I don\u2019t have a specific birth plan or preferences for delivery. However, I have thought about it a bit, especially after hearing friends talk about their experiences. I know that it\u2019s important to have a plan in place and to communicate your wishes to your healthcare provider.\n\nI think I would prefer a supportive environment, maybe with a midwife or a doctor who respects my choices. I\u2019ve heard that some women like to have a more natural birth experience, while others may opt for pain relief options. Personally, I think I would want to explore my options and understand the pros and cons of each choice. \n\nI also believe that having my support system with me during delivery would be really important. I\u2019d want someone I trust by my side to help advocate for me and provide emotional support. I guess I would need to learn more about what\u2019s available in my area, especially since rural healthcare options can sometimes be limited.\n\nDo you have any suggestions on what to consider when planning for a birth or how to approach discussions with healthcare providers about my preferences?",
+      "timestamp": "2025-11-17T13:03:03.946493"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T13:03:04.446847"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: I've gathered information about pregnancy and childbirth from a variety of sources. One of the main ways I learn is through talking to friends who have been pregnant or are planning to get pregnant. Their personal experiences have been really insightful and have helped me understand what to expect.\n\nI've also done some research online, looking up reputable websites and articles about pregnancy health, prenatal care, and childbirth. Websites like the CDC and Mayo Clinic have been helpful in providing evidence-based information. I\u2019ve read a few books on pregnancy that friends have recommended, which cover everything from prenatal nutrition to labor and delivery.\n\nAdditionally, I follow some health-related social media accounts that share tips and resources for women\u2019s health. I think it\u2019s beneficial to have a mix of personal stories and professional advice to get a well-rounded understanding.\n\nIf I were to get pregnant, I would want to keep learning and maybe even attend some classes or workshops about childbirth and parenting. What do you think are the best resources for someone in my situation who wants to prepare for a future pregnancy?",
+      "timestamp": "2025-11-17T13:03:09.865088"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T13:03:10.366789"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I haven\u2019t had to think much about the financial aspects of pregnancy or preparing for a baby. However, I know that finances can be a major concern for many people when it comes to having children. \n\nIf I were to get pregnant, I would definitely want to take a close look at my budget and see how I could prepare financially. I know that having a baby involves a lot of expenses, from medical care to baby supplies, and I would want to ensure that I could provide for a child.\n\nRight now, since I have Medicaid for some healthcare access, I would hope that it would cover some of the prenatal care costs if I ever needed it. But I\u2019m aware that there can be limitations based on income and location. I think I would also look into community resources or programs that may help with expenses related to pregnancy and childcare.\n\nI feel like having a financial plan in place would help reduce some of the stress that comes with pregnancy. I might even consider talking to a financial advisor or someone who has experience to get advice on how to budget for a baby. \n\nDo you have any tips on how to create a financial plan for someone considering pregnancy, especially for someone in a rural area with limited resources?",
+      "timestamp": "2025-11-17T13:03:17.211174"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T13:03:17.711568"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I\u2019m not currently pregnant, I haven\u2019t experienced any changes to my work or employment situation related to pregnancy. However, I know that for many women, pregnancy can significantly impact their employment, whether it\u2019s through maternity leave, the need for flexible hours, or even the decision to stay in a job or pursue a different path.\n\nIf I were to get pregnant, I would be concerned about how I could manage work and a baby at the same time, especially since I\u2019m just starting to think about my career options. I know that balancing work and family can be challenging, and I\u2019d want to make sure that I have a supportive employer and access to resources like maternity leave.\n\nI\u2019ve heard that in some rural areas, job options can be limited, which might make it even harder to find a supportive work environment. If I do decide to start a family in the future, I would want to consider all these factors carefully, including how to communicate my needs to my employer and what rights I have regarding maternity leave.\n\nDo you have any insights on how to navigate work and pregnancy, especially for someone who may be just starting their career?",
+      "timestamp": "2025-11-17T13:03:25.789184"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T13:03:26.289343"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Persona: Since I haven\u2019t been pregnant yet, I haven\u2019t put together a detailed plan for the postpartum period. However, I\u2019ve definitely thought about what that time might look like and what I would need to prepare for. I know that the postpartum period can be a significant adjustment, both physically and emotionally.\n\nI would want to ensure that I have support from my family and friends after the baby arrives. I think having someone to help with household tasks or just to provide emotional support would be really helpful. I\u2019ve heard that it\u2019s common for new parents to experience a range of emotions after childbirth, so having a strong support network would be important for me.\n\nI also want to make sure I have access to healthcare during that time, especially for things like postpartum checkups and mental health support. I\u2019ve read that it\u2019s crucial to take care of your mental health after having a baby, and I\u2019d want to be proactive about that. \n\nAdditionally, I\u2019ve thought about the practical aspects, like how to manage feeding, whether it\u2019s breastfeeding or formula, and how to take care of myself while adjusting to the new responsibilities of being a parent. I think it would be a big learning curve, and I want to be as prepared as possible.\n\nDo you have any advice on what new parents should consider for the postpartum period or what resources might be beneficial for support during that time?",
+      "timestamp": "2025-11-17T13:03:34.110958"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T13:03:34.611133"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 338,
+        "output_tokens": 34,
+        "cost_usd": 4.06e-07,
+        "cost_eur": 3.7352e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 400,
+        "output_tokens": 180,
+        "cost_usd": 7.600000000000001e-07,
+        "cost_eur": 6.992000000000001e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 604,
+        "output_tokens": 143,
+        "cost_usd": 8.900000000000001e-07,
+        "cost_eur": 8.188000000000001e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 766,
+        "output_tokens": 169,
+        "cost_usd": 1.104e-06,
+        "cost_eur": 1.01568e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 957,
+        "output_tokens": 185,
+        "cost_usd": 1.327e-06,
+        "cost_eur": 1.22084e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1167,
+        "output_tokens": 195,
+        "cost_usd": 1.557e-06,
+        "cost_eur": 1.43244e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1379,
+        "output_tokens": 203,
+        "cost_usd": 1.785e-06,
+        "cost_eur": 1.6422000000000001e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1596,
+        "output_tokens": 197,
+        "cost_usd": 1.99e-06,
+        "cost_eur": 1.8308000000000001e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1810,
+        "output_tokens": 217,
+        "cost_usd": 2.244e-06,
+        "cost_eur": 2.06448e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2042,
+        "output_tokens": 204,
+        "cost_usd": 2.4500000000000003e-06,
+        "cost_eur": 2.2540000000000004e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2267,
+        "output_tokens": 209,
+        "cost_usd": 2.685e-06,
+        "cost_eur": 2.4702e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2496,
+        "output_tokens": 220,
+        "cost_usd": 2.936e-06,
+        "cost_eur": 2.70112e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 2735,
+        "output_tokens": 207,
+        "cost_usd": 3.149e-06,
+        "cost_eur": 2.89708e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 2962,
+        "output_tokens": 253,
+        "cost_usd": 3.4679999999999997e-06,
+        "cost_eur": 3.1905599999999997e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3231,
+        "output_tokens": 231,
+        "cost_usd": 3.693e-06,
+        "cost_eur": 3.39756e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 3486,
+        "output_tokens": 277,
+        "cost_usd": 4.04e-06,
+        "cost_eur": 3.7168000000000006e-06
+      }
+    ],
+    "total_input_tokens": 28236,
+    "total_output_tokens": 3124,
+    "total_cost_usd": 3.4484000000000004e-05,
+    "total_cost_eur": 3.172528e-05
+  },
+  "metadata": {
+    "model": "gpt-4o-mini",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T13:02:02.393447",
+    "end_time": "2025-11-17T13:03:34.611163",
+    "duration_seconds": 92.217716
+  }
+}

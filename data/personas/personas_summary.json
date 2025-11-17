@@ -1,96 +1,110 @@
 {
-  "total_count": 20,
+  "total_count": 86,
   "generation_method": "AI-generated (Claude) with Semantic Trees",
   "semantic_trees_included": true,
   "age_distribution": {
-    "20-29": 8,
-    "30-39": 6,
-    "10-19": 2,
-    "40-49": 4
+    "20-29": 30,
+    "30-39": 28,
+    "40-49": 18,
+    "10-19": 4,
+    "50-59": 6
   },
   "education_distribution": {
-    "high_school": 6,
-    "bachelors": 8,
-    "masters": 6
+    "high_school": 34,
+    "bachelors": 29,
+    "masters": 20,
+    "doctorate": 2,
+    "unknown": 1
   },
   "marital_status_distribution": {
-    "unknown": 4,
-    "married": 11,
-    "single": 3,
-    "partnered": 2
+    "single": 33,
+    "married": 40,
+    "divorced": 8,
+    "unknown": 1,
+    "widowed": 4
   },
   "income_distribution": {
-    "low": 4,
-    "middle": 10,
-    "upper_middle": 6
+    "middle": 47,
+    "upper_middle": 16,
+    "low": 13,
+    "high": 10
   },
   "semantic_tree_statistics": {
     "health_consciousness_distribution": {
-      "5": 13,
-      "4": 7
+      "2": 21,
+      "4": 58,
+      "5": 7
     },
     "healthcare_access_distribution": {
-      "1": 1,
-      "3": 19
+      "1": 10,
+      "3": 76
     },
     "pregnancy_readiness_distribution": {
-      "4": 8,
-      "5": 10,
-      "3": 2
+      "3": 35,
+      "5": 24,
+      "4": 26,
+      "2": 1
     },
     "social_support_distribution": {
-      "3": 10,
-      "4": 10
+      "3": 86
     },
     "mental_health_status_distribution": {
-      "3": 20
+      "2": 3,
+      "3": 83
     },
     "physical_activity_distribution": {
-      "3": 5,
-      "4": 10,
-      "1": 5
+      "1": 21,
+      "4": 37,
+      "3": 28
     },
     "smoking_status_distribution": {
-      "current": 1,
-      "never": 19
+      "never": 68,
+      "current": 18
     },
     "alcohol_consumption_distribution": {
-      "never": 20
+      "never": 86
     },
     "employment_status_distribution": {
-      "student": 3,
-      "employed": 17
+      "employed": 65,
+      "student": 13,
+      "homemaker": 4,
+      "retired": 4
     },
     "insurance_status_distribution": {
-      "uninsured": 1,
-      "insured": 14,
-      "medicaid": 5
+      "uninsured": 3,
+      "insured": 43,
+      "medicare": 5,
+      "medicaid": 23,
+      "underinsured": 7,
+      "private": 5
     },
-    "with_health_conditions_count": 5
+    "with_health_conditions_count": 23
   },
   "pregnancy_intentions_statistics": {
     "gravida_distribution": {
-      "0": 10,
-      "2": 3,
-      "3": 2,
-      "1": 3,
-      "4": 2
+      "0": 42,
+      "1": 11,
+      "3": 13,
+      "2": 16,
+      "4": 3,
+      "5": 1
     },
     "para_distribution": {
-      "0": 13,
-      "2": 3,
-      "3": 2,
-      "1": 2
+      "0": 49,
+      "1": 9,
+      "2": 18,
+      "3": 8,
+      "4": 2
     },
-    "nulliparous_count": 13,
-    "multiparous_count": 7,
-    "with_previous_complications_count": 8,
-    "fertility_treatment_count": 3,
-    "actively_trying_count": 10,
-    "using_contraception_count": 12,
-    "preconception_care_count": 0,
+    "nulliparous_count": 49,
+    "multiparous_count": 37,
+    "with_previous_complications_count": 12,
+    "fertility_treatment_count": 0,
+    "actively_trying_count": 24,
+    "using_contraception_count": 38,
+    "preconception_care_count": 27,
     "breastfeeding_history_count": 0,
-    "previous_cesarean_count": 1,
-    "previous_vaginal_count": 2
+    "previous_cesarean_count": 4,
+    "previous_vaginal_count": 9
   }
 }
