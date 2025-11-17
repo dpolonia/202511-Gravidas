@@ -1,0 +1,118 @@
+[INFO] 2025-11-17 03:04:00,691 - ✅ Loaded workflow configuration from config/workflow_config.yaml
+[INFO] 2025-11-17 03:04:00,692 - ✅ Loaded 6 pipeline stages
+[INFO] 2025-11-17 03:04:00,692 - 
+================================================================================
+[INFO] 2025-11-17 03:04:00,692 - 🚀 EXECUTING GRAVIDAS WORKFLOW (2 stages)
+[INFO] 2025-11-17 03:04:00,692 - ================================================================================
+
+[INFO] 2025-11-17 03:04:00,692 - 
+================================================================================
+[INFO] 2025-11-17 03:04:00,692 - 🔄 STAGE: GENERATE PERSONAS
+[INFO] 2025-11-17 03:04:00,692 - ================================================================================
+[INFO] 2025-11-17 03:04:00,692 - Description: Generate synthetic personas with semantic healthcare attributes
+
+[INFO] 2025-11-17 03:04:00,692 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 1: Demographics (age, gender, location, ethnicity, language)
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 2: Socioeconomic Status (education, income, occupation, employment)
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 3: Health Profile (health consciousness, healthcare access, pregnancy readiness)
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 4: Behavioral Factors (activity, nutrition, smoking, alcohol, sleep)
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 5: Psychosocial Factors (mental health, stress, social support, relationship status)
+[INFO] 2025-11-17 03:04:00,692 -    ✓ Topic 6: Semantic Tree Generation (hierarchical health attributes)
+[INFO] 2025-11-17 03:04:00,692 - 
+[INFO] 2025-11-17 03:04:00,692 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/01b_generate_personas.py --count 100 --output data/personas
+
+[INFO] === Synthetic Persona Generation Started ===
+[INFO] Target: 100 personas
+[INFO] Batch size: 100
+[INFO] === Generating 100 Synthetic Personas ===
+[INFO] [Batch 1/1] Generating 100 personas...
+[INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[ERROR]   ❌ Batch 1 failed: unsupported operand type(s) for +: 'int' and 'NoneType'
+[WARNING] Generated 0 personas, target was 100
+[INFO] ✅ Saved 0 personas to data/personas/personas.json
+[INFO] ✅ Saved summary statistics to data/personas/personas_summary.json
+[INFO] ============================================================
+[INFO] SEMANTIC TREE GENERATION SUMMARY
+[INFO] ============================================================
+[INFO] ============================================================
+[INFO] [SUCCESS] Generated 0 personas
+[INFO] === Persona Generation Completed ===
+[INFO] 2025-11-17 03:04:30,388 - 
+✅ Stage 'generate_personas' completed successfully (29.70s)
+
+[INFO] 2025-11-17 03:04:30,388 - 
+================================================================================
+[INFO] 2025-11-17 03:04:30,388 - 🔄 STAGE: MATCH PERSONAS RECORDS
+[INFO] 2025-11-17 03:04:30,388 - ================================================================================
+[INFO] 2025-11-17 03:04:30,388 - Description: Match personas with health records using semantic matching
+
+[INFO] 2025-11-17 03:04:30,388 - 📋 Topics Addressed in This Stage:
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 1: Demographic Similarity (age, location compatibility)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 2: Socioeconomic Alignment (healthcare access, employment status)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 3: Health Profile Alignment (health consciousness vs medical engagement)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 4: Behavioral Alignment (activity, smoking, nutrition)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 5: Psychosocial Alignment (mental health, social support, family planning)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 6: Optimal N-to-M Matching (Hungarian Algorithm)
+[INFO] 2025-11-17 03:04:30,388 -    ✓ Topic 7: Blended Scoring (40% demographic + 60% semantic)
+[INFO] 2025-11-17 03:04:30,388 - 
+[INFO] 2025-11-17 03:04:30,388 - 📝 Executing: /home/dpolonia/anaconda3/bin/python scripts/03_match_personas_records_enhanced.py --semantic-weight 0.6
+
+[INFO] ============================================================
+[INFO] ENHANCED PERSONA-RECORD MATCHING WITH SEMANTIC TREES STARTED
+[INFO] ============================================================
+[INFO] Loading personas from data/personas/personas.json
+[INFO] ✅ Loaded 0 personas
+[INFO] Loading health records from data/health_records/health_records.json
+[INFO] ✅ Loaded 10 health records
+[INFO] Loaded 0 personas and 10 health records
+[WARNING] ⚠️  More records than personas. Some records will be unmatched.
+[WARNING] ⚠️  Semantic trees not found. Falling back to demographic matching only
+[INFO] Building demographic compatibility matrix...
+[INFO] Computing compatibility matrix for 0 personas × 10 records...
+[INFO] Using weights: {'age': 0.4, 'education': 0.2, 'income': 0.15, 'marital_status': 0.15, 'occupation': 0.1}
+[INFO] ✅ Compatibility matrix computed
+[INFO] Running enhanced matching algorithm...
+[INFO] Pool: 0 personas → 10 health records
+[WARNING] More records than personas! This will result in some unmatched records.
+[WARNING] Consider generating more personas for better coverage.
+[INFO] ✅ Created 0 optimal matches
+[INFO] Quality distribution:
+[ERROR] Script failed: division by zero
+Traceback (most recent call last):
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 809, in main
+    matches, quality_metrics = match_optimal_with_selection(
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        personas, records, compatibility_matrix, detailed_metrics,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        demographic_metrics=demo_metrics_for_stats
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/dpolonia/202511-Gravidas/scripts/03_match_personas_records_enhanced.py", line 559, in match_optimal_with_selection
+    logger.info(f"  - Excellent (≥0.85): {quality_counts['excellent']} ({quality_counts['excellent']/total*100:.1f}%)")
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+ZeroDivisionError: division by zero
+[ERROR] 2025-11-17 03:04:31,074 - 
+❌ Stage 'match_personas_records' failed with return code 1
+
+[INFO] 2025-11-17 03:04:31,074 - 
+================================================================================
+[INFO] 2025-11-17 03:04:31,074 - 📊 WORKFLOW EXECUTION SUMMARY
+[INFO] 2025-11-17 03:04:31,074 - ================================================================================
+[INFO] 2025-11-17 03:04:31,074 - 
+📋 Workflow: Gravidas Synthetic Interview Pipeline
+[INFO] 2025-11-17 03:04:31,074 - 🕐 Execution Time: 30.38 seconds
+[INFO] 2025-11-17 03:04:31,074 - 📈 Stages: 1/2 successful
+[INFO] 2025-11-17 03:04:31,074 - 🤖 AI Provider: openai
+[INFO] 2025-11-17 03:04:31,074 - 🧠 AI Model: gpt-4o-mini
+[INFO] 2025-11-17 03:04:31,074 - 👥 Personas Generated: 100
+[INFO] 2025-11-17 03:04:31,074 - 📋 Health Records: 100
+[INFO] 2025-11-17 03:04:31,074 - 
+📝 Stage Results:
+[INFO] 2025-11-17 03:04:31,074 -    ✅ generate_personas: Completed in 29.70s
+[INFO] 2025-11-17 03:04:31,074 -    ❌ match_personas_records: Failed with return code 1
+[INFO] 2025-11-17 03:04:31,074 - 
+🎯 Overall Status: FAILURE
+[INFO] 2025-11-17 03:04:31,074 - ================================================================================
+
+[INFO] 2025-11-17 03:04:31,075 - 📄 Report saved to: outputs/workflow_report.json

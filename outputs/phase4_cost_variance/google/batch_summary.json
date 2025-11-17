@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-11-17T02:57:04.283183",
+  "provider": "google",
+  "model": "gemini-2.0-flash-exp",
+  "protocol": "Prenatal Care Interview Protocol",
+  "interviews_planned": 2,
+  "interviews_successful": 1,
+  "interviews_failed": 1,
+  "total_cost_usd": 4.6642375e-05,
+  "total_cost_eur": 4.2910985e-05,
+  "interviews": [
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.2910985e-05
+    }
+  ]
+}

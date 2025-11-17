@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-11-17T02:45:57.502275",
+  "provider": "xai",
+  "model": "grok-2-latest",
+  "protocol": "Prenatal Care Interview Protocol",
+  "interviews_planned": 10,
+  "interviews_successful": 10,
+  "interviews_failed": 0,
+  "total_cost_usd": 0.0005844430000000001,
+  "total_cost_eur": 0.0005376875600000002,
+  "interviews": [
+    {
+      "interview_id": "unknown",
+      "cost_eur": 7.000556e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.2052279999999996e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 2.8535640000000008e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.54802e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.7955519999999994e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 6.472752e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 7.299464000000002e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.567024e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 8.150924e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.663296e-05
+    }
+  ]
+}

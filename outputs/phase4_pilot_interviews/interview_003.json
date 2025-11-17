@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T02:36:46.877166"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Hello, Lila. Thank you for agreeing to speak with me today. My name is [Your Name], and I'm a researcher interested in understanding more about prenatal care experiences and maternal health. I want to assure you that everything you share will be kept confidential and used solely for research purposes. Are you comfortable proceeding?\n\nFirst, can you tell me a bit about your overall health and any medical conditions you're managing?",
+      "timestamp": "2025-11-17T02:36:48.115782"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T02:36:48.115801"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Hi, [Your Name]. Thanks for having me. I'm Lila, I'm 31 and I live in Boston. I work as a social worker, which can be pretty demanding, but I find it rewarding. I'm single and live in an urban area. My income is middle-class, and I'm covered by my employer's health insurance. I try to stay health-conscious, though I admit I could exercise more often. I manage chronic asthma with medication, and I've had some stress due to my job and personal life. I also had a bout of acute infective cystitis recently, but that's been treated.\n\nInterviewer: Thank you for sharing that, Lila. It sounds like you manage a lot with your job and health. Can you tell me about any experiences you've had with prenatal care or pregnancy?",
+      "timestamp": "2025-11-17T02:36:50.089175"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T02:36:50.589391"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Sure, I had one pregnancy, but unfortunately, it ended in a miscarriage. I found out I was pregnant about a year and a half ago. It was a bit of a surprise because I was using an IUD for contraception, but these things can happen, I suppose. I learned I was pregnant when I missed my period and took a home pregnancy test, which came back positive. I then went to my doctor to confirm the pregnancy.\n\nInterviewer: I'm sorry to hear about your miscarriage, Lila. That must have been difficult. Can you tell me about the care you received during that time? Were you satisfied with the prenatal care you received before the miscarriage?",
+      "timestamp": "2025-11-17T02:36:52.288022"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T02:36:52.788191"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: After confirming my pregnancy with the home test, I scheduled an appointment with my OB-GYN right away, which was about a week after I found out. The experience was a bit overwhelming, to be honest. It was my first time being pregnant, and even though it was early, there was a lot of information to take in. My doctor did an ultrasound and some blood work to confirm the pregnancy and check my hormone levels. They also discussed my medical history, including my asthma, and how it might affect the pregnancy. Overall, the care was good, but because of the miscarriage, I didn't get to experience much of the prenatal care process. It was cut short, and that was really hard for me.\n\nInterviewer: I can understand how that must have felt, Lila. It sounds like you received prompt and thorough care initially. Can you tell me more about the support you received after the miscarriage? Were there any resources or follow-up care provided that you found helpful or lacking?",
+      "timestamp": "2025-11-17T02:36:55.114662"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T02:36:55.614984"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: My prenatal care was provided by my OB-GYN, Dr. Martin, who I've been seeing for a few years now. Our relationship is pretty good; she's always been thorough and attentive. After the miscarriage, Dr. Martin was very supportive. She made sure to follow up with me a few weeks later to see how I was doing emotionally and physically. She offered resources on grief counseling and support groups for women who have experienced miscarriage, which I found really helpful. I appreciated her checking in on me, but I felt there could have been more information provided upfront about what to expect after a miscarriage, both emotionally and physically. It was a challenging time, and having more guidance might have helped me navigate it better.",
+      "timestamp": "2025-11-17T02:37:01.102516"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T02:37:01.603328"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Since my miscarriage, I haven't had any more prenatal appointments because I'm not currently pregnant. But during the brief time I was pregnant, I had an appointment scheduled every four weeks. A typical visit involved checking my weight, blood pressure, and sometimes urine. Dr. Martin would ask about any symptoms or concerns I had, and we'd discuss how I was feeling overall. She would also listen to the baby's heartbeat, which was really emotional for me, knowing I was going to lose the pregnancy. We talked about my asthma and how to manage it safely during pregnancy. The visits were thorough, but as I mentioned, they were cut short due to the miscarriage.",
+      "timestamp": "2025-11-17T02:37:03.651456"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T02:37:04.151718"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: During my brief pregnancy, I didn't experience any specific health concerns or complications directly related to the pregnancy itself. My chronic asthma was something we monitored closely, but it remained stable during that time. The only issue was the miscarriage, which was unexpected and devastating. My doctor mentioned that sometimes these things happen without a clear cause, but they did all the necessary tests to rule out any underlying issues that might have contributed to it. It was reassuring to know they were thorough, even though it didn't change the outcome.",
+      "timestamp": "2025-11-17T02:37:06.376542"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T02:37:06.876858"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Currently, I'm taking my asthma medication, which is a daily inhaler called Flovent to manage my symptoms, and I use an albuterol inhaler as needed for quick relief during asthma attacks. I also take a daily multivitamin to ensure I'm getting all the nutrients I need, especially since my diet can be a bit erratic with my work schedule. After the miscarriage, my doctor prescribed a short course of antibiotics to treat the acute infective cystitis I mentioned earlier, but I've completed that and am no longer taking them. That's all I'm on right now.",
+      "timestamp": "2025-11-17T02:37:08.461466"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T02:37:08.961707"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: During my pregnancy, I tried to focus on maintaining a balanced diet, though it was challenging with my busy schedule. I made sure to include plenty of fruits and vegetables, lean proteins like chicken and fish, and whole grains. I was particularly mindful of getting enough folic acid, which my doctor emphasized was important for the baby's development. I also drank a lot of water and tried to limit my caffeine intake, sticking mostly to herbal teas. However, with my work as a social worker, sometimes I had to rely on quick meals or snacks, which weren't always the healthiest options. My doctor and I discussed my diet during my prenatal visits, and she gave me some tips on how to make better choices even when I was short on time. \n\nInterviewer: It sounds like you made a concerted effort to eat healthily despite your busy schedule. Did you receive any specific dietary recommendations or support from your healthcare provider or other resources during your pregnancy?",
+      "timestamp": "2025-11-17T02:37:11.334124"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T02:37:11.834782"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Emotionally, my pregnancy was a rollercoaster. When I first found out I was pregnant, I felt a mix of surprise and excitement, even though it was unplanned. As the reality set in, I started to feel anxious about how I would manage everything with my job and my health. The miscarriage hit me hard; I felt a profound sense of loss and sadness. It was difficult to process, and I struggled with feelings of guilt and wondering if there was something I could have done differently. Dr. Martin was very supportive, and the resources she provided, like the grief counseling and support groups, were really helpful. They allowed me to connect with others who had gone through similar experiences, which made me feel less alone. Still, the emotional toll was significant, and it took me some time to start feeling like myself again.",
+      "timestamp": "2025-11-17T02:37:13.826132"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T02:37:14.326630"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: During my pregnancy, my support network was quite small but very meaningful. My closest friend, Sarah, was incredibly supportive. She checked in on me regularly and was there for me emotionally, especially after the miscarriage. My family lives out of state, but they were supportive over the phone and offered to come visit if I needed them. At work, my supervisor was understanding and allowed me some flexibility in my schedule, which helped a lot. I also found the support group for women who had experienced miscarriages to be a vital part of my support system. It was comforting to share my feelings with others who understood what I was going through. Overall, while my support network wasn't large, the people in it were very important to me during that time.",
+      "timestamp": "2025-11-17T02:37:16.200079"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T02:37:16.700497"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Since I'm not currently pregnant and not planning to be in the near future, I haven't given much thought to a birth plan or delivery preferences. However, when I was pregnant, I briefly considered what I might want. I was leaning towards a natural birth if possible, but I knew I wanted to be open to medical interventions if they were necessary for my health or the baby's health. I also thought about having my friend Sarah with me for support during labor, as she was my main support person. But as I mentioned, the miscarriage happened before I could really develop a detailed plan. If I were to become pregnant again in the future, I'd definitely want to discuss my options thoroughly with my doctor and perhaps attend some childbirth education classes to feel more prepared.",
+      "timestamp": "2025-11-17T02:37:23.889535"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T02:37:24.389830"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: During my pregnancy, I used a variety of sources to learn about pregnancy and childbirth. Initially, I relied a lot on the internet, reading articles on reputable websites like the Mayo Clinic and WebMD. I also found some pregnancy apps useful; they provided weekly updates on what was happening with my baby and tips on what to expect. My OB-GYN, Dr. Martin, was a primary source of information too. She gave me pamphlets and recommended some books on pregnancy and childbirth, like \"What to Expect When You're Expecting.\" I also joined an online forum for expectant mothers, which was helpful for getting firsthand experiences and advice from other women. After the miscarriage, the support group I attended provided a lot of emotional support and practical information about coping with loss. If I were to get pregnant again, I'd probably use these same resources and maybe look into childbirth education classes to get more in-depth knowledge.",
+      "timestamp": "2025-11-17T02:37:26.704976"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T02:37:27.205319"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Since my pregnancy ended in a miscarriage, I didn't have to manage the financial aspects of preparing for a baby. However, during my pregnancy, I was covered by my employer's health insurance, which helped with the costs of prenatal care. I did start thinking about how I would manage financially if I were to have a baby. My income is middle-class, so I knew I would need to budget carefully. I considered setting up a savings plan for baby-related expenses like diapers, clothing, and eventually, childcare. I also looked into potential maternity leave benefits from my job, which would have been crucial for managing my time off work. Thankfully, I didn't have to go through with those preparations due to the miscarriage, but it was a reminder of how important it is to be financially prepared. If I were to become pregnant again, I would definitely start saving early and look into any available financial assistance programs or tax benefits for new parents.",
+      "timestamp": "2025-11-17T02:37:29.607285"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T02:37:30.107579"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: My pregnancy didn't directly affect my work situation because it was so brief. However, I did start thinking about how I would manage my job if the pregnancy had continued. As a social worker, my job can be quite demanding, and I was concerned about how I would balance work with the needs of a pregnancy and eventually a baby. My supervisor was very understanding and had mentioned that I could take maternity leave and possibly work from home if needed. I appreciated the flexibility, but I was still worried about how I would manage everything. After the miscarriage, I took a few days off to process what had happened, and my workplace was supportive during that time. If I were to become pregnant again, I'd definitely have more conversations with my employer about how to manage my workload and ensure I could take the necessary time off without impacting my career.",
+      "timestamp": "2025-11-17T02:37:33.580353"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T02:37:34.080648"
+    },
+    {
+      "speaker": "Persona",
+      "text": "Lila: Since my pregnancy ended in a miscarriage, I haven't had to think about the postpartum period in practical terms. However, during my pregnancy, I did start considering what it might be like after the baby arrived. I thought about taking maternity leave and possibly working from home for a while to adjust to being a new mom. I also considered the support I would need, like help from my friend Sarah or potentially hiring a postpartum doula if I could afford it. I knew I would need to focus on my own recovery and mental health as well, so I planned to look into postpartum support groups or therapy if necessary. \n\nIf I were to become pregnant again, I would definitely start planning for the postpartum period much earlier. I'd talk to my doctor about what to expect and how to prepare, both physically and emotionally. I'd also look into local resources for new moms, like lactation consultants and parenting classes, to feel more prepared. It's a lot to think about, but having a plan in place would help me feel more confident and ready for the challenges of the postpartum period.",
+      "timestamp": "2025-11-17T02:37:36.614755"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T02:37:37.115022"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 361,
+        "output_tokens": 83,
+        "cost_usd": 5.27e-07,
+        "cost_eur": 4.8484e-07
+      },
+      {
+        "turn": 1,
+        "input_tokens": 474,
+        "output_tokens": 170,
+        "cost_usd": 8.14e-07,
+        "cost_eur": 7.4888e-07
+      },
+      {
+        "turn": 2,
+        "input_tokens": 669,
+        "output_tokens": 137,
+        "cost_usd": 9.429999999999999e-07,
+        "cost_eur": 8.675599999999999e-07
+      },
+      {
+        "turn": 3,
+        "input_tokens": 826,
+        "output_tokens": 201,
+        "cost_usd": 1.228e-06,
+        "cost_eur": 1.12976e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 1050,
+        "output_tokens": 147,
+        "cost_usd": 1.344e-06,
+        "cost_eur": 1.23648e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1223,
+        "output_tokens": 136,
+        "cost_usd": 1.495e-06,
+        "cost_eur": 1.3754000000000002e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 1377,
+        "output_tokens": 105,
+        "cost_usd": 1.5869999999999998e-06,
+        "cost_eur": 1.4600399999999998e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 1497,
+        "output_tokens": 120,
+        "cost_usd": 1.737e-06,
+        "cost_eur": 1.59804e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 1635,
+        "output_tokens": 193,
+        "cost_usd": 2.021e-06,
+        "cost_eur": 1.8593199999999998e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 1844,
+        "output_tokens": 168,
+        "cost_usd": 2.18e-06,
+        "cost_eur": 2.0056e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2034,
+        "output_tokens": 152,
+        "cost_usd": 2.338e-06,
+        "cost_eur": 2.15096e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2207,
+        "output_tokens": 156,
+        "cost_usd": 2.5190000000000004e-06,
+        "cost_eur": 2.3174800000000006e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 2383,
+        "output_tokens": 184,
+        "cost_usd": 2.7510000000000004e-06,
+        "cost_eur": 2.5309200000000003e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 2588,
+        "output_tokens": 190,
+        "cost_usd": 2.9680000000000002e-06,
+        "cost_eur": 2.7305600000000003e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 2795,
+        "output_tokens": 170,
+        "cost_usd": 3.1350000000000005e-06,
+        "cost_eur": 2.8842000000000007e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 2990,
+        "output_tokens": 220,
+        "cost_usd": 3.43e-06,
+        "cost_eur": 3.1556000000000003e-06
+      }
+    ],
+    "total_input_tokens": 25953,
+    "total_output_tokens": 2532,
+    "total_cost_usd": 3.1017e-05,
+    "total_cost_eur": 2.8535640000000008e-05
+  },
+  "metadata": {
+    "model": "grok-2-latest",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T02:36:46.877122",
+    "end_time": "2025-11-17T02:37:37.115045",
+    "duration_seconds": 50.237923
+  }
+}

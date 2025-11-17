@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T02:57:19.789978"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Researcher:** First, can you tell me a bit about your general health and any conditions you might have?\n\n**Emily:** Sure, overall, I consider myself pretty healthy. I exercise regularly and try to eat well. But I do have some chronic low back pain that I've been dealing with for a few years now. It's manageable, but it can be bothersome at times.\n\n**Researcher:** I'm sorry to hear about your back pain. How does it affect your daily life, and what treatments have you tried?\n\n**Emily:** It mostly bothers me after a long day of standing or when I've been active. I've tried physical therapy, which helps a bit, and I take over-the-counter pain relievers when it gets bad. I also do some yoga and stretching at home to manage it.\n\n**Researcher:** Thank you for sharing that. Now, can you tell me about your experiences with prenatal care during your past pregnancies?\n\n**Emily:** My past pregnancies were pretty straightforward. I had regular check-ups with my OB-GYN, and everything went smoothly. I had two vaginal deliveries without any complications.\n\n**Researcher:** That's good to hear. Did you feel you had adequate access to healthcare during those times?\n\n**Emily:** Yes, I felt like I had good access. My OB-GYN was in the next town over, but it was manageable. I had private health insurance through my husband's job, which covered most of the costs.\n\n**Researcher:** You mentioned you've been trying to conceive for the past year. Can you tell me more about that experience and any challenges you've faced?\n\n**Emily:** It's been frustrating. We've been trying for a year without success, which is why we're considering fertility treatments. It's been emotionally challenging, and I've felt a bit isolated because not many of my friends have gone through this.\n\n**Researcher:** I can understand how difficult that must be. Have you sought any medical advice or treatments for fertility yet?\n\n**Emily:** We've had some initial consultations with a fertility specialist. They've done some basic tests, but we haven't started any treatments yet. They mentioned options like IUI or IVF, but we're still deciding.\n\n**Researcher:** It's important to take your time with such decisions. Have you encountered any barriers to accessing fertility treatments?\n\n**Emily:** The main barrier is the cost. Even with insurance, it's still expensive, and we're trying to figure out how to manage that. Also, the nearest fertility clinic is a bit of a drive, which adds to the challenge.\n\n**Researcher:** I see. How do you feel about the support you've received from your healthcare providers during this time?\n\n**Emily:** They've been supportive, but it's been a lot of information to process. I wish there was more guidance on navigating the emotional side of it. My doctor has been good about answering questions, but sometimes I feel like I need more emotional support.\n\n**Researcher:** Thank you for sharing that, Emily. It's important to address both the physical and emotional aspects of fertility challenges. Have you considered seeking support from a counselor or a support group?\n\n**Emily:** I've thought about it but haven't taken that step yet. Maybe it's something I should look into.\n\n**Researcher:** It could be beneficial. Is there anything else you'd like to share about your experiences with healthcare or any other concerns you have?\n\n**Emily:** Just that it's been a journey, and sometimes I feel overwhelmed. But talking about it helps, so thank you for listening.\n\n**Researcher:** Thank you, Emily, for your openness and for participating in this interview. Your insights are valuable for our research. If you have any more questions or need further support, please don't hesitate to reach out.",
+      "timestamp": "2025-11-17T02:57:27.715770"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T02:57:27.715787"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** I'm 38 years old and I live in a small town in rural Ohio with my husband. I work as an elementary school teacher, which I love, and we have a comfortable middle-class lifestyle. We've been married for 10 years and have two wonderful children from my previous pregnancies. Right now, we're focused on trying to expand our family again, but it's been challenging. Despite the difficulties, we're trying to stay positive and supportive of each other. I enjoy spending time with my family, and we often go on hikes or have picnics on the weekends. That's pretty much my life at the moment.",
+      "timestamp": "2025-11-17T02:57:29.407414"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T02:57:29.908206"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** With my first pregnancy, I found out I was pregnant quite early, around 4 weeks. I had been trying to conceive for a few months, so I was taking regular pregnancy tests. It was exciting and a bit nerve-wracking at the same time. For my second pregnancy, it was a bit different. I was about 6 weeks along when I found out because I missed my period and then took a test. Both times, the initial excitement was tempered by a bit of anxiety, especially after the miscarriage I had before my first successful pregnancy.",
+      "timestamp": "2025-11-17T02:57:31.371897"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T02:57:31.872216"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** For both of my pregnancies, I sought prenatal care as soon as I found out I was pregnant. With my first pregnancy, I called my OB-GYN right away and got an appointment within a week. It was a bit overwhelming because everything was new, but my doctor was very reassuring and thorough. They explained everything step-by-step, from what to expect during the pregnancy to the various tests and check-ups I would need. \n\nFor my second pregnancy, the process was smoother since I already knew what to expect. I had my first appointment around 8 weeks, and it felt more routine. The care was consistent, and I appreciated that my doctor remembered me and my previous experiences, which made me feel more at ease.\n\nOverall, both experiences were positive. I felt well-cared for and supported throughout my pregnancies.",
+      "timestamp": "2025-11-17T02:57:33.951048"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T02:57:34.451263"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** My prenatal care is provided by Dr. Sarah Jennings, an OB-GYN at the clinic in the next town over. She's been my doctor since my first pregnancy, and we've built a good relationship over the years. Dr. Jennings is very thorough and always takes the time to answer all my questions, no matter how small they might seem. She's supportive and has a warm, comforting demeanor that makes me feel at ease during my visits.\n\nI appreciate that she remembers details about my previous pregnancies and my health history, which shows she genuinely cares about her patients. We discuss not just the medical aspects but also how I'm feeling emotionally, which has been really helpful, especially during this time when we're trying to conceive again. Overall, I feel very fortunate to have her as my healthcare provider.",
+      "timestamp": "2025-11-17T02:57:36.398524"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T02:57:36.898800"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** During my previous pregnancies, I had prenatal appointments about once a month until the last trimester, when they became more frequent, around every two weeks, and then weekly towards the end. A typical visit would start with checking my weight and blood pressure. Then, I'd meet with Dr. Jennings, who would ask how I was feeling and if I had any concerns or questions. \n\nShe would measure my belly to check the baby's growth and listen to the baby's heartbeat, which was always a reassuring part of the visit. Depending on how far along I was, there might be additional tests or screenings, like blood work or ultrasounds. Dr. Jennings would go over the results with me and explain everything in detail. \n\nWe'd also discuss any lifestyle or dietary recommendations, and she'd make sure I was on track with my prenatal vitamins. The visits usually ended with scheduling the next appointment and any necessary follow-ups. Overall, the visits were thorough but also had a personal touch, which made me feel well-cared for.",
+      "timestamp": "2025-11-17T02:57:39.308660"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T02:57:39.808872"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** During my first pregnancy, after the initial excitement, I was quite anxious because of the miscarriage I had experienced before. But thankfully, that pregnancy went smoothly without any complications. My second pregnancy was also uncomplicated, though I did have some mild gestational diabetes towards the end. It was managed well with diet and monitoring my blood sugar levels, so it didn't affect the delivery or the health of my baby.\n\nWith both pregnancies, my chronic low back pain did flare up a bit, especially as I got further along and my belly grew. But it was something I was used to managing, and it didn't pose any significant issues during my pregnancies.\n\nOverall, I've been fortunate that my pregnancies have been relatively healthy and straightforward.",
+      "timestamp": "2025-11-17T02:57:41.897482"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T02:57:42.397607"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** Currently, I'm taking prenatal vitamins as we're still trying to conceive. They're recommended by my doctor to ensure I'm getting all the necessary nutrients. For my chronic low back pain, I occasionally take over-the-counter pain relievers like ibuprofen when it gets particularly bad. I also use a topical pain relief cream that helps soothe the area. Other than that, I don't take any other medications regularly.",
+      "timestamp": "2025-11-17T02:57:43.562705"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T02:57:44.062910"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** During my pregnancies, I made a conscious effort to eat a balanced diet to support my health and the baby's development. I focused on getting plenty of fruits and vegetables, whole grains, and lean proteins. My doctor recommended increasing my intake of folic acid, so I made sure to eat foods like leafy greens, beans, and fortified cereals. I also tried to limit my intake of processed foods and sugars, though I did allow myself the occasional treat.\n\nFor my second pregnancy, when I had mild gestational diabetes, I had to be even more mindful. I worked with a dietitian who helped me plan meals that kept my blood sugar levels stable. This involved eating smaller, more frequent meals throughout the day, focusing on foods with a low glycemic index, and avoiding high-sugar snacks.\n\nOverall, I felt that maintaining a healthy diet was crucial, and it helped me feel more in control and prepared for the pregnancy.",
+      "timestamp": "2025-11-17T02:57:46.595245"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T02:57:47.095397"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** During my pregnancies, I experienced a range of emotions. With my first pregnancy, there was a lot of excitement mixed with anxiety, especially after the miscarriage I had before. I was constantly worried about whether everything would be okay, but as time went on and everything seemed to be progressing well, I gradually felt more at ease. The support from my husband and Dr. Jennings was crucial in helping me manage those feelings.\n\nIn my second pregnancy, I felt more confident because I knew what to expect. However, the diagnosis of gestational diabetes towards the end brought some stress. I was worried about managing it and its potential impact on the baby, but with the help of my healthcare team and the dietitian, I was able to keep my emotions in check and focus on doing what was best for my health and the baby's.\n\nOverall, both pregnancies were emotionally challenging at times, but the joy of anticipating a new baby always outweighed the worries. I found that talking openly with my doctor about my feelings helped a lot, and I also leaned on my family for emotional support.",
+      "timestamp": "2025-11-17T02:57:49.667469"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T02:57:50.167680"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** My support network during my pregnancies has been really important to me. My husband has been incredibly supportive; he attended all my prenatal appointments with me and was always there to help with anything I needed. He's been my rock, especially during the times when I felt anxious or overwhelmed.\n\nMy family, particularly my mother, has also been a huge source of support. She's had her own experiences with pregnancy and was always available to talk or offer advice. She helped me a lot with my older child during my second pregnancy, which took some of the pressure off.\n\nI also have a close group of friends, some of whom have gone through pregnancies themselves. They provided emotional support and were great for sharing experiences and advice. We have a little informal support group where we check in on each other, which has been really helpful.\n\nAdditionally, Dr. Jennings and her team at the clinic have been supportive. They always made sure to address not just the physical aspects of my pregnancy but also how I was feeling emotionally. They recommended resources and support groups when needed, which was comforting.\n\nOverall, I feel very grateful for the strong support system I have around me. It's made a big difference in how I've experienced my pregnancies.",
+      "timestamp": "2025-11-17T02:57:53.107397"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T02:57:53.607703"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** Yes, I've definitely thought about my birth plan. For both of my previous deliveries, I preferred a natural birth without any interventions if possible. I wanted to labor at home as long as I could before heading to the hospital, and both times, that's how it went. I also had a doula with me during my second delivery, which was really helpful for emotional support and guidance through the labor process.\n\nFor any future pregnancies, I would like to stick with a similar plan. I'm open to pain management options if needed, but I'd prefer to try natural methods first, like breathing techniques and possibly a water birth if it's available at the hospital. I also want to have the freedom to move around during labor and not be confined to a bed.\n\nI've discussed these preferences with Dr. Jennings, and she's supportive of my choices. She emphasized that while we can plan, we need to stay flexible in case medical interventions become necessary for the safety of the baby or myself. That's something I understand and am prepared for, but I hope to have as natural a birth experience as possible.",
+      "timestamp": "2025-11-17T02:57:56.216111"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T02:57:56.716363"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** I've used a variety of sources to educate myself about pregnancy and childbirth. Initially, I relied heavily on books and pamphlets provided by my OB-GYN, which covered the basics of prenatal care and what to expect during pregnancy and labor. \n\nFor more in-depth information, I turned to the internet. Websites like the Mayo Clinic and WebMD were helpful because they provided detailed, medically-reviewed information. I also joined online forums and communities like BabyCenter and What to Expect, where I could read about other women's experiences and get advice on specific concerns.\n\nAdditionally, I attended prenatal classes offered by the local hospital, which were really beneficial. They covered everything from labor and delivery to newborn care and breastfeeding. These classes gave me a chance to ask questions and interact with other expectant mothers, which was reassuring.\n\nLastly, I've had conversations with friends and family members who have gone through pregnancy and childbirth. Their personal stories and advice have been invaluable, especially since they could share what it was like in a more relatable way.\n\nOverall, combining these different sources has given me a well-rounded understanding of pregnancy and childbirth, and I feel more prepared because of it.",
+      "timestamp": "2025-11-17T02:57:59.362075"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T02:57:59.863084"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** Managing the financial aspects of pregnancy and preparing for a baby has been a significant part of our planning. Fortunately, we have private health insurance through my husband's job, which covers most of the prenatal care and delivery costs. However, there are still out-of-pocket expenses like co-pays and medications that we need to budget for.\n\nFor our previous pregnancies, we started saving money early on to cover things like baby supplies, maternity clothes, and any unexpected expenses. We also looked into second-hand options for items like cribs and strollers to save money. My husband and I have been pretty good about sticking to a budget, which has helped us manage these costs.\n\nFor any future pregnancy, we're planning to do the same. We're also considering setting up a flexible spending account through my husband's employer to help with medical expenses. Additionally, we've been discussing how to handle potential time off work for me, as I'll need to take maternity leave. We're looking into what benefits I'm entitled to as a teacher and how we can financially prepare for that period.\n\nOverall, it's been about planning ahead and making smart financial decisions to ensure we're ready for the arrival of a new baby.",
+      "timestamp": "2025-11-17T02:58:03.161202"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T02:58:03.661358"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** During my pregnancies, I've been fortunate to have a supportive work environment. As an elementary school teacher, I was able to take maternity leave, which was crucial for bonding with my newborns and recovering from childbirth. My school district offers paid maternity leave, which helped alleviate some of the financial stress.\n\nIn terms of how pregnancy affected my work, I found that as I progressed, I needed to take more frequent breaks and adjust my activities in the classroom. For instance, during my second pregnancy, when I had gestational diabetes, I had to be more mindful of my energy levels and ensure I was eating regularly to manage my blood sugar.\n\nMy colleagues and principal were very understanding and accommodating. They allowed me to sit more often during lessons and helped cover my duties when I needed to rest. I also had to plan my lessons a bit differently to account for potential fatigue or discomfort, but overall, it was manageable.\n\nFor any future pregnancy, I anticipate similar adjustments at work. I'll need to communicate openly with my school about my needs and ensure I'm taking care of myself while still fulfilling my responsibilities as a teacher. It's a balancing act, but with the right support, I feel confident I can manage it well.",
+      "timestamp": "2025-11-17T02:58:06.530895"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T02:58:07.031090"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Emily:** Yes, I've definitely thought about the postpartum period and have made some plans for after the baby arrives. From my previous experiences, I know how important it is to have support and a plan in place. \n\nFor starters, my husband and I have arranged for him to take paternity leave so he can help with the baby and around the house. This will give me some time to recover and bond with the newborn. My mother has also agreed to come stay with us for the first few weeks to help with our older children and give us a bit of a break.\n\nI'm also planning to join a postpartum support group at the local community center. I found it really helpful after my second child, as it provided a space to share experiences and get advice from other new moms. \n\nIn terms of my health, I'll continue to see Dr. Jennings for my postpartum check-ups. She's been great about discussing not just the physical recovery but also the emotional aspects, which I know can be challenging. I'm also considering working with a lactation consultant to ensure breastfeeding goes smoothly, as I had some difficulties with that in the past.\n\nFor my return to work, I'll be taking advantage of the paid maternity leave offered by my school district. We've also discussed with my principal about a gradual return, possibly starting part-time before going back to full-time, to ease the transition for both me and the baby.\n\nOverall, I feel like we have a good plan in place, but I know things can change, so we're trying to stay flexible and open to adjusting our plans as needed.",
+      "timestamp": "2025-11-17T02:58:10.701241"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T02:58:11.201338"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 353,
+        "output_tokens": 774,
+        "cost_usd": 1.9009999999999999e-06,
+        "cost_eur": 1.74892e-06
+      },
+      {
+        "turn": 1,
+        "input_tokens": 1157,
+        "output_tokens": 133,
+        "cost_usd": 1.4230000000000002e-06,
+        "cost_eur": 1.3091600000000003e-06
+      },
+      {
+        "turn": 2,
+        "input_tokens": 1315,
+        "output_tokens": 115,
+        "cost_usd": 1.545e-06,
+        "cost_eur": 1.4214e-06
+      },
+      {
+        "turn": 3,
+        "input_tokens": 1450,
+        "output_tokens": 167,
+        "cost_usd": 1.7839999999999998e-06,
+        "cost_eur": 1.64128e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 1640,
+        "output_tokens": 164,
+        "cost_usd": 1.968e-06,
+        "cost_eur": 1.81056e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 1830,
+        "output_tokens": 210,
+        "cost_usd": 2.25e-06,
+        "cost_eur": 2.07e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 2058,
+        "output_tokens": 147,
+        "cost_usd": 2.352e-06,
+        "cost_eur": 2.16384e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 2220,
+        "output_tokens": 87,
+        "cost_usd": 2.3940000000000003e-06,
+        "cost_eur": 2.2024800000000004e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 2325,
+        "output_tokens": 187,
+        "cost_usd": 2.699e-06,
+        "cost_eur": 2.48308e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2528,
+        "output_tokens": 217,
+        "cost_usd": 2.9619999999999998e-06,
+        "cost_eur": 2.72504e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2767,
+        "output_tokens": 247,
+        "cost_usd": 3.2609999999999998e-06,
+        "cost_eur": 3.00012e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 3035,
+        "output_tokens": 226,
+        "cost_usd": 3.4870000000000002e-06,
+        "cost_eur": 3.2080400000000003e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 3281,
+        "output_tokens": 233,
+        "cost_usd": 3.747e-06,
+        "cost_eur": 3.44724e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 3535,
+        "output_tokens": 244,
+        "cost_usd": 4.023e-06,
+        "cost_eur": 3.7011600000000004e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3796,
+        "output_tokens": 246,
+        "cost_usd": 4.288e-06,
+        "cost_eur": 3.94496e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 4067,
+        "output_tokens": 323,
+        "cost_usd": 4.7130000000000004e-06,
+        "cost_eur": 4.33596e-06
+      }
+    ],
+    "total_input_tokens": 37357,
+    "total_output_tokens": 3720,
+    "total_cost_usd": 4.4797000000000005e-05,
+    "total_cost_eur": 4.121324e-05
+  },
+  "metadata": {
+    "model": "grok-2-latest",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T02:57:19.789851",
+    "end_time": "2025-11-17T02:58:11.201350",
+    "duration_seconds": 51.411499
+  }
+}

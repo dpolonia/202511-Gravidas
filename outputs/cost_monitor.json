@@ -1,0 +1,2825 @@
+{
+  "timestamp": "2025-11-17T03:00:08.418381",
+  "model_costs": {
+    "grok-2-latest": 0.0005844430000000001,
+    "claude-haiku-4-5": 0.000672501,
+    "gpt-4o-mini": 8.945899999999997e-05
+  },
+  "model_alerts": {
+    "grok-2-latest": 0,
+    "claude-haiku-4-5": 0,
+    "gpt-4o-mini": 0
+  },
+  "cost_history": [
+    {
+      "timestamp": "2025-11-17T02:33:06.740529",
+      "model": "grok-2-latest",
+      "cost_usd": 4.3400000000000005e-07,
+      "cost_eur": 3.9928000000000007e-07,
+      "cumulative_usd": 4.3400000000000005e-07,
+      "cumulative_eur": 3.9928000000000007e-07,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:08.328355",
+      "model": "grok-2-latest",
+      "cost_usd": 5.92e-07,
+      "cost_eur": 5.4464e-07,
+      "cumulative_usd": 1.026e-06,
+      "cumulative_eur": 9.4392e-07,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:17.068640",
+      "model": "grok-2-latest",
+      "cost_usd": 2.024e-06,
+      "cost_eur": 1.86208e-06,
+      "cumulative_usd": 3.05e-06,
+      "cumulative_eur": 2.8060000000000003e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:18.867502",
+      "model": "grok-2-latest",
+      "cost_usd": 6.2e-07,
+      "cost_eur": 5.704e-07,
+      "cumulative_usd": 3.67e-06,
+      "cumulative_eur": 3.3764e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:26.946295",
+      "model": "grok-2-latest",
+      "cost_usd": 1.8689999999999998e-06,
+      "cost_eur": 1.7194799999999999e-06,
+      "cumulative_usd": 5.539e-06,
+      "cumulative_eur": 5.09588e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:27.907741",
+      "model": "grok-2-latest",
+      "cost_usd": 4.5899999999999997e-07,
+      "cost_eur": 4.2228e-07,
+      "cumulative_usd": 5.998e-06,
+      "cumulative_eur": 5.5181600000000005e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:38.031057",
+      "model": "grok-2-latest",
+      "cost_usd": 2.3330000000000004e-06,
+      "cost_eur": 2.1463600000000005e-06,
+      "cumulative_usd": 8.331e-06,
+      "cumulative_eur": 7.66452e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:46.830774",
+      "model": "grok-2-latest",
+      "cost_usd": 2.0440000000000003e-06,
+      "cost_eur": 1.8804800000000003e-06,
+      "cumulative_usd": 1.0375000000000001e-05,
+      "cumulative_eur": 9.545000000000001e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:56.625162",
+      "model": "grok-2-latest",
+      "cost_usd": 2.154e-06,
+      "cost_eur": 1.9816800000000003e-06,
+      "cumulative_usd": 1.2529000000000002e-05,
+      "cumulative_eur": 1.1526680000000001e-05,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:33:58.600910",
+      "model": "grok-2-latest",
+      "cost_usd": 6.490000000000001e-07,
+      "cost_eur": 5.9708e-07,
+      "cumulative_usd": 1.3178000000000002e-05,
+      "cumulative_eur": 1.2123760000000001e-05,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:35.011067",
+      "model": "grok-2-latest",
+      "cost_usd": 2.0309999999999997e-06,
+      "cost_eur": 1.86852e-06,
+      "cumulative_usd": 1.5209000000000001e-05,
+      "cumulative_eur": 1.3992280000000002e-05,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:36.664008",
+      "model": "grok-2-latest",
+      "cost_usd": 1.477e-06,
+      "cost_eur": 1.35884e-06,
+      "cumulative_usd": 1.6686000000000003e-05,
+      "cumulative_eur": 1.5351120000000004e-05,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:38.426604",
+      "model": "grok-2-latest",
+      "cost_usd": 1.529e-06,
+      "cost_eur": 1.40668e-06,
+      "cumulative_usd": 1.8215e-05,
+      "cumulative_eur": 1.67578e-05,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:44.994187",
+      "model": "grok-2-latest",
+      "cost_usd": 2.607e-06,
+      "cost_eur": 2.3984400000000005e-06,
+      "cumulative_usd": 2.0822e-05,
+      "cumulative_eur": 1.915624e-05,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:50.338182",
+      "model": "grok-2-latest",
+      "cost_usd": 2.952e-06,
+      "cost_eur": 2.71584e-06,
+      "cumulative_usd": 2.3774e-05,
+      "cumulative_eur": 2.1872080000000002e-05,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:34:56.619921",
+      "model": "grok-2-latest",
+      "cost_usd": 3.593e-06,
+      "cost_eur": 3.3055600000000003e-06,
+      "cumulative_usd": 2.7367e-05,
+      "cumulative_eur": 2.517764e-05,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:02.019789",
+      "model": "grok-2-latest",
+      "cost_usd": 3.983000000000001e-06,
+      "cost_eur": 3.6643600000000006e-06,
+      "cumulative_usd": 3.135e-05,
+      "cumulative_eur": 2.8842000000000003e-05,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:06.573844",
+      "model": "grok-2-latest",
+      "cost_usd": 4.289e-06,
+      "cost_eur": 3.94588e-06,
+      "cumulative_usd": 3.5639e-05,
+      "cumulative_eur": 3.2787880000000004e-05,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:12.685199",
+      "model": "grok-2-latest",
+      "cost_usd": 4.9560000000000005e-06,
+      "cost_eur": 4.559520000000001e-06,
+      "cumulative_usd": 4.0595e-05,
+      "cumulative_eur": 3.73474e-05,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:17.923395",
+      "model": "grok-2-latest",
+      "cost_usd": 5.3379999999999995e-06,
+      "cost_eur": 4.91096e-06,
+      "cumulative_usd": 4.5933e-05,
+      "cumulative_eur": 4.2258360000000006e-05,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:24.526049",
+      "model": "grok-2-latest",
+      "cost_usd": 6.0280000000000006e-06,
+      "cost_eur": 5.545760000000001e-06,
+      "cumulative_usd": 5.1961e-05,
+      "cumulative_eur": 4.780412e-05,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:30.086960",
+      "model": "grok-2-latest",
+      "cost_usd": 6.448000000000001e-06,
+      "cost_eur": 5.932160000000001e-06,
+      "cumulative_usd": 5.8409e-05,
+      "cumulative_eur": 5.373628000000001e-05,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:35.601280",
+      "model": "grok-2-latest",
+      "cost_usd": 6.936e-06,
+      "cost_eur": 6.38112e-06,
+      "cumulative_usd": 6.5345e-05,
+      "cumulative_eur": 6.011740000000001e-05,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:41.519562",
+      "model": "grok-2-latest",
+      "cost_usd": 7.457000000000001e-06,
+      "cost_eur": 6.860440000000001e-06,
+      "cumulative_usd": 7.280200000000001e-05,
+      "cumulative_eur": 6.697784000000001e-05,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:47.831362",
+      "model": "grok-2-latest",
+      "cost_usd": 7.956000000000001e-06,
+      "cost_eur": 7.319520000000001e-06,
+      "cumulative_usd": 8.075800000000002e-05,
+      "cumulative_eur": 7.429736000000002e-05,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:35:54.137140",
+      "model": "grok-2-latest",
+      "cost_usd": 8.513000000000001e-06,
+      "cost_eur": 7.831960000000001e-06,
+      "cumulative_usd": 8.927100000000002e-05,
+      "cumulative_eur": 8.212932000000002e-05,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:03.128625",
+      "model": "grok-2-latest",
+      "cost_usd": 2.007e-06,
+      "cost_eur": 1.84644e-06,
+      "cumulative_usd": 9.127800000000002e-05,
+      "cumulative_eur": 8.397576000000002e-05,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:04.645275",
+      "model": "grok-2-latest",
+      "cost_usd": 1.4339999999999997e-06,
+      "cost_eur": 1.3192799999999999e-06,
+      "cumulative_usd": 9.271200000000002e-05,
+      "cumulative_eur": 8.529504000000002e-05,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:06.383941",
+      "model": "grok-2-latest",
+      "cost_usd": 1.5330000000000002e-06,
+      "cost_eur": 1.4103600000000002e-06,
+      "cumulative_usd": 9.424500000000002e-05,
+      "cumulative_eur": 8.670540000000002e-05,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:08.705473",
+      "model": "grok-2-latest",
+      "cost_usd": 1.76e-06,
+      "cost_eur": 1.6192e-06,
+      "cumulative_usd": 9.600500000000001e-05,
+      "cumulative_eur": 8.832460000000002e-05,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:10.698430",
+      "model": "grok-2-latest",
+      "cost_usd": 1.8669999999999999e-06,
+      "cost_eur": 1.71764e-06,
+      "cumulative_usd": 9.787200000000001e-05,
+      "cumulative_eur": 9.004224000000002e-05,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:14.010437",
+      "model": "grok-2-latest",
+      "cost_usd": 2.278e-06,
+      "cost_eur": 2.09576e-06,
+      "cumulative_usd": 0.00010015000000000001,
+      "cumulative_eur": 9.213800000000002e-05,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:16.581424",
+      "model": "grok-2-latest",
+      "cost_usd": 2.3809999999999997e-06,
+      "cost_eur": 2.1905199999999997e-06,
+      "cumulative_usd": 0.00010253100000000001,
+      "cumulative_eur": 9.432852000000002e-05,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:18.538010",
+      "model": "grok-2-latest",
+      "cost_usd": 2.42e-06,
+      "cost_eur": 2.2264000000000004e-06,
+      "cumulative_usd": 0.000104951,
+      "cumulative_eur": 9.655492000000001e-05,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:21.204031",
+      "model": "grok-2-latest",
+      "cost_usd": 2.706e-06,
+      "cost_eur": 2.48952e-06,
+      "cumulative_usd": 0.000107657,
+      "cumulative_eur": 9.904444000000001e-05,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:24.001373",
+      "model": "grok-2-latest",
+      "cost_usd": 2.9360000000000003e-06,
+      "cost_eur": 2.7011200000000004e-06,
+      "cumulative_usd": 0.000110593,
+      "cumulative_eur": 0.00010174556000000001,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:27.659544",
+      "model": "grok-2-latest",
+      "cost_usd": 3.33e-06,
+      "cost_eur": 3.0636e-06,
+      "cumulative_usd": 0.000113923,
+      "cumulative_eur": 0.00010480916,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:31.277197",
+      "model": "grok-2-latest",
+      "cost_usd": 3.6200000000000005e-06,
+      "cost_eur": 3.3304000000000008e-06,
+      "cumulative_usd": 0.000117543,
+      "cumulative_eur": 0.00010813956,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:35.028055",
+      "model": "grok-2-latest",
+      "cost_usd": 3.895e-06,
+      "cost_eur": 3.5834000000000003e-06,
+      "cumulative_usd": 0.000121438,
+      "cumulative_eur": 0.00011172296,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:38.669275",
+      "model": "grok-2-latest",
+      "cost_usd": 4.192e-06,
+      "cost_eur": 3.85664e-06,
+      "cumulative_usd": 0.00012563,
+      "cumulative_eur": 0.0001155796,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:42.145321",
+      "model": "grok-2-latest",
+      "cost_usd": 4.451999999999999e-06,
+      "cost_eur": 4.095839999999999e-06,
+      "cumulative_usd": 0.000130082,
+      "cumulative_eur": 0.00011967544000000001,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:46.375089",
+      "model": "grok-2-latest",
+      "cost_usd": 4.898e-06,
+      "cost_eur": 4.506160000000001e-06,
+      "cumulative_usd": 0.00013498,
+      "cumulative_eur": 0.00012418160000000002,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:48.114162",
+      "model": "grok-2-latest",
+      "cost_usd": 5.27e-07,
+      "cost_eur": 4.8484e-07,
+      "cumulative_usd": 0.00013550700000000002,
+      "cumulative_eur": 0.00012466644000000003,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:50.087402",
+      "model": "grok-2-latest",
+      "cost_usd": 8.14e-07,
+      "cost_eur": 7.4888e-07,
+      "cumulative_usd": 0.000136321,
+      "cumulative_eur": 0.00012541532000000003,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:52.284713",
+      "model": "grok-2-latest",
+      "cost_usd": 9.429999999999999e-07,
+      "cost_eur": 8.675599999999999e-07,
+      "cumulative_usd": 0.000137264,
+      "cumulative_eur": 0.00012628288,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:36:55.114013",
+      "model": "grok-2-latest",
+      "cost_usd": 1.228e-06,
+      "cost_eur": 1.12976e-06,
+      "cumulative_usd": 0.00013849200000000002,
+      "cumulative_eur": 0.00012741264000000002,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:01.100798",
+      "model": "grok-2-latest",
+      "cost_usd": 1.344e-06,
+      "cost_eur": 1.23648e-06,
+      "cumulative_usd": 0.000139836,
+      "cumulative_eur": 0.00012864912,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:03.649719",
+      "model": "grok-2-latest",
+      "cost_usd": 1.495e-06,
+      "cost_eur": 1.3754000000000002e-06,
+      "cumulative_usd": 0.00014133100000000002,
+      "cumulative_eur": 0.00013002452000000002,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:06.372048",
+      "model": "grok-2-latest",
+      "cost_usd": 1.5869999999999998e-06,
+      "cost_eur": 1.4600399999999998e-06,
+      "cumulative_usd": 0.00014291800000000002,
+      "cumulative_eur": 0.00013148456000000003,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:08.459579",
+      "model": "grok-2-latest",
+      "cost_usd": 1.737e-06,
+      "cost_eur": 1.59804e-06,
+      "cumulative_usd": 0.00014465500000000002,
+      "cumulative_eur": 0.0001330826,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:11.332471",
+      "model": "grok-2-latest",
+      "cost_usd": 2.021e-06,
+      "cost_eur": 1.8593199999999998e-06,
+      "cumulative_usd": 0.00014667600000000002,
+      "cumulative_eur": 0.00013494192000000003,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:13.824485",
+      "model": "grok-2-latest",
+      "cost_usd": 2.18e-06,
+      "cost_eur": 2.0056e-06,
+      "cumulative_usd": 0.00014885600000000003,
+      "cumulative_eur": 0.00013694752000000004,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:16.198041",
+      "model": "grok-2-latest",
+      "cost_usd": 2.338e-06,
+      "cost_eur": 2.15096e-06,
+      "cumulative_usd": 0.00015119400000000003,
+      "cumulative_eur": 0.00013909848000000002,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:23.888875",
+      "model": "grok-2-latest",
+      "cost_usd": 2.5190000000000004e-06,
+      "cost_eur": 2.3174800000000006e-06,
+      "cumulative_usd": 0.00015371300000000004,
+      "cumulative_eur": 0.00014141596000000005,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:26.702889",
+      "model": "grok-2-latest",
+      "cost_usd": 2.7510000000000004e-06,
+      "cost_eur": 2.5309200000000003e-06,
+      "cumulative_usd": 0.00015646400000000004,
+      "cumulative_eur": 0.00014394688000000006,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:29.605095",
+      "model": "grok-2-latest",
+      "cost_usd": 2.9680000000000002e-06,
+      "cost_eur": 2.7305600000000003e-06,
+      "cumulative_usd": 0.00015943200000000004,
+      "cumulative_eur": 0.00014667744000000004,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:33.579156",
+      "model": "grok-2-latest",
+      "cost_usd": 3.1350000000000005e-06,
+      "cost_eur": 2.8842000000000007e-06,
+      "cumulative_usd": 0.00016256700000000004,
+      "cumulative_eur": 0.00014956164000000006,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:36.612772",
+      "model": "grok-2-latest",
+      "cost_usd": 3.43e-06,
+      "cost_eur": 3.1556000000000003e-06,
+      "cumulative_usd": 0.00016599700000000006,
+      "cumulative_eur": 0.00015271724000000007,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:38.487433",
+      "model": "grok-2-latest",
+      "cost_usd": 5.71e-07,
+      "cost_eur": 5.2532e-07,
+      "cumulative_usd": 0.00016656800000000005,
+      "cumulative_eur": 0.00015324256000000006,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:41.113057",
+      "model": "grok-2-latest",
+      "cost_usd": 9.570000000000001e-07,
+      "cost_eur": 8.804400000000001e-07,
+      "cumulative_usd": 0.00016752500000000005,
+      "cumulative_eur": 0.00015412300000000004,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:45.003026",
+      "model": "grok-2-latest",
+      "cost_usd": 1.3770000000000001e-06,
+      "cost_eur": 1.2668400000000001e-06,
+      "cumulative_usd": 0.00016890200000000004,
+      "cumulative_eur": 0.00015538984000000006,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:48.982943",
+      "model": "grok-2-latest",
+      "cost_usd": 1.721e-06,
+      "cost_eur": 1.58332e-06,
+      "cumulative_usd": 0.00017062300000000004,
+      "cumulative_eur": 0.00015697316000000004,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:52.261992",
+      "model": "grok-2-latest",
+      "cost_usd": 1.918e-06,
+      "cost_eur": 1.7645600000000002e-06,
+      "cumulative_usd": 0.00017254100000000004,
+      "cumulative_eur": 0.00015873772000000005,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:56.231383",
+      "model": "grok-2-latest",
+      "cost_usd": 2.33e-06,
+      "cost_eur": 2.1436e-06,
+      "cumulative_usd": 0.00017487100000000005,
+      "cumulative_eur": 0.00016088132000000006,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:37:59.327242",
+      "model": "grok-2-latest",
+      "cost_usd": 2.488e-06,
+      "cost_eur": 2.28896e-06,
+      "cumulative_usd": 0.00017735900000000006,
+      "cumulative_eur": 0.00016317028000000007,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:02.706069",
+      "model": "grok-2-latest",
+      "cost_usd": 2.7770000000000003e-06,
+      "cost_eur": 2.5548400000000003e-06,
+      "cumulative_usd": 0.00018013600000000007,
+      "cumulative_eur": 0.00016572512000000007,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:06.177984",
+      "model": "grok-2-latest",
+      "cost_usd": 3.0519999999999997e-06,
+      "cost_eur": 2.80784e-06,
+      "cumulative_usd": 0.00018318800000000006,
+      "cumulative_eur": 0.00016853296000000006,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:10.375547",
+      "model": "grok-2-latest",
+      "cost_usd": 3.474e-06,
+      "cost_eur": 3.19608e-06,
+      "cumulative_usd": 0.00018666200000000006,
+      "cumulative_eur": 0.00017172904000000008,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:14.584630",
+      "model": "grok-2-latest",
+      "cost_usd": 3.84e-06,
+      "cost_eur": 3.5328e-06,
+      "cumulative_usd": 0.00019050200000000005,
+      "cumulative_eur": 0.00017526184000000005,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:18.647894",
+      "model": "grok-2-latest",
+      "cost_usd": 4.16e-06,
+      "cost_eur": 3.8272e-06,
+      "cumulative_usd": 0.00019466200000000004,
+      "cumulative_eur": 0.00017908904000000004,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:22.769313",
+      "model": "grok-2-latest",
+      "cost_usd": 4.5e-06,
+      "cost_eur": 4.14e-06,
+      "cumulative_usd": 0.00019916200000000004,
+      "cumulative_eur": 0.00018322904000000003,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:27.463282",
+      "model": "grok-2-latest",
+      "cost_usd": 4.934e-06,
+      "cost_eur": 4.53928e-06,
+      "cumulative_usd": 0.00020409600000000005,
+      "cumulative_eur": 0.00018776832000000004,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:32.341579",
+      "model": "grok-2-latest",
+      "cost_usd": 5.3790000000000005e-06,
+      "cost_eur": 4.948680000000001e-06,
+      "cumulative_usd": 0.00020947500000000004,
+      "cumulative_eur": 0.00019271700000000005,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:37.973107",
+      "model": "grok-2-latest",
+      "cost_usd": 5.957000000000001e-06,
+      "cost_eur": 5.480440000000001e-06,
+      "cumulative_usd": 0.00021543200000000005,
+      "cumulative_eur": 0.00019819744000000006,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:46.478122",
+      "model": "grok-2-latest",
+      "cost_usd": 1.8900000000000001e-06,
+      "cost_eur": 1.7388000000000002e-06,
+      "cumulative_usd": 0.00021732200000000004,
+      "cumulative_eur": 0.00019993624000000005,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:47.897883",
+      "model": "grok-2-latest",
+      "cost_usd": 1.3630000000000001e-06,
+      "cost_eur": 1.2539600000000001e-06,
+      "cumulative_usd": 0.00021868500000000004,
+      "cumulative_eur": 0.00020119020000000003,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:49.523137",
+      "model": "grok-2-latest",
+      "cost_usd": 1.407e-06,
+      "cost_eur": 1.29444e-06,
+      "cumulative_usd": 0.00022009200000000005,
+      "cumulative_eur": 0.00020248464000000005,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:51.265957",
+      "model": "grok-2-latest",
+      "cost_usd": 1.544e-06,
+      "cost_eur": 1.42048e-06,
+      "cumulative_usd": 0.00022163600000000004,
+      "cumulative_eur": 0.00020390512000000006,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:53.188713",
+      "model": "grok-2-latest",
+      "cost_usd": 1.7009999999999999e-06,
+      "cost_eur": 1.56492e-06,
+      "cumulative_usd": 0.00022333700000000005,
+      "cumulative_eur": 0.00020547004000000005,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:56.697925",
+      "model": "grok-2-latest",
+      "cost_usd": 2.059e-06,
+      "cost_eur": 1.89428e-06,
+      "cumulative_usd": 0.00022539600000000005,
+      "cumulative_eur": 0.00020736432000000005,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:38:58.427360",
+      "model": "grok-2-latest",
+      "cost_usd": 2.013e-06,
+      "cost_eur": 1.8519600000000002e-06,
+      "cumulative_usd": 0.00022740900000000006,
+      "cumulative_eur": 0.00020921628000000007,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:01.905640",
+      "model": "grok-2-latest",
+      "cost_usd": 2.1389999999999998e-06,
+      "cost_eur": 1.9678799999999997e-06,
+      "cumulative_usd": 0.00022954800000000005,
+      "cumulative_eur": 0.00021118416000000004,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:05.029045",
+      "model": "grok-2-latest",
+      "cost_usd": 2.512e-06,
+      "cost_eur": 2.31104e-06,
+      "cumulative_usd": 0.00023206000000000005,
+      "cumulative_eur": 0.00021349520000000006,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:07.744528",
+      "model": "grok-2-latest",
+      "cost_usd": 2.659e-06,
+      "cost_eur": 2.44628e-06,
+      "cumulative_usd": 0.00023471900000000004,
+      "cumulative_eur": 0.00021594148000000005,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:10.707445",
+      "model": "grok-2-latest",
+      "cost_usd": 2.8889999999999998e-06,
+      "cost_eur": 2.65788e-06,
+      "cumulative_usd": 0.00023760800000000005,
+      "cumulative_eur": 0.00021859936000000006,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:13.588358",
+      "model": "grok-2-latest",
+      "cost_usd": 3.129e-06,
+      "cost_eur": 2.87868e-06,
+      "cumulative_usd": 0.00024073700000000004,
+      "cumulative_eur": 0.00022147804000000005,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:17.870925",
+      "model": "grok-2-latest",
+      "cost_usd": 3.553e-06,
+      "cost_eur": 3.26876e-06,
+      "cumulative_usd": 0.00024429000000000003,
+      "cumulative_eur": 0.00022474680000000003,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:21.738516",
+      "model": "grok-2-latest",
+      "cost_usd": 3.8350000000000006e-06,
+      "cost_eur": 3.528200000000001e-06,
+      "cumulative_usd": 0.00024812500000000003,
+      "cumulative_eur": 0.00022827500000000003,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:24.901852",
+      "model": "grok-2-latest",
+      "cost_usd": 4.0370000000000005e-06,
+      "cost_eur": 3.7140400000000006e-06,
+      "cumulative_usd": 0.000252162,
+      "cumulative_eur": 0.00023198904000000002,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:29.339059",
+      "model": "grok-2-latest",
+      "cost_usd": 4.5259999999999995e-06,
+      "cost_eur": 4.16392e-06,
+      "cumulative_usd": 0.000256688,
+      "cumulative_eur": 0.00023615295999999998,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:35.362265",
+      "model": "grok-2-latest",
+      "cost_usd": 1.404e-06,
+      "cost_eur": 1.2916800000000001e-06,
+      "cumulative_usd": 0.00025809199999999997,
+      "cumulative_eur": 0.00023744463999999998,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:38.314724",
+      "model": "grok-2-latest",
+      "cost_usd": 1.437e-06,
+      "cost_eur": 1.32204e-06,
+      "cumulative_usd": 0.000259529,
+      "cumulative_eur": 0.00023876668,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:39:40.086737",
+      "model": "grok-2-latest",
+      "cost_usd": 1.394e-06,
+      "cost_eur": 1.2824799999999999e-06,
+      "cumulative_usd": 0.000260923,
+      "cumulative_eur": 0.00024004916,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:01.597396",
+      "model": "grok-2-latest",
+      "cost_usd": 5.383000000000001e-06,
+      "cost_eur": 4.952360000000001e-06,
+      "cumulative_usd": 0.000266306,
+      "cumulative_eur": 0.00024500152000000004,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:04.593375",
+      "model": "grok-2-latest",
+      "cost_usd": 3.721e-06,
+      "cost_eur": 3.42332e-06,
+      "cumulative_usd": 0.000270027,
+      "cumulative_eur": 0.00024842484,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:07.911852",
+      "model": "grok-2-latest",
+      "cost_usd": 4.053e-06,
+      "cost_eur": 3.7287600000000004e-06,
+      "cumulative_usd": 0.00027408,
+      "cumulative_eur": 0.0002521536,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:10.004195",
+      "model": "grok-2-latest",
+      "cost_usd": 4.065e-06,
+      "cost_eur": 3.7398e-06,
+      "cumulative_usd": 0.000278145,
+      "cumulative_eur": 0.0002558934,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:11.961538",
+      "model": "grok-2-latest",
+      "cost_usd": 4.177000000000001e-06,
+      "cost_eur": 3.842840000000001e-06,
+      "cumulative_usd": 0.000282322,
+      "cumulative_eur": 0.00025973624,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:15.168043",
+      "model": "grok-2-latest",
+      "cost_usd": 4.55e-06,
+      "cost_eur": 4.186e-06,
+      "cumulative_usd": 0.000286872,
+      "cumulative_eur": 0.00026392224,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:18.571191",
+      "model": "grok-2-latest",
+      "cost_usd": 4.795e-06,
+      "cost_eur": 4.4114e-06,
+      "cumulative_usd": 0.00029166699999999996,
+      "cumulative_eur": 0.00026833364,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:22.297558",
+      "model": "grok-2-latest",
+      "cost_usd": 5.145000000000001e-06,
+      "cost_eur": 4.733400000000001e-06,
+      "cumulative_usd": 0.000296812,
+      "cumulative_eur": 0.00027306704,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:25.480782",
+      "model": "grok-2-latest",
+      "cost_usd": 5.355e-06,
+      "cost_eur": 4.9266e-06,
+      "cumulative_usd": 0.000302167,
+      "cumulative_eur": 0.00027799364,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:29.114348",
+      "model": "grok-2-latest",
+      "cost_usd": 5.697e-06,
+      "cost_eur": 5.24124e-06,
+      "cumulative_usd": 0.000307864,
+      "cumulative_eur": 0.00028323488,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:32.576338",
+      "model": "grok-2-latest",
+      "cost_usd": 5.964000000000001e-06,
+      "cost_eur": 5.486880000000001e-06,
+      "cumulative_usd": 0.000313828,
+      "cumulative_eur": 0.00028872176000000003,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:36.679216",
+      "model": "grok-2-latest",
+      "cost_usd": 6.341000000000001e-06,
+      "cost_eur": 5.833720000000001e-06,
+      "cumulative_usd": 0.000320169,
+      "cumulative_eur": 0.00029455548,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:42.658223",
+      "model": "grok-2-latest",
+      "cost_usd": 6.874999999999999e-06,
+      "cost_eur": 6.325e-06,
+      "cumulative_usd": 0.00032704399999999997,
+      "cumulative_eur": 0.00030088048,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:44.609129",
+      "model": "grok-2-latest",
+      "cost_usd": 5.44e-07,
+      "cost_eur": 5.0048e-07,
+      "cumulative_usd": 0.00032758799999999997,
+      "cumulative_eur": 0.00030138096,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:47.061044",
+      "model": "grok-2-latest",
+      "cost_usd": 8.49e-07,
+      "cost_eur": 7.810800000000001e-07,
+      "cumulative_usd": 0.00032843699999999995,
+      "cumulative_eur": 0.00030216204,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:55.447019",
+      "model": "grok-2-latest",
+      "cost_usd": 2.048e-06,
+      "cost_eur": 1.8841600000000003e-06,
+      "cumulative_usd": 0.00033048499999999994,
+      "cumulative_eur": 0.00030404619999999994,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:40:59.874531",
+      "model": "grok-2-latest",
+      "cost_usd": 2.1130000000000004e-06,
+      "cost_eur": 1.9439600000000005e-06,
+      "cumulative_usd": 0.0003325979999999999,
+      "cumulative_eur": 0.0003059901599999999,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:04.894313",
+      "model": "grok-2-latest",
+      "cost_usd": 2.614e-06,
+      "cost_eur": 2.40488e-06,
+      "cumulative_usd": 0.00033521199999999993,
+      "cumulative_eur": 0.00030839503999999994,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:11.392093",
+      "model": "grok-2-latest",
+      "cost_usd": 3.3540000000000004e-06,
+      "cost_eur": 3.0856800000000007e-06,
+      "cumulative_usd": 0.00033856599999999994,
+      "cumulative_eur": 0.00031148071999999993,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:17.462106",
+      "model": "grok-2-latest",
+      "cost_usd": 3.8570000000000005e-06,
+      "cost_eur": 3.5484400000000005e-06,
+      "cumulative_usd": 0.00034242299999999996,
+      "cumulative_eur": 0.00031502916,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:23.186580",
+      "model": "grok-2-latest",
+      "cost_usd": 4.3240000000000004e-06,
+      "cost_eur": 3.97808e-06,
+      "cumulative_usd": 0.00034674699999999995,
+      "cumulative_eur": 0.00031900723999999997,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:30.220679",
+      "model": "grok-2-latest",
+      "cost_usd": 5.083e-06,
+      "cost_eur": 4.67636e-06,
+      "cumulative_usd": 0.00035182999999999997,
+      "cumulative_eur": 0.0003236836,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:37.474619",
+      "model": "grok-2-latest",
+      "cost_usd": 5.716000000000001e-06,
+      "cost_eur": 5.258720000000001e-06,
+      "cumulative_usd": 0.000357546,
+      "cumulative_eur": 0.00032894232,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:44.993617",
+      "model": "grok-2-latest",
+      "cost_usd": 6.464e-06,
+      "cost_eur": 5.946880000000001e-06,
+      "cumulative_usd": 0.00036401,
+      "cumulative_eur": 0.0003348892,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:41:53.036596",
+      "model": "grok-2-latest",
+      "cost_usd": 7.24e-06,
+      "cost_eur": 6.660800000000001e-06,
+      "cumulative_usd": 0.00037125,
+      "cumulative_eur": 0.00034155000000000003,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:01.599674",
+      "model": "grok-2-latest",
+      "cost_usd": 7.785000000000001e-06,
+      "cost_eur": 7.1622000000000015e-06,
+      "cumulative_usd": 0.000379035,
+      "cumulative_eur": 0.0003487122,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:09.226548",
+      "model": "grok-2-latest",
+      "cost_usd": 8.363e-06,
+      "cost_eur": 7.69396e-06,
+      "cumulative_usd": 0.000387398,
+      "cumulative_eur": 0.00035640616000000004,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:17.189279",
+      "model": "grok-2-latest",
+      "cost_usd": 9.106e-06,
+      "cost_eur": 8.37752e-06,
+      "cumulative_usd": 0.000396504,
+      "cumulative_eur": 0.00036478368000000003,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:27.994919",
+      "model": "grok-2-latest",
+      "cost_usd": 9.882000000000001e-06,
+      "cost_eur": 9.091440000000002e-06,
+      "cumulative_usd": 0.000406386,
+      "cumulative_eur": 0.00037387512000000003,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:37.297639",
+      "model": "grok-2-latest",
+      "cost_usd": 2.031e-06,
+      "cost_eur": 1.8685200000000001e-06,
+      "cumulative_usd": 0.000408417,
+      "cumulative_eur": 0.00037574364000000004,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:38.883168",
+      "model": "grok-2-latest",
+      "cost_usd": 1.48e-06,
+      "cost_eur": 1.3616e-06,
+      "cumulative_usd": 0.000409897,
+      "cumulative_eur": 0.00037710524,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:40.257151",
+      "model": "grok-2-latest",
+      "cost_usd": 1.489e-06,
+      "cost_eur": 1.36988e-06,
+      "cumulative_usd": 0.000411386,
+      "cumulative_eur": 0.00037847512000000003,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:42.077244",
+      "model": "grok-2-latest",
+      "cost_usd": 1.646e-06,
+      "cost_eur": 1.51432e-06,
+      "cumulative_usd": 0.000413032,
+      "cumulative_eur": 0.00037998944000000004,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:44.123779",
+      "model": "grok-2-latest",
+      "cost_usd": 1.808e-06,
+      "cost_eur": 1.6633600000000002e-06,
+      "cumulative_usd": 0.00041484000000000003,
+      "cumulative_eur": 0.00038165280000000007,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:46.429283",
+      "model": "grok-2-latest",
+      "cost_usd": 2.0100000000000002e-06,
+      "cost_eur": 1.8492000000000002e-06,
+      "cumulative_usd": 0.00041685,
+      "cumulative_eur": 0.00038350200000000003,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:48.059125",
+      "model": "grok-2-latest",
+      "cost_usd": 2.031e-06,
+      "cost_eur": 1.8685200000000001e-06,
+      "cumulative_usd": 0.000418881,
+      "cumulative_eur": 0.00038537052000000004,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:49.698417",
+      "model": "grok-2-latest",
+      "cost_usd": 2.1090000000000005e-06,
+      "cost_eur": 1.9402800000000006e-06,
+      "cumulative_usd": 0.00042099,
+      "cumulative_eur": 0.00038731080000000003,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:51.948361",
+      "model": "grok-2-latest",
+      "cost_usd": 2.342e-06,
+      "cost_eur": 2.1546400000000003e-06,
+      "cumulative_usd": 0.000423332,
+      "cumulative_eur": 0.00038946544,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:54.284874",
+      "model": "grok-2-latest",
+      "cost_usd": 2.51e-06,
+      "cost_eur": 2.3092000000000003e-06,
+      "cumulative_usd": 0.000425842,
+      "cumulative_eur": 0.00039177464,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:56.725822",
+      "model": "grok-2-latest",
+      "cost_usd": 2.7090000000000002e-06,
+      "cost_eur": 2.49228e-06,
+      "cumulative_usd": 0.000428551,
+      "cumulative_eur": 0.00039426692,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:42:59.512094",
+      "model": "grok-2-latest",
+      "cost_usd": 2.8840000000000003e-06,
+      "cost_eur": 2.6532800000000004e-06,
+      "cumulative_usd": 0.000431435,
+      "cumulative_eur": 0.0003969202,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:02.128966",
+      "model": "grok-2-latest",
+      "cost_usd": 3.098e-06,
+      "cost_eur": 2.85016e-06,
+      "cumulative_usd": 0.00043453299999999997,
+      "cumulative_eur": 0.00039977036,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:04.851057",
+      "model": "grok-2-latest",
+      "cost_usd": 3.285e-06,
+      "cost_eur": 3.0222e-06,
+      "cumulative_usd": 0.000437818,
+      "cumulative_eur": 0.00040279256,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:07.521088",
+      "model": "grok-2-latest",
+      "cost_usd": 3.497e-06,
+      "cost_eur": 3.21724e-06,
+      "cumulative_usd": 0.00044131499999999996,
+      "cumulative_eur": 0.0004060098,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:10.892977",
+      "model": "grok-2-latest",
+      "cost_usd": 3.843e-06,
+      "cost_eur": 3.5355600000000002e-06,
+      "cumulative_usd": 0.00044515799999999997,
+      "cumulative_eur": 0.00040954536,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:21.728916",
+      "model": "grok-2-latest",
+      "cost_usd": 2.313e-06,
+      "cost_eur": 2.1279600000000004e-06,
+      "cumulative_usd": 0.00044747099999999996,
+      "cumulative_eur": 0.00041167331999999996,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:23.762844",
+      "model": "grok-2-latest",
+      "cost_usd": 1.658e-06,
+      "cost_eur": 1.5253600000000002e-06,
+      "cumulative_usd": 0.00044912899999999993,
+      "cumulative_eur": 0.00041319868,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:25.379059",
+      "model": "grok-2-latest",
+      "cost_usd": 1.692e-06,
+      "cost_eur": 1.55664e-06,
+      "cumulative_usd": 0.00045082099999999996,
+      "cumulative_eur": 0.00041475531999999996,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:32.567079",
+      "model": "grok-2-latest",
+      "cost_usd": 2.9e-06,
+      "cost_eur": 2.668e-06,
+      "cumulative_usd": 0.000453721,
+      "cumulative_eur": 0.00041742332,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:38.775699",
+      "model": "grok-2-latest",
+      "cost_usd": 3.356e-06,
+      "cost_eur": 3.0875200000000002e-06,
+      "cumulative_usd": 0.00045707699999999996,
+      "cumulative_eur": 0.00042051084,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:45.814935",
+      "model": "grok-2-latest",
+      "cost_usd": 4.087e-06,
+      "cost_eur": 3.7600400000000003e-06,
+      "cumulative_usd": 0.00046116399999999996,
+      "cumulative_eur": 0.00042427088,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:52.200517",
+      "model": "grok-2-latest",
+      "cost_usd": 4.588e-06,
+      "cost_eur": 4.2209600000000005e-06,
+      "cumulative_usd": 0.00046575199999999994,
+      "cumulative_eur": 0.00042849184,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:43:57.166781",
+      "model": "grok-2-latest",
+      "cost_usd": 4.874e-06,
+      "cost_eur": 4.48408e-06,
+      "cumulative_usd": 0.0004706259999999999,
+      "cumulative_eur": 0.00043297591999999995,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:04.241835",
+      "model": "grok-2-latest",
+      "cost_usd": 5.709e-06,
+      "cost_eur": 5.25228e-06,
+      "cumulative_usd": 0.00047633499999999993,
+      "cumulative_eur": 0.00043822819999999994,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:11.632519",
+      "model": "grok-2-latest",
+      "cost_usd": 6.395e-06,
+      "cost_eur": 5.8834e-06,
+      "cumulative_usd": 0.00048272999999999995,
+      "cumulative_eur": 0.00044411159999999995,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:17.874843",
+      "model": "grok-2-latest",
+      "cost_usd": 6.825e-06,
+      "cost_eur": 6.279e-06,
+      "cumulative_usd": 0.0004895549999999999,
+      "cumulative_eur": 0.00045039059999999994,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:25.529444",
+      "model": "grok-2-latest",
+      "cost_usd": 7.597e-06,
+      "cost_eur": 6.98924e-06,
+      "cumulative_usd": 0.0004971519999999999,
+      "cumulative_eur": 0.00045737983999999995,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:33.664099",
+      "model": "grok-2-latest",
+      "cost_usd": 8.237000000000001e-06,
+      "cost_eur": 7.578040000000001e-06,
+      "cumulative_usd": 0.000505389,
+      "cumulative_eur": 0.00046495788,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:40.789556",
+      "model": "grok-2-latest",
+      "cost_usd": 8.861e-06,
+      "cost_eur": 8.15212e-06,
+      "cumulative_usd": 0.00051425,
+      "cumulative_eur": 0.00047310999999999995,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:47.422276",
+      "model": "grok-2-latest",
+      "cost_usd": 9.366e-06,
+      "cost_eur": 8.61672e-06,
+      "cumulative_usd": 0.000523616,
+      "cumulative_eur": 0.00048172671999999997,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:44:55.274439",
+      "model": "grok-2-latest",
+      "cost_usd": 1.0138999999999999e-05,
+      "cost_eur": 9.32788e-06,
+      "cumulative_usd": 0.000533755,
+      "cumulative_eur": 0.0004910546000000001,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:05.302748",
+      "model": "grok-2-latest",
+      "cost_usd": 2.07e-06,
+      "cost_eur": 1.9044000000000001e-06,
+      "cumulative_usd": 0.000535825,
+      "cumulative_eur": 0.000492959,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:06.925385",
+      "model": "grok-2-latest",
+      "cost_usd": 1.509e-06,
+      "cost_eur": 1.3882800000000002e-06,
+      "cumulative_usd": 0.000537334,
+      "cumulative_eur": 0.00049434728,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:08.979897",
+      "model": "grok-2-latest",
+      "cost_usd": 1.6329999999999999e-06,
+      "cost_eur": 1.50236e-06,
+      "cumulative_usd": 0.000538967,
+      "cumulative_eur": 0.0004958496400000001,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:11.444746",
+      "model": "grok-2-latest",
+      "cost_usd": 1.8620000000000001e-06,
+      "cost_eur": 1.7130400000000002e-06,
+      "cumulative_usd": 0.000540829,
+      "cumulative_eur": 0.0004975626800000001,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:13.929157",
+      "model": "grok-2-latest",
+      "cost_usd": 1.999e-06,
+      "cost_eur": 1.83908e-06,
+      "cumulative_usd": 0.0005428280000000001,
+      "cumulative_eur": 0.0004994017600000001,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:17.191820",
+      "model": "grok-2-latest",
+      "cost_usd": 2.3490000000000003e-06,
+      "cost_eur": 2.1610800000000002e-06,
+      "cumulative_usd": 0.0005451770000000001,
+      "cumulative_eur": 0.0005015628400000001,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:20.558909",
+      "model": "grok-2-latest",
+      "cost_usd": 2.526e-06,
+      "cost_eur": 2.32392e-06,
+      "cumulative_usd": 0.0005477030000000001,
+      "cumulative_eur": 0.00050388676,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:22.979862",
+      "model": "grok-2-latest",
+      "cost_usd": 2.662e-06,
+      "cost_eur": 2.44904e-06,
+      "cumulative_usd": 0.000550365,
+      "cumulative_eur": 0.0005063358000000001,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:27.317017",
+      "model": "grok-2-latest",
+      "cost_usd": 3.09e-06,
+      "cost_eur": 2.8428e-06,
+      "cumulative_usd": 0.000553455,
+      "cumulative_eur": 0.0005091786,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:31.433169",
+      "model": "grok-2-latest",
+      "cost_usd": 3.3679999999999998e-06,
+      "cost_eur": 3.09856e-06,
+      "cumulative_usd": 0.000556823,
+      "cumulative_eur": 0.00051227716,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:35.500712",
+      "model": "grok-2-latest",
+      "cost_usd": 3.743e-06,
+      "cost_eur": 3.44356e-06,
+      "cumulative_usd": 0.000560566,
+      "cumulative_eur": 0.0005157207199999999,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:39.945657",
+      "model": "grok-2-latest",
+      "cost_usd": 4.103e-06,
+      "cost_eur": 3.7747600000000004e-06,
+      "cumulative_usd": 0.000564669,
+      "cumulative_eur": 0.00051949548,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:43.735836",
+      "model": "grok-2-latest",
+      "cost_usd": 4.389e-06,
+      "cost_eur": 4.03788e-06,
+      "cumulative_usd": 0.000569058,
+      "cumulative_eur": 0.00052353336,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:47.912078",
+      "model": "grok-2-latest",
+      "cost_usd": 4.782e-06,
+      "cost_eur": 4.39944e-06,
+      "cumulative_usd": 0.00057384,
+      "cumulative_eur": 0.0005279328000000001,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:52.145085",
+      "model": "grok-2-latest",
+      "cost_usd": 5.057000000000001e-06,
+      "cost_eur": 4.652440000000001e-06,
+      "cumulative_usd": 0.0005788970000000001,
+      "cumulative_eur": 0.0005325852400000001,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:45:56.993419",
+      "model": "grok-2-latest",
+      "cost_usd": 5.546000000000001e-06,
+      "cost_eur": 5.102320000000001e-06,
+      "cumulative_usd": 0.0005844430000000001,
+      "cumulative_eur": 0.0005376875600000002,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:03.848995",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 4.370999999999999e-06,
+      "cost_eur": 4.02132e-06,
+      "cumulative_usd": 4.370999999999999e-06,
+      "cumulative_eur": 4.02132e-06,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:08.864751",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 6.99e-06,
+      "cost_eur": 6.4308e-06,
+      "cumulative_usd": 1.1360999999999998e-05,
+      "cumulative_eur": 1.0452119999999999e-05,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:14.543703",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 8.445e-06,
+      "cost_eur": 7.7694e-06,
+      "cumulative_usd": 1.9806e-05,
+      "cumulative_eur": 1.822152e-05,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:20.824386",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.0197e-05,
+      "cost_eur": 9.38124e-06,
+      "cumulative_usd": 3.0003e-05,
+      "cumulative_eur": 2.7602760000000003e-05,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:26.980090",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.1028e-05,
+      "cost_eur": 1.0145760000000001e-05,
+      "cumulative_usd": 4.1031e-05,
+      "cumulative_eur": 3.774852e-05,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:35.560843",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.4102999999999999e-05,
+      "cost_eur": 1.2974759999999999e-05,
+      "cumulative_usd": 5.5134e-05,
+      "cumulative_eur": 5.072328e-05,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:42.516286",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.4616e-05,
+      "cost_eur": 1.3446720000000001e-05,
+      "cumulative_usd": 6.975e-05,
+      "cumulative_eur": 6.417e-05,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:48.827589",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.5678e-05,
+      "cost_eur": 1.4423760000000001e-05,
+      "cumulative_usd": 8.5428e-05,
+      "cumulative_eur": 7.859376e-05,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:51:55.744715",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.7205000000000002e-05,
+      "cost_eur": 1.5828600000000003e-05,
+      "cumulative_usd": 0.000102633,
+      "cumulative_eur": 9.442236000000001e-05,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:03.651465",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.0382000000000002e-05,
+      "cost_eur": 1.8751440000000004e-05,
+      "cumulative_usd": 0.000123015,
+      "cumulative_eur": 0.00011317380000000001,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:12.597583",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.2653e-05,
+      "cost_eur": 2.0840760000000003e-05,
+      "cumulative_usd": 0.000145668,
+      "cumulative_eur": 0.00013401456000000002,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:19.317000",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.2137e-05,
+      "cost_eur": 2.0366040000000004e-05,
+      "cumulative_usd": 0.000167805,
+      "cumulative_eur": 0.0001543806,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:27.471906",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.4606e-05,
+      "cost_eur": 2.2637520000000003e-05,
+      "cumulative_usd": 0.00019241100000000003,
+      "cumulative_eur": 0.00017701812000000004,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:35.608356",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.7054000000000002e-05,
+      "cost_eur": 2.4889680000000002e-05,
+      "cumulative_usd": 0.00021946500000000001,
+      "cumulative_eur": 0.00020190780000000003,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:43.466479",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.8704e-05,
+      "cost_eur": 2.6407680000000003e-05,
+      "cumulative_usd": 0.000248169,
+      "cumulative_eur": 0.00022831548000000002,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:51.042551",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.8836e-05,
+      "cost_eur": 2.652912e-05,
+      "cumulative_usd": 0.00027700500000000004,
+      "cumulative_eur": 0.00025484460000000004,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:52:55.187869",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 4.413e-06,
+      "cost_eur": 4.05996e-06,
+      "cumulative_usd": 0.000281418,
+      "cumulative_eur": 0.00025890456000000005,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:00.269594",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 7.025999999999999e-06,
+      "cost_eur": 6.46392e-06,
+      "cumulative_usd": 0.000288444,
+      "cumulative_eur": 0.00026536848,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:07.358940",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 9.807e-06,
+      "cost_eur": 9.02244e-06,
+      "cumulative_usd": 0.00029825100000000003,
+      "cumulative_eur": 0.00027439092,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:14.499322",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.1139e-05,
+      "cost_eur": 1.0247880000000001e-05,
+      "cumulative_usd": 0.00030939000000000004,
+      "cumulative_eur": 0.00028463880000000004,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:20.666069",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.2312e-05,
+      "cost_eur": 1.1327040000000001e-05,
+      "cumulative_usd": 0.00032170200000000004,
+      "cumulative_eur": 0.00029596584000000003,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:29.098366",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.6086e-05,
+      "cost_eur": 1.4799120000000002e-05,
+      "cumulative_usd": 0.00033778800000000005,
+      "cumulative_eur": 0.00031076496000000006,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:39.247589",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.9638e-05,
+      "cost_eur": 1.8066960000000002e-05,
+      "cumulative_usd": 0.00035742600000000004,
+      "cumulative_eur": 0.00032883192000000003,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:45.144013",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 1.7046e-05,
+      "cost_eur": 1.568232e-05,
+      "cumulative_usd": 0.00037447200000000004,
+      "cumulative_eur": 0.00034451424000000005,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:53:54.459126",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.2752000000000002e-05,
+      "cost_eur": 2.093184e-05,
+      "cumulative_usd": 0.00039722400000000006,
+      "cumulative_eur": 0.00036544608000000007,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:54:08.455129",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 2.9486999999999997e-05,
+      "cost_eur": 2.7128039999999998e-05,
+      "cumulative_usd": 0.0004267110000000001,
+      "cumulative_eur": 0.0003925741200000001,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:54:20.303049",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 3.0831e-05,
+      "cost_eur": 2.8364519999999997e-05,
+      "cumulative_usd": 0.00045754200000000007,
+      "cumulative_eur": 0.0004209386400000001,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:54:32.859463",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 3.4755e-05,
+      "cost_eur": 3.1974600000000004e-05,
+      "cumulative_usd": 0.000492297,
+      "cumulative_eur": 0.00045291324000000006,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:54:44.914033",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 3.7109999999999995e-05,
+      "cost_eur": 3.41412e-05,
+      "cumulative_usd": 0.0005294070000000001,
+      "cumulative_eur": 0.0004870544400000001,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:55:00.752631",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 4.2792e-05,
+      "cost_eur": 3.9368640000000004e-05,
+      "cumulative_usd": 0.0005721990000000001,
+      "cumulative_eur": 0.0005264230800000002,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:55:15.606477",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 4.7022e-05,
+      "cost_eur": 4.326024e-05,
+      "cumulative_usd": 0.0006192210000000001,
+      "cumulative_eur": 0.0005696833200000001,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:55:31.986328",
+      "model": "claude-haiku-4-5",
+      "cost_usd": 5.328e-05,
+      "cost_eur": 4.90176e-05,
+      "cumulative_usd": 0.000672501,
+      "cumulative_eur": 0.00061870092,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:56:34.447319",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.31e-07,
+      "cost_eur": 3.9652e-07,
+      "cumulative_usd": 4.31e-07,
+      "cumulative_eur": 3.9652e-07,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:56:40.034585",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.9e-07,
+      "cost_eur": 7.268e-07,
+      "cumulative_usd": 1.2209999999999998e-06,
+      "cumulative_eur": 1.1233199999999998e-06,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:56:47.268062",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.179e-06,
+      "cost_eur": 1.08468e-06,
+      "cumulative_usd": 2.4e-06,
+      "cumulative_eur": 2.208e-06,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:56:54.185947",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.478e-06,
+      "cost_eur": 1.35976e-06,
+      "cumulative_usd": 3.878e-06,
+      "cumulative_eur": 3.56776e-06,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:02.059270",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.77e-06,
+      "cost_eur": 1.6284000000000002e-06,
+      "cumulative_usd": 5.648e-06,
+      "cumulative_eur": 5.19616e-06,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:10.977322",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.211e-06,
+      "cost_eur": 2.0341200000000003e-06,
+      "cumulative_usd": 7.859e-06,
+      "cumulative_eur": 7.23028e-06,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:16.682006",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.335e-06,
+      "cost_eur": 2.1482e-06,
+      "cumulative_usd": 1.0194000000000001e-05,
+      "cumulative_eur": 9.378480000000002e-06,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:21.545419",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.4929999999999997e-06,
+      "cost_eur": 2.2935599999999997e-06,
+      "cumulative_usd": 1.2687e-05,
+      "cumulative_eur": 1.167204e-05,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:28.381565",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.935e-06,
+      "cost_eur": 2.7002e-06,
+      "cumulative_usd": 1.5622e-05,
+      "cumulative_eur": 1.437224e-05,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:35.191924",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.297e-06,
+      "cost_eur": 3.0332400000000003e-06,
+      "cumulative_usd": 1.8919e-05,
+      "cumulative_eur": 1.740548e-05,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:42.761825",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.574e-06,
+      "cost_eur": 3.28808e-06,
+      "cumulative_usd": 2.2493e-05,
+      "cumulative_eur": 2.0693560000000002e-05,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:50.204488",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.025e-06,
+      "cost_eur": 3.703e-06,
+      "cumulative_usd": 2.6518e-05,
+      "cumulative_eur": 2.439656e-05,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:57:57.324644",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.155e-06,
+      "cost_eur": 3.8226000000000005e-06,
+      "cumulative_usd": 3.0672999999999996e-05,
+      "cumulative_eur": 2.8219159999999996e-05,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:04.348805",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.543e-06,
+      "cost_eur": 4.17956e-06,
+      "cumulative_usd": 3.5215999999999996e-05,
+      "cumulative_eur": 3.239872e-05,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:11.969700",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.867e-06,
+      "cost_eur": 4.47764e-06,
+      "cumulative_usd": 4.0082999999999996e-05,
+      "cumulative_eur": 3.6876359999999995e-05,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:21.607161",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.334e-06,
+      "cost_eur": 4.90728e-06,
+      "cumulative_usd": 4.5416999999999996e-05,
+      "cumulative_eur": 4.178364e-05,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:23.331086",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.98e-07,
+      "cost_eur": 3.6616e-07,
+      "cumulative_usd": 4.5814999999999994e-05,
+      "cumulative_eur": 4.2149799999999994e-05,
+      "metadata": {
+        "turn": 0,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:27.351380",
+      "model": "gpt-4o-mini",
+      "cost_usd": 7.110000000000001e-07,
+      "cost_eur": 6.5412e-07,
+      "cumulative_usd": 4.6525999999999995e-05,
+      "cumulative_eur": 4.280392e-05,
+      "metadata": {
+        "turn": 1,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:32.455970",
+      "model": "gpt-4o-mini",
+      "cost_usd": 9.720000000000002e-07,
+      "cost_eur": 8.942400000000002e-07,
+      "cumulative_usd": 4.7498e-05,
+      "cumulative_eur": 4.369816e-05,
+      "metadata": {
+        "turn": 2,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:37.665329",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.217e-06,
+      "cost_eur": 1.11964e-06,
+      "cumulative_usd": 4.8715e-05,
+      "cumulative_eur": 4.4817799999999996e-05,
+      "metadata": {
+        "turn": 3,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:42.259469",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.4700000000000001e-06,
+      "cost_eur": 1.3524000000000002e-06,
+      "cumulative_usd": 5.0184999999999995e-05,
+      "cumulative_eur": 4.6170199999999994e-05,
+      "metadata": {
+        "turn": 4,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:48.162015",
+      "model": "gpt-4o-mini",
+      "cost_usd": 1.82e-06,
+      "cost_eur": 1.6744e-06,
+      "cumulative_usd": 5.2004999999999994e-05,
+      "cumulative_eur": 4.78446e-05,
+      "metadata": {
+        "turn": 5,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:54.950728",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.1340000000000002e-06,
+      "cost_eur": 1.96328e-06,
+      "cumulative_usd": 5.413899999999999e-05,
+      "cumulative_eur": 4.980787999999999e-05,
+      "metadata": {
+        "turn": 6,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:58:59.867365",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.2210000000000004e-06,
+      "cost_eur": 2.0433200000000005e-06,
+      "cumulative_usd": 5.635999999999999e-05,
+      "cumulative_eur": 5.185119999999999e-05,
+      "metadata": {
+        "turn": 7,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:08.033504",
+      "model": "gpt-4o-mini",
+      "cost_usd": 2.779e-06,
+      "cost_eur": 2.5566800000000003e-06,
+      "cumulative_usd": 5.913899999999999e-05,
+      "cumulative_eur": 5.4407879999999997e-05,
+      "metadata": {
+        "turn": 8,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:15.940953",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.082e-06,
+      "cost_eur": 2.83544e-06,
+      "cumulative_usd": 6.222099999999999e-05,
+      "cumulative_eur": 5.724331999999999e-05,
+      "metadata": {
+        "turn": 9,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:24.019996",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.483e-06,
+      "cost_eur": 3.20436e-06,
+      "cumulative_usd": 6.570399999999998e-05,
+      "cumulative_eur": 6.0447679999999986e-05,
+      "metadata": {
+        "turn": 10,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:32.538445",
+      "model": "gpt-4o-mini",
+      "cost_usd": 3.927000000000001e-06,
+      "cost_eur": 3.6128400000000006e-06,
+      "cumulative_usd": 6.963099999999998e-05,
+      "cumulative_eur": 6.406051999999999e-05,
+      "metadata": {
+        "turn": 11,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:40.985293",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.272e-06,
+      "cost_eur": 3.93024e-06,
+      "cumulative_usd": 7.390299999999999e-05,
+      "cumulative_eur": 6.799075999999999e-05,
+      "metadata": {
+        "turn": 12,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:48.458012",
+      "model": "gpt-4o-mini",
+      "cost_usd": 4.659000000000001e-06,
+      "cost_eur": 4.286280000000001e-06,
+      "cumulative_usd": 7.856199999999998e-05,
+      "cumulative_eur": 7.227703999999999e-05,
+      "metadata": {
+        "turn": 13,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T02:59:57.734035",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.195e-06,
+      "cost_eur": 4.7794e-06,
+      "cumulative_usd": 8.375699999999998e-05,
+      "cumulative_eur": 7.705643999999998e-05,
+      "metadata": {
+        "turn": 14,
+        "interview_id": "unknown"
+      }
+    },
+    {
+      "timestamp": "2025-11-17T03:00:08.418369",
+      "model": "gpt-4o-mini",
+      "cost_usd": 5.702e-06,
+      "cost_eur": 5.24584e-06,
+      "cumulative_usd": 8.945899999999997e-05,
+      "cumulative_eur": 8.230227999999998e-05,
+      "metadata": {
+        "turn": 15,
+        "interview_id": "unknown"
+      }
+    }
+  ],
+  "total_cost_usd": 0.0013464030000000001,
+  "total_cost_eur": 0.0012386907600000002
+}

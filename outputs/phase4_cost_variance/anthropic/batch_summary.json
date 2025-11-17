@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-11-17T02:55:32.490574",
+  "provider": "anthropic",
+  "model": "claude-haiku-4-5",
+  "protocol": "Prenatal Care Interview Protocol",
+  "interviews_planned": 2,
+  "interviews_successful": 2,
+  "interviews_failed": 0,
+  "total_cost_usd": 0.000672501,
+  "total_cost_eur": 0.00061870092,
+  "interviews": [
+    {
+      "interview_id": "unknown",
+      "cost_eur": 0.00025484460000000004
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 0.00036385632
+    }
+  ]
+}

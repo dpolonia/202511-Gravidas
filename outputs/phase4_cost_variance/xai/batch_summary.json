@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-11-17T02:58:11.201832",
+  "provider": "xai",
+  "model": "grok-2-latest",
+  "protocol": "Prenatal Care Interview Protocol",
+  "interviews_planned": 2,
+  "interviews_successful": 2,
+  "interviews_failed": 0,
+  "total_cost_usd": 0.0006708750000000001,
+  "total_cost_eur": 0.0006172050000000001,
+  "interviews": [
+    {
+      "interview_id": "unknown",
+      "cost_eur": 3.83042e-05
+    },
+    {
+      "interview_id": "unknown",
+      "cost_eur": 4.121324e-05
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T02:56:31.996492"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Interviewer:** Can you start by telling me a bit about your current health situation and any ongoing medical conditions you have?\n\n**Samantha:** Yeah, sure. I've been dealing with some gingivitis lately, which is pretty annoying. And I had viral sinusitis a while back, but that's mostly cleared up now. I keep getting reminders to review my medications, but honestly, I haven't been to the clinic in a while to do that.\n\n**Interviewer:** Thank you for sharing that, Samantha. It sounds like you've been managing a few things. Have you been experiencing any pregnancy-related conditions or symptoms recently?\n\n**Samantha:** Well, I did have a pregnancy scare a few months ago, but it turned out to be a false alarm. I'm not pregnant now, but I guess I've had some irregular periods and stuff like that. I haven't really been to the doctor about it though.\n\n**Interviewer:** I understand. It's important to keep track of those symptoms. Have you had any experiences with prenatal care, either currently or in the past?\n\n**Samantha:** No, I haven't needed prenatal care because I haven't been pregnant. But if I did, I'm not sure where I'd go. The community clinic I use doesn't really have a lot of resources for that kind of thing.\n\n**Interviewer:** That's helpful to know. Access to the right care can be challenging. Can you tell me more about your experiences with healthcare access, especially regarding reproductive and maternal health?\n\n**Samantha:** It's tough. Like I said, I go to a free clinic because I don't have insurance. They're okay for basic stuff, but when it comes to anything more specific like reproductive health, they're pretty limited. I've had to wait a long time for appointments, and they don't always have the right medications or tests. It's stressful, especially with everything else going on.\n\n**Interviewer:** I can imagine how stressful that must be. Stress can have a big impact on health. How do you feel your stress levels affect your health and your ability to seek care?\n\n**Samantha:** Oh, it's definitely a big factor. I'm always stressed about money and family stuff, and it makes it hard to focus on my health. Sometimes I just don't go to the doctor because I'm too overwhelmed, or I can't afford to miss work or school. It's a cycle, you know?\n\n**Interviewer:** Absolutely, it sounds like a very challenging cycle. Given your experiences, what do you think could improve your access to healthcare, particularly for reproductive and maternal health services?\n\n**Samantha:** More clinics that offer free or low-cost services would be a big help. Also, if they could have more specialized care, like for reproductive health, that would be great. And maybe more flexible hours so people like me who work or go to school can actually make it to appointments without it messing up everything else.\n\n**Interviewer:** Those are very practical suggestions, thank you. Lastly, do you have any specific concerns or needs related to your health that you feel are not being met currently?\n\n**Samantha:** Yeah, I wish I could get better dental care for my gingivitis. And I'd like to be able to talk to someone about managing stress and maybe quitting smoking. It's hard to find the time and resources for that stuff, though.\n\n**Interviewer:** Thank you, Samantha, for sharing your experiences and insights. It's been very helpful. Is there anything else you'd like to add or discuss before we end the interview?\n\n**Samantha:** No, I think that's it. Thanks for listening. It's nice to feel like someone cares about what's going on.\n\n**Interviewer:** Thank you, Samantha. Your input is invaluable, and I appreciate your time and openness. Take care.",
+      "timestamp": "2025-11-17T02:56:40.231822"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T02:56:40.231828"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** Sure, I'm 22 and currently a college student. I live in a suburban area of Los Angeles with my family. We're kind of struggling financially, which adds a lot of stress. I don't have health insurance, so I rely on the community clinic for my healthcare needs. I'm not married and don't have any kids, but I am sexually active. I try to use condoms, but it's not always easy to be consistent with that. I don't exercise much and I smoke sometimes, which I know isn't great for my health. But with school and work, it's hard to find the time and energy to focus on that stuff.\n\n**Interviewer:** Thank you for sharing that, Samantha. It sounds like you're juggling a lot. How do you manage your day-to-day life with these pressures?\n\n**Samantha:** It's tough. I work part-time to help with bills, and I go to school full-time. There's not much time left for anything else. I try to keep up with my schoolwork and work shifts, but it often feels like I'm just getting by. I don't have much time for myself, and that adds to the stress.\n\n**Interviewer:** It sounds exhausting. Do you have any support systems in place, like friends or family, that help you cope with these challenges?\n\n**Samantha:** Yeah, my family tries to help, but they're dealing with their own stuff too. I have a few close friends who are great, but they're busy with their own lives. Sometimes it feels like I'm on my own, but I know they care and would help if they could.\n\n**Interviewer:** It's good to hear you have some support, even if it's limited. Given your situation, how do you prioritize your health needs?\n\n**Samantha:** Honestly, my health often takes a backseat. If I'm feeling really bad, I'll go to the clinic, but otherwise, I just try to tough it out. I know it's not the best approach, but with everything else going on, it's hard to make it a priority.\n\n**Interviewer:** I understand that completely. It's a lot to manage. Thank you for being so open about your life and challenges. Is there anything else you'd like to share about your current situation?\n\n**Samantha:** I guess just that it's hard to feel like I'm making progress when I'm constantly stressed and worried about money and health. But I'm trying to stay positive and keep going.\n\n**Interviewer:** Thank you, Samantha. Your resilience is admirable, and your insights are incredibly valuable for our research. Take care, and thank you again for your time.",
+      "timestamp": "2025-11-17T02:56:46.188713"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T02:56:46.689306"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I've never actually been pregnant, so I haven't had that experience. I had a scare a few months ago, but it turned out to be a false alarm. I was really stressed about it because I'm not in a position to have a baby right now, with school and everything else going on. But thankfully, it wasn't the case.",
+      "timestamp": "2025-11-17T02:56:47.797148"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T02:56:48.297529"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** Since I've never been pregnant, I haven't had any experience with prenatal care. If I were to need it, I'm not sure where I'd go because the community clinic I use doesn't offer those services. It's kind of scary to think about because I know how important it is, but I feel like I wouldn't know where to start.",
+      "timestamp": "2025-11-17T02:56:49.369486"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T02:56:49.869904"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** As I mentioned, I haven't needed prenatal care since I've never been pregnant. If I were to need it, I honestly wouldn't know who to turn to. The community clinic I go to doesn't have those services, and I don't have a regular healthcare provider for anything beyond basic care. It's kind of frustrating because I feel like if I ever did get pregnant, I'd be on my own trying to figure things out.",
+      "timestamp": "2025-11-17T02:56:51.114173"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T02:56:51.614524"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I've never had prenatal appointments since I've never been pregnant. If I were to have them, I imagine it would be really hard to fit them into my schedule with school and work. I guess a typical visit would involve checking on the baby and my health, but honestly, I don't really know what it would be like because I've never experienced it. It's one of those things that's always in the back of my mind, worrying about what I'd do if I needed it.",
+      "timestamp": "2025-11-17T02:56:52.993827"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T02:56:53.494167"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't experienced any health concerns or complications during a pregnancy because I've never been pregnant. But I do worry about what might happen if I were to get pregnant, especially with my gingivitis and the stress I'm under. I know stress isn't good for pregnancy, and I'm not sure how I'd manage all of that on top of everything else.",
+      "timestamp": "2025-11-17T02:56:54.638468"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T02:56:55.138929"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I'm not taking any medications or supplements right now. I know I should probably be taking something for my gingivitis, but I haven't been able to get to the clinic to get a prescription. And with the stress and occasional smoking, I'm not sure what else I might need. It's kind of overwhelming to think about.",
+      "timestamp": "2025-11-17T02:56:56.185817"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T02:56:56.686250"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** Since I've never been pregnant, I don't have any experience with diet and nutrition during pregnancy. But in general, my diet isn't the best. I eat a lot of fast food because it's cheap and quick, especially with my busy schedule. I know I should be eating more fruits and vegetables, but it's hard to afford them and find the time to prepare them. If I were pregnant, I'd be really worried about not getting the right nutrients for the baby.",
+      "timestamp": "2025-11-17T02:56:58.049715"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T02:56:58.549883"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't been pregnant, so I don't have any direct experience with how I'd feel emotionally during a pregnancy. But just thinking about it makes me feel really stressed and anxious. With everything else going on in my life, adding a pregnancy would be overwhelming. I'd probably feel a lot of pressure and worry about how I'd manage it all, especially without proper healthcare support. It's scary to think about.",
+      "timestamp": "2025-11-17T02:56:59.772352"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T02:57:00.272707"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** Since I've never been pregnant, I don't have a support network for that. But if I were to get pregnant, I'd probably rely on my family, though they're already dealing with a lot. My close friends would try to help, but they're busy too. It's hard to think about because I feel like I'd be putting a lot on them, and I'm not sure how much support I'd really get. It's one of the reasons I'm so careful about contraception, because I know I'd be pretty much on my own if something happened.",
+      "timestamp": "2025-11-17T02:57:01.808602"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T02:57:02.308945"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't been pregnant, so I haven't really thought about a birth plan or my preferences for delivery. But if I were to get pregnant, I'd be really scared about the whole process. I'd probably want to deliver in a hospital because I think it would be safer, but I'm not sure if I'd be able to afford it without insurance. I've heard about birth plans, but I don't know much about them. I guess I'd want to have some control over the situation, but with my limited resources, I'm not sure how realistic that would be. It's all pretty daunting to think about.",
+      "timestamp": "2025-11-17T02:57:03.937100"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T02:57:04.437310"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't really used any specific sources to learn about pregnancy and childbirth since I've never been pregnant. But I guess I've picked up bits and pieces from friends who have been pregnant, and sometimes I see stuff on social media or TV shows. I know there are websites and books out there, but I haven't had the time or the need to look into them. If I were to get pregnant, I'd probably start by asking my friends and maybe looking online for reliable information, but it's all pretty overwhelming to think about.",
+      "timestamp": "2025-11-17T02:57:05.992175"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T02:57:06.492505"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't had to manage the financial aspects of pregnancy since I've never been pregnant. But if I were, it would be really tough. I don't have insurance, so I'd have to rely on free clinics, which, as I mentioned, don't offer much in terms of prenatal care. Preparing for a baby would be even harder. I'm already struggling to make ends meet with school and work, so adding the costs of baby supplies, like diapers and formula, would be overwhelming. I'd probably have to cut back on a lot of things, and I'm not sure how I'd manage it all. It's one of the reasons I'm so careful about contraception.",
+      "timestamp": "2025-11-17T02:57:08.256531"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T02:57:08.756838"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** Since I've never been pregnant, it hasn't affected my work or employment situation. But if I were to get pregnant, it would be really challenging. I work part-time to help with bills, and I'm also a full-time student. Taking time off for prenatal appointments or maternity leave would be tough because I can't afford to lose the income. I'd probably have to keep working as long as possible, which would add even more stress. It's scary to think about how I'd balance everything if I were in that situation.",
+      "timestamp": "2025-11-17T02:57:17.064558"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T02:57:17.564747"
+    },
+    {
+      "speaker": "Persona",
+      "text": "**Samantha:** I haven't been pregnant, so I haven't made any plans for the postpartum period. But if I were to have a baby, it would be really hard to figure out how to manage everything. I'd probably need to take some time off work, but like I said, I can't afford to lose the income. I'd also need help with childcare because I have to go back to school and work. I'm not sure who would be able to help me with that. It's all pretty stressful to think about, and I'd be worried about how I'd take care of myself and the baby without proper support and resources.",
+      "timestamp": "2025-11-17T02:57:19.287951"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T02:57:19.788141"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 347,
+        "output_tokens": 788,
+        "cost_usd": 1.923e-06,
+        "cost_eur": 1.76916e-06
+      },
+      {
+        "turn": 1,
+        "input_tokens": 1165,
+        "output_tokens": 554,
+        "cost_usd": 2.273e-06,
+        "cost_eur": 2.09116e-06
+      },
+      {
+        "turn": 2,
+        "input_tokens": 1744,
+        "output_tokens": 75,
+        "cost_usd": 1.8940000000000002e-06,
+        "cost_eur": 1.7424800000000003e-06
+      },
+      {
+        "turn": 3,
+        "input_tokens": 1839,
+        "output_tokens": 76,
+        "cost_usd": 1.991e-06,
+        "cost_eur": 1.83172e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 1938,
+        "output_tokens": 93,
+        "cost_usd": 2.124e-06,
+        "cost_eur": 1.95408e-06
+      },
+      {
+        "turn": 5,
+        "input_tokens": 2057,
+        "output_tokens": 104,
+        "cost_usd": 2.265e-06,
+        "cost_eur": 2.0838e-06
+      },
+      {
+        "turn": 6,
+        "input_tokens": 2179,
+        "output_tokens": 78,
+        "cost_usd": 2.3349999999999997e-06,
+        "cost_eur": 2.1481999999999996e-06
+      },
+      {
+        "turn": 7,
+        "input_tokens": 2272,
+        "output_tokens": 72,
+        "cost_usd": 2.4160000000000002e-06,
+        "cost_eur": 2.2227200000000005e-06
+      },
+      {
+        "turn": 8,
+        "input_tokens": 2362,
+        "output_tokens": 101,
+        "cost_usd": 2.564e-06,
+        "cost_eur": 2.35888e-06
+      },
+      {
+        "turn": 9,
+        "input_tokens": 2479,
+        "output_tokens": 88,
+        "cost_usd": 2.655e-06,
+        "cost_eur": 2.4426e-06
+      },
+      {
+        "turn": 10,
+        "input_tokens": 2589,
+        "output_tokens": 120,
+        "cost_usd": 2.8290000000000004e-06,
+        "cost_eur": 2.6026800000000004e-06
+      },
+      {
+        "turn": 11,
+        "input_tokens": 2730,
+        "output_tokens": 131,
+        "cost_usd": 2.992e-06,
+        "cost_eur": 2.75264e-06
+      },
+      {
+        "turn": 12,
+        "input_tokens": 2881,
+        "output_tokens": 112,
+        "cost_usd": 3.105e-06,
+        "cost_eur": 2.8566e-06
+      },
+      {
+        "turn": 13,
+        "input_tokens": 3014,
+        "output_tokens": 142,
+        "cost_usd": 3.2980000000000004e-06,
+        "cost_eur": 3.0341600000000007e-06
+      },
+      {
+        "turn": 14,
+        "input_tokens": 3173,
+        "output_tokens": 112,
+        "cost_usd": 3.397e-06,
+        "cost_eur": 3.12524e-06
+      },
+      {
+        "turn": 15,
+        "input_tokens": 3310,
+        "output_tokens": 132,
+        "cost_usd": 3.574e-06,
+        "cost_eur": 3.28808e-06
+      }
+    ],
+    "total_input_tokens": 36079,
+    "total_output_tokens": 2778,
+    "total_cost_usd": 4.1635000000000004e-05,
+    "total_cost_eur": 3.83042e-05
+  },
+  "metadata": {
+    "model": "grok-2-latest",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T02:56:31.996446",
+    "end_time": "2025-11-17T02:57:19.788170",
+    "duration_seconds": 47.791724
+  }
+}

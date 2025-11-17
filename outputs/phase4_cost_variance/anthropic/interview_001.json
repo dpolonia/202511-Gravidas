@@ -1,0 +1,298 @@
+{
+  "interview_id": "unknown",
+  "persona_id": null,
+  "transcript": [
+    {
+      "speaker": "Interviewer",
+      "text": "Hello, thank you for participating in this interview. I'm going to ask you some questions about your health and experiences. Let's begin.",
+      "timestamp": "2025-11-17T02:51:00.321621"
+    },
+    {
+      "speaker": "Persona",
+      "text": "# Medical Research Interview\n\nThank you so much for taking the time to meet with me today, Samantha. I really appreciate your willingness to participate in this research. Everything you share will help us better understand and support young women in situations similar to yours.\n\nBefore we dive in, I want you to know that this is a safe, confidential space. There are no judgments here\u2014I'm just interested in understanding your real experiences and what you need.\n\nI've reviewed your chart and see you've had quite a few visits to the clinic. I also notice some pregnancy-related conditions listed in your records. \n\n**Let me start with something general: How are you doing today? How have you been feeling lately?**\n\nAnd then, if it's okay with you, I'd like to ask about your current health situation and what brings you in to the clinic most often.\n\n---\n\n*[I'm settling in with my notepad, maintaining a warm but professional demeanor, giving you my full attention]*",
+      "timestamp": "2025-11-17T02:51:03.850812"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me a bit about yourself and your current life situation?",
+      "timestamp": "2025-11-17T02:51:03.850818"
+    },
+    {
+      "speaker": "Persona",
+      "text": "# Samantha's Response\n\n*shifts in seat, tucking hair behind ear, speaking somewhat hesitantly but openly*\n\nUm, yeah... I'm doing okay, I guess. Tired, mostly. *laughs nervously* \n\nSo, like... I'm 22, and I'm technically a college student, but it's complicated. I'm going part-time at community college right now because, honestly, money is really tight. I work when I can pick up shifts, but nothing steady. My family situation is... it's a lot. My mom works two jobs, and my little brother still lives at home, so there's a lot of pressure there, you know?\n\n*fidgets with hands*\n\nI live in the suburbs out here in LA, but it's not like the nice parts. It's pretty affordable, which is why we're there, but it also means the resources aren't always great. I don't have health insurance\u2014that's been really stressful, especially with everything going on. That's why I come to the community clinic. The staff here has been really helpful, honestly.\n\n*pauses, looking down*\n\nAs for my lifestyle... I'm not gonna lie and pretend I'm super healthy. I don't really exercise much. I smoke sometimes when I'm stressed, which is... pretty often these days. And I know I should probably take better care of myself.\n\n*glances up*\n\nI'm not sure what exactly you saw in my chart, but... is there something specific you wanted to know about? I'm trying to be honest here.",
+      "timestamp": "2025-11-17T02:51:08.866053"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your pregnancy or pregnancies? When did you first learn you were pregnant?",
+      "timestamp": "2025-11-17T02:51:09.366246"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a deep breath, eyes widening slightly*\n\nOh... okay. Yeah. Um...\n\n*pauses, choosing words carefully*\n\nSo, I found out I was pregnant about... *counts on fingers* ...three months ago? Maybe a little longer. I took a home test because I was feeling really off\u2014nauseous, tired, even more tired than usual. My period was late, and I was like, \"Oh God, this can't be happening.\"\n\n*voice gets quieter*\n\nHonestly, it was a shock. Like, I was using condoms, but... I mean, nothing's 100%, right? I wasn't planning this at all. I'm barely keeping my own head above water financially, and the idea of having a baby right now just felt... overwhelming. Still does, if I'm being real with you.\n\n*looks down at hands*\n\nI came to the clinic to confirm it, and they did the test and it was positive. That's when all the pregnancy-related stuff started showing up in my chart, I guess. The clinic staff has been trying to get me set up with prenatal care, but it's been hard to navigate without insurance. They've been helping me figure out options, though.\n\n*glances up with concern in eyes*\n\nI haven't really told a lot of people yet. My mom knows, and she's... she's processing it. My family's Catholic, so there's some complicated feelings there, but she's trying to be supportive.\n\n*hesitates*\n\nI'm still trying to figure out what I'm going to do, to be honest. Do you... do you need me to go into more detail about all this?",
+      "timestamp": "2025-11-17T02:51:14.546434"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When did you first seek prenatal care? What was that experience like?",
+      "timestamp": "2025-11-17T02:51:15.046858"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*shifts uncomfortably, rubbing arms*\n\nYeah, so... I came to the clinic pretty soon after I found out, maybe like a week or two later? I was freaking out and needed to confirm it was real, you know? And I figured I should at least get checked out.\n\n*sighs*\n\nThe experience was... okay, I guess? The staff here at the community clinic has been really kind, honestly. They didn't make me feel judged or anything, which I was worried about. They did the initial exam, took my blood pressure, asked a bunch of questions about my health history and stuff.\n\n*fidgets with sleeve*\n\nBut here's the thing\u2014navigating the whole system without insurance has been a nightmare. They explained that I might qualify for Medi-Cal or some pregnancy-related coverage, but the paperwork is confusing and takes forever. I've been back a few times for follow-ups, and they keep trying to help me get enrolled in programs, but it's slow-moving.\n\n*looks frustrated*\n\nI haven't been able to see an actual OB/GYN yet because of the insurance thing. The clinic staff does what they can, but they keep saying I really need specialized prenatal care. They've given me referrals, but when I call these places, they ask about insurance first thing, and when I say I don't have any... the conversation kind of ends.\n\n*voice gets quieter*\n\nI've been to the clinic, like, maybe four or five times since finding out? But I feel like I'm not getting the full prenatal care I probably should be getting. And honestly? I'm stressed about it. I don't even know what I'm supposed to be doing at this point in pregnancy.\n\n*looks up*\n\nIs that... is that normal? Should I be further along in my care by now?",
+      "timestamp": "2025-11-17T02:51:20.828752"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who is providing your prenatal care? Can you describe your relationship with your healthcare provider?",
+      "timestamp": "2025-11-17T02:51:21.329167"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods slowly, thinking*\n\nSo, right now it's mainly the nurses and doctors at the community clinic. There's this one nurse, Maria, who I've seen a couple times\u2014she's been really helpful and patient with me. She explains things and doesn't make me feel stupid for not knowing stuff. And there's a doctor, I think his name is Dr. Chen, who I've seen once or twice for the actual exams.\n\n*pauses, choosing words carefully*\n\nThey're... they're good people, I think. They're not dismissive or anything. But I can tell they're stretched thin, you know? Like, they have a lot of patients and limited resources. Maria told me straight up that the clinic can do basic prenatal monitoring, but they're not equipped for complications or anything serious. That's why they keep pushing me to get connected with an OB/GYN.\n\n*expression becomes more anxious*\n\nThe problem is, I don't really have a consistent provider. It's whoever's available when I go in. So I end up repeating my story every time\u2014my health history, my living situation, all of it. It's exhausting, honestly. And I feel like... I don't know, like nobody really knows my full situation?\n\n*looks down*\n\nI haven't built a real relationship with anyone yet because I'm not getting regular care. And that makes me nervous. Like, what if something goes wrong? Who do I call? Do I go to the ER? I don't even know.\n\n*voice gets quieter*\n\nI wish I had someone I could just... call and talk to about this stuff. Someone who knows me and my situation. But right now it feels pretty fragmented.",
+      "timestamp": "2025-11-17T02:51:26.982870"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How often do you have prenatal appointments? Can you walk me through what a typical visit is like?",
+      "timestamp": "2025-11-17T02:51:27.483389"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a breath, trying to recall*\n\nUm, okay, so... I don't really have a set schedule, which I think might be part of the problem? Like, the clinic told me I should try to come in every month or something, but it's not like I have standing appointments or anything.\n\n*counts on fingers*\n\nI've been maybe... four, five times total since I found out? But they're not regular. Sometimes it's been like six weeks between visits, sometimes three weeks. It just depends on when I can get time off work and when the clinic has availability.\n\n*settles back in chair*\n\nAs for what happens when I go... it's pretty similar each time. I check in, wait\u2014sometimes like an hour or more\u2014and then they call me back. They take my blood pressure, ask how I'm feeling, if I'm having any symptoms or problems. Then either the nurse or doctor does an exam.\n\n*describes with some uncertainty*\n\nThey feel my belly, listen with that little handheld thing\u2014a Doppler? I think that's what it's called\u2014to check the heartbeat. That part freaks me out a little, but also... *voice softens* ...it makes it feel real, you know? They ask about my diet, if I'm taking prenatal vitamins\u2014which, honestly, I'm not always consistent with because they're expensive and I forget sometimes.\n\n*fidgets*\n\nThey ask about my symptoms\u2014nausea, cramping, bleeding, all that stuff. They give me some pamphlets about what to expect. And then... that's kind of it? The whole thing takes like 20, 30 minutes maybe?\n\n*looks concerned*\n\nNobody's really talked to me in depth about nutrition, or exercise, or... I don't know, mental health stuff? I mean, I'm stressed as hell, but nobody's asked me about that specifically in relation to the pregnancy. They know I smoke sometimes, and I can tell they don't love that, but we haven't really had a deep conversation about it.\n\n*hesitates*\n\nIs that what's supposed to happen? Because from what I've read online, I feel like prenatal care should involve more... I don't know, guidance? Education? Right now it feels pretty surface-level.",
+      "timestamp": "2025-11-17T02:51:35.563804"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you experienced any health concerns or complications during your pregnancy?",
+      "timestamp": "2025-11-17T02:51:36.064105"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*pauses, looking a bit worried*\n\nUm, yeah... I mean, nothing super serious that I know of, but there have been some things that have made me nervous.\n\n*counts on fingers*\n\nThe nausea was really bad in the beginning\u2014like, I'd wake up feeling sick almost every day. That's kind of passed now, but it was rough. I lost a little weight at first because I couldn't keep food down, which the clinic staff seemed concerned about.\n\n*shifts uncomfortably*\n\nI've had some cramping on and off, which scared me at first. I didn't know if that was normal or if something was wrong. When I mentioned it to Maria, she said mild cramping can be normal, but if it gets worse or I start bleeding, I should come in right away or go to the ER. That kind of freaked me out, so now I'm always worried when I feel anything.\n\n*rubs face tiredly*\n\nAnd honestly? The stress is... it's a lot. I've been having headaches more often, and I'm not sleeping well. I lie awake at night thinking about... everything. Like, how am I gonna do this? Where am I gonna get money for a baby? What about school? What about work? \n\n*voice gets quieter*\n\nI haven't talked to anyone officially about depression or anxiety, but I know I'm not doing great mentally. I smoke more when I'm stressed, which I know isn't good for the baby, and that makes me feel guilty, which makes me more stressed. It's like this cycle.\n\n*looks up with concern*\n\nOh, and I had viral sinusitis a couple months ago\u2014that's in my chart, right? The clinic gave me something for it, but I was worried about taking medication while pregnant. They said it was safe, but I was still nervous.\n\n*hesitates*\n\nIs... is any of this stuff serious? Should I be more worried than I am?",
+      "timestamp": "2025-11-17T02:51:42.518421"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What medications or supplements are you currently taking?",
+      "timestamp": "2025-11-17T02:51:43.018533"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*scratches head, looking a bit uncertain*\n\nOkay, so... let me think. I'm supposed to be taking prenatal vitamins. The clinic gave me a bottle when I first came in, but like I said, I'm not super consistent with it. Some days I remember, some days I don't. They're not expensive at the clinic, but I still have to remember to take them, and honestly, my life is pretty chaotic right now.\n\n*counts on fingers*\n\nUm, I think there's folic acid in those? And iron? The nurse explained it but I don't remember all the details. I should probably write it down or something.\n\n*pauses, thinking*\n\nWhen I had that sinus infection, they gave me... I want to say amoxicillin? Or something like that? They said it was safe during pregnancy, but I was still nervous about it. I took it, but not always on schedule because I kept second-guessing myself.\n\n*looks down*\n\nAs for other stuff... I don't really take anything regularly. No prescriptions or anything. Sometimes I'll take like an over-the-counter pain reliever if I have a bad headache, but I try not to because I'm paranoid about what's safe and what's not.\n\n*fidgets with hands*\n\nHonestly, I'm kind of confused about what I'm supposed to be taking and what I shouldn't be. Like, can I take Tylenol? What about cough medicine if I get sick? I just... I don't know, and I don't want to mess up the baby by taking the wrong thing.\n\n*looks up*\n\nThe clinic gave me some information sheets about it, but they're kind of confusing. And I noticed on my chart it says \"Medication review due\" multiple times. Is that something I need to do? Should I be seeing someone about this?",
+      "timestamp": "2025-11-17T02:51:48.831002"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Can you tell me about your diet and nutrition during pregnancy?",
+      "timestamp": "2025-11-17T02:51:49.331146"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*laughs a bit self-consciously*\n\nOh man, okay... so my diet is probably not great, and I know that. I'm not gonna pretend otherwise.\n\n*shifts in seat*\n\nLike, I'm trying, but it's hard. Money is tight, so I can't always buy the healthiest stuff. I tend to eat a lot of... I don't know, processed food? Ramen, frozen stuff, whatever's cheap and quick because I'm usually busy or tired. When I'm stressed, I definitely reach for comfort food\u2014chips, fast food, whatever.\n\n*looks down*\n\nI know I'm supposed to be eating better now that I'm pregnant, and I do try sometimes. I'll buy some fruit or vegetables when I can afford it. But honestly? Some weeks I'm choosing between buying groceries and paying for gas to get to work or school.\n\n*rubs face*\n\nThe nausea in the beginning made it even harder because nothing sounded good. I lived on crackers and ginger ale for like a month. Now that the nausea's better, I'm eating more, but it's still not... balanced or whatever.\n\n*hesitates*\n\nI don't really know how much weight I'm supposed to be gaining or what the nutrition guidelines are for pregnancy. The clinic gave me some handouts about it, but they're kind of generic and don't really address my situation\u2014like, how do you eat healthy on a budget?\n\n*looks concerned*\n\nI drink a lot of coffee to stay awake because I'm so tired all the time. Is that bad? I've tried to cut back, but I'm working and going to school part-time, and I just... I need the caffeine sometimes.\n\n*voice gets quieter*\n\nAnd I'm not gonna lie\u2014sometimes I crave weird stuff. Like, I've been eating ice and dirt sometimes, which I know sounds gross. Is that normal? Should I be worried about that?",
+      "timestamp": "2025-11-17T02:51:55.748322"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How have you been feeling emotionally during your pregnancy?",
+      "timestamp": "2025-11-17T02:51:56.248444"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a long breath, eyes getting a bit watery*\n\nOh... wow. Um. Okay.\n\n*pauses, composing herself*\n\nHonestly? It's been really hard. Like, really hard.\n\n*voice gets quieter*\n\nI go back and forth between feeling numb and feeling absolutely terrified. Some days I wake up and I'm like, \"Okay, I can do this. I'm gonna be a mom.\" And other days I just... I can't even think about it without feeling like I can't breathe, you know?\n\n*fidgets with hands, not making eye contact*\n\nThe guilt is huge. I feel guilty that I wasn't planning this. I feel guilty that I'm not more excited or happy about it. I feel guilty that I smoke sometimes and that I'm not eating perfectly and that I can't afford all the things I'm supposed to be doing. And then I feel guilty about feeling guilty, which is just... it's exhausting.\n\n*voice cracks slightly*\n\nAnd the stress... it's constant. I lie awake at night thinking about money\u2014like, how am I gonna afford a baby? How am I gonna finish school? What about work? My mom's already stretched so thin, and I know she's worried about me. My little brother doesn't even really understand what's happening. And my family's whole \"you should have waited until marriage\" thing is just... it's a lot.\n\n*rubs eyes*\n\nI don't have a partner who's involved, by the way. The guy... we're not together. He knows about the pregnancy, but he's not really in the picture. So I'm doing this alone, which is terrifying.\n\n*looks up with concern in eyes*\n\nSometimes I feel so overwhelmed that I just shut down. Like, I can't deal with it, so I don't think about it. And then other times I'm spiraling, thinking about worst-case scenarios. I smoke more when I'm like that, which I know is bad for the baby, and then I feel even worse about myself.\n\n*voice gets very quiet*\n\nI haven't really talked to anyone about this\u2014like, really talked about it. Not my mom, not the clinic staff, nobody. I just... I keep it inside. And I'm wondering if that's normal or if I should be getting help for this, because sometimes I feel like I'm not okay.\n\n*hesitates*\n\nDo you think I should see someone? Like a therapist or something? Can I even afford that?",
+      "timestamp": "2025-11-17T02:52:03.654471"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who supports you during your pregnancy? Can you tell me about your support network?",
+      "timestamp": "2025-11-17T02:52:04.154767"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a shaky breath, looking vulnerable*\n\nUm... okay. So my support network is... it's small, honestly.\n\n*counts on fingers*\n\nMy mom knows, like I said. She's trying to be supportive, but she's also dealing with her own stuff\u2014working two jobs, taking care of my brother. When I told her, she was shocked, then upset, then... I don't know, resigned? She made some comments about me making better choices, but she's also said she'll help however she can. I think she's scared too, you know? Like, she knows how hard it is to be a single mom because she is one.\n\n*fidgets with sleeve*\n\nMy little brother doesn't really get it. He's still pretty young, and I haven't explained it in detail. My extended family... my aunts and cousins and stuff... some of them know, and there's definitely judgment there. The Catholic guilt thing is real in my family.\n\n*pauses, looking down*\n\nAs for the father... like I said, he's not really involved. We weren't in a relationship. When I told him, he was kind of... I don't know, dismissive? He said it was my choice what to do, but he wasn't gonna be around. So that's that.\n\n*voice gets quieter*\n\nI have a couple friends from school, but I haven't told them yet. I'm worried about judgment, honestly. And I don't know how to even bring it up. Most of my friends are just trying to figure out their own lives\u2014college, dating, whatever. I feel like I'm in a completely different place than them now.\n\n*rubs face tiredly*\n\nThe clinic staff has been nice, like I said. Maria, the nurse, she's been kind and helpful, but that's not the same as having actual people in my life who care about me personally, you know?\n\n*looks up with concern*\n\nHonestly? I feel pretty alone in this. Like, I'm going through this huge thing and there's nobody really... there. My mom's trying, but she's overwhelmed. I don't have a partner. My friends don't know. And I'm just... carrying this by myself most of the time.\n\n*voice cracks slightly*\n\nSometimes I wonder what would happen if something went wrong and I needed someone to take me to the hospital or stay with me. Like, who would be there? My mom would try, but she might have to work. It's scary to think about.\n\n*hesitates*\n\nIs that... is that a problem? Should I have more support set up? Because I don't really know how to ask for help or where to find it.",
+      "timestamp": "2025-11-17T02:52:12.602382"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about your birth plan? What are your preferences for delivery?",
+      "timestamp": "2025-11-17T02:52:13.102476"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*looks somewhat overwhelmed, laughing nervously*\n\nOh man... um. Honestly? I haven't really thought about it that much yet. Like, I know birth is gonna happen at some point, but it feels so far away and also terrifyingly close at the same time, you know?\n\n*shifts uncomfortably*\n\nI mean, I guess I'd prefer to have it at a hospital because that seems safer? Like, if something goes wrong, they can help. But I don't really know what my options are or what the differences are between hospitals or birthing centers or... whatever.\n\n*rubs hands nervously*\n\nThe clinic staff hasn't really talked to me in depth about birth plans or anything like that yet. I've seen some stuff online about natural birth versus epidurals and all that, and honestly, I'm terrified of both. Like, the idea of labor pain without medication sounds awful, but I'm also nervous about medications and what they might do.\n\n*pauses, looking uncertain*\n\nI don't even know what hospital I'm supposed to go to when I go into labor. Is there a specific one? Do I need to pre-register or something? Nobody's explained that to me.\n\n*voice gets quieter*\n\nAnd I'm worried about... like, what if I can't afford the hospital bill? What if I go into labor and I don't have insurance sorted out yet? Will they still take me? Will I be stuck with a huge debt?\n\n*looks at interviewer with concern*\n\nI feel like there's so much I don't know about what's actually gonna happen. Should someone be going through this stuff with me? Like, explaining my options and helping me make decisions?\n\n*hesitates*\n\nAlso... I guess I haven't really decided what I'm gonna do after the baby comes. Like, am I keeping the baby? That sounds awful to say out loud, but... I haven't made a final decision yet. Is that something I should be figuring out now?",
+      "timestamp": "2025-11-17T02:52:19.321644"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What sources of information have you used to learn about pregnancy and childbirth?",
+      "timestamp": "2025-11-17T02:52:19.821836"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*nods, thinking*\n\nOkay, so... mostly I've been using Google and like, pregnancy apps? There's this one app I downloaded\u2014I think it's called What to Expect or something\u2014and it tells me what's supposed to be happening week by week. That's been helpful, I guess, but also kind of scary because it lists all these things that could go wrong.\n\n*fidgets with phone*\n\nI've watched some YouTube videos too. Like, I watched one about labor and I kind of regret that because it was intense. *laughs nervously* But I've also watched some calming ones about pregnancy exercises and breathing techniques, which were nice.\n\n*pauses*\n\nThe clinic gave me some pamphlets and handouts when I first came in. They're helpful, but like I said, they're pretty generic. They don't really address my specific situation\u2014like, being poor, being stressed, not having insurance, doing this alone. It's hard to relate to sometimes.\n\n*looks down*\n\nI've asked my mom some questions because she's had kids, but honestly, her pregnancies were like 20 years ago, and I think things have changed. Plus, she's kind of dismissive sometimes, like \"You'll figure it out\" or \"That's just how it is.\" Not super helpful.\n\n*voice gets quieter*\n\nI haven't really looked into like, pregnancy classes or anything formal. I didn't even know that was a thing until I heard someone mention it. And I don't know if the clinic offers them or if I'd have to pay for them.\n\n*hesitates*\n\nThe problem with all my information sources is that I don't really know what's reliable, you know? Like, is that app accurate? Are those YouTube videos from credible people? I see conflicting information all the time, and I don't know who to trust.\n\n*looks concerned*\n\nAnd honestly? A lot of what I'm reading online is making me more anxious, not less. Like, I read about all these complications and risks, and now I'm paranoid about everything.\n\n*rubs face*\n\nI think I need like... actual education from someone who knows what they're talking about. Someone who can explain things in a way that makes sense and answers my actual questions. Not just Dr. Google, you know?",
+      "timestamp": "2025-11-17T02:52:27.475553"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How are you managing the financial aspects of pregnancy and preparing for a baby?",
+      "timestamp": "2025-11-17T02:52:27.975900"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a deep breath, looking visibly stressed*\n\nOh man... this is like, the thing that keeps me up at night, honestly.\n\n*rubs face with both hands*\n\nOkay, so... financially, I'm barely scraping by as it is, right? And now I'm supposed to prepare for a baby, which costs money. A lot of money. And I don't have it.\n\n*counts on fingers, looking worried*\n\nLike, I need to think about a crib, a car seat\u2014which I know is required by law\u2014diapers, formula if I'm not breastfeeding, clothes, all this stuff. And I have no idea how much any of it costs or where to even start.\n\n*voice gets quieter*\n\nMy mom's offered to help, but she's not in a position to give me much. She's working two jobs just to keep our household afloat. I feel guilty even asking her. My extended family... I don't think they're gonna step up, honestly. There's too much judgment.\n\n*fidgets with hands*\n\nI've been trying to work more shifts when I can, but it's hard because I'm also supposed to be going to school and now I'm pregnant and tired all the time. And any extra money I make basically goes to rent or food or gas. There's nothing left over to save for baby stuff.\n\n*looks down*\n\nI haven't even thought about maternity leave or what happens to my income when I have the baby. Like, do I just... not work? How do I pay my bills? Will my job even hold my position?\n\n*voice cracks slightly*\n\nI've heard about WIC and stuff like that\u2014programs that help pregnant women and new moms\u2014but I don't know how to apply or if I qualify. The clinic mentioned it once, but they didn't really walk me through it. And I'm embarrassed to ask, honestly. Like, I don't want to be on government assistance, but I also don't see how I have a choice.\n\n*rubs eyes tiredly*\n\nI haven't bought anything for the baby yet because I can't afford it and I'm also... I don't know, I'm not ready to make it real, I guess? Like, if I start buying baby stuff, that means this is actually happening, and I'm still processing that.\n\n*looks up with concern*\n\nIs there help available? Like, actual resources that could help me figure this out? Because right now I feel like I'm just supposed to figure it all out on my own, and I have no idea how.",
+      "timestamp": "2025-11-17T02:52:35.610925"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How has your pregnancy affected your work or employment situation?",
+      "timestamp": "2025-11-17T02:52:36.111148"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*sighs heavily, looking stressed*\n\nYeah, so this has been... complicated.\n\n*shifts in seat*\n\nLike I said, I don't have a steady job. I pick up shifts wherever I can\u2014sometimes at a retail store, sometimes doing gig work, whatever's available. It's not stable income, which is part of why everything feels so precarious right now.\n\n*rubs hands together nervously*\n\nThe pregnancy has definitely affected it. For one thing, I'm so tired all the time that I'm not as reliable as I used to be. I've had to call out a few times because I wasn't feeling well or I had a clinic appointment I couldn't reschedule. I'm worried that's affecting how much work they're giving me.\n\n*voice gets quieter*\n\nAnd physically, it's getting harder. Like, some of the retail stuff involves being on my feet for long shifts, and my back hurts and I get tired faster. I've tried to push through it, but some days I just can't.\n\n*pauses, looking worried*\n\nThe bigger issue is... I don't know what's gonna happen when I actually have the baby. Like, am I supposed to take time off? How long? Do I get paid during that time? I don't think I have maternity leave benefits or anything because I'm not a full-time employee anywhere.\n\n*voice cracks slightly*\n\nSo like, if I can't work, I don't get paid. And if I don't get paid, I can't pay my bills. And I have no idea how I'm supposed to manage that. Do I just... go back to work like two weeks after having a baby? That doesn't seem right, but I also don't see how I have a choice.\n\n*looks down*\n\nI've thought about maybe trying to find more stable employment before the baby comes, but who's gonna hire a visibly pregnant woman? And even if they did, I'd just have to take time off right away. It feels like I'm stuck.\n\n*hesitates*\n\nAnd then there's school. I'm trying to stay enrolled part-time at community college, but with everything else going on, it's hard to focus. I'm worried I'm gonna have to drop out, at least for a semester. But then I'm not making progress toward my degree, and I feel like I'm falling behind.\n\n*rubs face tiredly*\n\nHonestly? The work situation is making me feel really trapped and hopeless sometimes. Like, how am I supposed to do this? How do people do this?",
+      "timestamp": "2025-11-17T02:52:43.471008"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Have you thought about the postpartum period? What plans do you have for after the baby arrives?",
+      "timestamp": "2025-11-17T02:52:43.971270"
+    },
+    {
+      "speaker": "Persona",
+      "text": "*takes a shaky breath, looking overwhelmed*\n\nUm... honestly? I haven't thought about it much because it feels so far away and also terrifying at the same time.\n\n*fidgets with hands, avoiding eye contact*\n\nLike, I know the baby's gonna come and then... what? I'm supposed to just take it home and figure it out? I don't even know what to expect physically after giving birth. Will I be able to move? Will I be able to work? How long does recovery take?\n\n*voice gets quieter*\n\nAnd the baby stuff... like, I know I need to feed it and change diapers and all that, but I don't really know how to do any of it. I've never really been around newborns much. What if I mess up? What if the baby won't stop crying and I don't know why?\n\n*rubs face tiredly*\n\nMy mom said she'd help me out, but she's working two jobs, so I don't know how much she can actually be there. And I don't have anyone else. The father's not gonna be involved. My friends don't really know what's happening. So it's gonna be mostly me, I think.\n\n*pauses, looking anxious*\n\nI haven't really thought about like, postpartum depression or anything. I know that's a thing, but I don't know what it looks like or what I'm supposed to do if it happens. Honestly, given how I'm already feeling emotionally, I'm kind of worried about it.\n\n*voice cracks slightly*\n\nAnd like... I still haven't actually decided if I'm keeping the baby. I know that sounds crazy at this point, but I haven't made a final decision. I've thought about adoption, I've thought about... other options. But I also feel like I can't talk to anyone about that because everyone assumes I'm keeping it.\n\n*looks up with concern*\n\nShould I have a plan figured out by now? Like, am I supposed to know what I'm doing? Because I really don't.",
+      "timestamp": "2025-11-17T02:52:51.047621"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Thank you for your time and for sharing your experiences with me. This concludes our interview.",
+      "timestamp": "2025-11-17T02:52:51.547764"
+    }
+  ],
+  "cost_breakdown": {
+    "turns": [
+      {
+        "turn": 0,
+        "input_tokens": 387,
+        "output_tokens": 214,
+        "cost_usd": 4.370999999999999e-06,
+        "cost_eur": 4.02132e-06
+      },
+      {
+        "turn": 1,
+        "input_tokens": 635,
+        "output_tokens": 339,
+        "cost_usd": 6.99e-06,
+        "cost_eur": 6.4308e-06
+      },
+      {
+        "turn": 2,
+        "input_tokens": 1000,
+        "output_tokens": 363,
+        "cost_usd": 8.445e-06,
+        "cost_eur": 7.7694e-06
+      },
+      {
+        "turn": 3,
+        "input_tokens": 1384,
+        "output_tokens": 403,
+        "cost_usd": 1.0197e-05,
+        "cost_eur": 9.38124e-06
+      },
+      {
+        "turn": 4,
+        "input_tokens": 1811,
+        "output_tokens": 373,
+        "cost_usd": 1.1028e-05,
+        "cost_eur": 1.0145760000000001e-05
+      },
+      {
+        "turn": 5,
+        "input_tokens": 2211,
+        "output_tokens": 498,
+        "cost_usd": 1.4102999999999999e-05,
+        "cost_eur": 1.2974759999999999e-05
+      },
+      {
+        "turn": 6,
+        "input_tokens": 2727,
+        "output_tokens": 429,
+        "cost_usd": 1.4616e-05,
+        "cost_eur": 1.3446720000000001e-05
+      },
+      {
+        "turn": 7,
+        "input_tokens": 3171,
+        "output_tokens": 411,
+        "cost_usd": 1.5678e-05,
+        "cost_eur": 1.4423760000000001e-05
+      },
+      {
+        "turn": 8,
+        "input_tokens": 3600,
+        "output_tokens": 427,
+        "cost_usd": 1.7205000000000002e-05,
+        "cost_eur": 1.5828600000000003e-05
+      },
+      {
+        "turn": 9,
+        "input_tokens": 4044,
+        "output_tokens": 550,
+        "cost_usd": 2.0382000000000002e-05,
+        "cost_eur": 1.8751440000000004e-05
+      },
+      {
+        "turn": 10,
+        "input_tokens": 4616,
+        "output_tokens": 587,
+        "cost_usd": 2.2653e-05,
+        "cost_eur": 2.0840760000000003e-05
+      },
+      {
+        "turn": 11,
+        "input_tokens": 5224,
+        "output_tokens": 431,
+        "cost_usd": 2.2137e-05,
+        "cost_eur": 2.0366040000000004e-05
+      },
+      {
+        "turn": 12,
+        "input_tokens": 5677,
+        "output_tokens": 505,
+        "cost_usd": 2.4606e-05,
+        "cost_eur": 2.2637520000000003e-05
+      },
+      {
+        "turn": 13,
+        "input_tokens": 6203,
+        "output_tokens": 563,
+        "cost_usd": 2.7054000000000002e-05,
+        "cost_eur": 2.4889680000000002e-05
+      },
+      {
+        "turn": 14,
+        "input_tokens": 6783,
+        "output_tokens": 557,
+        "cost_usd": 2.8704e-05,
+        "cost_eur": 2.6407680000000003e-05
+      },
+      {
+        "turn": 15,
+        "input_tokens": 7367,
+        "output_tokens": 449,
+        "cost_usd": 2.8836e-05,
+        "cost_eur": 2.652912e-05
+      }
+    ],
+    "total_input_tokens": 56840,
+    "total_output_tokens": 7099,
+    "total_cost_usd": 0.00027700500000000004,
+    "total_cost_eur": 0.00025484460000000004
+  },
+  "metadata": {
+    "model": "claude-haiku-4-5",
+    "protocol": "Prenatal Care Interview Protocol",
+    "start_time": "2025-11-17T02:51:00.321589",
+    "end_time": "2025-11-17T02:52:51.547775",
+    "duration_seconds": 111.226186
+  }
+}
