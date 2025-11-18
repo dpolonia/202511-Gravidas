@@ -30,6 +30,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 import random
 import os
+import time
 from datetime import datetime as dt
 import re
 
@@ -43,9 +44,10 @@ except ImportError:
 try:
     import yaml
     import anthropic
+    import openai
 except ImportError:
     print("ERROR: Required packages not installed.")
-    print("Please run: pip install anthropic pyyaml python-dotenv")
+    print("Please run: pip install anthropic openai pyyaml python-dotenv")
     sys.exit(1)
 
 # Import common loaders and semantic tree utilities
@@ -104,9 +106,32 @@ class PersonaGenerator:
             self.client = anthropic.Anthropic(api_key=api_key)
             self.model = self.model or "claude-3-haiku-20240307"  # Default model
             logger.info(f"Initialized Anthropic client with model: {self.model}")
+
+        elif self.provider == 'openai':
+            # Get OpenAI API key
+            config_key = config.get('api_keys', {}).get('openai', {}).get('api_key', '')
+
+            # Expand environment variables in config
+            if config_key and config_key.startswith('${') and config_key.endswith('}'):
+                env_var_name = config_key[2:-1]  # Remove ${ and }
+                config_key = os.getenv(env_var_name, '')
+
+            env_key = os.getenv('OPENAI_API_KEY', '')
+
+            if config_key and not config_key.startswith('your-'):
+                api_key = config_key
+            else:
+                api_key = env_key
+
+            if not api_key:
+                raise ValueError("No OpenAI API key found in config or environment")
+
+            self.client = openai.OpenAI(api_key=api_key)
+            self.model = self.model or "gpt-4o-mini"  # Default model
+            logger.info(f"Initialized OpenAI client with model: {self.model}")
+
         else:
-            # TODO: Add support for other providers (OpenAI, Google, xAI)
-            # For now, fall back to Anthropic
+            # Unsupported provider - fall back to Anthropic
             logger.warning(f"Provider '{self.provider}' not yet supported, falling back to Anthropic")
             self.provider = 'anthropic'
             api_key = os.getenv('ANTHROPIC_API_KEY', '')
@@ -171,16 +196,30 @@ Example format:
 Generate exactly {batch_size} personas, each as a separate numbered paragraph. Number them 1-{batch_size}. Ensure each persona includes healthcare dimensions AND pregnancy-specific history naturally woven into the description."""
 
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=4096,  # Maximum allowed for Claude models
-                temperature=0.9,  # High temperature for diversity
-                messages=[{
-                    "role": "user",
-                    "content": prompt
-                }]
-            )
-            return response.content[0].text
+            if self.provider == 'anthropic':
+                response = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=4096,  # Maximum allowed for Claude models
+                    temperature=0.9,  # High temperature for diversity
+                    messages=[{
+                        "role": "user",
+                        "content": prompt
+                    }]
+                )
+                return response.content[0].text
+            elif self.provider == 'openai':
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    max_tokens=4096,
+                    temperature=0.9,  # High temperature for diversity
+                    messages=[{
+                        "role": "user",
+                        "content": prompt
+                    }]
+                )
+                return response.choices[0].message.content
+            else:
+                raise ValueError(f"Unsupported provider: {self.provider}")
         except Exception as e:
             logger.error(f"Failed to generate personas: {e}")
             raise
@@ -1105,9 +1144,20 @@ def parse_single_persona(text: str, persona_id: int) -> Dict[str, Any] | None:
     }
 
 
-def generate_personas(target_count: int, batch_size: int = 100) -> List[Dict[str, Any]]:
-    """Generate target number of personas."""
+def generate_personas(target_count: int, batch_size: int = 100, max_retries: int = 3) -> List[Dict[str, Any]]:
+    """
+    Generate target number of personas with automatic retry logic.
+
+    Args:
+        target_count: Number of personas to generate
+        batch_size: Personas per API call
+        max_retries: Maximum retry attempts per failed batch
+
+    Returns:
+        List of generated personas
+    """
     logger.info(f"=== Generating {target_count} Synthetic Personas ===")
+    logger.info(f"Retry policy: Up to {max_retries} retries per failed batch")
 
     # Load config
     config = load_config()
@@ -1122,28 +1172,50 @@ def generate_personas(target_count: int, batch_size: int = 100) -> List[Dict[str
         personas_needed = min(batch_size, target_count - len(all_personas))
         logger.info(f"[Batch {batch_num + 1}/{batches_needed}] Generating {personas_needed} personas...")
 
-        try:
-            # Generate batch
-            generated_text = generator.generate_batch(personas_needed, batch_size)
+        # Retry logic with exponential backoff
+        retry_count = 0
+        batch_success = False
 
-            # Parse personas
-            batch_personas = parse_generated_personas(generated_text, len(all_personas) + 1)
+        while retry_count <= max_retries and not batch_success:
+            try:
+                # Add delay for retries (exponential backoff)
+                if retry_count > 0:
+                    delay = 2 ** retry_count  # 2, 4, 8 seconds
+                    logger.info(f"  ⏳ Retry {retry_count}/{max_retries} after {delay}s delay...")
+                    time.sleep(delay)
 
-            # Filter for valid personas (age 12-60, female)
-            valid_personas = [
-                p for p in batch_personas
-                if p['age'] >= 12 and p['age'] <= 60 and p['gender'] == 'female'
-            ]
+                # Generate batch
+                generated_text = generator.generate_batch(personas_needed, batch_size)
 
-            all_personas.extend(valid_personas)
-            logger.info(f"  ✅ Generated {len(valid_personas)} valid personas (total: {len(all_personas)})")
+                # Parse personas
+                batch_personas = parse_generated_personas(generated_text, len(all_personas) + 1)
 
-            if len(all_personas) >= target_count:
-                break
+                # Filter for valid personas (age 12-60, female)
+                valid_personas = [
+                    p for p in batch_personas
+                    if p.get('age', 0) >= 12 and p.get('age', 0) <= 60 and p.get('gender') == 'female'
+                ]
 
-        except Exception as e:
-            logger.error(f"  ❌ Batch {batch_num + 1} failed: {e}")
-            continue
+                if len(valid_personas) > 0:
+                    all_personas.extend(valid_personas)
+                    logger.info(f"  ✅ Generated {len(valid_personas)} valid personas (total: {len(all_personas)})")
+                    batch_success = True
+                else:
+                    logger.warning(f"  ⚠️  Batch {batch_num + 1} produced 0 valid personas")
+                    retry_count += 1
+
+                if len(all_personas) >= target_count:
+                    break
+
+            except Exception as e:
+                retry_count += 1
+                if retry_count > max_retries:
+                    logger.error(f"  ❌ Batch {batch_num + 1} failed after {max_retries} retries: {e}")
+                else:
+                    logger.warning(f"  ⚠️  Batch {batch_num + 1} attempt {retry_count} failed: {e}")
+
+        if not batch_success:
+            logger.error(f"  ❌ Skipping batch {batch_num + 1} after exhausting all retries")
 
     return all_personas[:target_count]
 
