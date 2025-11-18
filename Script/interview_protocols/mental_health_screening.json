@@ -1,0 +1,232 @@
+{
+  "name": "Perinatal Mental Health Screening Protocol",
+  "version": "1.0",
+  "description": "Comprehensive protocol for screening mental health during pregnancy and postpartum, including depression, anxiety, trauma, and psychosocial stressors.",
+  "category": "mental_health",
+  "estimated_duration_minutes": 30,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Introduction",
+      "text": "Thank you for speaking with me today. Can you tell me a bit about where you are in your pregnancy or postpartum journey?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How are you feeling overall?",
+        "What has been on your mind lately?",
+        "Is there anything specific you'd like to talk about?"
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "Mood and Emotions",
+      "text": "How would you describe your mood over the past two weeks?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you been feeling down or hopeless?",
+        "Do your moods change throughout the day?",
+        "Are you experiencing emotional ups and downs?"
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "Anxiety and Worry",
+      "text": "Have you been experiencing worry or anxiety? Can you tell me about that?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What kinds of things worry you?",
+        "Do you have racing thoughts?",
+        "Does anxiety interfere with your daily activities?"
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "Sleep Patterns",
+      "text": "How have you been sleeping? Tell me about your sleep patterns.",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you having trouble falling or staying asleep?",
+        "Are you sleeping too much?",
+        "Even when you sleep, do you wake up feeling rested?"
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "Interest and Pleasure",
+      "text": "Are you finding interest or pleasure in activities you usually enjoy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you stopped doing things you used to enjoy?",
+        "Do you feel motivated to do daily tasks?",
+        "How connected do you feel to others?"
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "Energy and Fatigue",
+      "text": "How are your energy levels? Do you feel tired or fatigued?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Is it hard to get through the day?",
+        "Do you feel exhausted even after rest?",
+        "Are you able to take care of yourself and your baby?"
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "Concentration and Decision Making",
+      "text": "How is your ability to concentrate and make decisions?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you have trouble focusing?",
+        "Is it hard to remember things?",
+        "Do you feel confused or overwhelmed by choices?"
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "Self-Worth",
+      "text": "How do you feel about yourself these days?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you feel guilty about things?",
+        "Do you feel you're a good mother/will be a good mother?",
+        "How is your self-confidence?"
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "Appetite and Eating",
+      "text": "How has your appetite been? Have there been changes in your eating?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you eating less or more than usual?",
+        "Have you lost or gained weight?",
+        "Do you have to force yourself to eat?"
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "Thoughts of Self-Harm",
+      "text": "Sometimes when people feel very low, they have thoughts of harming themselves. Have you had any thoughts like this?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you thought about ways you might hurt yourself?",
+        "Do you have a plan?",
+        "Is there anything keeping you safe right now?"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Intrusive Thoughts",
+      "text": "Are you experiencing any unwanted or intrusive thoughts?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you have repetitive thoughts that upset you?",
+        "Do you worry about harm coming to your baby?",
+        "Do these thoughts feel out of your control?"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Trauma History",
+      "text": "Have you experienced any traumatic events in the past that affect you now?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Has pregnancy or birth triggered past trauma?",
+        "Do you have flashbacks or nightmares?",
+        "Have you received support for past trauma?"
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "Social Support",
+      "text": "Who can you turn to for emotional support?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you feel supported by family and friends?",
+        "Is there someone you can talk to about your feelings?",
+        "Do you feel alone or isolated?"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Stressors",
+      "text": "What are the main sources of stress in your life right now?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you dealing with financial stress?",
+        "Are there relationship problems?",
+        "Do you have housing or employment concerns?"
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "Coping Strategies",
+      "text": "How do you cope when you're feeling stressed or down?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What helps you feel better?",
+        "Do you use alcohol or substances to cope?",
+        "Have you tried reaching out for professional help?"
+      ]
+    },
+    {
+      "id": "q16",
+      "section": "Previous Mental Health",
+      "text": "Have you experienced depression or anxiety before this pregnancy/postpartum period?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you received mental health treatment before?",
+        "Are you currently taking any psychiatric medications?",
+        "What has helped you in the past?"
+      ]
+    },
+    {
+      "id": "q17",
+      "section": "Access to Care",
+      "text": "Have you discussed your mental health with your healthcare provider?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Were you screened for depression or anxiety?",
+        "Did they offer resources or referrals?",
+        "Would you be open to mental health support?"
+      ]
+    },
+    {
+      "id": "q18",
+      "section": "Bonding and Attachment",
+      "text": "For those who have delivered: How do you feel about your baby?",
+      "type": "open-ended",
+      "required": false,
+      "follow_up_prompts": [
+        "Do you feel connected to your baby?",
+        "Are you enjoying time with your baby?",
+        "Do you have concerns about bonding?"
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-17",
+    "target_population": "Pregnant and postpartum women requiring mental health screening",
+    "ethics_approval": "Synthetic data - no IRB required",
+    "note": "This protocol screens for depression, anxiety, and related concerns. Positive screens should prompt referral to mental health services."
+  }
+}

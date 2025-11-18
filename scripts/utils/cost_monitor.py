@@ -49,6 +49,7 @@ class CostMonitor:
         self.log_file = log_file
         self.model_costs = {}  # {model_name: total_cost_usd}
         self.model_alerts = {}  # {model_name: last_alert_threshold}
+        self.model_tokens = {}  # {model_name: {input: X, output: Y, total: Z}}
         self.cost_history = []  # List of cost events
 
         # Ensure output directory exists
@@ -65,19 +66,28 @@ class CostMonitor:
                     data = json.load(f)
                     self.model_costs = data.get('model_costs', {})
                     self.model_alerts = data.get('model_alerts', {})
+                    self.model_tokens = data.get('model_tokens', {})
                     self.cost_history = data.get('cost_history', [])
             except Exception:
                 pass  # Start fresh if file is corrupted
 
     def _save_state(self):
         """Save cost tracking state to file."""
+        # Calculate total tokens across all models
+        total_input = sum(tokens.get('input', 0) for tokens in self.model_tokens.values())
+        total_output = sum(tokens.get('output', 0) for tokens in self.model_tokens.values())
+
         data = {
             'timestamp': datetime.now().isoformat(),
             'model_costs': self.model_costs,
             'model_alerts': self.model_alerts,
+            'model_tokens': self.model_tokens,
             'cost_history': self.cost_history,
             'total_cost_usd': sum(self.model_costs.values()),
-            'total_cost_eur': sum(self.model_costs.values()) * self.USD_TO_EUR
+            'total_cost_eur': sum(self.model_costs.values()) * self.USD_TO_EUR,
+            'total_input_tokens': total_input,
+            'total_output_tokens': total_output,
+            'total_tokens': total_input + total_output
         }
 
         with open(self.log_file, 'w') as f:
@@ -91,6 +101,7 @@ class CostMonitor:
             model: Model identifier (e.g., 'claude-haiku-4-5')
             cost_usd: Cost in USD
             metadata: Optional metadata (interview_id, tokens, etc.)
+                     Should include 'input_tokens' and 'output_tokens' for exact tracking
 
         Returns:
             bool: True if alert threshold was crossed
@@ -99,17 +110,27 @@ class CostMonitor:
         if model not in self.model_costs:
             self.model_costs[model] = 0.0
             self.model_alerts[model] = 0
+            self.model_tokens[model] = {'input': 0, 'output': 0, 'total': 0}
 
         # Add cost
         old_cost = self.model_costs[model]
         self.model_costs[model] += cost_usd
         new_cost = self.model_costs[model]
 
+        # Track token usage from metadata
+        if metadata:
+            input_tokens = metadata.get('input_tokens', 0)
+            output_tokens = metadata.get('output_tokens', 0)
+
+            self.model_tokens[model]['input'] += input_tokens
+            self.model_tokens[model]['output'] += output_tokens
+            self.model_tokens[model]['total'] += input_tokens + output_tokens
+
         # Convert to EUR
         old_cost_eur = old_cost * self.USD_TO_EUR
         new_cost_eur = new_cost * self.USD_TO_EUR
 
-        # Log event
+        # Log event (include token counts if available)
         event = {
             'timestamp': datetime.now().isoformat(),
             'model': model,
@@ -119,6 +140,13 @@ class CostMonitor:
             'cumulative_eur': new_cost_eur,
             'metadata': metadata or {}
         }
+
+        # Add token counts to event if available
+        if metadata:
+            event['input_tokens'] = metadata.get('input_tokens', 0)
+            event['output_tokens'] = metadata.get('output_tokens', 0)
+            event['total_tokens'] = event['input_tokens'] + event['output_tokens']
+
         self.cost_history.append(event)
 
         # Check if we crossed a threshold
@@ -160,9 +188,11 @@ class CostMonitor:
         if model and model in self.model_costs:
             cost_usd = self.model_costs[model]
             cost_eur = cost_usd * self.USD_TO_EUR
+            tokens = self.model_tokens.get(model, {'input': 0, 'output': 0, 'total': 0})
 
             print(f"\n{Colors.CYAN}Cost Status for {model}:{Colors.RESET}")
             print(f"  ${cost_usd:.4f} USD / €{cost_eur:.4f} EUR")
+            print(f"  {Colors.WHITE}Tokens: {tokens['input']:,} input + {tokens['output']:,} output = {tokens['total']:,} total{Colors.RESET}")
 
             # Show progress to next threshold
             next_threshold = (int(cost_eur / self.ALERT_THRESHOLD_EUR) + 1) * self.ALERT_THRESHOLD_EUR
@@ -179,16 +209,24 @@ class CostMonitor:
             total_usd = sum(self.model_costs.values())
             total_eur = total_usd * self.USD_TO_EUR
 
+            # Calculate total tokens
+            total_input = sum(tokens.get('input', 0) for tokens in self.model_tokens.values())
+            total_output = sum(tokens.get('output', 0) for tokens in self.model_tokens.values())
+            total_tokens = total_input + total_output
+
             for model_name, cost_usd in sorted(self.model_costs.items()):
                 cost_eur = cost_usd * self.USD_TO_EUR
                 alerts = self.model_alerts.get(model_name, 0)
+                tokens = self.model_tokens.get(model_name, {'input': 0, 'output': 0, 'total': 0})
 
                 alert_str = f" ({alerts} alerts)" if alerts > 0 else ""
 
                 print(f"{Colors.WHITE}{model_name}:{Colors.RESET}")
                 print(f"  ${cost_usd:.4f} USD / €{cost_eur:.4f} EUR{Colors.RED}{alert_str}{Colors.RESET}")
+                print(f"  Tokens: {tokens['input']:,} in / {tokens['output']:,} out / {tokens['total']:,} total")
 
-            print(f"\n{Colors.BOLD}Total: ${total_usd:.4f} USD / €{total_eur:.4f} EUR{Colors.RESET}")
+            print(f"\n{Colors.BOLD}Total Cost: ${total_usd:.4f} USD / €{total_eur:.4f} EUR{Colors.RESET}")
+            print(f"{Colors.BOLD}Total Tokens: {total_input:,} in / {total_output:,} out / {total_tokens:,} total{Colors.RESET}")
             print(f"{Colors.CYAN}{'='*70}{Colors.RESET}\n")
 
     def get_total_cost(self, in_eur: bool = True) -> float:
@@ -222,6 +260,7 @@ class CostMonitor:
         """Reset all cost tracking."""
         self.model_costs = {}
         self.model_alerts = {}
+        self.model_tokens = {}
         self.cost_history = []
         self._save_state()
 

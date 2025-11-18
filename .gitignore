@@ -252,3 +252,9 @@ archive/
 
 # Obsidian notebook files
 .obsidian/
+
+# Generated data files (large)
+data/health_records/*.json
+data/matched/*.json
+data/personas/*.json
+data/interviews/*.json

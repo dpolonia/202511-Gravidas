@@ -1,9 +1,9 @@
-# Gravidas System Architecture - v1.2.1
+# Gravidas System Architecture - v1.2.0
 
 **Project:** Gravidas - Persona-to-Health-Record Matching System
-**Phase:** Phase 3, Task 3.1 - Architecture Documentation
-**Version:** 1.2.1
-**Date:** 2025-11-16
+**Phase:** Phase 4, Task 3.1 - Architecture Documentation
+**Version:** 1.2.0
+**Date:** 2025-11-17
 **Status:** ✅ COMPLETE
 
 ---
@@ -29,11 +29,14 @@ Gravidas is a **synthetic healthcare interview generation system** that creates 
 
 ### Core Capabilities
 
-1. **Persona Generation**: AI-powered creation of realistic pregnant patient personas
-2. **Health Record Generation**: Synthea-based FHIR R4 compliant health records
+1. **Persona Generation**: AI-powered creation of realistic pregnant patient personas with full demographic profiles
+2. **Health Record Generation**: Synthea-based FHIR R4 compliant health records with pregnancy-specific data
 3. **Semantic Matching**: Intelligent persona-to-record assignment using Hungarian Algorithm
-4. **Interview Orchestration**: Protocol-based clinical interviews with multiple LLM providers
-5. **Data Analysis**: Comprehensive clinical and cost analytics
+4. **Multi-Protocol Interviews**: Specialized clinical interviews across 6 distinct maternal health scenarios
+5. **Protocol Auto-Discovery**: Dynamic protocol selection with comprehensive metadata display
+6. **Personalized Interviews**: Name-aware conversations for realistic patient interactions
+7. **Cost Analytics**: Real-time cost monitoring with interactive visualization dashboard
+8. **Data Analysis**: Comprehensive clinical and cost analytics with exact token tracking
 
 ### Design Principles
 
@@ -702,12 +705,15 @@ def hungarian_matching(
 - Resource provision
 - Cost tracking
 
-**Protocols:**
-1. PROTO_001: First-Time Mothers (45 min)
-2. PROTO_002: Experienced Mothers (35 min)
-3. PROTO_003: High-Risk Pregnancy (50 min)
-4. PROTO_004: Low SES/Access Barriers (50 min)
-5. PROTO_005: Routine Prenatal Care (30 min)
+**Protocols:** (6 specialized interview protocols)
+1. **Prenatal Care**: Routine prenatal care and preventive health (20 questions, 25 min)
+2. **Genetic Counseling**: Genetic testing, counseling, and decision-making (18 questions, 30 min)
+3. **Mental Health Screening**: Perinatal depression, anxiety, and psychosocial screening (18 questions, 30 min)
+4. **High-Risk Pregnancy**: Complications, specialized care, and risk management (15 questions, 35 min)
+5. **Postpartum Care**: Recovery, infant care, and transition to parenthood (14 questions, 25 min)
+6. **Pregnancy Experience**: General pregnancy journey and expectations (19 questions, 30 min)
+
+All protocols are JSON-based and located in `Script/interview_protocols/`
 
 **API:**
 ```python
@@ -718,6 +724,155 @@ def conduct_interview(
     protocol: Dict,
     llm_client: UniversalAIClient
 ) -> Dict
+def list_available_protocols(protocol_dir: str) -> List[Dict]
+def display_available_protocols() -> None
+```
+
+---
+
+### 5. Protocol Auto-Discovery System (`phase4_conduct_interviews.py`)
+
+**Purpose:** Dynamic protocol discovery and selection
+
+**Features (v1.2.0):**
+- Automatic scanning of `Script/interview_protocols/` directory
+- Metadata extraction from protocol JSON files
+- Formatted display with protocol details
+- CLI flag for listing available protocols
+
+**Metadata Extracted:**
+- Protocol name and version
+- Category (specialized_care, mental_health, maternal_health)
+- Estimated duration in minutes
+- Number of questions
+- Description
+
+**Usage:**
+```bash
+# List all available protocols
+python scripts/phase4_conduct_interviews.py --list-protocols
+
+# Use specific protocol
+python scripts/phase4_conduct_interviews.py \
+  --provider anthropic \
+  --model claude-haiku-4-5 \
+  --protocol Script/interview_protocols/genetic_counseling.json \
+  --count 10
+```
+
+**API:**
+```python
+def list_available_protocols(protocol_dir: str = 'Script/interview_protocols') -> List[Dict[str, Any]]
+    """
+    List all available interview protocols.
+
+    Returns:
+        List of protocol metadata dictionaries with:
+        - file: Path to protocol JSON
+        - name: Protocol name
+        - category: Protocol category
+        - version: Protocol version
+        - description: Protocol description
+        - duration_min: Estimated duration
+        - num_questions: Question count
+    """
+
+def display_available_protocols() -> None:
+    """Display formatted list of available protocols to console."""
+```
+
+---
+
+### 6. Cost Monitoring Dashboard (`generate_cost_dashboard.py`)
+
+**Purpose:** Interactive visualization of AI API costs
+
+**Features (v1.2.0):**
+- Real-time cost tracking across multiple providers
+- Interactive HTML dashboard with Chart.js visualizations
+- Per-model and per-provider cost breakdowns
+- Token usage analytics
+- Cost efficiency metrics (cost per 1M tokens)
+- Timeline charts showing cumulative costs
+
+**Charts Generated:**
+1. **Cost by Model** (Pie Chart) - EUR breakdown per model
+2. **Cost by Provider** (Doughnut Chart) - Comparison across Anthropic/OpenAI/Google/xAI
+3. **Token Usage** (Stacked Bar) - Input vs output tokens per model
+4. **Cost Efficiency** (Bar Chart) - EUR per 1M tokens
+5. **Timeline** (Line Chart) - Cumulative cost over time (last 100 API calls)
+
+**Dashboard Statistics:**
+- Total cost (USD and EUR)
+- Total tokens (input/output breakdown)
+- Number of models used
+- Number of API calls
+
+**Usage:**
+```bash
+# Generate dashboard from cost monitor data
+python scripts/generate_cost_dashboard.py
+
+# Custom input/output paths
+python scripts/generate_cost_dashboard.py \
+  --input outputs/cost_monitor.json \
+  --output outputs/cost_dashboard.html
+```
+
+**Output:** Interactive HTML dashboard viewable in any web browser
+
+**Technology:**
+- Chart.js 4.4.0 for visualizations
+- Responsive CSS design with gradient background
+- Real-time data loading from JSON
+- No external dependencies (CDN-based)
+
+---
+
+### 7. Exact Token Tracking (`cost_monitor.py`)
+
+**Purpose:** Precise token counting from API responses
+
+**Features (v1.2.0):**
+- Extract exact token counts from API usage metadata
+- Track input, output, and total tokens separately
+- Per-model token aggregation
+- Cost calculation based on actual token usage
+- Historical token usage logging
+
+**Tracked Metrics:**
+- Input tokens (prompt + context)
+- Output tokens (model responses)
+- Total tokens (input + output)
+- Cost per token (provider-specific)
+- Cumulative token usage
+
+**Integration:**
+All interview API calls now report exact token usage:
+```python
+metadata = {
+    'input_tokens': response.usage.input_tokens,
+    'output_tokens': response.usage.output_tokens,
+    'interview_id': interview_id
+}
+cost_monitor.add_cost(model, cost_usd, metadata)
+```
+
+**Storage:**
+Token data saved in `outputs/cost_monitor.json`:
+```json
+{
+  "model_tokens": {
+    "claude-haiku-4-5": {
+      "input": 125000,
+      "output": 45000,
+      "total": 170000
+    }
+  },
+  "total_input_tokens": 125000,
+  "total_output_tokens": 45000,
+  "total_tokens": 170000
+}
 ```
 
 ---
@@ -1081,7 +1236,43 @@ The system successfully generates synthetic maternal health interviews at scale,
 
 ---
 
+## Version History
+
+### v1.2.0 (2025-11-17)
+
+**New Features:**
+1. **Multi-Protocol Interview System** - 6 specialized interview protocols for different maternal health scenarios
+2. **Protocol Auto-Discovery** - Dynamic protocol listing and selection via CLI
+3. **Personalized Interviews** - Name-aware conversations extracted from persona data
+4. **Cost Dashboard Visualization** - Interactive HTML dashboard with Chart.js for cost monitoring
+5. **Exact Token Tracking** - Precise token counting from API responses with per-model aggregation
+
+**Protocol Library:**
+- Prenatal Care (20 questions, 25 min)
+- Genetic Counseling (18 questions, 30 min)
+- Mental Health Screening (18 questions, 30 min)
+- High-Risk Pregnancy (15 questions, 35 min)
+- Postpartum Care (14 questions, 25 min)
+- Pregnancy Experience (19 questions, 30 min)
+
+**Infrastructure Enhancements:**
+- Cost monitoring with interactive visualization
+- Token usage analytics and tracking
+- Enhanced CLI with protocol discovery
+- Improved documentation and API references
+
+**Scripts Added:**
+- `scripts/generate_cost_dashboard.py` - Cost dashboard generator
+- `scripts/phase4_conduct_interviews.py` - Enhanced interview conductor with protocol discovery
+
+**Documentation Updates:**
+- Updated ARCHITECTURE.md for v1.2.0
+- Added protocol usage guides
+- Enhanced API documentation
+
+---
+
 **Document Prepared By:** Claude Code
-**Date:** 2025-11-16
-**Version:** 1.2.1
+**Date:** 2025-11-17
+**Version:** 1.2.0
 **Status:** Task 3.1 COMPLETE ✅

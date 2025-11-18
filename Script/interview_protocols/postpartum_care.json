@@ -1,0 +1,183 @@
+{
+  "name": "Postpartum Care Interview Protocol",
+  "version": "1.0",
+  "description": "Comprehensive interview protocol for understanding postpartum care experiences, recovery, mental health, and transition to parenthood.",
+  "category": "maternal_health",
+  "estimated_duration_minutes": 25,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Introduction",
+      "text": "Can you tell me about yourself and how long ago you gave birth?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How has life changed since the baby arrived?",
+        "Who is helping you at home?",
+        "What has been the biggest adjustment?"
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "Birth Experience",
+      "text": "Can you describe your birth experience? How did it go?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Was it what you expected?",
+        "Did you have any complications?",
+        "How did the medical team support you?"
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "Physical Recovery",
+      "text": "How has your physical recovery been since giving birth?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you experienced any pain or discomfort?",
+        "How is your energy level?",
+        "Have you had any concerns about healing?"
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "Postpartum Visits",
+      "text": "Have you had postpartum checkups with your healthcare provider? What was that like?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "When was your first postpartum visit?",
+        "Did you feel your concerns were addressed?",
+        "Are you able to schedule follow-up care?"
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "Mental Health",
+      "text": "How have you been feeling emotionally since giving birth?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you experienced mood changes or anxiety?",
+        "Have you been screened for postpartum depression?",
+        "Do you have someone you can talk to about your feelings?"
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "Infant Feeding",
+      "text": "How are you feeding your baby? Can you tell me about that experience?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you breastfeeding, formula feeding, or both?",
+        "Have you had any challenges with feeding?",
+        "Did you receive lactation support if needed?"
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "Sleep and Rest",
+      "text": "How much sleep are you getting? How are you managing fatigue?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Is the baby sleeping in stretches?",
+        "Do you have help during the night?",
+        "How is lack of sleep affecting you?"
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "Support System",
+      "text": "What kind of support do you have during this postpartum period?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Is your partner/family helping?",
+        "Do you have access to childcare support?",
+        "Are you connected with other new parents?"
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "Infant Health",
+      "text": "How is your baby doing? Have you had any concerns about the baby's health?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Has the baby had pediatric checkups?",
+        "Are vaccinations up to date?",
+        "Have you had access to pediatric care when needed?"
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "Relationship Changes",
+      "text": "How have your relationships changed since the baby was born?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How is your relationship with your partner?",
+        "Have you maintained connections with friends?",
+        "Do you feel isolated or supported?"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Return to Work",
+      "text": "Have you thought about or returned to work? What are your plans?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you have maternity leave?",
+        "What childcare arrangements have you made?",
+        "How do you feel about balancing work and parenting?"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Family Planning",
+      "text": "Have you discussed contraception or family planning with your healthcare provider?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you using any form of birth control?",
+        "Did you receive counseling about contraception options?",
+        "Do you have plans for future pregnancies?"
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "Access to Resources",
+      "text": "What resources or services have been helpful during your postpartum period?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you accessed support groups or classes?",
+        "Do you know where to find help if needed?",
+        "What additional support would be helpful?"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Overall Wellbeing",
+      "text": "Overall, how would you describe your postpartum experience so far?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What has been the hardest part?",
+        "What has brought you the most joy?",
+        "If you could change one thing, what would it be?"
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-17",
+    "target_population": "Women in the postpartum period (up to 1 year after birth)",
+    "ethics_approval": "Synthetic data - no IRB required"
+  }
+}

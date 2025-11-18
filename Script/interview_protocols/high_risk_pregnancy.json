@@ -1,0 +1,195 @@
+{
+  "name": "High-Risk Pregnancy Interview Protocol",
+  "version": "1.0",
+  "description": "Specialized interview protocol for understanding experiences of women with high-risk pregnancies, including complications, specialized care, and psychosocial impacts.",
+  "category": "maternal_health",
+  "estimated_duration_minutes": 35,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Introduction",
+      "text": "Can you tell me about yourself and your current pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How far along are you?",
+        "Is this your first pregnancy?",
+        "What is your living situation like?"
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "High-Risk Diagnosis",
+      "text": "When and how did you learn that your pregnancy was considered high-risk?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What specific condition or factor makes it high-risk?",
+        "How did you feel when you received this news?",
+        "Did your healthcare provider explain things clearly?"
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "Medical Conditions",
+      "text": "Can you tell me about the health conditions or complications you're experiencing?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you managing chronic conditions like diabetes or hypertension?",
+        "Have there been pregnancy-specific complications?",
+        "How are these conditions being monitored?"
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "Specialized Care",
+      "text": "What kind of specialized prenatal care are you receiving?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are you seeing a maternal-fetal medicine specialist?",
+        "How often do you have appointments?",
+        "What types of monitoring or testing do you undergo?"
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "Healthcare Team",
+      "text": "Can you describe your healthcare team and how they coordinate your care?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How many different providers are you seeing?",
+        "Do they communicate well with each other?",
+        "Do you feel your care is well-coordinated?"
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "Testing and Monitoring",
+      "text": "What kind of tests, scans, or monitoring have you had during this pregnancy?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you had frequent ultrasounds or NSTs?",
+        "Do you monitor anything at home?",
+        "How do you receive and understand test results?"
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "Medications and Treatments",
+      "text": "What medications or treatments are you currently receiving for your high-risk condition?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you had any hospitalizations?",
+        "Are you on bed rest or activity restrictions?",
+        "How are you managing side effects?"
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "Access to Care",
+      "text": "Have you faced any challenges accessing the specialized care you need?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How far do you travel for appointments?",
+        "Are there financial barriers?",
+        "Has insurance coverage been an issue?"
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "Emotional Impact",
+      "text": "How has having a high-risk pregnancy affected you emotionally?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Do you experience anxiety about your or the baby's health?",
+        "Have you received mental health support?",
+        "How are you coping with stress?"
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "Daily Life Impact",
+      "text": "How has your high-risk status affected your daily life and activities?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have you had to stop working?",
+        "Can you perform normal activities?",
+        "How has this affected your family?"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Support System",
+      "text": "What kind of support do you have to help you through this high-risk pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Is your partner/family supportive?",
+        "Do you have help with other children or responsibilities?",
+        "Have you connected with others in similar situations?"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Information and Education",
+      "text": "Do you feel you have adequate information about your condition and what to expect?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Have your providers explained risks and outcomes?",
+        "What sources of information have been helpful?",
+        "What questions do you still have?"
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "Birth Planning",
+      "text": "What do you know about your delivery plan given your high-risk status?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Will you deliver at a specialized hospital?",
+        "Is a cesarean section planned or likely?",
+        "What preparations have been made for potential complications?"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Fetal Health",
+      "text": "What have you learned about your baby's health and development?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Are there concerns about the baby's growth or condition?",
+        "Have you been told about potential outcomes?",
+        "How are you preparing for your baby's arrival?"
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "Previous Pregnancy History",
+      "text": "Have you had previous pregnancies? How were they different from this one?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Were previous pregnancies also high-risk?",
+        "What have you learned from past experiences?",
+        "How does this pregnancy compare?"
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-17",
+    "target_population": "Women with high-risk pregnancies (chronic conditions, complications, advanced maternal age)",
+    "ethics_approval": "Synthetic data - no IRB required"
+  }
+}

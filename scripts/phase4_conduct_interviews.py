@@ -66,6 +66,63 @@ def load_matched_personas(matched_file: str = 'outputs/matched_personas.json') -
         sys.exit(1)
 
 
+def list_available_protocols(protocol_dir: str = 'Script/interview_protocols') -> List[Dict[str, Any]]:
+    """
+    List all available interview protocols.
+
+    Returns:
+        List of protocol metadata dictionaries
+    """
+    protocols = []
+    protocol_path = Path(protocol_dir)
+
+    if not protocol_path.exists():
+        logger.warning(f"Protocol directory not found: {protocol_dir}")
+        return protocols
+
+    for protocol_file in protocol_path.glob('*.json'):
+        try:
+            with open(protocol_file, 'r') as f:
+                protocol = json.load(f)
+                protocols.append({
+                    'file': str(protocol_file),
+                    'name': protocol.get('name', 'Unknown'),
+                    'category': protocol.get('category', 'unknown'),
+                    'version': protocol.get('version', '1.0'),
+                    'description': protocol.get('description', ''),
+                    'duration_min': protocol.get('estimated_duration_minutes', 0),
+                    'num_questions': len(protocol.get('questions', []))
+                })
+        except Exception as e:
+            logger.warning(f"Could not load protocol {protocol_file}: {e}")
+
+    return sorted(protocols, key=lambda x: x['name'])
+
+
+def display_available_protocols():
+    """Display formatted list of available protocols."""
+    protocols = list_available_protocols()
+
+    if not protocols:
+        print(f"{Colors.YELLOW}No interview protocols found.{Colors.RESET}")
+        return
+
+    print(f"\n{Colors.CYAN}{'='*80}{Colors.RESET}")
+    print(f"{Colors.CYAN}{Colors.BOLD}  Available Interview Protocols{Colors.RESET}")
+    print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+    for i, protocol in enumerate(protocols, 1):
+        print(f"{Colors.BOLD}{i}. {protocol['name']}{Colors.RESET} (v{protocol['version']})")
+        print(f"   {Colors.WHITE}File:{Colors.RESET} {protocol['file']}")
+        print(f"   {Colors.WHITE}Category:{Colors.RESET} {protocol['category']}")
+        print(f"   {Colors.WHITE}Duration:{Colors.RESET} ~{protocol['duration_min']} minutes")
+        print(f"   {Colors.WHITE}Questions:{Colors.RESET} {protocol['num_questions']}")
+        print(f"   {Colors.WHITE}Description:{Colors.RESET} {protocol['description'][:80]}...")
+        print()
+
+    print(f"{Colors.CYAN}{'='*80}{Colors.RESET}\n")
+
+
 def load_interview_protocol(protocol_file: str) -> Dict[str, Any]:
     """Load interview protocol."""
     logger.info(f"Loading interview protocol from {protocol_file}")
@@ -76,6 +133,12 @@ def load_interview_protocol(protocol_file: str) -> Dict[str, Any]:
         return protocol
     except FileNotFoundError:
         logger.error(f"Protocol file not found: {protocol_file}")
+        print(f"\n{Colors.RED}Error: Protocol file not found: {protocol_file}{Colors.RESET}")
+        print(f"{Colors.YELLOW}Use --list-protocols to see available protocols.{Colors.RESET}\n")
+        sys.exit(1)
+    except json.JSONDecodeError as e:
+        logger.error(f"Invalid JSON in protocol file: {e}")
+        print(f"\n{Colors.RED}Error: Invalid JSON in protocol file: {protocol_file}{Colors.RESET}\n")
         sys.exit(1)
 
 
@@ -83,6 +146,7 @@ def build_system_prompt(persona: Dict[str, Any], health_record: Dict[str, Any], 
     """Build system prompt with persona and health record context."""
 
     persona_desc = persona.get('description', '')
+    name = persona.get('name', 'the participant')
     age = persona.get('age', 'unknown')
     education = persona.get('education', 'unknown')
     occupation = persona.get('occupation', 'unknown')
@@ -92,9 +156,10 @@ def build_system_prompt(persona: Dict[str, Any], health_record: Dict[str, Any], 
     conditions = health_record.get('conditions', [])
     conditions_str = ', '.join([c.get('display', 'Unknown') for c in conditions[:5]])
 
-    system_prompt = f"""You are conducting a medical research interview with a synthetic persona. Your goal is to gather detailed information following the interview protocol.
+    system_prompt = f"""You are conducting a medical research interview with a synthetic persona named {name}. Your goal is to gather detailed information following the interview protocol.
 
 PERSONA BACKGROUND:
+- Name: {name}
 - Age: {age}
 - Education: {education}
 - Occupation: {occupation}
@@ -191,7 +256,9 @@ def conduct_interview_with_cost_tracking(
         # Add to cost monitor (triggers alerts if threshold crossed)
         cost_monitor.add_cost(model_name, turn_cost_usd, {
             'turn': 0,
-            'interview_id': persona.get('persona_id', 'unknown')
+            'interview_id': persona.get('persona_id', 'unknown'),
+            'input_tokens': ai_response.usage['input_tokens'],
+            'output_tokens': ai_response.usage['output_tokens']
         })
 
         # Display turn cost
@@ -239,7 +306,9 @@ def conduct_interview_with_cost_tracking(
             # Add to cost monitor
             cost_monitor.add_cost(model_name, turn_cost_usd, {
                 'turn': i + 1,
-                'interview_id': persona.get('persona_id', 'unknown')
+                'interview_id': persona.get('persona_id', 'unknown'),
+                'input_tokens': ai_response.usage['input_tokens'],
+                'output_tokens': ai_response.usage['output_tokens']
             })
 
             # Display turn cost
@@ -289,11 +358,11 @@ def conduct_interview_with_cost_tracking(
 def main():
     """Main function."""
     parser = argparse.ArgumentParser(description='Conduct interviews with cost monitoring (Phase 4)')
-    parser.add_argument('--provider', type=str, required=True,
+    parser.add_argument('--provider', type=str,
                        help='AI provider (anthropic, openai, google, xai)')
-    parser.add_argument('--model', type=str, required=True,
+    parser.add_argument('--model', type=str,
                        help='Model name')
-    parser.add_argument('--protocol', type=str, required=True,
+    parser.add_argument('--protocol', type=str,
                        help='Interview protocol file path')
     parser.add_argument('--count', type=int, default=10,
                        help='Number of interviews to conduct')
@@ -301,8 +370,19 @@ def main():
                        help='Matched personas file')
     parser.add_argument('--output-dir', type=str, default='outputs/phase4_interviews',
                        help='Output directory for interviews')
+    parser.add_argument('--list-protocols', action='store_true',
+                       help='List all available interview protocols and exit')
 
     args = parser.parse_args()
+
+    # Handle --list-protocols
+    if args.list_protocols:
+        display_available_protocols()
+        sys.exit(0)
+
+    # Validate required args (not needed if listing protocols)
+    if not args.provider or not args.model or not args.protocol:
+        parser.error('--provider, --model, and --protocol are required (unless using --list-protocols)')
 
     # Create output directory
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)

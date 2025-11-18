@@ -1,0 +1,232 @@
+{
+  "name": "Genetic Counseling Interview Protocol",
+  "version": "1.0",
+  "description": "Protocol for understanding experiences with genetic testing, counseling, and decision-making during pregnancy regarding genetic conditions and screening.",
+  "category": "specialized_care",
+  "estimated_duration_minutes": 30,
+  "questions": [
+    {
+      "id": "q1",
+      "section": "Introduction",
+      "text": "Can you tell me about yourself and your current pregnancy?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "How far along are you in your pregnancy?",
+        "Is this your first pregnancy?",
+        "What brings you to genetic counseling?"
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "Family History",
+      "text": "Can you tell me about your family's health history? Are there any genetic conditions in your or your partner's family?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Are there conditions that run in the family?",
+        "Have any family members had genetic testing?",
+        "What do you know about inherited conditions?"
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "Reason for Referral",
+      "text": "What led to your referral for genetic counseling?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Was it based on family history, age, or screening results?",
+        "Were you referred by your OB or did you self-refer?",
+        "What were you told about why counseling was recommended?"
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "Genetic Counseling Experience",
+      "text": "Have you met with a genetic counselor? Can you describe that experience?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Did the counselor explain things clearly?",
+        "Did you feel comfortable asking questions?",
+        "How long did the session last?"
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "Genetic Testing Offered",
+      "text": "What genetic tests have been offered or discussed with you?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "Were you offered carrier screening?",
+        "Was prenatal testing discussed (NIPT, amniocentesis, CVS)?",
+        "What conditions do these tests screen for?"
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "Testing Decisions",
+      "text": "Have you decided whether to have genetic testing? What factors influenced your decision?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What made you choose to test or not test?",
+        "Did you discuss this with your partner?",
+        "Were there cultural or religious considerations?"
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "Understanding Risks and Benefits",
+      "text": "Do you feel you understand the risks and benefits of genetic testing?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What do you understand about what the tests can and cannot tell you?",
+        "Were the limitations of testing explained?",
+        "Do you understand the risk of false positives or uncertain results?"
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "Test Results",
+      "text": "If you had testing, have you received results? Can you tell me about that?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "How were results communicated to you?",
+        "Did you understand what the results mean?",
+        "Were you offered follow-up counseling to discuss results?"
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "Emotional Impact",
+      "text": "How has going through genetic counseling and testing affected you emotionally?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Has this process caused anxiety or stress?",
+        "How are you coping with uncertainty?",
+        "Do you have emotional support?"
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "Decision-Making About Pregnancy",
+      "text": "If test results indicated a concern, were options discussed with you?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Were you presented with all available options?",
+        "Did you feel pressured in any direction?",
+        "Do you feel you had adequate time to make decisions?"
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "Information Needs",
+      "text": "Do you feel you have enough information about genetic conditions and testing?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What sources of information have you used?",
+        "What questions do you still have?",
+        "Would you like more information about anything specific?"
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "Partner Involvement",
+      "text": "How involved has your partner been in the genetic counseling process?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Did your partner attend counseling sessions?",
+        "Are you making decisions together?",
+        "Do you and your partner agree on testing decisions?"
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "Access and Barriers",
+      "text": "Have you faced any challenges accessing genetic counseling or testing?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Was it easy to get an appointment?",
+        "Are there financial or insurance barriers?",
+        "How far did you have to travel?"
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "Cultural Considerations",
+      "text": "Are there any cultural or religious beliefs that affect your views on genetic testing?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Does your community have particular views on genetic testing?",
+        "Did the counselor respect your cultural background?",
+        "Have you consulted with religious or community leaders?"
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "Advanced Maternal Age",
+      "text": "If applicable: How do you feel about the focus on age-related genetic risks?",
+      "type": "open-ended",
+      "required": false,
+      "follow_up_prompts": [
+        "Were you told about increased risks due to age?",
+        "How did that information affect you?",
+        "Do you feel age-based risk counseling was appropriate?"
+      ]
+    },
+    {
+      "id": "q16",
+      "section": "Previous Experience",
+      "text": "Have you had genetic counseling or testing in previous pregnancies?",
+      "type": "structured",
+      "required": true,
+      "follow_up_prompts": [
+        "How does this experience compare?",
+        "What did you learn from previous testing?",
+        "Have your views on testing changed?"
+      ]
+    },
+    {
+      "id": "q17",
+      "section": "Future Planning",
+      "text": "Has genetic counseling affected how you think about future pregnancies or family planning?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "Would you have genetic testing in future pregnancies?",
+        "Are you considering preimplantation genetic testing?",
+        "How has this influenced your reproductive plans?"
+      ]
+    },
+    {
+      "id": "q18",
+      "section": "Overall Experience",
+      "text": "Overall, how would you describe your experience with genetic counseling?",
+      "type": "open-ended",
+      "required": true,
+      "follow_up_prompts": [
+        "What was most helpful?",
+        "What could have been better?",
+        "Would you recommend genetic counseling to others?"
+      ]
+    }
+  ],
+  "metadata": {
+    "author": "Synthetic Gravidas Research Team",
+    "created_date": "2025-11-17",
+    "target_population": "Pregnant women undergoing or considering genetic counseling and testing",
+    "ethics_approval": "Synthetic data - no IRB required",
+    "note": "This protocol covers carrier screening, prenatal diagnostic testing, and decision-making about genetic conditions."
+  }
+}

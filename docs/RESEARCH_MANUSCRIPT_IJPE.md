@@ -2,8 +2,8 @@
 
 **Manuscript for International Journal of Production Economics**
 
-**Version:** 1.2.1 (Draft for Submission)
-**Date:** 2025-11-16
+**Version:** 1.2.0 (Draft for Submission)
+**Date:** 2025-11-17
 **Authors:** Diogo Polônia, et al.
 **Corresponding Author:** [email protected]
 
@@ -841,7 +841,7 @@ This research received no specific grant from any funding agency in the public, 
 ## Data Availability
 
 Code and synthetic data available at: https://github.com/yourusername/202511-Gravidas
-Version: v1.2.1
+Version: v1.2.0
 License: MIT
 
 **Note:** All data in this study is synthetically generated. No real patient data was used.
@@ -857,12 +857,12 @@ The authors declare no conflicts of interest.
 **Manuscript Status:** Draft for Internal Review
 **Target Journal:** International Journal of Production Economics
 **Submission Date:** [TBD - Q1 2026]
-**Version:** 1.2.1
-**Date:** 2025-11-16
+**Version:** 1.2.0
+**Date:** 2025-11-17
 
 ---
 
 **Document Prepared By:** Claude Code
-**Date:** 2025-11-16
-**Version:** 1.2.1
+**Date:** 2025-11-17
+**Version:** 1.2.0
 **Status:** Task 3.3 COMPLETE ✅

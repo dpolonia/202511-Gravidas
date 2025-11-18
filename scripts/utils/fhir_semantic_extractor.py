@@ -445,16 +445,34 @@ def extract_pregnancy_profile(
         if any(word in encounter_type for word in ['prenatal', 'antenatal', 'pregnancy']):
             prenatal_care_indicators.append(encounter_type)
 
-    # Infer pregnancy stage (very basic - would need more sophisticated logic)
+    # Extract vital signs from observations first (needed for pregnancy stage detection)
+    vitals = extract_vitals_from_observations(observations)
+
+    # Infer pregnancy stage based on gestational age
     pregnancy_stage = None
+    gestational_age = vitals.get('gestational_age_weeks')
+
     if pregnancy_codes or prenatal_care_indicators:
-        pregnancy_stage = "trimester_1"  # Default
+        if gestational_age:
+            # Map gestational age to trimester
+            # Trimester 1: 1-13 weeks
+            # Trimester 2: 14-27 weeks
+            # Trimester 3: 28-42 weeks
+            if gestational_age <= 13:
+                pregnancy_stage = "trimester_1"
+            elif gestational_age <= 27:
+                pregnancy_stage = "trimester_2"
+            elif gestational_age <= 42:
+                pregnancy_stage = "trimester_3"
+            else:
+                # Post-term pregnancy (>42 weeks)
+                pregnancy_stage = "trimester_3"  # Treat as late third trimester
+        else:
+            # Fallback to default if no gestational age available
+            pregnancy_stage = "trimester_1"
 
     # Calculate risk level
     risk_level = calculate_pregnancy_risk_level(conditions, age, comorbidity_index)
-
-    # Extract vital signs from observations
-    vitals = extract_vitals_from_observations(observations)
 
     return PregnancyProfile(
         has_pregnancy_codes=len(pregnancy_codes) > 0,
