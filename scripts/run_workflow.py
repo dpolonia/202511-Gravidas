@@ -226,7 +226,9 @@ class WorkflowOrchestrator:
     def execute_stage(self, stage_name: str) -> bool:
         """Execute a single pipeline stage."""
         if stage_name not in self.stages:
+            available_stages = ', '.join(sorted(self.stages.keys()))
             logger.error(f"❌ Stage '{stage_name}' not found in pipeline")
+            logger.error(f"   Available stages: {available_stages}")
             return False
 
         stage = self.stages[stage_name]
@@ -274,7 +276,9 @@ class WorkflowOrchestrator:
 
         for stage_name in stage_names:
             if stage_name not in self.stages:
+                available_stages = ', '.join(sorted(self.stages.keys()))
                 logger.error(f"❌ Stage '{stage_name}' not found")
+                logger.error(f"   Available stages: {available_stages}")
                 all_success = False
                 continue
 
