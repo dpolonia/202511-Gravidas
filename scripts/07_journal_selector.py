@@ -146,6 +146,50 @@ class ScopusClient:
 
         return None
 
+    def search_journals_by_subject(self, subject_area: str, keywords: List[str] = None,
+                                     max_results: int = 20) -> List[Dict[str, Any]]:
+        """
+        Search Scopus for journals by subject area and keywords.
+
+        Args:
+            subject_area: ASJC subject area code or name
+            keywords: Additional keywords to filter results
+            max_results: Maximum number of results to return
+
+        Returns:
+            List of journal metadata dictionaries
+        """
+        journals = []
+        try:
+            # Use Serial Title API with subject area filter
+            url = f"{SCOPUS_BASE_URL}/content/serial/title"
+
+            # Build query - search by subject area
+            params = {
+                'subj': subject_area,
+                'count': min(max_results, 50),
+                'start': 0
+            }
+
+            response = requests.get(url, headers=self.headers, params=params, timeout=30)
+
+            if response.status_code == 200:
+                data = response.json()
+                if 'serial-metadata-response' in data:
+                    entries = data['serial-metadata-response'].get('entry', [])
+                    for entry in entries[:max_results]:
+                        journal_data = self._parse_journal_entry(entry)
+                        if journal_data:
+                            journals.append(journal_data)
+                    logger.info(f"Found {len(journals)} journals in Scopus for subject: {subject_area}")
+            else:
+                logger.debug(f"Scopus subject search returned {response.status_code}")
+
+        except requests.exceptions.RequestException as e:
+            logger.debug(f"Scopus subject search failed: {e}")
+
+        return journals
+
     def enrich_journal(self, journal: 'Journal') -> 'Journal':
         """Enrich journal data with Scopus metrics."""
         scopus_data = self.search_journal(journal.issn)
@@ -760,6 +804,230 @@ class JournalRecommender:
         return journal_scores[:top_n]
 
 
+def calculate_suitability_index(journal: Journal, research_summary: Dict[str, Any],
+                                 preferences: Dict[str, Any] = None) -> Dict[str, Any]:
+    """
+    Calculate a comprehensive suitability index for a journal based on research findings.
+
+    Args:
+        journal: Journal to evaluate
+        research_summary: Dict containing research summary with keys:
+            - themes: List of main themes from interviews
+            - sentiment_score: Overall sentiment (0-1)
+            - risk_level: Risk level identified (low/medium/high)
+            - methodology: Research methodology type
+            - sample_size: Number of participants
+        preferences: User preferences
+
+    Returns:
+        Dict with suitability index (0-100) and component scores
+    """
+    preferences = preferences or {}
+    components = {}
+
+    # 1. Scope Match (30 points max)
+    scope_keywords = journal.scope.lower().split()
+    themes = research_summary.get('themes', [])
+    theme_matches = sum(1 for t in themes if any(k in t.lower() for k in scope_keywords))
+    components['scope_match'] = min(30, (theme_matches / max(len(themes), 1)) * 30)
+
+    # 2. Methodology Fit (20 points max)
+    methodology = research_summary.get('methodology', 'qualitative').lower()
+    journal_scope_lower = journal.scope.lower()
+    if methodology == 'qualitative' and any(w in journal_scope_lower for w in ['qualitative', 'experience', 'narrative']):
+        components['methodology_fit'] = 20
+    elif methodology == 'quantitative' and any(w in journal_scope_lower for w in ['clinical', 'trial', 'outcomes']):
+        components['methodology_fit'] = 20
+    elif methodology == 'mixed':
+        components['methodology_fit'] = 15
+    else:
+        components['methodology_fit'] = 10
+
+    # 3. Impact & Prestige (20 points max)
+    if_score = min(journal.impact_factor / 5.0, 1.0) * 10
+    quartile_bonus = {'Q1': 10, 'Q2': 7, 'Q3': 4, 'Q4': 2}.get(journal.quartile, 0)
+    components['impact_prestige'] = if_score + quartile_bonus
+
+    # 4. Accessibility (15 points max)
+    if journal.open_access:
+        components['accessibility'] = 15
+    elif journal.apc_usd and journal.apc_usd < 2000:
+        components['accessibility'] = 12
+    elif journal.apc_usd and journal.apc_usd < 3500:
+        components['accessibility'] = 8
+    else:
+        components['accessibility'] = 5
+
+    # 5. Management Focus Bonus (10 points max) - per user preference
+    has_management = any(code.startswith("14") or code == "1803" or code == "2719"
+                        for code in journal.asjc_codes)
+    if preferences.get('prefer_management', True) and has_management:
+        components['management_focus'] = 10
+    elif has_management:
+        components['management_focus'] = 5
+    else:
+        components['management_focus'] = 0
+
+    # 6. Review Time (5 points max)
+    if journal.review_time_weeks <= 8:
+        components['review_time'] = 5
+    elif journal.review_time_weeks <= 12:
+        components['review_time'] = 3
+    else:
+        components['review_time'] = 1
+
+    # Calculate total suitability index (0-100)
+    total_index = sum(components.values())
+
+    # Determine grade
+    if total_index >= 80:
+        grade = 'A'
+        grade_desc = 'Excellent fit'
+    elif total_index >= 65:
+        grade = 'B'
+        grade_desc = 'Good fit'
+    elif total_index >= 50:
+        grade = 'C'
+        grade_desc = 'Moderate fit'
+    elif total_index >= 35:
+        grade = 'D'
+        grade_desc = 'Marginal fit'
+    else:
+        grade = 'F'
+        grade_desc = 'Poor fit'
+
+    return {
+        'index': round(total_index, 1),
+        'grade': grade,
+        'grade_description': grade_desc,
+        'components': components
+    }
+
+
+def display_journal_table(recommendations: List[Tuple[Journal, float, Dict[str, float]]],
+                          research_summary: Dict[str, Any] = None,
+                          preferences: Dict[str, Any] = None,
+                          top_n: int = 10):
+    """
+    Display a formatted table of journal recommendations with suitability index.
+
+    Args:
+        recommendations: List of (Journal, score, components) tuples
+        research_summary: Research summary for suitability calculation
+        preferences: User preferences
+        top_n: Number of journals to display
+    """
+    research_summary = research_summary or {'themes': [], 'methodology': 'qualitative'}
+
+    print("\n" + "=" * 140)
+    print("JOURNAL RECOMMENDATIONS - SUITABILITY ANALYSIS")
+    print("=" * 140)
+
+    # Header
+    header = f"{'#':>2} {'Journal Name':<40} {'ISSN':<12} {'Q':>3} {'IF':>5} {'OA':>4} {'APC':>7} {'ASJC Areas':<30} {'Suit.':>6} {'Grade':>6}"
+    print(header)
+    print("-" * 140)
+
+    # Data rows
+    for i, (journal, score, components) in enumerate(recommendations[:top_n], 1):
+        # Calculate suitability index
+        suitability = calculate_suitability_index(journal, research_summary, preferences)
+
+        # Format fields
+        name = journal.name[:38] + '..' if len(journal.name) > 40 else journal.name
+        issn = journal.issn
+        quartile = journal.quartile
+        impact = f"{journal.impact_factor:.1f}"
+        oa = "Yes" if journal.open_access else "No"
+        apc = f"${journal.apc_usd:,}" if journal.apc_usd else "N/A"
+        areas = ', '.join(journal.asjc_areas)[:28] + '..' if len(', '.join(journal.asjc_areas)) > 30 else ', '.join(journal.asjc_areas)
+        suit_idx = f"{suitability['index']:.0f}"
+        grade = f"{suitability['grade']} ({suitability['grade_description'][:3]})"
+
+        print(f"{i:>2} {name:<40} {issn:<12} {quartile:>3} {impact:>5} {oa:>4} {apc:>7} {areas:<30} {suit_idx:>6} {grade:>6}")
+
+    print("-" * 140)
+
+    # Legend
+    print("\nSuitability Index Components:")
+    print("  - Scope Match (30pts): Alignment of journal scope with research themes")
+    print("  - Methodology Fit (20pts): Match between research design and journal focus")
+    print("  - Impact & Prestige (20pts): Impact Factor + Quartile ranking")
+    print("  - Accessibility (15pts): Open access status and APC affordability")
+    print("  - Management Focus (10pts): Bonus for Management/Health Services ASJC areas")
+    print("  - Review Time (5pts): Expected review turnaround")
+    print("\nGrades: A (80-100) Excellent | B (65-79) Good | C (50-64) Moderate | D (35-49) Marginal | F (<35) Poor")
+
+    return recommendations[:top_n]
+
+
+def extract_research_summary(analysis_data: Dict[str, Any], interviews: List[Dict] = None) -> Dict[str, Any]:
+    """
+    Extract a research summary from interview analysis data for journal matching.
+
+    Args:
+        analysis_data: Interview analysis JSON data
+        interviews: Raw interview data (optional)
+
+    Returns:
+        Dict with research summary for suitability calculation
+    """
+    summary = {
+        'themes': [],
+        'methodology': 'qualitative',
+        'sentiment_score': 0.5,
+        'risk_level': 'low',
+        'sample_size': 0,
+        'key_findings': []
+    }
+
+    if isinstance(analysis_data, dict):
+        # Extract from metadata
+        metadata = analysis_data.get('metadata', {})
+        summary['sample_size'] = metadata.get('total_interviews', 0)
+
+        # Extract themes from interviews
+        interviews_data = analysis_data.get('interviews', [])
+        if interviews_data:
+            # Collect topics/themes mentioned
+            themes = set()
+            sentiments = []
+            for interview in interviews_data:
+                if isinstance(interview, dict):
+                    # Look for clinical info
+                    clinical = interview.get('clinical_info', {})
+                    if clinical:
+                        risk = clinical.get('risk_score', 0)
+                        if risk > 50:
+                            summary['risk_level'] = 'high'
+                        elif risk > 25:
+                            summary['risk_level'] = 'medium'
+
+                    # Look for topics in transcript
+                    transcript = interview.get('transcript', [])
+                    for turn in transcript:
+                        text = turn.get('text', '').lower()
+                        if 'pregnancy' in text or 'prenatal' in text:
+                            themes.add('maternal health')
+                        if 'emotion' in text or 'feel' in text:
+                            themes.add('emotional wellbeing')
+                        if 'care' in text or 'healthcare' in text:
+                            themes.add('healthcare access')
+                        if 'support' in text or 'family' in text:
+                            themes.add('social support')
+                        if 'risk' in text or 'complication' in text:
+                            themes.add('risk factors')
+
+            summary['themes'] = list(themes) if themes else ['maternal health', 'pregnancy experiences', 'healthcare']
+
+        # Add standard themes for qualitative pregnancy research
+        if not summary['themes']:
+            summary['themes'] = ['maternal health', 'pregnancy experiences', 'healthcare access',
+                                'emotional wellbeing', 'social support']
+
+    return summary
+
+
 class JournalPaperFormatter:
     """Formats papers according to journal guidelines."""
 
@@ -878,23 +1146,6 @@ Format as clean markdown suitable for journal submission."""
         return header + formatted
 
 
-def display_journal_table(recommendations: List[Tuple[Journal, float, Dict]]):
-    """Display journals in a formatted table."""
-    print("\n" + "=" * 120)
-    print("RECOMMENDED JOURNALS FOR YOUR RESEARCH")
-    print("=" * 120)
-
-    print(f"\n{'#':<3} {'Journal Name':<45} {'Q':<4} {'IF':<6} {'OA':<5} {'APC (USD)':<12} {'Score':<8}")
-    print("-" * 120)
-
-    for i, (journal, score, components) in enumerate(recommendations, 1):
-        oa_status = "Yes" if journal.open_access else "No"
-        apc_str = f"${journal.apc_usd:,}" if journal.apc_usd else "N/A"
-        print(f"{i:<3} {journal.name[:44]:<45} {journal.quartile:<4} {journal.impact_factor:<6.1f} {oa_status:<5} {apc_str:<12} {score:.2f}")
-
-    print("-" * 120)
-
-
 def display_journal_details(journal: Journal, score: float, components: Dict[str, float]):
     """Display detailed information about a journal."""
     print(f"\n{'=' * 80}")
@@ -946,13 +1197,30 @@ def display_journal_details(journal: Journal, score: float, components: Dict[str
 
 
 def interactive_selection(recommendations: List[Tuple[Journal, float, Dict]]) -> Optional[Journal]:
-    """Interactive journal selection."""
-    display_journal_table(recommendations)
+    """Interactive journal selection (legacy, without suitability)."""
+    return interactive_selection_with_suitability(recommendations)
+
+
+def interactive_selection_with_suitability(recommendations: List[Tuple[Journal, float, Dict]],
+                                            research_summary: Dict[str, Any] = None,
+                                            preferences: Dict[str, Any] = None) -> Optional[Journal]:
+    """Interactive journal selection with suitability scores."""
+    research_summary = research_summary or {'themes': [], 'methodology': 'qualitative'}
+    preferences = preferences or {}
+
+    # Calculate suitability for all journals and sort
+    scored_recs = []
+    for journal, score, components in recommendations:
+        suitability = calculate_suitability_index(journal, research_summary, preferences)
+        scored_recs.append((journal, score, components, suitability))
+
+    # Sort by suitability index
+    scored_recs.sort(key=lambda x: x[3]['index'], reverse=True)
 
     while True:
         print("\nOptions:")
-        print("  Enter 1-{} to see journal details".format(len(recommendations)))
-        print("  Enter 's1'-'s{}' to SELECT a journal".format(len(recommendations)))
+        print("  Enter 1-{} to see journal details".format(len(scored_recs)))
+        print("  Enter 's1'-'s{}' to SELECT a journal".format(len(scored_recs)))
         print("  Enter 'q' to quit without selection")
 
         choice = input("\nYour choice: ").strip().lower()
@@ -963,17 +1231,26 @@ def interactive_selection(recommendations: List[Tuple[Journal, float, Dict]]) ->
         if choice.startswith('s'):
             try:
                 idx = int(choice[1:]) - 1
-                if 0 <= idx < len(recommendations):
-                    selected = recommendations[idx][0]
+                if 0 <= idx < len(scored_recs):
+                    selected = scored_recs[idx][0]
+                    suitability = scored_recs[idx][3]
                     print(f"\n✓ Selected: {selected.name}")
+                    print(f"  Suitability Index: {suitability['index']:.0f}/100 (Grade: {suitability['grade']})")
                     return selected
             except ValueError:
                 pass
 
         try:
             idx = int(choice) - 1
-            if 0 <= idx < len(recommendations):
-                display_journal_details(*recommendations[idx])
+            if 0 <= idx < len(scored_recs):
+                journal, score, components, suitability = scored_recs[idx]
+                display_journal_details(journal, score, components)
+                print(f"\n{'SUITABILITY ANALYSIS':-^40}")
+                print(f"  Suitability Index: {suitability['index']:.0f}/100")
+                print(f"  Grade: {suitability['grade']} - {suitability['grade_description']}")
+                print(f"\n  Component Breakdown:")
+                for comp, value in suitability['components'].items():
+                    print(f"    {comp:20} {value:.1f} pts")
             else:
                 print("Invalid selection. Please try again.")
         except ValueError:
@@ -1090,6 +1367,17 @@ def main():
         combined_content = f"Publication objective: {args.objective}\n\n" + combined_content
         logger.info(f"Publication objective: {args.objective}")
 
+    # Extract research summary for suitability calculation
+    research_summary = {'themes': [], 'methodology': 'qualitative'}
+    if analysis_path.exists():
+        try:
+            with open(analysis_path, 'r') as f:
+                analysis_json = json.load(f)
+            research_summary = extract_research_summary(analysis_json)
+            logger.info(f"Extracted research summary: {len(research_summary.get('themes', []))} themes identified")
+        except Exception as e:
+            logger.debug(f"Could not extract research summary: {e}")
+
     # Initialize recommender (with optional Scopus enrichment)
     recommender = JournalRecommender(use_scopus=args.fetch_scopus)
     preferences = {
@@ -1102,12 +1390,23 @@ def main():
     logger.info("Analyzing research content...")
     recommendations = recommender.recommend(combined_content, top_n=10, preferences=preferences)
 
+    # Display the journal table with suitability scores
+    display_journal_table(recommendations, research_summary, preferences, 10)
+
     # Select journal
     if args.auto_select:
-        selected_journal = recommendations[0][0]
+        # Sort by suitability index for auto-selection
+        scored_journals = []
+        for journal, score, components in recommendations:
+            suitability = calculate_suitability_index(journal, research_summary, preferences)
+            scored_journals.append((journal, suitability['index'], suitability))
+        scored_journals.sort(key=lambda x: x[1], reverse=True)
+        selected_journal = scored_journals[0][0]
+        best_suitability = scored_journals[0][2]
         print(f"\n✓ Auto-selected: {selected_journal.name}")
+        print(f"  Suitability Index: {best_suitability['index']:.0f}/100 (Grade: {best_suitability['grade']})")
     else:
-        selected_journal = interactive_selection(recommendations)
+        selected_journal = interactive_selection_with_suitability(recommendations, research_summary, preferences)
 
     if not selected_journal:
         print("No journal selected. Exiting.")
