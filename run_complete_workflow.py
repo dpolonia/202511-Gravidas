@@ -4,11 +4,15 @@ GRAVIDAS COMPLETE WORKFLOW RUNNER
 ==================================
 Executes the entire end-to-end pipeline for synthetic pregnancy data generation.
 
+All runs are automatically archived to timestamped directories in archive/.
+A run summary with configuration and results is generated after each run.
+
 Usage:
     python run_complete_workflow.py
     python run_complete_workflow.py --personas 50 --provider anthropic
     python run_complete_workflow.py --quick-test
     python run_complete_workflow.py --help
+    python run_complete_workflow.py --list-runs  # Show previous runs
 
 Stages:
     1. Generate Personas (synthetic pregnant women)
@@ -17,6 +21,23 @@ Stages:
     4. Conduct Interviews (AI-powered interviews)
     5. Analyze Interviews (extract insights)
     6. Validate Implementation (quality checks)
+
+Archive Structure:
+    archive/
+    ├── run_YYYYMMDD_HHMMSS/
+    │   ├── data/
+    │   │   ├── personas/
+    │   │   ├── health_records/
+    │   │   ├── matched/
+    │   │   ├── interviews/
+    │   │   ├── analysis/
+    │   │   └── validation/
+    │   ├── outputs/
+    │   ├── logs/
+    │   ├── config/
+    │   └── RUN_SUMMARY.md
+    ├── RUN_SUMMARY.md        # Latest run summary
+    └── run_history.json      # All runs history
 """
 
 import sys
@@ -27,6 +48,11 @@ import time
 from datetime import datetime
 from pathlib import Path
 import json
+
+# Add scripts directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+from scripts.utils.archive_manager import ArchiveManager
 
 # ANSI color codes for terminal output
 class Colors:
@@ -156,106 +182,151 @@ def check_prerequisites():
     return all_good
 
 def run_workflow(args):
-    """Run the complete workflow."""
-    
+    """Run the complete workflow with automatic archiving."""
+
     start_time = time.time()
     results = {}
-    
+
+    # Initialize archive manager
+    archive = ArchiveManager(base_dir="archive")
+
+    # Create run configuration
+    run_config = {
+        'provider': args.provider,
+        'model': args.model,
+        'personas': args.personas,
+        'records': args.records,
+        'interviews': args.interviews,
+        'protocol': args.protocol,
+        'continue_on_error': args.continue_on_error,
+        'quick_test': args.quick_test
+    }
+
+    # Create archive run directory
+    run_dir = archive.create_run(run_config)
+    paths = archive.get_data_paths()
+
     print_header("GRAVIDAS COMPLETE WORKFLOW")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Provider: {args.provider}")
     print(f"Model: {args.model or 'default'}")
     print(f"Personas: {args.personas}")
     print(f"Health Records: {args.records}")
-    
+    print(f"\n{Colors.CYAN}Run Directory: {run_dir}{Colors.ENDC}")
+
     # Check prerequisites
     if not check_prerequisites():
         print_error("Prerequisites check failed. Please fix the issues above.")
         return False
-    
+
     # Stage 1: Generate Personas
     print_stage(1, "Generate Personas", "Creating synthetic pregnant women profiles")
     cmd = [
         'python', 'scripts/01b_generate_personas.py',
         '--count', str(args.personas),
-        '--output', 'data/personas'
+        '--output', str(paths['personas'])
     ]
     success, elapsed, output = run_command(cmd, "Generate Personas", timeout=600)
-    results['stage1_personas'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['personas'])
     }
-    
+    results['stage1_personas'] = stage_result
+    archive.record_stage_result('stage1_personas', stage_result)
+
     if not success and not args.continue_on_error:
         print_error("Stage 1 failed. Aborting workflow.")
+        total_time = time.time() - start_time
+        archive.finalize_run(False, total_time)
         return False
-    
+
     # Stage 2: Generate Health Records
     print_stage(2, "Generate Health Records", "Creating synthetic FHIR medical records")
     cmd = [
         'python', 'scripts/02_generate_health_records.py',
         '--count', str(args.records),
-        '--output', 'data/health_records'
+        '--output', str(paths['health_records'])
     ]
     success, elapsed, output = run_command(cmd, "Generate Health Records", timeout=1200)
-    results['stage2_records'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['health_records'])
     }
-    
+    results['stage2_records'] = stage_result
+    archive.record_stage_result('stage2_records', stage_result)
+
     if not success and not args.continue_on_error:
         print_error("Stage 2 failed. Aborting workflow.")
+        total_time = time.time() - start_time
+        archive.finalize_run(False, total_time)
         return False
-    
+
     # Stage 3: Match Personas to Records
     print_stage(3, "Match Personas to Records", "Semantic matching using Hungarian algorithm")
+    personas_file = paths['personas'] / 'personas.json'
+    records_file = paths['health_records'] / 'health_records.json'
     cmd = [
         'python', 'scripts/03_match_personas_records_enhanced.py',
-        '--personas', 'data/personas/personas.json',
-        '--records', 'data/health_records/health_records.json',
-        '--output', 'data/matched'
+        '--personas', str(personas_file),
+        '--records', str(records_file),
+        '--output', str(paths['matched'])
     ]
     success, elapsed, output = run_command(cmd, "Match Personas to Records", timeout=300)
-    results['stage3_matching'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['matched'])
     }
-    
+    results['stage3_matching'] = stage_result
+    archive.record_stage_result('stage3_matching', stage_result)
+
     if not success and not args.continue_on_error:
         print_error("Stage 3 failed. Aborting workflow.")
+        total_time = time.time() - start_time
+        archive.finalize_run(False, total_time)
         return False
-    
+
     # Stage 4: Conduct Interviews
     print_stage(4, "Conduct Interviews", f"AI-powered interviews using {args.provider}")
+    matched_file = paths['matched'] / 'matched_personas.json'
     cmd = [
         'python', 'scripts/04_conduct_interviews.py',
         '--protocol', args.protocol,
         '--count', str(args.interviews),
-        '--matched', 'data/matched/matched_personas.json',
-        '--output', 'data/interviews',
+        '--matched', str(matched_file),
+        '--output', str(paths['interviews']),
         '--provider', args.provider
     ]
     if args.model:
         cmd.extend(['--model', args.model])
-    
+
     success, elapsed, output = run_command(cmd, "Conduct Interviews", timeout=3600)
-    results['stage4_interviews'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['interviews'])
     }
-    
+    results['stage4_interviews'] = stage_result
+    archive.record_stage_result('stage4_interviews', stage_result)
+
     if not success and not args.continue_on_error:
         print_error("Stage 4 failed. Aborting workflow.")
+        total_time = time.time() - start_time
+        archive.finalize_run(False, total_time)
         return False
-    
+
     # Stage 5: Analyze Interviews
     print_stage(5, "Analyze Interviews", "Extracting insights and detecting anomalies")
     cmd = [
         'python', 'scripts/analyze_interviews.py',
+        '--input', str(paths['interviews']),
+        '--output', str(paths['analysis']),
         '--export-json',
         '--export-csv',
         '--show-details',
@@ -263,47 +334,64 @@ def run_workflow(args):
         '--show-anomalies'
     ]
     success, elapsed, output = run_command(cmd, "Analyze Interviews", timeout=300)
-    results['stage5_analysis'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['analysis'])
     }
-    
+    results['stage5_analysis'] = stage_result
+    archive.record_stage_result('stage5_analysis', stage_result)
+
     if not success and not args.continue_on_error:
         print_error("Stage 5 failed. Aborting workflow.")
+        total_time = time.time() - start_time
+        archive.finalize_run(False, total_time)
         return False
-    
+
     # Stage 6: Validate Implementation
     print_stage(6, "Validate Implementation", "Quality checks and semantic tree validation")
     cmd = [
         'python', 'scripts/test_semantic_implementation.py',
-        '--personas', 'data/personas/personas.json',
-        '--records', 'data/health_records/health_records.json',
-        '--output', 'data/validation'
+        '--personas', str(personas_file),
+        '--records', str(records_file),
+        '--output', str(paths['validation'])
     ]
     success, elapsed, output = run_command(cmd, "Validate Implementation", timeout=300)
-    results['stage6_validation'] = {
+    stage_result = {
         'success': success,
         'time': elapsed,
-        'command': ' '.join(cmd)
+        'command': ' '.join(cmd),
+        'output_path': str(paths['validation'])
     }
-    
-    # Print Summary
-    total_time = time.time() - start_time
-    print_workflow_summary(results, total_time, args)
-    
-    # Save results
-    save_workflow_results(results, total_time, args)
-    
-    return all(stage['success'] for stage in results.values())
+    results['stage6_validation'] = stage_result
+    archive.record_stage_result('stage6_validation', stage_result)
 
-def print_workflow_summary(results, total_time, args):
+    # Calculate final results
+    total_time = time.time() - start_time
+    overall_success = all(stage['success'] for stage in results.values())
+
+    # Finalize archive and generate summary
+    summary_file = archive.finalize_run(overall_success, total_time)
+
+    # Print Summary
+    print_workflow_summary(results, total_time, args, run_dir)
+
+    # Also save legacy results for backwards compatibility
+    save_workflow_results(results, total_time, args, run_dir)
+
+    print(f"\n{Colors.GREEN}Run archived to: {run_dir}{Colors.ENDC}")
+    print(f"{Colors.GREEN}Run summary: {summary_file}{Colors.ENDC}")
+
+    return overall_success
+
+def print_workflow_summary(results, total_time, args, run_dir=None):
     """Print workflow execution summary."""
     print_header("WORKFLOW SUMMARY")
-    
+
     successful = sum(1 for stage in results.values() if stage['success'])
     total_stages = len(results)
-    
+
     print(f"{Colors.BOLD}Execution Summary:{Colors.ENDC}")
     print(f"  Total Time:        {total_time:.2f} seconds ({total_time/60:.1f} minutes)")
     print(f"  Stages Completed:  {successful}/{total_stages}")
@@ -312,35 +400,52 @@ def print_workflow_summary(results, total_time, args):
     print(f"  Personas:          {args.personas}")
     print(f"  Health Records:    {args.records}")
     print()
-    
+
     print(f"{Colors.BOLD}Stage Results:{Colors.ENDC}")
     for stage_name, stage_info in results.items():
         status = f"{Colors.GREEN}✓ SUCCESS{Colors.ENDC}" if stage_info['success'] else f"{Colors.RED}✗ FAILED{Colors.ENDC}"
         print(f"  {stage_name:25} {status:20} ({stage_info['time']:.2f}s)")
-    
+
     print()
     if successful == total_stages:
         print_success("All stages completed successfully!")
     else:
         print_warning(f"{total_stages - successful} stage(s) failed")
-    
-    print(f"\n{Colors.BOLD}Output Locations:{Colors.ENDC}")
-    print(f"  Personas:      data/personas/personas.json")
-    print(f"  Health Records: data/health_records/health_records.json")
-    print(f"  Matched Pairs:  data/matched/matched_personas.json")
-    print(f"  Interviews:     data/interviews/")
-    print(f"  Analysis:       data/analysis/interview_summary.csv")
-    print(f"  Validation:     data/validation/")
 
-def save_workflow_results(results, total_time, args):
+    # Show output locations (use run_dir if available)
+    base_path = str(run_dir) if run_dir else "data"
+    print(f"\n{Colors.BOLD}Output Locations:{Colors.ENDC}")
+    if run_dir:
+        print(f"  {Colors.CYAN}Archive Directory: {run_dir}{Colors.ENDC}")
+        print(f"  Personas:       {run_dir}/data/personas/")
+        print(f"  Health Records: {run_dir}/data/health_records/")
+        print(f"  Matched Pairs:  {run_dir}/data/matched/")
+        print(f"  Interviews:     {run_dir}/data/interviews/")
+        print(f"  Analysis:       {run_dir}/data/analysis/")
+        print(f"  Validation:     {run_dir}/data/validation/")
+        print(f"  Run Summary:    {run_dir}/RUN_SUMMARY.md")
+    else:
+        print(f"  Personas:       data/personas/personas.json")
+        print(f"  Health Records: data/health_records/health_records.json")
+        print(f"  Matched Pairs:  data/matched/matched_personas.json")
+        print(f"  Interviews:     data/interviews/")
+        print(f"  Analysis:       data/analysis/interview_summary.csv")
+        print(f"  Validation:     data/validation/")
+
+def save_workflow_results(results, total_time, args, run_dir=None):
     """Save workflow results to JSON file."""
-    output_dir = Path('outputs')
-    output_dir.mkdir(exist_ok=True)
-    
+    # Save to archive directory if available, otherwise outputs/
+    if run_dir:
+        output_dir = Path(run_dir) / 'outputs'
+    else:
+        output_dir = Path('outputs')
+    output_dir.mkdir(exist_ok=True, parents=True)
+
     report = {
         'workflow': 'Gravidas Complete Pipeline',
         'timestamp': datetime.now().isoformat(),
         'total_time_seconds': total_time,
+        'run_directory': str(run_dir) if run_dir else None,
         'configuration': {
             'provider': args.provider,
             'model': args.model,
@@ -356,11 +461,11 @@ def save_workflow_results(results, total_time, args):
             'failed_stages': sum(1 for s in results.values() if not s['success'])
         }
     }
-    
-    output_file = output_dir / 'complete_workflow_report.json'
+
+    output_file = output_dir / 'workflow_report.json'
     with open(output_file, 'w') as f:
-        json.dump(report, f, indent=2)
-    
+        json.dump(report, f, indent=2, default=str)
+
     print_info(f"Detailed report saved to: {output_file}")
 
 def main():
@@ -372,21 +477,27 @@ def main():
 Examples:
   # Quick test with minimal data
   python run_complete_workflow.py --quick-test
-  
+
   # Standard run with 100 personas
   python run_complete_workflow.py --personas 100
-  
+
   # Use OpenAI instead of default Anthropic
   python run_complete_workflow.py --provider openai --model gpt-4o-mini
-  
+
   # Continue even if a stage fails
   python run_complete_workflow.py --continue-on-error
-  
+
   # Full production run
   python run_complete_workflow.py --personas 1000 --records 1000 --interviews 100
+
+  # List previous runs
+  python run_complete_workflow.py --list-runs
+
+  # Cleanup old runs (keep last 5)
+  python run_complete_workflow.py --cleanup-runs 5
         """
     )
-    
+
     parser.add_argument('--personas', type=int, default=100,
                        help='Number of personas to generate (default: 100)')
     parser.add_argument('--records', type=int, default=100,
@@ -398,23 +509,58 @@ Examples:
                        help='AI provider to use (default: anthropic)')
     parser.add_argument('--model', type=str, default=None,
                        help='Specific model to use (default: provider default)')
-    parser.add_argument('--protocol', type=str, 
+    parser.add_argument('--protocol', type=str,
                        default='Script/interview_protocols/prenatal_care.json',
                        help='Interview protocol to use')
     parser.add_argument('--continue-on-error', action='store_true',
                        help='Continue workflow even if a stage fails')
     parser.add_argument('--quick-test', action='store_true',
                        help='Run quick test with minimal data (10 personas, 10 records, 3 interviews)')
-    
+
+    # Archive management arguments
+    parser.add_argument('--list-runs', action='store_true',
+                       help='List previous workflow runs')
+    parser.add_argument('--cleanup-runs', type=int, metavar='N',
+                       help='Cleanup old runs, keeping only the last N')
+
     args = parser.parse_args()
-    
+
+    # Handle archive management commands
+    if args.list_runs:
+        archive = ArchiveManager(base_dir="archive")
+        runs = archive.list_runs(limit=20)
+        if not runs:
+            print("No previous runs found.")
+        else:
+            print_header("PREVIOUS WORKFLOW RUNS")
+            print(f"{'Run ID':<25} {'Status':<10} {'Duration':<12} {'Personas':<10} {'Provider':<12}")
+            print("-" * 75)
+            for run in runs:
+                status = f"{Colors.GREEN}SUCCESS{Colors.ENDC}" if run.get('success') else f"{Colors.RED}FAILED{Colors.ENDC}"
+                duration = f"{run.get('total_time_seconds', 0):.1f}s"
+                config = run.get('config_summary', {})
+                personas = config.get('personas', 'N/A')
+                provider = config.get('provider', 'N/A')
+                print(f"{run.get('run_id', 'N/A'):<25} {status:<20} {duration:<12} {personas:<10} {provider:<12}")
+            print()
+            print(f"Run summaries are in: archive/RUN_SUMMARY.md (latest)")
+            print(f"Full history: archive/run_history.json")
+        sys.exit(0)
+
+    if args.cleanup_runs:
+        archive = ArchiveManager(base_dir="archive")
+        print(f"Cleaning up old runs, keeping {args.cleanup_runs} most recent...")
+        archive.cleanup_old_runs(keep_count=args.cleanup_runs)
+        print_success("Cleanup complete.")
+        sys.exit(0)
+
     # Apply quick-test preset
     if args.quick_test:
         args.personas = 10
         args.records = 10
         args.interviews = 3
         print_info("Quick test mode: 10 personas, 10 records, 3 interviews")
-    
+
     # Run workflow
     try:
         success = run_workflow(args)
