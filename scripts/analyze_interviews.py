@@ -1347,6 +1347,12 @@ def main():
                         help='Minimum number of conversation turns')
     parser.add_argument('--min-cost', type=float, default=0.0,
                         help='Minimum interview cost in USD')
+    parser.add_argument('--input', type=str, default='data/interviews',
+                        help='Input directory for interviews (default: data/interviews)')
+    parser.add_argument('--output', type=str, default='data/analysis',
+                        help='Output directory for analysis results (default: data/analysis)')
+    parser.add_argument('--matched', type=str, default='data/matched/matched_personas.json',
+                        help='Path to matched personas file')
     args = parser.parse_args()
 
     logger.info("=" * 80)
@@ -1356,12 +1362,12 @@ def main():
 
     # Load matched personas with health records
     logger.info("Loading matched personas...")
-    matched_personas, persona_errors = load_matched_personas()
+    matched_personas, persona_errors = load_matched_personas(args.matched)
     logger.info("")
 
     # Load and analyze interviews
-    logger.info("Loading interviews...")
-    interviews, interview_errors = load_interviews()
+    logger.info(f"Loading interviews from: {args.input}")
+    interviews, interview_errors = load_interviews(args.input)
 
     if not interviews:
         logger.error("❌ No valid interviews loaded.")
@@ -1455,13 +1461,18 @@ def main():
     if args.show_clinical:
         print_clinical_details(analyses)
 
+    # Ensure output directory exists
+    output_dir = Path(args.output)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     # Export to CSV if requested
     if args.export_csv:
-        export_to_csv(analyses)
+        csv_path = output_dir / "interview_summary.csv"
+        export_to_csv(analyses, str(csv_path))
 
     # Export to JSON if requested
     if args.export_json:
-        output_file = "data/analysis/interview_analysis.json"
+        output_file = output_dir / "interview_analysis.json"
         output_path = Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
 

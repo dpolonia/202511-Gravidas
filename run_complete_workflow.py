@@ -325,10 +325,12 @@ def run_workflow(args):
 
     # Stage 5: Analyze Interviews
     print_stage(5, "Analyze Interviews", "Extracting insights and detecting anomalies")
+    matched_file = paths['matched'] / 'matched_personas.json'
     cmd = [
         'python', 'scripts/analyze_interviews.py',
         '--input', str(paths['interviews']),
         '--output', str(paths['analysis']),
+        '--matched', str(matched_file),
         '--export-json',
         '--export-csv',
         '--show-details',

@@ -469,6 +469,145 @@ JOURNAL_DATABASE = [
         submission_url="https://www.editorialmanager.com/bwhe/",
         review_time_weeks=10
     ),
+    # Management and Healthcare Operations Research Journals
+    Journal(
+        name="Health Care Management Science",
+        issn="1386-9620",
+        eissn="1572-9389",
+        publisher="Springer",
+        open_access=False,
+        apc_usd=3290,
+        asjc_codes=["1408", "2719"],
+        asjc_areas=["Strategy and Management", "Health Policy"],
+        quartile="Q1",
+        impact_factor=2.5,
+        citescore=5.2,
+        h_index=58,
+        scope="Healthcare management, operations research, health systems optimization, resource allocation",
+        word_limit=8000,
+        abstract_limit=250,
+        keywords_limit=6,
+        reference_style="APA",
+        sections=["Introduction", "Literature Review", "Methods", "Results", "Discussion", "Conclusion"],
+        url="https://www.springer.com/journal/10729",
+        submission_url="https://www.editorialmanager.com/hcms/",
+        review_time_weeks=12
+    ),
+    Journal(
+        name="International Journal of Health Planning and Management",
+        issn="0749-6753",
+        eissn="1099-1751",
+        publisher="Wiley",
+        open_access=False,
+        apc_usd=3500,
+        asjc_codes=["1408", "2719", "2739"],
+        asjc_areas=["Strategy and Management", "Health Policy", "Public Health, Environmental and Occupational Health"],
+        quartile="Q2",
+        impact_factor=2.1,
+        citescore=3.9,
+        h_index=52,
+        scope="Health planning, health management, health services organization, policy implementation",
+        word_limit=7000,
+        abstract_limit=300,
+        keywords_limit=6,
+        reference_style="Vancouver",
+        sections=["Introduction", "Methods", "Results", "Discussion", "Conclusions"],
+        url="https://onlinelibrary.wiley.com/journal/10991751",
+        submission_url="https://mc.manuscriptcentral.com/ijhpm",
+        review_time_weeks=14
+    ),
+    Journal(
+        name="Journal of Healthcare Management",
+        issn="1096-9012",
+        eissn="1944-8988",
+        publisher="ACHE (Wolters Kluwer)",
+        open_access=False,
+        apc_usd=3000,
+        asjc_codes=["1408", "2719"],
+        asjc_areas=["Strategy and Management", "Health Policy"],
+        quartile="Q2",
+        impact_factor=1.8,
+        citescore=3.5,
+        h_index=45,
+        scope="Healthcare administration, management practices, leadership, organizational improvement",
+        word_limit=6000,
+        abstract_limit=200,
+        keywords_limit=5,
+        reference_style="AMA",
+        sections=["Introduction", "Methods", "Results", "Discussion", "Practical Implications"],
+        url="https://journals.lww.com/jhmonline/",
+        submission_url="https://www.editorialmanager.com/jhm/",
+        review_time_weeks=10
+    ),
+    Journal(
+        name="BMC Health Services Research",
+        issn="1472-6963",
+        eissn="1472-6963",
+        publisher="BioMed Central (Springer Nature)",
+        open_access=True,
+        apc_usd=2790,
+        asjc_codes=["2719", "1408"],
+        asjc_areas=["Health Policy", "Strategy and Management"],
+        quartile="Q1",
+        impact_factor=2.7,
+        citescore=4.5,
+        h_index=135,
+        scope="Health services research, healthcare delivery, health systems, quality improvement",
+        word_limit=None,
+        abstract_limit=350,
+        keywords_limit=10,
+        reference_style="Vancouver",
+        sections=["Background", "Methods", "Results", "Discussion", "Conclusions"],
+        url="https://bmchealthservres.biomedcentral.com/",
+        submission_url="https://www.editorialmanager.com/bhsr/",
+        review_time_weeks=10
+    ),
+    Journal(
+        name="Health Policy and Planning",
+        issn="0268-1080",
+        eissn="1460-2237",
+        publisher="Oxford University Press",
+        open_access=False,
+        apc_usd=3650,
+        asjc_codes=["2719", "1408"],
+        asjc_areas=["Health Policy", "Strategy and Management"],
+        quartile="Q1",
+        impact_factor=3.2,
+        citescore=5.8,
+        h_index=125,
+        scope="Health policy, health planning, health systems strengthening, implementation research",
+        word_limit=7000,
+        abstract_limit=300,
+        keywords_limit=6,
+        reference_style="Vancouver",
+        sections=["Introduction", "Methods", "Results", "Discussion", "Conclusion"],
+        url="https://academic.oup.com/heapol",
+        submission_url="https://mc.manuscriptcentral.com/heapol",
+        review_time_weeks=16
+    ),
+    Journal(
+        name="Operations Research for Health Care",
+        issn="2211-6923",
+        eissn="2211-6931",
+        publisher="Elsevier",
+        open_access=False,
+        apc_usd=2500,
+        asjc_codes=["1408", "1803"],
+        asjc_areas=["Strategy and Management", "Management Science and Operations Research"],
+        quartile="Q2",
+        impact_factor=1.9,
+        citescore=4.1,
+        h_index=32,
+        scope="Operations research in healthcare, optimization, simulation, decision support systems",
+        word_limit=8000,
+        abstract_limit=250,
+        keywords_limit=6,
+        reference_style="APA",
+        sections=["Introduction", "Literature Review", "Methodology", "Results", "Discussion", "Conclusions"],
+        url="https://www.journals.elsevier.com/operations-research-for-health-care",
+        submission_url="https://www.editorialmanager.com/orhc/",
+        review_time_weeks=12
+    ),
 ]
 
 
@@ -485,10 +624,19 @@ class JournalRecommender:
         "public_health": ["disparities", "access", "policy", "population", "community", "social determinants"],
         "clinical": ["clinical", "treatment", "diagnosis", "intervention", "outcomes", "complications"],
         "perinatal": ["perinatal", "neonatal", "fetal", "newborn", "infant"],
+        "management": ["management", "administration", "organization", "operations", "efficiency",
+                      "optimization", "resources", "planning", "strategy", "decision-making",
+                      "leadership", "workflow", "process", "improvement", "quality"],
+        "health_services": ["health services", "healthcare delivery", "health systems", "service quality",
+                           "patient satisfaction", "care coordination", "utilization", "accessibility"],
     }
 
-    def __init__(self, journals: List[Journal] = None, use_scopus: bool = False):
-        self.journals = journals or JOURNAL_DATABASE
+    def __init__(self, journals: List[Journal] = None, use_scopus: bool = False,
+                 min_quartile: str = "Q2"):
+        # Filter journals by quartile (Q1 and Q2 only by default)
+        all_journals = journals or JOURNAL_DATABASE
+        valid_quartiles = ["Q1"] if min_quartile == "Q1" else ["Q1", "Q2"]
+        self.journals = [j for j in all_journals if j.quartile in valid_quartiles]
         self.use_scopus = use_scopus
         self.scopus_client = ScopusClient() if use_scopus else None
 
@@ -528,6 +676,9 @@ class JournalRecommender:
 
         component_scores = {}
 
+        # Check if management focus is preferred
+        prefer_management = preferences.get("prefer_management", True)  # Default to True
+
         # Topic relevance (40% weight)
         topic_relevance = 0.0
         if "2729" in journal.asjc_codes:  # Obstetrics and Gynecology
@@ -540,6 +691,16 @@ class JournalRecommender:
             topic_relevance += 0.4 * topic_scores.get("perinatal", 0)
         if "1000" in journal.asjc_codes:  # Multidisciplinary
             topic_relevance += 0.3  # Base score for multidisciplinary
+
+        # Management and Health Services ASJC codes (preferred)
+        has_management = any(code.startswith("14") or code == "1803" for code in journal.asjc_codes)
+        has_health_policy = "2719" in journal.asjc_codes
+        if has_management or has_health_policy:
+            topic_relevance += 0.5 * topic_scores.get("management", 0)
+            topic_relevance += 0.4 * topic_scores.get("health_services", 0)
+            if prefer_management:
+                topic_relevance += 0.25  # Bonus for management journals when preferred
+
         component_scores["topic_relevance"] = min(topic_relevance, 1.0)
 
         # Impact factor score (20% weight)
@@ -847,6 +1008,12 @@ def main():
                        help='Fetch latest metrics from Scopus API')
     parser.add_argument('--scopus-key', type=str, default=None,
                        help='Scopus API key (default: from env or built-in)')
+    parser.add_argument('--objective', type=str, default=None,
+                       help='Publication objective (e.g., "healthcare management", "clinical practice", "policy")')
+    parser.add_argument('--prefer-management', action='store_true', default=True,
+                       help='Prefer management/operations research journals (default: True)')
+    parser.add_argument('--interviews', type=str, default=None,
+                       help='Path to interviews directory for additional content analysis')
 
     args = parser.parse_args()
 
@@ -879,16 +1046,61 @@ def main():
     with open(report_path, 'r') as f:
         report_content = f.read()
 
+    # Load interview analysis data if available
+    analysis_content = ""
+    analysis_path = Path(args.analysis) if args.analysis else PROJECT_ROOT / 'data' / 'analysis' / 'interview_analysis.json'
+    if analysis_path.exists():
+        try:
+            with open(analysis_path, 'r') as f:
+                analysis_data = json.load(f)
+            # Extract key themes and topics from analysis
+            if isinstance(analysis_data, dict):
+                themes = analysis_data.get('themes', [])
+                topics = analysis_data.get('topics', [])
+                analysis_content = f"\n\nKey themes: {', '.join(themes) if themes else 'N/A'}"
+                analysis_content += f"\nMain topics: {', '.join(topics) if topics else 'N/A'}"
+            logger.info(f"Loaded interview analysis from: {analysis_path}")
+        except Exception as e:
+            logger.debug(f"Could not load analysis: {e}")
+
+    # Load interview content if directory specified
+    interviews_content = ""
+    interviews_path = Path(args.interviews) if args.interviews else PROJECT_ROOT / 'data' / 'interviews'
+    if interviews_path.exists() and interviews_path.is_dir():
+        try:
+            interview_files = list(interviews_path.glob('interview_*.json'))
+            for ifile in interview_files[:5]:  # Sample up to 5 interviews
+                with open(ifile, 'r') as f:
+                    interview = json.load(f)
+                if isinstance(interview, dict):
+                    # Extract key content from interview
+                    exchanges = interview.get('exchanges', [])
+                    for ex in exchanges[:3]:  # First few exchanges
+                        if isinstance(ex, dict):
+                            interviews_content += f" {ex.get('response', '')}"
+            logger.info(f"Loaded {len(interview_files)} interviews for analysis")
+        except Exception as e:
+            logger.debug(f"Could not load interviews: {e}")
+
+    # Combine all content for analysis
+    combined_content = report_content + analysis_content + interviews_content
+
+    # Add publication objective to content if specified
+    if args.objective:
+        combined_content = f"Publication objective: {args.objective}\n\n" + combined_content
+        logger.info(f"Publication objective: {args.objective}")
+
     # Initialize recommender (with optional Scopus enrichment)
     recommender = JournalRecommender(use_scopus=args.fetch_scopus)
     preferences = {
         "prefer_open_access": args.prefer_oa,
-        "max_apc": args.max_apc
+        "max_apc": args.max_apc,
+        "prefer_management": args.prefer_management
     }
 
     # Get recommendations
     logger.info("Analyzing research content...")
-    recommendations = recommender.recommend(report_content, top_n=10, preferences=preferences)
+    recommendations = recommender.recommend(combined_content, top_n=10, preferences=preferences)
 
     # Select journal
     if args.auto_select:
