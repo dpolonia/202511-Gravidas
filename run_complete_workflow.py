@@ -21,6 +21,7 @@ Stages:
     4. Conduct Interviews (AI-powered interviews)
     5. Analyze Interviews (extract insights)
     6. Validate Implementation (quality checks)
+    7. Generate Academic Report (LLM-based systematic report)
 
 Archive Structure:
     archive/
@@ -74,7 +75,7 @@ def print_header(text):
 
 def print_stage(stage_num, stage_name, description):
     """Print stage information."""
-    print(f"\n{Colors.BOLD}{Colors.BLUE}[Stage {stage_num}/6] {stage_name}{Colors.ENDC}")
+    print(f"\n{Colors.BOLD}{Colors.BLUE}[Stage {stage_num}/7] {stage_name}{Colors.ENDC}")
     print(f"{Colors.CYAN}{description}{Colors.ENDC}")
     print(f"{Colors.CYAN}{'-'*80}{Colors.ENDC}")
 
@@ -367,9 +368,38 @@ def run_workflow(args):
     results['stage6_validation'] = stage_result
     archive.record_stage_result('stage6_validation', stage_result)
 
+    # Stage 7: Generate Academic Report
+    print_stage(7, "Generate Academic Report", f"Creating systematic report using {args.provider}")
+    report_output = paths['outputs'] / 'academic_report.md'
+    cmd = [
+        'python', 'scripts/06_generate_academic_report.py',
+        '--provider', args.provider,
+        '--interviews', str(paths['interviews']),
+        '--analysis', str(paths['analysis'] / 'interview_analysis.json'),
+        '--output', str(report_output)
+    ]
+    if args.model:
+        cmd.extend(['--model', args.model])
+
+    success, elapsed, output = run_command(cmd, "Generate Academic Report", timeout=600)
+    stage_result = {
+        'success': success,
+        'time': elapsed,
+        'command': ' '.join(cmd),
+        'output_path': str(report_output)
+    }
+    results['stage7_report'] = stage_result
+    archive.record_stage_result('stage7_report', stage_result)
+
+    if not success:
+        print_warning("Academic report generation failed, but workflow will complete.")
+
     # Calculate final results
     total_time = time.time() - start_time
-    overall_success = all(stage['success'] for stage in results.values())
+    # Report generation failure shouldn't fail the whole workflow
+    core_stages = ['stage1_personas', 'stage2_records', 'stage3_matching',
+                   'stage4_interviews', 'stage5_analysis', 'stage6_validation']
+    overall_success = all(results[s]['success'] for s in core_stages if s in results)
 
     # Finalize archive and generate summary
     summary_file = archive.finalize_run(overall_success, total_time)
@@ -382,6 +412,8 @@ def run_workflow(args):
 
     print(f"\n{Colors.GREEN}Run archived to: {run_dir}{Colors.ENDC}")
     print(f"{Colors.GREEN}Run summary: {summary_file}{Colors.ENDC}")
+    if results.get('stage7_report', {}).get('success'):
+        print(f"{Colors.GREEN}Academic report: {report_output}{Colors.ENDC}")
 
     return overall_success
 
