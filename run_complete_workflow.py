@@ -22,6 +22,7 @@ Stages:
     5. Analyze Interviews (extract insights)
     6. Validate Implementation (quality checks)
     7. Generate Academic Report (LLM-based systematic report)
+    8. Journal Selection & Formatting (recommend journals, format paper)
 
 Archive Structure:
     archive/
@@ -75,7 +76,7 @@ def print_header(text):
 
 def print_stage(stage_num, stage_name, description):
     """Print stage information."""
-    print(f"\n{Colors.BOLD}{Colors.BLUE}[Stage {stage_num}/7] {stage_name}{Colors.ENDC}")
+    print(f"\n{Colors.BOLD}{Colors.BLUE}[Stage {stage_num}/8] {stage_name}{Colors.ENDC}")
     print(f"{Colors.CYAN}{description}{Colors.ENDC}")
     print(f"{Colors.CYAN}{'-'*80}{Colors.ENDC}")
 
@@ -394,6 +395,34 @@ def run_workflow(args):
     if not success:
         print_warning("Academic report generation failed, but workflow will complete.")
 
+    # Stage 8: Journal Selection & Paper Formatting
+    print_stage(8, "Journal Selection & Formatting", "Recommending journals and formatting paper")
+    paper_output = paths['outputs'] / 'formatted_paper.md'
+    cmd = [
+        'python', 'scripts/07_journal_selector.py',
+        '--report', str(report_output),
+        '--output', str(paper_output),
+        '--auto-select',  # Auto-select top journal for non-interactive mode
+        '--provider', args.provider
+    ]
+    if args.model:
+        cmd.extend(['--model', args.model])
+
+    success, elapsed, output = run_command(cmd, "Journal Selection", timeout=600)
+    stage_result = {
+        'success': success,
+        'time': elapsed,
+        'command': ' '.join(cmd),
+        'output_path': str(paper_output)
+    }
+    results['stage8_journal'] = stage_result
+    archive.record_stage_result('stage8_journal', stage_result)
+
+    if not success:
+        print_warning("Journal selection failed, but workflow will complete.")
+    else:
+        print_success(f"Formatted paper saved to: {paper_output}")
+
     # Calculate final results
     total_time = time.time() - start_time
     # Report generation failure shouldn't fail the whole workflow
@@ -414,6 +443,8 @@ def run_workflow(args):
     print(f"{Colors.GREEN}Run summary: {summary_file}{Colors.ENDC}")
     if results.get('stage7_report', {}).get('success'):
         print(f"{Colors.GREEN}Academic report: {report_output}{Colors.ENDC}")
+    if results.get('stage8_journal', {}).get('success'):
+        print(f"{Colors.GREEN}Formatted paper: {paper_output}{Colors.ENDC}")
 
     return overall_success
 
