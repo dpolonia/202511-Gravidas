@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0] - 2025-11-18
+
+### Changed - Repository Restructuring
+
+**CLEAN ARCHITECTURE:** Major repository cleanup to prepare for v2.0 development with streamlined codebase structure.
+
+#### Archived Legacy Documentation
+- **32 Legacy Files** moved to `archive/v1.x_20251118_133433/docs/`:
+  - 30 markdown documentation files (user guides, phase reports, v1.2.0 planning docs)
+  - 4 Phase 4 analysis reports
+  - All legacy quick-start and tutorial files
+- **v1.x Test Outputs** archived to `archive/v1.x_20251118_133433/outputs/`
+  - Phase 4 pilot and cost variance data
+  - Production test results
+  - API validation reports
+
+#### Current Repository Structure
+- **Essential Documentation Only**:
+  - `README.md` - Updated for v2.0
+  - `CHANGELOG.md` - Complete version history
+  - `CONTRIBUTING.md` - Developer guidelines
+  - `docs/` - Core technical documentation (API reference, architecture, guides)
+- **Core Codebase**:
+  - `scripts/` - All pipeline scripts and utilities
+  - `config/` - Configuration files
+  - `tests/` - Test suite
+  - `Script/interview_protocols/` - Interview protocol templates
+  - `data/` - Generated data (excluded from git)
+  - `outputs/` - Pipeline outputs (excluded from git)
+
+#### Added Bug Fixes from v1.3.1
+- **OpenAI Provider Support** in `scripts/01b_generate_personas.py`:
+  - Added OpenAI client initialization
+  - Implemented retry logic with exponential backoff (max 3 retries, 2s/4s/8s delays)
+  - Fixed NoneType errors with safe `.get()` accessor patterns
+- **Improved Error Messages** in `scripts/run_workflow.py`:
+  - Display available stages when stage name not found
+  - Better user experience for workflow debugging
+
+---
+
 ## [1.2.0] - 2025-11-18
 
 ### 🎯 MAJOR RELEASE: Publication-Ready Operations Research Framework

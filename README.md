@@ -2,8 +2,12 @@
 
 A comprehensive system for generating synthetic pregnant personas with associated health records for research and interview simulations.
 
-**Current Version:** v1.3.1 (Publication-Ready)
-**Latest Update:** 2025-11-18 - v1.2.0 Roadmap Complete: Operations Research Framework
+**Current Version:** v2.0.0 (Clean Architecture)
+**Latest Update:** 2025-11-18 - Repository restructured for v2.0 development
+
+## v2.0 Restructuring (2025-11-18)
+
+This version includes a major repository cleanup. Legacy v1.x documentation (32 files) has been archived to `archive/v1.x_20251118_133433/` to provide a cleaner codebase structure for future development.
 
 ## Overview
 
